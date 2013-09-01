@@ -16,7 +16,7 @@ namespace TesteGit
             foreach (var item in listade100)
             {
                 Console.WriteLine(item);
-                soma += item;
+                soma = soma * soma;
             }
 
             Console.WriteLine(soma);
