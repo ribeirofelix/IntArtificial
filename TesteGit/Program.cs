@@ -11,6 +11,11 @@ namespace TesteGit
         static void Main(string[] args)
         {
             var listade100 = Enumerable.Range(0, 10);
+
+            foreach (var item in listade100)
+            {
+                
+            }
            
         }
     }
