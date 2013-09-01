@@ -14,7 +14,7 @@ namespace TesteGit
 
             foreach (var item in listade100)
             {
-                
+                Console.WriteLine(item);
             }
            
         }
