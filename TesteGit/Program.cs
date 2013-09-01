@@ -11,11 +11,15 @@ namespace TesteGit
         static void Main(string[] args)
         {
             var listade100 = Enumerable.Range(0, 10);
+            int soma=0;
 
             foreach (var item in listade100)
             {
                 Console.WriteLine(item);
+                soma += item;
             }
+
+            Console.WriteLine(soma);
            
         }
     }
