@@ -22,6 +22,8 @@ namespace TesteGit
                 soma = soma * soma;
                 soma += item + iteratorList2.Current;
                 iteratorList2.MoveNext();
+                soma += item;
+                soma--;
             }
            
         }
