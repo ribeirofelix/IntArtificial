@@ -17,6 +17,7 @@ namespace TesteGit
             {
                 Console.WriteLine(item);
                 soma += item;
+                soma--;
             }
 
             Console.WriteLine(soma);
