@@ -1,0 +1,5 @@
+Montanha: M
+Grama: G
+Água: A
+Caverna: C
+Lava: L
