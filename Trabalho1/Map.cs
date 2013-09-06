@@ -93,6 +93,16 @@ namespace Trabalho1
             PositionAsh();
             ReadPokemons(pokemonFile);
 
+            //teste!
+
+            for (int count = 0; count < 42; count++)
+            {
+                for (int count2 = 0; count2 < 42; count++)
+                {
+                    getTile(count, count2);
+                }
+            }
+
         }
 
     }
