@@ -14,9 +14,7 @@ namespace Trabalho1
         [STAThread]
         static void Main()
         {
-            Console.WriteLine("print1");
-            Map map = new Map("Mapa01.txt","PosicaoPokemons.txt");
-            
+            Map map = new Map("Mapa01.txt","PosicaoPokemons.txt");            
         }
     }
 }

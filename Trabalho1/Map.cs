@@ -9,47 +9,90 @@ namespace Trabalho1
 {
     class Map
     {
-        private Tile[][] _map =  new Tile[42][];
+        #region /* PRIVATE PROPERTIES */
 
-        public void ReadMap(string mapFile)
+        private Tile[][] _map = new Tile[42][];
+
+        #endregion
+
+        #region /* PRIVATE METHODS */
+
+        #region ReadMap
+
+        /* Reads a 42 x 42 map from a text file.
+         * 
+         * Parameter: mapFile - name of a text file   
+         */
+
+        private void ReadMap(string mapFile)
         {
-            StreamReader st = new System.IO.StreamReader(mapFile);
-            
+
+            StreamReader st = null;
+
+            /* Try to open a text file */
+            try
+            {
+                st = new System.IO.StreamReader(mapFile);
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            /* Read each line of a text file that defines a map. */
             for (int j = 0; j < 42; j++)
             {
-                _map[j]= new Tile[42];
+                /* Creates columns */
+                _map[j] = new Tile[42];
 
-                string arquivo = st.ReadLine();                
+                /* Read line */
+                string line = st.ReadLine();
 
-                for (int k = 0; k < arquivo.Length; k++)
+                /* Creates tiles */
+                for (int k = 0; k < line.Length; k++)
                 {
-                    _map[j][k] = new Tile(arquivo[k]);
+                    _map[j][k] = new Tile(line[k]);
                 }
             }
-            
+
+            /* Close files */
             st.Close();
         }
 
-        Tile getTile(int x, int y)
-        {
-            return _map[x][y];
-        }
+        #endregion
 
-        public void ReadPokemons(string pokemonFile)
+        #region ReadPokemons
+
+        /* Reads pokemons from a text file.
+         * 
+         * Parameter: pokemonFile - name of a text file   
+         */
+
+        private void ReadPokemons(string pokemonFile)
         {
-            StreamReader st = new System.IO.StreamReader(pokemonFile);
+            StreamReader st = null;
+
+            /* Try to open a text file */
+            try
+            {
+                st = new System.IO.StreamReader(pokemonFile);
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            /* Random object */
             Random random = new Random();
-
-            Console.WriteLine("entrei aqui!");
 
             for (int i = 0; i < 48; i++)
             {
-                string temp = st.ReadLine();
-                char t = char.Parse(temp);
+                /* Read tuple <type, x, y> */
+                char t = char.Parse(st.ReadLine());
                 int x = int.Parse(st.ReadLine());
                 int y = int.Parse(st.ReadLine());
 
-
+                /* If random position */
                 if (x == -1 && y == -1)
                 {
                     do
@@ -57,69 +100,97 @@ namespace Trabalho1
                         x = random.Next(0, 42);
                         y = random.Next(0, 42);
 
-                    } while (getTile(x, y).TileType != TileTypes.Grass ||
-                       getTile(x, y).TilePokemon != null ||
-                       getTile(x, y).TileBadge != null ||
-                       getTile(x, y).TileAsh != null);
-
+                    } while (GetTile(x, y).TileType != TileTypes.Grass ||
+                       GetTile(x, y).TilePokemon != null ||
+                       GetTile(x, y).TileBadge != null ||
+                       GetTile(x, y).TileAsh != null);
                 }
 
+                /* Create pokemon */
                 Pokemon _pokemon = new Pokemon(t);
-                getTile(x, y).TilePokemon = _pokemon;
+
+                /* Assign pokemon */
+                GetTile(x, y).TilePokemon = _pokemon;
             }
         }
 
+        #endregion
+
+        #region PositionBadges
+
+        /* Position badges in a map. */
+
         void PositionBadges()
         {
-            getTile(4, 2).TileBadge = new Badge(); //coracao
-            getTile(36, 4).TileBadge = new Badge(); //fogo
-            getTile(19, 2).TileBadge = new Badge(); //sol
-            getTile(32, 40).TileBadge = new Badge(); //pedra
-            getTile(2, 22).TileBadge = new Badge(); //arco-iris
-            getTile(39, 20).TileBadge = new Badge(); //folhinha
-            getTile(14, 19).TileBadge = new Badge(); //gotinha
-            getTile(19, 37).TileBadge = new Badge(); //moeda
+            GetTile(4, 2).TileBadge = new Badge(); //coracao
+            GetTile(36, 4).TileBadge = new Badge(); //fogo
+            GetTile(19, 2).TileBadge = new Badge(); //sol
+            GetTile(32, 40).TileBadge = new Badge(); //pedra
+            GetTile(2, 22).TileBadge = new Badge(); //arco-iris
+            GetTile(39, 20).TileBadge = new Badge(); //folhinha
+            GetTile(14, 19).TileBadge = new Badge(); //gotinha
+            GetTile(19, 37).TileBadge = new Badge(); //moeda
         }
+
+        #endregion
+
+        #region PositionAsh
+
+        /* Position Ash in a map. */
 
         void PositionAsh()
         {
-            getTile(24, 19).TileAsh = new Ash(); //ash
+            GetTile(24, 19).TileAsh = new Ash(); //ash
         }
 
+        #endregion
+
+        #region GetTile
+
+        /* Gets tile.
+         * Parameters: x, y - the coordinates of the tile
+         * Return value: the tile corresponding to (x,y)
+         */
+
+        Tile GetTile(int x, int y)
+        {
+            return _map[x][y];
+        }
+        #endregion
+
+        #endregion
+
+        #region /* CONSTRUCTOR */
+
+        /* Constructor of Map class
+         * Parameters: mapFile, pokemonFile - names of the text files corresponding to the
+         *                                    map configuration and the pokemon positions
+         */
         public Map(string mapFile, string pokemonFile)
         {
             for (int i = 0; i < 42; i++)
             {
                 _map[i] = new Tile[42];
             }
-            Console.WriteLine("print1");
             ReadMap(mapFile);
-            Console.WriteLine("print2");
             PositionBadges();
-            Console.WriteLine("print3");
             PositionAsh();
-            Console.WriteLine("print4");
             ReadPokemons(pokemonFile);
-            Console.WriteLine("print5");
 
             //teste!
-
-            Console.WriteLine("antes for");
-
-            for (int count = 0; count <= 41; count++)
+            for (int count = 0; count < 42; count++)
             {
                 for (int count2 = 0; count2 < 5; count2++)
-
                 {
-   
-                        Tile temp = getTile(count, count2);
-                        Console.WriteLine("Posição " + count.ToString() + " " + count2.ToString() + " Tipo: " + temp.TileType + " " + temp.TilePokemon);
-
+                    Tile temp = GetTile(count, count2);
+                    Console.WriteLine("Posição " + count.ToString() + " " + count2.ToString() + " Tipo: " + temp.TileType + " " + temp.TilePokemon);
                 }
 
-              }
- 
+            }
+            //fim teste
+
         }
 
+        #endregion
     }
 }

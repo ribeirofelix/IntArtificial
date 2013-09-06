@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Trabalho1
 {
+    /* Tile types enum */
+
     enum TileTypes
     {
         Grass,
@@ -47,12 +49,15 @@ namespace Trabalho1
             set { _cost = value; }
         }
 
-
         private Pokemon _pokemon = null;
         private TileTypes _type;
         private Badge _badge = null;
         private Ash _ash = null;
         private int _cost;
+
+        /* Constructor of Tile class
+         * Parameter: type - type of pokemon
+         */
 
         public Tile(char type)
         {

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Trabalho1
 {
+    /* Pokemon types enum */
+
     enum PokemonTypes
     {
         Grass,
@@ -18,6 +20,10 @@ namespace Trabalho1
     class Pokemon
     {
         private PokemonTypes _type;
+
+        /* Constructor of Pokemon class
+         * Parameter: type - type of pokemon
+         */
 
         public Pokemon(char type)
         {
