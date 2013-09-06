@@ -41,20 +41,28 @@ namespace Trabalho1
             set { _ash = value; }
         }
 
+        public int TileCost
+        {
+            get { return _cost; }
+            set { _cost = value; }
+        }
+
+
         private Pokemon _pokemon = null;
         private TileTypes _type;
         private Badge _badge = null;
         private Ash _ash = null;
+        private int _cost;
 
         public Tile(char type)
         {
             switch (type)
             {
-                case 'G': _type = TileTypes.Grass; break;
-                case 'M': _type = TileTypes.Mountain; break;
-                case 'L': _type = TileTypes.Volcano; break;
-                case 'A': _type = TileTypes.Water; break;
-                case 'C': _type = TileTypes.Cave; break;
+                case 'G': _type = TileTypes.Grass; _cost = 10; break;
+                case 'M': _type = TileTypes.Mountain; _cost = 120; break;
+                case 'L': _type = TileTypes.Volcano; _cost = 150; break;
+                case 'A': _type = TileTypes.Water; _cost = 100; break;
+                case 'C': _type = TileTypes.Cave; _cost = 120; break;
                 default: break;
             }
         }

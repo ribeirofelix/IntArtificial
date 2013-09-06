@@ -40,11 +40,15 @@ namespace Trabalho1
             StreamReader st = new System.IO.StreamReader(pokemonFile);
             Random random = new Random();
 
+            Console.WriteLine("entrei aqui!");
+
             for (int i = 0; i < 48; i++)
             {
-                char t = char.Parse(st.ReadLine());
+                string temp = st.ReadLine();
+                char t = char.Parse(temp);
                 int x = int.Parse(st.ReadLine());
                 int y = int.Parse(st.ReadLine());
+
 
                 if (x == -1 && y == -1)
                 {
@@ -70,7 +74,7 @@ namespace Trabalho1
             getTile(4, 2).TileBadge = new Badge(); //coracao
             getTile(36, 4).TileBadge = new Badge(); //fogo
             getTile(19, 2).TileBadge = new Badge(); //sol
-            getTile(32, 40).TileBadge = new Badge(); //pedro
+            getTile(32, 40).TileBadge = new Badge(); //pedra
             getTile(2, 22).TileBadge = new Badge(); //arco-iris
             getTile(39, 20).TileBadge = new Badge(); //folhinha
             getTile(14, 19).TileBadge = new Badge(); //gotinha
@@ -88,21 +92,33 @@ namespace Trabalho1
             {
                 _map[i] = new Tile[42];
             }
+            Console.WriteLine("print1");
             ReadMap(mapFile);
+            Console.WriteLine("print2");
             PositionBadges();
+            Console.WriteLine("print3");
             PositionAsh();
+            Console.WriteLine("print4");
             ReadPokemons(pokemonFile);
+            Console.WriteLine("print5");
 
             //teste!
 
-            for (int count = 0; count < 42; count++)
-            {
-                for (int count2 = 0; count2 < 42; count++)
-                {
-                    getTile(count, count2);
-                }
-            }
+            Console.WriteLine("antes for");
 
+            for (int count = 0; count <= 41; count++)
+            {
+                for (int count2 = 0; count2 < 5; count2++)
+
+                {
+   
+                        Tile temp = getTile(count, count2);
+                        Console.WriteLine("Posição " + count.ToString() + " " + count2.ToString() + " Tipo: " + temp.TileType + " " + temp.TilePokemon);
+
+                }
+
+              }
+ 
         }
 
     }
