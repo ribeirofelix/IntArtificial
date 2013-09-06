@@ -14,9 +14,6 @@ namespace Trabalho1
         [STAThread]
         static void Main()
         {
-           // Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-           // Application.Run(new Form1());
             Console.WriteLine("print1");
             Map map = new Map("Mapa01.txt","PosicaoPokemons.txt");
             
