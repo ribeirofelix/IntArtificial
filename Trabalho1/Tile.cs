@@ -73,5 +73,9 @@ namespace Trabalho1
         }
 
 
+        public string ToString()
+        {
+            return Enum.GetName(typeof(TileTypes), this.TileType);
+        }
     }
 }

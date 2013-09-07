@@ -177,17 +177,12 @@ namespace Trabalho1
             PositionAsh();
             ReadPokemons(pokemonFile);
 
-            //teste!
-            for (int count = 0; count < 42; count++)
-            {
-                for (int count2 = 0; count2 < 5; count2++)
-                {
-                    Tile temp = GetTile(count, count2);
-                    Console.WriteLine("Posição " + count.ToString() + " " + count2.ToString() + " Tipo: " + temp.TileType + " " + temp.TilePokemon);
-                }
+            
+            /*teste*/
+            var res = String.Join("\n", _map.Select(m => String.Join("", m.Select(t => t.TileType.ToString()[0]) )) );
+            Console.WriteLine(res);
 
-            }
-            //fim teste
+           
 
         }
 
