@@ -39,7 +39,7 @@ namespace Trabalho1
 
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return Enum.GetName(typeof(PokemonTypes), _type);
         }
