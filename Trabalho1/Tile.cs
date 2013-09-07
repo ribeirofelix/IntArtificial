@@ -1,56 +1,58 @@
-﻿using System;
+﻿using Model.Properties;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabalho1
+namespace Model
 {
-    /* Tile types enum */
-
-    enum TileTypes
+    public class Tile
     {
-        Grass,
-        Water,
-        Cave,
-        Mountain,
-        Volcano
-    }
+        public Pokemon TilePokemon { get; set; }
 
-    class Tile
-    {
-        public Pokemon TilePokemon
+        private TileTypes _type;
+        public TileTypes TileType { get { return _type; } set { _type = value; } }
+
+        public Badge TileBadge { get; set; }
+
+        public Ash TileAsh { get; set; }
+
+        public int TileCost { get; set; }
+
+        private Image _titleImage;
+
+        public Image TitleImage
         {
-            get{ return _pokemon; }
-            set{ _pokemon = value; }
+            get 
+            {
+                if (TilePokemon != null)
+                    return TilePokemon.PokeImage;
+
+                switch (TileType)
+                {
+                    case TileTypes.Grass:
+                        return Resources.grass;
+                    case TileTypes.Water:
+                        return Resources.water;
+                    case TileTypes.Cave:
+                        return Resources.cave;
+                    case TileTypes.Mountain:
+                        return Resources.mountain;
+                    case TileTypes.Volcano:
+                        return Resources.magma;
+                    default:
+                        return Resources.grass;
+
+                };
+    
+            }
+            
         }
 
-        public TileTypes TileType
-        {
-            get { return _type; }
-            set { _type = value; }
-        }
-
-        public Badge TileBadge
-        {
-            get { return _badge; }
-            set { _badge = value; }
-        }
-        
-        public Ash TileAsh
-        {
-            get { return _ash; }
-            set { _ash = value; }
-        }
-
-        public int TileCost
-        {
-            get { return _cost; }
-            set { _cost = value; }
-        }
 
         private Pokemon _pokemon = null;
-        private TileTypes _type;
         private Badge _badge = null;
         private Ash _ash = null;
         private int _cost;

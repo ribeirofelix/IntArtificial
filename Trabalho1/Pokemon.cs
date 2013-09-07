@@ -1,25 +1,30 @@
-﻿using System;
+﻿using Model.Properties;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabalho1
+namespace Model
 {
-    /* Pokemon types enum */
-
-    enum PokemonTypes
-    {
-        Grass,
-        Water,
-        Flying,
-        Electric,
-        Fire
-    }
-
-    class Pokemon
+    public class Pokemon
     {
         private PokemonTypes _type;
+
+        private Image _pokeImage;
+
+        public Image PokeImage
+        {
+            get 
+            {
+                if (_pokeImage == null)
+                    _pokeImage = Resources.Pikachu;
+                return _pokeImage; 
+            }
+            
+        }
+
 
         /* Constructor of Pokemon class
          * Parameter: type - type of pokemon

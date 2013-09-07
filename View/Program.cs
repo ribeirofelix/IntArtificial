@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Model
+namespace View
 {
     static class Program
     {
@@ -14,7 +14,9 @@ namespace Model
         [STAThread]
         static void Main()
         {
-            Map map = new Map("Mapa01.txt","PosicaoPokemons.txt");            
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new KantoMap());
         }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trabalho1
+namespace Model
 {
-    class Badge
+    public class Badge
     {
         //image
     }

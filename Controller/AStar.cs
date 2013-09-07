@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Controller
 {
-    public class Ash
+    public class AStar
     {
-        //image
+
     }
 }

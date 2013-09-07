@@ -5,13 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Trabalho1
+namespace Model
 {
-    class Map
+    public class Map
     {
         #region /* PRIVATE PROPERTIES */
 
-        private Tile[][] _map = new Tile[42][];
+        private const int MAXHOUSES = 42;
+        private Tile[][] _map = new Tile[MAXHOUSES][];
+        public ICollection<ICollection<Tile>> KantoMap
+        {
+            get
+            {
+                return _map;
+            }
+        }
+       
 
         #endregion
 
@@ -23,7 +32,6 @@ namespace Trabalho1
          * 
          * Parameter: mapFile - name of a text file   
          */
-
         private void ReadMap(string mapFile)
         {
 
@@ -122,14 +130,14 @@ namespace Trabalho1
 
         void PositionBadges()
         {
-            GetTile(4, 2).TileBadge = new Badge(); //coracao
-            GetTile(36, 4).TileBadge = new Badge(); //fogo
-            GetTile(19, 2).TileBadge = new Badge(); //sol
-            GetTile(32, 40).TileBadge = new Badge(); //pedra
-            GetTile(2, 22).TileBadge = new Badge(); //arco-iris
-            GetTile(39, 20).TileBadge = new Badge(); //folhinha
-            GetTile(14, 19).TileBadge = new Badge(); //gotinha
-            GetTile(19, 37).TileBadge = new Badge(); //moeda
+            GetTile(4, 2).TileBadge = new Badge(); //soul - Koga - veneno
+            GetTile(36, 4).TileBadge = new Badge(); //volcano - Blaine - fogo
+            GetTile(19, 2).TileBadge = new Badge(); //thunder - Ten Surge - eletrico
+            GetTile(32, 40).TileBadge = new Badge(); //boulder - Brock - pedra
+            GetTile(2, 22).TileBadge = new Badge(); //rainbow - Erika - planta
+            GetTile(39, 20).TileBadge = new Badge(); //earth - Giovanni - terra
+            GetTile(14, 19).TileBadge = new Badge(); //cascade - Misty - agua
+            GetTile(19, 37).TileBadge = new Badge(); //marsh - Sabrina - psiquico
         }
 
         #endregion
@@ -168,9 +176,9 @@ namespace Trabalho1
          */
         public Map(string mapFile, string pokemonFile)
         {
-            for (int i = 0; i < 42; i++)
+            for (int i = 0; i < MAXHOUSES; i++)
             {
-                _map[i] = new Tile[42];
+                _map[i] = new Tile[MAXHOUSES];
             }
             ReadMap(mapFile);
             PositionBadges();
@@ -180,9 +188,7 @@ namespace Trabalho1
             
             /*teste*/
             var res = String.Join("\n", _map.Select(m => String.Join("", m.Select(t => t.TileType.ToString()[0]) )) );
-            Console.WriteLine(res);
-
-           
+            Console.WriteLine(res);          
 
         }
 
