@@ -41,7 +41,7 @@ namespace Model
                     case TileTypes.Mountain:
                         return Resources.mountain;
                     case TileTypes.Volcano:
-                        return Resources.magma;
+                        return Resources.lava;
                     default:
                         return Resources.grass;
 

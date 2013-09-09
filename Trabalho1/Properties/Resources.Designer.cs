@@ -83,9 +83,9 @@ namespace Model.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap magma {
+        internal static System.Drawing.Bitmap lava {
             get {
-                object obj = ResourceManager.GetObject("magma", resourceCulture);
+                object obj = ResourceManager.GetObject("lava", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

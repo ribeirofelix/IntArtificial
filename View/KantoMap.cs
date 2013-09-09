@@ -40,7 +40,7 @@ namespace View
                     graphic.DrawImage( tile.TitleImage , xPoint, yPoint);
                     xPoint += tile.TitleImage.Width;
                 }
-                yPoint += 16;
+                yPoint += 18;
             }            
         }
     }

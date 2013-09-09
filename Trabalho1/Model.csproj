@@ -96,21 +96,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cave.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\grass.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\magma.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mountain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\water.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Pikachu.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +114,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lava.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mountain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
