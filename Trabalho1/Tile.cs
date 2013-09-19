@@ -10,19 +10,11 @@ namespace Model
 {
     public class Tile
     {
-        public Pokemon TilePokemon { get; set; }
-
+      
         private TileTypes _type;
-        public TileTypes TileType { get { return _type; } set { _type = value; } }
-
-        public Badge TileBadge { get; set; }
-
-        public Ash TileAsh { get; set; }
-
-        public int TileCost { get; set; }
-
+        public TileTypes TileType { get { return _type; } set { _type = value; } }     
+      
         private Image _titleImage;
-
         public Image TitleImage
         {
             get 
@@ -53,16 +45,54 @@ namespace Model
 
 
         private Pokemon _pokemon = null;
+        public Pokemon TilePokemon { get; set; }
+
+        
         private Badge _badge = null;
+        public Badge TileBadge { get; set; }
+
         private Ash _ash = null;
+        public Ash TileAsh { get; set; }      
+
+       
         private int _cost;
+        public int TileCost 
+        {
+            get
+            {
+                return _cost;
+            }
+            set
+            {
+                _cost = value;
+            }
+        }
+
+
+        private int _xPoint;
+        public int XPoint
+        {
+            get { return _xPoint; }
+            set { _xPoint = value; }
+        }
+
+        private int _yPoint;
+	    public int YPoint
+	    {
+		    get { return _yPoint;}
+		    set { _yPoint = value;}
+	    }
+	
+        
 
         /* Constructor of Tile class
          * Parameter: type - type of pokemon
          */
 
-        public Tile(char type)
+        public Tile(char type,int xPoint, int yPoint )
         {
+            _xPoint = xPoint;
+            _yPoint = yPoint;
             switch (type)
             {
                 case 'G': _type = TileTypes.Grass; _cost = 10; break;

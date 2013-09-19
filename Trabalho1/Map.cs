@@ -59,7 +59,7 @@ namespace Model
                 /* Creates tiles */
                 for (int k = 0; k < line.Length; k++)
                 {
-                    _map[j][k] = new Tile(line[k]);
+                    _map[j][k] = new Tile(line[k] , j, k);
                 }
             }
 
