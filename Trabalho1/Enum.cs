@@ -17,7 +17,18 @@ public enum TileTypes
     Cave ,
     Mountain ,
     Volcano 
-    
-   
 
+}
+
+/* Badge types enum */
+public enum BadgeTypes
+{
+    soul = 1,
+    volcano, 
+    thunder, 
+    boulder,
+    rainbow, 
+    earth,
+    cascade,
+    marsh 
 }

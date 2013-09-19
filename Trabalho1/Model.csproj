@@ -68,9 +68,11 @@
   <ItemGroup>
     <Compile Include="Ash.cs" />
     <Compile Include="Badge.cs" />
+    <Compile Include="BRKGA.cs" />
     <Compile Include="Enum.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Pokemon.cs" />
+    <Compile Include="Population.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tile.cs" />
