@@ -12,7 +12,8 @@ namespace Controller
         private int[] dist;
         private int posIni;
         private int[] path;
-        public AStar(int qtdNodes)
+
+        public AStar(int qtdNodes, int posIni)
         {
             this.posIni = posIni;
             dist = Enumerable.Repeat(int.MaxValue, qtdNodes).ToArray() ;
@@ -28,6 +29,10 @@ namespace Controller
 
         }
 
-
+        public double StraightLineDistance(int x1, int x2, int y1, int y2)
+        {
+            return (double) Math.Sqrt((x1 - x2)^2 + (y1 - y2)^2);
+            
+        }
     }
 }
