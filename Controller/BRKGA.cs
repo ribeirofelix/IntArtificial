@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace Controller
 {
     public class BRKGA
     {
@@ -75,6 +76,44 @@ namespace Model
             }
             return path;
         }
+
+
+        private void Evolve(int generations) {
+                
+            for(int i = 0; i < generations; ++i) {
+                Evolution(current , previous );   // First evolve the population (curr, next)
+                previous = System.Threading.Interlocked.Exchange<Population>(ref current, previous); // Update (prev = curr; curr = prev == next)
+            }
+        }
+
+        private void Evolution(Population curr, Population prev)
+        {
+            curr.population.Take(popElite).Select((pe, i) => prev.population[i] = pe);
+
+            int inx = popElite;
+
+            var rnd = new Random(DateTime.Now.Millisecond);
+
+        //      // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
+        // while(i < pop - popMutant) {
+        //        // Select an elite parent:
+        //    int  eliteParent = rnd.Next(popElite - 1);
+        //        // Select a non-elite parent:
+        //    int noneliteParent = rnd.Next(popElite , pop - 1) ;//colocar de pe a p
+             
+        //        // Mate:
+        //        for(j = 0; j < n; ++j) {
+        //                int sourceParent = ((refRNG.rand() < rhoe) ? eliteParent : noneliteParent);
+
+        //                next(i, j) =  curr(curr.fitness[sourceParent].second, j);
+        //        }
+        //        ++i;
+        //}
+
+        }
+
+
+
     }
 
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Population
+    public class Population
     {
         public int[][] population;
         public Tuple <int, int> [] fitness ;   /* <fitness, chromossome> */
