@@ -86,29 +86,41 @@ namespace Controller
             }
         }
 
-        private void Evolution(Population curr, Population prev)
+        private void Evolution(Population curr, Population next)
         {
-            curr.population.Take(popElite).Select((pe, i) => prev.population[i] = pe);
+            curr.population.Take(popElite).Select((pe, i) => next.population[i] = pe);
 
             int inx = popElite;
 
             var rnd = new Random(DateTime.Now.Millisecond);
 
-        //      // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
-        // while(i < pop - popMutant) {
-        //        // Select an elite parent:
-        //    int  eliteParent = rnd.Next(popElite - 1);
-        //        // Select a non-elite parent:
-        //    int noneliteParent = rnd.Next(popElite , pop - 1) ;//colocar de pe a p
-             
-        //        // Mate:
-        //        for(j = 0; j < n; ++j) {
-        //                int sourceParent = ((refRNG.rand() < rhoe) ? eliteParent : noneliteParent);
+            // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
+            while (inx < pop - popMutant)
+            {
+                // Select an elite parent:
+                int eliteParent = rnd.Next(popElite - 1);
+                // Select a non-elite parent:
+                int noneliteParent = rnd.Next(popElite, pop - 1);//colocar de pe a p
 
-        //                next(i, j) =  curr(curr.fitness[sourceParent].second, j);
-        //        }
-        //        ++i;
-        //}
+                // Mate:
+                for (int j = 0; j < n; ++j)
+                {
+                    int sourceParent = ((rnd.NextDouble() < rhoe) ? eliteParent : noneliteParent);
+
+                    next.population[inx][j] = curr.population[sourceParent][j];
+                }
+
+                var popInx = next.population[inx].Select((p , i ) => new { p , i} );
+                var rep = popInx.Except(popInx.Distinct()).ToList() ;
+                
+                //var notAppear = Enumerable.Range(1,9
+
+                if (rep.Count() > 0 )
+                {
+                   // rep.ForEach(r => next.population[inx][r.i] = 
+                }
+                ++inx;
+            }
 
         }
 
