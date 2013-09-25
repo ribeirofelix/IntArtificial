@@ -18,8 +18,9 @@ namespace Controller
 
         private Population previous;    // previous population
         private Population current;             // current population
+        private bool[] captBadgs;
 
-        public BRKGA(int n, int pop, int popElt , int popMut , bool[] capturedBadges)
+        public BRKGA(int n, int pop, int popElt , int popMut , bool[] capturedBadges, int[][] distAshBdg )
         {
             // Error check:
             if (n == 0) { throw new Exception("Chromosome size equals zero."); }
@@ -33,34 +34,22 @@ namespace Controller
             this.pop = pop;
             this.popElite = popElt;
             this.popMutant = popMut;
-
+            this.captBadgs = capturedBadges;
+            this.dist = distAshBdg;
             // Initialize and decode each chromosome of the current population, then copy to previous:
             // Allocate:
             current = new Population(n, pop);
 
             // Initialize:
-            Initialize(capturedBadges);
+            Initialize();
 
             // Then just copy to previous:
             previous = new Population(current);
         }
 
-        private void Initialize(bool[] bdg) 
+        private void Initialize() 
         {
-            var rand = new Random();
-
-            for(int j = 0; j < pop; ++j) 
-            {
-                var vet = bdg.Select((b,i)=>new {b,i}).Where(bd=>!bd.b).Select(bi=>bi.i).ToList();
-                current.population[j][0] = 0 ;  /* onde o ash está */
-
-                for(int k = 1; k < n; ++k) 
-                {
-                    int index = rand.Next(0, n-k+1) ;
-                    current.population[j][k] = vet[index];
-                    vet.RemoveAt(index);
-               } 
-            }
+            randomizePopulation();
 
             // Decode:
             for(int j = 0; j < pop; ++j) {           
@@ -69,6 +58,24 @@ namespace Controller
 
             // Sort:
             current.SortFitness();
+        }
+
+        private void randomizePopulation()
+        {
+            var rand = new Random();
+
+            for (int j = 0; j < pop; ++j)
+            {
+                var vet = captBadgs.Select((b, i) => new { b, i }).Where(bd => !bd.b).Select(bi => bi.i).ToList();
+                current.population[j][0] = 0;  /* onde o ash está */
+
+                for (int k = 1; k < n; ++k)
+                {
+                    int index = rand.Next(0, n - k + 1);
+                    current.population[j][k] = vet[index];
+                    vet.RemoveAt(index);
+                }
+            }
         }
 
         private int Decoder (int[] chromossome)
@@ -82,8 +89,7 @@ namespace Controller
             return path;
         }
 
-
-        private void Evolve(int generations) {
+        public void Evolve(int generations) {
                 
             for(int i = 0; i < generations; ++i) {
                 Evolution(current , previous );   // First evolve the population (curr, next)
@@ -114,18 +120,33 @@ namespace Controller
 
                     next.population[inx][j] = curr.population[sourceParent][j];
                 }
-
-                var popInx = next.population[inx].Select((p , i ) => new { p , i} );
-                var rep = popInx.Except(popInx.Distinct()).ToList() ;
                 
-                //var notAppear = Enumerable.Range(1,9
+                
+                var popInx = next.population[inx].Select((p , i ) => new { p , i} );
+                var rep = popInx.Except(popInx.Distinct()).ToList() ;            
 
                 if (rep.Count() > 0 )
                 {
-                   // rep.ForEach(r => next.population[inx][r.i] = 
+                     var diffFromFather = curr.population[eliteParent].Except(next.population[inx]) ;
+                     rep.ForEach(a => next.population[inx][a.i] = diffFromFather.First());
                 }
                 ++inx;
             }
+
+            while (inx < popMutant)
+            {
+                randomizePopulation();
+            }
+
+            // Decode:
+            for (int j = 0; j < pop; ++j)
+            {
+                current.SetFitness(Decoder(current.population[j]), j);
+            }
+
+            // Sort:
+            current.SortFitness();
+
 
         }
 

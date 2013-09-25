@@ -59,6 +59,9 @@ namespace Model
         {
             return fitness[i].Item1 ;
         }
+    
+        
+    
     }
    
 }

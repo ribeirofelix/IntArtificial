@@ -10,27 +10,32 @@ namespace Controller
     public class AStar
     {
         private int[] dist;
-        private int[] distFinal;
-        private int posIni;
         private int[] path;
         private bool[] vis;  /* true if vertex i has already been analyzed by the algorithm */
-        private Tuple <int, int>[] G;
+        private Map graph;
 
-        private struct elemTree
-        {
-            int elem;
-            int cost;
-            int parent;
-        };
+        //protected struct ElemTree
+        //{
+        //    public ElemTree(int elem , int cost )
+        //    {
+        //        this.elem =elem;
+        //        this.cost = cost;
+        //        this.parent = null;
+        //    }
+        //    int elem;
+        //    int cost;
+        //    int? parent;
+        //};
 
-        public AStar(int qtdNodes )
+        public AStar(int qtdNodes , Map graph )
         {
             /* initialize the array with infinity distance */
             dist = Enumerable.Repeat(int.MaxValue, qtdNodes).ToArray() ;
-            distFinal = Enumerable.Repeat(int.MaxValue, qtdNodes).ToArray();
+            path = Enumerable.Repeat(int.MinValue, qtdNodes).ToArray();
+            this.graph = graph;
         }
 
-        public void Dijkstra(int posIni, int qtdNodes, Map graph)
+        public void Dijkstra(int posIni, int qtdNodes )
         {
             int u, v, w, x, y;
             dist[posIni] = 0;
@@ -60,31 +65,31 @@ namespace Controller
                 {
                     u = v + 42; /* x, y + 1*/                   /* vertex connected to v (edge v->u) */
                     w = graph.GetTile(x, y + 1).TileCost;    /* cost of edge v->u */
-                    setNewDistance(v, u, w);
+                    SetNewDistance(v, u, w);
                 }
                 if (x != 0)   /* not first line */
                 {
                     u = v - 42; /* x, y - 1 */
                     w = graph.GetTile(x, y - 1).TileCost;
-                    setNewDistance(v, u, w);
+                    SetNewDistance(v, u, w);
                 }
                 if (y != 41) /* not last column */
                 {
                     u = v + 1; /* x+1, y */
                     w = graph.GetTile(x + 1, y).TileCost;
-                    setNewDistance(v, u, w);
+                    SetNewDistance(v, u, w);
                 }
                         
                 if (y != 0) /* not first column */ 
                 {
                     u = v - 1; /* x-1, y */ 
                     w = graph.GetTile(x - 1, y).TileCost;
-                    setNewDistance(v, u, w);
+                    SetNewDistance(v, u, w);
                 }
             }       
         }
 
-        private void setNewDistance (int v, int u, int w)
+        private void SetNewDistance (int v, int u, int w)
         {
             if (dist[u] > dist[v] + w)
                     {
@@ -94,35 +99,47 @@ namespace Controller
                     }
         }
 
-        public void star(int posIni, int posFinal, int qtdNodes, Map graph)
+        public void Star(int posIni, int posFinal, int qtdNodes, Map graph)
         {
-            int cost;
-            Dijkstra(posIni, qtdNodes, graph) ;
+            Dijkstra(posIni, qtdNodes) ;
 
-            List <elemTree> leaves = new List<elemTree>();
-            List <elemTree> check = new List<elemTree>();
+
+            SortedList<int, int> border = new SortedList<int, int>();
+            Dictionary<int, List<int> > fatherSon = new Dictionary<int, List<int> >();
+            List<int> explored = new List<int>();
+
+            border.Add(totalCost(posIni, posFinal), posIni);
             
-            elemTree root =  new elemTree();
-            root.elem = posIni;
-            root.cost = dist[posIni] + h(posIni, posFinal);
-            root.parent = null;
-
-            leaves.Add(root);
-
-            while (leaves.First.elem != posFinal)
+            while (border.First().Value != posFinal)
             {
-                
-                leaves.Add
-            }
-            for (int pos = 0; pos < qtdNodes; pos++)
-            {
-                distFinal[pos] = dist[pos] + h(pos, posFinal);
+                var first = border.First();
+                border.RemoveAt(0);
+
+                foreach (var child in Neighborhood(first.Value))
+	            {
+                    int exCost = 0;
+                    if(explored.Contains(child))
+                        exCost = GetTileFromIndex(child).TileCost ;
+
+                    border.Add(totalCost(child, posFinal) + exCost, child);
+
+                    if (fatherSon.ContainsKey(first.Value))
+                        fatherSon[first.Value].Add(child);
+                    else
+                        fatherSon.Add(first.Value, new List<int>() { child });
+
+	            }
+
+                explored.Add(first.Value);
             }
 
 
         }
 
-        getNeighbours
+        private int totalCost(int currPos, int posFinal)
+        {
+            return dist[currPos] + h(currPos, posFinal);
+        }
 
         public int h(int posIni, int posFin)
         {
@@ -133,5 +150,34 @@ namespace Controller
 
             return (int)Math.Sqrt((xIni - xFin) ^ 2 + (yIni - yFin) ^ 2);
         }
+
+        private List<int> Neighborhood(int inx )
+        {
+
+            List<int> retInxs = new List<int>();
+            var x = inx / 42;
+            var y = inx % 42;
+
+            if (x != 41)   /* not last line */
+                retInxs.Add(inx + 42); /* x, y + 1*/                
+
+            if (x != 0)   /* not first line */
+                retInxs.Add(inx - 42); /* x, y - 1 */
+
+            if (y != 41) /* not last column */
+                retInxs.Add( inx + 1); /* x+1, y */
+            
+
+            if (y != 0) /* not first column */
+                retInxs.Add(inx - 1); /* x-1, y */
+
+            return retInxs;
+        }
+
+        private Tile GetTileFromIndex(int inx)
+        {
+            return graph.GetTile(inx / 42, inx % 42);
+        }
+    
     }
 }
