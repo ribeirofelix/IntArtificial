@@ -12,9 +12,13 @@ namespace Model
     {
       
         private TileTypes _type;
-        public TileTypes TileType { get { return _type; } set { _type = value; } }     
+        public TileTypes TileType 
+        {
+            get { return _type; }
+            set { _type = value; } 
+        }     
       
-        private Image _titleImage;
+        //private Image _titleImage;
         public Image TitleImage
         {
             get 
@@ -44,28 +48,34 @@ namespace Model
         }
 
 
-        private Pokemon _pokemon = null;
-        public Pokemon TilePokemon { get; set; }
+        private Pokemon _pokemon ;
+        public Pokemon TilePokemon 
+        {
+            get { return _pokemon; }
+            set { _pokemon = value; }
+        }
 
         
-        private Badge _badge = null;
-        public Badge TileBadge { get; set; }
+        private Badge _badge ;
+        public Badge TileBadge 
+        {
+            get { return _badge; }
+            set { _badge = value; }
+        }
 
-        private Ash _ash = null;
-        public Ash TileAsh { get; set; }      
+        private Ash _ash ;
+        public Ash TileAsh 
+        {
+            get { return _ash; }
+            set { _ash = value; }
+        }      
 
        
         private int _cost;
         public int TileCost 
         {
-            get
-            {
-                return _cost;
-            }
-            set
-            {
-                _cost = value;
-            }
+            get { return _cost; }
+            set { _cost = value; }
         }
 
 
