@@ -32,7 +32,7 @@ namespace View
         private void DrawBackgroudMap(Graphics graphic)
         {
             var yPoint = this.Width / 42;
-            foreach (var tileLine in _mapController.KantoMap)
+            foreach (var tileLine in _mapController.KantoMap.KantoMap)
             {
                 var xPoint = this.Height / 42;
                 foreach (var tile in tileLine)

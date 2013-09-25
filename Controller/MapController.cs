@@ -12,13 +12,13 @@ namespace Controller
     {
         private Map _kantoMap;
 
-        public ICollection<ICollection<Tile>> KantoMap
+        public Map KantoMap
         {
             get 
             {
                 if (_kantoMap == null)
                     _kantoMap = new Map(Resources.mapPath , Resources.pokePath);
-                return _kantoMap.KantoMap; 
+                return _kantoMap; 
             }
         }
 

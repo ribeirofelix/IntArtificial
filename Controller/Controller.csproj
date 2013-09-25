@@ -48,6 +48,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sorting.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Trabalho1\Model.csproj">

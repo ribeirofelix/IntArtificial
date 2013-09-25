@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using Sorting;
 
 namespace Controller
 {
@@ -30,79 +31,12 @@ namespace Controller
             public int? parent ;
         }
 
-        //protected struct ElemTree
-        //{
-        //    public ElemTree(int elem , int cost )
-        //    {
-        //        this.elem =elem;
-        //        this.cost = cost;
-        //        this.parent = null;
-        //    }
-        //    int elem;
-        //    int cost;
-        //    int? parent;
-        //};
-
         public AStar(int qtdNodes , Map graph )
         {
             /* initialize the array with infinity distance */
             dist = Enumerable.Repeat(int.MaxValue, qtdNodes).ToArray() ;
             path = Enumerable.Repeat(int.MinValue, qtdNodes).ToArray();
             this.graph = graph;
-        }
-
-        public void Dijkstra(int posIni, int qtdNodes )
-        {
-            int u, v, w, x, y;
-            dist[posIni] = 0;
-            path[posIni] = -1;
-            vis = Enumerable.Repeat(false, qtdNodes).ToArray();
-
-            while (true)
-            {
-                v = -1;     /* vertex that will be analyzed */
-                y = 0;
-
-                for (int i = 0; i < qtdNodes; i++)
-                    if (!vis[i] && (v < 0 || dist[i] < dist[v]))
-                        v = i;
-
-                /* if no vertex is selected or if there's no path from posIni to v the algorithm ends */
-                if (v < 0 || dist[v] == int.MaxValue) break;
-
-                vis[v] = true;
-
-                /* find variables x,y that relate to v */
-                x = v / 42;
-                y = v % 42;
-
-                /* we check if v can be used as a path to other vertices */
-                if (x != 41)   /* not last line */
-                {
-                    u = v + 42; /* x, y + 1*/                   /* vertex connected to v (edge v->u) */
-                    w = graph.GetTile(x, y + 1).TileCost;    /* cost of edge v->u */
-                    SetNewDistance(v, u, w);
-                }
-                if (x != 0)   /* not first line */
-                {
-                    u = v - 42; /* x, y - 1 */
-                    w = graph.GetTile(x, y - 1).TileCost;
-                    SetNewDistance(v, u, w);
-                }
-                if (y != 41) /* not last column */
-                {
-                    u = v + 1; /* x+1, y */
-                    w = graph.GetTile(x + 1, y).TileCost;
-                    SetNewDistance(v, u, w);
-                }
-                        
-                if (y != 0) /* not first column */ 
-                {
-                    u = v - 1; /* x-1, y */ 
-                    w = graph.GetTile(x - 1, y).TileCost;
-                    SetNewDistance(v, u, w);
-                }
-            }       
         }
 
         private void SetNewDistance (int v, int u, int w)
@@ -115,46 +49,48 @@ namespace Controller
                     }
         }
 
-        public int[] Star(int posIni, int posFinal, int qtdNodes, Map graph)
-        {
+        public ICollection<int> Star(int posIni, int posFinal, int qtdNodes, Map graph)
+        {            
+            var heapBorder = new Heap<Elem>();
 
-            SortedList<int, Elem> border = new SortedList<int, Elem>();
+            List<Elem> explored = new List<Elem>();    
+            heapBorder.HeapAdd( h(posIni,posFinal), new Elem(0, posIni) );
             
-            Dictionary<int, List<int> > fatherSon = new Dictionary<int, List<int> >();
-            List<Elem> explored = new List<Elem>();
-
-            
-            border.Add( h(posIni,posFinal), new Elem(0, posIni));
-            
-            while (border.First().Value != posFinal)
+            Tuple<int,int,Elem> first = null ;
+            while (heapBorder.HeapSize() > 0 )
             {
-                var first = border.First();
-                border.RemoveAt(0);
-
-                foreach (var child in Neighborhood(first.Value.index) )
+                first = heapBorder.HeapExtractMin() ;
+                if(first.Item3.index == posFinal)
+                    break;
+                
+                foreach (var child in Neighborhood(first.Item3.index) )
 	            {
-                    int accChild = first.Value.accCost + GetTileFromIndex(child).TileCost ;
-                    border.Add(h(child, posFinal) + accChild, new Elem(accChild, child,first.Value));
+                    int accChild = first.Item3.accCost + GetTileFromIndex(child).TileCost;
+                    heapBorder.HeapAdd(h(child, posFinal) + accChild , new Elem(accChild, child, first.Item3.index) );
 
 	            }
 
-                explored.Insert( 0  , first.Value);
+                explored.Insert( 0  , first.Item3);
             }
 
 
-            Elem currParent = border.First().Value;
+            int currParent = first.Item3.parent.Value ;
 
             List<int> pathReturn = new List<int>();
-            pathReturn[0] = currParent.index;
+            pathReturn.Insert(0, first.Item3.index);
+           
             
             for (int i = 0 , j = 1; i < explored.Count; i++)
 			{
-                if (explored[i].index == currParent.parent.Value)
+                if (explored[i].index == currParent )
                 {
-                    pathReturn[j] = explored[i].index;
+                    pathReturn.Insert(j,explored[i].index);
                     j++;
+                    currParent = explored[i].parent.HasValue ? explored[i].parent.Value : posIni  ;
                 }
-			}            
+			}
+
+            return pathReturn;
 
         }
 
@@ -170,15 +106,15 @@ namespace Controller
             int xFin = posFin % 42;
             int yFin = posFin / 42;
 
-            return (int)Math.Sqrt((xIni - xFin) ^ 2 + (yIni - yFin) ^ 2);
+            return (int)Math.Sqrt( Math.Pow( (xIni - xFin) , 2)  + Math.Pow( (yIni - yFin) , 2) ) * 100;
         }
 
         private List<int> Neighborhood(int inx )
         {
 
             List<int> retInxs = new List<int>();
-            var x = inx / 42;
-            var y = inx % 42;
+            var y = inx / 42;
+            var x = inx % 42;
 
             if (x != 41)   /* not last line */
                 retInxs.Add(inx + 42); /* x, y + 1*/                
