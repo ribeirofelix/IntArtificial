@@ -160,13 +160,14 @@ namespace Model
          * Return value: the tile corresponding to (x,y)
          */
 
-        Tile GetTile(int x, int y)
+        public Tile GetTile(int x, int y)
         {
             return _map[x][y];
         }
         #endregion
 
         #endregion
+
 
         #region /* CONSTRUCTOR */
 
