@@ -49,7 +49,7 @@ namespace Controller
 
         private void Initialize() 
         {
-            randomizePopulation();
+            RandomizePopulation();
 
             // Decode:
             for(int j = 0; j < pop; ++j) {           
@@ -60,7 +60,7 @@ namespace Controller
             current.SortFitness();
         }
 
-        private void randomizePopulation()
+        private void RandomizePopulation()
         {
             var rand = new Random();
 
@@ -135,7 +135,7 @@ namespace Controller
 
             while (inx < popMutant)
             {
-                randomizePopulation();
+                RandomizePopulation();
             }
 
             // Decode:

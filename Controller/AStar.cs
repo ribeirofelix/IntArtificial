@@ -9,10 +9,26 @@ namespace Controller
 {
     public class AStar
     {
+        // 1 2 3 4 5
+        // 6 7 8 9 10
+        // 11 12 13 14
         private int[] dist;
         private int[] path;
         private bool[] vis;  /* true if vertex i has already been analyzed by the algorithm */
         private Map graph;
+
+        protected struct Elem
+        {
+            public Elem(int accCost, int inx,int? parent = null)
+            {
+                this.accCost = accCost;
+                this.index = inx;
+                this.parent = parent;
+            }
+            public int accCost ;
+            public int index;
+            public int? parent ;
+        }
 
         //protected struct ElemTree
         //{
@@ -99,40 +115,46 @@ namespace Controller
                     }
         }
 
-        public void Star(int posIni, int posFinal, int qtdNodes, Map graph)
+        public int[] Star(int posIni, int posFinal, int qtdNodes, Map graph)
         {
-            Dijkstra(posIni, qtdNodes) ;
 
-
-            SortedList<int, int> border = new SortedList<int, int>();
+            SortedList<int, Elem> border = new SortedList<int, Elem>();
+            
             Dictionary<int, List<int> > fatherSon = new Dictionary<int, List<int> >();
-            List<int> explored = new List<int>();
+            List<Elem> explored = new List<Elem>();
 
-            border.Add(totalCost(posIni, posFinal), posIni);
+            
+            border.Add( h(posIni,posFinal), new Elem(0, posIni));
             
             while (border.First().Value != posFinal)
             {
                 var first = border.First();
                 border.RemoveAt(0);
 
-                foreach (var child in Neighborhood(first.Value))
+                foreach (var child in Neighborhood(first.Value.index) )
 	            {
-                    int exCost = 0;
-                    if(explored.Contains(child))
-                        exCost = GetTileFromIndex(child).TileCost ;
-
-                    border.Add(totalCost(child, posFinal) + exCost, child);
-
-                    if (fatherSon.ContainsKey(first.Value))
-                        fatherSon[first.Value].Add(child);
-                    else
-                        fatherSon.Add(first.Value, new List<int>() { child });
+                    int accChild = first.Value.accCost + GetTileFromIndex(child).TileCost ;
+                    border.Add(h(child, posFinal) + accChild, new Elem(accChild, child,first.Value));
 
 	            }
 
-                explored.Add(first.Value);
+                explored.Insert( 0  , first.Value);
             }
 
+
+            Elem currParent = border.First().Value;
+
+            List<int> pathReturn = new List<int>();
+            pathReturn[0] = currParent.index;
+            
+            for (int i = 0 , j = 1; i < explored.Count; i++)
+			{
+                if (explored[i].index == currParent.parent.Value)
+                {
+                    pathReturn[j] = explored[i].index;
+                    j++;
+                }
+			}            
 
         }
 
