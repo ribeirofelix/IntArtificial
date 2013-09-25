@@ -19,19 +19,24 @@ namespace Controller
         private Population previous;    // previous population
         private Population current;             // current population
 
-        public BRKGA(int n, int p, int _pe, int _pm, bool[] capturedBadges)
+        public BRKGA(int n, int pop, int popElt , int popMut , bool[] capturedBadges)
         {
             // Error check:
             if (n == 0) { throw new Exception("Chromosome size equals zero."); }
             if (pop == 0) { throw new Exception("Population size equals zero."); }
-            if (popElite == 0) { throw new Exception("Elite-set size equals zero."); }
-            if (popElite > pop) { throw new Exception("Elite-set size greater than population size (pe > p)."); }
-            if (popMutant > pop) { throw new Exception("Mutant-set size (pm) greater than population size (p)."); }
-            if (popElite + popMutant > pop) { throw new Exception("elite + mutant sets greater than population size (p)."); }
+            if (popElt == 0) { throw new Exception("Elite-set size equals zero."); }
+            if (popElt > pop) { throw new Exception("Elite-set size greater than population size (pe > p)."); }
+            if (popMut > pop) { throw new Exception("Mutant-set size (pm) greater than population size (p)."); }
+            if (popElt + popMut > pop) { throw new Exception("elite + mutant sets greater than population size (p)."); }
+
+            this.n = n;
+            this.pop = pop;
+            this.popElite = popElt;
+            this.popMutant = popMut;
 
             // Initialize and decode each chromosome of the current population, then copy to previous:
             // Allocate:
-            current = new Population(n, p);
+            current = new Population(n, pop);
 
             // Initialize:
             Initialize(capturedBadges);
