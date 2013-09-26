@@ -66,14 +66,15 @@ namespace Controller
                 foreach (var child in Neighborhood(first.Item3.index) )
 	            {
                     int accChild = first.Item3.accCost + GetTileFromIndex(child).TileCost;
-                    heapBorder.HeapAdd(h(child, posFinal) + accChild , new Elem(accChild, child, first.Item3.index) );
-
+                    
+                    if(! explored.Any(e => e.index == accChild ) )
+                        heapBorder.HeapAdd(h(child, posFinal) + accChild , new Elem(accChild, child, first.Item3.index) );
+                    
 	            }
 
                 explored.Insert( 0  , first.Item3);
             }
-
-
+           
             int currParent = first.Item3.parent.Value ;
             totalCost = first.Item3.accCost;
 

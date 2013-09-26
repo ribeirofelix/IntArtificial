@@ -10,20 +10,110 @@ namespace Tests
     [TestClass]
     public class UnitTest1
     {
+        #region Distances Tests
         [TestMethod]
-        public void TestAStar()
+        public void DistanceToVolcano()
         {
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost ;
-            var path = aStar.Star( XY2i(24,19) , XY2i(39,20) , 42 * 42, mapCont.KantoMap , out totalCost );
+            var path = aStar.Star( XY2i(24,19) , XY2i(36,4) , 42 * 42, mapCont.KantoMap , out totalCost );
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)  ).Select(v => v[0].ToString() + ";" + v[1].ToString() ) ) );
-            Console.WriteLine(totalCost);
-            Assert.IsTrue(totalCost == 250);
-            
+            Console.WriteLine(totalCost);     
+        }
+        [TestMethod]
+        public void DistanceToMarsh()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(19, 37), 42 * 42, mapCont.KantoMap, out totalCost);
 
-        
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+            
+        }
+        [TestMethod]
+        public void DistanceToSoul()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(4, 2) , 42 * 42, mapCont.KantoMap, out totalCost);
+
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+           
+        }
+        [TestMethod]
+        public void DistanceToThunder()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(19, 2), 42 * 42, mapCont.KantoMap, out totalCost);
+
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+        }
+        [TestMethod]
+        public void DistanceToBoulder()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(32, 40), 42 * 42, mapCont.KantoMap, out totalCost);
+
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+        }
+        [TestMethod]
+        public void DistanceToRainbow()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(2, 22), 42 * 42, mapCont.KantoMap, out totalCost);
+
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+        }
+        [TestMethod]
+        public void DistanceToEarth()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(39, 20), 42 * 42, mapCont.KantoMap, out totalCost);
+
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+        }
+        [TestMethod]
+        public void DistanceToCascade()
+        {
+            var mapCont = new MapController();
+            var aStar = new AStar(42 * 42, mapCont.KantoMap);
+            int totalCost;
+            var path = aStar.Star(XY2i(24, 19), XY2i(14, 19) , 42 * 42, mapCont.KantoMap, out totalCost);
+
+            Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            Console.WriteLine(totalCost);
+        }
+#endregion
+
+
+
+
+        public void TesteGenetics()
+        {
+             var mapCont = new MapController();
+             mapCont.UpdateDistances();
+            var captBdg = Enumerable.Repeat(false,8).ToArray();
+            var gen = new BRKGA(9, 42 * 42, 500, 100, captBdg, mapCont.DistMap);
+            gen.Evolve(10);
+            
         }
 
         private int[] i2XY(int ix)
