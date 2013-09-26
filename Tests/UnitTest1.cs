@@ -32,10 +32,8 @@ namespace Tests
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
-<<<<<<< HEAD
             Assert.IsTrue(totalCost == 250);
         
-=======
             
         }
         [TestMethod]
@@ -118,7 +116,6 @@ namespace Tests
             var gen = new BRKGA(9, 42 * 42, 500, 100, captBdg, mapCont.DistMap);
             gen.Evolve(10);
             
->>>>>>> 44f7bae4ff3b4d70c53aa87a8fd0036de85620b4
         }
 
         private int[] i2XY(int ix)
