@@ -10,7 +10,7 @@ namespace Controller
 {
     public class MapController
     {
-        private const int mapLenght = 42 * 42;
+        private const int mapLength = 42 * 42;
         private int[] posAshBdg;
         private int[][] distMap =  new int[9][] ; 
 
@@ -28,7 +28,13 @@ namespace Controller
             }
         }
 
-        private void updateDistances()
+        private void ChangeRoute()
+        {
+            //call genetic
+            //call astar
+        }
+
+        private void UpdateDistances()
         {
             var aStar = new AStar(42 * 42, this._kantoMap);
             int totalCost ;
@@ -37,14 +43,13 @@ namespace Controller
                 distMap[i][i] = 0;
                 for (int j = i+1; j < this.posAshBdg.Length; j++)
                 {
-                    aStar.Star(posAshBdg[i], posAshBdg[j], mapLenght, this._kantoMap, out totalCost);
+                    aStar.Star(posAshBdg[i], posAshBdg[j], mapLength, this._kantoMap, out totalCost);
                     distMap[i][j] = totalCost;
                     distMap[j][i] = totalCost;
                 }
             }
 
         }
-
 
     }
 }

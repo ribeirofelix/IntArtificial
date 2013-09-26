@@ -115,7 +115,7 @@ namespace Model
         }
 
 
-        public string ToString()
+        override public string ToString()
         {
             return Enum.GetName(typeof(TileTypes), this.TileType);
         }

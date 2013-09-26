@@ -70,6 +70,7 @@
     <Compile Include="Badge.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Pokedex.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="Population.cs" />
     <Compile Include="Program.cs" />

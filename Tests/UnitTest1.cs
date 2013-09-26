@@ -21,8 +21,6 @@ namespace Tests
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)  ).Select(v => v[0].ToString() + ";" + v[1].ToString() ) ) );
             Console.WriteLine(totalCost);
             Assert.IsTrue(totalCost == 250);
-            
-
         
         }
 

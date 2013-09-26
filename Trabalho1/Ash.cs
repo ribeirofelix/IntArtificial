@@ -11,6 +11,16 @@ namespace Model
 
         //image
         private int xPoint;
+        private Dictionary<PokemonTypes, bool> _pokemons = new Dictionary<PokemonTypes, bool>(5);
+
+        public Ash()
+        {
+
+            foreach (PokemonTypes i in Enum.GetValues(typeof(PokemonTypes)))
+                _pokemons.Add(i, false);
+
+        }
+
         public int X
         {
             get { return xPoint; }
