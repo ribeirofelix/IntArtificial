@@ -49,7 +49,7 @@ namespace Controller
                     }
         }
 
-        public ICollection<int> Star(int posIni, int posFinal, int qtdNodes, Map graph)
+        public ICollection<int> Star(int posIni, int posFinal, int qtdNodes, Map graph , out int totalCost)
         {            
             var heapBorder = new Heap<Elem>();
 
@@ -75,6 +75,7 @@ namespace Controller
 
 
             int currParent = first.Item3.parent.Value ;
+            totalCost = first.Item3.accCost;
 
             List<int> pathReturn = new List<int>();
             pathReturn.Insert(0, first.Item3.index);

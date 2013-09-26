@@ -10,16 +10,39 @@ namespace Controller
 {
     public class MapController
     {
-        private Map _kantoMap;
+        private const int mapLenght = 42 * 42;
+        private int[] posAshBdg;
+        private int[][] distMap =  new int[9][] ; 
 
+        private Map _kantoMap;
         public Map KantoMap
         {
             get 
             {
                 if (_kantoMap == null)
-                    _kantoMap = new Map(Resources.mapPath , Resources.pokePath);
+                {
+                    _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
+                    posAshBdg = _kantoMap.ashAndBdgsPos; 
+                }
                 return _kantoMap; 
             }
+        }
+
+        private void updateDistances()
+        {
+            var aStar = new AStar(42 * 42, this._kantoMap);
+            int totalCost ;
+            for (int i = 0; i < this.posAshBdg.Length; i++)
+            {
+                distMap[i][i] = 0;
+                for (int j = i+1; j < this.posAshBdg.Length; j++)
+                {
+                    aStar.Star(posAshBdg[i], posAshBdg[j], mapLenght, this._kantoMap, out totalCost);
+                    distMap[i][j] = totalCost;
+                    distMap[j][i] = totalCost;
+                }
+            }
+
         }
 
 

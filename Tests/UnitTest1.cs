@@ -15,9 +15,12 @@ namespace Tests
         {
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
-            var path = aStar.Star( XY2i(24,19) , XY2i(14,19) , 42 * 42, mapCont.KantoMap);
+            int totalCost ;
+            var path = aStar.Star( XY2i(24,19) , XY2i(39,20) , 42 * 42, mapCont.KantoMap , out totalCost );
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)  ).Select(v => v[0].ToString() + ";" + v[1].ToString() ) ) );
+            Console.WriteLine(totalCost);
+            Assert.IsTrue(totalCost == 250);
             
 
         
@@ -25,7 +28,7 @@ namespace Tests
 
         private int[] i2XY(int ix)
         {
-            return new int[2] { ix%42 , ix/42 };
+            return new int[2] { ix % 42, ix / 42 };
         }
 
         private int XY2i(int x, int y)
@@ -33,7 +36,7 @@ namespace Tests
             return (y * 42) + x;
         }
 
-        [TestMethod]
+       
         public void TestHeapMinEmptySimple()
         {
 

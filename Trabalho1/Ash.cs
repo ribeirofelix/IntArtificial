@@ -8,6 +8,23 @@ namespace Model
 {
     public class Ash
     {
+
         //image
+        private int xPoint;
+        public int X
+        {
+            get { return xPoint; }
+            set { xPoint = value; }
+        }
+
+        private int yPoint;
+        public int Y
+        {
+            get { return yPoint; }
+            set { yPoint = value; }
+        }
+
+
+        
     }
 }

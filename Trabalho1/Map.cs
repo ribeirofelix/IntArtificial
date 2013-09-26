@@ -13,6 +13,7 @@ namespace Model
 
         private const int MAXHOUSES = 42;
         private Tile[][] _map = new Tile[MAXHOUSES][];
+        public int[] ashAndBdgsPos = new int[9];
         public ICollection<ICollection<Tile>> KantoMap
         {
             get
@@ -128,16 +129,34 @@ namespace Model
 
         /* Position badges in a map. */
 
-        void PositionBadges()
+        private void PositionBadges()
         {
             GetTile(4, 2).TileBadge = new Badge(); //soul - Koga - veneno
+            ashAndBdgsPos[(int)BadgeTypes.soul] = XY2i(4, 2);
+
             GetTile(36, 4).TileBadge = new Badge(); //volcano - Blaine - fogo
+            ashAndBdgsPos[(int)BadgeTypes.volcano] = XY2i(36, 4);
+            
+
             GetTile(19, 2).TileBadge = new Badge(); //thunder - Ten Surge - eletrico
+            ashAndBdgsPos[(int)BadgeTypes.thunder] = XY2i(19, 2);
+            
             GetTile(32, 40).TileBadge = new Badge(); //boulder - Brock - pedra
+            ashAndBdgsPos[(int)BadgeTypes.boulder] = XY2i(32, 40);
+            
             GetTile(2, 22).TileBadge = new Badge(); //rainbow - Erika - planta
+            ashAndBdgsPos[(int)BadgeTypes.rainbow] = XY2i(2, 22);
+            
             GetTile(39, 20).TileBadge = new Badge(); //earth - Giovanni - terra
+            ashAndBdgsPos[(int)BadgeTypes.earth] = XY2i(39, 20);
+            
             GetTile(14, 19).TileBadge = new Badge(); //cascade - Misty - agua
+            ashAndBdgsPos[(int)BadgeTypes.cascade] = XY2i(14, 19);
+            
             GetTile(19, 37).TileBadge = new Badge(); //marsh - Sabrina - psiquico
+            ashAndBdgsPos[(int)BadgeTypes.marsh] = XY2i(19, 37);
+
+
         }
 
         #endregion
@@ -146,9 +165,11 @@ namespace Model
 
         /* Position Ash in a map. */
 
-        void PositionAsh()
+        private void PositionAsh()
         {
-            GetTile(24, 19).TileAsh = new Ash(); //ash
+            GetTile(24, 19).TileAsh = new Ash() { X = 24 , Y = 19 }; //ash
+            _ashIndex = XY2i(24, 19);
+            ashAndBdgsPos[0] = _ashIndex;
         }
 
         #endregion
@@ -194,5 +215,32 @@ namespace Model
         }
 
         #endregion
+
+
+        private int _ashIndex;
+        public int AshIndex 
+        {
+            get
+            {
+                return _ashIndex;
+            }
+            set
+            {
+                _ashIndex = value;
+            }
+        }
+
+
+        
+        private int[] i2XY(int ix)
+        {
+            return new int[2] { ix % 42, ix / 42 };
+        }
+
+        private int XY2i(int x, int y)
+        {
+            return (y * 42) + x;
+        }
+
     }
 }

@@ -68,7 +68,7 @@
   <ItemGroup>
     <Compile Include="Ash.cs" />
     <Compile Include="Badge.cs" />
-    <Compile Include="Enum.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Pokemon.cs" />
     <Compile Include="Population.cs" />
