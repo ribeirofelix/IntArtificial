@@ -53,9 +53,12 @@ namespace Controller
         {            
             var heapBorder = new Heap<Elem>();
 
-            List<Elem> explored = new List<Elem>();    
+            List<Elem> explored = new List<Elem>();
+            var hasExpl = Enumerable.Repeat(false, qtdNodes).ToArray() ;
             heapBorder.HeapAdd( h(posIni,posFinal), new Elem(0, posIni) );
-            
+
+            Console.WriteLine(qtdNodes);
+
             Tuple<int,int,Elem> first = null ;
             while (heapBorder.HeapSize() > 0 )
             {
@@ -65,15 +68,22 @@ namespace Controller
                 
                 foreach (var child in Neighborhood(first.Item3.index) )
 	            {
-                    int accChild = first.Item3.accCost + GetTileFromIndex(child).TileCost;
-                    heapBorder.HeapAdd(h(child, posFinal) + accChild , new Elem(accChild, child, first.Item3.index) );
-
+                    int accChild = 0;
+                    accChild = first.Item3.accCost + GetTileFromIndex(child).TileCost;
+                    
+                    if (child >= hasExpl.Length)
+                        throw new Exception("in " + child + ";has :" + hasExpl.Length);
+                    if( !hasExpl[child] )
+                        heapBorder.HeapAdd(h(child, posFinal) + accChild , new Elem(accChild, child, first.Item3.index) );
+                    
 	            }
 
                 explored.Insert( 0  , first.Item3);
+                if (first.Item3.index >= hasExpl.Length)
+                    throw new Exception("in " + first.Item3.index + ";has :" + hasExpl.Length);
+                hasExpl[first.Item3.index] = true;
             }
-
-
+           
             int currParent = first.Item3.parent.Value ;
             totalCost = first.Item3.accCost;
 
@@ -107,7 +117,7 @@ namespace Controller
             int xFin = posFin % 42;
             int yFin = posFin / 42;
 
-            return (int)Math.Sqrt( Math.Pow( (xIni - xFin) , 2)  + Math.Pow( (yIni - yFin) , 2) ) * 100;
+            return (int)Math.Sqrt( Math.Pow( (xIni - xFin) , 2)  + Math.Pow( (yIni - yFin) , 2) ) * 150;
         }
 
         private List<int> Neighborhood(int inx )
@@ -117,25 +127,30 @@ namespace Controller
             var y = inx / 42;
             var x = inx % 42;
 
-            if (x != 41)   /* not last line */
-                retInxs.Add(inx + 42); /* x, y + 1*/                
+            if (x != 41)   /* not last column */
+                retInxs.Add(inx + 1); /* x + 1, y */                
 
-            if (x != 0)   /* not first line */
-                retInxs.Add(inx - 42); /* x, y - 1 */
+            if (x != 0)   /* not first column */
+                retInxs.Add(inx - 1); /* x - 1, y */
 
-            if (y != 41) /* not last column */
-                retInxs.Add( inx + 1); /* x+1, y */
+            if (y != 41) /* not last line */
+                retInxs.Add( inx + 42); /* x, y + 42 */
             
 
-            if (y != 0) /* not first column */
-                retInxs.Add(inx - 1); /* x-1, y */
+            if (y != 0) /* not first line */
+                retInxs.Add(inx - 1); /* x, y - 42 */
 
             return retInxs;
         }
 
         private Tile GetTileFromIndex(int inx)
         {
-            return graph.GetTile(inx / 42, inx % 42);
+            int x = inx % 42;
+            int y = inx / 42;
+            if (x >= 42 || y >= 42)
+                throw new Exception("fora da matriz: " + x + " " + y );
+            
+            return graph.GetTile(x , y );
         }
     
     }

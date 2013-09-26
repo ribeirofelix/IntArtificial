@@ -10,9 +10,23 @@ namespace Controller
 {
     public class MapController
     {
+
         private const int mapLength = 42 * 42;
+
+        public MapController()
+        {
+            _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
+            posAshBdg = _kantoMap.ashAndBdgsPos; 
+        }
+
+
         private int[] posAshBdg;
-        private int[][] distMap =  new int[9][] ; 
+        
+        private int[][] distMap =  Enumerable.Repeat<int[]>(new int[9],9).ToArray() ;
+        public int[][] DistMap
+        {
+            get{ return distMap; }
+        }
 
         private Map _kantoMap;
         public Map KantoMap
@@ -27,6 +41,9 @@ namespace Controller
                 return _kantoMap; 
             }
         }
+        
+
+
 
         private void ChangeRoute()
         {
@@ -34,7 +51,7 @@ namespace Controller
             //call astar
         }
 
-        private void UpdateDistances()
+        public void UpdateDistances()
         {
             var aStar = new AStar(42 * 42, this._kantoMap);
             int totalCost ;
