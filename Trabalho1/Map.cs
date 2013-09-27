@@ -131,30 +131,29 @@ namespace Model
 
         private void PositionBadges()
         {
-            GetTile(4, 2).TileBadge = new Badge(); //soul - Koga - veneno
-            ashAndBdgsPos[(int)BadgeTypes.soul] = XY2i(4, 2);
+            GetTile(2, 4).TileBadge = new Badge(); //soul - Koga - veneno
+            ashAndBdgsPos[(int)BadgeTypes.soul] = XY2i(2, 4);
 
-            GetTile(36, 4).TileBadge = new Badge(); //volcano - Blaine - fogo
-            ashAndBdgsPos[(int)BadgeTypes.volcano] = XY2i(36, 4);
+            GetTile(4, 36).TileBadge = new Badge(); //volcano - Blaine - fogo
+            ashAndBdgsPos[(int)BadgeTypes.volcano] = XY2i(4, 36);
             
-
-            GetTile(19, 2).TileBadge = new Badge(); //thunder - Ten Surge - eletrico
-            ashAndBdgsPos[(int)BadgeTypes.thunder] = XY2i(19, 2);
+            GetTile(2, 19).TileBadge = new Badge(); //thunder - Ten Surge - eletrico
+            ashAndBdgsPos[(int)BadgeTypes.thunder] = XY2i(2, 19);
             
-            GetTile(32, 40).TileBadge = new Badge(); //boulder - Brock - pedra
-            ashAndBdgsPos[(int)BadgeTypes.boulder] = XY2i(32, 40);
+            GetTile(40, 32).TileBadge = new Badge(); //boulder - Brock - pedra
+            ashAndBdgsPos[(int)BadgeTypes.boulder] = XY2i(40, 32);
             
-            GetTile(2, 22).TileBadge = new Badge(); //rainbow - Erika - planta
-            ashAndBdgsPos[(int)BadgeTypes.rainbow] = XY2i(2, 22);
+            GetTile(22, 2).TileBadge = new Badge(); //rainbow - Erika - planta
+            ashAndBdgsPos[(int)BadgeTypes.rainbow] = XY2i(22, 2);
             
-            GetTile(39, 20).TileBadge = new Badge(); //earth - Giovanni - terra
-            ashAndBdgsPos[(int)BadgeTypes.earth] = XY2i(39, 20);
+            GetTile(20, 39).TileBadge = new Badge(); //earth - Giovanni - terra
+            ashAndBdgsPos[(int)BadgeTypes.earth] = XY2i(20, 39);
             
-            GetTile(14, 19).TileBadge = new Badge(); //cascade - Misty - agua
-            ashAndBdgsPos[(int)BadgeTypes.cascade] = XY2i(14, 19);
+            GetTile(19, 14).TileBadge = new Badge(); //cascade - Misty - agua
+            ashAndBdgsPos[(int)BadgeTypes.cascade] = XY2i(19, 14);
             
-            GetTile(19, 37).TileBadge = new Badge(); //marsh - Sabrina - psiquico
-            ashAndBdgsPos[(int)BadgeTypes.marsh] = XY2i(19, 37);
+            GetTile(37, 19).TileBadge = new Badge(); //marsh - Sabrina - psiquico
+            ashAndBdgsPos[(int)BadgeTypes.marsh] = XY2i(37, 19);
 
 
         }
@@ -167,7 +166,7 @@ namespace Model
 
         private void PositionAsh()
         {
-            GetTile(24, 19).TileAsh = new Ash() { X = 24 , Y = 19 }; //ash
+            GetTile(19, 24).TileAsh = new Ash() { X = 19 , Y = 24 }; //ash
             _ashIndex = XY2i(24, 19);
             ashAndBdgsPos[0] = _ashIndex;
         }
@@ -234,12 +233,12 @@ namespace Model
         
         private int[] i2XY(int ix)
         {
-            return new int[2] { ix % 42, ix / 42 };
+            return new int[2] { ix / 42, ix % 42 };
         }
 
         private int XY2i(int x, int y)
         {
-            return (y * 42) + x;
+            return y + (x * 42);
         }
 
     }

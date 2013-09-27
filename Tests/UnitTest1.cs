@@ -17,7 +17,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost ;
-            var path = aStar.Star( XY2i(24,19) , XY2i(36,4) , 42 * 42, mapCont.KantoMap , out totalCost );
+            var path = aStar.Star( XY2i(19, 24) , XY2i(4,36) , 42 * 42, mapCont.KantoMap , out totalCost );
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)  ).Select(v => v[0].ToString() + ";" + v[1].ToString() ) ) );
             Console.WriteLine(totalCost);     
@@ -28,7 +28,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(19, 37), 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(37, 19), 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
@@ -40,9 +40,16 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(4, 2) , 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(2, 4) , 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
+            for (int i = 0; i < path.Count; i++)
+            {
+                int ind = path.ElementAt(i);
+                int[] xy = i2XY(ind);
+                Tile temp = mapCont.KantoMap.GetTile(xy[0], xy[1]);
+                Console.WriteLine(temp.TileType);
+            }
             Console.WriteLine(totalCost);
            
         }
@@ -52,7 +59,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(19, 2), 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(2, 19), 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
@@ -63,7 +70,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(32, 40), 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(40, 32), 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
@@ -74,7 +81,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(2, 22), 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(22, 2), 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
@@ -85,7 +92,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(39, 20), 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(20, 39), 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
@@ -96,7 +103,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar(42 * 42, mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(XY2i(24, 19), XY2i(14, 19) , 42 * 42, mapCont.KantoMap, out totalCost);
+            var path = aStar.Star(XY2i(19, 24), XY2i(19, 14) , 42 * 42, mapCont.KantoMap, out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => i2XY(v)).Select(v => v[0].ToString() + ";" + v[1].ToString())));
             Console.WriteLine(totalCost);
@@ -118,12 +125,12 @@ namespace Tests
 
         private int[] i2XY(int ix)
         {
-            return new int[2] { ix % 42, ix / 42 };
+            return new int[2] { ix / 42, ix % 42 };
         }
 
         private int XY2i(int x, int y)
         {
-            return (y * 42) + x;
+            return y + x*42;
         }
 
        
