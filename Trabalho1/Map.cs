@@ -11,10 +11,14 @@ namespace Model
     {
         #region /* PRIVATE PROPERTIES */
 
-        private const int MAXHOUSES = 42;
-        private Tile[][] _map = new Tile[MAXHOUSES][];
+        private const int MAXTILES = 42;
+        public Badge[] badges = new Badge[8];
         public int[] ashAndBdgsPos = new int[9];
+        public Pokedex pokedex;
+        private Tile[][] _map = new Tile[MAXTILES][];
+
         public ICollection<ICollection<Tile>> KantoMap
+
         {
             get
             {
@@ -22,7 +26,6 @@ namespace Model
             }
         }
        
-
         #endregion
 
         #region /* PRIVATE METHODS */
@@ -116,6 +119,7 @@ namespace Model
                 }
 
                 /* Create pokemon */
+
                 Pokemon _pokemon = new Pokemon(t);
 
                 /* Assign pokemon */
@@ -197,9 +201,9 @@ namespace Model
          */
         public Map(string mapFile, string pokemonFile)
         {
-            for (int i = 0; i < MAXHOUSES; i++)
+            for (int i = 0; i < MAXTILES; i++)
             {
-                _map[i] = new Tile[MAXHOUSES];
+                _map[i] = new Tile[MAXTILES];
             }
             ReadMap(mapFile);
             PositionBadges();
@@ -243,3 +247,4 @@ namespace Model
 
     }
 }
+

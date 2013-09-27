@@ -27,7 +27,8 @@ namespace Model
 
 
         /* Constructor of Pokemon class
-         * Parameter: type - type of pokemon
+         * Parameters: 
+         *  type - type of pokemon
          */
 
         public Pokemon(char type)
@@ -41,7 +42,6 @@ namespace Model
                 case 'F': _type = PokemonTypes.Fire; break;
                 default: break;
             }
-
         }
 
         public override string ToString()

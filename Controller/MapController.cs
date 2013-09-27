@@ -11,13 +11,15 @@ namespace Controller
     public class MapController
     {
 
+        private const int mapLength = 42 * 42;
+
         public MapController()
         {
             _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
             posAshBdg = _kantoMap.ashAndBdgsPos; 
         }
 
-        private const int mapLenght = 42 * 42;
+
         private int[] posAshBdg;
         
         private int[][] distMap =  Enumerable.Repeat<int[]>(new int[9],9).ToArray() ;
@@ -42,6 +44,13 @@ namespace Controller
         
 
 
+
+        private void ChangeRoute()
+        {
+            //call genetic
+            //call astar
+        }
+
         public void UpdateDistances()
         {
             var aStar = new AStar(42 * 42, this._kantoMap);
@@ -51,14 +60,13 @@ namespace Controller
                 distMap[i][i] = 0;
                 for (int j = i+1; j < this.posAshBdg.Length; j++)
                 {
-                    aStar.Star(posAshBdg[i], posAshBdg[j], mapLenght, this._kantoMap, out totalCost);
+                    aStar.Star(posAshBdg[i], posAshBdg[j], mapLength, this._kantoMap, out totalCost);
                     distMap[i][j] = totalCost;
                     distMap[j][i] = totalCost;
                 }
             }
 
         }
-
 
     }
 }

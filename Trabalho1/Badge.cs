@@ -8,6 +8,6 @@ namespace Model
 {
     public class Badge
     {
-        //image
+
     }
 }

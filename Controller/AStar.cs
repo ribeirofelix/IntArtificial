@@ -16,7 +16,7 @@ namespace Controller
         // 11 12 13 14
         private int[] dist;
         private int[] path;
-        private bool[] vis;  /* true if vertex i has already been analyzed by the algorithm */
+       // private bool[] vis;  /* true if vertex i has already been analyzed by the algorithm */
         private Map graph;
 
         protected struct Elem
