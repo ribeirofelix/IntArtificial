@@ -9,18 +9,17 @@ using Controller;
 
 namespace View
 {
-    public class PictureMap : PictureBox
+    public class PictureMap : PictureBox, IAshChanged
     {
 
         private MapController _mapController = new MapController();
         
-
-        
-        public PictureMap() :base()
+        public PictureMap(MapController kantoMap) :base ()
         {
             this.Width = 1028;
             this.Height = 960;
-           
+         
+            kantoMap.RegisterListener(this);
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -57,11 +56,30 @@ namespace View
                 var xPoint = 0;
                 foreach (var tile in tileLine)
                 {
+                    if (tile.TileImage == null)
+                    {
+                        Console.WriteLine("invalido");
+                        continue;
+                    }
                     graphic.DrawImage(tile.TileImage, xPoint, yPoint);
-                    xPoint += tile.TileImage.Height;
+                    xPoint += 18;
                 }
                 yPoint += 18;
             }
+        }
+
+        public void AshChanged(MapController updatedMap)
+        {
+
+            try
+            {
+                this.Parent.Refresh();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+            
         }
     }
 }
