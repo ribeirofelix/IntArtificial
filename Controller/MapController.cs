@@ -16,13 +16,18 @@ namespace Controller
         public MapController()
         {
             _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
-            posAshBdg = _kantoMap.ashAndBdgsPos; 
+            posAshBdg = _kantoMap.ashAndBdgsPos;
+            for (int i = 0; i < distMap.Length; i++)
+            {
+                distMap[i] = new int[9];
+            }
+            
         }
 
 
         private Helper.Point[] posAshBdg;
         
-        private int[][] distMap =  Enumerable.Repeat<int[]>(new int[9],9).ToArray() ;
+        private int[][] distMap =  new int[9][];
         public int[][] DistMap
         {
             get{ return distMap; }
@@ -52,6 +57,7 @@ namespace Controller
         {
             var aStar = new AStar(this._kantoMap);
             int totalCost ;
+            Helper.Point[][] paths = new Helper.Point[8][];
             for (int i = 0; i < this.posAshBdg.Length; i++)
             {
                 distMap[i][i] = 0;
