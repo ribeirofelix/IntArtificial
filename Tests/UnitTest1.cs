@@ -34,7 +34,7 @@ namespace Tests
             Console.WriteLine(String.Join("\n", path.Select(v =>  v.x.ToString() + ";" + v.y.ToString() ) ) );
             Console.WriteLine(totalCost);
 
-            Assert.IsTrue(totalCost == 410);
+            Assert.IsTrue(totalCost == 440);
         
             
         }
@@ -74,7 +74,7 @@ namespace Tests
             var mapCont = new MapController();
             var aStar = new AStar( mapCont.KantoMap);
             int totalCost;
-            var path = aStar.Star(new Helper.Point(19, 24), new Helper.Point(32, 40),  out totalCost);
+            var path = aStar.Star(new Helper.Point(19, 24), new Helper.Point(40, 32),  out totalCost);
 
             Console.WriteLine(String.Join("\n", path.Select(v => v.x.ToString() + ";" + v.y.ToString())));
             Console.WriteLine(totalCost);

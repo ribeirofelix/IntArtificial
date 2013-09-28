@@ -53,38 +53,43 @@ namespace Controller
         {            
             var heapBorder = new Heap<Elem>();
 
+            Console.WriteLine("cheguei no astar");
+
             List<Elem> explored = new List<Elem>();
-            /* Array to verify if a house was explored */
+            /* Array to verify if a position was explored */
             var hasExpl = new bool[qtdNodes,qtdNodes];
+            var inBorder = new bool[qtdNodes,qtdNodes];
             hasExpl.Initialize();
+            inBorder.Initialize();
             
             
             Elem father = new Elem(0, posIni);
-            heapBorder.HeapAdd( /*h(posIni,posFinal)*/ 0 , father );
+            heapBorder.HeapAdd( h(posIni,posFinal), father );
 
-           
-            int cont = 0;
             while (heapBorder.HeapSize() > 0 )
             {
                 father = heapBorder.HeapExtractMin().Item3 ;
+                inBorder[father.pos.x, father.pos.y] = false;
                 if( father.pos.Equals(posFinal) )
                     break;
-                
+
+                explored.Insert(0, father);
+                hasExpl[father.pos.x, father.pos.y] = true;
+
                 foreach (var child in father.pos.Neighborhood() )
 	            {
                     int accChild = 0;
                     accChild = father.accCost + GetTileFromPos(child).TileCost;
-                    
-                    if( !hasExpl[child.x,child.y] )
-                        heapBorder.HeapAdd(/* h(child, posFinal) + */accChild , new Elem(accChild, child, father.pos) );
-                    
-	            }
 
-                explored.Insert( 0  , father );
+                    if (hasExpl[child.x, child.y] && accChild >= father.accCost)
+                        continue;
 
-                hasExpl[father.pos.x,father.pos.y] = true;
-
-                cont++;               
+                    if (inBorder[child.x, child.y] == false || accChild < father.accCost)
+                    {
+                        heapBorder.HeapAdd(h(child, posFinal) + accChild, new Elem(accChild, child, father.pos));
+                        inBorder[child.x, child.y] = true;
+                    }
+	            }             
             }
 
             
@@ -118,7 +123,7 @@ namespace Controller
             int xFin = posFin.x ;
             int yFin = posFin.y ;
 
-            return (int)Math.Sqrt( Math.Pow( (xIni - xFin)*12, 2) + Math.Pow( (yIni - yFin)*12, 2) )  ;
+            return (int)Math.Sqrt( Math.Pow( (xIni - xFin), 2) + Math.Pow( (yIni - yFin), 2)*100)  ;
         }
 
         
