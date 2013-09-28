@@ -12,7 +12,7 @@ namespace Model
     {
         private PokemonTypes _type;
 
-        private Image _pokeImage;
+      /*  private Image _pokeImage;
 
         public Image PokeImage
         {
@@ -23,10 +23,9 @@ namespace Model
                 return _pokeImage; 
             }
             
-        }
+        }*/
 
-
-        /* Constructor of Pokemon class
+         /* Constructor of Pokemon class
          * Parameters: 
          *  type - type of pokemon
          */
@@ -42,6 +41,8 @@ namespace Model
                 case 'F': _type = PokemonTypes.Fire; break;
                 default: break;
             }
+
+
         }
 
         public override string ToString()

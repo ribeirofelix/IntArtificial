@@ -19,7 +19,7 @@ namespace Model
         }     
       
         //private Image _titleImage;
-        public Image TitleImage
+        public Image TileImage
         {
             get 
             {

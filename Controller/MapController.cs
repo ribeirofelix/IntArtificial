@@ -41,9 +41,6 @@ namespace Controller
                 return _kantoMap; 
             }
         }
-        
-
-
 
         private void ChangeRoute()
         {

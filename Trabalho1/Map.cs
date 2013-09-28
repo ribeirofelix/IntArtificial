@@ -207,7 +207,10 @@ namespace Model
          */
         public Map(string mapFile, string pokemonFile)
         {
+<<<<<<< HEAD
+=======
 
+>>>>>>> a98cf6b47e1d6bd575a529f235cb365a11e3b38e
             ReadMap(mapFile);
             PositionBadges();
             PositionAsh();
