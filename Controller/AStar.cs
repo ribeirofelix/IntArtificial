@@ -76,7 +76,7 @@ namespace Controller
                     accChild = father.accCost + GetTileFromPos(child).TileCost;
                     
                     if( !hasExpl[child.x,child.y] )
-                        heapBorder.HeapAdd(/* h(child, posFinal) + */accChild , new Elem(accChild, child, father.pos) );
+                        heapBorder.HeapAdd( h(child, posFinal) + accChild , new Elem(accChild, child, father.pos) );
                     
 	            }
 

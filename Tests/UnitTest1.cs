@@ -33,7 +33,8 @@ namespace Tests
 
             Console.WriteLine(String.Join("\n", path.Select(v =>  v.x.ToString() + ";" + v.y.ToString() ) ) );
             Console.WriteLine(totalCost);
-            Assert.IsTrue(totalCost == 250);
+
+            Assert.IsTrue(totalCost == 410);
         
             
         }
@@ -55,6 +56,7 @@ namespace Tests
                 Console.WriteLine(temp.TileType);
             }
             Console.WriteLine(totalCost);
+            Assert.IsTrue(430 == totalCost);
            
         }
         [TestMethod]
@@ -64,6 +66,7 @@ namespace Tests
             var aStar = new AStar( mapCont.KantoMap);
             int totalCost;
             var path = aStar.Star(new Helper.Point(19, 24), new Helper.Point(2, 19),out totalCost);
+            Assert.IsTrue(totalCost == 660);
         }
         [TestMethod]
         public void DistanceToBoulder()
@@ -75,6 +78,7 @@ namespace Tests
 
             Console.WriteLine(String.Join("\n", path.Select(v => v.x.ToString() + ";" + v.y.ToString())));
             Console.WriteLine(totalCost);
+            Assert.IsTrue(totalCost == 950);
         }
         [TestMethod]
         public void DistanceToRainbow()
@@ -99,6 +103,7 @@ namespace Tests
 
             Console.WriteLine(String.Join("\n", path.Select(v =>  v.x.ToString() + ";" + v.y.ToString() ) ) );
             Console.WriteLine(totalCost);
+            Assert.IsTrue(totalCost == 250);
         }
         [TestMethod]
         public void DistanceToCascade()
@@ -111,6 +116,7 @@ namespace Tests
 
             Console.WriteLine(String.Join("\n", path.Select(v =>  v.x.ToString() + ";" + v.y.ToString() ) ) );
             Console.WriteLine(totalCost);
+            Assert.IsTrue(totalCost == 410);
         }
 #endregion
 
