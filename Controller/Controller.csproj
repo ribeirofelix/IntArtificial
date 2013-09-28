@@ -42,7 +42,6 @@
     <Compile Include="AgentController.cs" />
     <Compile Include="AStar.cs" />
     <Compile Include="BRKGA.cs" />
-    <Compile Include="IAshChanged.cs" />
     <Compile Include="MapController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

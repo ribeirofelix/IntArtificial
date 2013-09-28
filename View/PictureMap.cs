@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
+using Model;
 
 namespace View
 {
-    public class PictureMap : PictureBox, IAshChanged
+    public class PictureMap : PictureBox
     {
 
         private MapController _mapController = new MapController();
@@ -18,8 +19,14 @@ namespace View
         {
             this.Width = 1028;
             this.Height = 960;
+            kantoMap.listeners += RedrawAsh;
          
-            kantoMap.RegisterListener(this);
+        }
+
+        public void RedrawAsh(Helper.Point point)
+        {
+            Console.WriteLine(_mapController.KantoMap.AshIndex.x + ";" + _mapController.KantoMap.AshIndex.y); 
+
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -66,20 +73,6 @@ namespace View
                 }
                 yPoint += 18;
             }
-        }
-
-        public void AshChanged(MapController updatedMap)
-        {
-
-            try
-            {
-                this.Parent.Refresh();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.StackTrace);
-            }
-            
         }
     }
 }
