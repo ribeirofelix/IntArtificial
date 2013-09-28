@@ -19,10 +19,10 @@ namespace Model
 
             var _pokemonsperarea = new List<Pokemon>();
 
-            for (int x = _map.AshIndex - 4; x < _map.AshIndex + 4; x++)
-                for (int y = _map.AshIndex - 4; y < _map.AshIndex + 4; y++)
+            for (int x = _map.AshIndex.x - 4; x < _map.AshIndex.x + 4; x++)
+                for (int y = _map.AshIndex.y - 4; y < _map.AshIndex.y + 4; y++)
                 {
-                    Pokemon pokemon = _map.GetTile(x, y).TilePokemon;
+                    Pokemon pokemon = _map.GetTile(x, y).Pokemon;
                     if (pokemon != null)
                         _pokemonsperarea.Add(pokemon);
                 }

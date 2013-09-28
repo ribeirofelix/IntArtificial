@@ -33,15 +33,16 @@ namespace View
         private void DrawBackgroudMap(Graphics graphic)
         {
             var yPoint = this.Width / 42;
+
             foreach (var tileLine in _mapController.KantoMap.KantoMap)
             {
                 var xPoint = this.Height / 42;
                 foreach (var tile in tileLine)
                 {
                     graphic.DrawImage(tile.TileImage, xPoint, yPoint);
-                    xPoint += tile.TileImage.Width;
+                    xPoint += 18;
                 }
-                yPoint += tile.TileImage.Height;
+                yPoint += 18;
             }
         }
     }

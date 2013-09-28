@@ -20,7 +20,7 @@ namespace Controller
         }
 
 
-        private int[] posAshBdg;
+        private Helper.Point[] posAshBdg;
         
         private int[][] distMap =  Enumerable.Repeat<int[]>(new int[9],9).ToArray() ;
         public int[][] DistMap
@@ -50,14 +50,14 @@ namespace Controller
 
         public void UpdateDistances()
         {
-            var aStar = new AStar(42 * 42, this._kantoMap);
+            var aStar = new AStar(this._kantoMap);
             int totalCost ;
             for (int i = 0; i < this.posAshBdg.Length; i++)
             {
                 distMap[i][i] = 0;
                 for (int j = i+1; j < this.posAshBdg.Length; j++)
                 {
-                    aStar.Star(posAshBdg[i], posAshBdg[j], mapLength, this._kantoMap, out totalCost);
+                    aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost);
                     distMap[i][j] = totalCost;
                     distMap[j][i] = totalCost;
                 }

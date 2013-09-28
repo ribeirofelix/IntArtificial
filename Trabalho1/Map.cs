@@ -13,9 +13,9 @@ namespace Model
 
         private const int MAXTILES = 42;
         public Badge[] badges = new Badge[8];
-        public int[] ashAndBdgsPos = new int[9];
+        public Helper.Point[] ashAndBdgsPos = new Helper.Point[9];
         public Pokedex pokedex;
-        private Tile[][] _map = new Tile[MAXTILES][];
+        private Tile[][] _map = new Tile[MAXTILES][];// Enumerable.Repeat<Tile[]>(new Tile[MAXTILES],MAXTILES).ToArray();
 
         public ICollection<ICollection<Tile>> KantoMap
 
@@ -51,18 +51,19 @@ namespace Model
                 Console.WriteLine(e.Message);
             }
 
+
+            
+
             /* Read each line of a text file that defines a map. */
             for (int j = 0; j < 42; j++)
             {
-                /* Creates columns */
-                _map[j] = new Tile[42];
-
                 /* Read line */
                 string line = st.ReadLine();
-
+                _map[j] = new Tile[MAXTILES];
                 /* Creates tiles */
                 for (int k = 0; k < line.Length; k++)
                 {
+                    
                     _map[j][k] = new Tile(line[k] , j, k);
                 }
             }
@@ -94,28 +95,33 @@ namespace Model
                 Console.WriteLine(e.Message);
             }
 
-            /* Random object */
-            Random random = new Random();
+           
 
             for (int i = 0; i < 48; i++)
             {
                 /* Read tuple <type, x, y> */
-                char t = char.Parse(st.ReadLine());
-                int x = int.Parse(st.ReadLine());
-                int y = int.Parse(st.ReadLine());
+                var line = st.ReadLine().Split(',');
+                char t = char.Parse(line[0]);
+                int x = int.Parse(line[1]);
+                int y = int.Parse(line[2]);
 
                 /* If random position */
                 if (x == -1 && y == -1)
                 {
+                    /* Random object */
+                    Random random = new Random(DateTime.Now.Millisecond.GetHashCode());
+                    var temLugar = this._map.Any(a => a.Where(b => !b.HasPokemon && !b.HasAsh && !b.HasBadge && b.TileType == TileTypes.Grass).Count() > 0);
+                    if(temLugar)
                     do
                     {
                         x = random.Next(0, 42);
                         y = random.Next(0, 42);
 
                     } while (GetTile(x, y).TileType != TileTypes.Grass ||
-                       GetTile(x, y).TilePokemon != null ||
-                       GetTile(x, y).TileBadge != null ||
-                       GetTile(x, y).TileAsh != null);
+                       GetTile(x, y).HasPokemon ||
+                       GetTile(x, y).HasBadge||
+                       GetTile(x, y).HasAsh );
+                    
                 }
 
                 /* Create pokemon */
@@ -123,7 +129,7 @@ namespace Model
                 Pokemon _pokemon = new Pokemon(t);
 
                 /* Assign pokemon */
-                GetTile(x, y).TilePokemon = _pokemon;
+                GetTile(x, y).Pokemon = _pokemon;
             }
         }
 
@@ -135,29 +141,29 @@ namespace Model
 
         private void PositionBadges()
         {
-            GetTile(2, 4).TileBadge = new Badge(); //soul - Koga - veneno
-            ashAndBdgsPos[(int)BadgeTypes.soul] = XY2i(2, 4);
+            GetTile(2, 4).Badge = new Badge(); //soul - Koga - veneno
+            ashAndBdgsPos[(int)BadgeTypes.soul] = new Helper.Point(2, 4);
 
-            GetTile(4, 36).TileBadge = new Badge(); //volcano - Blaine - fogo
-            ashAndBdgsPos[(int)BadgeTypes.volcano] = XY2i(4, 36);
+            GetTile(4, 36).Badge = new Badge(); //volcano - Blaine - fogo
+            ashAndBdgsPos[(int)BadgeTypes.volcano] = new Helper.Point(4, 36);
             
-            GetTile(2, 19).TileBadge = new Badge(); //thunder - Ten Surge - eletrico
-            ashAndBdgsPos[(int)BadgeTypes.thunder] = XY2i(2, 19);
+            GetTile(2, 19).Badge = new Badge(); //thunder - Ten Surge - eletrico
+            ashAndBdgsPos[(int)BadgeTypes.thunder] = new Helper.Point(2, 19);
             
-            GetTile(40, 32).TileBadge = new Badge(); //boulder - Brock - pedra
-            ashAndBdgsPos[(int)BadgeTypes.boulder] = XY2i(40, 32);
+            GetTile(40, 32).Badge = new Badge(); //boulder - Brock - pedra
+            ashAndBdgsPos[(int)BadgeTypes.boulder] = new Helper.Point(40, 32);
             
-            GetTile(22, 2).TileBadge = new Badge(); //rainbow - Erika - planta
-            ashAndBdgsPos[(int)BadgeTypes.rainbow] = XY2i(22, 2);
+            GetTile(22, 2).Badge = new Badge(); //rainbow - Erika - planta
+            ashAndBdgsPos[(int)BadgeTypes.rainbow] = new Helper.Point(22, 2);
             
-            GetTile(20, 39).TileBadge = new Badge(); //earth - Giovanni - terra
-            ashAndBdgsPos[(int)BadgeTypes.earth] = XY2i(20, 39);
+            GetTile(20, 39).Badge = new Badge(); //earth - Giovanni - terra
+            ashAndBdgsPos[(int)BadgeTypes.earth] = new Helper.Point(20, 39);
             
-            GetTile(19, 14).TileBadge = new Badge(); //cascade - Misty - agua
-            ashAndBdgsPos[(int)BadgeTypes.cascade] = XY2i(19, 14);
+            GetTile(19, 14).Badge = new Badge(); //cascade - Misty - agua
+            ashAndBdgsPos[(int)BadgeTypes.cascade] = new Helper.Point(19, 14);
             
-            GetTile(37, 19).TileBadge = new Badge(); //marsh - Sabrina - psiquico
-            ashAndBdgsPos[(int)BadgeTypes.marsh] = XY2i(37, 19);
+            GetTile(37, 19).Badge = new Badge(); //marsh - Sabrina - psiquico
+            ashAndBdgsPos[(int)BadgeTypes.marsh] = new Helper.Point(37, 19);
 
 
         }
@@ -170,8 +176,8 @@ namespace Model
 
         private void PositionAsh()
         {
-            GetTile(19, 24).TileAsh = new Ash() { X = 19 , Y = 24 }; //ash
-            _ashIndex = XY2i(24, 19);
+            GetTile(19, 24).Ash = new Ash() { X = 19 , Y = 24 }; //ash
+            _ashIndex = new Helper.Point(24, 19);
             ashAndBdgsPos[0] = _ashIndex;
         }
 
@@ -201,23 +207,22 @@ namespace Model
          */
         public Map(string mapFile, string pokemonFile)
         {
+<<<<<<< HEAD
+=======
+
+>>>>>>> a98cf6b47e1d6bd575a529f235cb365a11e3b38e
             ReadMap(mapFile);
             PositionBadges();
             PositionAsh();
             ReadPokemons(pokemonFile);
-
-            
-            /*teste*/
-            var res = String.Join("\n", _map.Select(m => String.Join("", m.Select(t => t.TileType.ToString()[0]) )) );
-            Console.WriteLine(res);          
 
         }
 
         #endregion
 
 
-        private int _ashIndex;
-        public int AshIndex 
+        private Helper.Point _ashIndex;
+        public Helper.Point AshIndex 
         {
             get
             {

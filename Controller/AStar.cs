@@ -11,33 +11,32 @@ namespace Controller
 {
     public class AStar
     {
-        // 1 2 3 4 5
-        // 6 7 8 9 10
-        // 11 12 13 14
         private int[] dist;
         private int[] path;
-       // private bool[] vis;  /* true if vertex i has already been analyzed by the algorithm */
+      
         private Map graph;
-
+        private int qtdNodes;
         protected struct Elem
         {
-            public Elem(int accCost, int inx,int? parent = null)
+            public Elem(int accCost, Helper.Point pos, Helper.Point? parent = null)
             {
                 this.accCost = accCost;
-                this.index = inx;
+                this.pos = pos;
                 this.parent = parent;
             }
+
             public int accCost ;
-            public int index;
-            public int? parent ;
+            public Helper.Point pos;
+            public Helper.Point? parent;
         }
 
-        public AStar(int qtdNodes , Map graph )
+        public AStar( Map graph )
         {
             /* initialize the array with infinity distance */
             dist = Enumerable.Repeat(int.MaxValue, qtdNodes).ToArray() ;
             path = Enumerable.Repeat(int.MinValue, qtdNodes).ToArray();
             this.graph = graph;
+            this.qtdNodes = graph.KantoMap.Sum(a => a.Count);
         }
 
         private void SetNewDistance (int v, int u, int w)
@@ -50,72 +49,57 @@ namespace Controller
                     }
         }
 
-        public ICollection<int> Star(int posIni, int posFinal, int qtdNodes, Map graph , out int totalCost)
+        public ICollection<Helper.Point> Star( Helper.Point posIni, Helper.Point posFinal, out int totalCost)
         {            
             var heapBorder = new Heap<Elem>();
 
             List<Elem> explored = new List<Elem>();
-            var hasExpl = Enumerable.Repeat(false, qtdNodes).ToArray() ;
-            heapBorder.HeapAdd( h(posIni,posFinal), new Elem(0, posIni) );
+            /* Array to verify if a house was explored */
+            var hasExpl = new bool[qtdNodes,qtdNodes];
+            hasExpl.Initialize();
+            
+            
+            Elem father = new Elem(0, posIni);
+            heapBorder.HeapAdd( h(posIni,posFinal), father );
 
-            Console.WriteLine(qtdNodes);
+           
             int cont = 0;
-            Tuple<int,int,Elem> first = null ;
             while (heapBorder.HeapSize() > 0 )
             {
-                first = heapBorder.HeapExtractMin() ;
-                if(first.Item3.index == posFinal)
+                father = heapBorder.HeapExtractMin().Item3 ;
+                if( father.pos.Equals(posFinal) )
                     break;
                 
-                foreach (var child in Neighborhood(first.Item3.index) )
+                foreach (var child in father.pos.Neighborhood() )
 	            {
                     int accChild = 0;
-                    accChild = first.Item3.accCost + GetTileFromIndex(child).TileCost;
+                    accChild = father.accCost + GetTileFromPos(child).TileCost;
                     
-                    if (child >= hasExpl.Length)
-                        throw new Exception("in " + child + ";has :" + hasExpl.Length);
-                    if( !hasExpl[child] )
-                        heapBorder.HeapAdd( h(child, posFinal) + accChild , new Elem(accChild, child, first.Item3.index) );
+                    if( !hasExpl[child.x,child.y] )
+                        heapBorder.HeapAdd(/* h(child, posFinal) + */accChild , new Elem(accChild, child, father.pos) );
                     
 	            }
 
-                explored.Insert( 0  , first.Item3);
-                if (first.Item3.index >= hasExpl.Length)
-                    throw new Exception("in " + first.Item3.index + ";has :" + hasExpl.Length);
-                hasExpl[first.Item3.index] = true;
+                explored.Insert( 0  , father );
+
+                hasExpl[father.pos.x,father.pos.y] = true;
 
                 cont++;               
             }
 
-            /*for (int i = 0; i < explored.Count; i++)
-            {
-                Elem a = explored.ElementAt(i);
-                int ind = a.index; 
-                int[] xy = i2XY(ind);
-                int c = a.accCost;
-                Debug.WriteLine("x"+xy[0]+" ;y "+xy[1]+" custo: "+c);
-            }*/
-            Debug.WriteLine("explored");
-            Debug.WriteLine(String.Join("\n", explored.Select(v => new { xy = i2XY(v.index) , v.accCost}  ).Select(e => "cost: " + e.accCost + "; "  + e.xy[0] + ";" + e.xy[1])));
-            Debug.WriteLine("heap");
-            while (heapBorder.HeapSize() > 0 )
-            {
-                var frst = heapBorder.HeapExtractMin();
-                var xy = i2XY( frst.Item3.index);
-                Debug.WriteLine(string.Format("cost: {0} ; {1} , {2} ", frst.Item1,xy[0] , xy[1]  ) );
-            }
-            int currParent = first.Item3.parent.Value ;
-            totalCost = first.Item3.accCost;
+            
+            var currParent = father.parent.Value ;
+            totalCost = father.accCost;
 
-            List<int> pathReturn = new List<int>();
-            pathReturn.Insert(0, first.Item3.index);
+            var pathReturn = new List<Helper.Point>();
+            pathReturn.Insert(0, father.pos );
            
             
             for (int i = 0 , j = 1; i < explored.Count; i++)
 			{
-                if (explored[i].index == currParent )
+                if (explored[i].pos.Equals(currParent) )
                 {
-                    pathReturn.Insert(j,explored[i].index);
+                    pathReturn.Insert(j,explored[i].pos);
                     j++;
                     currParent = explored[i].parent.HasValue ? explored[i].parent.Value : posIni  ;
                     Debug.WriteLine("custo "+explored[i].accCost);
@@ -126,52 +110,21 @@ namespace Controller
 
         }
 
-        private int totalCost(int currPos, int posFinal)
-        {
-            return dist[currPos] + h(currPos, posFinal);
-        }
 
-        public int h(int posIni, int posFin)
+        public int h(Helper.Point posIni, Helper.Point posFin)
         {
-            int xIni = posIni / 42;
-            int yIni = posIni % 42;
-            int xFin = posFin / 42;
-            int yFin = posFin % 42;
+            int xIni = posIni.x ;
+            int yIni = posIni.y ;
+            int xFin = posFin.x ;
+            int yFin = posFin.y ;
 
             return (int)Math.Sqrt( Math.Pow( (xIni - xFin)*12, 2) + Math.Pow( (yIni - yFin)*12, 2) )  ;
         }
 
-        private List<int> Neighborhood(int inx )
+        
+        private Tile GetTileFromPos(Helper.Point pos)
         {
-
-            List<int> retInxs = new List<int>();
-            var y = inx % 42;
-            var x = inx / 42;
-
-            if (x != 41)   /* not last line */
-                retInxs.Add(inx + 42); /* x + 1, y */                
-
-            if (x != 0)   /* not first line */
-                retInxs.Add(inx - 42); /* x - 1, y */
-
-            if (y != 41) /* not last column */
-                retInxs.Add( inx + 1); /* x, y + 1 */
-            
-
-            if (y != 0) /* not first column */
-                retInxs.Add(inx - 1); /* x, y - 1 */
-
-            return retInxs;
-        }
-
-        private Tile GetTileFromIndex(int inx)
-        {
-            int x = inx / 42;
-            int y = inx % 42;
-            if (x >= 42 || y >= 42)
-                throw new Exception("fora da matriz: " + x + " " + y);
-
-            return graph.GetTile(x, y);
+          return graph.GetTile(pos.x, pos.y);
         }
 
         private int[] i2XY(int ix)
