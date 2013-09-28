@@ -56,9 +56,12 @@ namespace Controller
             for(int j = 0; j < pop; ++j) {           
                 current.SetFitness(Decoder(current.population[j]),j);
             }
-
             // Sort:
             current.SortFitness();
+            Console.WriteLine("foi");
+            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
+            Console.WriteLine(String.Join("\n", current.population.Take(150).Select(a => String.Join(" ", a))));
         }
 
         private void RandomizePopulation()
@@ -85,7 +88,7 @@ namespace Controller
             for (int i = 0; i < chromossome.Length; i++)
             {
                 if(i+1 < chromossome.Length)
-                    path += dist[chromossome[i]][chromossome[i+1]];  /* define total lenght from start point to final point */
+                    path += dist[chromossome[i]][chromossome[i+1]];  /* define total lenght from start point to final point */                 
             }
             return path;
         }
@@ -128,8 +131,15 @@ namespace Controller
 
                 if (rep.Count() > 0 )
                 {
-                     var diffFromFather = curr.population[eliteParent].Except(next.population[inx]) ;
-                     rep.ForEach(a => next.population[inx][a.i] = diffFromFather.First());
+                    var diffFromFather = curr.population[eliteParent].Except(next.population[inx]) ;
+                    var shuDiff = diffFromFather.OrderBy(a=> Guid.NewGuid()).ToList() ;
+                    foreach (var item in rep)
+                    {
+                        if (shuDiff.Count == 0)
+                            break;
+                        next.population[inx][item.i] = shuDiff.First();
+                        shuDiff.RemoveAt(0);
+                    }
                 }
                 ++inx;
             }
@@ -153,7 +163,10 @@ namespace Controller
 
         public ICollection<BadgeTypes> GetChoice()
         {
-            return current.population[0].Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
+            //Console.WriteLine(current.fitness.Select(a=>a.Item2).Distinct().Count());
+            //Console.WriteLine(String.Join("\n", current.fitness.Take(50).Select(a=>a.Item2)));
+            //Console.WriteLine(String.Join("\n", current.population.Take(50).Select(a => String.Join(" ",a))));
+            return current.population[0].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
         }
 
 
