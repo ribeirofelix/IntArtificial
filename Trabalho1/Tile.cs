@@ -19,12 +19,12 @@ namespace Model
         }     
       
         //private Image _titleImage;
-        public Image TitleImage
+        public Image TileImage
         {
             get 
             {
-                if (TilePokemon != null)
-                    return TilePokemon.PokeImage;
+               /* if (_pokemon != null)
+                    return Resources.Pikachu; */
 
                 switch (TileType)
                 {

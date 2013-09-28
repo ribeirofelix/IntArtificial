@@ -201,10 +201,6 @@ namespace Model
          */
         public Map(string mapFile, string pokemonFile)
         {
-            for (int i = 0; i < MAXTILES; i++)
-            {
-                _map[i] = new Tile[MAXTILES];
-            }
             ReadMap(mapFile);
             PositionBadges();
             PositionAsh();

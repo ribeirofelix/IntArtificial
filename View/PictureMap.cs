@@ -38,10 +38,10 @@ namespace View
                 var xPoint = this.Height / 42;
                 foreach (var tile in tileLine)
                 {
-                    graphic.DrawImage(tile.TitleImage, xPoint, yPoint);
-                    xPoint += tile.TitleImage.Width;
+                    graphic.DrawImage(tile.TileImage, xPoint, yPoint);
+                    xPoint += tile.TileImage.Width;
                 }
-                yPoint += 18;
+                yPoint += tile.TileImage.Height;
             }
         }
     }

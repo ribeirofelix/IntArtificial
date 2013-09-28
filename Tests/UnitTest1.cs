@@ -2,8 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Model;
 using Controller;
-using Sorting;
 using System.Linq;
+using Sorting;
 
 namespace Tests
 {
