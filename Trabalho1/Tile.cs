@@ -23,8 +23,8 @@ namespace Model
         {
             get 
             {
-                if (TilePokemon != null)
-                    return TilePokemon.PokeImage;
+                if (Pokemon != null)
+                    return Pokemon.PokeImage;
 
                 switch (TileType)
                 {
@@ -49,27 +49,29 @@ namespace Model
 
 
         private Pokemon _pokemon ;
-        public Pokemon TilePokemon 
+        public Pokemon Pokemon 
         {
             get { return _pokemon; }
             set { _pokemon = value; }
         }
+        public bool HasPokemon { get { return _pokemon != null; } }
 
         
         private Badge _badge ;
-        public Badge TileBadge 
+        public Badge Badge 
         {
             get { return _badge; }
             set { _badge = value; }
         }
+        public bool HasBadge { get { return _badge != null; } }
 
         private Ash _ash ;
-        public Ash TileAsh 
+        public Ash Ash 
         {
             get { return _ash; }
             set { _ash = value; }
-        }      
-
+        }
+        public bool HasAsh { get { return _ash != null; } }
        
         private int _cost;
         public int TileCost 
