@@ -72,8 +72,8 @@ namespace Controller
 
                 for (int k = 1; k < n; ++k)
                 {
-                    int index = rand.Next(0, n - k + 1);
-                    current.population[j][k] = vet[index];
+                    int index = rand.Next(0, n - k - 1);
+                    current.population[j][k] = vet[index]+1;
                     vet.RemoveAt(index);
                 }
             }

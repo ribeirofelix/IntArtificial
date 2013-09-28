@@ -27,12 +27,12 @@ namespace Model
 
         public void SortFitness()                                 // Sorts 'fitness' by its first parameter
         {
-            fitness = fitness.OrderBy(f => f.Item1).ToArray();
+            fitness = fitness.OrderBy(f => f.Item2).ToArray();
         }
 
         public void SetFitness(int i, int f)                     // Sets the fitness of chromosome i
         {
-            fitness[i] = new Tuple <int, int> (f, i) ;
+            fitness[f] = new Tuple <int, int> (f, i) ;
         }
 
         private int[] GetChromosome(int i)       // Returns a chromosome

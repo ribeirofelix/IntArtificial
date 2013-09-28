@@ -19,7 +19,6 @@ namespace Controller
             posAshBdg = _kantoMap.ashAndBdgsPos; 
         }
 
-
         private Helper.Point[] posAshBdg;
         
         private int[][] distMap =  Enumerable.Repeat<int[]>(new int[9],9).ToArray() ;
