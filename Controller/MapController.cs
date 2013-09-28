@@ -24,7 +24,6 @@ namespace Controller
             
         }
 
-
         private Helper.Point[] posAshBdg;
         
         private int[][] distMap =  new int[9][];

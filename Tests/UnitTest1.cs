@@ -122,7 +122,7 @@ namespace Tests
 
 
 
-
+        [TestMethod]
         public void TesteGenetics()
         {
              var mapCont = new MapController();
