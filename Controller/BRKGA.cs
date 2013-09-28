@@ -151,6 +151,10 @@ namespace Controller
 
         }
 
+        public ICollection<BadgeTypes> GetChoice()
+        {
+            return current.population[0].Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
+        }
 
 
     }
