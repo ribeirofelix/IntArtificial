@@ -15,7 +15,7 @@ namespace Model
             _map = map;
         }
 
-        private ICollection<Pokemon> getPokemons (){
+        public ICollection<Pokemon> getPokemons (){
 
             var _pokemonsperarea = new List<Pokemon>();
 

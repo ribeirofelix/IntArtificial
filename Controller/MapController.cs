@@ -20,12 +20,17 @@ namespace Controller
             posAshBdg = _kantoMap.ashAndBdgsPos;
 
             BrotarAsh();
-        }
 
+            for (int i = 0; i < distMap.Length; i++)
+            {
+                distMap[i] = new int[9];
+            }
+            
+        }
 
         private Helper.Point[] posAshBdg;
         
-        private int[][] distMap =  Enumerable.Repeat<int[]>(new int[9],9).ToArray() ;
+        private int[][] distMap =  new int[9][];
         public int[][] DistMap
         {
             get{ return distMap; }
@@ -81,21 +86,38 @@ namespace Controller
             timerMoveSprite.Start();
         }
 
-        public void UpdateDistances()
+        public Dictionary<BadgeTypes, Helper.Point[]> UpdateDistances()
         {
             var aStar = new AStar(this._kantoMap);
-            int totalCost;
+            int totalCost ;
+            Dictionary<BadgeTypes,Helper.Point[]> paths = new Dictionary<BadgeTypes,Helper.Point[]>(8);
+
             for (int i = 0; i < this.posAshBdg.Length; i++)
             {
                 distMap[i][i] = 0;
                 for (int j = i+1; j < this.posAshBdg.Length; j++)
                 {
-                    aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost);
+                    if(i == 0)
+                        paths.Add( (BadgeTypes) j , aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray() );
+                    else
+                        aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost);
+                    
                     distMap[i][j] = totalCost;
                     distMap[j][i] = totalCost;
                 }
             }
+            return paths;
 
+        }
+
+        public void StepAsh(Helper.Point point)
+        {
+            this._kantoMap.AshIndex = point;            
+        }
+
+        public void LunchPokeball(PokemonTypes poke)
+        {
+            this.KantoMap.GetTile(KantoMap.AshIndex.x, KantoMap.AshIndex.y).Ash.Gotcha(poke);
         }
 
     }

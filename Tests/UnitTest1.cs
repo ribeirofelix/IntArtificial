@@ -122,15 +122,27 @@ namespace Tests
 
 
 
-
+        [TestMethod]
         public void TesteGenetics()
         {
              var mapCont = new MapController();
              mapCont.UpdateDistances();
             var captBdg = Enumerable.Repeat(false,8).ToArray();
-            var gen = new BRKGA(9, 42 * 42, 500, 100, captBdg, mapCont.DistMap);
-            gen.Evolve(10);
-            
+            var gen = new BRKGA(9, 42 * 42 * 10, 4410, 2646, captBdg, mapCont.DistMap);
+            gen.Evolve(300);
+            Console.WriteLine(String.Join("\n", gen.GetChoice().Select(v=> Enum.GetName(typeof(BadgeTypes), v))));
+        }
+
+        [TestMethod]
+        public void TestePaths()
+        {
+            var mapCont = new MapController();
+            var paths = mapCont.UpdateDistances();
+            foreach (var item in paths)
+            {
+                Console.WriteLine(item.Key + ": " + String.Join(", ", item.Value.Select(p => p.ToString() )));
+            }
+
         }
 
         public void TestHeapMinEmptySimple()

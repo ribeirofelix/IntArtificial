@@ -15,7 +15,16 @@ namespace Model
         {
             if (p == 0) { throw new Exception("Population size p cannot be zero."); }
             if (n == 0) { throw new Exception("Chromosome size n cannot be zero."); }
-            population = Enumerable.Repeat<int[]>(new int[n], p).ToArray();
+            population = new int[p][] ;
+            for(int k = 0; k< p; k++)
+            {
+                population[k] = new int[n] ;
+                for (int h = 0; h < n; h++)
+                {
+                    population[k][h] = 0;
+                }
+            }
+            population.Initialize();
             fitness = new Tuple <int, int> [p] ;
         }
 
@@ -27,12 +36,12 @@ namespace Model
 
         public void SortFitness()                                 // Sorts 'fitness' by its first parameter
         {
-            fitness = fitness.OrderBy(f => f.Item1).ToArray();
+            fitness = fitness.OrderBy(f => f.Item2).ToArray();
         }
 
         public void SetFitness(int i, int f)                     // Sets the fitness of chromosome i
         {
-            fitness[i] = new Tuple <int, int> (f, i) ;
+            fitness[f] = new Tuple <int, int> (f, i) ;
         }
 
         private int[] GetChromosome(int i)       // Returns a chromosome

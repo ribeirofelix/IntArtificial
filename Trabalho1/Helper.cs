@@ -34,6 +34,11 @@ namespace Model
 
                 return obj is Point && obj != null && ((Point)obj).x == this.x && ((Point)obj).y == this.y;
             }
+
+            public override string ToString()
+            {
+                return String.Format("({0},{1})",this.x , this.y);
+            }
             public ICollection<Helper.Point> Neighborhood()
             {
                 
