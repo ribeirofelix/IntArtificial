@@ -110,7 +110,7 @@ namespace Controller
                     Debug.WriteLine("custo "+explored[i].accCost);
                 }
 			}
-
+            pathReturn.Reverse();
             return pathReturn;
 
         }

@@ -133,6 +133,18 @@ namespace Tests
             
         }
 
+        [TestMethod]
+        public void TestePaths()
+        {
+            var mapCont = new MapController();
+            var paths = mapCont.UpdateDistances();
+            foreach (var item in paths)
+            {
+                Console.WriteLine(item.Key + ": " + String.Join(", ", item.Value.Select(p => p.ToString() )));
+            }
+
+        }
+
         public void TestHeapMinEmptySimple()
         {
 

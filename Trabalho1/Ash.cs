@@ -49,6 +49,11 @@ namespace Model
         }
 
 
+        public void Gotcha(PokemonTypes poke)
+        {
+            this._pokemons[poke] = true;
+        }
+
         
     }
 }

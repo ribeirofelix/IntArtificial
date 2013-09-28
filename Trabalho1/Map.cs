@@ -177,7 +177,7 @@ namespace Model
         private void PositionAsh()
         {
             GetTile(19, 24).Ash = new Ash() { X = 19 , Y = 24 }; //ash
-            _ashIndex = new Helper.Point(24, 19);
+            _ashIndex = new Helper.Point(19, 24);
             ashAndBdgsPos[0] = _ashIndex;
         }
 
@@ -226,7 +226,9 @@ namespace Model
             }
             set
             {
+                GetTile(value.x, value.y).Ash = GetTile(_ashIndex.x, _ashIndex.y).Ash;
                 _ashIndex = value;
+                
             }
         }
 

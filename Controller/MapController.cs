@@ -52,22 +52,37 @@ namespace Controller
             //call astar
         }
 
-        public void UpdateDistances()
+        public Dictionary<BadgeTypes, Helper.Point[]> UpdateDistances()
         {
             var aStar = new AStar(this._kantoMap);
             int totalCost ;
-            Helper.Point[][] paths = new Helper.Point[8][];
+            Dictionary<BadgeTypes,Helper.Point[]> paths = new Dictionary<BadgeTypes,Helper.Point[]>(8);
             for (int i = 0; i < this.posAshBdg.Length; i++)
             {
                 distMap[i][i] = 0;
                 for (int j = i+1; j < this.posAshBdg.Length; j++)
                 {
-                    aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost);
+                    if(i == 0)
+                        paths.Add( (BadgeTypes) j , aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray() );
+                    else
+                        aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost);
+                    
                     distMap[i][j] = totalCost;
                     distMap[j][i] = totalCost;
                 }
             }
+            return paths;
 
+        }
+
+        public void StepAsh(Helper.Point point)
+        {
+            this._kantoMap.AshIndex = point;            
+        }
+
+        public void LunchPokeball(PokemonTypes poke)
+        {
+            this.KantoMap.GetTile(KantoMap.AshIndex.x, KantoMap.AshIndex.y).Ash.Gotcha(poke);
         }
 
     }
