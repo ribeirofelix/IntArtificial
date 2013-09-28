@@ -23,8 +23,8 @@ namespace Model
         {
             get 
             {
-                if (Pokemon != null)
-                    return Pokemon.PokeImage;
+              /*  if (Pokemon != null)
+                    return Pokemon.PokeImage;*/
 
                 switch (TileType)
                 {

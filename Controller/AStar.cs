@@ -60,7 +60,7 @@ namespace Controller
             
             
             Elem father = new Elem(0, posIni);
-            heapBorder.HeapAdd( h(posIni,posFinal), father );
+            heapBorder.HeapAdd( /*h(posIni,posFinal)*/ 0 , father );
 
            
             int cont = 0;
@@ -76,7 +76,7 @@ namespace Controller
                     accChild = father.accCost + GetTileFromPos(child).TileCost;
                     
                     if( !hasExpl[child.x,child.y] )
-                        heapBorder.HeapAdd( h(child, posFinal) + accChild , new Elem(accChild, child, father.pos) );
+                        heapBorder.HeapAdd(/* h(child, posFinal) + */accChild , new Elem(accChild, child, father.pos) );
                     
 	            }
 

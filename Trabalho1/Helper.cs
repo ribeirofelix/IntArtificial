@@ -47,7 +47,7 @@ namespace Model
 
                 if (this.y != 41) /* not last column */
                     retInxs.Add( new Point(this.x , this.y + 1) ); /* x, y + 1 */ 
-
+                
                 if (this.y != 0) /* not first column */
                     retInxs.Add( new Point(this.x , this.y - 1) ); /* x, y - 1 */
 
