@@ -128,9 +128,9 @@ namespace Tests
              var mapCont = new MapController();
              mapCont.UpdateDistances();
             var captBdg = Enumerable.Repeat(false,8).ToArray();
-            var gen = new BRKGA(9, 42 * 42, 500, 100, captBdg, mapCont.DistMap);
-            gen.Evolve(10);
-            
+            var gen = new BRKGA(9, 42 * 42 * 10, 4410, 8500, captBdg, mapCont.DistMap);
+            gen.Evolve(100);
+            Console.WriteLine(String.Join("\n", gen.GetChoice().Select(v=> Enum.GetName(typeof(BadgeTypes), v))));
         }
 
         public void TestHeapMinEmptySimple()

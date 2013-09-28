@@ -56,9 +56,13 @@ namespace Controller
             for(int j = 0; j < pop; ++j) {           
                 current.SetFitness(Decoder(current.population[j]),j);
             }
-
+            Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
             // Sort:
             current.SortFitness();
+            Console.WriteLine("foi");
+            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
+            Console.WriteLine(String.Join("\n", current.population.Take(50).Select(a => String.Join(" ", a))));
         }
 
         private void RandomizePopulation()
@@ -82,11 +86,14 @@ namespace Controller
         private int Decoder (int[] chromossome)
         {
             int path = 0;
+            Console.WriteLine("crom: ");
             for (int i = 0; i < chromossome.Length; i++)
             {
                 if(i+1 < chromossome.Length)
                     path += dist[chromossome[i]][chromossome[i+1]];  /* define total lenght from start point to final point */
+                    
             }
+            Console.WriteLine(chromossome[0]+";"+chromossome[1]);
             return path;
         }
 
@@ -153,7 +160,10 @@ namespace Controller
 
         public ICollection<BadgeTypes> GetChoice()
         {
-            return current.population[0].Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
+            //Console.WriteLine(current.fitness.Select(a=>a.Item2).Distinct().Count());
+            //Console.WriteLine(String.Join("\n", current.fitness.Take(50).Select(a=>a.Item2)));
+            //Console.WriteLine(String.Join("\n", current.population.Take(50).Select(a => String.Join(" ",a))));
+            return current.population[0].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
         }
 
 
