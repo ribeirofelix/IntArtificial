@@ -10,8 +10,6 @@ namespace Model
 {
     public class Ash
     {
-
-        
         private Dictionary<PokemonTypes, bool> _pokemons = new Dictionary<PokemonTypes, bool>(5);
         private Image _ashImage;
 

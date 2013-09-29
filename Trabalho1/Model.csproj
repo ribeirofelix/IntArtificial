@@ -131,15 +131,6 @@
     <None Include="Resources\cave.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GrassPoke.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GrassPoke.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\flyingpoke.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\soul.png" />
   </ItemGroup>
   <ItemGroup>

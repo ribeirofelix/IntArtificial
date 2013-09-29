@@ -41,6 +41,7 @@ namespace View
             numberCostTextLabel.Location = new Point(780, 170);
             numberCostTextLabel.Text = "0";
 
+            _mapController.listenersAsh += UpdateAshPosition;
             _mapController.listenersCost += UpdateNumberCostLabel;
 
             this.buttonStartSearch.Click += delegate(object sender, EventArgs e)
@@ -57,6 +58,10 @@ namespace View
         public void UpdateNumberCostLabel(int cost)
         {
             numberCostTextLabel.Text = cost.ToString();
+        }
+
+        public void UpdateAshPosition(Helper.Point point)
+        {
         }
 
         protected override void OnPaint(PaintEventArgs e)
