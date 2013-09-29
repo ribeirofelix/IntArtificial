@@ -53,7 +53,7 @@ namespace Controller
         {
             foreach (var step in paths[new Tuple<int,BadgeTypes>(from,to)])
             {
-                mapCont.StepAsh(step);
+                mapCont.StepAsh(step,true);
                 
                  /* For each pokemon that Ash                        Here we say : the types of pokemons Ash hasnt (and  pokemons is not a grass pokemon) */
                 foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon(p.Value.Type) && p.Value.Type != PokemonTypes.Grass))
@@ -65,7 +65,7 @@ namespace Controller
                         {
                             foreach (var stepToPoke in pathToPoke)
                             {
-                                mapCont.StepAsh(step);
+                                mapCont.StepAsh(step,true);
                             }
                             this.mapCont.FightPokemon(pokemon.Value);
                         }
@@ -104,7 +104,7 @@ namespace Controller
             /* Set possible position to verify the path*/
             mapCont.Ash.Pokeball(possiblePoke.Type);
             var currPosAsh = mapCont.Ash.Pos;
-            mapCont.StepAsh(possiblePoke.Pos);
+            mapCont.StepAsh(possiblePoke.Pos,false);
 
             /* Recalculate all distances and the cost to travel */
             var tempPaths = this.mapCont.UpdateDistances();
@@ -120,7 +120,7 @@ namespace Controller
 
             /* Remove the possible settings : back to the "REAL" life */
             mapCont.Ash.ReleasePokemon(possiblePoke.Type);
-            mapCont.StepAsh(currPosAsh);
+            mapCont.StepAsh(currPosAsh,false);
 
             if (currentCost > tempCost)
             {

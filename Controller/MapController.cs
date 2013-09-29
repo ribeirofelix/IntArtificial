@@ -20,6 +20,7 @@ namespace Controller
         #region /* PRIVATE PROPERTIES */
 
         private const int mapLength = 42 * 42;
+        private int _actualPathCost = 0;
 
         private Helper.Point[] posAshBdg;
 
@@ -67,7 +68,7 @@ namespace Controller
             _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
 
             posAshBdg = _kantoMap.ashAndBdgsPos;
-
+            
             /*Creates distances matrix*/
 
             for (int i = 0; i < distMap.Length; i++)
