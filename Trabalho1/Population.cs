@@ -30,8 +30,16 @@ namespace Model
 
         public Population (Population pop)
         {
-                population = (pop.population);
-                fitness = (pop.fitness);
+            population = new int[pop.population.Length][];
+            fitness = new Tuple<int,int>[pop.fitness.Length];
+            for (int i = 0; i < pop.population.Length; i++)
+            {
+                var tuple = (Tuple<int,int>)pop.fitness[i];
+                fitness[i] = new Tuple<int, int>(tuple.Item1, tuple.Item2);
+                population[i] = (int[]) pop.population[i].Clone();
+                
+            }
+
         }
 
         public void SortFitness()                                 // Sorts 'fitness' by its first parameter
