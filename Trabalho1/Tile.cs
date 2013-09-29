@@ -10,6 +10,8 @@ namespace Model
 {
     public class Tile
     {
+
+        private Map MapContent;
       
         private TileTypes _type;
         public TileTypes TileType 
@@ -52,7 +54,12 @@ namespace Model
         public Pokemon Pokemon 
         {
             get { return _pokemon; }
-            set { _pokemon = value; }
+            set 
+            { 
+                _pokemon = value;
+                if(_pokemon != null)
+                    _pokemon.Pos = new Helper.Point(this.XPoint, this.YPoint);
+            }
         }
         public bool HasPokemon { get { return _pokemon != null; } }
 
@@ -65,18 +72,41 @@ namespace Model
         }
         public bool HasBadge { get { return _badge != null; } }
 
-        private Ash _ash ;
+       
         public Ash Ash 
         {
-            get { return _ash; }
-            set { _ash = value; }
+            get { return HasAsh ? this.MapContent.Ash : null ; }
         }
-        public bool HasAsh { get { return _ash != null; } }
+        public bool HasAsh { get { return (this.MapContent.Ash.Pos.x == this.XPoint && this.MapContent.Ash.Pos.y == this.YPoint); } }
        
         private int _cost;
         public int TileCost 
         {
-            get { return _cost; }
+            get 
+            {
+                switch (this._type)
+                {
+                    case TileTypes.Water:
+                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Water))
+                            return _cost / 10;
+                        break;
+                    case TileTypes.Cave:
+                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Electric))
+                            return _cost / 10;
+                        break;
+                    case TileTypes.Mountain:
+                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Flying))
+                            return _cost / 10;
+                        break;
+                    case TileTypes.Volcano:
+                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Fire))
+                            return _cost / 10;
+                        break;
+                    default:
+                        return _cost;
+                }
+                return _cost;
+            }
             set { _cost = value; }
         }
 
@@ -101,10 +131,11 @@ namespace Model
          * Parameter: type - type of pokemon
          */
 
-        public Tile(char type,int xPoint, int yPoint )
+        public Tile(char type,int xPoint, int yPoint , Map map )
         {
             _xPoint = xPoint;
             _yPoint = yPoint;
+            this.MapContent = map;
             switch (type)
             {
                 case 'G': _type = TileTypes.Grass; _cost = 10; break;

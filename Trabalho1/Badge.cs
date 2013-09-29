@@ -13,14 +13,13 @@ namespace Model
 
         private BadgeTypes _type;
 
-        private Image _badgeImage;
+      
 
         public Image BadgeImage
         {
             get
             {
-                if (_badgeImage == null)
-                {
+              
                     if (_type == BadgeTypes.boulder) return Resources.boulder;
                     if (_type == BadgeTypes.cascade) return Resources.cascade;
                     if (_type == BadgeTypes.earth) return Resources.earth;
@@ -30,9 +29,8 @@ namespace Model
                     if (_type == BadgeTypes.thunder) return Resources.thunder;
                     if (_type == BadgeTypes.volcano) return Resources.volcano;
 
-                }
 
-                return _badgeImage;
+                return null;
             }
 
         }

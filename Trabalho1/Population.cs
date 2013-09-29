@@ -9,7 +9,7 @@ namespace Model
     public class Population
     {
         public int[][] population;
-        public Tuple <int, int> [] fitness ;   /* <fitness, chromossome> */
+        public Tuple<int, int>[] fitness;   /* < chromossome , fitness> */
 
         public Population (int n, int p)
         {
@@ -46,7 +46,7 @@ namespace Model
 
         private int[] GetChromosome(int i)       // Returns a chromosome
         {
-            return population[ fitness[i].Item2 ];
+            return population[ fitness[i].Item1 ];
         }
 
         public int GetN ()
@@ -59,14 +59,14 @@ namespace Model
             return population.Length ;
         }
 
-        public double getBestFitness()  // Returns the best fitness in this population
+        public int getBestFitness()
         {
             return getFitness(0);
         }
 
         public int getFitness(int i)   // Returns the fitness of chromosome i
         {
-            return fitness[i].Item1 ;
+            return fitness[i].Item2 ;
         }
     
         

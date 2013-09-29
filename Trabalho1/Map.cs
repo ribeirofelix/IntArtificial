@@ -35,12 +35,26 @@ namespace Model
             }
             set
             {
-                GetTile(value.x, value.y).Ash = GetTile(_ashIndex.x, _ashIndex.y).Ash;
                 _ashIndex = value;
+                ashAndBdgsPos[0] = _ashIndex;
+                this.Ash.Pos = new Helper.Point(_ashIndex.x, _ashIndex.y);
 
             }
         }
-       
+
+        private Ash _ash;
+        public Ash Ash
+        {
+            get { return _ash; }
+            set
+            {
+                _ash = value;
+                if (_ash != null)
+                    _ash.Pos = new Helper.Point( _ashIndex.x , _ashIndex.y) ;
+            }
+        }
+
+
         #endregion
 
         #region /* PRIVATE METHODS */
@@ -79,7 +93,7 @@ namespace Model
                 for (int k = 0; k < line.Length; k++)
                 {
                     
-                    _map[j][k] = new Tile(line[k] , j, k);
+                    _map[j][k] = new Tile(line[k] , j, k , this);
                 }
             }
 
@@ -191,7 +205,7 @@ namespace Model
 
         private void PositionAsh()
         {
-            GetTile(19, 24).Ash = new Ash() { X = 19 , Y = 24 }; //ash
+           this.Ash = new Ash() { Pos = new Helper.Point( 19 ,  24) }; //ash
             _ashIndex = new Helper.Point(19, 24);
             ashAndBdgsPos[0] = _ashIndex;
         }
@@ -212,6 +226,8 @@ namespace Model
 
         public Tile GetTile(int x, int y)
         {
+            if (x >= 42 || y >= 42 || x < 0 || y < 0)
+                return null;
             return _map[x][y];
         }
         #endregion
@@ -237,17 +253,7 @@ namespace Model
         #endregion
 
 
-              
-        private int[] i2XY(int ix)
-        {
-            return new int[2] { ix / 42, ix % 42 };
-        }
-
-        private int XY2i(int x, int y)
-        {
-            return y + (x * 42);
-        }
-
+       
     }
 }
 

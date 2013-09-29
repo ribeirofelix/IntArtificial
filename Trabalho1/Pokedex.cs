@@ -22,9 +22,9 @@ namespace Model
             for (int x = _map.AshIndex.x - 4; x < _map.AshIndex.x + 4; x++)
                 for (int y = _map.AshIndex.y - 4; y < _map.AshIndex.y + 4; y++)
                 {
-                    Pokemon pokemon = _map.GetTile(x, y).Pokemon;
-                    if (pokemon != null)
-                        _pokemonsperarea.Add(new Helper.Point(x,y), pokemon);
+                    Tile pokemonTile = _map.GetTile(x, y) ;
+                    if (pokemonTile != null && pokemonTile.Pokemon != null)
+                        _pokemonsperarea.Add(new Helper.Point(x, y), pokemonTile.Pokemon );
                 }
 
             return _pokemonsperarea;

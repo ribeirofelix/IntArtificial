@@ -118,36 +118,46 @@ namespace Controller
                 // Mate:
                 for (int j = 0; j < n; ++j)
                 {
+                    
                     int sourceParent = ((rnd.NextDouble() < rhoe) ? eliteParent : noneliteParent);
-
                     next.population[inx][j] = current.population[sourceParent][j];
                 }
 
-                var repeated = new bool[n];   /* positions with false indicate that the badeg doesn't apear in the chromossome */
-                var posRepeated = new int[n/2]; /* contains the positions where there are repeated chromossomes */
-                repeated.Initialize();
-                posRepeated.Initialize();
 
-                int m = 0 ;
-                for (int r = 0; r < n; ++r)
+               var popInx = next.population[inx].Select((p , i ) => new ChroIndexed { allele = p , inx = i} );
+               var ellite = current.population[eliteParent].Select((pe, ix) => new ChroIndexed { allele = pe, inx = inx });
+                var cmp = new CompChromossome();
+                var dist = popInx.Distinct(cmp);
+                var rep = ellite.Except(popInx.Distinct(cmp), cmp).ToList();
+
+
+                foreach (var item in popInx.GroupBy(a => a.allele).Where(c => c.Count() > 1 ) )
                 {
-                    if (repeated[next.population[inx][r]] == false)
-                        repeated[next.population[inx][r]] = true;
-                    else
-                    {
-                        posRepeated[m] = r;  /* there's a repeated number at this index */
-                        m++ ;
-                    }
+                    
+                    
+                    var frsPrnt = rep.FirstOrDefault();
+                    
+                    var primeiro = item.First().inx;
+                    next.population[inx][primeiro] = frsPrnt.allele;
+                    rep.RemoveAt(0);
+                    Console.WriteLine(item);
                 }
-                m = 0;
-                for (int r = 0; r < repeated.Count(); ++r)
-                {
-                    if (repeated[r] == false)
-                    {
-                        next.population[inx][posRepeated[m]] = r;
-                        m++;
-                    }
-                }
+
+
+                 //if (rep.Count > 0 )
+                 //{
+                 //      var diffFromFather = current.population[eliteParent].Except(next.population[inx]);
+                 //    var shuDiff = diffFromFather.OrderBy(a=> Guid.NewGuid()).ToList() ;
+                 //    foreach (var item in rep)
+                 //    {
+                 //        if (shuDiff.Count == 0)
+                 //            break;
+                 //        next.population[inx][item.inx] = shuDiff.First();
+                 //        shuDiff.RemoveAt(0);
+                 //    }
+                 //}
+
+               
                 ++inx;
             }
 
@@ -173,7 +183,36 @@ namespace Controller
             Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a=>a.Item2)));
             return current.population[current.fitness[0].Item1].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
         }
+
+        public int BestFitness
+        {
+            get { return current.getBestFitness(); }
+        }
         
+
+
+        
+        private struct ChroIndexed
+        {
+            public int allele;
+            public int inx;
+        }
+
+        private class CompChromossome : IEqualityComparer<ChroIndexed>
+        {
+
+            public bool Equals(ChroIndexed x, ChroIndexed y)
+        {
+            return x.allele == y.allele;
+        }
+
+            public int GetHashCode(ChroIndexed obj)
+            {
+                return obj.allele.GetHashCode() ;
+            }
+        }
+        
+
     }
     
     

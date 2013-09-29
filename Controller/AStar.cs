@@ -92,6 +92,8 @@ namespace Controller
 	            }             
             }
 
+            if (father.parent == null)
+                Console.WriteLine("filho sem pai :" + father.pos.ToString() + "ini: " + posIni.ToString() + "fim: "+ posFinal.ToString() );
             
             var currParent = father.parent.Value ;
             totalCost = father.accCost;

@@ -11,8 +11,7 @@ namespace Model
     public class Ash
     {
 
-        //image
-        private int xPoint;
+        
         private Dictionary<PokemonTypes, bool> _pokemons = new Dictionary<PokemonTypes, bool>(5);
         private Image _ashImage;
 
@@ -40,23 +39,17 @@ namespace Model
             return _pokemons[poke];
         }
 
-        public int X
-        {
-            get { return xPoint; }
-            set { xPoint = value; }
-        }
-
-        private int yPoint;
-        public int Y
-        {
-            get { return yPoint; }
-            set { yPoint = value; }
-        }
+        public Helper.Point Pos { get; set; }
 
 
-        public void Gotcha(PokemonTypes poke)
+        public void Pokeball(PokemonTypes poke)
         {
             this._pokemons[poke] = true;
+        }
+
+        public void ReleasePokemon(PokemonTypes poke)
+        {
+            this._pokemons[poke] = false;
         }
 
         

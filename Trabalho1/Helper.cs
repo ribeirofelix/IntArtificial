@@ -39,6 +39,12 @@ namespace Model
             {
                 return String.Format("({0},{1})",this.x , this.y);
             }
+
+            public override int GetHashCode()
+            {
+                return x ^ y;
+            }
+
             public ICollection<Helper.Point> Neighborhood()
             {
                 

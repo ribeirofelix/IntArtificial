@@ -49,7 +49,7 @@ namespace Controller
 
         public Ash Ash
         {
-            get { return this.KantoMap.GetTile(this.KantoMap.AshIndex.x, this.KantoMap.AshIndex.y).Ash; }
+            get { return this.KantoMap.Ash ; }
         }
 
         /*Delegates - observer*/
@@ -93,22 +93,20 @@ namespace Controller
         #region /* PUBLIC METHODS */
 
         /* Update Distances */
-        public Dictionary<BadgeTypes, Helper.Point[]> UpdateDistances()
+        public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> UpdateDistances()
         {
             var aStar = new AStar(this._kantoMap);
             int totalCost ;
-            Dictionary<BadgeTypes,Helper.Point[]> paths = new Dictionary<BadgeTypes,Helper.Point[]>(8);
+            var paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(8);
 
             for (int i = 0; i < this.posAshBdg.Length; i++)
             {
                 distMap[i][i] = 0;
                 for (int j = i+1; j < this.posAshBdg.Length; j++)
                 {
-                    if(i == 0)
-                        paths.Add( (BadgeTypes) j , aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray() );
-                    else
-                        aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost);
-                    
+                    var path = aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray();
+                    paths.Add(new Tuple<int, BadgeTypes>(i, (BadgeTypes)j), path);
+                    paths.Add(new Tuple<int, BadgeTypes>(j, (BadgeTypes)i), path.Reverse().ToArray() );
                     distMap[i][j] = totalCost;
                     distMap[j][i] = totalCost;
                 }
@@ -124,9 +122,14 @@ namespace Controller
             this._kantoMap.AshIndex = point;
             //custo do path += custo da tile nova
            // listenersAsh(point); //observer
-            listenersCost( this._kantoMap.GetTile(point).TileCost );
+            //listenersCost( this._kantoMap.GetTile(point).TileCost );
         }
 
+        public void FightPokemon(Pokemon poke )
+        {
+            Ash.Pokeball(poke.Type);
+            this._kantoMap.GetTile(poke.Pos).Pokemon = null;
+        }
 
 
         #endregion

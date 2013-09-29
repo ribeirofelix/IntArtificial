@@ -16,23 +16,19 @@ namespace Model
             get { return _type; }
         }
 
-        private Image _pokeImage;
-
         public Image PokeImage
         {
             get 
             {
-                if (_pokeImage == null)
-                {
-                    if (_type == PokemonTypes.Electric) return Resources.pokeelectric;
-                    if (_type == PokemonTypes.Fire) return Resources.pokefire;
-                    if (_type == PokemonTypes.Flying) return Resources.pokeflying;
-                    if (_type == PokemonTypes.Grass) return Resources.pokegrass;
-                    if (_type == PokemonTypes.Water) return Resources.pokewater;
 
-                }
-                 
-                return _pokeImage; 
+              if (_type == PokemonTypes.Electric) return Resources.pokeelectric;
+              if (_type == PokemonTypes.Fire) return Resources.pokefire;
+              if (_type == PokemonTypes.Flying) return Resources.pokeflying;
+              if (_type == PokemonTypes.Grass) return Resources.pokegrass;
+              if (_type == PokemonTypes.Water) return Resources.pokewater;
+
+              return null;
+              
             }
             
         }
@@ -61,5 +57,9 @@ namespace Model
         {
             return Enum.GetName(typeof(PokemonTypes), _type);
         }
+
+
+        public Helper.Point Pos  { get; set; }
     }
+
 }
