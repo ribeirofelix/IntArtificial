@@ -14,18 +14,11 @@ namespace View
     {
 
         private MapController _mapController = new MapController();
-        
+
         public PictureMap(MapController kantoMap) :base ()
         {
             this.Width = 1028;
             this.Height = 960;
-            kantoMap.listenersAsh += RedrawAsh;
-        }
-
-        public void RedrawAsh(Helper.Point point)
-        {
-            Console.WriteLine(_mapController.KantoMap.AshIndex.x + ";" + _mapController.KantoMap.AshIndex.y); 
-
         }
 
         protected override void OnPaint(PaintEventArgs pe)
@@ -48,7 +41,6 @@ namespace View
                     {
                         graphic.DrawImage(tile.Ash.AshImage, xPoint, yPoint);
                     }
-
                     else if (tile.HasBadge)
                     {
                         graphic.DrawImage(tile.Badge.BadgeImage, xPoint, yPoint);

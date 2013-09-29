@@ -57,7 +57,6 @@ namespace Controller
         public AshMovedDelegate listenersAsh;
         public CostChangedDelegate listenersCost;
 
-
         #endregion
 
         #region /* CONSTRUCTOR */
@@ -117,12 +116,16 @@ namespace Controller
 
         /* Step Ash */
 
-        public void StepAsh(Helper.Point point)
+        public void StepAsh(Helper.Point point, bool isReal)
         {
             this._kantoMap.AshIndex = point;
-            //custo do path += custo da tile nova
-           // listenersAsh(point); //observer
-            //listenersCost( this._kantoMap.GetTile(point).TileCost );
+
+            if (isReal)
+            {
+                listenersAsh(point);
+                _actualPathCost += _kantoMap.GetTile(point).TileCost;
+                listenersCost(_actualPathCost);
+            }
         }
 
         public void FightPokemon(Pokemon poke )
