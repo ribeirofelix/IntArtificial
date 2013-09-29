@@ -45,6 +45,10 @@ namespace Controller
 
             // Initialize:
             Initialize();
+            Console.WriteLine("PRIMEIRO");
+            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+            
 
             // Then just copy to previous:
             previous = new Population(current);
@@ -108,11 +112,11 @@ namespace Controller
         {
             int inx = 0;
             var temRep = next.population.Where(p => p.GroupBy(c => c).Count() != 9);
-            Console.WriteLine(String.Join("\n", temRep));
+            //Console.WriteLine(String.Join("\n", temRep));
 
 
             var temRepCuur = current.population.Where(p => p.GroupBy(c => c).Count() != 9);
-            Console.WriteLine(String.Join("\n", temRepCuur));
+            //Console.WriteLine(String.Join("\n", temRepCuur));
 
             for (inx = 0; inx < popElite; inx++)
             {
@@ -123,7 +127,7 @@ namespace Controller
             var rnd = new Random(DateTime.Now.Millisecond);
 
             // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
-            while (inx < pop - popMutant)
+            /*while (inx < pop - popMutant)
             {
                 // Select an elite parent:
                 int eliteParent = rnd.Next(popElite - 1);
@@ -151,16 +155,24 @@ namespace Controller
                     }
                     else
                     {
+                        int cont = 0;
                         foreach (var partAll in current.population[eliteParent])
                         {
                             if (!copied[partAll])
                             {
-                                next.population[inx][j] = current.population[eliteParent][partAll];
+                                next.population[inx][j] = current.population[eliteParent][cont];
+                                copied[current.population[eliteParent][cont]] = true;
+                                cont++;
                                 break;
                             }
+                            cont++;
                         }
-                    }
-                }
+                    }*/
+
+                    //if(next.population[inx][n-1] == next.population[inx][n-2])
+                    //{
+                    //}
+                //}
 
                 //var histChild = new int[9];
                 //histChild.Initialize();
@@ -226,12 +238,22 @@ namespace Controller
                //     Console.WriteLine(String.Join(",", next.population[inx]));
 
                
-                ++inx;
-            }
+                //++inx;
+            //}
 
             while (inx < popMutant)
             {
-                RandomizePopulation();
+                var rand = new Random();
+
+                    var vet = captBadgs.Select((b, i) => new { b, i }).Where(bd => !bd.b).Select(bi => bi.i).ToList();
+                    next.population[inx][0] = 0;  /* onde o ash está */
+
+                    for (int k = 1; k < n; ++k)
+                    {
+                        int index = rand.Next(0, n - k);
+                        next.population[inx][k] = vet[index] + 1;
+                        vet.RemoveAt(index);
+                    }
             }
 
             // Decode:
