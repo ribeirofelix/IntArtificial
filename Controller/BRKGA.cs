@@ -135,51 +135,71 @@ namespace Controller
                 var temRepetidoNaoElite = current.population[noneliteParent].GroupBy(enr => enr) ;
 
                
+                var copied = new bool[9];
+                copied.Initialize();
 
                 // Mate:
                 for (int j = 0; j < n; ++j)
                 {
                     
                     int sourceParent = ((rnd.NextDouble() < rhoe) ? eliteParent : noneliteParent);
-                    next.population[inx][j] = current.population[sourceParent][j];
-                }
 
-                var histChild = new int[next.population[inx].Length];
-                histChild.Initialize();
-
-                var indsRepetidos = Enumerable.Repeat(-1, next.population[inx].Length / 2).ToArray();
-
-
-
-                for (int i = 0 , j = 0 ; i < next.population[inx].Length; i++)
-                {
-                    histChild[next.population[inx][i]]++;
-                    if (histChild[next.population[inx][i]] > 1)
+                    if (!copied[current.population[sourceParent][j]])
                     {
-                        indsRepetidos[j] = i;
-                        j++;
+                        next.population[inx][j] = current.population[sourceParent][j];
+                        copied[current.population[sourceParent][j]] = true;
+                    }
+                    else
+                    {
+                        foreach (var partAll in current.population[eliteParent])
+                        {
+                            if (!copied[partAll])
+                            {
+                                next.population[inx][j] = current.population[eliteParent][partAll];
+                                break;
+                            }
+                        }
                     }
                 }
 
+                //var histChild = new int[9];
+                //histChild.Initialize();
 
-                for (int i = 0, j = 0; i < current.population[eliteParent].Length; i++)
-                {
-                    if (histChild[current.population[eliteParent][i]] == 0)
-                    {
+                //var indsRepetidos = Enumerable.Repeat(-1,4 ).ToArray();
 
-                        try
-                        {
-                            next.population[inx][indsRepetidos[j]] = current.population[eliteParent][i];
-                            j++;
-                        }
-                        catch (Exception e)
-                        {
+
+
+                //for (int i = 0 , j = 0 ; i < next.population[inx].Length; i++)
+                //{
+                //    int allelle = next.population[inx][i];
+                //    histChild[allelle]++;
+                //    if (histChild[allelle] > 1) /* repetido */
+                //    {
+                //        indsRepetidos[j] = i;
+                //        j++;
+                //    }
+                //}
+
+
+                //for (int i = 0, j = 0; i < current.population[eliteParent].Length; i++)
+                //{
+                //    var parnAll = current.population[eliteParent][i];
+                //    if ( !captBadgs[parnAll]  && histChild[parnAll] == 0)
+                //    {
+
+                //        try
+                //        {
+                //            next.population[inx][indsRepetidos[j]] = current.population[eliteParent][i];
+                //            j++;
+                //        }
+                //        catch (Exception e)
+                //        {
                             
-                            throw e;
-                        }
-                    }
+                //            throw e;
+                //        }
+                //    }
 
-                }
+                //}
 
                // var popInx = next.population[inx].Select((p, i) => new ChroIndexed { allele = p, inx = i });
                 
