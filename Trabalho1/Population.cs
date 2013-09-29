@@ -39,9 +39,9 @@ namespace Model
             fitness = fitness.OrderBy(f => f.Item2).ToArray();
         }
 
-        public void SetFitness(int i, int f)                     // Sets the fitness of chromosome i
+        public void SetFitness(int fit, int ind)                     // Sets the fitness of chromosome i
         {
-            fitness[f] = new Tuple <int, int> (f, i) ;
+            fitness[ind] = new Tuple <int, int> (ind, fit) ;  
         }
 
         private int[] GetChromosome(int i)       // Returns a chromosome

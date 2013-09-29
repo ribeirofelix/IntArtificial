@@ -58,10 +58,10 @@ namespace Controller
             }
             // Sort:
             current.SortFitness();
-            Console.WriteLine("foi");
-            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
-            Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
-            Console.WriteLine(String.Join("\n", current.population.Take(150).Select(a => String.Join(" ", a))));
+            //Console.WriteLine("foi");
+            //Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            //Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
+            //Console.WriteLine(String.Join("\n", current.population.Take(200).Select(a => String.Join(" ", a))));
         }
 
         private void RandomizePopulation()
@@ -75,7 +75,7 @@ namespace Controller
 
                 for (int k = 1; k < n; ++k)
                 {
-                    int index = rand.Next(0, n - k - 1);
+                    int index = rand.Next(0, n - k );
                     current.population[j][k] = vet[index]+1;
                     vet.RemoveAt(index);
                 }
@@ -96,17 +96,40 @@ namespace Controller
         public void Evolve(int generations) {
                 
             for(int i = 0; i < generations; ++i) {
-                Evolution(current , previous );   // First evolve the population (curr, next)
+                Console.WriteLine("CURRENT ENTRADA");
+                Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+                Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+                Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
+                
+                Evolution( previous );   // First evolve the population (curr, next)
                 previous = System.Threading.Interlocked.Exchange<Population>(ref current, previous); // Update (prev = curr; curr = prev == next)
+                
+                Console.WriteLine("CURRENT FINAL");
+                Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+                Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+                /*Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item1)));*/
+                Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
+                Console.WriteLine("PREVIOUS FINAL");
+                Console.WriteLine(previous.fitness.Select(a => a.Item2).Distinct().Count());
+                Console.WriteLine(String.Join("\n", previous.fitness.Take(100).Select(a => a.Item2)));
+                Console.WriteLine(String.Join("\n", previous.population.Take(100).Select(a => String.Join(" ", a))));
             }
         }
 
-        private void Evolution(Population curr, Population next)
+        private void Evolution(Population next)
         {
-            curr.population.Take(popElite).Select((pe, i) => next.population[i] = pe);
+            Console.WriteLine("CURRENT ENTRADA DENTRO DA EVOLUTION");
+            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+            Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
 
-            int inx = popElite;
+            int inx = 0;
+            for (inx = 0; inx < popElite; inx++)
+            {
+                next.population[inx] = current.population[current.fitness[inx].Item1];
+            }
 
+           
             var rnd = new Random(DateTime.Now.Millisecond);
 
             // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
@@ -114,30 +137,41 @@ namespace Controller
             {
                 // Select an elite parent:
                 int eliteParent = rnd.Next(popElite - 1);
+                //int eliteParent2 = rnd.Next(popElite - 1);
                 // Select a non-elite parent:
                 int noneliteParent = rnd.Next(popElite, pop - 1);//colocar de pe a p
 
                 // Mate:
-                for (int j = 0; j < n; ++j)
+                /*for (int j = 0; j < n; ++j)
                 {
                     int sourceParent = ((rnd.NextDouble() < rhoe) ? eliteParent : noneliteParent);
 
                     next.population[inx][j] = curr.population[sourceParent][j];
+                }*/
+
+                int j;
+                for (j = 0; j < n / 2 + 1; ++j)
+                {
+                    next.population[inx][j] = current.population[eliteParent][j];
+                }
+                for (; j < n; ++j)
+                {
+                    next.population[inx][j] = current.population[noneliteParent][j];
                 }
                 
-                
-                var popInx = next.population[inx].Select((p , i ) => new { p , i} );
-                var rep = popInx.Except(popInx.Distinct()).ToList() ;            
+                var popInx = next.population[inx].Select((p , i ) => new ChroIndexed { allele = p , inx = i} );
+                var cmp = new CompChromossome();
+                var rep = popInx.Except(popInx.Distinct(cmp), cmp).ToList();            
 
-                if (rep.Count() > 0 )
+                if (rep.Count > 0 )
                 {
-                    var diffFromFather = curr.population[eliteParent].Except(next.population[inx]) ;
+                    var diffFromFather = current.population[eliteParent].Except(next.population[inx]);
                     var shuDiff = diffFromFather.OrderBy(a=> Guid.NewGuid()).ToList() ;
                     foreach (var item in rep)
                     {
                         if (shuDiff.Count == 0)
                             break;
-                        next.population[inx][item.i] = shuDiff.First();
+                        next.population[inx][item.inx] = shuDiff.First();
                         shuDiff.RemoveAt(0);
                     }
                 }
@@ -152,24 +186,47 @@ namespace Controller
             // Decode:
             for (int j = 0; j < pop; ++j)
             {
-                current.SetFitness(Decoder(current.population[j]), j);
+                //current.SetFitness(Decoder(current.population[j]), j);
+                next.SetFitness(Decoder(next.population[j]), j);
             }
 
             // Sort:
-            current.SortFitness();
-
-
+            //current.SortFitness();
+            next.SortFitness();
         }
 
         public ICollection<BadgeTypes> GetChoice()
         {
-            //Console.WriteLine(current.fitness.Select(a=>a.Item2).Distinct().Count());
-            //Console.WriteLine(String.Join("\n", current.fitness.Take(50).Select(a=>a.Item2)));
-            //Console.WriteLine(String.Join("\n", current.population.Take(50).Select(a => String.Join(" ",a))));
-            return current.population[0].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
+            Console.WriteLine("SAIDA FINAL");
+            Console.WriteLine(current.fitness.Select(a=>a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a=>a.Item2)));
+            Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ",a))));
+            return current.population[current.fitness[0].Item1].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
         }
 
 
+        private struct ChroIndexed
+        {
+            public int allele;
+            public int inx;
+        }
+
+        private class CompChromossome : IEqualityComparer<ChroIndexed>
+        {
+
+            public bool Equals(ChroIndexed x, ChroIndexed y)
+        {
+            return x.allele == y.allele;
+        }
+
+            public int GetHashCode(ChroIndexed obj)
+            {
+                return obj.GetHashCode();
+            }
+        }
+        
     }
+    
+    
 
 }
