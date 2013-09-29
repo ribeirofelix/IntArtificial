@@ -149,7 +149,9 @@ namespace Tests
         public void TesteSimpleWalk()
         {
             var agen = new AgentController();
-            agen.Walk();
+            var capt =agen.Walk();
+
+            Assert.IsTrue(capt.All(a => a));
         }
 
         public void TestHeapMinEmptySimple()

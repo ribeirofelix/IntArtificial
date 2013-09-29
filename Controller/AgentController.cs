@@ -13,7 +13,7 @@ namespace Controller
         private const int pop = 42*42 ;        
         private const int popElt = 500 ;
         private const int popMut = 300 ;
-        private const int generations = 400;
+        private const int generations = 2000;
 
         private MapController mapCont = new MapController();
         private BRKGA genetic ; 
@@ -33,7 +33,7 @@ namespace Controller
             
         }
 
-        public void Walk()
+        public bool[] Walk()
         {
             int ashPos = 0;
             while (captBadges.Any(a => !a )) /* While we dont rule all badges */
@@ -46,7 +46,7 @@ namespace Controller
                 }
 
             }
-            
+            return captBadges;
         }
 
         private int GoFromTo(int from , BadgeTypes to)
