@@ -58,10 +58,10 @@ namespace Controller
             }
             // Sort:
             current.SortFitness();
-            Console.WriteLine("foi");
-            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
-            Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
-            Console.WriteLine(String.Join("\n", current.population.Take(150).Select(a => String.Join(" ", a))));
+            //Console.WriteLine("foi");
+            //Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            //Console.WriteLine(String.Join("\n", current.fitness.Take(200).Select(a => a.Item2)));
+            //Console.WriteLine(String.Join("\n", current.population.Take(200).Select(a => String.Join(" ", a))));
         }
 
         private void RandomizePopulation()
@@ -75,7 +75,7 @@ namespace Controller
 
                 for (int k = 1; k < n; ++k)
                 {
-                    int index = rand.Next(0, n - k - 1);
+                    int index = rand.Next(0, n - k );
                     current.population[j][k] = vet[index]+1;
                     vet.RemoveAt(index);
                 }
@@ -96,13 +96,30 @@ namespace Controller
         public void Evolve(int generations) {
                 
             for(int i = 0; i < generations; ++i) {
+                Console.WriteLine("CURRENT ENTRADA");
+                Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+                Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+                Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
                 Evolution(current , previous );   // First evolve the population (curr, next)
                 previous = System.Threading.Interlocked.Exchange<Population>(ref current, previous); // Update (prev = curr; curr = prev == next)
+                Console.WriteLine("CURRENT FINAL");
+                Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+                Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+                /*Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item1)));*/
+                Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
+                Console.WriteLine("PREVIOUS FINAL");
+                Console.WriteLine(previous.fitness.Select(a => a.Item2).Distinct().Count());
+                Console.WriteLine(String.Join("\n", previous.fitness.Take(100).Select(a => a.Item2)));
+                Console.WriteLine(String.Join("\n", previous.population.Take(100).Select(a => String.Join(" ", a))));
             }
         }
 
         private void Evolution(Population curr, Population next)
         {
+            Console.WriteLine("CURRENT ENTRADA DENTRO DA EVOLUTION");
+            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+            Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
             curr.population.Take(popElite).Select((pe, i) => next.population[i] = pe);
 
             int inx = popElite;
@@ -114,17 +131,27 @@ namespace Controller
             {
                 // Select an elite parent:
                 int eliteParent = rnd.Next(popElite - 1);
+                //int eliteParent2 = rnd.Next(popElite - 1);
                 // Select a non-elite parent:
                 int noneliteParent = rnd.Next(popElite, pop - 1);//colocar de pe a p
 
                 // Mate:
-                for (int j = 0; j < n; ++j)
+                /*for (int j = 0; j < n; ++j)
                 {
                     int sourceParent = ((rnd.NextDouble() < rhoe) ? eliteParent : noneliteParent);
 
                     next.population[inx][j] = curr.population[sourceParent][j];
-                }
-                
+                }*/
+
+                int j;
+                    for (j = 0; j < n / 2 + 1; ++j)
+                    {
+                        next.population[inx][j] = curr.population[eliteParent][j];
+                    }
+                    for (; j < n; ++j)
+                    {
+                        next.population[inx][j] = curr.population[noneliteParent][j];
+                    }
                 
                 var popInx = next.population[inx].Select((p , i ) => new { p , i} );
                 var rep = popInx.Except(popInx.Distinct()).ToList() ;            
@@ -152,21 +179,22 @@ namespace Controller
             // Decode:
             for (int j = 0; j < pop; ++j)
             {
-                current.SetFitness(Decoder(current.population[j]), j);
+                //current.SetFitness(Decoder(current.population[j]), j);
+                next.SetFitness(Decoder(next.population[j]), j);
             }
 
             // Sort:
-            current.SortFitness();
-
-
+            //current.SortFitness();
+            next.SortFitness();
         }
 
         public ICollection<BadgeTypes> GetChoice()
         {
-            //Console.WriteLine(current.fitness.Select(a=>a.Item2).Distinct().Count());
-            //Console.WriteLine(String.Join("\n", current.fitness.Take(50).Select(a=>a.Item2)));
-            //Console.WriteLine(String.Join("\n", current.population.Take(50).Select(a => String.Join(" ",a))));
-            return current.population[0].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
+            Console.WriteLine("SAIDA FINAL");
+            Console.WriteLine(current.fitness.Select(a=>a.Item2).Distinct().Count());
+            Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a=>a.Item2)));
+            Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ",a))));
+            return current.population[current.fitness[0].Item1].Skip(1).Select(p => (BadgeTypes) Enum.Parse(typeof(BadgeTypes), p.ToString())).ToList();
         }
 
 
