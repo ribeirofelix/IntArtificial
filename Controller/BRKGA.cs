@@ -20,6 +20,7 @@ namespace Controller
         private Population previous;    // previous population
         private Population current;             // current population
         private bool[] captBadgs;
+        private int currentGen;
 
         public BRKGA(int n, int pop, int popElt , int popMut , bool[] capturedBadges, int[][] distAshBdg )
         {
@@ -37,6 +38,7 @@ namespace Controller
             this.popMutant = popMut;
             this.captBadgs = capturedBadges;
             this.dist = distAshBdg;
+            this.currentGen = 1;
             // Initialize and decode each chromosome of the current population, then copy to previous:
             // Allocate:
             current = new Population(n, pop);
@@ -94,17 +96,30 @@ namespace Controller
             for(int i = 0; i < generations; ++i) {                
                 Evolution( previous );   // First evolve the population (curr, next)
                 previous = System.Threading.Interlocked.Exchange<Population>(ref current, previous); // Update (prev = curr; curr = prev == next)
+                this.currentGen++;
             }
         }
-
+        // current 
+        // previus
+        // curr e prev na primeira iteracao sao iguais
+        // chama evolution : pega a previous e mexe nela... colocando a proxima geracao! entao previus vai sera next!
+        // depois chama a previous ( q tem o valor da next), passa pra current e a current vira a previous!
         private void Evolution(Population next)
         {
             int inx = 0;
+            var temRep = next.population.Where(p => p.GroupBy(c => c).Count() != 9);
+            Console.WriteLine(String.Join("\n", temRep));
+
+
+            var temRepCuur = current.population.Where(p => p.GroupBy(c => c).Count() != 9);
+            Console.WriteLine(String.Join("\n", temRepCuur));
+
             for (inx = 0; inx < popElite; inx++)
             {
                 next.population[inx] = current.population[current.fitness[inx].Item1];
             }
-           
+
+          
             var rnd = new Random(DateTime.Now.Millisecond);
 
             // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
@@ -115,6 +130,12 @@ namespace Controller
                 // Select a non-elite parent:
                 int noneliteParent = rnd.Next(popElite, pop - 1);//colocar de pe a p
 
+                //verify integrity of parents
+                var temRepetidoEllite = current.population[eliteParent].GroupBy(er => er);
+                var temRepetidoNaoElite = current.population[noneliteParent].GroupBy(enr => enr) ;
+
+               
+
                 // Mate:
                 for (int j = 0; j < n; ++j)
                 {
@@ -123,39 +144,66 @@ namespace Controller
                     next.population[inx][j] = current.population[sourceParent][j];
                 }
 
+                var histChild = new int[next.population[inx].Length];
+                histChild.Initialize();
 
-               var popInx = next.population[inx].Select((p , i ) => new ChroIndexed { allele = p , inx = i} );
-               var ellite = current.population[eliteParent].Select((pe, ix) => new ChroIndexed { allele = pe, inx = inx });
-                var cmp = new CompChromossome();
-                var dist = popInx.Distinct(cmp);
-                var rep = ellite.Except(popInx.Distinct(cmp), cmp).ToList();
+                var indsRepetidos = Enumerable.Repeat(-1, next.population[inx].Length / 2).ToArray();
 
 
-                foreach (var item in popInx.GroupBy(a => a.allele).Where(c => c.Count() > 1 ) )
+
+                for (int i = 0 , j = 0 ; i < next.population[inx].Length; i++)
                 {
-                    
-                    
-                    var frsPrnt = rep.FirstOrDefault();
-                    
-                    var primeiro = item.First().inx;
-                    next.population[inx][primeiro] = frsPrnt.allele;
-                    rep.RemoveAt(0);
-                    Console.WriteLine(item);
+                    histChild[next.population[inx][i]]++;
+                    if (histChild[next.population[inx][i]] > 1)
+                    {
+                        indsRepetidos[j] = i;
+                        j++;
+                    }
                 }
 
 
-                 //if (rep.Count > 0 )
-                 //{
-                 //      var diffFromFather = current.population[eliteParent].Except(next.population[inx]);
-                 //    var shuDiff = diffFromFather.OrderBy(a=> Guid.NewGuid()).ToList() ;
-                 //    foreach (var item in rep)
-                 //    {
-                 //        if (shuDiff.Count == 0)
-                 //            break;
-                 //        next.population[inx][item.inx] = shuDiff.First();
-                 //        shuDiff.RemoveAt(0);
-                 //    }
-                 //}
+                for (int i = 0, j = 0; i < current.population[eliteParent].Length; i++)
+                {
+                    if (histChild[current.population[eliteParent][i]] == 0)
+                    {
+
+                        try
+                        {
+                            next.population[inx][indsRepetidos[j]] = current.population[eliteParent][i];
+                            j++;
+                        }
+                        catch (Exception e)
+                        {
+                            
+                            throw e;
+                        }
+                    }
+
+                }
+
+               // var popInx = next.population[inx].Select((p, i) => new ChroIndexed { allele = p, inx = i });
+                
+               
+               //var ellite = current.population[eliteParent].Select( (pe,ix) => new ChroIndexed { allele = pe, inx = ix });
+               // var cmp = new CompChromossome();
+               // var dist = popInx.Distinct(cmp);
+               // var rep = ellite.Except(popInx.Distinct(cmp), cmp).ToList();
+
+               // var aTrocar = popInx.GroupBy(a => a.allele).Where(c => c.Count() > 1);
+               // foreach (var item in aTrocar )
+               // {
+                    
+                    
+               //     var frsPrnt = rep.FirstOrDefault();
+                    
+               //     var primeiro = item.First().inx;
+               //     next.population[inx][primeiro] = frsPrnt.allele;
+               //     rep.RemoveAt(0);
+               //     Console.WriteLine(item);
+               // }
+
+               // if (next.population[inx].GroupBy(j => j).Count() != 9)
+               //     Console.WriteLine(String.Join(",", next.population[inx]));
 
                
                 ++inx;
