@@ -11,6 +11,10 @@ namespace Model
     public class Pokemon
     {
         private PokemonTypes _type;
+        public PokemonTypes Type
+        {
+            get { return _type; }
+        }
 
         private Image _pokeImage;
 

@@ -205,6 +205,11 @@ namespace Model
          * Return value: the tile corresponding to (x,y)
          */
 
+        public Tile GetTile(Helper.Point point)
+        {
+            return GetTile(point.x, point.y);
+        }
+
         public Tile GetTile(int x, int y)
         {
             return _map[x][y];

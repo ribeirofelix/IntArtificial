@@ -13,11 +13,11 @@ namespace Controller
         private const int pop = 100 ;        
         private const int popElt = 50 ;
         private const int popMut = 50 ;
-        private const int generations = 100;
+        private const int generations = 5;
 
         private MapController mapCont = new MapController();
         private BRKGA genetic ; 
-        private bool[] captBadges = new bool[9];
+        private bool[] captBadges = new bool[8];
         private Pokedex pokedex;
         private Dictionary<BadgeTypes, Helper.Point[]> paths;
 
@@ -33,22 +33,29 @@ namespace Controller
         public void Walk()
         {
             genetic.Evolve(generations);
-            foreach (var badg in genetic.GetChoice())
+            while (captBadges.Any(a => !a )) /* While we dont rule all badges */
             {
-                foreach (var step in paths[badg])
+                foreach (var badg in genetic.GetChoice())
                 {
-                    mapCont.StepAsh(step);
-                    foreach(var pokemons in pokedex.getPokemons() )
+                    foreach (var step in paths[badg])
                     {
-                        
+                        mapCont.StepAsh(step);
+                        /* For each pokemon that Ash hasnt */                    /* Here we say : the types of pokemons Ash hasnt */
+                        foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon( p.Value.Type ) ) )
+                        {
+                        }
                     }
+                    this.captBadges[((int)badg)-1] = true;
                 }
+
             }
+            
         }
 
         private void DecideGotoPokemon(PokemonTypes poke)
         {
-
+            if (mapCont.Ash.HasPokemon(poke))
+                return;
         }
 
 

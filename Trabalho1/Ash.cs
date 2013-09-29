@@ -35,6 +35,11 @@ namespace Model
 
         }
 
+        public bool HasPokemon(PokemonTypes poke)
+        {
+            return _pokemons[poke];
+        }
+
         public int X
         {
             get { return xPoint; }

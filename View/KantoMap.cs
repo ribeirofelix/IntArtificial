@@ -43,7 +43,11 @@ namespace View
 
             _mapController.listenersCost += UpdateNumberCostLabel;
 
-            this.buttonStartSearch.Click += delegate(object sender, EventArgs e) { /*startsearch*/; };
+            this.buttonStartSearch.Click += delegate(object sender, EventArgs e)
+            {
+                var agnContr = new AgentController();
+                agnContr.Walk();
+            };
 
             this.Controls.Add(new PictureMap(_mapController));
 

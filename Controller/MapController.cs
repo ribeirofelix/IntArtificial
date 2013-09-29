@@ -47,10 +47,16 @@ namespace Controller
 
         #region /* PUBLIC PROPERTIES */
 
+        public Ash Ash
+        {
+            get { return this.KantoMap.GetTile(this.KantoMap.AshIndex.x, this.KantoMap.AshIndex.y).Ash; }
+        }
+
         /*Delegates - observer*/
 
         public AshMovedDelegate listenersAsh;
         public CostChangedDelegate listenersCost;
+
 
         #endregion
 
@@ -117,16 +123,11 @@ namespace Controller
         {
             this._kantoMap.AshIndex = point;
             //custo do path += custo da tile nova
-            listenersAsh(point); //observer
-            listenersCost(/*custodopath*/0);
+           // listenersAsh(point); //observer
+            listenersCost( this._kantoMap.GetTile(point).TileCost );
         }
 
-        /* Launch Pokeball */
 
-        public void LaunchPokeball(PokemonTypes poke)
-        {
-            this.KantoMap.GetTile(KantoMap.AshIndex.x, KantoMap.AshIndex.y).Ash.Gotcha(poke);
-        }
 
         #endregion
 

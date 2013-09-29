@@ -145,6 +145,13 @@ namespace Tests
 
         }
 
+        [TestMethod]
+        public void TesteSimpleWalk()
+        {
+            var agen = new AgentController();
+            agen.Walk();
+        }
+
         public void TestHeapMinEmptySimple()
         {
 
