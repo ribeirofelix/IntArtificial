@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // Timer
+            // 
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 500;
+            this.Timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // KantoMap
             // 
@@ -37,12 +45,13 @@
             this.ClientSize = new System.Drawing.Size(1012, 750);
             this.Name = "KantoMap";
             this.Text = "Pokemon";
-            this.Load += new System.EventHandler(this.KantoMap_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer Timer;
 
     }
 }

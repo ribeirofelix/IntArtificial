@@ -21,7 +21,7 @@ namespace Model
             get
             {
                 if (_ashImage == null)
-                    _ashImage = Resources.Pikachu;
+                    _ashImage = Resources.ash;
                 return _ashImage;
             }
 

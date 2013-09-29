@@ -25,6 +25,21 @@ namespace Model
                 return _map;
             }
         }
+
+        private Helper.Point _ashIndex;
+        public Helper.Point AshIndex
+        {
+            get
+            {
+                return _ashIndex;
+            }
+            set
+            {
+                GetTile(value.x, value.y).Ash = GetTile(_ashIndex.x, _ashIndex.y).Ash;
+                _ashIndex = value;
+
+            }
+        }
        
         #endregion
 
@@ -141,28 +156,28 @@ namespace Model
 
         private void PositionBadges()
         {
-            GetTile(2, 4).Badge = new Badge(); //soul - Koga - veneno
+            GetTile(2, 4).Badge = new Badge(BadgeTypes.soul); //soul - Koga - veneno
             ashAndBdgsPos[(int)BadgeTypes.soul] = new Helper.Point(2, 4);
 
-            GetTile(4, 36).Badge = new Badge(); //volcano - Blaine - fogo
+            GetTile(4, 36).Badge = new Badge(BadgeTypes.volcano); //volcano - Blaine - fogo
             ashAndBdgsPos[(int)BadgeTypes.volcano] = new Helper.Point(4, 36);
             
-            GetTile(2, 19).Badge = new Badge(); //thunder - Ten Surge - eletrico
+            GetTile(2, 19).Badge = new Badge(BadgeTypes.thunder); //thunder - Ten Surge - eletrico
             ashAndBdgsPos[(int)BadgeTypes.thunder] = new Helper.Point(2, 19);
             
-            GetTile(40, 32).Badge = new Badge(); //boulder - Brock - pedra
+            GetTile(40, 32).Badge = new Badge(BadgeTypes.boulder); //boulder - Brock - pedra
             ashAndBdgsPos[(int)BadgeTypes.boulder] = new Helper.Point(40, 32);
             
-            GetTile(22, 2).Badge = new Badge(); //rainbow - Erika - planta
+            GetTile(22, 2).Badge = new Badge(BadgeTypes.rainbow); //rainbow - Erika - planta
             ashAndBdgsPos[(int)BadgeTypes.rainbow] = new Helper.Point(22, 2);
             
-            GetTile(20, 39).Badge = new Badge(); //earth - Giovanni - terra
+            GetTile(20, 39).Badge = new Badge(BadgeTypes.earth); //earth - Giovanni - terra
             ashAndBdgsPos[(int)BadgeTypes.earth] = new Helper.Point(20, 39);
             
-            GetTile(19, 14).Badge = new Badge(); //cascade - Misty - agua
+            GetTile(19, 14).Badge = new Badge(BadgeTypes.cascade); //cascade - Misty - agua
             ashAndBdgsPos[(int)BadgeTypes.cascade] = new Helper.Point(19, 14);
             
-            GetTile(37, 19).Badge = new Badge(); //marsh - Sabrina - psiquico
+            GetTile(37, 19).Badge = new Badge(BadgeTypes.marsh); //marsh - Sabrina - psiquico
             ashAndBdgsPos[(int)BadgeTypes.marsh] = new Helper.Point(37, 19);
 
 
@@ -217,23 +232,7 @@ namespace Model
         #endregion
 
 
-        private Helper.Point _ashIndex;
-        public Helper.Point AshIndex 
-        {
-            get
-            {
-                return _ashIndex;
-            }
-            set
-            {
-                GetTile(value.x, value.y).Ash = GetTile(_ashIndex.x, _ashIndex.y).Ash;
-                _ashIndex = value;
-                
-            }
-        }
-
-
-        
+              
         private int[] i2XY(int ix)
         {
             return new int[2] { ix / 42, ix % 42 };
