@@ -19,8 +19,7 @@ namespace View
         {
             this.Width = 1028;
             this.Height = 960;
-            kantoMap.listeners += RedrawAsh;
-         
+            kantoMap.listenersAsh += RedrawAsh;
         }
 
         public void RedrawAsh(Helper.Point point)
@@ -38,20 +37,31 @@ namespace View
 
         private void DrawAshBdgsPokemons(Graphics graphic)
         {
+            var yPoint = 0;
 
             foreach (var tileLine in _mapController.KantoMap.KantoMap)
             {
+                var xPoint = 0;
                 foreach (var tile in tileLine)
                 {
                     if (tile.HasAsh)
                     {
-                        graphic.DrawImage(tile.Ash.AshImage, tile.XPoint * 18, tile.YPoint * 18);
-                        break;
+                        graphic.DrawImage(tile.Ash.AshImage, xPoint, yPoint);
                     }
 
-                }
-            }
+                    else if (tile.HasBadge)
+                    {
+                        graphic.DrawImage(tile.Badge.BadgeImage, xPoint, yPoint);
+                    }
 
+                    else if (tile.HasPokemon)
+                    {
+                        graphic.DrawImage(tile.Pokemon.PokeImage, xPoint, yPoint);
+                    }
+                    xPoint += 18;
+                }
+                yPoint += 18;
+            }
         }
 
         private void DrawBackgroudMap(Graphics graphic)

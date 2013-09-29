@@ -131,7 +131,55 @@
     <None Include="Resources\cave.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Pikachu.png" />
+    <None Include="Resources\GrassPoke.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrassPoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flyingpoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volcano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boulder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cascade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marsh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rainbow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokefire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokeflying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokegrass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokewater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokeelectric.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

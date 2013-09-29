@@ -15,16 +15,16 @@ namespace Model
             _map = map;
         }
 
-        public ICollection<Pokemon> getPokemons (){
+        public Dictionary<Helper.Point, Pokemon> getPokemons (){
 
-            var _pokemonsperarea = new List<Pokemon>();
+            var _pokemonsperarea = new Dictionary<Helper.Point, Pokemon>();
 
             for (int x = _map.AshIndex.x - 4; x < _map.AshIndex.x + 4; x++)
                 for (int y = _map.AshIndex.y - 4; y < _map.AshIndex.y + 4; y++)
                 {
                     Pokemon pokemon = _map.GetTile(x, y).Pokemon;
                     if (pokemon != null)
-                        _pokemonsperarea.Add(pokemon);
+                        _pokemonsperarea.Add(new Helper.Point(x,y), pokemon);
                 }
 
             return _pokemonsperarea;
