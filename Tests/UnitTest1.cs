@@ -129,7 +129,7 @@ namespace Tests
              mapCont.UpdateDistances();
             var captBdg = Enumerable.Repeat(false,8).ToArray();
             var gen = new BRKGA(9, 42 * 42 , 500, 300, captBdg, mapCont.DistMap);
-            gen.Evolve(3);
+            gen.Evolve(500);
             Console.WriteLine(String.Join("\n", gen.GetChoice().Select(v=> Enum.GetName(typeof(BadgeTypes), v))));
         }
 
