@@ -100,8 +100,10 @@ namespace Controller
                 Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
                 Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
                 Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
-                Evolution(current , previous );   // First evolve the population (curr, next)
+                
+                Evolution( previous );   // First evolve the population (curr, next)
                 previous = System.Threading.Interlocked.Exchange<Population>(ref current, previous); // Update (prev = curr; curr = prev == next)
+                
                 Console.WriteLine("CURRENT FINAL");
                 Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
                 Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
@@ -114,16 +116,20 @@ namespace Controller
             }
         }
 
-        private void Evolution(Population curr, Population next)
+        private void Evolution(Population next)
         {
             Console.WriteLine("CURRENT ENTRADA DENTRO DA EVOLUTION");
             Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
             Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
             Console.WriteLine(String.Join("\n", current.population.Take(100).Select(a => String.Join(" ", a))));
-            curr.population.Take(popElite).Select((pe, i) => next.population[i] = pe);
 
-            int inx = popElite;
+            int inx = 0;
+            for (inx = 0; inx < popElite; inx++)
+            {
+                next.population[inx] = current.population[current.fitness[inx].Item1];
+            }
 
+           
             var rnd = new Random(DateTime.Now.Millisecond);
 
             // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
@@ -144,27 +150,28 @@ namespace Controller
                 }*/
 
                 int j;
-                    for (j = 0; j < n / 2 + 1; ++j)
-                    {
-                        next.population[inx][j] = curr.population[eliteParent][j];
-                    }
-                    for (; j < n; ++j)
-                    {
-                        next.population[inx][j] = curr.population[noneliteParent][j];
-                    }
-                
-                var popInx = next.population[inx].Select((p , i ) => new { p , i} );
-                var rep = popInx.Except(popInx.Distinct()).ToList() ;            
-
-                if (rep.Count() > 0 )
+                for (j = 0; j < n / 2 + 1; ++j)
                 {
-                    var diffFromFather = curr.population[eliteParent].Except(next.population[inx]) ;
+                    next.population[inx][j] = current.population[eliteParent][j];
+                }
+                for (; j < n; ++j)
+                {
+                    next.population[inx][j] = current.population[noneliteParent][j];
+                }
+                
+                var popInx = next.population[inx].Select((p , i ) => new ChroIndexed { allele = p , inx = i} );
+                var cmp = new CompChromossome();
+                var rep = popInx.Except(popInx.Distinct(cmp), cmp).ToList();            
+
+                if (rep.Count > 0 )
+                {
+                    var diffFromFather = current.population[eliteParent].Except(next.population[inx]);
                     var shuDiff = diffFromFather.OrderBy(a=> Guid.NewGuid()).ToList() ;
                     foreach (var item in rep)
                     {
                         if (shuDiff.Count == 0)
                             break;
-                        next.population[inx][item.i] = shuDiff.First();
+                        next.population[inx][item.inx] = shuDiff.First();
                         shuDiff.RemoveAt(0);
                     }
                 }
@@ -198,6 +205,28 @@ namespace Controller
         }
 
 
+        private struct ChroIndexed
+        {
+            public int allele;
+            public int inx;
+        }
+
+        private class CompChromossome : IEqualityComparer<ChroIndexed>
+        {
+
+            public bool Equals(ChroIndexed x, ChroIndexed y)
+        {
+            return x.allele == y.allele;
+        }
+
+            public int GetHashCode(ChroIndexed obj)
+            {
+                return obj.GetHashCode();
+            }
+        }
+        
     }
+    
+    
 
 }
