@@ -68,6 +68,8 @@ namespace View
 
             AutoClosingMessageBox.Show("Cost:" + cost.ToString(), "Cost:" + cost.ToString(), 50);           
             numberCostTextLabel.Text = cost.ToString();
+            numberCostTextLabel.Invalidate();
+            numberCostTextLabel.Update();
         }
 
         public void UpdateAshPosition(Helper.Point newAshPoint)

@@ -122,6 +122,11 @@ namespace Controller
             }
         }
 
+        private void updateLabelCost(int cost)
+        {
+            
+        }
+
         public void FightPokemon(Pokemon poke )
         {
             Ash.Pokeball(poke.Type);
