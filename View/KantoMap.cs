@@ -14,11 +14,13 @@ namespace View
 {
     public partial class KantoMap : Form
     {
-        private MapController _mapController = new MapController();
+        private AgentController _agentController;
 
         Button buttonStartSearch;
         Label costTextLabel;
         Label numberCostTextLabel;
+
+        PictureMap picsMap;
 
         public KantoMap()
         {
@@ -35,33 +37,45 @@ namespace View
             this.Controls.Add(costTextLabel);
             costTextLabel.Location = new Point(780, 120);
             costTextLabel.Text = "Cost";
+            costTextLabel.Size = new Size(150, 50);
+            costTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);
 
             numberCostTextLabel = new Label();
             this.Controls.Add(numberCostTextLabel);
-            numberCostTextLabel.Location = new Point(780, 170);
+            numberCostTextLabel .Location = new Point(780, 170);
             numberCostTextLabel.Text = "0";
-
-            _mapController.listenersAsh += UpdateAshPosition;
-            _mapController.listenersCost += UpdateNumberCostLabel;
+            numberCostTextLabel.Size = new Size(150, 50);
+            numberCostTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);
 
             this.buttonStartSearch.Click += delegate(object sender, EventArgs e)
             {
-                var agnContr = new AgentController();
-                agnContr.Walk();
+                _agentController = new AgentController(MapController.Instance);
+                buttonStartSearch.Enabled = false;
+                _agentController.Walk();
             };
 
-            this.Controls.Add(new PictureMap(_mapController));
+            picsMap = new PictureMap(MapController.Instance);
+
+            this.Controls.Add(picsMap);
 
             InitializeComponent();
+            MapController.Instance.listenersCost += SetNewCost;
+            MapController.Instance.listenersAsh += UpdateAshPosition;
         }
 
-        public void UpdateNumberCostLabel(int cost)
+        public void SetNewCost(int cost)
         {
+
+            AutoClosingMessageBox.Show("Cost:" + cost.ToString(), "Cost:" + cost.ToString(), 50);           
             numberCostTextLabel.Text = cost.ToString();
         }
 
-        public void UpdateAshPosition(Helper.Point point)
+        public void UpdateAshPosition(Helper.Point newAshPoint)
         {
+            picsMap.ashPoint.x = newAshPoint.x;
+            picsMap.ashPoint.y = newAshPoint.y;
+            picsMap.Invalidate();
+            picsMap.Update();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -74,10 +88,9 @@ namespace View
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
-            //stepAsh
-            //updateCusto
+            //numberCostTextLabel.Text = _cost.ToString();
         }
       
     }

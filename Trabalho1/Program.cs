@@ -14,7 +14,7 @@ namespace Model
         [STAThread]
         static void Main()
         {
-            Map map = new Map("Mapa01.txt","PosicaoPokemons.txt");            
+                       
         }
     }
 }

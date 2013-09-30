@@ -131,6 +131,15 @@ namespace Model.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\Resources\Mapa01.txt.
+        /// </summary>
+        internal static string Mapa01 {
+            get {
+                return ResourceManager.GetString("Mapa01", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap marsh {
@@ -191,15 +200,6 @@ namespace Model.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ..\..\..\Resources\Pokemons.
-        /// </summary>
-        internal static string PokemonPath {
-            get {
-                return ResourceManager.GetString("PokemonPath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pokewater {
@@ -210,21 +210,21 @@ namespace Model.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\Resources\PosicaoPokemons.txt.
+        /// </summary>
+        internal static string PosicaoPokemons {
+            get {
+                return ResourceManager.GetString("PosicaoPokemons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap rainbow {
             get {
                 object obj = ResourceManager.GetObject("rainbow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ..\..\..\Resources.
-        /// </summary>
-        internal static string ResourcePath {
-            get {
-                return ResourceManager.GetString("ResourcePath", resourceCulture);
             }
         }
         
