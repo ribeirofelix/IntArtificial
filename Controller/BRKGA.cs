@@ -82,6 +82,12 @@ namespace Controller
                     vet.RemoveAt(index);
                 }
             }
+            foreach (var chrom in current.population)
+            {
+                var grups = chrom.GroupBy(a => a).Count();
+                if (grups != captBadgs.Count(a => !a) + 1 )
+                    throw new Exception("repetidos");
+            }
         }
 
         private int Decoder (int[] chromossome)
@@ -111,11 +117,11 @@ namespace Controller
         private void Evolution(Population next)
         {
             int inx = 0;
-            var temRep = next.population.Where(p => p.GroupBy(c => c).Count() != 9);
+            //var temRep = next.population.Where(p => p.GroupBy(c => c).Count() != 9);
             //Console.WriteLine(String.Join("\n", temRep));
 
 
-            var temRepCuur = current.population.Where(p => p.GroupBy(c => c).Count() != 9);
+            //var temRepCuur = current.population.Where(p => p.GroupBy(c => c).Count() != 9);
             //Console.WriteLine(String.Join("\n", temRepCuur));
 
             for (inx = 0; inx < popElite; inx++)
@@ -127,7 +133,7 @@ namespace Controller
             var rnd = new Random(DateTime.Now.Millisecond);
 
             // 3. We'll mate 'p - pe - pm' pairs; initially, i = pe, so we need to iterate until i < p - pm:
-            /*while (inx < pop - popMutant)
+            while (inx < pop - popMutant)
             {
                 // Select an elite parent:
                 int eliteParent = rnd.Next(popElite - 1);
@@ -137,6 +143,8 @@ namespace Controller
                 //verify integrity of parents
                 var temRepetidoEllite = current.population[eliteParent].GroupBy(er => er);
                 var temRepetidoNaoElite = current.population[noneliteParent].GroupBy(enr => enr) ;
+
+            
 
                
                 var copied = new bool[9];
@@ -148,40 +156,21 @@ namespace Controller
                     
                     int sourceParent = ((rnd.NextDouble() < rhoe) ? eliteParent : noneliteParent);
 
-                    if (!copied[current.population[sourceParent][j]])
-                    {
-                        next.population[inx][j] = current.population[sourceParent][j];
-                        copied[current.population[sourceParent][j]] = true;
-                    }
-                    else
-                    {
-                        int cont = 0;
-                        foreach (var partAll in current.population[eliteParent])
-                        {
-                            if (!copied[partAll])
-                            {
-                                next.population[inx][j] = current.population[eliteParent][cont];
-                                copied[current.population[eliteParent][cont]] = true;
-                                cont++;
-                                break;
-                            }
-                            cont++;
-                        }
-                    }*/
+                    
+                     next.population[inx][j] = current.population[sourceParent][j];
+                     
+                }
 
-                    //if(next.population[inx][n-1] == next.population[inx][n-2])
-                    //{
-                    //}
-                //}
+                next.population[inx] = removeRep(next.population[inx]);
 
                 //var histChild = new int[9];
                 //histChild.Initialize();
 
-                //var indsRepetidos = Enumerable.Repeat(-1,4 ).ToArray();
+                //var indsRepetidos = Enumerable.Repeat(-1, 4).ToArray();
 
 
 
-                //for (int i = 0 , j = 0 ; i < next.population[inx].Length; i++)
+                //for (int i = 0, j = 0; i < next.population[inx].Length; i++)
                 //{
                 //    int allelle = next.population[inx][i];
                 //    histChild[allelle]++;
@@ -193,22 +182,22 @@ namespace Controller
                 //}
 
 
-                //for (int i = 0, j = 0; i < current.population[eliteParent].Length; i++)
+                //for (int i = 1, j = 0; i < current.population[eliteParent].Length; i++)
                 //{
                 //    var parnAll = current.population[eliteParent][i];
-                //    if ( !captBadgs[parnAll]  && histChild[parnAll] == 0)
+                //    try
                 //    {
-
-                //        try
+                //        if (!captBadgs[parnAll - 1] && histChild[parnAll] == 0)
                 //        {
                 //            next.population[inx][indsRepetidos[j]] = current.population[eliteParent][i];
                 //            j++;
                 //        }
-                //        catch (Exception e)
-                //        {
-                            
-                //            throw e;
-                //        }
+                //    }
+                //    catch (Exception e)
+                //    {
+                //        if (next.population[inx].GroupBy(nc => nc).All(gnc => gnc.Count() == 1))
+                //            break;
+                //        throw e;
                 //    }
 
                 //}
@@ -238,8 +227,8 @@ namespace Controller
                //     Console.WriteLine(String.Join(",", next.population[inx]));
 
                
-                //++inx;
-            //}
+                ++inx;
+            }
 
             while (inx < popMutant)
             {
@@ -278,8 +267,31 @@ namespace Controller
         {
             get { return current.getBestFitness(); }
         }
-        
 
+        private int[] removeRep(int[] chrom)
+        {
+            var valid = captBadgs.Select((b, i) => new { b, i }).Where(bi => bi.b == false).Select(bi => new { i = bi.i + 1, qtd = 0 }).ToDictionary(bdic => bdic.i, bele => bele.qtd);
+
+            var repIndex = chrom.Select((c, i) => new { c, i }).GroupBy(d => d.c).Where(cnt => cnt.Count() > 1);
+
+
+            foreach (var allelle in chrom.Skip(1))
+            {
+                valid[allelle]++;
+            }
+
+
+            foreach (var grRep in repIndex)
+            {
+                int frsOccu = grRep.First().i;
+                var frstNotChoose = valid.Where(v => v.Value == 0).First();
+                chrom[frsOccu] = frstNotChoose.Key;
+                valid.Remove(frstNotChoose.Key);
+
+            }
+            return chrom;
+
+        }
 
         
         private struct ChroIndexed

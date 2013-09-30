@@ -185,6 +185,52 @@ namespace Tests
                 heapTreeSizeBefore = testHeap.HeapSize();
             }
         }
+
+
+        [TestMethod]
+        public void TesteRemoveRep()
+        {
+            int[] rep1 = { 0, 1, 1, 2};
+            int[] rep2 = { 0, 1, 1, 2 };
+            int[] rep3 = { 0, 1, 1, 2 };
+            int[] rep4 = { 0, 1, 1, 2};
+            bool[] valids = { false,true,false };
+
+            rep1 = removeRep(rep1, valids);
+            rep2 = removeRep(rep2, valids);
+            rep3 = removeRep(rep3, valids);
+            rep4 = removeRep(rep4, valids);
+
+            Assert.IsTrue(rep1.GroupBy(a => a).Count() == 4);
+            Assert.IsTrue(rep2.GroupBy(a => a).Count() == 4);
+            Assert.IsTrue(rep3.GroupBy(a => a).Count() == 4);
+            Assert.IsTrue(rep4.GroupBy(a => a).Count() == 4);
+        }
+
+        private int[] removeRep(int[] chrom , bool[] captBadgs)
+        {
+            var valid = captBadgs.Select((b, i) => new { b, i }).Where(bi => bi.b == false).Select(bi => new { i = bi.i+1, qtd = 0 }).ToDictionary(bdic => bdic.i, bele => bele.qtd);
+
+            var repIndex = chrom.Select((c, i) => new { c, i }).GroupBy(d => d.c).Where(cnt => cnt.Count() > 1);
+
+          
+            foreach (var allelle in chrom.Skip(1) )
+            {
+                valid[allelle]++;
+            }
+
+         
+            foreach (var grRep in repIndex)
+            {
+                int frsOccu = grRep.First().i;
+                var frstNotChoose = valid.Where(v => v.Value == 0).First();
+                chrom[frsOccu] = frstNotChoose.Key;
+                valid.Remove(frstNotChoose.Key);
+              
+            }
+            return chrom;
+
+        }
     }
   
 }

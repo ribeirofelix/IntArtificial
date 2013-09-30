@@ -12,10 +12,10 @@ namespace Controller
 {
     public class AgentController
     {
-        private const int pop = 42*42 ;        
+        private const int pop = 2000 ;        
         private const int popElt = 500 ;
         private const int popMut = 300 ;
-        private const int generations = 2000;
+        private const int generations = 600;
 
         public MapController mapCont;
         public BRKGA genetic ; 
