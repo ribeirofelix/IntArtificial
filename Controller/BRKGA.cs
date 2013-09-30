@@ -138,15 +138,7 @@ namespace Controller
                 // Select a non-elite parent:
                 int noneliteParent = rnd.Next(popElite, pop - 1);//colocar de pe a p
 
-                //verify integrity of parents
-                var temRepetidoEllite = current.population[eliteParent].GroupBy(er => er);
-                var temRepetidoNaoElite = current.population[noneliteParent].GroupBy(enr => enr) ;
-
-            
-
-               
-                var copied = new bool[9];
-                copied.Initialize();
+                   
 
                 // Mate:
                 for (int j = 0; j < n; ++j)
