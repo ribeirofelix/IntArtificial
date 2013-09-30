@@ -16,6 +16,8 @@ namespace Model
             get { return _type; }
         }
 
+        public bool IsVisited = false;
+
         public Image PokeImage
         {
             get 

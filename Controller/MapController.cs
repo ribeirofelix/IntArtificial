@@ -1,4 +1,4 @@
-﻿
+﻿//#define TEST
 using Controller.Properties;
 using Model;
 using System;
@@ -114,7 +114,8 @@ namespace Controller
             Map.Instance.AshIndex = point;
             if (isReal && !oldIndex.Equals(point))
             {
-                _actualpathcost += Map.Instance.GetTile(point).TileCost;               
+                _actualpathcost += Map.Instance.GetTile(point).TileCost;
+                AgentController.currentCost -= _actualpathcost;
 #if !TEST
                 listenersCost(_actualpathcost);
                 listenersAsh(point);

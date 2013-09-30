@@ -92,14 +92,18 @@ namespace Controller
 	            }             
             }
 
-            if (father.parent == null)
-                Console.WriteLine("filho sem pai :" + father.pos.ToString() + "ini: " + posIni.ToString() + "fim: "+ posFinal.ToString() );
-            
-            var currParent = father.parent.Value ;
-            totalCost = father.accCost;
-
+           
             var pathReturn = new List<Helper.Point>();
             pathReturn.Insert(0, father.pos );
+            totalCost = father.accCost;
+
+            if (!father.parent.HasValue)
+               return pathReturn;
+
+            var currParent = father.parent.Value ;
+           
+
+           
            
             
             for (int i = 0 , j = 1; i < explored.Count; i++)

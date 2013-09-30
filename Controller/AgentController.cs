@@ -15,14 +15,15 @@ namespace Controller
         private const int pop = 2000 ;        
         private const int popElt = 500 ;
         private const int popMut = 300 ;
-        private const int generations = 600;
+        private const int generations = 300;
 
         public MapController mapCont;
         public BRKGA genetic ; 
         public bool[] captBadges = new bool[8];
         public Pokedex pokedex;
         public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
-        private int currentCost;
+        public static int currentCost;
+        //private bool hasCapt = false;
 
         private static System.Timers.Timer aTimer;
 
@@ -46,8 +47,14 @@ namespace Controller
                 foreach (var badg in genetic.GetChoice())
                 {
                     ashPos = GoFromTo(ashPos, badg);
-                    captBadges[((int)badg) - 1] = true;
-                    Map.Instance.GetTile(Map.Instance.AshIndex).Badge = null;
+                    if (ashPos != 0)
+                    {
+                        captBadges[((int)badg) - 1] = true;
+                        Map.Instance.GetTile(Map.Instance.AshIndex).Badge = null;
+                    }
+                    else
+                        break;
+                   
                 }
 
             }
@@ -57,7 +64,6 @@ namespace Controller
         public int GoFromTo(int from , BadgeTypes to)
         {
             bool hasCapt = false;
-            
             foreach (var step in paths[new Tuple<int,BadgeTypes>(from,to)])
             {
 
@@ -65,7 +71,7 @@ namespace Controller
 
                 
                  /* For each pokemon that Ash                        Here we say : the types of pokemons Ash hasnt (and  pokemons is not a grass pokemon) */
-                foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon(p.Value.Type) && p.Value.Type != PokemonTypes.Grass))
+                foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon(p.Value.Type) && p.Value.Type != PokemonTypes.Grass && !p.Value.IsVisited ))
                 {
                     if (DecideGotoPokemon(pokemon.Value))
                     {
@@ -73,7 +79,6 @@ namespace Controller
                         if (pathToPoke != null)
                         {
                             foreach (var stepToPoke in pathToPoke)
-
                             {
                                 mapCont.StepAsh(stepToPoke, true);
 
@@ -82,12 +87,13 @@ namespace Controller
                             hasCapt = true;
                         }
                     }
+                    else
+                        pokemon.Value.IsVisited = true;
                 }
 
                 if (hasCapt)
                 {
-                    GoFromPointToBadge(mapCont.Ash.Pos, to);
-                    return (int)to;
+                    return 0;
                 }
 
             }
@@ -110,7 +116,7 @@ namespace Controller
             switch (poke.Type)
             {
                 case PokemonTypes.Grass:    return false ;
-                case PokemonTypes.Flying:  
+                case PokemonTypes.Flying: return true;
                 case PokemonTypes.Water:    return true;
                 case PokemonTypes.Electric:
                     if (!captBadges[(int)BadgeTypes.boulder - 1]) return true;
