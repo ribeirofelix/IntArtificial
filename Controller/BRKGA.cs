@@ -45,9 +45,9 @@ namespace Controller
 
             // Initialize:
             Initialize();
-            Console.WriteLine("PRIMEIRO");
-            Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
-            Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
+          //  Console.WriteLine("PRIMEIRO");
+            //Console.WriteLine(current.fitness.Select(a => a.Item2).Distinct().Count());
+            //Console.WriteLine(String.Join("\n", current.fitness.Take(100).Select(a => a.Item2)));
             
 
             // Then just copy to previous:

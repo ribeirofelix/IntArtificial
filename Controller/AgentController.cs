@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using System.Timers;
 using Model;
 using System.Security.Cryptography;
 
@@ -15,22 +17,25 @@ namespace Controller
         private const int popMut = 300 ;
         private const int generations = 2000;
 
-        private MapController mapCont = new MapController();
-        private BRKGA genetic ; 
-        private bool[] captBadges = new bool[8];
-        private Pokedex pokedex;
-        private Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
+        public MapController mapCont;
+        public BRKGA genetic ; 
+        public bool[] captBadges = new bool[8];
+        public Pokedex pokedex;
+        public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
         private int currentCost;
 
-        public AgentController()
+        private static System.Timers.Timer aTimer;
+
+        public AgentController(MapController mapController)
         {
+            mapCont = mapController;
             captBadges.Initialize();
-            paths= mapCont.UpdateDistances();
-            genetic = new BRKGA(9,pop,popElt,popMut,captBadges,mapCont.DistMap);
-            pokedex = new Pokedex(mapCont.KantoMap);
+            paths = mapCont.UpdateDistances();
+            genetic = new BRKGA(9, pop, popElt, popMut, captBadges, mapCont.DistMap);
+            pokedex = new Pokedex(Map.Instance);
             genetic.Evolve(generations);
             currentCost = genetic.BestFitness;
-            
+
         }
 
         public bool[] Walk()
@@ -42,18 +47,21 @@ namespace Controller
                 {
                     ashPos = GoFromTo(ashPos, badg);
                     captBadges[((int)badg) - 1] = true;
-                    
+                    Map.Instance.GetTile(Map.Instance.AshIndex).Badge = null;
                 }
 
             }
             return captBadges;
         }
 
-        private int GoFromTo(int from , BadgeTypes to)
+        public int GoFromTo(int from , BadgeTypes to)
         {
+            
             foreach (var step in paths[new Tuple<int,BadgeTypes>(from,to)])
             {
+
                 mapCont.StepAsh(step,true);
+
                 
                  /* For each pokemon that Ash                        Here we say : the types of pokemons Ash hasnt (and  pokemons is not a grass pokemon) */
                 foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon(p.Value.Type) && p.Value.Type != PokemonTypes.Grass))
@@ -64,20 +72,22 @@ namespace Controller
                         if (pathToPoke != null)
                         {
                             foreach (var stepToPoke in pathToPoke)
+
                             {
                                 mapCont.StepAsh(step,true);
+
                             }
                             this.mapCont.FightPokemon(pokemon.Value);
                         }
                     }
                 }
-                
+
             }
             return (int)to;
         }
 
 
-        private bool DecideGotoPokemon(Pokemon poke)
+        public bool DecideGotoPokemon(Pokemon poke)
         {
             switch (poke.Type)
             {
@@ -99,12 +109,14 @@ namespace Controller
             return false;
         }
 
-        private List<Helper.Point> VerifyPath(Pokemon  possiblePoke)
+        public List<Helper.Point> VerifyPath(Pokemon  possiblePoke)
         {
             /* Set possible position to verify the path*/
             mapCont.Ash.Pokeball(possiblePoke.Type);
             var currPosAsh = mapCont.Ash.Pos;
+
             mapCont.StepAsh(possiblePoke.Pos,false);
+
 
             /* Recalculate all distances and the cost to travel */
             var tempPaths = this.mapCont.UpdateDistances();
@@ -114,12 +126,13 @@ namespace Controller
 
             /* AStart to know the cost from Ash to possible Pokemon */
             int  ashPossCost ;
-            var pathToPokemon =  (new AStar(this.mapCont.KantoMap)).Star(currPosAsh, possiblePoke.Pos, out ashPossCost).ToList();
+            var pathToPokemon =  (new AStar(Map.Instance)).Star(currPosAsh, possiblePoke.Pos, out ashPossCost).ToList();
 
             var tempCost = tempGen.BestFitness + ashPossCost ;
 
             /* Remove the possible settings : back to the "REAL" life */
             mapCont.Ash.ReleasePokemon(possiblePoke.Type);
+
             mapCont.StepAsh(currPosAsh,false);
 
             if (currentCost > tempCost)

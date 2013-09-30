@@ -53,7 +53,7 @@ namespace Controller
         {            
             var heapBorder = new Heap<Elem>();
 
-            Console.WriteLine("cheguei no astar");
+         //   Console.WriteLine("cheguei no astar");
 
             List<Elem> explored = new List<Elem>();
             /* Array to verify if a position was explored */
@@ -109,7 +109,7 @@ namespace Controller
                     pathReturn.Insert(j,explored[i].pos);
                     j++;
                     currParent = explored[i].parent.HasValue ? explored[i].parent.Value : posIni  ;
-                    Debug.WriteLine("custo "+explored[i].accCost);
+                    //Debug.WriteLine("custo "+explored[i].accCost);
                 }
 			}
             pathReturn.Reverse();

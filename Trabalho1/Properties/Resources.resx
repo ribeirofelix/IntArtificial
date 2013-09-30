@@ -130,12 +130,12 @@
   <data name="mountain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mountain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PokemonPath" xml:space="preserve">
-    <value>..\..\..\Resources\Pokemons</value>
+  <data name="Mapa01" xml:space="preserve">
+    <value>..\..\..\Resources\Mapa01.txt</value>
     <comment>Pokemons Path</comment>
   </data>
-  <data name="ResourcePath" xml:space="preserve">
-    <value>..\..\..\Resources</value>
+  <data name="PosicaoPokemons" xml:space="preserve">
+    <value>..\..\..\Resources\PosicaoPokemons.txt</value>
     <comment>Resources Path</comment>
   </data>
   <data name="water" type="System.Resources.ResXFileRef, System.Windows.Forms">

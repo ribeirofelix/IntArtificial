@@ -4,11 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Model.Properties;
 
 namespace Model
 {
     public class Map
     {
+        private static Map instance;
+
+        public static Map Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Map();
+                }
+                return instance;
+            }
+        }
+
         #region /* PRIVATE PROPERTIES */
 
         private const int MAXTILES = 42;
@@ -38,7 +53,6 @@ namespace Model
                 _ashIndex = value;
                 ashAndBdgsPos[0] = _ashIndex;
                 this.Ash.Pos = new Helper.Point(_ashIndex.x, _ashIndex.y);
-
             }
         }
 
@@ -205,9 +219,11 @@ namespace Model
 
         private void PositionAsh()
         {
-           this.Ash = new Ash() { Pos = new Helper.Point( 19 ,  24) }; //ash
-            _ashIndex = new Helper.Point(19, 24);
-            ashAndBdgsPos[0] = _ashIndex;
+           this.Ash = new Ash() {}; //ash
+           this.Ash.Pos = new Helper.Point(19, 24);
+           _ashIndex = new Helper.Point(19, 24);
+           ashAndBdgsPos[0] = _ashIndex;
+            
         }
 
         #endregion
@@ -241,12 +257,12 @@ namespace Model
          * Parameters: mapFile, pokemonFile - names of the text files corresponding to the
          *                                    map configuration and the pokemon positions
          */
-        public Map(string mapFile, string pokemonFile)
+        private Map()
         {
-            ReadMap(mapFile);
+            ReadMap(Resources.Mapa01);
             PositionBadges();
             PositionAsh();
-            ReadPokemons(pokemonFile);
+            ReadPokemons(Resources.PosicaoPokemons);
 
         }
 

@@ -13,8 +13,6 @@ namespace View
     public class PictureMap : PictureBox
     {
 
-        private MapController _mapController = new MapController();
-
         public PictureMap(MapController kantoMap) :base ()
         {
             this.Width = 1028;
@@ -28,18 +26,21 @@ namespace View
             DrawAshBdgsPokemons(pe.Graphics);
         }
 
+        Image ash = Map.Instance.GetTile(new Helper.Point(19, 24)).Ash.AshImage;
+        public Helper.Point ashPoint = new Helper.Point(19,24);
+
         private void DrawAshBdgsPokemons(Graphics graphic)
         {
             var yPoint = 0;
 
-            foreach (var tileLine in _mapController.KantoMap.KantoMap)
+            foreach (var tileLine in Map.Instance.KantoMap)
             {
                 var xPoint = 0;
                 foreach (var tile in tileLine)
                 {
                     if (tile.HasAsh)
                     {
-                        graphic.DrawImage(tile.Ash.AshImage, xPoint, yPoint);
+
                     }
                     else if (tile.HasBadge)
                     {
@@ -53,14 +54,17 @@ namespace View
                     xPoint += 18;
                 }
                 yPoint += 18;
-            }
+            }   
+
+            graphic.DrawImage(ash, ashPoint.y*18, ashPoint.x*18);
+            graphic.DrawRectangle(new Pen(Color.Red, 3), (ashPoint.y - 4) * 18, (ashPoint.x - 4) * 18, 18*9, 18*9);
         }
 
         private void DrawBackgroudMap(Graphics graphic)
         {
-            var yPoint = 0;
+               var yPoint = 0;
 
-            foreach (var tileLine in _mapController.KantoMap.KantoMap)
+            foreach (var tileLine in Map.Instance.KantoMap)
             {
                 var xPoint = 0;
                 foreach (var tile in tileLine)

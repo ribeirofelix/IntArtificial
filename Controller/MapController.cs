@@ -1,4 +1,5 @@
-﻿using Controller.Properties;
+﻿
+using Controller.Properties;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,25 @@ namespace Controller
 
     public class MapController
     {
+        private static MapController instance;
 
+        public static MapController Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new MapController();
+                }
+                return instance;
+            }
+        }
         #region /* PRIVATE PROPERTIES */
 
         private const int mapLength = 42 * 42;
         private int _actualPathCost = 0;
+
+        private int _actualpathcost = -10; //firststep
 
         private Helper.Point[] posAshBdg;
 
@@ -30,45 +45,30 @@ namespace Controller
             get { return distMap; }
         }
 
-        private Map _kantoMap;
-        public Map KantoMap
-        {
-            get
-            {
-                if (_kantoMap == null)
-                {
-                    _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
-                    posAshBdg = _kantoMap.ashAndBdgsPos;
-                }
-                return _kantoMap;
-            }
-        }
-
         #endregion
 
         #region /* PUBLIC PROPERTIES */
 
         public Ash Ash
         {
-            get { return this.KantoMap.Ash ; }
+            get { return Map.Instance.Ash ; }
         }
 
-        /*Delegates - observer*/
+        #endregion
 
         public AshMovedDelegate listenersAsh;
         public CostChangedDelegate listenersCost;
 
-        #endregion
-
         #region /* CONSTRUCTOR */
 
-        public MapController()
+
+        private MapController()
         {
             /* Creates Map */
-            _kantoMap = new Map(Resources.mapPath, Resources.pokePath);
 
-            posAshBdg = _kantoMap.ashAndBdgsPos;
-            
+
+            posAshBdg = Map.Instance.ashAndBdgsPos;
+
             /*Creates distances matrix*/
 
             for (int i = 0; i < distMap.Length; i++)
@@ -80,22 +80,12 @@ namespace Controller
 
         #endregion
 
-        #region /* PRIVATE METHODS */
-
-        private void ChangeRoute()
-        {
-            //call genetic
-            //call astar
-        }
-
-        #endregion
-
         #region /* PUBLIC METHODS */
 
         /* Update Distances */
         public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> UpdateDistances()
         {
-            var aStar = new AStar(this._kantoMap);
+            var aStar = new AStar(Map.Instance);
             int totalCost ;
             var paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(8);
 
@@ -119,23 +109,26 @@ namespace Controller
 
         public void StepAsh(Helper.Point point, bool isReal)
         {
-            this._kantoMap.AshIndex = point;
 
-            if (isReal)
+            Helper.Point oldIndex = Map.Instance.AshIndex;
+            Map.Instance.AshIndex = point;
+            if (isReal && !oldIndex.Equals(point))
             {
+                Console.WriteLine(point.x.ToString() + ";" + point.y.ToString());
+                _actualpathcost += Map.Instance.GetTile(point).TileCost;
+                Console.WriteLine(_actualpathcost.ToString());
+#if !TEST
+                listenersCost(_actualpathcost);
                 listenersAsh(point);
-                _actualPathCost += _kantoMap.GetTile(point).TileCost;
-                listenersCost(_actualPathCost);
+#endif
             }
         }
 
         public void FightPokemon(Pokemon poke )
         {
             Ash.Pokeball(poke.Type);
-            this._kantoMap.GetTile(poke.Pos).Pokemon = null;
+            Map.Instance.GetTile(poke.Pos).Pokemon = null;
         }
-
-
         #endregion
 
     }
