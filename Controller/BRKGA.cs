@@ -82,10 +82,8 @@ namespace Controller
                     vet.RemoveAt(index);
                 }
             }
-            foreach (var chrom in current.population)
+            if( current.population.Where( p => p.GroupBy(ch => ch ).Count() !=  captBadgs.Count(a => !a) + 1 ).Any() )
             {
-                var grups = chrom.GroupBy(a => a).Count();
-                if (grups != captBadgs.Count(a => !a) + 1 )
                     throw new Exception("repetidos");
             }
         }
