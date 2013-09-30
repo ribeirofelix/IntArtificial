@@ -56,6 +56,7 @@ namespace Controller
 
         public int GoFromTo(int from , BadgeTypes to)
         {
+            bool hasCapt = false;
             
             foreach (var step in paths[new Tuple<int,BadgeTypes>(from,to)])
             {
@@ -74,16 +75,33 @@ namespace Controller
                             foreach (var stepToPoke in pathToPoke)
 
                             {
-                                mapCont.StepAsh(step,true);
+                                mapCont.StepAsh(stepToPoke, true);
 
                             }
                             this.mapCont.FightPokemon(pokemon.Value);
+                            hasCapt = true;
                         }
                     }
                 }
 
+                if (hasCapt)
+                {
+                    GoFromPointToBadge(mapCont.Ash.Pos, to);
+                    return (int)to;
+                }
+
             }
             return (int)to;
+        }
+
+        private void GoFromPointToBadge(Helper.Point pos, BadgeTypes badg)
+        {
+            int finalCost;
+            var path = (new AStar(Map.Instance)).Star(pos, Helper.GetBadgePoint(badg), out finalCost);
+            foreach (var step in path)
+            {
+                mapCont.StepAsh(step, true);
+            }
         }
 
 

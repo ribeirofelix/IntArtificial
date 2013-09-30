@@ -114,9 +114,7 @@ namespace Controller
             Map.Instance.AshIndex = point;
             if (isReal && !oldIndex.Equals(point))
             {
-                Console.WriteLine(point.x.ToString() + ";" + point.y.ToString());
-                _actualpathcost += Map.Instance.GetTile(point).TileCost;
-                Console.WriteLine(_actualpathcost.ToString());
+                _actualpathcost += Map.Instance.GetTile(point).TileCost;               
 #if !TEST
                 listenersCost(_actualpathcost);
                 listenersAsh(point);
