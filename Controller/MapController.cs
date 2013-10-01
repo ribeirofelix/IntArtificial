@@ -14,6 +14,7 @@ namespace Controller
     //delegates for observer pattern
     public delegate void AshMovedDelegate(Helper.Point point);
     public delegate void CostChangedDelegate(int newCost);
+    public delegate void ShowPokemon(PokemonTypes poke);
 
     public class MapController
     {
@@ -35,7 +36,7 @@ namespace Controller
         private const int mapLength = 42 * 42;
         private int _actualPathCost = 0;
 
-        private int _actualpathcost = -10; //firststep
+        private int _actualpathcost = 0; //firststep
 
         private Helper.Point[] posAshBdg;
 
@@ -58,6 +59,7 @@ namespace Controller
 
         public AshMovedDelegate listenersAsh;
         public CostChangedDelegate listenersCost;
+        public ShowPokemon showPoke;
 
         #region /* CONSTRUCTOR */
 
@@ -112,6 +114,12 @@ namespace Controller
 
             Helper.Point oldIndex = Map.Instance.AshIndex;
             Map.Instance.AshIndex = point;
+
+            if ( isReal && Map.Instance.GetTile(point).HasPokemon)
+            {
+                FightPokemon(Map.Instance.GetTile(point).Pokemon);
+            }
+
             if (isReal && !oldIndex.Equals(point))
             {
                 _actualpathcost += Map.Instance.GetTile(point).TileCost;
@@ -132,6 +140,7 @@ namespace Controller
         {
             Ash.Pokeball(poke.Type);
             Map.Instance.GetTile(poke.Pos).Pokemon = null;
+            showPoke(poke.Type);
         }
         #endregion
 

@@ -61,6 +61,7 @@ namespace View
             InitializeComponent();
             MapController.Instance.listenersCost += SetNewCost;
             MapController.Instance.listenersAsh += UpdateAshPosition;
+            MapController.Instance.showPoke += ShowPokemon;
         }
 
         public void SetNewCost(int cost)
@@ -79,7 +80,30 @@ namespace View
             picsMap.Invalidate();
             picsMap.Update();
         }
-
+        public void ShowPokemon(PokemonTypes poke)
+        {
+            PictureBox pic = null;
+            switch (poke)
+            {
+                case PokemonTypes.Water:
+                    pic = pictureBoxWater;
+                    break;
+                case PokemonTypes.Flying:
+                    pic = pictureBoxFly;
+                    break;
+                case PokemonTypes.Electric:
+                    pic = pictureEle;
+                    break;
+                case PokemonTypes.Fire:
+                    pic = pictureBoxFire;
+                    break;
+                default:
+                    return;
+            }
+            pic.Visible = true;
+            pic.Invalidate();
+            pic.Update();
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

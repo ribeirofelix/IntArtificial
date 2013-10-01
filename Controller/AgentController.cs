@@ -12,10 +12,10 @@ namespace Controller
 {
     public class AgentController
     {
-        private const int pop = 2000 ;        
+        private const int pop = 1700 ;        
         private const int popElt = 500 ;
         private const int popMut = 300 ;
-        private const int generations = 300;
+        private const int generations = 500;
 
         public MapController mapCont;
         public BRKGA genetic ; 
@@ -71,7 +71,7 @@ namespace Controller
 
                 
                  /* For each pokemon that Ash                        Here we say : the types of pokemons Ash hasnt (and  pokemons is not a grass pokemon) */
-                foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon(p.Value.Type) && p.Value.Type != PokemonTypes.Grass && !p.Value.IsVisited ))
+                foreach (var pokemon in pokedex.getPokemons().Where(p => !mapCont.Ash.HasPokemon(p.Value.Type) && p.Value.Type != PokemonTypes.Grass ))
                 {
                     if (DecideGotoPokemon(pokemon.Value))
                     {

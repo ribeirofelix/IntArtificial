@@ -143,10 +143,10 @@ namespace Model
             for (int i = 0; i < 48; i++)
             {
                 /* Read tuple <type, x, y> */
-                var line = st.ReadLine().Split(',');
-                char t = char.Parse(line[0]);
+                var line = st.ReadLine().Split(' ');
+                char t = char.Parse(line[2]);
                 int x = int.Parse(line[1]);
-                int y = int.Parse(line[2]);
+                int y = int.Parse(line[0]);
 
                 /* If random position */
                 if (x == -1 && y == -1)
