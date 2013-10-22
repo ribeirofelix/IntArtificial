@@ -79,6 +79,7 @@ namespace View
             picsMap.ashPoint.y = newAshPoint.y;
             picsMap.Invalidate();
             picsMap.Update();
+            
         }
         public void ShowPokemon(PokemonTypes poke)
         {

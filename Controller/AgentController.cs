@@ -12,10 +12,10 @@ namespace Controller
 {
     public class AgentController
     {
-        private const int pop = 1700 ;        
-        private const int popElt = 500 ;
-        private const int popMut = 300 ;
-        private const int generations = 500;
+        private const int pop = 200 ;        
+        private const int popElt = 60 ;
+        private const int popMut = 40 ;
+        private const int generations = 5000;
 
         public MapController mapCont;
         public BRKGA genetic ; 
@@ -24,6 +24,8 @@ namespace Controller
         public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
         public static int currentCost;
         //private bool hasCapt = false;
+
+        public int PathCost { get { return mapCont._actualpathcost; } }
 
         private static System.Timers.Timer aTimer;
 
@@ -123,7 +125,7 @@ namespace Controller
                     break;
                 case PokemonTypes.Fire:
                     if (    !captBadges[(int)BadgeTypes.volcano-1] 
-                        || (!captBadges[(int)BadgeTypes.boulder-1] && ! mapCont.Ash.HasPokemon(PokemonTypes.Electric) ) )
+                        || !captBadges[(int)BadgeTypes.boulder-1] ) /*&& ! mapCont.Ash.HasPokemon(PokemonTypes.Electric) ) )*/
                     {
                         return true;
                     }

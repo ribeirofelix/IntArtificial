@@ -1,4 +1,4 @@
-﻿//#define TEST
+﻿#define TEST
 using Controller.Properties;
 using Model;
 using System;
@@ -34,9 +34,9 @@ namespace Controller
         #region /* PRIVATE PROPERTIES */
 
         private const int mapLength = 42 * 42;
-        private int _actualPathCost = 0;
+        
 
-        private int _actualpathcost = 0; //firststep
+        public int _actualpathcost = 0; //firststep
 
         private Helper.Point[] posAshBdg;
 
@@ -123,7 +123,7 @@ namespace Controller
             if (isReal && !oldIndex.Equals(point))
             {
                 _actualpathcost += Map.Instance.GetTile(point).TileCost;
-                AgentController.currentCost -= _actualpathcost;
+                AgentController.currentCost -= Map.Instance.GetTile(point).TileCost;
 #if !TEST
                 listenersCost(_actualpathcost);
                 listenersAsh(point);
@@ -140,7 +140,9 @@ namespace Controller
         {
             Ash.Pokeball(poke.Type);
             Map.Instance.GetTile(poke.Pos).Pokemon = null;
+#if !TEST
             showPoke(poke.Type);
+#endif
         }
         #endregion
 
