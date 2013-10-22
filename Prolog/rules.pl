@@ -277,6 +277,19 @@ poison(weezing).
 % End of Pokemons
 % ----------------------------------
 
+%-----------------------------------
+% Dynamic parameters
+%-----------------------------------
+
+dynamic mart/2.
+dynamic pokeCenter/2.
+dynamic trainer/2.
+dynamic visited/2.
+dynamic pokemon/3.
+
+%-----------------------------------
+% End of dynamic parameters
+%-----------------------------------
 
 at(24,19).
 
@@ -291,10 +304,35 @@ assert(mart(X,Y)) :- shoutSeller(X+1,Y) , shoutSeller(X,Y+1) , shoutSeller(X-1,Y
 shoutTrainer(X,Y) :- trainer(X+1,Y) ; trainer(X,Y+1) ; trainer(X-1,Y) ; trainer(X,Y-1).
 assert(trainer(X,Y)) :- shoutTrainer(X+1,Y) , shoutTrainer(X,Y+1)  , shoutTrainer(X-1,Y) , shoutTrainer(X,Y-1).
 
+% se a pokebola foi lancada, o pokemon foi capturado 
 assert(captured(P)) :- launchPokeball(P).
 
-assert(visited(X,Y)) :- at(X,Y).
+% se o pokemon foi capturado ele sai da base de conhecimento
+retract(pokemon(X,Y,P)) :- captured(P).
 
+% se ha um treinador, tem batalha
+battle(X,Y) :- trainer(X,Y).
+
+% se há batalha e os pokemons estão curados, há vitória
+victory(X,Y) :- battle(X,Y) , not hurtPokemon(). 
+
+% se há batalha e os pokemons não estão curados, há derrota
+defeat(X,Y) :- battle(X,Y) , hurtPokemon().
+
+% se há vitória, o treinador sai da base de conhecimento
+retract(trainer(X,Y)) :- victory(X,Y).
+
+
+% ver melhor!!!!
+% se há vitória, os pokemons estão machucados
+hurtPokemon() :- victory(X,Y). 
+
+
+% se ash está em X,Y, então este local foi visitado
+visited(X,Y) :- at(X,Y).
+assert(visited(X,Y)).
+
+% se não há treinador, é seguro
 safe(X, Y) :- not trainer(X,Y).
 
 
