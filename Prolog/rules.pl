@@ -1,4 +1,3 @@
-
 % ----------------------------------
 % Pokemons
 % ----------------------------------
@@ -309,7 +308,7 @@ trainer(X,Y) :- (screamTrainer(X+1,Y) , screamTrainer(X,Y+1)  , screamTrainer(X-
 upPerc(X,Y,PERFUME,SCREAMS,SCREAMT):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , pokeCenter(X+1,Y) , pokeCenter(X,Y+1) , pokeCenter(X-1,Y) , pokeCenter(X,Y-1)) ;
 									  ((SCREAMT == 1 , assert(screamTrainer(X,Y))) , trainer(X+1,Y) , trainer(X,Y+1) , trainer(X-1,Y) , trainer(X,Y-1)) ;
 									  ((SCREAMS == 1 , assert(screamSeller(X,Y))) , mart(X+1,Y) , mart(X,Y+1) , mart(X-1,Y) , mart(X,Y-1)) ;
-									  (PERFUME == 0 , SCREAMT == 0 , SCREAMS == 0 , assert(safe(X+1,Y)) , assert(safe(X,Y+1)) , assert(safe(X-1,Y)) , assert(safe(X,Y-1))).
+									  (SCREAMT == 0 , assert(safe(X+1,Y)) , assert(safe(X,Y+1)) , assert(safe(X-1,Y)) , assert(safe(X,Y-1))).
 
 %-----------------------------------
 % End of perceptions
