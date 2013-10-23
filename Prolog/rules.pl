@@ -291,53 +291,55 @@ dynamic pokemon/3.
 % End of dynamic parameters
 %-----------------------------------
 
-at(24,19).
+at(24,19) :- visited(24,19).
 
 pokemon(10,25,pikachu).
 
-perfumeJoy(X,Y) :- pokeCenter(X+1,Y) ; pokeCenter(X,Y+1) ; pokeCenter(X-1,Y) ; pokeCenter(X,Y-1).
-assert(pokeCenter(X,Y)) :- perfumeJoy(X+1,Y) , perfumeJoy(X,Y+1) , perfumeJoy(X-1,Y) , perfumeJoy(X,Y-1).
+%-----------------------------------
+% Perceptions
+%-----------------------------------
 
-shoutSeller(X,Y) :- mart(X+1,Y) ; mart(X,Y+1) ; mart(X-1,Y) ; mart(X,Y-1).
-assert(mart(X,Y)) :- shoutSeller(X+1,Y) , shoutSeller(X,Y+1) , shoutSeller(X-1,Y) , shoutSeller(X,Y-1).
+pokeCenter(X,Y) :- (perfumeJoy(X+1,Y) , perfumeJoy(X,Y+1) , perfumeJoy(X-1,Y) , perfumeJoy(X,Y-1)), assert(pokeCenter(X,Y)). 
 
-shoutTrainer(X,Y) :- trainer(X+1,Y) ; trainer(X,Y+1) ; trainer(X-1,Y) ; trainer(X,Y-1).
-assert(trainer(X,Y)) :- shoutTrainer(X+1,Y) , shoutTrainer(X,Y+1)  , shoutTrainer(X-1,Y) , shoutTrainer(X,Y-1).
+mart(X,Y)) :- (screamSeller(X+1,Y) , screamSeller(X,Y+1) , screamSeller(X-1,Y) , screamSeller(X,Y-1)), assert(mart(X,Y)).
+
+trainer(X,Y) :- (screamTrainer(X+1,Y) , screamTrainer(X,Y+1)  , screamTrainer(X-1,Y) , screamTrainer(X,Y-1)) , assert(trainer(X,Y)).
+
+% E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
+upPerc(X,Y,PERFUME,SCREAMS,SCREAMT):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , pokeCenter(X+1,Y) , pokeCenter(X,Y+1) , pokeCenter(X-1,Y) , pokeCenter(X,Y-1)) ;
+									  ((SCREAMT == 1 , assert(screamTrainer(X,Y))) , trainer(X+1,Y) , trainer(X,Y+1) , trainer(X-1,Y) , trainer(X,Y-1)) ;
+									  ((SCREAMS == 1 , assert(screamSeller(X,Y))) , mart(X+1,Y) , mart(X,Y+1) , mart(X-1,Y) , mart(X,Y-1)) ;
+									  (PERFUME == 0 , SCREAMT == 0 , SCREAMS == 0 , assert(safe(X+1,Y)) , assert(safe(X,Y+1)) , assert(safe(X-1,Y)) , assert(safe(X,Y-1))).
+
+%-----------------------------------
+% End of perceptions
+%-----------------------------------
 
 % se a pokebola foi lancada, o pokemon foi capturado 
-assert(captured(P)) :- launchPokeball(P).
-
-% se o pokemon foi capturado ele sai da base de conhecimento
-retract(pokemon(X,Y,P)) :- captured(P).
+% captured(P) :- launchPokeball(P).
 
 % se ha um treinador, tem batalha
-battle(X,Y) :- trainer(X,Y).
+battle(X,Y) :- trainer(X,Y), at(X,Y).
 
 % se há batalha e os pokemons estão curados, há vitória
-victory(X,Y) :- battle(X,Y) , not hurtPokemon(). 
+victory(X,Y) :- battle(X,Y) , not hurtPokemon. 
 
 % se há batalha e os pokemons não estão curados, há derrota
-defeat(X,Y) :- battle(X,Y) , hurtPokemon().
+defeat(X,Y) :- battle(X,Y) , hurtPokemon.
 
-% se há vitória, o treinador sai da base de conhecimento
-retract(trainer(X,Y)) :- victory(X,Y).
-
-
-% ver melhor!!!!
-% se há vitória, os pokemons estão machucados
-hurtPokemon() :- victory(X,Y). 
-
+% se há batalha, os pokemons estão machucados
+hurtPokemon :- battle(X,Y). 
 
 % se ash está em X,Y, então este local foi visitado
-visited(X,Y) :- at(X,Y).
-assert(visited(X,Y)).
+visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
 
-% se não há treinador, é seguro
-safe(X, Y) :- not trainer(X,Y).
-
+% se ash é vitorioso, o treinador é retirado
+trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , assert(safe(X,Y)).
 
 bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P).
 bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y).
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
-
-addList(X,L,[X|L]).
+bestMove(battleTrainer(X,Y)) :- battle(X,Y).
+% bestMove(turnRight)
+% bestMove(turnLeft)
+% bestMove(move)
