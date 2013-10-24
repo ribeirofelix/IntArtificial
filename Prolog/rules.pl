@@ -281,19 +281,21 @@ poison(weezing).
 % Dynamic parameters
 %-----------------------------------
 
-dynamic mart/2.
-dynamic pokeCenter/2.
-dynamic trainer/2.
-dynamic visited/2.
-dynamic pokemon/3.
+:- dynamic mart/2.
+:- dynamic pokeCenter/2.
+:- dynamic trainer/2.
+:- dynamic visited/2.
+:- dynamic pokemon/3.
+:- dynamic perfumeJoy/2.
+:- dynamic screamSeller/2.
+:- dynamic screamTrainer/2.
 
 %-----------------------------------
 % End of dynamic parameters
 %-----------------------------------
 
-at(24,19) :- visited(24,19).
-
-pokemon(10,25,pikachu).
+at(24,19).
+pokemon(24,19,pikachu).
 
 %-----------------------------------
 % Perceptions
@@ -301,7 +303,7 @@ pokemon(10,25,pikachu).
 
 pokeCenter(X,Y) :- (perfumeJoy(X+1,Y) , perfumeJoy(X,Y+1) , perfumeJoy(X-1,Y) , perfumeJoy(X,Y-1)), assert(pokeCenter(X,Y)). 
 
-mart(X,Y)) :- (screamSeller(X+1,Y) , screamSeller(X,Y+1) , screamSeller(X-1,Y) , screamSeller(X,Y-1)), assert(mart(X,Y)).
+mart(X,Y) :- (screamSeller(X+1,Y) , screamSeller(X,Y+1) , screamSeller(X-1,Y) , screamSeller(X,Y-1)), assert(mart(X,Y)).
 
 trainer(X,Y) :- (screamTrainer(X+1,Y) , screamTrainer(X,Y+1)  , screamTrainer(X-1,Y) , screamTrainer(X,Y-1)) , assert(trainer(X,Y)).
 
@@ -322,13 +324,13 @@ upPerc(X,Y,PERFUME,SCREAMS,SCREAMT):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) 
 battle(X,Y) :- trainer(X,Y), at(X,Y).
 
 % se há batalha e os pokemons estão curados, há vitória
-victory(X,Y) :- battle(X,Y) , not hurtPokemon. 
+victory(X,Y) :- battle(X,Y) , not(hurtPokemon). 
 
 % se há batalha e os pokemons não estão curados, há derrota
 defeat(X,Y) :- battle(X,Y) , hurtPokemon.
 
 % se há batalha, os pokemons estão machucados
-hurtPokemon :- battle(X,Y). 
+hurtPokemon :- battle(_,_). 
 
 % se ash está em X,Y, então este local foi visitado
 visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
@@ -336,10 +338,11 @@ visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
 % se ash é vitorioso, o treinador é retirado
 trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , assert(safe(X,Y)).
 
-bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P).
-bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y).
-bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
-bestMove(battleTrainer(X,Y)) :- battle(X,Y).
+
+ bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P) .
+ bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y).
+ bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
+ bestMove(battleTrainer(X,Y)) :- battle(X,Y).
 % bestMove(turnRight)
 % bestMove(turnLeft)
 % bestMove(move)
