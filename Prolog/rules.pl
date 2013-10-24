@@ -278,7 +278,7 @@ poison(weezing).
 % ----------------------------------
 
 %-----------------------------------
-% Dynamic parameters
+% Dynamic procedures
 %-----------------------------------
 
 :- dynamic mart/2.
@@ -289,13 +289,16 @@ poison(weezing).
 :- dynamic perfumeJoy/2.
 :- dynamic screamSeller/2.
 :- dynamic screamTrainer/2.
+:- dynamic safe/2.
+:- dynamic facing/1.
+:- dynamic at/2.
+:- dynamic visited/2.
 
 %-----------------------------------
-% End of dynamic parameters
+% End of dynamic procedures
 %-----------------------------------
 
-at(24,19).
-pokemon(24,19,pikachu).
+
 
 %-----------------------------------
 % Perceptions
@@ -316,6 +319,13 @@ upPerc(X,Y,PERFUME,SCREAMS,SCREAMT):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) 
 %-----------------------------------
 % End of perceptions
 %-----------------------------------
+
+
+%-----------------------------------
+% Some rules
+%-----------------------------------
+
+
 
 % se a pokebola foi lancada, o pokemon foi capturado 
 % captured(P) :- launchPokeball(P).
@@ -338,11 +348,71 @@ visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
 % se ash é vitorioso, o treinador é retirado
 trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , assert(safe(X,Y)).
 
+%-----------------------------------
+% End of some rules
+%-----------------------------------
 
- bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P) .
- bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y).
- bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
- bestMove(battleTrainer(X,Y)) :- battle(X,Y).
-% bestMove(turnRight)
-% bestMove(turnLeft)
-% bestMove(move)
+
+
+%-----------------------------------
+% Facts
+%-----------------------------------
+
+at(24,19).
+safe(24+1,19).
+safe(24-1,19).
+safe(24,19-1).
+safe(24,19+1).
+pokemon(25,19,pikachu).
+facing(south) .
+
+%-----------------------------------
+% End Facts
+%-----------------------------------
+
+
+%-----------------------------------
+% Best moves
+%-----------------------------------
+
+
+% verifica vizinhas e alguem nao  visitado , vai pra la
+% nenhum visitado , entao pega o primeiro safe
+% todos visitados entao pega o primeiro safe da lista( ou da regra )
+
+inc(X) :- X is X + 1.
+dec(X) :- X is X - 1.
+
+bestMove(moveUp(X+1,Y)) :- (at(X,Y) , X \= 0 , facing(north) , safe(X-1,Y) , not(visited(X-1,Y))) , assert(at(X-1,Y)) , retract(at(X,Y)).
+
+bestMove(moveDown(X-1,Y)) :- (at(X,Y) , X \= 41 , facing(south) , safe(X+1,Y) , not(visited(X+1,Y))) , assert(at(X+1,Y)) , retract(at(X,Y)).
+
+bestMove(moveRight(X,Y+1)) :- (at(X,Y) , Y \= 0 , facing(east) , safe(X,Y+1) , not(visited(X,Y+1))) , assert(at(X,Y+1)) , retract(at(X,Y)).
+
+bestMove(moveLeft(X,Y-1)) :- (at(X,Y) , Y \= 41 ,  facing(west) , safe(X,Y-1) , not(visited(X,Y-1))) , assert(at(X,Y-1)) , retract(at(X,Y)).
+
+% mais uma regra pra aleatorio.
+
+% olhar nao visitados
+
+bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)) , assert(safe(X,Y)) .
+
+bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y).
+
+bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
+
+bestMove(battleTrainer(X,Y)) :- battle(X,Y).
+
+bestMove(turnRight) :- 	(facing(north) , at(X,Y) , not(safe(X-1,Y)) ,  assert(facing(east)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , not(safe(X+1,Y)) ,  assert(facing(west)) , retract(facing(south)) );
+						(facing(east) , at(X,Y) , not(safe(X,Y+1)) ,  assert(facing(south)) , retract(facing(east)) );
+						(facing(west) , at(X,Y) , not(safe(X,Y-1)) ,  assert(facing(north)) , retract(facing(west)) ).
+
+bestMove(turnLeft) :- 	(facing(north) , not(safe(X-1,Y)) ,  assert(facing(west)) , retract(facing(north)) );
+						(facing(south) , not(safe(X+1,Y)) ,  assert(facing(east)) , retract(facing(south)) );
+						(facing(east) , not(safe(X,Y+1)) ,  assert(facing(north)) , retract(facing(east)) );
+						(facing(west) , not(safe(X,Y-1)) ,  assert(facing(south)) , retract(facing(west)) ).
+
+%-----------------------------------
+% End of Best moves
+%-----------------------------------
