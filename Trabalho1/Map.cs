@@ -27,7 +27,7 @@ namespace Model
         #region /* PRIVATE PROPERTIES */
 
         private const int MAXTILES = 42;
-        public Badge[] badges = new Badge[8];
+        
         public Helper.Point[] ashAndBdgsPos = new Helper.Point[9];
         public Pokedex pokedex;
         private Tile[][] _map = new Tile[MAXTILES][];// Enumerable.Repeat<Tile[]>(new Tile[MAXTILES],MAXTILES).ToArray();
@@ -140,29 +140,36 @@ namespace Model
 
            
 
-            for (int i = 0; i < 48; i++)
+            for (int i = 0; i < 150; i++)
             {
                 /* Read tuple <type, x, y> */
+#if !DEBUG
                 var line = st.ReadLine().Split(' ');
                 char t = char.Parse(line[2]);
                 int x = int.Parse(line[1]);
                 int y = int.Parse(line[0]);
-
+#else
+                char t = 'E';
+                int x = -1;
+                int y = -1;
+#endif
                 /* If random position */
                 if (x == -1 && y == -1)
                 {
                     /* Random object */
                     Random random = new Random(DateTime.Now.Millisecond.GetHashCode());
-                    var temLugar = this._map.Any(a => a.Where(b => !b.HasPokemon && !b.HasAsh && !b.HasBadge && b.TileType == TileTypes.Grass).Count() > 0);
+                    var temLugar = this._map.Any(a => a.Where(b => !b.HasPokemon && !b.HasAsh && !b.hasMart && !b.hasPokeCenter && !b.hasTrainer ).Count() > 0);
                     if(temLugar)
                     do
                     {
                         x = random.Next(0, 42);
                         y = random.Next(0, 42);
 
-                    } while (GetTile(x, y).TileType != TileTypes.Grass ||
+                    } while (
                        GetTile(x, y).HasPokemon ||
-                       GetTile(x, y).HasBadge||
+                       GetTile(x, y).hasTrainer||
+                    GetTile(x, y).hasPokeCenter ||
+                    GetTile(x, y).hasMart ||
                        GetTile(x, y).HasAsh );
                     
                 }
@@ -178,40 +185,29 @@ namespace Model
 
         #endregion
 
-        #region PositionBadges
-
-        /* Position badges in a map. */
-
-        private void PositionBadges()
+        private void ReadTileTypes(string path , TileTypes type )
         {
-            GetTile(2, 4).Badge = new Badge(BadgeTypes.soul); //soul - Koga - veneno
-            ashAndBdgsPos[(int)BadgeTypes.soul] = new Helper.Point(2, 4);
+            StreamReader sr;
+            try
+            {
+                sr = new StreamReader(path);
+            }
+            catch (IOException ex)
+            {
+                throw ex;
+            }
 
-            GetTile(4, 36).Badge = new Badge(BadgeTypes.volcano); //volcano - Blaine - fogo
-            ashAndBdgsPos[(int)BadgeTypes.volcano] = new Helper.Point(4, 36);
-            
-            GetTile(2, 19).Badge = new Badge(BadgeTypes.thunder); //thunder - Ten Surge - eletrico
-            ashAndBdgsPos[(int)BadgeTypes.thunder] = new Helper.Point(2, 19);
-            
-            GetTile(40, 32).Badge = new Badge(BadgeTypes.boulder); //boulder - Brock - pedra
-            ashAndBdgsPos[(int)BadgeTypes.boulder] = new Helper.Point(40, 32);
-            
-            GetTile(22, 2).Badge = new Badge(BadgeTypes.rainbow); //rainbow - Erika - planta
-            ashAndBdgsPos[(int)BadgeTypes.rainbow] = new Helper.Point(22, 2);
-            
-            GetTile(20, 39).Badge = new Badge(BadgeTypes.earth); //earth - Giovanni - terra
-            ashAndBdgsPos[(int)BadgeTypes.earth] = new Helper.Point(20, 39);
-            
-            GetTile(19, 14).Badge = new Badge(BadgeTypes.cascade); //cascade - Misty - agua
-            ashAndBdgsPos[(int)BadgeTypes.cascade] = new Helper.Point(19, 14);
-            
-            GetTile(37, 19).Badge = new Badge(BadgeTypes.marsh); //marsh - Sabrina - psiquico
-            ashAndBdgsPos[(int)BadgeTypes.marsh] = new Helper.Point(37, 19);
-
+            var allFileByLine = sr.ReadToEnd().Split('\n');
+            int indX = 0;
+            int indY = 1;
+            foreach (var line in allFileByLine )
+            {
+                var lineArgs = line.Split(' ');
+                if(lineArgs.Length == 2 )
+                    GetTile( int.Parse(lineArgs[indX]) , int.Parse(lineArgs[indY]) ).TileType = type ;
+            }
 
         }
-
-        #endregion
 
         #region PositionAsh
 
@@ -260,7 +256,9 @@ namespace Model
         private Map()
         {
             ReadMap(Resources.Mapa01);
-            PositionBadges();
+            ReadTileTypes(Resources.PositionMarts, TileTypes.Mart);
+            ReadTileTypes(Resources.PositionPokeCenters , TileTypes.PokeCenter);
+            ReadTileTypes(Resources.PositionTrainers, TileTypes.Trainer);
             PositionAsh();
             ReadPokemons(Resources.PosicaoPokemons);
 

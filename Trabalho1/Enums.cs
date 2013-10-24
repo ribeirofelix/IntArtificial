@@ -16,19 +16,8 @@ public enum TileTypes
     Water,
     Cave ,
     Mountain ,
-    Volcano 
-
-}
-
-/* Badge types enum */
-public enum BadgeTypes
-{
-    soul = 1,
-    volcano, 
-    thunder, 
-    boulder,
-    rainbow, 
-    earth,
-    cascade,
-    marsh 
+    Volcano ,
+    PokeCenter ,
+    Mart ,
+    Trainer 
 }

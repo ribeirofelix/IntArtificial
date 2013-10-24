@@ -38,19 +38,14 @@ namespace View
                 var xPoint = 0;
                 foreach (var tile in tileLine)
                 {
-                    if (tile.HasAsh)
-                    {
+                    Image toDraw = null;
+                    if (tile.HasPokemon)
+                        toDraw = tile.Pokemon.PokeImage;
+                    else
+                        toDraw = tile.TileImage;
 
-                    }
-                    else if (tile.HasBadge)
-                    {
-                        graphic.DrawImage(tile.Badge.BadgeImage, xPoint, yPoint);
-                    }
-
-                    else if (tile.HasPokemon)
-                    {
-                        graphic.DrawImage(tile.Pokemon.PokeImage, xPoint, yPoint);
-                    }
+                    graphic.DrawImage(toDraw, xPoint, yPoint);
+                 
                     xPoint += 18;
                 }
                 yPoint += 18;

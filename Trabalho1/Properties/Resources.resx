@@ -183,4 +183,22 @@
   <data name="volcano" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\volcano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PositionMarts" xml:space="preserve">
+    <value>..\..\..\Resources\PositionMarts.txt</value>
+  </data>
+  <data name="PositionPokeCenters" xml:space="preserve">
+    <value>..\..\..\Resources\PositionPokeCenters.txt</value>
+  </data>
+  <data name="PositionTrainers" xml:space="preserve">
+    <value>..\..\..\Resources\PositionTrainers.txt</value>
+  </data>
+  <data name="gary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gary.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pokecenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pokecenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

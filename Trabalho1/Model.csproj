@@ -67,7 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ash.cs" />
-    <Compile Include="Badge.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Map.cs" />
@@ -171,6 +170,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gary.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pokecenter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

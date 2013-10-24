@@ -85,27 +85,27 @@ namespace Controller
         #region /* PUBLIC METHODS */
 
         /* Update Distances */
-        public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> UpdateDistances()
-        {
-            var aStar = new AStar(Map.Instance);
-            int totalCost ;
-            var paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(8);
+        //public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> UpdateDistances()
+        //{
+        //    var aStar = new AStar(Map.Instance);
+        //    int totalCost ;
+        //    var paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(8);
 
-            for (int i = 0; i < this.posAshBdg.Length; i++)
-            {
-                distMap[i][i] = 0;
-                for (int j = i+1; j < this.posAshBdg.Length; j++)
-                {
-                    var path = aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray();
-                    paths.Add(new Tuple<int, BadgeTypes>(i, (BadgeTypes)j), path);
-                    paths.Add(new Tuple<int, BadgeTypes>(j, (BadgeTypes)i), path.Reverse().ToArray() );
-                    distMap[i][j] = totalCost;
-                    distMap[j][i] = totalCost;
-                }
-            }
-            return paths;
+        //    for (int i = 0; i < this.posAshBdg.Length; i++)
+        //    {
+        //        distMap[i][i] = 0;
+        //        for (int j = i+1; j < this.posAshBdg.Length; j++)
+        //        {
+        //            var path = aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray();
+        //            paths.Add(new Tuple<int, BadgeTypes>(i, (BadgeTypes)j), path);
+        //            paths.Add(new Tuple<int, BadgeTypes>(j, (BadgeTypes)i), path.Reverse().ToArray() );
+        //            distMap[i][j] = totalCost;
+        //            distMap[j][i] = totalCost;
+        //        }
+        //    }
+        //    return paths;
 
-        }
+        //}
 
         /* Step Ash */
 

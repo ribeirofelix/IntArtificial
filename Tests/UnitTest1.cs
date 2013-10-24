@@ -124,38 +124,17 @@ namespace Tests
 
 
 
-        [TestMethod]
-        public void TesteGenetics()
-        {
-            var mapCont = MapController.Instance;
-            mapCont.UpdateDistances();
-            var captBdg = Enumerable.Repeat(false,8).ToArray();
-            var gen = new BRKGA(9, 50 , 15, 10, captBdg, mapCont.DistMap);
-            gen.Evolve(1000);
-            Console.WriteLine(String.Join("\n", gen.GetChoice().Select(v=> Enum.GetName(typeof(BadgeTypes), v))));
-        }
-
-        [TestMethod]
-        public void TestePaths()
-        {
-            var mapCont = MapController.Instance;
-            var paths = mapCont.UpdateDistances();
-            foreach (var item in paths)
-            {
-                Console.WriteLine(item.Key + ": " + String.Join(", ", item.Value.Select(p => p.ToString() )));
-            }
-
-        }
-
+  
+      
         [TestMethod]
         public void TesteSimpleWalk()
         {
 
             var agen = new AgentController(MapController.Instance);
-            var capt =agen.Walk();
+           // var capt =agen.Walk();
 
 
-            Assert.IsTrue(capt.All(a => a));
+            //Assert.IsTrue(capt.All(a => a));
 
         }
 

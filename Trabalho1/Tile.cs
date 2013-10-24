@@ -17,10 +17,9 @@ namespace Model
         public TileTypes TileType 
         {
             get { return _type; }
-            set { _type = value; } 
+            set { _type = value; }
         }     
-      
-        //private Image _titleImage;
+        
         public Image TileImage
         {
             get 
@@ -40,6 +39,12 @@ namespace Model
                         return Resources.mountain;
                     case TileTypes.Volcano:
                         return Resources.lava;
+                    case TileTypes.Trainer:
+                        return Resources.gary;
+                    case TileTypes.Mart:
+                        return Resources.mart;
+                    case TileTypes.PokeCenter:
+                        return Resources.pokecenter;
                     default:
                         return Resources.grass;
 
@@ -61,17 +66,16 @@ namespace Model
                     _pokemon.Pos = new Helper.Point(this.XPoint, this.YPoint);
             }
         }
+
         public bool HasPokemon { get { return _pokemon != null; } }
 
-        
-        private Badge _badge ;
-        public Badge Badge 
-        {
-            get { return _badge; }
-            set { _badge = value; }
-        }
-        public bool HasBadge { get { return _badge != null; } }
 
+        public bool hasPokeCenter { get { return this.TileType == TileTypes.PokeCenter; } }
+                
+        public bool hasMart { get { return this.TileType == TileTypes.Mart ;}  }
+               
+        public bool hasTrainer { get { return this.TileType == TileTypes.Trainer ;}  }
+        
        
         public Ash Ash 
         {

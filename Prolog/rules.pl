@@ -358,10 +358,11 @@ trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , asser
 %-----------------------------------
 
 at(24,19).
-safe(24+1,19).
-safe(24-1,19).
-safe(24,19-1).
-safe(24,19+1).
+safe(25,19).
+safe(23,19).
+safe(24,18).
+safe(24,20).
+safe(24,19).
 pokemon(25,19,pikachu).
 facing(south) .
 
@@ -379,16 +380,16 @@ facing(south) .
 % nenhum visitado , entao pega o primeiro safe
 % todos visitados entao pega o primeiro safe da lista( ou da regra )
 
-inc(X) :- X is X + 1.
-dec(X) :- X is X - 1.
+inc(A, W) :- W is A + 1.
+dec(B, K) :- K is B - 1.
 
-bestMove(moveUp(X+1,Y)) :- (at(X,Y) , X \= 0 , facing(north) , safe(X-1,Y) , not(visited(X-1,Y))) , assert(at(X-1,Y)) , retract(at(X,Y)).
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X \= 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y))) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
 
-bestMove(moveDown(X-1,Y)) :- (at(X,Y) , X \= 41 , facing(south) , safe(X+1,Y) , not(visited(X+1,Y))) , assert(at(X+1,Y)) , retract(at(X,Y)).
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X \= 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y))) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
 
-bestMove(moveRight(X,Y+1)) :- (at(X,Y) , Y \= 0 , facing(east) , safe(X,Y+1) , not(visited(X,Y+1))) , assert(at(X,Y+1)) , retract(at(X,Y)).
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y \= 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I))) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
 
-bestMove(moveLeft(X,Y-1)) :- (at(X,Y) , Y \= 41 ,  facing(west) , safe(X,Y-1) , not(visited(X,Y-1))) , assert(at(X,Y-1)) , retract(at(X,Y)).
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \= 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D))) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
 % mais uma regra pra aleatorio.
 
@@ -402,15 +403,15 @@ bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
 
 bestMove(battleTrainer(X,Y)) :- battle(X,Y).
 
-bestMove(turnRight) :- 	(facing(north) , at(X,Y) , not(safe(X-1,Y)) ,  assert(facing(east)) , retract(facing(north)) );
-						(facing(south) , at(X,Y) , not(safe(X+1,Y)) ,  assert(facing(west)) , retract(facing(south)) );
-						(facing(east) , at(X,Y) , not(safe(X,Y+1)) ,  assert(facing(south)) , retract(facing(east)) );
-						(facing(west) , at(X,Y) , not(safe(X,Y-1)) ,  assert(facing(north)) , retract(facing(west)) ).
+bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , not(safe(D,Y)) ,  assert(facing(east)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , not(safe(I,Y)) ,  assert(facing(west)) , retract(facing(south)) );
+						(facing(east) , at(X,Y) , inc(Y,I) , not(safe(X,I)) ,  assert(facing(south)) , retract(facing(east)) );
+						(facing(west) , at(X,Y) , dec(Y,D) , not(safe(X,D)) ,  assert(facing(north)) , retract(facing(west)) ).
 
-bestMove(turnLeft) :- 	(facing(north) , not(safe(X-1,Y)) ,  assert(facing(west)) , retract(facing(north)) );
-						(facing(south) , not(safe(X+1,Y)) ,  assert(facing(east)) , retract(facing(south)) );
-						(facing(east) , not(safe(X,Y+1)) ,  assert(facing(north)) , retract(facing(east)) );
-						(facing(west) , not(safe(X,Y-1)) ,  assert(facing(south)) , retract(facing(west)) ).
+bestMove(turnLeft) :- 	(facing(north) , dec(X,D) , not(safe(D,Y)) ,  assert(facing(west)) , retract(facing(north)) );
+						(facing(south) , inc(X,I) , not(safe(I,Y)) ,  assert(facing(east)) , retract(facing(south)) );
+						(facing(east) , inc(Y,I) , not(safe(X,I)) ,  assert(facing(north)) , retract(facing(east)) );
+						(facing(west) ,  dec(Y,D) , not(safe(X,D)) ,  assert(facing(south)) , retract(facing(west)) ).
 
 %-----------------------------------
 % End of Best moves

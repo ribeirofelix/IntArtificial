@@ -113,6 +113,16 @@ namespace Model.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gary {
+            get {
+                object obj = ResourceManager.GetObject("gary", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grass {
             get {
                 object obj = ResourceManager.GetObject("grass", resourceCulture);
@@ -152,9 +162,29 @@ namespace Model.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mart {
+            get {
+                object obj = ResourceManager.GetObject("mart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mountain {
             get {
                 object obj = ResourceManager.GetObject("mountain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pokecenter {
+            get {
+                object obj = ResourceManager.GetObject("pokecenter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -215,6 +245,33 @@ namespace Model.Properties {
         internal static string PosicaoPokemons {
             get {
                 return ResourceManager.GetString("PosicaoPokemons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\Resources\PositionMarts.txt.
+        /// </summary>
+        internal static string PositionMarts {
+            get {
+                return ResourceManager.GetString("PositionMarts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\Resources\PositionPokeCenters.txt.
+        /// </summary>
+        internal static string PositionPokeCenters {
+            get {
+                return ResourceManager.GetString("PositionPokeCenters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\Resources\PositionTrainers.txt.
+        /// </summary>
+        internal static string PositionTrainers {
+            get {
+                return ResourceManager.GetString("PositionTrainers", resourceCulture);
             }
         }
         

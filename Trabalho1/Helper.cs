@@ -89,22 +89,6 @@ namespace Model
         }
 
 
-        public static Point GetBadgePoint(BadgeTypes bdg)
-        {
-            switch (bdg)
-            {
-                case BadgeTypes.soul: return new Helper.Point(2, 4);
-                case BadgeTypes.volcano: return new Helper.Point(4, 36);
-                case BadgeTypes.thunder: return new Helper.Point(2, 19);
-                case BadgeTypes.boulder: return new Helper.Point(40, 32);
-                case BadgeTypes.rainbow: return new Helper.Point(22, 2);
-                case BadgeTypes.earth: return new Helper.Point(20, 39);
-                case BadgeTypes.cascade: return new Helper.Point(19, 14);
-                case BadgeTypes.marsh: return new Helper.Point(37, 19);
-                default: return new Helper.Point(0, 0);
-            }
-
-        }
        
     }
 }
