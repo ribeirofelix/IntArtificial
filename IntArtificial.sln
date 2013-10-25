@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrologCSharp", "PrologCSharp\PrologCSharp.csproj", "{E9D67BDD-63C2-4246-B4C1-FC6E0B8EF5B2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathFuncs", "MathFuncs\MathFuncs.vcxproj", "{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrologC", "PrologC\PrologC.vcxproj", "{74B2226D-C9F3-4A9F-A5F1-67CBA46340FF}"
 EndProject
 Global
@@ -75,16 +73,6 @@ Global
 		{E9D67BDD-63C2-4246-B4C1-FC6E0B8EF5B2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E9D67BDD-63C2-4246-B4C1-FC6E0B8EF5B2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E9D67BDD-63C2-4246-B4C1-FC6E0B8EF5B2}.Release|Win32.ActiveCfg = Release|Any CPU
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Debug|Win32.Build.0 = Debug|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Release|Any CPU.ActiveCfg = Release|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Release|Win32.ActiveCfg = Release|Win32
-		{F2E39C84-A3DE-42CD-ABEF-2E75D40DF9B3}.Release|Win32.Build.0 = Release|Win32
 		{74B2226D-C9F3-4A9F-A5F1-67CBA46340FF}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{74B2226D-C9F3-4A9F-A5F1-67CBA46340FF}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{74B2226D-C9F3-4A9F-A5F1-67CBA46340FF}.Debug|Mixed Platforms.Build.0 = Debug|Win32

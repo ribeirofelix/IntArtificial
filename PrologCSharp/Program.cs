@@ -44,7 +44,7 @@ namespace PrologCSharp
         public unsafe static int[] SbtToStr(int * ptr)
         {
             int[] a = new int[3];
-            a[0] = (*ptr);
+            a[0] = ptr[0];
             a[1] = ptr[1];
             a[2] = ptr[2];
             return a;
