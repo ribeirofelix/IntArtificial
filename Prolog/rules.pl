@@ -324,8 +324,6 @@ upPerc(X,Y,PERFUME,SCREAMS,SCREAMT):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) 
 % Some rules
 %-----------------------------------
 
-
-
 % se a pokebola foi lancada, o pokemon foi capturado 
 % captured(P) :- launchPokeball(P).
 
@@ -359,12 +357,21 @@ trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , asser
 
 at(24,19).
 safe(25,19).
+safe(26,19).
+safe(26,20).
+safe(26,21).
 safe(23,19).
 safe(24,18).
 safe(24,20).
+% safe(27,19).
+% safe(27,20).
+safe(28,20).
 safe(24,19).
+mart(28,20).
+pokeCenter(26,21).
 pokemon(25,19,pikachu).
-facing(south) .
+facing(south).
+hurtPokemon.
 
 %-----------------------------------
 % End Facts
@@ -383,35 +390,29 @@ facing(south) .
 inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
+bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)) , assert(safe(X,Y)) .
+bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon.
+bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y), not(visited(X,Y)).
+bestMove(battleTrainer(X,Y)) :- battle(X,Y).
+
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y))) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
-
 bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y))) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
-
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I))) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
-
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D))) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
 % mais uma regra pra aleatorio.
 
 % olhar nao visitados
 
-bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)) , assert(safe(X,Y)) .
+bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , not(safe(D,Y) , safe(X,I)) ,  assert(facing(east)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , dec(Y,D) , not(safe(I,Y)) , safe(X,D) , assert(facing(west)) , retract(facing(south)) );
+						(facing(east) , at(X,Y) , inc(Y,I) , inc(X,IX) , not(safe(X,I)) , safe(IX,Y) , assert(facing(south)) , retract(facing(east)) );
+						(facing(west) , at(X,Y) , dec(Y,D) , dec(X,DX) , not(safe(X,D)) , safe(DX,Y) , assert(facing(north)) , retract(facing(west)) ).
 
-bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y).
-
-bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y).
-
-bestMove(battleTrainer(X,Y)) :- battle(X,Y).
-
-bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , not(safe(D,Y)) ,  assert(facing(east)) , retract(facing(north)) );
-						(facing(south) , at(X,Y) , inc(X,I) , not(safe(I,Y)) ,  assert(facing(west)) , retract(facing(south)) );
-						(facing(east) , at(X,Y) , inc(Y,I) , not(safe(X,I)) ,  assert(facing(south)) , retract(facing(east)) );
-						(facing(west) , at(X,Y) , dec(Y,D) , not(safe(X,D)) ,  assert(facing(north)) , retract(facing(west)) ).
-
-bestMove(turnLeft) :- 	(facing(north) , dec(X,D) , not(safe(D,Y)) ,  assert(facing(west)) , retract(facing(north)) );
-						(facing(south) , inc(X,I) , not(safe(I,Y)) ,  assert(facing(east)) , retract(facing(south)) );
-						(facing(east) , inc(Y,I) , not(safe(X,I)) ,  assert(facing(north)) , retract(facing(east)) );
-						(facing(west) ,  dec(Y,D) , not(safe(X,D)) ,  assert(facing(south)) , retract(facing(west)) ).
+bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , not(safe(D,Y)) , safe(X,DY) , assert(facing(west)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , inc(Y,IY) , not(safe(I,Y)) ,  safe(X,IY) , assert(facing(east)) , retract(facing(south)) );
+						(facing(east) , at(X,Y) , inc(Y,I) , dec(X,D) , not(safe(X,I)) , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
+						(facing(west) , at(X,Y) , dec(Y,D) , inc(X,I) , not(safe(X,D)) ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
 
 %-----------------------------------
 % End of Best moves
