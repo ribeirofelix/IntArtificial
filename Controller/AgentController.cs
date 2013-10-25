@@ -20,7 +20,7 @@ namespace Controller
         public MapController mapCont;
         public bool[] captBadges = new bool[8];
         public Pokedex pokedex;
-      //  public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
+        //public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
         public static int currentCost;
         //private bool hasCapt = false;
 
