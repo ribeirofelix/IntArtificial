@@ -73,10 +73,11 @@ namespace View
             numberCostTextLabel.Update();
         }
 
-        public void UpdateAshPosition(Helper.Point newAshPoint)
+        public void UpdateAshPosition(Helper.Point newAshPoint, Direction dir )
         {
             picsMap.ashPoint.x = newAshPoint.x;
             picsMap.ashPoint.y = newAshPoint.y;
+            picsMap.ashDir = dir;
             picsMap.Invalidate();
             picsMap.Update();
             

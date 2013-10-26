@@ -34,3 +34,11 @@ public enum BestMove
     TurnLeft,
 
 };
+
+public enum Direction
+{
+    North,
+    South,
+    East,
+    West
+}

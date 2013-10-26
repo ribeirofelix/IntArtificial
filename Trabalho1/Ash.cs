@@ -8,10 +8,13 @@ using Model.Properties;
 
 namespace Model
 {
+
     public class Ash
     {
         private Dictionary<PokemonTypes, bool> _pokemons = new Dictionary<PokemonTypes, bool>(5);
         private Image _ashImage;
+
+        public Direction direcition { get; set; }
 
         public Image AshImage
         {
@@ -29,6 +32,7 @@ namespace Model
 
             foreach (PokemonTypes i in Enum.GetValues(typeof(PokemonTypes)))
                 _pokemons.Add(i, false);
+            direcition = Direction.South;
 
         }
 

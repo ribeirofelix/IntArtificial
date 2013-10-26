@@ -49,6 +49,10 @@ namespace Controller
                 mapCont.StepAsh(act.point, true);
                 updatePerceptions(act.point);
             }
+            else if (act.move == BestMove.TurnLeft)
+                mapCont.TurnAsh('L');
+            else if (act.move == BestMove.TurnRight)
+                mapCont.TurnAsh('R');
 
             
 

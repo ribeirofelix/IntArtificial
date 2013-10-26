@@ -12,7 +12,7 @@ using System.Timers;
 namespace Controller
 {
     //delegates for observer pattern
-    public delegate void AshMovedDelegate(Helper.Point point);
+    public delegate void AshMovedDelegate(Helper.Point point, Direction dir);
     public delegate void CostChangedDelegate(int newCost);
     public delegate void ShowPokemon(PokemonTypes poke);
 
@@ -126,14 +126,42 @@ namespace Controller
                 AgentController.currentCost -= Map.Instance.GetTile(point).TileCost;
 #if !TEST
                 listenersCost(_actualpathcost);
-                listenersAsh(point);
+                listenersAsh(point,Ash.direcition);
 #endif
             }
         }
 
-        private void updateLabelCost(int cost)
+        public void TurnAsh(char t)
         {
-            
+            if (t == 'L')
+            {
+                switch (Ash.direcition)
+                {
+                    case Direction.North: Ash.direcition = Direction.West;
+                        break;
+                    case Direction.South: Ash.direcition = Direction.East;
+                        break;
+                    case Direction.East: Ash.direcition = Direction.South;
+                        break;
+                    case Direction.West: Ash.direcition = Direction.North;
+                        break;
+                }
+            }
+            else
+            {
+                switch (Ash.direcition)
+                {
+                    case Direction.North: Ash.direcition = Direction.East;
+                        break;
+                    case Direction.South: Ash.direcition = Direction.West;
+                        break;
+                    case Direction.East: Ash.direcition = Direction.North;
+                        break;
+                    case Direction.West: Ash.direcition = Direction.South;
+                        break;
+                }
+            }
+            listenersAsh(Ash.Pos, Ash.direcition);
         }
 
         public void FightPokemon(Pokemon poke )
