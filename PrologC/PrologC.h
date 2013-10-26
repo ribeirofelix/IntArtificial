@@ -30,6 +30,21 @@ namespace PrologC {
 			 return res;
  
 		}
+		// X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON
+		static void updatePercp(PlEngine e , int x , int y , char * pokeName , bool hasPerfum , bool hasScremS , bool hasScreamT , bool hasPoke )
+		{
+			PlTermv av(7);
+			char buffer [10];
+			av[0] = itoa(x,buffer,10);
+			av[1] = itoa(y,buffer,10);
+			av[2] = pokeName;
+			av[3] = hasPerfum ? "1" : "0" ;
+			av[4] = hasScremS ? "1" : "0" ;
+			av[5] = hasScreamT ? "1" : "0" ;
+			av[6] = hasPoke ? "1" : "0" ;
+
+			PlQuery q("upPerc",av);
+		}
 
 
 

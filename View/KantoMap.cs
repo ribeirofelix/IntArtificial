@@ -50,7 +50,7 @@ namespace View
             this.buttonStartSearch.Click += delegate(object sender, EventArgs e)
             {
                 _agentController = new AgentController(MapController.Instance);
-               buttonStartSearch.Enabled = false;
+             //  buttonStartSearch.Enabled = false;
                _agentController.Walk();
             };
 

@@ -310,11 +310,11 @@ mart(X,Y) :- (screamSeller(X+1,Y) , screamSeller(X,Y+1) , screamSeller(X-1,Y) , 
 trainer(X,Y) :- (screamTrainer(X+1,Y) , screamTrainer(X,Y+1)  , screamTrainer(X-1,Y) , screamTrainer(X,Y-1)) , assert(trainer(X,Y)).
 
 % E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
-upPerc(X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , pokeCenter(X+1,Y) , pokeCenter(X,Y+1) , pokeCenter(X-1,Y) , pokeCenter(X,Y-1)) ;
+upPerc(X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , inc(X,IX) , (pokeCenter(IX,Y) ,  inc(Y,IY) , pokeCenter(X,IY) , dec(X,XD) ,pokeCenter(XD,Y) , dec(Y,YD) ,pokeCenter(X,YD)) ;
 									  			((SCREAMT == 1 , assert(screamTrainer(X,Y))) , trainer(X+1,Y) , trainer(X,Y+1) , trainer(X-1,Y) , trainer(X,Y-1)) ;
 									  			((SCREAMS == 1 , assert(screamSeller(X,Y))) , mart(X+1,Y) , mart(X,Y+1) , mart(X-1,Y) , mart(X,Y-1)) ;
 									  			(SCREAMT == 0 , assert(safe(X+1,Y)) , assert(safe(X,Y+1)) , assert(safe(X-1,Y)) , assert(safe(X,Y-1))) ;
-									  			(POKEMON == 1 , assert(pokemon(X,Y,P)) .
+									  			(POKEMON == 1 , assert(pokemon(X,Y,P)) ) .
 
 %-----------------------------------
 % End of perceptions
@@ -343,6 +343,9 @@ hurtPokemon :- battle(_,_).
 % se ash está em X,Y, então este local foi visitado
 visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
 
+% se o ash esta em X,Y e não tem trainador ali, ali é seguro.
+safe(X,Y) :- at(X,Y) , not(trainer(X,Y)) .
+
 % se ash é vitorioso, o treinador é retirado
 trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , assert(safe(X,Y)).
 
@@ -356,21 +359,22 @@ trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , asser
 % Facts
 %-----------------------------------
 
-at(24,19).
-safe(25,19).
-safe(26,19).
-safe(26,20).
-safe(26,21).
-safe(23,19).
-safe(24,18).
-safe(24,20).
-% safe(27,19).
-% safe(27,20).
-safe(28,20).
-safe(24,19).
-mart(28,20).
-pokeCenter(26,21).
-pokemon(25,19,pikachu).
+at(19,24).
+% safe(19,25).
+% safe(19,26).
+% safe(20,26).
+% safe(21,26).
+% safe(19,23).
+% safe(18,24).
+% safe(20,24).
+% safe(20,28).
+% safe(19,24).
+% safe(21,24).
+% safe(21,25).
+% safe(21,26).
+% 
+% pokeCenter(21,26).
+% pokemon(19,25,pikachu).
 facing(south).
 hurtPokemon.
 
@@ -405,7 +409,7 @@ bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe
 
 % olhar nao visitados
 
-bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , not(safe(D,Y) , safe(X,I)) ,  assert(facing(east)) , retract(facing(north)) );
+bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , not(safe(D,Y) ) , safe(X,I) ,  assert(facing(east)) , retract(facing(north)) );
 						(facing(south) , at(X,Y) , inc(X,I) , dec(Y,D) , not(safe(I,Y)) , safe(X,D) , assert(facing(west)) , retract(facing(south)) );
 						(facing(east) , at(X,Y) , inc(Y,I) , inc(X,IX) , not(safe(X,I)) , safe(IX,Y) , assert(facing(south)) , retract(facing(east)) );
 						(facing(west) , at(X,Y) , dec(Y,D) , dec(X,DX) , not(safe(X,D)) , safe(DX,Y) , assert(facing(north)) , retract(facing(west)) ).

@@ -29,6 +29,10 @@ namespace Controller
 
         public AgentController(MapController mapController)
         {
+            unsafe { 
+                Prolog.Initilize(Helper.StrToSbt(path));
+                updatePerceptions(Map.Instance.Ash.Pos);
+            }
             mapCont = mapController;   
             pokedex = new Pokedex(Map.Instance); 
 
@@ -38,21 +42,57 @@ namespace Controller
         {
             Helper.Action act;
             unsafe
-            {
-                Prolog.Initilize(Helper.StrToSbt(path));
+            {               
                 act = Helper.GetAction( Prolog.BestMove());
             }
 
+            Helper.Point from;
             if (act.move == BestMove.Move)
-                mapCont.StepAsh(act.point,true);
+            {
+                mapCont.StepAsh(act.point, true);
+                updatePerceptions(act.point);
+            }
 
-            // primeiro andamo
+            
 
-            // verifica as percepcoes
+        }
 
-            //atualiza as percepcoes
+        private void updatePerceptions(Helper.Point from)
+        {
+            Helper.Point up = new Helper.Point(from.x-1,from.y);
+            Helper.Point down = new Helper.Point(from.x+1,from.y);
+            Helper.Point left = new Helper.Point(from.x,from.y-1);
+            Helper.Point right = new Helper.Point(from.x,from.y+1);
 
-            //repete
+
+            bool hasPerfum = false , hasScreamT = false , hasScreamS = false , hasPokemon = false ;
+            string pokeName = "P";
+            // joy perfum ?
+            if (Map.Instance.GetTile(up).hasPokeCenter || Map.Instance.GetTile(down).hasPokeCenter
+                || Map.Instance.GetTile(left).hasPokeCenter || Map.Instance.GetTile(down).hasPokeCenter)
+                hasPerfum = true;
+
+            if (Map.Instance.GetTile(up).hasMart || Map.Instance.GetTile(down).hasMart
+                || Map.Instance.GetTile(left).hasMart || Map.Instance.GetTile(down).hasMart )
+                hasScreamS = true;
+
+            if (Map.Instance.GetTile(up).hasTrainer || Map.Instance.GetTile(down).hasTrainer
+                || Map.Instance.GetTile(left).hasTrainer || Map.Instance.GetTile(down).hasTrainer)
+                hasScreamT = true;
+
+            if (Map.Instance.GetTile(from).HasPokemon)
+            {
+                //TODO : implementar esse to String 
+                pokeName = Map.Instance.GetTile(from).Pokemon.ToString();
+                hasPokemon = true;
+            }
+
+            unsafe
+            {
+                Prolog.UpdPerc(from.x,from.y,Helper.StrToSbt(pokeName),hasPerfum,hasScreamS,hasScreamT,hasPokemon);
+            }
+
+
         }
 
         //public bool[] Walk()
