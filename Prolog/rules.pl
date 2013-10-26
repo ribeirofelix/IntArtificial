@@ -303,18 +303,23 @@ poison(weezing).
 % Perceptions
 %-----------------------------------
 
-pokeCenter(X,Y) :- (perfumeJoy(X+1,Y) , perfumeJoy(X,Y+1) , perfumeJoy(X-1,Y) , perfumeJoy(X,Y-1)), assert(pokeCenter(X,Y)). 
+pokeCenter(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , perfumeJoy(I,Y) , perfumeJoy(X,Iy) , perfumeJoy(D,Y) , perfumeJoy(X,Dy)), assert(pokeCenter(X,Y)). 
 
-mart(X,Y) :- (screamSeller(X+1,Y) , screamSeller(X,Y+1) , screamSeller(X-1,Y) , screamSeller(X,Y-1)), assert(mart(X,Y)).
+mart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , screamSeller(X,Iy) , screamSeller(D,Y) , screamSeller(X,Dy)), assert(mart(X,Y)).
 
-trainer(X,Y) :- (screamTrainer(X+1,Y) , screamTrainer(X,Y+1)  , screamTrainer(X-1,Y) , screamTrainer(X,Y-1)) , assert(trainer(X,Y)).
+trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(Dy,Y) , screamTrainer(X,Dy)) , assert(trainer(X,Y)).
 
 % E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
-upPerc(X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , inc(X,IX) , (pokeCenter(IX,Y) ,  inc(Y,IY) , pokeCenter(X,IY) , dec(X,XD) ,pokeCenter(XD,Y) , dec(Y,YD) ,pokeCenter(X,YD)) ;
-									  			((SCREAMT == 1 , assert(screamTrainer(X,Y))) , trainer(X+1,Y) , trainer(X,Y+1) , trainer(X-1,Y) , trainer(X,Y-1)) ;
-									  			((SCREAMS == 1 , assert(screamSeller(X,Y))) , mart(X+1,Y) , mart(X,Y+1) , mart(X-1,Y) , mart(X,Y-1)) ;
-									  			(SCREAMT == 0 , assert(safe(X+1,Y)) , assert(safe(X,Y+1)) , assert(safe(X-1,Y)) , assert(safe(X,Y-1))) ;
-									  			(POKEMON == 1 , assert(pokemon(X,Y,P)) ) .
+
+upPerc(X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , 
+																							pokeCenter(I,Y) , pokeCenter(X,Iy) , pokeCenter(D,Y) , pokeCenter(X,Dy)) ;
+									  			((SCREAMT == 1 , assert(screamTrainer(X,Y))) , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) ,
+									  														trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy)) ;
+									  			((SCREAMS == 1 , assert(screamSeller(X,Y))) , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) ,
+									  														mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy)) ;
+									  			(SCREAMT == 0 , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , addList(safe(I,Y),L,L1) ,
+									  														assert(safe(I,Y)) , assert(safe(X,Iy)) , assert(safe(D,Y)) , assert(safe(X,Dy))) ;
+									  			(POKEMON == 1 , assert(pokemon(X,Y,P))) .
 
 %-----------------------------------
 % End of perceptions
@@ -377,6 +382,7 @@ at(19,24).
 % pokemon(19,25,pikachu).
 facing(south).
 hurtPokemon.
+add(safe(5,6),L,L1).
 
 %-----------------------------------
 % End Facts
@@ -419,6 +425,34 @@ bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , not(saf
 						(facing(east) , at(X,Y) , inc(Y,I) , dec(X,D) , not(safe(X,I)) , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
 						(facing(west) , at(X,Y) , dec(Y,D) , inc(X,I) , not(safe(X,D)) ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
 
+
+% bestMove(aStar(S)) :- pegaElem(L,S).
+
 %-----------------------------------
 % End of Best moves
 %-----------------------------------
+
+%-----------------------------------
+% Lists
+%-----------------------------------
+
+addList(X,L,[X|L]).
+
+del(X,[X|Tail],Tail).
+del(X,[Y|Tail],[Y|Tail1]) :- del(X,Tail,Tail1).
+
+isPart(X,[X|Tail]).
+isPart(X,[Head|Tail]) :- isPart(X,Tail).
+
+print(0, _) :- !.
+print(_, []).
+print(N, [H|T]) :- write(H), nl, N1 is N - 1, print(N1, T).
+
+printList([]).
+printList([X|List]) :- write(X) , printList(List).
+%-----------------------------------
+% End of Lists
+%-----------------------------------
+
+
+addprint(X,L) :- addList(X,L,N) , printList(N).
