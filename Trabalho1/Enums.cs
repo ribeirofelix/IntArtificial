@@ -21,3 +21,16 @@ public enum TileTypes
     Mart ,
     Trainer 
 }
+
+
+public enum BestMove
+{
+    Launch,
+    Heal,
+    Buy,
+    Battle,
+    Move,
+    TurnRight,
+    TurnLeft,
+
+};

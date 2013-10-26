@@ -8,15 +8,18 @@ namespace PrologC {
 	class Prolog
 	{
 	public:
-		
-
-		static int* bestMove(char * prologFile)
+	
+		static PlEngine initilize(char * path )
 		{
-				char* argv[] = {"swipl.dll", "-s", prologFile , 0}; 
+			char* argv[] = {"swipl.dll", "-s", path , 0}; 
 			_putenv("SWI_HOME_DIR=C:\\Program Files (x86)\\swipl"); 
  
-			PlEngine e(3,argv); 
+			PlEngine eng(3,argv);
+			return eng;
+		}
 
+		static int* bestMove( PlEngine e)
+		{
 			 PlTermv av(1); 
 			
 			 PlQuery q("bestMove", av); 
@@ -27,6 +30,10 @@ namespace PrologC {
 			 return res;
  
 		}
+
+
+
+	private:
 
 
 		static int * parseBestMove(char * answ)
@@ -68,7 +75,7 @@ namespace PrologC {
 			// Predicate cases.
 			switch (predicate[0])
 			{
-			case 'm': ret[retIdx] = Move ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 2) ) ; break;
+			case 'm': ret[retIdx] = Move ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3) ) ; break;
 			case 'l':  ret[retIdx] = Launch ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 2) ) ; break ;
 			case 't' :
 				{
@@ -78,7 +85,7 @@ namespace PrologC {
 					else
 						turn = TurnRight;
 					ret[retIdx] = turn ;   
-					ret = (int*) realloc( ret , sizeof(int)*(retIdx + 2) ) ; 
+					ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3) ) ; 
 					break;
 				}
 			case 'b' : 
@@ -89,10 +96,10 @@ namespace PrologC {
 					else
 						doWat = Buy;
 					ret[retIdx] = doWat ;   
-					ret = (int*) realloc( ret , sizeof(int)*(retIdx + 2) ) ; 
+					ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3) ) ; 
 					break;
 				}
-			case 'h' : ret[retIdx] = Move ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 2)) ; break;
+			case 'h' : ret[retIdx] = Move ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3)) ; break;
 			default:
 				printf("predicado inesperado!"); exit(1);
 				break;
@@ -108,6 +115,9 @@ namespace PrologC {
 					ret[retIdx] = numArg;
 
 			}
+			
+			ret[retIdx] = -1 ;
+			
 			return ret;
 			
 

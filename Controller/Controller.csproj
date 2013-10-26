@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,6 +52,10 @@
     <Compile Include="Sorting.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PrologC\PrologC.vcxproj">
+      <Project>{74b2226d-c9f3-4a9f-a5f1-67cba46340ff}</Project>
+      <Name>PrologC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Trabalho1\Model.csproj">
       <Project>{c7d76ffc-a317-44f7-bc14-32babe0c6a11}</Project>
       <Name>Model</Name>

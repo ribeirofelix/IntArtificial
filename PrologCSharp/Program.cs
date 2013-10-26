@@ -18,10 +18,17 @@ namespace PrologCSharp
             string path = "E:\\Documentos\\PUC-Rio_Trabalhos\\IntArtificial\\Prolog\\rules.pl";
 
             unsafe
-            {
+            {int i;
 
-              int [] a = SbtToStr( Prolog.BestMove(StrToSbt(path)) );
-              Console.WriteLine(a[0] +" "+ a[1] +" " + a[2]);
+            Prolog.Initilize(StrToSbt(path));
+                do
+                {
+                    i = Console.Read();
+                    int[] a = SbtToStr(Prolog.BestMove());
+                    Console.WriteLine(a[0] + " " + a[1] + " " + a[2]);
+                    
+                } while (i != 0);
+             
                 
 
             }

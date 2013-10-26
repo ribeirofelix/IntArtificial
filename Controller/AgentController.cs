@@ -7,37 +7,52 @@ using System.Threading;
 using System.Timers;
 using Model;
 using System.Security.Cryptography;
+using ManagedProlog;
 
 namespace Controller
 {
     public class AgentController
     {
-        private const int pop = 200 ;        
-        private const int popElt = 60 ;
-        private const int popMut = 40 ;
-        private const int generations = 5000;
-
+      
         public MapController mapCont;
-        public bool[] captBadges = new bool[8];
+    
         public Pokedex pokedex;
-        //public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(new CompGoTo());
+       
         public static int currentCost;
-        //private bool hasCapt = false;
+       
 
         public int PathCost { get { return mapCont._actualpathcost; } }
 
         private static System.Timers.Timer aTimer;
 
+        private const string path = "E:\\Documentos\\PUC-Rio_Trabalhos\\IntArtificial\\Prolog\\rules.pl";
+
         public AgentController(MapController mapController)
         {
-            mapCont = mapController;
-            captBadges.Initialize();
-           // paths = mapCont.UpdateDistances();
-           // genetic = new BRKGA(9, pop, popElt, popMut, captBadges, mapCont.DistMap);
-            pokedex = new Pokedex(Map.Instance);
-            //genetic.Evolve(generations);
-            //currentCost = genetic.BestFitness;
+            mapCont = mapController;   
+            pokedex = new Pokedex(Map.Instance); 
 
+        }
+
+        public void Walk()
+        {
+            Helper.Action act;
+            unsafe
+            {
+                Prolog.Initilize(Helper.StrToSbt(path));
+                act = Helper.GetAction( Prolog.BestMove());
+            }
+
+            if (act.move == BestMove.Move)
+                mapCont.StepAsh(act.point,true);
+
+            // primeiro andamo
+
+            // verifica as percepcoes
+
+            //atualiza as percepcoes
+
+            //repete
         }
 
         //public bool[] Walk()

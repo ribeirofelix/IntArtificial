@@ -39,6 +39,56 @@ namespace Model
     public class Helper
     {
 
+        public unsafe static sbyte* StrToSbt(string str)
+        {
+            byte[] bytes = Encoding.ASCII.GetBytes(str);
+
+            fixed (byte* p = bytes)
+            {
+                sbyte* sp = (sbyte*)p;
+                return sp;
+            }
+        }
+
+
+
+        public unsafe static Action GetAction(int* ptr)
+        {
+            int i = 0;
+            int[] vet = new int[3];
+            while (ptr[i] != -1)
+            {
+                vet[i] = ptr[i];
+                i++;
+            }
+            
+            return new Action(vet);
+        }
+
+        public struct Action
+        {
+            public Action(int[] vAct)
+            {
+                move = BestMove.Move;
+                point = new Point();
+                if (vAct != null && vAct.Length >= 1)
+                    move = (BestMove)vAct[0];
+
+                switch (move)
+                {
+                    case BestMove.Heal:
+                    case BestMove.Buy:
+                    case BestMove.Battle:
+                    case BestMove.Move:
+                        point = new Point(vAct[1], vAct[2]);
+                        break;
+                }
+
+            }
+            public BestMove move;
+            public Point point; 
+        } 
+
      
 
         public struct Point

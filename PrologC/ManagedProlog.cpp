@@ -11,13 +11,20 @@ namespace ManagedProlog {
 		Prolog(){}
 
 
-		
-		
-		static int * BestMove(char * path)
+		static void Initilize(char * path)
 		{
-			return  PrologC::Prolog::bestMove(path) ;
+			PlEngine e = PrologC::Prolog::initilize(path);
+			eng = (void*) &e;
+		}
+		
+		static int * BestMove()
+		{
+			PlEngine * e = (PlEngine *) eng;
+			return  PrologC::Prolog::bestMove( *e ) ;
 		}
 
+	private:
+		static void * eng;
 	
 
 	};
