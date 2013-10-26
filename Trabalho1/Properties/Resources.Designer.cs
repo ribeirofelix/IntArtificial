@@ -276,6 +276,15 @@ namespace Model.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ..\..\..\Prolog\rules.pl.
+        /// </summary>
+        internal static string Prolog {
+            get {
+                return ResourceManager.GetString("Prolog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap rainbow {

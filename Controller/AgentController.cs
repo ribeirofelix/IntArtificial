@@ -25,12 +25,9 @@ namespace Controller
 
         private static System.Timers.Timer aTimer;
 
-        private const string path = "E:\\Documentos\\PUC-Rio_Trabalhos\\IntArtificial\\Prolog\\rules.pl";
-
         public AgentController(MapController mapController)
         {
             unsafe { 
-                Prolog.Initilize(Helper.StrToSbt(path));
                 updatePerceptions(Map.Instance.Ash.Pos);
             }
             mapCont = mapController;   
@@ -71,11 +68,13 @@ namespace Controller
             if (Map.Instance.GetTile(up).hasPokeCenter || Map.Instance.GetTile(down).hasPokeCenter
                 || Map.Instance.GetTile(left).hasPokeCenter || Map.Instance.GetTile(down).hasPokeCenter)
                 hasPerfum = true;
-
+           
+            // joy mart ?
             if (Map.Instance.GetTile(up).hasMart || Map.Instance.GetTile(down).hasMart
                 || Map.Instance.GetTile(left).hasMart || Map.Instance.GetTile(down).hasMart )
                 hasScreamS = true;
-
+           
+            // joy trainer ?
             if (Map.Instance.GetTile(up).hasTrainer || Map.Instance.GetTile(down).hasTrainer
                 || Map.Instance.GetTile(left).hasTrainer || Map.Instance.GetTile(down).hasTrainer)
                 hasScreamT = true;

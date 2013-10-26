@@ -29,6 +29,17 @@ namespace ManagedProlog {
 			PrologC::Prolog::updatePercp(*e,x,y,pokeName,hasPerfum,hasScremS,hasScreamT,hasPoke);
 		}
 
+		static void Assert(char * predicate )
+		{
+			PlEngine *e = (PlEngine *) eng;
+			PrologC::Prolog::assert(predicate);
+		}
+
+		static void PutGround(int x, int y, char t )
+		{			
+			PrologC::Prolog::putGround(x,y,t);
+		}
+
 	private:
 		static void * eng;
 	

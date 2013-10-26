@@ -2,274 +2,276 @@
 % Pokemons
 % ----------------------------------
 
-% fairy
-fairy(clefairy).
-fairy(clefable).
-fairy(jigglypuff).
-fairy(wigglytuff).
-fairy(mr_Mime).
-
-% steel
-steel(magnemite).
-steel(magneton).
-
-% ghost
-
-ghost(gastly).
-ghost(haunter).
-ghost(gengar).
-
-% ice 
-ice(dewgong).
-ice(cloyster).
-ice(jynx).
-ice(lapras).
-ice(articuno).
-
-% pground
-
-pground(sandshrew).
-pground(sandslash).
-pground(nidoqueen).
-pground(nidoking).
-pground(diglett).
-pground(dugtrio).
-pground(geodude).
-pground(graveler).
-pground(golem).
-pground(onix).
-pground(cubone).
-pground(marowak).
-pground(rhyhorn).
-pground(rhydon).
 
 
-% fighting
+%fairy
+type(clefairy,fairy).
+type(clefable,fairy).
+type(jigglypuff,fairy).
+type(wigglytuff,fairy).
+type(mr_Mime,fairy).
 
-fighting(mankey).
-fighting(primeape).
-fighting(poliwrath).
-fighting(machop).
-fighting(machoke).
-fighting(machamp).
-fighting(hitmonlee).
-fighting(hitmonchan).
+%steel
+type(magnemite,steel).
+type(magneton,steel).
 
-% dragon
-dragon(dratini).
-dragon(dragonair).
-dragon(dragonite).
+%ghost
 
+type(gastly,ghost).
+type(haunter,ghost).
+type(gengar,ghost).
 
-% psychic
+%ice
+type(dewgong,ice).
+type(cloyster,ice).
+type(jynx,ice).
+type(lapras,ice).
+type(articuno,ice).
 
-psychic(abra).
-psychic(kadabra).
-psychic(alakazam).
-psychic(slowpoke).
-psychic(slowbro).
-psychic(drowzee).
-psychic(hypno).
-psychic(exeggcute).
-psychic(exeggutor).
-psychic(starmie).
-psychic(mr_Mime).
-psychic(jynx).
-psychic(mewtwo).
+%pground
 
-% eletric
-
-electric(pikachu).
-electric(raichu).
-electric(magnemite).
-electric(magneton).
-electric(voltorb).
-electric(electrode).
-electric(electabuzz).
-electric(jolteon).
-electric(zapdos).
+type(sandshrew,pground).
+type(sandslash,pground).
+type(nidoqueen,pground).
+type(nidoking,pground).
+type(diglett,pground).
+type(dugtrio,pground).
+type(geodude,pground).
+type(graveler,pground).
+type(golem,pground).
+type(onix,pground).
+type(cubone,pground).
+type(marowak,pground).
+type(rhyhorn,pground).
+type(rhydon,pground).
 
 
-% bug
+%fighting
 
-bug(caterpie).
-bug(metapod).
-bug(butterfree).
-bug(weedle).
-bug(kakuna).
-bug(beedrill).
-bug(paras).
-bug(parasect).
-bug(venonat).
-bug(venomoth).
-bug(scyther).
-bug(pinsir).
+type(mankey,fighting).
+type(primeape,fighting).
+type(poliwrath,fighting).
+type(machop,fighting).
+type(machoke,fighting).
+type(machamp,fighting).
+type(hitmonlee,fighting).
+type(hitmonchan,fighting).
 
-
-% grass
-grass(bulbasaur).
-grass(ivysaur).
-grass(venusaur).
-grass(oddish).
-grass(gloom).
-grass(vileplume).
-grass(paras).
-grass(parasect).
-grass(bellsprout).
-grass(weepinbell).
-grass(victreebel).
-grass(exeggcute).
-grass(exeggutor).
-grass(tangela).
-
-% flying
-
-flying(butterfree).
-flying(pidgey).
-flying(pidgeotto).
-flying(pidgeot).
-flying(spearow).
-flying(fearow).
-flying(zubat).
-flying(golbat).
-flying(farfetch).
-flying(doduo).
-flying(dodrio).
-flying(scyther).
-flying(gyarados).
-flying(aerodactyl).
-flying(articuno).
-flying(zapdos).
-flying(moltres).
-flying(dragonite).
-flying(charizard).
-
-% rock
-
-rock(geodude).
-rock(graveler).
-rock(golem).
-rock(onix).
-rock(rhyhorn).
-rock(rhydon).
-rock(omanyte).
-rock(omastar).
-rock(kabuto).
-rock(kabutops).
-rock(aerodactyl).
-
-% fire
-
-fire(charmander).
-fire(charmeleon).
-fire(vulpix).
-fire(ninetales).
-fire(growlithe).
-fire(arcanine).
-fire(ponyta).
-fire(rapidash).
-fire(magmar).
-fire(flareon).
-fire(moltres).
-fire(charizard).
+%dragon
+type(dratini,dragon).
+type(dragonair,dragon).
+type(dragonite,dragon).
 
 
-% water
+%psychic
 
-water(squirtle).
-water(wartortle).
-water(blastoise).
-water(psyduck).
-water(golduck).
-water(poliwag).
-water(poliwhirl).
-water(poliwrath).
-water(tentacool).
-water(tentacruel).
-water(slowpoke).
-water(slowbro).
-water(seel).
-water(dewgong).
-water(shellder).
-water(cloyster).
-water(krabby).
-water(kingler).
-water(horsea).
-water(seadra).
-water(goldeen).
-water(seaking).
-water(staryu).
-water(starmie).
-water(magikarp).
-water(gyarados).
-water(lapras).
-water(vaporeon).
-water(omanyte).
-water(omastar).
-water(kabuto).
-water(kabutops).
+type(abra,psychic).
+type(kadabra,psychic).
+type(alakazam,psychic).
+type(slowpoke,psychic).
+type(slowbro,psychic).
+type(drowzee,psychic).
+type(hypno,psychic).
+type(exeggcute,psychic).
+type(exeggutor,psychic).
+type(starmie,psychic).
+type(mr_Mime,psychic).
+type(jynx,psychic).
+type(mewtwo,psychic).
 
-% normal
+%eletric
 
-normal(pidgey).
-normal(pidgeotto).
-normal(pidgeot).
-normal(rattata).
-normal(raticate).
-normal(spearow).
-normal(fearow).
-normal(jigglypuff).
-normal(wigglytuff).
-normal(meowth).
-normal(persian).
-normal(farfetch).
-normal(doduo).
-normal(dodrio).
-normal(lickitung).
-normal(chansey).
-normal(kangaskhan).
-normal(tauros).
-normal(ditto).
-normal(eevee).
-normal(porygon).
-normal(snorlax).
+type(pikachu,electric).
+type(raichu,electric).
+type(magnemite,electric).
+type(magneton,electric).
+type(voltorb,electric).
+type(electrode,electric).
+type(electabuzz,electric).
+type(jolteon,electric).
+type(zapdos,electric).
 
 
-% poison
+%bug
 
-poison(bulbasaur).
-poison(ivysaur).
-poison(venusaur).
-poison(weedle).
-poison(kakuna).
-poison(beedrill).
-poison(ekans).
-poison(arbok).
-poison(nidoranF).
-poison(nidorina).
-poison(nidoqueen).
-poison(nidoranM).
-poison(nidorino).
-poison(nidoking).
-poison(zubat).
-poison(golbat).
-poison(oddish).
-poison(gloom).
-poison(vileplume).
-poison(venonat).
-poison(venomoth).
-poison(bellsprout).
-poison(weepinbell).
-poison(victreebel).
-poison(tentacool).
-poison(tentacruel).
-poison(grimer).
-poison(muk).
-poison(gastly).
-poison(haunter).
-poison(gengar).
-poison(koffing).
-poison(weezing).
+type(caterpie,bug).
+type(metapod,bug).
+type(butterfree,bug).
+type(weedle,bug).
+type(kakuna,bug).
+type(beedrill,bug).
+type(paras,bug).
+type(parasect,bug).
+type(venonat,bug).
+type(venomoth,bug).
+type(scyther,bug).
+type(pinsir,bug).
+
+
+%grass
+type(bulbasaur,grass).
+type(ivysaur,grass).
+type(venusaur,grass).
+type(oddish,grass).
+type(gloom,grass).
+type(vileplume,grass).
+type(paras,grass).
+type(parasect,grass).
+type(bellsprout,grass).
+type(weepinbell,grass).
+type(victreebel,grass).
+type(exeggcute,grass).
+type(exeggutor,grass).
+type(tangela,grass).
+
+%flying
+
+type(butterfree,flying).
+type(pidgey,flying).
+type(pidgeotto,flying).
+type(pidgeot,flying).
+type(spearow,flying).
+type(fearow,flying).
+type(zubat,flying).
+type(golbat,flying).
+type(farfetch,flying).
+type(doduo,flying).
+type(dodrio,flying).
+type(scyther,flying).
+type(gyarados,flying).
+type(aerodactyl,flying).
+type(articuno,flying).
+type(zapdos,flying).
+type(moltres,flying).
+type(dragonite,flying).
+type(charizard,flying).
+
+%rock
+
+type(geodude,rock).
+type(graveler,rock).
+type(golem,rock).
+type(onix,rock).
+type(rhyhorn,rock).
+type(rhydon,rock).
+type(omanyte,rock).
+type(omastar,rock).
+type(kabuto,rock).
+type(kabutops,rock).
+type(aerodactyl,rock).
+
+%fire
+
+type(charmander,fire).
+type(charmeleon,fire).
+type(vulpix,fire).
+type(ninetales,fire).
+type(growlithe,fire).
+type(arcanine,fire).
+type(ponyta,fire).
+type(rapidash,fire).
+type(magmar,fire).
+type(flareon,fire).
+type(moltres,fire).
+type(charizard,fire).
+
+
+%water
+
+type(squirtle,water).
+type(wartortle,water).
+type(blastoise,water).
+type(psyduck,water).
+type(golduck,water).
+type(poliwag,water).
+type(poliwhirl,water).
+type(poliwrath,water).
+type(tentacool,water).
+type(tentacruel,water).
+type(slowpoke,water).
+type(slowbro,water).
+type(seel,water).
+type(dewgong,water).
+type(shellder,water).
+type(cloyster,water).
+type(krabby,water).
+type(kingler,water).
+type(horsea,water).
+type(seadra,water).
+type(goldeen,water).
+type(seaking,water).
+type(staryu,water).
+type(starmie,water).
+type(magikarp,water).
+type(gyarados,water).
+type(lapras,water).
+type(vaporeon,water).
+type(omanyte,water).
+type(omastar,water).
+type(kabuto,water).
+type(kabutops,water).
+
+%normal
+
+type(pidgey,normal).
+type(pidgeotto,normal).
+type(pidgeot,normal).
+type(rattata,normal).
+type(raticate,normal).
+type(spearow,normal).
+type(fearow,normal).
+type(jigglypuff,normal).
+type(wigglytuff,normal).
+type(meowth,normal).
+type(persian,normal).
+type(farfetch,normal).
+type(doduo,normal).
+type(dodrio,normal).
+type(lickitung,normal).
+type(chansey,normal).
+type(kangaskhan,normal).
+type(tauros,normal).
+type(ditto,normal).
+type(eevee,normal).
+type(porygon,normal).
+type(snorlax,normal).
+
+
+%poison
+
+type(bulbasaur,poison).
+type(ivysaur,poison).
+type(venusaur,poison).
+type(weedle,poison).
+type(kakuna,poison).
+type(beedrill,poison).
+type(ekans,poison).
+type(arbok,poison).
+type(nidoranF,poison).
+type(nidorina,poison).
+type(nidoqueen,poison).
+type(nidoranM,poison).
+type(nidorino,poison).
+type(nidoking,poison).
+type(zubat,poison).
+type(golbat,poison).
+type(oddish,poison).
+type(gloom,poison).
+type(vileplume,poison).
+type(venonat,poison).
+type(venomoth,poison).
+type(bellsprout,poison).
+type(weepinbell,poison).
+type(victreebel,poison).
+type(tentacool,poison).
+type(tentacruel,poison).
+type(grimer,poison).
+type(muk,poison).
+type(gastly,poison).
+type(haunter,poison).
+type(gengar,poison).
+type(koffing,poison).
+type(weezing,poison).
 
 
 % ----------------------------------
@@ -292,6 +294,11 @@ poison(weezing).
 :- dynamic facing/1.
 :- dynamic at/2.
 :- dynamic visited/2.
+:- dynamic groundType/3.
+:- dynamic flying/0.
+:- dynamic fire/0.
+:- dynamic water/0.
+:- dynamic eletric/0.
 
 %-----------------------------------
 % End of dynamic procedures
@@ -307,7 +314,7 @@ pokeCenter(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , perfumeJoy(I,Y
 
 mart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , screamSeller(X,Iy) , screamSeller(D,Y) , screamSeller(X,Dy)), assert(mart(X,Y)).
 
-trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(Dy,Y) , screamTrainer(X,Dy)) , assert(trainer(X,Y)).
+trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy)) , assert(trainer(X,Y)).
 
 % E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
 
@@ -354,6 +361,17 @@ safe(X,Y) :- at(X,Y) , not(trainer(X,Y)) .
 % se ash é vitorioso, o treinador é retirado
 trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , assert(safe(X,Y)).
 
+putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
+
+
+% verifica compatibilidade de pokemon e terreno
+iscomp(G) :-   (G == 71) ;
+			   (G == 87 , water);
+			   (G == 67 , eletric);
+			   (G == 77 , flying);
+			   (G == 76 , fire)  .
+
+allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
 %-----------------------------------
 % End of some rules
 %-----------------------------------
@@ -365,6 +383,9 @@ trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , asser
 %-----------------------------------
 
 at(19,24).
+groundType(20,24,77).
+safe(20,24).
+safe(19,23).
 % safe(19,25).
 % safe(19,26).
 % safe(20,26).
@@ -401,29 +422,30 @@ add(safe(5,6),L,L1).
 inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
-bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)).
+
+bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)) , type(P,U) , assert(U) .
 bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon.
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y), not(visited(X,Y)).
-bestMove(battleTrainer(X,Y)) :- battle(X,Y).
+bestMove(battleTrainer(X,Y)) :- at(X,Y), battle(X,Y).
 
-bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y))) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
-bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y))) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
-bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I))) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
-bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D))) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
 % mais uma regra pra aleatorio.
 
 % olhar nao visitados
 
-bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , not(safe(D,Y) ) , safe(X,I) ,  assert(facing(east)) , retract(facing(north)) );
-						(facing(south) , at(X,Y) , inc(X,I) , dec(Y,D) , not(safe(I,Y)) , safe(X,D) , assert(facing(west)) , retract(facing(south)) );
-						(facing(east) , at(X,Y) , inc(Y,I) , inc(X,IX) , not(safe(X,I)) , safe(IX,Y) , assert(facing(south)) , retract(facing(east)) );
-						(facing(west) , at(X,Y) , dec(Y,D) , dec(X,DX) , not(safe(X,D)) , safe(DX,Y) , assert(facing(north)) , retract(facing(west)) ).
+bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , (not(safe(D,Y)) ; not(allowed(D,Y)) )  , safe(X,I) ,  assert(facing(east)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , dec(Y,D) , (not(safe(I,Y)) ; not(allowed(I,Y)) )  , safe(X,D) , assert(facing(west)) , retract(facing(south)) );
+						(facing(east) , at(X,Y) , inc(Y,I) , inc(X,IX) , (not(safe(X,I)) ; not(allowed(X,I)) )  , safe(IX,Y) , assert(facing(south)) , retract(facing(east)) );
+						(facing(west) , at(X,Y) , dec(Y,D) , dec(X,DX) , (not(safe(X,D)) ; not(allowed(X,D)) )  , safe(DX,Y) , assert(facing(north)) , retract(facing(west)) ).
 
-bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , not(safe(D,Y)) , safe(X,DY) , assert(facing(west)) , retract(facing(north)) );
-						(facing(south) , at(X,Y) , inc(X,I) , inc(Y,IY) , not(safe(I,Y)) ,  safe(X,IY) , assert(facing(east)) , retract(facing(south)) );
-						(facing(east) , at(X,Y) , inc(Y,I) , dec(X,D) , not(safe(X,I)) , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
-						(facing(west) , at(X,Y) , dec(Y,D) , inc(X,I) , not(safe(X,D)) ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
+bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , (not(safe(D,Y)) ; not(allowed(D,Y)) )  , safe(X,DY) , assert(facing(west)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , inc(Y,IY) , (not(safe(I,Y)) ; not(allowed(I,Y)) )  ,  safe(X,IY) , assert(facing(east)) , retract(facing(south)) );
+						(facing(east) ,  at(X,Y) , inc(Y,I) , dec(X,D)  , (not(safe(X,I)) ; not(allowed(X,I)) )  , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
+						(facing(west) ,  at(X,Y) , dec(Y,D) , inc(X,I)  , (not(safe(X,D)) ; not(allowed(X,D)) )  ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
 
 
 % bestMove(aStar(S)) :- pegaElem(L,S).

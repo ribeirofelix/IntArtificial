@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ManagedProlog;
 
 namespace Model
 {
@@ -38,6 +39,32 @@ namespace Model
 
     public class Helper
     {
+        public static void InitializeProlog(string path)
+        {
+            unsafe
+            {
+                Prolog.Initilize(Helper.StrToSbt(path));
+            }
+        }
+
+        public static void AssertProlog(string predicate)
+        {
+            unsafe
+            {
+                Prolog.Assert(StrToSbt(predicate));
+            }
+        }
+
+        public static void PutGround(int x, int y , char t)
+        {
+            unsafe
+            {
+                Prolog.PutGround(x, y, (sbyte) t);
+            }
+        }
+
+
+
 
         public unsafe static sbyte* StrToSbt(string str)
         {

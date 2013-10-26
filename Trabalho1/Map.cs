@@ -105,9 +105,10 @@ namespace Model
                 _map[j] = new Tile[MAXTILES];
                 /* Creates tiles */
                 for (int k = 0; k < line.Length; k++)
-                {
-                    
+                {                    
                     _map[j][k] = new Tile(line[k] , j, k , this);
+                    Helper.PutGround(j, k, line[k]);
+
                 }
             }
 
@@ -255,6 +256,7 @@ namespace Model
          */
         private Map()
         {
+            Helper.InitializeProlog(Resources.Prolog);
             ReadMap(Resources.Mapa01);
             ReadTileTypes(Resources.PositionMarts, TileTypes.Mart);
             ReadTileTypes(Resources.PositionPokeCenters , TileTypes.PokeCenter);

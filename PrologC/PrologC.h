@@ -26,7 +26,23 @@ namespace PrologC {
 
 			 q.next_solution();
 			 char * ret =  ( char*)av[0];
-			 int * res  = parseBestMove(ret);
+			int * res   = parseBestMove(ret);
+
+
+			/* 
+			 PlTermv av2(3);
+
+			
+			 PlQuery q2("groundType", av2); 
+
+			 while(q2.next_solution())
+			 {
+				 char * x = (char*)av2[0];
+				 char * y = (char*)av2[1];
+				 char * t = (char *) av2[2];
+				 printf("%s %s",x,y);
+			 }
+*/
 			 return res;
  
 		}
@@ -34,19 +50,37 @@ namespace PrologC {
 		static void updatePercp(PlEngine e , int x , int y , char * pokeName , bool hasPerfum , bool hasScremS , bool hasScreamT , bool hasPoke )
 		{
 			PlTermv av(7);
-			char buffer [10];
-			av[0] = itoa(x,buffer,10);
-			av[1] = itoa(y,buffer,10);
-			av[2] = pokeName;
-			av[3] = hasPerfum ? "1" : "0" ;
-			av[4] = hasScremS ? "1" : "0" ;
-			av[5] = hasScreamT ? "1" : "0" ;
-			av[6] = hasPoke ? "1" : "0" ;
+			char buffer [2][10];
+		
+			av[0] = x ;
+			av[1] = y ;
+			av[2] = pokeName ;
+			av[3] = hasPerfum ;
+			av[4] = hasScremS ;
+			av[5] = hasScreamT ;
+			av[6] = hasPoke ;
 
-			PlQuery q("upPerc",av);
+			PlCall("upPerc",av);
+
+		
+		}
+
+		static void assert(char * predicate)
+		{
+			PlTermv av(1);
+			av[0] = predicate  ;
+			PlCall("assert",av);
 		}
 
 
+		static void putGround(int x, int y, char t )
+		{
+			PlTermv av(3);
+			av[0] = x  ;
+			av[1] = y ;
+			av[2] = t ;
+			PlCall("putGround",av);
+		}
 
 	private:
 
