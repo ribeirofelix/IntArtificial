@@ -150,7 +150,7 @@ namespace Model
                 int x = int.Parse(line[1]);
                 int y = int.Parse(line[0]);
 #else
-                char t = 'E';
+                char t = 'A';
                 int x = -1;
                 int y = -1;
 #endif

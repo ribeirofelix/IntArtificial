@@ -318,15 +318,15 @@ trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y
 
 % E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
 
-upPerc(X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON):- ((PERFUME == 1 , assert(perfumeJoy(X,Y))) , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , 
-																							pokeCenter(I,Y) , pokeCenter(X,Iy) , pokeCenter(D,Y) , pokeCenter(X,Dy)) ;
-									  			((SCREAMT == 1 , assert(screamTrainer(X,Y))) , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) ,
-									  														trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy)) ;
-									  			((SCREAMS == 1 , assert(screamSeller(X,Y))) , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) ,
-									  														mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy)) ;
-									  			(SCREAMT == 0 , inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , addList(safe(I,Y),L,L1) ,
-									  														assert(safe(I,Y)) , assert(safe(X,Iy)) , assert(safe(D,Y)) , assert(safe(X,Dy))) ;
-									  			(POKEMON == 1 , assert(pokemon(X,Y,P))) .
+tryPokeCenter(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , pokeCenter(I,Y) , pokeCenter(X,Iy) , pokeCenter(D,Y) , pokeCenter(X,Dy) .
+tryTrainer(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy) .
+trySeller(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy).
+setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , addList(safe(I,Y),L,L1) , assert(safe(I,Y)) , assert(safe(X,Iy)) , assert(safe(D,Y)) , assert(safe(X,Dy)) .
+
+updPerfum(X,Y) :-  assert(perfumeJoy(X,Y)) , tryPokeCenter(X,Y) .
+updPerScremS(X,Y) :- assert(screamSeller(X,Y)) , trySeller(X,Y) .
+updPerScremT(X,Y,SCREAMT) :- (SCREAMT == 1 , assert(screamTrainer(X,Y)) , tryTrainer(X,Y)) ; (SCREAMT == 0 , setSafe(X,Y)) . 
+updPokemon(X,Y,P) :- assert(pokemon(X,Y,P)) .
 
 %-----------------------------------
 % End of perceptions

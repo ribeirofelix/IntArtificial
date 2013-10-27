@@ -37,23 +37,34 @@ namespace Controller
 
         public void Walk()
         {
-            Helper.Action act;
-            unsafe
-            {               
-                act = Helper.GetAction( Prolog.BestMove());
-            }
-
-            Helper.Point from;
-            if (act.move == BestMove.Move)
+            for (int i = 0; i < 20; i++)
             {
-                mapCont.StepAsh(act.point, true);
-                updatePerceptions(act.point);
-            }
-            else if (act.move == BestMove.TurnLeft)
-                mapCont.TurnAsh('L');
-            else if (act.move == BestMove.TurnRight)
-                mapCont.TurnAsh('R');
+                Helper.Action act;
+                unsafe
+                {
+                    act = Helper.GetAction(Prolog.BestMove());
+                }
 
+
+                switch (act.move)
+                {
+                    case BestMove.Launch: mapCont.Ash.Pokeball(); break;
+                    case BestMove.Heal:
+                        break;
+                    case BestMove.Buy:
+                        break;
+                    case BestMove.Battle:
+                        break;
+                    case BestMove.Move: mapCont.StepAsh(act.point, true); updatePerceptions(act.point); break;
+                    case BestMove.TurnRight: mapCont.TurnAsh('L'); break;
+                    case BestMove.TurnLeft: mapCont.TurnAsh('R'); break;
+                    default:
+                        break;
+                }
+            }
+           
+           
+           
             
 
         }
@@ -86,7 +97,7 @@ namespace Controller
             if (Map.Instance.GetTile(from).HasPokemon)
             {
                 //TODO : implementar esse to String 
-                pokeName = Map.Instance.GetTile(from).Pokemon.ToString();
+                pokeName = "pidgey";
                 hasPokemon = true;
             }
 
@@ -195,7 +206,7 @@ namespace Controller
         public List<Helper.Point> VerifyPath(Pokemon  possiblePoke)
         {
             /* Set possible position to verify the path*/
-            mapCont.Ash.Pokeball(possiblePoke.Type);
+            mapCont.Ash.Pokeball();
             var currPosAsh = mapCont.Ash.Pos;
 
             mapCont.StepAsh(possiblePoke.Pos,false);

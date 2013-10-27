@@ -44,9 +44,9 @@ namespace Model
         public Helper.Point Pos { get; set; }
 
 
-        public void Pokeball(PokemonTypes poke)
+        public void Pokeball()
         {
-            this._pokemons[poke] = true;
+            Map.Instance.GetTile(this.Pos).Pokemon = null;
         }
 
         public void ReleasePokemon(PokemonTypes poke)

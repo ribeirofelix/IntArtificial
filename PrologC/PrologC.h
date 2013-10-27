@@ -49,19 +49,38 @@ namespace PrologC {
 		// X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON
 		static void updatePercp(PlEngine e , int x , int y , char * pokeName , bool hasPerfum , bool hasScremS , bool hasScreamT , bool hasPoke )
 		{
-			PlTermv av(7);
-			char buffer [2][10];
-		
-			av[0] = x ;
-			av[1] = y ;
-			av[2] = pokeName ;
-			av[3] = hasPerfum ;
-			av[4] = hasScremS ;
-			av[5] = hasScreamT ;
-			av[6] = hasPoke ;
+			if(hasPerfum)
+			{
+				PlTermv av(2);
+				av[0] = x ;
+				av[1] = y ;
+				PlCall("updPerfum",av);
+			}
+			
+			{// Always call update trainer perceptions
+				PlTermv av(3);
+				av[0] = x ;
+				av[1] = y ;
+				av[2] = hasScreamT ;
+				PlCall("updPerScremT",av);
+			}
+			
+			if(hasScremS)
+			{
+				PlTermv av(2);
+				av[0] = x ;
+				av[1] = y ;
+				PlCall("updPerScremS",av);
+			}
 
-			PlCall("upPerc",av);
-
+			if(hasPoke)
+			{
+				PlTermv av(3);
+				av[0] = x ;
+				av[1] = y ;
+				av[2] = pokeName;
+				PlCall("updPokemon",av);
+			}
 		
 		}
 

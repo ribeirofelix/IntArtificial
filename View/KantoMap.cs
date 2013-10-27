@@ -24,6 +24,8 @@ namespace View
 
         public KantoMap()
         {
+            this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
             this.Width = 1028;
             this.Height = 960;
 
@@ -75,10 +77,11 @@ namespace View
 
         public void UpdateAshPosition(Helper.Point newAshPoint, Direction dir )
         {
+            var oldAshRec = new Rectangle((picsMap.ashPoint.y - 4) * 18, (picsMap.ashPoint.x - 4) * 18, 18 * 2, 18 * 2);
             picsMap.ashPoint.x = newAshPoint.x;
             picsMap.ashPoint.y = newAshPoint.y;
             picsMap.ashDir = dir;
-            picsMap.Invalidate();
+            picsMap.Invalidate(new Region(oldAshRec));
             picsMap.Update();
             
         }
@@ -111,15 +114,8 @@ namespace View
             base.OnPaint(e);
         }
 
-        private void KantoMap_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            //numberCostTextLabel.Text = _cost.ToString();
-        }
+  
+     
       
     }
 }

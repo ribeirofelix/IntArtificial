@@ -15,6 +15,8 @@ namespace View
 
         public PictureMap(MapController kantoMap) :base ()
         {
+            this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
             this.Width = 1028;
             this.Height = 960;
         }
@@ -33,7 +35,7 @@ namespace View
         private void DrawAshBdgsPokemons(Graphics graphic)
         {
             var yPoint = 0;
-
+            this.Invalidate();
             foreach (var tileLine in Map.Instance.KantoMap)
             {
                 var xPoint = 0;
@@ -59,10 +61,10 @@ namespace View
                     ashBit = rotateImage( ashBit , 180);
                     break;
                 case Direction.East:
-                    ashBit = rotateImage(ashBit, 90);
+                    ashBit = rotateImage(ashBit, 270);
                     break;
                 case Direction.West:
-                    ashBit = rotateImage(ashBit, 270);
+                    ashBit = rotateImage(ashBit, 90);
                     break;
                 default:
                     break;
@@ -85,7 +87,8 @@ namespace View
                         Console.WriteLine("invalido");
                         continue;
                     }
-                    graphic.DrawImage(tile.TileImage, xPoint, yPoint);
+                    
+                    graphic.DrawImage( new Bitmap(tile.TileImage), xPoint, yPoint);
                     xPoint += 18;
                 }
                 yPoint += 18;

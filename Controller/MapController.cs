@@ -115,10 +115,10 @@ namespace Controller
             Helper.Point oldIndex = Map.Instance.AshIndex;
             Map.Instance.AshIndex = point;
 
-            if ( isReal && Map.Instance.GetTile(point).HasPokemon)
-            {
-                FightPokemon(Map.Instance.GetTile(point).Pokemon);
-            }
+          //  if ( isReal && Map.Instance.GetTile(point).HasPokemon)
+          //  {
+          //      FightPokemon(Map.Instance.GetTile(point).Pokemon);
+          //  }
 
             if (isReal && !oldIndex.Equals(point))
             {
@@ -166,7 +166,7 @@ namespace Controller
 
         public void FightPokemon(Pokemon poke )
         {
-            Ash.Pokeball(poke.Type);
+            Ash.Pokeball();
             Map.Instance.GetTile(poke.Pos).Pokemon = null;
 #if !TEST
             showPoke(poke.Type);
