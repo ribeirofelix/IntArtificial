@@ -12,25 +12,31 @@ namespace View
 {
     public class PictureMap : PictureBox
     {
+        Image ash = Map.Instance.GetTile(new Helper.Point(19, 24)).Ash.AshImage;
+        public Helper.Point ashPoint = new Helper.Point(19, 24);
+        public Direction ashDir = Direction.South;
+        private System.ComponentModel.IContainer components;
+        private Graphics paintG;
 
         public PictureMap(MapController kantoMap) :base ()
         {
-            this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
-            this.UpdateStyles();
             this.Width = 1028;
             this.Height = 960;
+            this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
+            this.UpdateStyles();
+
         }
 
         protected override void OnPaint(PaintEventArgs pe)
         {
-            base.OnPaint(pe);
+          
+            pe.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             DrawBackgroudMap(pe.Graphics);
             DrawAshBdgsPokemons(pe.Graphics);
+            paintG = pe.Graphics;
+            base.OnPaint(pe);
         }
-
-        Image ash = Map.Instance.GetTile(new Helper.Point(19, 24)).Ash.AshImage;
-        public Helper.Point ashPoint = new Helper.Point(19,24);
-        public Direction ashDir = Direction.South;
+               
 
         private void DrawAshBdgsPokemons(Graphics graphic)
         {
@@ -61,7 +67,7 @@ namespace View
                     ashBit = rotateImage( ashBit , 180);
                     break;
                 case Direction.East:
-                    ashBit = rotateImage(ashBit, 270);
+                    ashBit = rotateImage(ashBit, 279);
                     break;
                 case Direction.West:
                     ashBit = rotateImage(ashBit, 90);
@@ -111,5 +117,20 @@ namespace View
             g.DrawImage(b, new Point(0, 0));
             return returnBitmap;
         }
+
+        private void InitializeComponent()
+        {
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            this.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+       
+
+     
+    
+    
     }
 }

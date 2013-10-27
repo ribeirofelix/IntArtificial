@@ -17,8 +17,14 @@ public enum TileTypes
     Cave ,
     Mountain ,
     Volcano ,
-    PokeCenter ,
-    Mart ,
+   
+}
+
+public enum PokeElem
+{
+    None ,
+    PokeCenter,
+    Mart,
     Trainer 
 }
 

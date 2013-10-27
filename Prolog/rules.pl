@@ -317,7 +317,6 @@ mart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , 
 trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy)) , assert(trainer(X,Y)).
 
 % E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
-
 tryPokeCenter(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , pokeCenter(I,Y) , pokeCenter(X,Iy) , pokeCenter(D,Y) , pokeCenter(X,Dy) .
 tryTrainer(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy) .
 trySeller(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy).
@@ -366,7 +365,7 @@ putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
 
 % verifica compatibilidade de pokemon e terreno
 iscomp(G) :-   (G == 71) ;
-			   (G == 87 , water);
+			   (G == 65 , water);
 			   (G == 67 , eletric);
 			   (G == 77 , flying);
 			   (G == 76 , fire)  .
@@ -383,9 +382,9 @@ allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
 %-----------------------------------
 
 at(19,24).
-groundType(20,24,77).
-safe(20,24).
-safe(19,23).
+%groundType(20,24,77).
+%safe(20,24).
+%safe(19,23).
 % safe(19,25).
 % safe(19,26).
 % safe(20,26).
@@ -424,28 +423,33 @@ dec(B, K) :- K is B - 1.
 
 
 bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)) , type(P,U) , assert(U) .
-bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon.
+bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract(hurtPokemon) .
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y), not(visited(X,Y)).
-bestMove(battleTrainer(X,Y)) :- at(X,Y), battle(X,Y).
+bestMove(battleTrainer(X,Y,R)) :- at(X,Y), battle(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 ) ).
 
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
 bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D)  , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
+
+
 % mais uma regra pra aleatorio.
 
-% olhar nao visitados
 
-bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , (not(safe(D,Y)) ; not(allowed(D,Y)) )  , safe(X,I) ,  assert(facing(east)) , retract(facing(north)) );
-						(facing(south) , at(X,Y) , inc(X,I) , dec(Y,D) , (not(safe(I,Y)) ; not(allowed(I,Y)) )  , safe(X,D) , assert(facing(west)) , retract(facing(south)) );
-						(facing(east) , at(X,Y) , inc(Y,I) , inc(X,IX) , (not(safe(X,I)) ; not(allowed(X,I)) )  , safe(IX,Y) , assert(facing(south)) , retract(facing(east)) );
-						(facing(west) , at(X,Y) , dec(Y,D) , dec(X,DX) , (not(safe(X,D)) ; not(allowed(X,D)) )  , safe(DX,Y) , assert(facing(north)) , retract(facing(west)) ).
+bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , (not(safe(D,Y)) ; not(allowed(D,Y)) ; visited(D,Y) )  , safe(X,I) ,  assert(facing(east)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , dec(Y,D) , (not(safe(I,Y)) ; not(allowed(I,Y)) ; visited(I,Y) )  , safe(X,D) , assert(facing(west)) , retract(facing(south)) );
+						(facing(east) , at(X,Y) , inc(Y,I) , inc(X,IX) , (not(safe(X,I)) ; not(allowed(X,I)) ; visited(X,I) )  , safe(IX,Y) , assert(facing(south)) , retract(facing(east)) );
+						(facing(west) , at(X,Y) , dec(Y,D) , dec(X,DX) , (not(safe(X,D)) ; not(allowed(X,D)) ; visited(X,D) )  , safe(DX,Y) , assert(facing(north)) , retract(facing(west)) ).
 
-bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , (not(safe(D,Y)) ; not(allowed(D,Y)) )  , safe(X,DY) , assert(facing(west)) , retract(facing(north)) );
-						(facing(south) , at(X,Y) , inc(X,I) , inc(Y,IY) , (not(safe(I,Y)) ; not(allowed(I,Y)) )  ,  safe(X,IY) , assert(facing(east)) , retract(facing(south)) );
-						(facing(east) ,  at(X,Y) , inc(Y,I) , dec(X,D)  , (not(safe(X,I)) ; not(allowed(X,I)) )  , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
-						(facing(west) ,  at(X,Y) , dec(Y,D) , inc(X,I)  , (not(safe(X,D)) ; not(allowed(X,D)) )  ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
+bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , (not(safe(D,Y)) ; not(allowed(D,Y)) ; visited(D,Y) )  , safe(X,DY) , assert(facing(west)) , retract(facing(north)) );
+						(facing(south) , at(X,Y) , inc(X,I) , inc(Y,IY) , (not(safe(I,Y)) ; not(allowed(I,Y)) ; visited(I,Y) )  ,  safe(X,IY) , assert(facing(east)) , retract(facing(south)) );
+						(facing(east) ,  at(X,Y) , inc(Y,I) , dec(X,D)  , (not(safe(X,I)) ; not(allowed(X,I)) ; visited(X,I) )  , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
+						(facing(west) ,  at(X,Y) , dec(Y,D) , inc(X,I)  , (not(safe(X,D)) ; not(allowed(X,D)) ; visited(X,D) )  ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
 
 
 % bestMove(aStar(S)) :- pegaElem(L,S).

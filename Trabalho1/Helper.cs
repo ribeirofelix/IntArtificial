@@ -82,12 +82,15 @@ namespace Model
         public unsafe static Action GetAction(int* ptr)
         {
             int i = 0;
-            int[] vet = new int[3];
+            int[] vet = new int[5];
+          
             while (ptr[i] != -1)
             {
                 vet[i] = ptr[i];
                 i++;
             }
+       
+            
             
             return new Action(vet);
         }

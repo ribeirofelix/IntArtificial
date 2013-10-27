@@ -49,15 +49,13 @@ namespace Controller
                 switch (act.move)
                 {
                     case BestMove.Launch: mapCont.Ash.Pokeball(); break;
-                    case BestMove.Heal:
-                        break;
-                    case BestMove.Buy:
-                        break;
-                    case BestMove.Battle:
-                        break;
+                    case BestMove.Heal: mapCont.Ash.HealPokemons(); break;
+                    case BestMove.Buy: mapCont.Ash.BuyPokeballs(); break;
+                    case BestMove.Battle: mapCont.Ash.Battle();  break;
                     case BestMove.Move: mapCont.StepAsh(act.point, true); updatePerceptions(act.point); break;
-                    case BestMove.TurnRight: mapCont.TurnAsh('L'); break;
-                    case BestMove.TurnLeft: mapCont.TurnAsh('R'); break;
+                    case BestMove.TurnRight: 
+                    case BestMove.TurnLeft: 
+                        mapCont.TurnAsh(act.move); break;
                     default:
                         break;
                 }
@@ -240,7 +238,7 @@ namespace Controller
            // var tempCost = tempGen.BestFitness + ashPossCost ;
 
             /* Remove the possible settings : back to the "REAL" life */
-            mapCont.Ash.ReleasePokemon(possiblePoke.Type);
+           // mapCont.Ash.ReleasePokemon(possiblePoke.Type);
 
             mapCont.StepAsh(currPosAsh,false);
 

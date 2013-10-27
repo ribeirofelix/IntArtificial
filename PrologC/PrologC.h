@@ -28,21 +28,6 @@ namespace PrologC {
 			 char * ret =  ( char*)av[0];
 			int * res   = parseBestMove(ret);
 
-
-			/* 
-			 PlTermv av2(3);
-
-			
-			 PlQuery q2("groundType", av2); 
-
-			 while(q2.next_solution())
-			 {
-				 char * x = (char*)av2[0];
-				 char * y = (char*)av2[1];
-				 char * t = (char *) av2[2];
-				 printf("%s %s",x,y);
-			 }
-*/
 			 return res;
  
 		}
@@ -113,7 +98,7 @@ namespace PrologC {
 
 
 			int i;
-			// we must read to the first ( 
+			// we must read to the first ( or '\0'
 			for ( i = 0; !(answ[i] == '(' || answ[i] == '\0') ; i++)
 			{
 				predicate[i] = answ[i];
@@ -141,37 +126,47 @@ namespace PrologC {
 			}
 
 			// Predicate cases.
+			int sizeRellc ;
 			switch (predicate[0])
 			{
-			case 'm': ret[retIdx] = Move ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3) ) ; break;
-			case 'l':  ret[retIdx] = Launch ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 2) ) ; break ;
+			case 'm': ret[retIdx] = Move ; sizeRellc = 4  ; break;
+			case 'l':  ret[retIdx] = Launch ; sizeRellc = 3 ; break ;
 			case 't' :
 				{
 					BestMove turn ;
-					if(predicate[4] == 'l')
+					if(predicate[4] == 'L')
 						turn = TurnLeft;
 					else
 						turn = TurnRight;
 					ret[retIdx] = turn ;   
-					ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3) ) ; 
+					sizeRellc = 1;
 					break;
 				}
 			case 'b' : 
 				{
 					BestMove doWat ;
 					if(predicate[1] == 'a')
+					{
 						doWat = Battle;
+						sizeRellc = 5;
+					}
 					else
+					{
 						doWat = Buy;
+						sizeRellc = 4 ;
+						
+					
+					}
 					ret[retIdx] = doWat ;   
-					ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3) ) ; 
+					
 					break;
 				}
-			case 'h' : ret[retIdx] = Move ; ret = (int*) realloc( ret , sizeof(int)*(retIdx + 3)) ; break;
+			case 'h' : ret[retIdx] = Move ; sizeRellc = 3  ; break;
 			default:
 				printf("predicado inesperado!"); exit(1);
 				break;
 			}
+			ret = (int*) realloc( ret , sizeof(int)*sizeRellc ) ; 
 			retIdx++;
 
 			for (int i = 0; i <= argIx; i++ , retIdx++)

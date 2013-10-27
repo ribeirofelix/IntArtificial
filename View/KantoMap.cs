@@ -21,7 +21,7 @@ namespace View
         Label numberCostTextLabel;
 
         PictureMap picsMap;
-
+     
         public KantoMap()
         {
             this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
@@ -64,6 +64,15 @@ namespace View
             MapController.Instance.listenersCost += SetNewCost;
             MapController.Instance.listenersAsh += UpdateAshPosition;
             MapController.Instance.showPoke += ShowPokemon;
+
+
+        }
+
+        void mTimer_Tick(object sender, EventArgs e)
+        {
+            picsMap.Invalidate();
+            picsMap.Update();
+ 
         }
 
         public void SetNewCost(int cost)
@@ -77,12 +86,13 @@ namespace View
 
         public void UpdateAshPosition(Helper.Point newAshPoint, Direction dir )
         {
-            var oldAshRec = new Rectangle((picsMap.ashPoint.y - 4) * 18, (picsMap.ashPoint.x - 4) * 18, 18 * 2, 18 * 2);
+        
             picsMap.ashPoint.x = newAshPoint.x;
             picsMap.ashPoint.y = newAshPoint.y;
             picsMap.ashDir = dir;
-            picsMap.Invalidate(new Region(oldAshRec));
             picsMap.Update();
+
+        
             
         }
         public void ShowPokemon(PokemonTypes poke)
@@ -109,10 +119,9 @@ namespace View
             pic.Invalidate();
             pic.Update();
         }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-        }
+
+     
+
 
   
      

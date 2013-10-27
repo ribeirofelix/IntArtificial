@@ -131,36 +131,9 @@ namespace Controller
             }
         }
 
-        public void TurnAsh(char t)
+        public void TurnAsh(BestMove dir)
         {
-            if (t == 'L')
-            {
-                switch (Ash.direcition)
-                {
-                    case Direction.North: Ash.direcition = Direction.West;
-                        break;
-                    case Direction.South: Ash.direcition = Direction.East;
-                        break;
-                    case Direction.East: Ash.direcition = Direction.South;
-                        break;
-                    case Direction.West: Ash.direcition = Direction.North;
-                        break;
-                }
-            }
-            else
-            {
-                switch (Ash.direcition)
-                {
-                    case Direction.North: Ash.direcition = Direction.East;
-                        break;
-                    case Direction.South: Ash.direcition = Direction.West;
-                        break;
-                    case Direction.East: Ash.direcition = Direction.North;
-                        break;
-                    case Direction.West: Ash.direcition = Direction.South;
-                        break;
-                }
-            }
+            Ash.Turn(dir);          
 #if !TEST
             listenersAsh(Ash.Pos, Ash.direcition);
 #endif

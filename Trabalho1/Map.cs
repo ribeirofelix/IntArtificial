@@ -188,7 +188,7 @@ namespace Model
 
         #endregion
 
-        private void ReadTileTypes(string path , TileTypes type )
+        private void ReadTileElem(string path , PokeElem elem )
         {
             StreamReader sr;
             try
@@ -201,13 +201,30 @@ namespace Model
             }
 
             var allFileByLine = sr.ReadToEnd().Split('\n');
-            int indX = 0;
-            int indY = 1;
+            int posX = 0;
+            int posY = 1;
             foreach (var line in allFileByLine )
             {
                 var lineArgs = line.Split(' ');
-                if(lineArgs.Length == 2 )
-                    GetTile( int.Parse(lineArgs[indX]) , int.Parse(lineArgs[indY]) ).TileType = type ;
+                if (lineArgs.Length == 2)
+                {
+                    int x = int.Parse(lineArgs[posX]);
+                    int y = int.Parse(lineArgs[posY]);
+                    if (x == -1 || y == -1) // aleatory mode!
+                    {
+                        Random rnd = new Random(DateTime.Now.Millisecond);
+                        Tile t = null ;
+                        do
+                        {
+                            x = rnd.Next(42); y = rnd.Next(42);
+                            t = GetTile(x,y);
+                        }while(t.Elem != PokeElem.None);
+                        t.Elem = elem;
+                    }
+                    else
+                        GetTile(x, y).Elem = elem;
+                }
+                   
             }
 
         }
@@ -260,9 +277,9 @@ namespace Model
         {
             Helper.InitializeProlog(Resources.Prolog);
             ReadMap(Resources.Mapa01);
-            ReadTileTypes(Resources.PositionMarts, TileTypes.Mart);
-            ReadTileTypes(Resources.PositionPokeCenters , TileTypes.PokeCenter);
-            ReadTileTypes(Resources.PositionTrainers, TileTypes.Trainer);
+            ReadTileElem(Resources.PositionMarts, PokeElem.Mart);
+            ReadTileElem(Resources.PositionPokeCenters, PokeElem.PokeCenter);
+            ReadTileElem(Resources.PositionTrainers, PokeElem.Trainer);
             PositionAsh();
             ReadPokemons(Resources.PosicaoPokemons);
 

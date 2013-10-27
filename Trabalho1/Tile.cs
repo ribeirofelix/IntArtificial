@@ -18,38 +18,49 @@ namespace Model
         {
             get { return _type; }
             set { _type = value; }
-        }     
+        }
+
+        private PokeElem _pokeElem;
+        public PokeElem Elem
+        {
+            get { return _pokeElem; }
+            set { _pokeElem = value; }
+        }
         
         public Image TileImage
         {
             get 
             {
-              /*  if (Pokemon != null)
-                    return Pokemon.PokeImage;*/
-
-                switch (TileType)
+                switch (Elem)
                 {
-                    case TileTypes.Grass:
-                        return Resources.grass;
-                    case TileTypes.Water:
-                        return Resources.water;
-                    case TileTypes.Cave:
-                        return Resources.cave;
-                    case TileTypes.Mountain:
-                        return Resources.mountain;
-                    case TileTypes.Volcano:
-                        return Resources.lava;
-                    case TileTypes.Trainer:
-                        return Resources.gary;
-                    case TileTypes.Mart:
-                        return Resources.mart;
-                    case TileTypes.PokeCenter:
+                    case PokeElem.None:
+                        {
+                            switch (TileType)
+                            {
+                                case TileTypes.Grass:
+                                    return Resources.grass;
+                                case TileTypes.Water:
+                                    return Resources.water;
+                                case TileTypes.Cave:
+                                    return Resources.cave;
+                                case TileTypes.Mountain:
+                                    return Resources.mountain;
+                                case TileTypes.Volcano:
+                                    return Resources.lava;
+                                default:
+                                    return Resources.grass;
+                            }
+                        }
+                    case PokeElem.PokeCenter:
                         return Resources.pokecenter;
-                    default:
-                        return Resources.grass;
+                    case PokeElem.Mart:
+                        return Resources.mart;
+                    case PokeElem.Trainer:
+                        return Resources.gary;
+                    default: return Resources.grass;
+                }
 
-                };
-    
+               
             }
             
         }
@@ -70,11 +81,11 @@ namespace Model
         public bool HasPokemon { get { return _pokemon != null; } }
 
 
-        public bool hasPokeCenter { get { return this.TileType == TileTypes.PokeCenter; } }
-                
-        public bool hasMart { get { return this.TileType == TileTypes.Mart ;}  }
-               
-        public bool hasTrainer { get { return this.TileType == TileTypes.Trainer ;}  }
+        public bool hasPokeCenter { get { return this.Elem == PokeElem.PokeCenter ; } }
+
+        public bool hasMart { get { return this.Elem == PokeElem.Mart; } }
+
+        public bool hasTrainer { get { return this.Elem == PokeElem.Trainer; } }
         
        
         public Ash Ash 
@@ -139,6 +150,7 @@ namespace Model
         {
             _xPoint = xPoint;
             _yPoint = yPoint;
+            Elem = PokeElem.None;
             this.MapContent = map;
             switch (type)
             {

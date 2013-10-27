@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureEle = new System.Windows.Forms.PictureBox();
             this.pictureBoxFire = new System.Windows.Forms.PictureBox();
             this.pictureBoxFly = new System.Windows.Forms.PictureBox();
             this.pictureBoxWater = new System.Windows.Forms.PictureBox();
+          
             ((System.ComponentModel.ISupportInitialize)(this.pictureEle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFire)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFly)).BeginInit();
@@ -77,6 +79,7 @@
             this.pictureBoxWater.TabIndex = 3;
             this.pictureBoxWater.TabStop = false;
             this.pictureBoxWater.Visible = false;
+      
             // 
             // KantoMap
             // 
@@ -87,7 +90,7 @@
             this.Controls.Add(this.pictureBoxFly);
             this.Controls.Add(this.pictureBoxFire);
             this.Controls.Add(this.pictureEle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KantoMap";
             this.Text = "Pokemon";
             ((System.ComponentModel.ISupportInitialize)(this.pictureEle)).EndInit();
@@ -104,6 +107,7 @@
         private System.Windows.Forms.PictureBox pictureBoxFire;
         private System.Windows.Forms.PictureBox pictureBoxFly;
         private System.Windows.Forms.PictureBox pictureBoxWater;
+
 
 
 
