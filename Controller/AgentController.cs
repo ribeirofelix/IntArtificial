@@ -37,7 +37,7 @@ namespace Controller
 
         public void Walk()
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 100; i++)
             {
                 Helper.Action act;
                 unsafe
@@ -71,33 +71,48 @@ namespace Controller
 
         private void updatePerceptions(Helper.Point from)
         {
-            Helper.Point up = new Helper.Point(from.x-1,from.y);
-            Helper.Point down = new Helper.Point(from.x+1,from.y);
-            Helper.Point left = new Helper.Point(from.x,from.y-1);
-            Helper.Point right = new Helper.Point(from.x,from.y+1);
+            Tile up = Map.Instance.GetTile(new Helper.Point(from.x - 1, from.y));
+            Tile down = Map.Instance.GetTile(new Helper.Point(from.x + 1, from.y));
+            Tile left = Map.Instance.GetTile(new Helper.Point(from.x, from.y - 1));
+            Tile right = Map.Instance.GetTile(new Helper.Point(from.x, from.y + 1));
 
 
             bool hasPerfum = false , hasScreamT = false , hasScreamS = false , hasPokemon = false ;
             string pokeName = "P";
             // joy perfum ?
-            if (Map.Instance.GetTile(up).hasPokeCenter || Map.Instance.GetTile(down).hasPokeCenter
-                || Map.Instance.GetTile(left).hasPokeCenter || Map.Instance.GetTile(down).hasPokeCenter)
+            if ( (up != null && up.hasPokeCenter) || (down != null && down.hasPokeCenter)
+                || (left != null && left.hasPokeCenter) || (right != null && right.hasPokeCenter) )
                 hasPerfum = true;
            
             // joy mart ?
-            if (Map.Instance.GetTile(up).hasMart || Map.Instance.GetTile(down).hasMart
-                || Map.Instance.GetTile(left).hasMart || Map.Instance.GetTile(down).hasMart )
+             if ( (up != null && up.hasMart) || (down != null && down.hasMart)
+                || (left != null && left.hasMart) || (right != null && right.hasMart) )
                 hasScreamS = true;
            
             // joy trainer ?
-            if (Map.Instance.GetTile(up).hasTrainer || Map.Instance.GetTile(down).hasTrainer
-                || Map.Instance.GetTile(left).hasTrainer || Map.Instance.GetTile(down).hasTrainer)
+             if ( (up != null && up.hasTrainer) || (down != null && down.hasTrainer)
+                || (left != null && left.hasTrainer) || (right != null && right.hasTrainer) )
                 hasScreamT = true;
 
             if (Map.Instance.GetTile(from).HasPokemon)
             {
                 //TODO : implementar esse to String 
-                pokeName = "pidgey";
+                switch (Map.Instance.GetTile(from).Pokemon.Type)
+                {
+                    case PokemonTypes.Grass:pokeName = "bulbasaur";
+                        break;
+                    case PokemonTypes.Water:pokeName = "squirtle";
+                        break;
+                    case PokemonTypes.Flying: pokeName = "pidgey";
+                        break;
+                    case PokemonTypes.Electric:pokeName = "pikachu";
+                        break;
+                    case PokemonTypes.Fire:pokeName = "charizard";
+                        break;
+                    default:
+                        break;
+                }
+                 
                 hasPokemon = true;
             }
 

@@ -139,8 +139,9 @@ namespace Model
                 Console.WriteLine(e.Message);
             }
 
-           
-
+         
+            char[] pokeTypes = { 'G','W','A','E','F' };
+            var rndType = new Random();
             for (int i = 0; i < 150; i++)
             {
                 /* Read tuple <type, x, y> */
@@ -150,7 +151,8 @@ namespace Model
                 int x = int.Parse(line[1]);
                 int y = int.Parse(line[0]);
 #else
-                char t = 'A';
+               
+                char t = pokeTypes[ rndType.Next(5)] ;
                 int x = -1;
                 int y = -1;
 #endif

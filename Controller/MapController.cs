@@ -161,7 +161,9 @@ namespace Controller
                         break;
                 }
             }
+#if !TEST
             listenersAsh(Ash.Pos, Ash.direcition);
+#endif
         }
 
         public void FightPokemon(Pokemon poke )

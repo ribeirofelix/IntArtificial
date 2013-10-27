@@ -129,9 +129,9 @@ namespace Tests
         [TestMethod]
         public void TesteSimpleWalk()
         {
-
+            Map a = Map.Instance;
             var agen = new AgentController(MapController.Instance);
-           // var capt =agen.Walk();
+            agen.Walk();
 
 
             //Assert.IsTrue(capt.All(a => a));
