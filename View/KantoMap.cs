@@ -61,7 +61,7 @@ namespace View
             this.Controls.Add(picsMap);
 
             InitializeComponent();
-            MapController.Instance.listenersCost += SetNewCost;
+            MapController.Instance.Ash.listenersCost += SetNewCost;
             MapController.Instance.listenersAsh += UpdateAshPosition;
             MapController.Instance.showPoke += ShowPokemon;
 

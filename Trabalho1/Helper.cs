@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagedProlog;
+using System.Runtime.InteropServices;
 
 namespace Model
 {
@@ -47,12 +48,19 @@ namespace Model
             }
         }
 
-        public static void AssertProlog(string predicate)
+        public static void PutMart(int x, int y)
         {
-            unsafe
-            {
-                Prolog.Assert(StrToSbt(predicate));
-            }
+            Prolog.PutMart(x, y);
+        }
+
+        public static void PutPokeCenter(int x, int y)
+        {
+            Prolog.PutPokeCenter(x, y);
+        }
+
+        public static void PutTrainer(int x, int y)
+        {
+            Prolog.PutTrainer(x, y);
         }
 
         public static void PutGround(int x, int y , char t)
@@ -83,14 +91,13 @@ namespace Model
         {
             int i = 0;
             int[] vet = new int[5];
-          
+
             while (ptr[i] != -1)
             {
                 vet[i] = ptr[i];
                 i++;
             }
-       
-            
+           
             
             return new Action(vet);
         }
@@ -101,6 +108,7 @@ namespace Model
             {
                 move = BestMove.Move;
                 point = new Point();
+                win = false;
                 if (vAct != null && vAct.Length >= 1)
                     move = (BestMove)vAct[0];
 
@@ -108,15 +116,20 @@ namespace Model
                 {
                     case BestMove.Heal:
                     case BestMove.Buy:
-                    case BestMove.Battle:
                     case BestMove.Move:
                         point = new Point(vAct[1], vAct[2]);
                         break;
+                    case BestMove.Battle:
+                        point = new Point(vAct[1], vAct[2]);
+                        win = vAct[3] == 1; 
+                        break;
+                    
                 }
 
             }
             public BestMove move;
-            public Point point; 
+            public Point point;
+            public bool win;
         } 
 
      

@@ -31,6 +31,7 @@ namespace PrologC {
 			 return res;
  
 		}
+		
 		// X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON
 		static void updatePercp(PlEngine e , int x , int y , char * pokeName , bool hasPerfum , bool hasScremS , bool hasScreamT , bool hasPoke )
 		{
@@ -69,14 +70,30 @@ namespace PrologC {
 		
 		}
 
-		static void assert(char * predicate)
+
+		// Assertions rules!
+
+		static void putMart(int x, int y)
 		{
-			PlTermv av(1);
-			av[0] = predicate  ;
-			PlCall("assert",av);
+			PlTermv av(2);
+			av[0] = x  ;
+			av[1] = y ;
+			PlCall("putMart",av);
 		}
-
-
+		static void putPokeCenter(int x, int y)
+		{
+			PlTermv av(2);
+			av[0] = x  ;
+			av[1] = y ;
+			PlCall("putPokeCenter",av);
+		}
+		static void putTrainer(int x,int y)
+		{
+			PlTermv av(2);
+			av[0] = x  ;
+			av[1] = y ;
+			PlCall("putTrainer",av);
+		}
 		static void putGround(int x, int y, char t )
 		{
 			PlTermv av(3);
@@ -92,8 +109,8 @@ namespace PrologC {
 		static int * parseBestMove(char * answ)
 		{
 			char predicate[100] ; 
-			char args[2][100] ; int argIx= 0;
-			int * ret = (int*)malloc(sizeof(int));
+			char args[3][100] ; int argIx= 0;
+			int * ret = (int*)malloc(sizeof(int)*5);
 			int retIdx = 0;
 
 
@@ -153,9 +170,7 @@ namespace PrologC {
 					else
 					{
 						doWat = Buy;
-						sizeRellc = 4 ;
-						
-					
+						sizeRellc = 4 ;				
 					}
 					ret[retIdx] = doWat ;   
 					
@@ -166,7 +181,7 @@ namespace PrologC {
 				printf("predicado inesperado!"); exit(1);
 				break;
 			}
-			ret = (int*) realloc( ret , sizeof(int)*sizeRellc ) ; 
+			//ret = (int*) realloc( ret , sizeof(int)*sizeRellc ) ; 
 			retIdx++;
 
 			for (int i = 0; i <= argIx; i++ , retIdx++)

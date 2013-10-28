@@ -29,17 +29,25 @@ namespace ManagedProlog {
 			PrologC::Prolog::updatePercp(*e,x,y,pokeName,hasPerfum,hasScremS,hasScreamT,hasPoke);
 		}
 
-		static void Assert(char * predicate )
-		{
-			PlEngine *e = (PlEngine *) eng;
-			PrologC::Prolog::assert(predicate);
-		}
 
 		static void PutGround(int x, int y, char t )
 		{			
 			PrologC::Prolog::putGround(x,y,t);
 		}
+		static void PutMart(int x, int y )
+		{			
+			PrologC::Prolog::putMart(x,y);
+		}
+		static void PutPokeCenter(int x, int y)
+		{			
+			PrologC::Prolog::putPokeCenter(x,y);
+		}
+		static void PutTrainer(int x, int y )
+		{			
+			PrologC::Prolog::putTrainer(x,y);
+		}
 
+		
 	private:
 		static void * eng;
 	

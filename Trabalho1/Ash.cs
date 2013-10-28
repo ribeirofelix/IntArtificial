@@ -8,6 +8,8 @@ using Model.Properties;
 
 namespace Model
 {
+    public delegate void CostChangedDelegate(int newCost);
+   
 
     public class Ash
     {
@@ -16,8 +18,9 @@ namespace Model
         private int pokeCount = 0;
 
         private bool hurtedPokemons ;
+        private int totalCost ;
 
-        private int totalCost;
+        public CostChangedDelegate listenersCost;
 
         public Direction direcition { get; set; }
 
@@ -55,6 +58,7 @@ namespace Model
             Map.Instance.GetTile(this.Pos).Pokemon = null;
             this.pokeCount++;
             this.totalCost -= 5;
+            listenersCost(totalCost);
         }
 
         public void Turn(BestMove turnDir)
@@ -90,30 +94,35 @@ namespace Model
             }
 
             totalCost -= 1;
+            listenersCost(totalCost);
         }
 
         public void Step()
         {
             this.totalCost--;
+            listenersCost(totalCost);
         }
 
         public void HealPokemons()
         {
             totalCost -= 100;
             hurtedPokemons = true;
+            listenersCost(totalCost);
         }
 
-        public void Battle()
+        public void Battle(bool win)
         {
-            if (hurtedPokemons)
+            if (!win)
                 totalCost -= 1000;
             else
                 totalCost += 150;
+            listenersCost(totalCost);
         }
 
         public void BuyPokeballs()
         {
             totalCost -= 10;
+            listenersCost(totalCost);
         }
         
     }

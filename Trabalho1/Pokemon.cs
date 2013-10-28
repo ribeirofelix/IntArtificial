@@ -10,10 +10,12 @@ namespace Model
 {
     public class Pokemon
     {
-        private PokemonTypes _type;
-        public PokemonTypes Type
+       
+        private Pokemons pokeName;
+        public Pokemons PokeName
         {
-            get { return _type; }
+            get { return pokeName; }
+            set { pokeName = value; }
         }
 
         public bool IsVisited = false;
@@ -23,13 +25,13 @@ namespace Model
             get 
             {
 
-              if (_type == PokemonTypes.Electric) return Resources.pokeelectric;
-              if (_type == PokemonTypes.Fire) return Resources.pokefire;
-              if (_type == PokemonTypes.Flying) return Resources.pokeflying;
-              if (_type == PokemonTypes.Grass) return Resources.pokegrass;
-              if (_type == PokemonTypes.Water) return Resources.pokewater;
+              //if (_type == PokemonTypes.Electric) return Resources.pokeelectric;
+              //if (_type == PokemonTypes.Fire) return Resources.pokefire;
+              //if (_type == PokemonTypes.Flying) return Resources.pokeflying;
+              //if (_type == PokemonTypes.Grass) return Resources.pokegrass;
+              //if (_type == PokemonTypes.Water) return Resources.pokewater;
 
-              return null;
+              return Resources.ditto;
               
             }
             
@@ -40,24 +42,14 @@ namespace Model
          *  type - type of pokemon
          */
 
-        public Pokemon(char type)
+        public Pokemon(Pokemons pokeName)
         {
-            switch (type)
-            {
-                case 'G': _type = PokemonTypes.Grass; break;
-                case 'W': _type = PokemonTypes.Water; break;
-                case 'A': _type = PokemonTypes.Flying; break;
-                case 'E': _type = PokemonTypes.Electric; break;
-                case 'F': _type = PokemonTypes.Fire; break;
-                default: break;
-            }
-
-
+            PokeName = pokeName;
         }
 
         public override string ToString()
         {
-            return Enum.GetName(typeof(PokemonTypes), _type);
+            return Enum.GetName(typeof(Pokemons), PokeName);
         }
 
 

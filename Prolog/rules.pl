@@ -299,6 +299,7 @@ type(weezing,poison).
 :- dynamic fire/0.
 :- dynamic water/0.
 :- dynamic eletric/0.
+:- dynamic hurtPokemon/0.
 
 %-----------------------------------
 % End of dynamic procedures
@@ -336,11 +337,6 @@ updPokemon(X,Y,P) :- assert(pokemon(X,Y,P)) .
 % Some rules
 %-----------------------------------
 
-% se a pokebola foi lancada, o pokemon foi capturado 
-% captured(P) :- launchPokeball(P).
-
-% se ha um treinador, tem batalha
-battle(X,Y) :- trainer(X,Y), at(X,Y).
 
 % se há batalha e os pokemons estão curados, há vitória
 victory(X,Y) :- battle(X,Y) , not(hurtPokemon). 
@@ -348,8 +344,6 @@ victory(X,Y) :- battle(X,Y) , not(hurtPokemon).
 % se há batalha e os pokemons não estão curados, há derrota
 defeat(X,Y) :- battle(X,Y) , hurtPokemon.
 
-% se há batalha, os pokemons estão machucados
-hurtPokemon :- battle(_,_). 
 
 % se ash está em X,Y, então este local foi visitado
 visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
@@ -361,6 +355,9 @@ safe(X,Y) :- at(X,Y) , not(trainer(X,Y)) .
 trainerDefeated(X,Y) :- (at(X,Y) , victory(X,Y)) , retract(trainer(X,Y)) , assert(safe(X,Y)).
 
 putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
+putMart(X,Y) :- assert(mart(X,Y)) .
+putPokeCenter(X,Y) :- assert(pokeCenter(X,Y)).
+putTrainer(X,Y) :- assert(trainer(X,Y)).
 
 
 % verifica compatibilidade de pokemon e terreno
@@ -382,27 +379,9 @@ allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
 %-----------------------------------
 
 at(19,24).
-%groundType(20,24,77).
-%safe(20,24).
-%safe(19,23).
-% safe(19,25).
-% safe(19,26).
-% safe(20,26).
-% safe(21,26).
-% safe(19,23).
-% safe(18,24).
-% safe(20,24).
-% safe(20,28).
-% safe(19,24).
-% safe(21,24).
-% safe(21,25).
-% safe(21,26).
-% 
-% pokeCenter(21,26).
-% pokemon(19,25,pikachu).
 facing(south).
-hurtPokemon.
-add(safe(5,6),L,L1).
+pokeball(25).
+
 
 %-----------------------------------
 % End Facts
@@ -414,29 +393,23 @@ add(safe(5,6),L,L1).
 %-----------------------------------
 
 
-% verifica vizinhas e alguem nao  visitado , vai pra la
-% nenhum visitado , entao pega o primeiro safe
+% verifica vizinhas e alguem nao  visitado , vai pra la // isso a gente faz...mas sera q ta certo?
+% nenhum visitado , entao pega o primeiro safe // isso a gente ja faz
 % todos visitados entao pega o primeiro safe da lista( ou da regra )
 
 inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
 
-bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P)) , retract(pokemon(X,Y,P)) , type(P,U) , assert(U) .
+bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P), pokeball(N) , N > 0 ) , retract(pokemon(X,Y,P)) , dec(N,ND) , retract(pokeball(N)) , assert(pokeball(ND)) , type(P,U) , assert(U) .
 bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract(hurtPokemon) .
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y), not(visited(X,Y)).
-bestMove(battleTrainer(X,Y,R)) :- at(X,Y), battle(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 ) ).
+bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
 
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
 bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
-
-bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D)  , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
-bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
-bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
-bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
-
 
 % mais uma regra pra aleatorio.
 
@@ -450,6 +423,13 @@ bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , (not(sa
 						(facing(south) , at(X,Y) , inc(X,I) , inc(Y,IY) , (not(safe(I,Y)) ; not(allowed(I,Y)) ; visited(I,Y) )  ,  safe(X,IY) , assert(facing(east)) , retract(facing(south)) );
 						(facing(east) ,  at(X,Y) , inc(Y,I) , dec(X,D)  , (not(safe(X,I)) ; not(allowed(X,I)) ; visited(X,I) )  , safe(D,Y) , assert(facing(north)) , retract(facing(east)) );
 						(facing(west) ,  at(X,Y) , dec(Y,D) , inc(X,I)  , (not(safe(X,D)) ; not(allowed(X,D)) ; visited(X,D) )  ,  safe(I,Y) , assert(facing(south)) , retract(facing(west)) ).
+
+
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D)  , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
+
 
 
 % bestMove(aStar(S)) :- pegaElem(L,S).

@@ -13,7 +13,7 @@ namespace Controller
 {
     //delegates for observer pattern
     public delegate void AshMovedDelegate(Helper.Point point, Direction dir);
-    public delegate void CostChangedDelegate(int newCost);
+ 
     public delegate void ShowPokemon(PokemonTypes poke);
 
     public class MapController
@@ -58,7 +58,7 @@ namespace Controller
         #endregion
 
         public AshMovedDelegate listenersAsh;
-        public CostChangedDelegate listenersCost;
+        
         public ShowPokemon showPoke;
 
         #region /* CONSTRUCTOR */
@@ -84,48 +84,20 @@ namespace Controller
 
         #region /* PUBLIC METHODS */
 
-        /* Update Distances */
-        //public Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]> UpdateDistances()
-        //{
-        //    var aStar = new AStar(Map.Instance);
-        //    int totalCost ;
-        //    var paths = new Dictionary<Tuple<int, BadgeTypes>, Helper.Point[]>(8);
-
-        //    for (int i = 0; i < this.posAshBdg.Length; i++)
-        //    {
-        //        distMap[i][i] = 0;
-        //        for (int j = i+1; j < this.posAshBdg.Length; j++)
-        //        {
-        //            var path = aStar.Star(posAshBdg[i], posAshBdg[j], out totalCost).ToArray();
-        //            paths.Add(new Tuple<int, BadgeTypes>(i, (BadgeTypes)j), path);
-        //            paths.Add(new Tuple<int, BadgeTypes>(j, (BadgeTypes)i), path.Reverse().ToArray() );
-        //            distMap[i][j] = totalCost;
-        //            distMap[j][i] = totalCost;
-        //        }
-        //    }
-        //    return paths;
-
-        //}
-
+       
         /* Step Ash */
 
-        public void StepAsh(Helper.Point point, bool isReal)
+        public void StepAsh(Helper.Point point)
         {
 
             Helper.Point oldIndex = Map.Instance.AshIndex;
             Map.Instance.AshIndex = point;
 
-          //  if ( isReal && Map.Instance.GetTile(point).HasPokemon)
-          //  {
-          //      FightPokemon(Map.Instance.GetTile(point).Pokemon);
-          //  }
-
-            if (isReal && !oldIndex.Equals(point))
+            if (!oldIndex.Equals(point))
             {
-                _actualpathcost += Map.Instance.GetTile(point).TileCost;
-                AgentController.currentCost -= Map.Instance.GetTile(point).TileCost;
+                DecidePutElems(point);
+                Ash.Step();
 #if !TEST
-                listenersCost(_actualpathcost);
                 listenersAsh(point,Ash.direcition);
 #endif
             }
@@ -144,9 +116,20 @@ namespace Controller
             Ash.Pokeball();
             Map.Instance.GetTile(poke.Pos).Pokemon = null;
 #if !TEST
-            showPoke(poke.Type);
+           // showPoke(poke.Type);
 #endif
         }
+
+        private void DecidePutElems(Helper.Point pt)
+        {
+            switch (Map.Instance.GetTile(pt).Elem)
+            {
+                case PokeElem.PokeCenter: Helper.PutPokeCenter(pt.x, pt.y); break;
+                case PokeElem.Mart: Helper.PutMart(pt.x, pt.y); break;
+                case PokeElem.Trainer: Helper.PutTrainer(pt.x, pt.y); break;
+            }
+        }
+        
         #endregion
 
     }

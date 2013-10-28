@@ -179,6 +179,7 @@
     <None Include="Resources\mart.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ditto.png" />
     <Content Include="Resources\pokecenter.png" />
   </ItemGroup>
   <ItemGroup>
