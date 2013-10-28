@@ -29,6 +29,10 @@ namespace ManagedProlog {
 			PrologC::Prolog::updatePercp(*e,x,y,pokeName,hasPerfum,hasScremS,hasScreamT,hasPoke);
 		}
 
+		static bool IsVisited(int x , int y )
+		{
+			return PrologC::Prolog::isVisited(x,y);
+		}
 
 		static void PutGround(int x, int y, char t )
 		{			

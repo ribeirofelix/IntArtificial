@@ -1,4 +1,4 @@
-﻿
+﻿//#define TEST
 using Controller.Properties;
 using Model;
 using System;

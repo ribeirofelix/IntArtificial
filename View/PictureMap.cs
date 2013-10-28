@@ -31,14 +31,14 @@ namespace View
         {
           
             pe.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            DrawBackgroudMap(pe.Graphics);
-            DrawAshBdgsPokemons(pe.Graphics);
+
+            DrawMap(pe.Graphics);
             paintG = pe.Graphics;
             base.OnPaint(pe);
         }
                
 
-        private void DrawAshBdgsPokemons(Graphics graphic)
+        private void DrawMap(Graphics graphic)
         {
             var yPoint = 0;
             this.Invalidate();
@@ -47,14 +47,16 @@ namespace View
                 var xPoint = 0;
                 foreach (var tile in tileLine)
                 {
-                    Image toDraw = null;
-                    if (tile.HasPokemon)
-                        toDraw = tile.Pokemon.PokeImage;
-                    else
-                        toDraw = tile.TileImage;
+                    // All tiles have a backgroud!
+                    graphic.DrawImage(tile.TileBackgroud, xPoint, yPoint);
 
-                    graphic.DrawImage(toDraw, xPoint, yPoint);
-                 
+                    if (tile.HasPokemon)
+                        graphic.DrawImage(tile.Pokemon.PokeImage, xPoint, yPoint);
+
+                    Image pokeElemIg = tile.PokeElemImag;
+                    if (pokeElemIg != null)
+                        graphic.DrawImage(pokeElemIg, xPoint, yPoint);
+
                     xPoint += 18;
                 }
                 yPoint += 18;
@@ -88,13 +90,13 @@ namespace View
                 var xPoint = 0;
                 foreach (var tile in tileLine)
                 {
-                    if (tile.TileImage == null)
+                    if (tile.TileBackgroud == null)
                     {
                         Console.WriteLine("invalido");
                         continue;
                     }
                     
-                    graphic.DrawImage( new Bitmap(tile.TileImage), xPoint, yPoint);
+                    graphic.DrawImage( new Bitmap(tile.TileBackgroud), xPoint, yPoint);
                     xPoint += 18;
                 }
                 yPoint += 18;

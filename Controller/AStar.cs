@@ -66,6 +66,7 @@ namespace Controller
             Elem father = new Elem(0, posIni);
             heapBorder.HeapAdd( h(posIni,posFinal), father );
 
+
             while (heapBorder.HeapSize() > 0 )
             {
                 father = heapBorder.HeapExtractMin().Item3 ;
@@ -76,7 +77,8 @@ namespace Controller
                 explored.Insert(0, father);
                 hasExpl[father.pos.x, father.pos.y] = true;
 
-                foreach (var child in father.pos.Neighborhood() )
+
+                foreach (var child in father.pos.Neighborhood( posFinal) )
 	            {
                     int accChild = 0;
                     accChild = father.accCost + GetTileFromPos(child).TileCost;

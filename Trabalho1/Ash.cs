@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define TEST
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -17,6 +18,11 @@ namespace Model
         private Dictionary<PokemonTypes, bool> _pokemons = new Dictionary<PokemonTypes, bool>(5);
         private Image _ashImage;
         private int pokeCount = 0;
+        public int PokeCount
+        {
+            get { return pokeCount; }
+            set { pokeCount = value; }
+        }
 
         private bool hurtedPokemons ;
         private int totalCost ;
@@ -58,11 +64,15 @@ namespace Model
         /* Ash actions! */
         public void Pokeball()
         {
+#if !TEST
              showPoke(Map.Instance.GetTile(this.Pos).Pokemon );
+#endif
              Map.Instance.GetTile(this.Pos).Pokemon = null;
             this.pokeCount++;
             this.totalCost -= 5;
+#if !TEST
             listenersCost(totalCost);
+#endif
            
             
         }
@@ -100,20 +110,26 @@ namespace Model
             }
 
             totalCost -= 1;
+#if !TEST
             listenersCost(totalCost);
+#endif
         }
 
         public void Step()
         {
             this.totalCost--;
+#if !TEST
             listenersCost(totalCost);
+#endif
         }
 
         public void HealPokemons()
         {
             totalCost -= 100;
             hurtedPokemons = true;
+#if !TEST
             listenersCost(totalCost);
+#endif
         }
 
         public void Battle(bool win)
@@ -125,13 +141,17 @@ namespace Model
                 totalCost += 150;
                 Map.Instance.GetTile(Pos).Elem = PokeElem.None;
             }
+#if !TEST
             listenersCost(totalCost);
+#endif
         }
 
         public void BuyPokeballs()
         {
             totalCost -= 10;
+#if !TEST
             listenersCost(totalCost);
+#endif
         }
         
     }

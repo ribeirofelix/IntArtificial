@@ -117,12 +117,14 @@ namespace Model
                     case BestMove.Heal:
                     case BestMove.Buy:
                     case BestMove.Move:
+                    case BestMove.AStar:
                         point = new Point(vAct[1], vAct[2]);
                         break;
                     case BestMove.Battle:
                         point = new Point(vAct[1], vAct[2]);
                         win = vAct[3] == 1; 
                         break;
+                    
                     
                 }
 
@@ -160,21 +162,22 @@ namespace Model
                 return x ^ y;
             }
 
-            public ICollection<Helper.Point> Neighborhood()
+            public ICollection<Helper.Point> Neighborhood(Point final )
             {
                 
                 List<Helper.Point> retInxs = new List<Helper.Point>();
+               
 
-                if (this.x != 41)   /* not last line */
-                    retInxs.Add( new Point(this.x + 1, this.y )); /* x + 1, y */                
+                if ( (new Point(this.x+1,this.y)).Equals(final)  || Prolog.IsVisited(this.x + 1, this.y))   
+                    retInxs.Add( new Point(this.x + 1, this.y )); /* x + 1, y */
 
-                if (this.x != 0)   /* not first line */
+                if ((new Point(this.x - 1, this.y)).Equals(final) || Prolog.IsVisited(this.x - 1, this.y))   
                     retInxs.Add(new Point( this.x - 1, this.y) ); /* x - 1, y */
 
-                if (this.y != 41) /* not last column */
-                    retInxs.Add( new Point(this.x , this.y + 1) ); /* x, y + 1 */ 
-                
-                if (this.y != 0) /* not first column */
+                if ((new Point(this.x , this.y + 1)).Equals(final) || Prolog.IsVisited(this.x, this.y + 1)) 
+                    retInxs.Add( new Point(this.x , this.y + 1) ); /* x, y + 1 */
+
+                if ((new Point(this.x , this.y - 1)).Equals(final) || Prolog.IsVisited(this.x, this.y - 1)) 
                     retInxs.Add( new Point(this.x , this.y - 1) ); /* x, y - 1 */
 
                 return retInxs;

@@ -38,6 +38,7 @@ public enum BestMove
     Move,
     TurnRight,
     TurnLeft,
+    AStar
 
 };
 

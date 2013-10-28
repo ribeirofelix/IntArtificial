@@ -37,7 +37,7 @@ namespace Controller
 
         public void Walk()
         {
-            for (int i = 0; i < 100; i++)
+            while (Map.Instance.Ash.PokeCount <= 150)
             {
                 Helper.Action act;
                 unsafe
@@ -51,18 +51,19 @@ namespace Controller
                     case BestMove.Launch: mapCont.Ash.Pokeball(); break;
                     case BestMove.Heal: mapCont.Ash.HealPokemons(); break;
                     case BestMove.Buy: mapCont.Ash.BuyPokeballs(); break;
-                    case BestMove.Battle: mapCont.Ash.Battle(act.win);  break;
+                    case BestMove.Battle: mapCont.Ash.Battle(act.win); break;
                     case BestMove.Move: mapCont.StepAsh(act.point); updatePerceptions(act.point); break;
-                    case BestMove.TurnRight: 
-                    case BestMove.TurnLeft: 
+                    case BestMove.AStar :
+                        int totaCost ;
+                        (new AStar(Map.Instance)).Star(Map.Instance.Ash.Pos, act.point, out totaCost) ; mapCont.StepAsh(act.point) ; updatePerceptions(act.point) ; break;
+                    case BestMove.TurnRight:
+                    case BestMove.TurnLeft:
                         mapCont.TurnAsh(act.move); break;
                     default:
                         break;
                 }
+
             }
-           
-           
-           
             
 
         }
@@ -82,12 +83,12 @@ namespace Controller
                 || (left != null && left.hasPokeCenter) || (right != null && right.hasPokeCenter) )
                 hasPerfum = true;
            
-            // joy mart ?
+            // has mart ?
              if ( (up != null && up.hasMart) || (down != null && down.hasMart)
                 || (left != null && left.hasMart) || (right != null && right.hasMart) )
                 hasScreamS = true;
            
-            // joy trainer ?
+            // has trainer ?
              if ( (up != null && up.hasTrainer) || (down != null && down.hasTrainer)
                 || (left != null && left.hasTrainer) || (right != null && right.hasTrainer) )
                 hasScreamT = true;

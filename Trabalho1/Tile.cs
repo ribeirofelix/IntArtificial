@@ -27,44 +27,45 @@ namespace Model
             set { _pokeElem = value; }
         }
         
-        public Image TileImage
+        public Image TileBackgroud
         {
             get 
             {
+                switch (TileType)
+                {
+                    case TileTypes.Grass:
+                        return Resources.grass;
+                    case TileTypes.Water:
+                        return Resources.water;
+                    case TileTypes.Cave:
+                        return Resources.cave;
+                    case TileTypes.Mountain:
+                        return Resources.mountain;
+                    case TileTypes.Volcano:
+                        return Resources.lava;
+                    default:
+                        return Resources.grass;
+                }               
+            }
+            
+        }
+
+        public Image PokeElemImag
+        {
+            get
+            {
                 switch (Elem)
                 {
-                    case PokeElem.None:
-                        {
-                            switch (TileType)
-                            {
-                                case TileTypes.Grass:
-                                    return Resources.grass;
-                                case TileTypes.Water:
-                                    return Resources.water;
-                                case TileTypes.Cave:
-                                    return Resources.cave;
-                                case TileTypes.Mountain:
-                                    return Resources.mountain;
-                                case TileTypes.Volcano:
-                                    return Resources.lava;
-                                default:
-                                    return Resources.grass;
-                            }
-                        }
                     case PokeElem.PokeCenter:
                         return Resources.pokecenter;
                     case PokeElem.Mart:
                         return Resources.mart;
                     case PokeElem.Trainer:
                         return Resources.gary;
-                    default: return Resources.grass;
+                    default: return null;
                 }
-
-               
             }
-            
         }
-
 
         private Pokemon _pokemon ;
         public Pokemon Pokemon 

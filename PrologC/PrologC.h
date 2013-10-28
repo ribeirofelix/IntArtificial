@@ -32,7 +32,6 @@ namespace PrologC {
  
 		}
 		
-		// X,Y,P,PERFUME,SCREAMS,SCREAMT,POKEMON
 		static void updatePercp(PlEngine e , int x , int y , char * pokeName , bool hasPerfum , bool hasScremS , bool hasScreamT , bool hasPoke )
 		{
 			if(hasPerfum)
@@ -81,9 +80,20 @@ namespace PrologC {
 		
 		}
 
+		static bool isVisited(int x , int y )
+		{
+			PlTermv av(2);
+			av[0] = x ;
+			av[1] = y ;
+			PlQuery q("visited",av);
 
-		// Assertions rules!
+			return q.next_solution() == 1 ;
+		}
 
+
+		/********************/
+		/* Assertions rules */
+		/********************/
 		static void putMart(int x, int y)
 		{
 			PlTermv av(2);
@@ -113,6 +123,10 @@ namespace PrologC {
 			av[2] = t ;
 			PlCall("putGround",av);
 		}
+		
+		/**************************/
+		/* End - Assertions rules */
+		/**************************/
 
 	private:
 
@@ -154,11 +168,10 @@ namespace PrologC {
 			}
 
 			// Predicate cases.
-			int sizeRellc ;
 			switch (predicate[0])
 			{
-			case 'm': ret[retIdx] = Move ; sizeRellc = 4  ; break;
-			case 'l':  ret[retIdx] = Launch ; sizeRellc = 3 ; break ;
+			case 'm': ret[retIdx] = Move ; break;
+			case 'l':  ret[retIdx] = Launch ; break ;
 			case 't' :
 				{
 					BestMove turn ;
@@ -167,32 +180,26 @@ namespace PrologC {
 					else
 						turn = TurnRight;
 					ret[retIdx] = turn ;   
-					sizeRellc = 1;
 					break;
 				}
 			case 'b' : 
 				{
 					BestMove doWat ;
 					if(predicate[1] == 'a')
-					{
 						doWat = Battle;
-						sizeRellc = 5;
-					}
 					else
-					{
 						doWat = Buy;
-						sizeRellc = 4 ;				
-					}
+
 					ret[retIdx] = doWat ;   
 					
 					break;
 				}
-			case 'h' : ret[retIdx] = Move ; sizeRellc = 3  ; break;
+			case 'h' : ret[retIdx] = Move ; break;
+			case 'a': ret[retIdx] = AStar ;  break;
 			default:
 				printf("predicado inesperado!"); exit(1);
 				break;
 			}
-			//ret = (int*) realloc( ret , sizeof(int)*sizeRellc ) ; 
 			retIdx++;
 
 			for (int i = 0; i <= argIx; i++ , retIdx++)
@@ -221,6 +228,7 @@ namespace PrologC {
 			Move,
 			TurnRight,
 			TurnLeft,
+			AStar ,
 
 		};
 	};
