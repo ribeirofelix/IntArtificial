@@ -322,7 +322,8 @@ trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y
 tryPokeCenter(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , pokeCenter(I,Y) , pokeCenter(X,Iy) , pokeCenter(D,Y) , pokeCenter(X,Dy) .
 tryTrainer(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy) .
 trySeller(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy).
-setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , addList(safe(I,Y),L,L1) , assert(safe(I,Y)) , assert(safe(X,Iy)) , assert(safe(D,Y)) , assert(safe(X,Dy)) .
+setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , assert(safe(I,Y)) , assert(safe(X,Iy)) , assert(safe(D,Y)) , assert(safe(X,Dy)) 
+				, includeList(I,Y,L,L1) , includeList(I,Y,L1,L2) , includeList(I,Y,L2,L3) , includeList(I,Y,L3,L4).
 
 updPerfum(X,Y) :-  assert(perfumeJoy(X,Y)) , tryPokeCenter(X,Y) .
 updPerScremS(X,Y) :- assert(screamSeller(X,Y)) , trySeller(X,Y) .
@@ -338,13 +339,17 @@ updPokemon(X,Y,P) :- assert(pokemon(X,Y,P)) .
 % Some rules
 %-----------------------------------
 
+% se o local é safe e ainda nao foi visitado coloca na lista
+includeList(X,Y,L,L1) :- not(visited(X,Y)) , addList(safe(X,Y),L,L1).
+
+% se o local acabou de ser visitado tira da lista
+takeList(X,Y,L,L1) :- visited(X,Y) , delList(safe(X,Y),L,L1).
 
 % se há batalha e os pokemons estão curados, há vitória
 victory(X,Y) :- battle(X,Y) , not(hurtPokemon). 
 
 % se há batalha e os pokemons não estão curados, há derrota
 defeat(X,Y) :- battle(X,Y) , hurtPokemon.
-
 
 % se ash está em X,Y, então este local foi visitado
 visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
@@ -409,10 +414,17 @@ bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y), not(visited(X,Y)).
 bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
 
-bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y)  ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
-bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) , assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
-bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
-bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y) )
+											, assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) , takeList(D,Y,L,L1).
+
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) 
+											, assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) , takeList(I,Y,L,L1).
+
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) 
+											, assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) , takeList(X,I,L,L1).
+
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) 
+											, assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) , takeList(X,D,L,L1).
 
 % mais uma regra pra aleatorio.
 
@@ -433,9 +445,7 @@ bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
-
-
-% bestMove(aStar(S)) :- pegaElem(L,S).
+bestMove(aStar(H)) :- not(isEmpty(L)) , removeHead(L,H,T).
 
 %-----------------------------------
 % End of Best moves
@@ -447,21 +457,17 @@ bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(
 
 addList(X,L,[X|L]).
 
-del(X,[X|Tail],Tail).
-del(X,[Y|Tail],[Y|Tail1]) :- del(X,Tail,Tail1).
+delList(X,[X|Tail],Tail).
+delList(X,[Y|Tail],[Y|Tail1]) :- delList(X,Tail,Tail1).
 
 isPart(X,[X|Tail]).
 isPart(X,[Head|Tail]) :- isPart(X,Tail).
 
-print(0, _) :- !.
-print(_, []).
-print(N, [H|T]) :- write(H), nl, N1 is N - 1, print(N1, T).
+removeHead([Head|Tail],Head,Tail).
 
-printList([]).
-printList([X|List]) :- write(X) , printList(List).
+isEmpty([]).
+
 %-----------------------------------
 % End of Lists
 %-----------------------------------
 
-
-addprint(X,L) :- addList(X,L,N) , printList(N).
