@@ -63,7 +63,7 @@ namespace View
             InitializeComponent();
             MapController.Instance.Ash.listenersCost += SetNewCost;
             MapController.Instance.listenersAsh += UpdateAshPosition;
-            MapController.Instance.showPoke += ShowPokemon;
+            MapController.Instance.Ash.showPoke += ShowPokemon;
 
 
         }
@@ -95,29 +95,11 @@ namespace View
         
             
         }
-        public void ShowPokemon(PokemonTypes poke)
+        public void ShowPokemon(Pokemon poke)
         {
-            PictureBox pic = null;
-            switch (poke)
-            {
-                case PokemonTypes.Water:
-                    pic = pictureBoxWater;
-                    break;
-                case PokemonTypes.Flying:
-                    pic = pictureBoxFly;
-                    break;
-                case PokemonTypes.Electric:
-                    pic = pictureEle;
-                    break;
-                case PokemonTypes.Fire:
-                    pic = pictureBoxFire;
-                    break;
-                default:
-                    return;
-            }
-            pic.Visible = true;
-            pic.Invalidate();
-            pic.Update();
+            lsvPokemons.Items.Add(new ListViewItem( poke.ToString() ));
+            lsvPokemons.Invalidate(true);
+            lsvPokemons.Update();
         }
 
      

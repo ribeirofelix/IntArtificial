@@ -14,8 +14,7 @@ namespace Controller
     //delegates for observer pattern
     public delegate void AshMovedDelegate(Helper.Point point, Direction dir);
  
-    public delegate void ShowPokemon(PokemonTypes poke);
-
+    
     public class MapController
     {
         private static MapController instance;
@@ -59,7 +58,7 @@ namespace Controller
 
         public AshMovedDelegate listenersAsh;
         
-        public ShowPokemon showPoke;
+        
 
         #region /* CONSTRUCTOR */
 

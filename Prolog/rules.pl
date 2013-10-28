@@ -300,6 +300,7 @@ type(weezing,poison).
 :- dynamic water/0.
 :- dynamic eletric/0.
 :- dynamic hurtPokemon/0.
+:- dynamic pokeball/1.
 
 %-----------------------------------
 % End of dynamic procedures
@@ -399,6 +400,8 @@ pokeball(25).
 
 inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
+
+
 
 
 bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P), pokeball(N) , N > 0 ) , retract(pokemon(X,Y,P)) , dec(N,ND) , retract(pokeball(N)) , assert(pokeball(ND)) , type(P,U) , assert(U) .

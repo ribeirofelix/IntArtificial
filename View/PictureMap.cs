@@ -76,7 +76,7 @@ namespace View
                     break;
             }
             graphic.DrawImage(ashBit, ashPoint.y*18, ashPoint.x*18);
-            graphic.DrawRectangle(new Pen(Color.Red, 3), (ashPoint.y - 4) * 18, (ashPoint.x - 4) * 18, 18*9, 18*9);
+
         }
 
         private void DrawBackgroudMap(Graphics graphic)

@@ -64,9 +64,20 @@ namespace PrologC {
 				PlTermv av(3);
 				av[0] = x ;
 				av[1] = y ;
-				av[2] = pokeName;
+				av[2] = PlCompound( pokeName);
 				PlCall("updPokemon",av);
 			}
+
+			
+				/*PlTermv av(3);
+				av[0] = x ;
+				av[1] = y ;
+				PlQuery qp("iscomp",av);
+
+				while (qp.next_solution())
+				{
+					char * poke = (char*) av[2];
+				}*/
 		
 		}
 
