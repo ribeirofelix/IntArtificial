@@ -442,7 +442,7 @@ bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
-bestMove(aStar(H)) :- removeHead(L,H,T).
+bestMove(aStar(H)) :- not(isEmpty(L)) , removeHead(L,H,T).
 
 %-----------------------------------
 % End of Best moves
@@ -461,6 +461,8 @@ isPart(X,[X|Tail]).
 isPart(X,[Head|Tail]) :- isPart(X,Tail).
 
 removeHead([Head|Tail],Head,Tail).
+
+isEmpty([]).
 
 %-----------------------------------
 % End of Lists
