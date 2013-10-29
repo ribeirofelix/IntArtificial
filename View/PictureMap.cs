@@ -17,7 +17,7 @@ namespace View
         public Direction ashDir = Direction.South;
         private System.ComponentModel.IContainer components;
         private Graphics paintG;
-
+        private const int prop = 22;
         public PictureMap(MapController kantoMap) :base ()
         {
             this.Width = 1920;
@@ -57,9 +57,9 @@ namespace View
                     if (pokeElemIg != null)
                         graphic.DrawImage(pokeElemIg, xPoint, yPoint);
 
-                    xPoint += 32;
+                    xPoint += prop;
                 }
-                yPoint += 32;
+                yPoint += prop;
             }
 
             Bitmap ashBit = new Bitmap(ash);
@@ -77,7 +77,7 @@ namespace View
                 default:
                     break;
             }
-            graphic.DrawImage(ashBit, ashPoint.y*32, ashPoint.x*32);
+            graphic.DrawImage(ashBit, ashPoint.y * prop, ashPoint.x * prop);
 
         }
 
