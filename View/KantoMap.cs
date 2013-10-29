@@ -26,25 +26,25 @@ namespace View
         {
             this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
-            this.Width = 1028;
-            this.Height = 960;
+            this.Width = 1920;
+            this.Height = 1080;
 
             buttonStartSearch = new Button();
             this.Controls.Add(buttonStartSearch);
-            buttonStartSearch.Location = new Point(780, 30);
+            buttonStartSearch.Location = new Point(1080, 30);
             buttonStartSearch.Text = "Start Search";
             buttonStartSearch.Size = new Size(200, 70);
 
             costTextLabel = new Label();
             this.Controls.Add(costTextLabel);
-            costTextLabel.Location = new Point(780, 120);
+            costTextLabel.Location = new Point(1080, 120);
             costTextLabel.Text = "Cost";
             costTextLabel.Size = new Size(150, 50);
             costTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);
 
             numberCostTextLabel = new Label();
             this.Controls.Add(numberCostTextLabel);
-            numberCostTextLabel .Location = new Point(780, 170);
+            numberCostTextLabel .Location = new Point(1080, 170);
             numberCostTextLabel.Text = "0";
             numberCostTextLabel.Size = new Size(150, 50);
             numberCostTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);

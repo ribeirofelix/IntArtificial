@@ -20,8 +20,8 @@ namespace View
 
         public PictureMap(MapController kantoMap) :base ()
         {
-            this.Width = 1028;
-            this.Height = 960;
+            this.Width = 1920;
+            this.Height = 1080;
             this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
 
@@ -57,9 +57,9 @@ namespace View
                     if (pokeElemIg != null)
                         graphic.DrawImage(pokeElemIg, xPoint, yPoint);
 
-                    xPoint += 18;
+                    xPoint += 32;
                 }
-                yPoint += 18;
+                yPoint += 32;
             }
 
             Bitmap ashBit = new Bitmap(ash);
@@ -77,31 +77,11 @@ namespace View
                 default:
                     break;
             }
-            graphic.DrawImage(ashBit, ashPoint.y*18, ashPoint.x*18);
+            graphic.DrawImage(ashBit, ashPoint.y*32, ashPoint.x*32);
 
         }
 
-        private void DrawBackgroudMap(Graphics graphic)
-        {
-               var yPoint = 0;
-
-            foreach (var tileLine in Map.Instance.KantoMap)
-            {
-                var xPoint = 0;
-                foreach (var tile in tileLine)
-                {
-                    if (tile.TileBackgroud == null)
-                    {
-                        Console.WriteLine("invalido");
-                        continue;
-                    }
-                    
-                    graphic.DrawImage( new Bitmap(tile.TileBackgroud), xPoint, yPoint);
-                    xPoint += 18;
-                }
-                yPoint += 18;
-            }
-        }
+       
 
         private Bitmap rotateImage(Bitmap b, float angle)
         {

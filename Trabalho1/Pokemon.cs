@@ -24,14 +24,7 @@ namespace Model
         {
             get 
             {
-
-              //if (_type == PokemonTypes.Electric) return Resources.pokeelectric;
-              //if (_type == PokemonTypes.Fire) return Resources.pokefire;
-              //if (_type == PokemonTypes.Flying) return Resources.pokeflying;
-              //if (_type == PokemonTypes.Grass) return Resources.pokegrass;
-              //if (_type == PokemonTypes.Water) return Resources.pokewater;
-
-              return Resources.ditto;
+              return (Image) Resources.ResourceManager.GetObject(Enum.GetName(typeof(Pokemons),this.PokeName));
               
             }
             

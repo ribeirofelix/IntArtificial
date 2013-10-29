@@ -76,17 +76,17 @@
     <Compile Include="Population.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Tile.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -179,7 +179,156 @@
     <None Include="Resources\mart.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\zubat.png" />
+    <None Include="Resources\zapdos.png" />
+    <None Include="Resources\wigglytuff.png" />
+    <None Include="Resources\weezing.png" />
+    <None Include="Resources\weepinbell.png" />
+    <None Include="Resources\weedle.png" />
+    <None Include="Resources\wartortle.png" />
+    <None Include="Resources\vulpix.png" />
+    <None Include="Resources\voltorb.png" />
+    <None Include="Resources\vileplume.png" />
+    <None Include="Resources\victreebel.png" />
+    <None Include="Resources\venusaur.png" />
+    <None Include="Resources\venonat.png" />
+    <None Include="Resources\venomoth.png" />
+    <None Include="Resources\vaporeon.png" />
+    <None Include="Resources\tentacruel.png" />
+    <None Include="Resources\tentacool.png" />
+    <None Include="Resources\tauros.png" />
+    <None Include="Resources\tangela.png" />
+    <None Include="Resources\staryu.png" />
+    <None Include="Resources\starmie.png" />
+    <None Include="Resources\squirtle.png" />
+    <None Include="Resources\spearow.png" />
+    <None Include="Resources\snorlax.png" />
+    <None Include="Resources\slowpoke.png" />
+    <None Include="Resources\slowbro.png" />
+    <None Include="Resources\shellder.png" />
+    <None Include="Resources\seel.png" />
+    <None Include="Resources\seaking.png" />
+    <None Include="Resources\seadra.png" />
+    <None Include="Resources\scyther.png" />
+    <None Include="Resources\sandslash.png" />
+    <None Include="Resources\sandshrew.png" />
+    <None Include="Resources\rhyhorn.png" />
+    <None Include="Resources\rhydon.png" />
+    <None Include="Resources\rattata.png" />
+    <None Include="Resources\raticate.png" />
+    <None Include="Resources\rapidash.png" />
+    <None Include="Resources\raichu.png" />
+    <None Include="Resources\psyduck.png" />
+    <None Include="Resources\primeape.png" />
+    <None Include="Resources\porygon.png" />
+    <None Include="Resources\ponyta.png" />
+    <None Include="Resources\poliwrath.png" />
+    <None Include="Resources\poliwhirl.png" />
+    <None Include="Resources\poliwag.png" />
+    <None Include="Resources\abra.png" />
+    <None Include="Resources\aerodactyl.png" />
+    <None Include="Resources\alakazam.png" />
+    <None Include="Resources\arbok.png" />
+    <None Include="Resources\arcanine.png" />
+    <None Include="Resources\articuno.png" />
+    <None Include="Resources\beedrill.png" />
+    <None Include="Resources\bellsprout.png" />
+    <None Include="Resources\blastoise.png" />
+    <None Include="Resources\bulbasaur.png" />
+    <None Include="Resources\butterfree.png" />
+    <None Include="Resources\caterpie.png" />
+    <None Include="Resources\chansey.png" />
+    <None Include="Resources\charizard.png" />
+    <None Include="Resources\charmander.png" />
+    <None Include="Resources\charmeleon.png" />
+    <None Include="Resources\clefable.png" />
+    <None Include="Resources\clefairy.png" />
+    <None Include="Resources\cloyster.png" />
+    <None Include="Resources\cubone.png" />
+    <None Include="Resources\dewgong.png" />
+    <None Include="Resources\diglett.png" />
     <None Include="Resources\ditto.png" />
+    <None Include="Resources\dodrio.png" />
+    <None Include="Resources\doduo.png" />
+    <None Include="Resources\dragonair.png" />
+    <None Include="Resources\dragonite.png" />
+    <None Include="Resources\dratini.png" />
+    <None Include="Resources\drowzee.png" />
+    <None Include="Resources\dugtrio.png" />
+    <None Include="Resources\eevee.png" />
+    <None Include="Resources\ekans.png" />
+    <None Include="Resources\electabuzz.png" />
+    <None Include="Resources\electrode.png" />
+    <None Include="Resources\exeggcute.png" />
+    <None Include="Resources\exeggutor.png" />
+    <None Include="Resources\farfetch.png" />
+    <None Include="Resources\fearow.png" />
+    <None Include="Resources\flareon.png" />
+    <None Include="Resources\gastly.png" />
+    <None Include="Resources\gengar.png" />
+    <None Include="Resources\geodude.png" />
+    <None Include="Resources\gloom.png" />
+    <None Include="Resources\golbat.png" />
+    <None Include="Resources\goldeen.png" />
+    <None Include="Resources\golduck.png" />
+    <None Include="Resources\golem.png" />
+    <None Include="Resources\graveler.png" />
+    <None Include="Resources\grimer.png" />
+    <None Include="Resources\growlithe.png" />
+    <None Include="Resources\gyarados.png" />
+    <None Include="Resources\haunter.png" />
+    <None Include="Resources\hitmonchan.png" />
+    <None Include="Resources\hitmonlee.png" />
+    <None Include="Resources\horsea.png" />
+    <None Include="Resources\hypno.png" />
+    <None Include="Resources\ivysaur.png" />
+    <None Include="Resources\jigglypuff.png" />
+    <None Include="Resources\jolteon.png" />
+    <None Include="Resources\jynx.png" />
+    <None Include="Resources\kabuto.png" />
+    <None Include="Resources\kabutops.png" />
+    <None Include="Resources\kadabra.png" />
+    <None Include="Resources\kakuna.png" />
+    <None Include="Resources\kangaskhan.png" />
+    <None Include="Resources\kingler.png" />
+    <None Include="Resources\koffing.png" />
+    <None Include="Resources\krabby.png" />
+    <None Include="Resources\lapras.png" />
+    <None Include="Resources\lickitung.png" />
+    <None Include="Resources\machamp.png" />
+    <None Include="Resources\machoke.png" />
+    <None Include="Resources\machop.png" />
+    <None Include="Resources\magikarp.png" />
+    <None Include="Resources\magmar.png" />
+    <None Include="Resources\magnemite.png" />
+    <None Include="Resources\magneton.png" />
+    <None Include="Resources\mankey.png" />
+    <None Include="Resources\marowak.png" />
+    <None Include="Resources\meowth.png" />
+    <None Include="Resources\metapod.png" />
+    <None Include="Resources\mewtwo.png" />
+    <None Include="Resources\moltres.png" />
+    <None Include="Resources\mr_Mime.png" />
+    <None Include="Resources\muk.png" />
+    <None Include="Resources\nidoking.png" />
+    <None Include="Resources\nidoqueen.png" />
+    <None Include="Resources\nidoranF.png" />
+    <None Include="Resources\nidoranM.png" />
+    <None Include="Resources\nidorina.png" />
+    <None Include="Resources\nidorino.png" />
+    <None Include="Resources\ninetales.png" />
+    <None Include="Resources\oddish.png" />
+    <None Include="Resources\omanyte.png" />
+    <None Include="Resources\omastar.png" />
+    <None Include="Resources\onix.png" />
+    <None Include="Resources\paras.png" />
+    <None Include="Resources\parasect.png" />
+    <None Include="Resources\persian.png" />
+    <None Include="Resources\pidgeot.png" />
+    <None Include="Resources\pidgeotto.png" />
+    <None Include="Resources\pidgey.png" />
+    <None Include="Resources\Pikachu.png" />
+    <None Include="Resources\pinsir.png" />
     <Content Include="Resources\pokecenter.png" />
   </ItemGroup>
   <ItemGroup>

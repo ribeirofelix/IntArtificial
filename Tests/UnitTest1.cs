@@ -4,6 +4,10 @@ using Model;
 using Controller;
 using System.Linq;
 using Sorting;
+using System.IO;
+using System.Net;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace Tests
 {
@@ -123,7 +127,34 @@ namespace Tests
 #endregion
 
 
+        [TestMethod]
+        public void PokeImages()
+        {
+            string path = @"C:\Users\Felix\Desktop\pokemons.txt";
+            string pathSave = @"C:\Users\Felix\Desktop\pokemons";
+            StreamReader sw = new StreamReader(path);
+            var pokemons = sw.ReadToEnd().Split('\n');
+            var wbClt = new WebClient();
+            var pokemonNums = Enum.GetValues(typeof(Pokemons)).Cast<Pokemons>().ToList();
+            int inx = 0;
+            foreach (var pokemon in pokemons)
+            {
+                var args = pokemon.Split(',');
+                var numPoke = args[0].Trim();
+                var enumImg = args[1].Trim();
+                var pokeName = Enum.GetName(typeof(Pokemons), pokemonNums[inx]);
+                byte[] img = wbClt.DownloadData(enumImg);
+                var newFile = File.Create(Path.Combine(pathSave, pokeName + ".png" ), img.Length);
 
+                using (Image image = Image.FromStream(new MemoryStream(img)))
+                {
+
+                    image.Save(newFile, ImageFormat.Png);
+                }
+                inx++;
+                
+            }
+        }
   
       
         [TestMethod]
