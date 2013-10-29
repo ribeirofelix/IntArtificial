@@ -119,7 +119,7 @@ namespace Controller
                 }
 			}
             pathReturn.Reverse();
-            return pathReturn;
+            return pathReturn.Skip(1).ToList();
 
         }
 

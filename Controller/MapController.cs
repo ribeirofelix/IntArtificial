@@ -83,8 +83,54 @@ namespace Controller
 
         #region /* PUBLIC METHODS */
 
-       
-        /* Step Ash */
+        private bool turned(Helper.Point prev, Helper.Point next)
+        {
+            return (prev.x != next.x && prev.y != next.y);           
+        }
+
+        private BestMove TurnTo(Direction facing, Helper.Point curr, Helper.Point next)
+        {
+            switch (facing)
+            {
+                case Direction.North:
+                    if (curr.y > next.y)
+                        return BestMove.TurnLeft;
+                    else if (curr.y < next.y)
+                        return BestMove.TurnRight;
+                    else if (curr.x < next.x)
+                        return BestMove.TurnBack;
+                    else
+                        return BestMove.Move;
+                case Direction.South:
+                    if (curr.y > next.y)
+                        return BestMove.TurnRight;
+                    else if (curr.y < next.y)
+                        return BestMove.TurnLeft;
+                    else if (curr.x > next.x)
+                        return BestMove.TurnBack;
+                    else
+                        return BestMove.Move;
+                case Direction.East:
+                    if (curr.x > next.x)
+                        return BestMove.TurnLeft;
+                    else if (curr.x < next.x)
+                        return BestMove.TurnRight;
+                    else if (curr.y > next.y)
+                        return BestMove.TurnBack;
+                    else
+                        return BestMove.Move;
+                case Direction.West:
+                    if (curr.x > next.x)
+                        return BestMove.TurnRight;
+                    else if (curr.x < next.y)
+                        return BestMove.TurnLeft;
+                    else if (curr.y < next.y)
+                        return BestMove.TurnBack;
+                    else
+                        return BestMove.Move;
+                default: return BestMove.Move;
+            }
+        }
 
         public void StepAsh(Helper.Point point)
         {
@@ -106,6 +152,31 @@ namespace Controller
                 listenersAsh(point,Ash.direcition);
 #endif
             }
+        }
+
+        public void AshFromTo(ICollection<Helper.Point> path,Action<Helper.Point> updPerc)
+        {
+            Helper.Point curr = Map.Instance.AshIndex;
+
+            foreach (var step in path)
+            {
+                switch (TurnTo(Ash.direcition,Map.Instance.AshIndex,step))
+                {                    
+                    case BestMove.TurnRight:
+                       TurnAsh(BestMove.TurnRight);
+                        break;
+                    case BestMove.TurnLeft:
+                         TurnAsh(BestMove.TurnLeft);
+                         break;
+                    case BestMove.TurnBack:
+                             TurnAsh(BestMove.TurnLeft);
+                             TurnAsh(BestMove.TurnLeft);
+                         break;
+                }
+                updPerc(step);
+                this.StepAsh(step);
+            }
+            Helper.UpdFacing(Ash.direcition);
         }
 
         public void TurnAsh(BestMove dir)

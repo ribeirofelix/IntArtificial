@@ -56,6 +56,10 @@ namespace ManagedProlog {
 			PrologC::Prolog::putTrainer(x,y);
 		}
 
+		static void UpdFacing(char * direction)
+		{
+			PrologC::Prolog::updFacing(direction);
+		}
 		
 	private:
 		static void * eng;

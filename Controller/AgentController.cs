@@ -37,13 +37,11 @@ namespace Controller
 
         public void Walk()
         {
+            var aStar = new AStar(Map.Instance);
             while (Map.Instance.Ash.PokeCount <= 150)
             {
                 Helper.Action act;
-                unsafe
-                {
-                    act = Helper.GetAction(Prolog.BestMove());
-                }
+                unsafe { act = Helper.GetAction(Prolog.BestMove()); }
 
 
                 switch (act.move)
@@ -55,7 +53,9 @@ namespace Controller
                     case BestMove.Move: updatePerceptions(act.point);  mapCont.StepAsh(act.point); break;
                     case BestMove.AStar :
                         int totaCost ;
-                        (new AStar(Map.Instance)).Star(Map.Instance.Ash.Pos, act.point, out totaCost) ; mapCont.StepAsh(act.point) ; updatePerceptions(act.point) ; break;
+                        var path = aStar.Star(Map.Instance.Ash.Pos, act.point, out totaCost) ;
+                        mapCont.AshFromTo(path, updatePerceptions);
+                        break;
                     case BestMove.TurnRight:
                     case BestMove.TurnLeft:
                         mapCont.TurnAsh(act.move); break;

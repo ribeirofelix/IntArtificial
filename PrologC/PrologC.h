@@ -135,6 +135,13 @@ namespace PrologC {
 			PlCall("putGround",av);
 		}
 		
+		static void updFacing(char * direction)
+		{
+			PlTermv av(1);
+			av[0] = PlCompound(direction);
+			PlCall("updFacing",av);
+		}
+
 		/**************************/
 		/* End - Assertions rules */
 		/**************************/

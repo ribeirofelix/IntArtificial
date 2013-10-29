@@ -71,8 +71,14 @@ namespace Model
             }
         }
 
-
-
+        public static void UpdFacing(Direction to)
+        {
+            string facing = Enum.GetName(typeof(Direction), to).ToLower();
+            unsafe
+            {
+                Prolog.UpdFacing(StrToSbt(facing));
+            }
+        }
 
         public unsafe static sbyte* StrToSbt(string str)
         {
@@ -84,9 +90,7 @@ namespace Model
                 return sp;
             }
         }
-
-
-
+        
         public unsafe static Action GetAction(int* ptr)
         {
             int i = 0;
@@ -167,16 +171,16 @@ namespace Model
                 List<Helper.Point> retInxs = new List<Helper.Point>();
 
 
-                if (Prolog.IsSafe (this.x + 1, this.y))
+                if ( this.x + 1 < 42 && Prolog.IsSafe(this.x + 1, this.y))
                     retInxs.Add(new Point(this.x + 1, this.y)); /* x + 1, y */
 
-                if (Prolog.IsSafe(this.x - 1, this.y))
+                if ( this.x - 1 >= 0 && Prolog.IsSafe(this.x - 1, this.y))
                     retInxs.Add(new Point(this.x - 1, this.y)); /* x - 1, y */
 
-                if (Prolog.IsSafe(this.x, this.y + 1))
+                if ( this.y + 1 < 42 && Prolog.IsSafe(this.x, this.y + 1))
                     retInxs.Add(new Point(this.x, this.y + 1)); /* x, y + 1 */
 
-                if (Prolog.IsSafe(this.x, this.y - 1))
+                if ( this.y - 1 >= 0 && Prolog.IsSafe(this.x, this.y - 1))
                     retInxs.Add(new Point(this.x, this.y - 1)); /* x, y - 1 */
 
                 return retInxs;
