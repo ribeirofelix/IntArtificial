@@ -388,6 +388,7 @@ safeLst([]).
 % allowed(22,24).
 % trainer(20,24).
 % trainer(23,24).
+allowed(2,3).
 
 
 
@@ -463,6 +464,11 @@ isPart(X,[X|Tail]).
 isPart(X,[Head|Tail]) :- isPart(X,Tail).
 
 removeHead([Head|Tail],Head,Tail).
+
+% rem(V,[V|Tail],Tail) , V=safe(X,Y) , allowed(X,Y).
+% rem(V,[Q|Tail],[Q|Tail1]) :- rem(V,Tail,Tail1).
+
+remove(X,Y,L,L1) :- removeHead([Head|Tail],Head,Tail) , Head = safe(X,Y) , allowed(X,Y).
 
 isEmpty([]).
 
