@@ -34,6 +34,11 @@ namespace ManagedProlog {
 			return PrologC::Prolog::isVisited(x,y);
 		}
 
+		static bool IsSafe(int x, int y)
+		{
+			return PrologC::Prolog::isSafe(x,y);
+		}
+
 		static void PutGround(int x, int y, char t )
 		{			
 			PrologC::Prolog::putGround(x,y,t);

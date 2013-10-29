@@ -57,6 +57,10 @@ namespace View
                     if (pokeElemIg != null)
                         graphic.DrawImage(pokeElemIg, xPoint, yPoint);
 
+                    Image statsImg = tile.StatusImg;
+                    if (statsImg != null)
+                        graphic.DrawImage(statsImg, xPoint, yPoint);
+
                     xPoint += prop;
                 }
                 yPoint += prop;

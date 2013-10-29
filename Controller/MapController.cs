@@ -96,6 +96,12 @@ namespace Controller
             {
                 DecidePutElems(point);
                 Ash.Step();
+                Map.Instance.GetTile(point).Status = TileState.Visited;
+                foreach (var safeNgh in point.SafeNeighborhood().Where(p => !p.Equals(oldIndex)) ) 
+                {
+                    Map.Instance.GetTile(safeNgh).Status = TileState.Safe;
+                }
+                
 #if !TEST
                 listenersAsh(point,Ash.direcition);
 #endif

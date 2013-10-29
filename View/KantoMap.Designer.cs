@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lsvPokemons = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // lsvPokemons
-            // 
-            this.lsvPokemons.Location = new System.Drawing.Point(1176, 234);
-            this.lsvPokemons.Name = "lsvPokemons";
-            this.lsvPokemons.Size = new System.Drawing.Size(161, 677);
-            this.lsvPokemons.TabIndex = 0;
-            this.lsvPokemons.UseCompatibleStateImageBehavior = false;
             // 
             // KantoMap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1349, 923);
-            this.Controls.Add(this.lsvPokemons);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KantoMap";
             this.Text = "Pokemon";
@@ -54,7 +44,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lsvPokemons;
+
+
+
 
 
 

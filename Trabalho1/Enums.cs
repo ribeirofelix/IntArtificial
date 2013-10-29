@@ -50,6 +50,12 @@ public enum Direction
     West
 }
 
+public enum TileState
+{
+    Unknow ,
+    Visited ,
+    Safe ,
+}
 
 public enum Pokemons
 {

@@ -161,6 +161,27 @@ namespace Model
             {
                 return x ^ y;
             }
+            public ICollection<Helper.Point> SafeNeighborhood()
+            {
+
+                List<Helper.Point> retInxs = new List<Helper.Point>();
+
+
+                if (Prolog.IsSafe (this.x + 1, this.y))
+                    retInxs.Add(new Point(this.x + 1, this.y)); /* x + 1, y */
+
+                if (Prolog.IsSafe(this.x - 1, this.y))
+                    retInxs.Add(new Point(this.x - 1, this.y)); /* x - 1, y */
+
+                if (Prolog.IsSafe(this.x, this.y + 1))
+                    retInxs.Add(new Point(this.x, this.y + 1)); /* x, y + 1 */
+
+                if (Prolog.IsSafe(this.x, this.y - 1))
+                    retInxs.Add(new Point(this.x, this.y - 1)); /* x, y - 1 */
+
+                return retInxs;
+            }
+             
 
             public ICollection<Helper.Point> Neighborhood(Point final )
             {

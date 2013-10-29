@@ -19,6 +19,7 @@ namespace View
         Button buttonStartSearch;
         Label costTextLabel;
         Label numberCostTextLabel;
+        ListView lsvMyPokemnos;
 
         PictureMap picsMap;
      
@@ -48,6 +49,13 @@ namespace View
             numberCostTextLabel.Text = "0";
             numberCostTextLabel.Size = new Size(150, 50);
             numberCostTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);
+
+            lsvMyPokemnos = new ListView();
+            lsvMyPokemnos.Location = new Point(1080, 180);
+            lsvMyPokemnos.Size = new Size(230, 675);
+            lsvMyPokemnos.Visible = true;
+
+
 
             this.buttonStartSearch.Click += delegate(object sender, EventArgs e)
             {
@@ -97,9 +105,8 @@ namespace View
         }
         public void ShowPokemon(Pokemon poke)
         {
-            lsvPokemons.Items.Add(new ListViewItem( poke.ToString() ));
-            lsvPokemons.Invalidate(true);
-            lsvPokemons.Update();
+            lsvMyPokemnos.Items.Add(poke.ToString());
+            lsvMyPokemnos.Update();
         }
 
      

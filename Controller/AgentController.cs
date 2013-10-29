@@ -52,7 +52,7 @@ namespace Controller
                     case BestMove.Heal: mapCont.Ash.HealPokemons(); break;
                     case BestMove.Buy: mapCont.Ash.BuyPokeballs(); break;
                     case BestMove.Battle: mapCont.Ash.Battle(act.win); break;
-                    case BestMove.Move: mapCont.StepAsh(act.point); updatePerceptions(act.point); break;
+                    case BestMove.Move: updatePerceptions(act.point);  mapCont.StepAsh(act.point); break;
                     case BestMove.AStar :
                         int totaCost ;
                         (new AStar(Map.Instance)).Star(Map.Instance.Ash.Pos, act.point, out totaCost) ; mapCont.StepAsh(act.point) ; updatePerceptions(act.point) ; break;

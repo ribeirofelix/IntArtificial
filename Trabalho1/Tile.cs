@@ -26,7 +26,30 @@ namespace Model
             get { return _pokeElem; }
             set { _pokeElem = value; }
         }
+
+        private TileState status;
+
+        public TileState Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+
+        public Image StatusImg
+        {
+            get
+            {
+                switch (Status)
+                {
+                    case TileState.Visited: return Resources.visited;
+                    case TileState.Safe: return Resources.safe;
+                    default: return null;
+                }
+            }
+        }
         
+
+
         public Image TileBackgroud
         {
             get 
@@ -152,6 +175,7 @@ namespace Model
             _xPoint = xPoint;
             _yPoint = yPoint;
             Elem = PokeElem.None;
+            Status = TileState.Unknow;
             this.MapContent = map;
             switch (type)
             {

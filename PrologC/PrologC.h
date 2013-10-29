@@ -91,6 +91,17 @@ namespace PrologC {
 		}
 
 
+		static bool isSafe(int x, int y)
+		{
+			
+			PlTermv av(2);
+			av[0] = x ;
+			av[1] = y ;
+			PlQuery q("safe",av);
+
+			return q.next_solution() == 1 ;
+		}
+
 		/********************/
 		/* Assertions rules */
 		/********************/

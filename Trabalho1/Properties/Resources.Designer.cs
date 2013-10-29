@@ -1367,6 +1367,16 @@ namespace Model.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap safe {
+            get {
+                object obj = ResourceManager.GetObject("safe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sandshrew {
             get {
                 object obj = ResourceManager.GetObject("sandshrew", resourceCulture);
@@ -1600,6 +1610,16 @@ namespace Model.Properties {
         internal static System.Drawing.Bitmap vileplume {
             get {
                 object obj = ResourceManager.GetObject("vileplume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visited {
+            get {
+                object obj = ResourceManager.GetObject("visited", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
