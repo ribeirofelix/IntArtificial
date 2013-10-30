@@ -1,5 +1,6 @@
 ﻿//#define TEST
 using Controller.Properties;
+using ManagedProlog;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -173,6 +174,7 @@ namespace Controller
                              TurnAsh(BestMove.TurnLeft);
                          break;
                 }
+                Prolog.RemoveSafe(step.x, step.y);
                 updPerc(step);
                 this.StepAsh(step);
             }

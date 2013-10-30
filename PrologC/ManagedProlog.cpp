@@ -60,6 +60,11 @@ namespace ManagedProlog {
 		{
 			PrologC::Prolog::updFacing(direction);
 		}
+
+		static void RemoveSafe(int x,int y)
+		{
+			PrologC::Prolog::removeSafe(x,y);
+		}
 		
 	private:
 		static void * eng;

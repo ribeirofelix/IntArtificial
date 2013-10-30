@@ -324,7 +324,7 @@ tryPokeCenter(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , pokeCenter(I
 tryTrainer(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy) .
 trySeller(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy).
 setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
-				(not(visited(I,Y)), not(visited(X,Iy)) ,not(visited(D,Y)) , not(visited(X,Dy)) , assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
+				(not(visited(I,Y)), not(visited(X,Iy)) ,not(visited(D,Y)) , not(visited(X,Dy)) ,assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
 				(not(visited(I,Y)), not(visited(X,Iy)) ,not(visited(D,Y)) , visited(X,Dy)	  , assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) ) ;
 				(not(visited(I,Y)), not(visited(X,Iy)) ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(X,Dy)) , includeList(X,Dy,L2,L3) ) ;
 				(not(visited(I,Y)), not(visited(X,Iy)) ,visited(D,Y)  	  , visited(X,Dy)     , assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) ) ;
@@ -334,8 +334,8 @@ setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
 				(not(visited(I,Y)), visited(X,Iy) 	   ,visited(D,Y) 	  , visited(X,Dy)     , assert(safe(I,Y))  , includeList(I,Y,L,L1)  ) ;
 				(visited(I,Y)	  , not(visited(X,Iy)) ,not(visited(D,Y)) , not(visited(X,Dy)), assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
 				(visited(I,Y)	  , not(visited(X,Iy)) ,not(visited(D,Y)) , visited(X,Dy)     , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) ) ;
-				(visited(I,Y)	  , not(visited(X,Iy)) ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(X,Iy))  , includeList(X,Iy,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
-				(visited(I,Y)	  , not(visited(X,Iy)) ,visited(D,Y) 	  , visited(X,Dy)     , assert(safe(X,Iy))  , includeList(X,Iy,L2,L3)  ) ;
+				(visited(I,Y)	  , not(visited(X,Iy)) ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(X,Iy))  ,includeList(X,Iy,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
+				(visited(I,Y)	  , not(visited(X,Iy)) ,visited(D,Y) 	  , visited(X,Dy)     , assert(safe(X,Iy))  ,includeList(X,Iy,L2,L3)  ) ;
 				(visited(I,Y)	  , visited(X,Iy) 	   ,not(visited(D,Y)) , not(visited(X,Dy)), assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
 				(visited(I,Y)	  , visited(X,Iy) 	   ,not(visited(D,Y)) , visited(X,Dy)     , assert(safe(D,Y))  , includeList(D,Y,L2,L3)  ) ;
 				(visited(I,Y)	  , visited(X,Iy) 	   ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ) .
@@ -365,7 +365,7 @@ takeList(X,Y,L,L1) :- delList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(saf
 
 
 % se ash está em X,Y, então este local foi visitado
-visited(X,Y) :- at(X,Y), assert(visited(X,Y)).
+visited(X,Y) :- at(X,Y) .
 
 % se o ash esta em X,Y e não tem trainador ali, ali é seguro.
 safe(X,Y) :- at(X,Y) , not(trainer(X,Y)) .
@@ -375,6 +375,8 @@ putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
 putMart(X,Y) :- assert(mart(X,Y)) .
 putPokeCenter(X,Y) :- assert(pokeCenter(X,Y)).
 putTrainer(X,Y) :- assert(trainer(X,Y)).
+
+removeSafe(X,Y) :- retract(safe(X,Y)) ,  safeLst(L) , ( takeList(X,Y,L,L1) ; not(takeList(X,Y,L,L1)) ) . 
 
 
 % verifica compatibilidade de pokemon e terreno
@@ -405,7 +407,7 @@ safeLst([]).
 % allowed(22,24).
 % trainer(20,24).
 % trainer(23,24).
-allowed(2,3).
+
 
 
 
@@ -429,16 +431,16 @@ bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y) , pokeball(N) , N < 150 , retr
 bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
 
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y) )
-											, assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y))  ,retract(safe(D,Y)) ,  safeLst(L) , (takeList(D,Y,L,L1) ; not(takeList(D,Y,L,L1)) ).
+											, assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y))  ,removeSafe(D,Y) .
 
 bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) 
-											, assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) ,retract(safe(I,Y)) ,  safeLst(L)  , (takeList(I,Y,L,L1) ; not(takeList(I,Y,L,L1))).
+											, assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) ,removeSafe(I,Y) .
 
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) 
-											, assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) ,retract(safe(X,I)) ,   safeLst(L)  , (takeList(X,I,L,L1) ; not(takeList(X,I,L,L1)) ).
+											, assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) ,removeSafe(X,I)  .
 
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) 
-											, assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) ,retract(safe(X,D)) ,  safeLst(L) , (takeList(X,D,L,L1) ; not(takeList(X,D,L,L1)) ).
+											, assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) ,removeSafe(X,D) .
 
 % mais uma regra pra aleatorio.
 

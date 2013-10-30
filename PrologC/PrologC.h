@@ -141,6 +141,15 @@ namespace PrologC {
 			av[0] = PlCompound(direction);
 			PlCall("updFacing",av);
 		}
+		
+		static void removeSafe(int x, int y)
+		{
+			PlTermv av(2);
+			av[0] = x ;
+			av[1] = y;
+			PlCall("removeSafe",av);
+
+		}
 
 		/**************************/
 		/* End - Assertions rules */
