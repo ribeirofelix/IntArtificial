@@ -81,7 +81,7 @@ namespace Controller
                 foreach (var child in father.pos.Neighborhood( posFinal) )
 	            {
                     int accChild = 0;
-                    accChild = father.accCost + GetTileFromPos(child).TileCost;
+                    accChild = father.accCost + 1;
 
                     if (hasExpl[child.x, child.y] && accChild >= father.accCost)
                         continue;

@@ -104,6 +104,8 @@ namespace Controller
                 Prolog.UpdPerc(from.x,from.y,Helper.StrToSbt(pokeName),hasPerfum,hasScreamS,hasScreamT,hasPokemon);
             }
 
+            Prolog.Safes();
+
 
         }
 

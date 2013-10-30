@@ -179,6 +179,7 @@
     <None Include="Resources\mart.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\visitedsafe.png" />
     <None Include="Resources\visited.png" />
     <None Include="Resources\safe.png" />
     <None Include="Resources\zubat.png" />

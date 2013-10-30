@@ -66,6 +66,10 @@ namespace ManagedProlog {
 			PrologC::Prolog::removeSafe(x,y);
 		}
 		
+		static void Safes()
+		{
+			PrologC::Prolog::safes();
+		}
 	private:
 		static void * eng;
 	

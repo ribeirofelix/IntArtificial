@@ -32,7 +32,13 @@ namespace Model
         public TileState Status
         {
             get { return status; }
-            set { status = value; }
+            set 
+            {
+                if (value == TileState.Safe && ManagedProlog.Prolog.IsVisited(this.XPoint, this.YPoint) )
+                    status = TileState.VisitedSafe;
+                else
+                    status = value;
+            }
         }
 
         public Image StatusImg
@@ -43,6 +49,7 @@ namespace Model
                 {
                     case TileState.Visited: return Resources.visited;
                     case TileState.Safe: return Resources.safe;
+                    case TileState.VisitedSafe: return Resources.visitedsafe;
                     default: return null;
                 }
             }

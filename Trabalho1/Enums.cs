@@ -56,6 +56,7 @@ public enum TileState
     Unknow ,
     Visited ,
     Safe ,
+    VisitedSafe 
 }
 
 public enum Pokemons

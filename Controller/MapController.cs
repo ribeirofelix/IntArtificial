@@ -189,14 +189,6 @@ namespace Controller
 #endif
         }
 
-        public void FightPokemon(Pokemon poke )
-        {
-            Ash.Pokeball();
-            Map.Instance.GetTile(poke.Pos).Pokemon = null;
-#if !TEST
-           // showPoke(poke.Type);
-#endif
-        }
 
         private void DecidePutElems(Helper.Point pt)
         {

@@ -102,6 +102,22 @@ namespace PrologC {
 			return q.next_solution() == 1 ;
 		}
 
+		static void safes()
+		{
+			PlTermv av(2);
+
+			PlQuery q("safe",av);
+
+			System::Console::WriteLine("----safes----");
+			while( q.next_solution() )
+			{
+				System::Console::WriteLine("{0},{1}",(int)av[0],(int)av[1]);
+			}
+			System::Console::WriteLine("----END safes----");
+
+		}
+
+
 		/********************/
 		/* Assertions rules */
 		/********************/

@@ -1,3 +1,104 @@
+%-----------------------------------
+% Dynamic procedures
+%-----------------------------------
+
+:- dynamic mart/2.
+:- dynamic pokeCenter/2.
+:- dynamic trainer/2.
+:- dynamic visited/2.
+:- dynamic pokemon/3.
+:- dynamic perfumeJoy/2.
+:- dynamic screamSeller/2.
+:- dynamic screamTrainer/2.
+:- dynamic facing/1.
+:- dynamic at/2.
+:- dynamic visited/2.
+:- dynamic groundType/3.
+:- dynamic flying/0.
+:- dynamic fire/0.
+:- dynamic water/0.
+:- dynamic eletric/0.
+:- dynamic hurtPokemon/0.
+:- dynamic pokeball/1.
+:- dynamic safeLst/1 .
+
+%-----------------------------------
+% End of dynamic procedures
+%-----------------------------------
+
+%-----------------------------------
+% Lists
+%-----------------------------------
+
+
+addList(X,L,[X|L]).
+
+delList(X,[X|Tail],Tail).
+delList(X,[Y|Tail],[Y|Tail1]) :- delList(X,Tail,Tail1).
+
+isPart(X,[X|Tail]).
+isPart(X,[Head|Tail]) :- isPart(X,Tail).
+
+removeHead([Head|Tail],Head,Tail).
+
+% rem(V,[V|Tail],Tail) , V=safe(X,Y) , allowed(X,Y).
+% rem(V,[Q|Tail],[Q|Tail1]) :- rem(V,Tail,Tail1).
+
+remove(X,Y,[L|LS],L1) :- removeHead([L|LS],L,Tail) , L = safe(X,Y) , allowed(X,Y).
+
+isAllowed(H,[H|R]) :- H = safe(X,Y) , allowed(X,Y) .
+isAllowed(H,[Y|R]) :- isAllowed(H,R).
+
+
+isSafe(H,[H|R]) :- H = safe(X,Y) .
+isSafe(H,[Y|R]) :- isSafe(H,R).
+
+isEmpty([]).
+
+%-----------------------------------
+% End of Lists
+%-----------------------------------
+
+%-----------------------------------
+% Some rules
+%-----------------------------------
+
+% se o local é safe e ainda nao foi visitado coloca na lista
+includeList(X,Y,L,L1) :- not(visited(X,Y)) , X \== -1 , X \== 42 , Y \== -1 , Y \== 42 , addList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
+
+% se o local acabou de ser visitado tira da lista
+takeList(X,Y,L,L1) :- delList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
+
+
+% se ash está em X,Y, então este local foi visitado
+visited(X,Y) :- at(X,Y) .
+
+% se o ash esta em X,Y e não tem trainador ali, ali é seguro.
+safe(X,Y) :- safeLst(L) , isSafe(safe(X,Y),L) .
+
+
+putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
+putMart(X,Y) :- assert(mart(X,Y)) .
+putPokeCenter(X,Y) :- assert(pokeCenter(X,Y)).
+putTrainer(X,Y) :- assert(trainer(X,Y)).
+
+removeSafe(X,Y) :- safeLst(L) , ( takeList(X,Y,L,L1) ) . 
+
+
+% verifica compatibilidade de pokemon e terreno
+iscomp(G) :-   (G == 71) ;
+			   (G == 65 , water);
+			   (G == 67 , eletric);
+			   (G == 77 , flying);
+			   (G == 76 , fire)  .
+
+allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
+
+%-----------------------------------
+% End of some rules
+%-----------------------------------
+
+
 % ----------------------------------
 % Pokemons
 % ----------------------------------
@@ -278,34 +379,6 @@ type(weezing,poison).
 % End of Pokemons
 % ----------------------------------
 
-%-----------------------------------
-% Dynamic procedures
-%-----------------------------------
-
-:- dynamic mart/2.
-:- dynamic pokeCenter/2.
-:- dynamic trainer/2.
-:- dynamic visited/2.
-:- dynamic pokemon/3.
-:- dynamic perfumeJoy/2.
-:- dynamic screamSeller/2.
-:- dynamic screamTrainer/2.
-:- dynamic safe/2.
-:- dynamic facing/1.
-:- dynamic at/2.
-:- dynamic visited/2.
-:- dynamic groundType/3.
-:- dynamic flying/0.
-:- dynamic fire/0.
-:- dynamic water/0.
-:- dynamic eletric/0.
-:- dynamic hurtPokemon/0.
-:- dynamic pokeball/1.
-:- dynamic safeLst/1 .
-
-%-----------------------------------
-% End of dynamic procedures
-%-----------------------------------
 
 
 
@@ -324,21 +397,51 @@ tryPokeCenter(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , pokeCenter(I
 tryTrainer(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy) .
 trySeller(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy).
 setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
-				(not(visited(I,Y)), not(visited(X,Iy)) ,not(visited(D,Y)) , not(visited(X,Dy)) ,assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
-				(not(visited(I,Y)), not(visited(X,Iy)) ,not(visited(D,Y)) , visited(X,Dy)	  , assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) ) ;
-				(not(visited(I,Y)), not(visited(X,Iy)) ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(X,Dy)) , includeList(X,Dy,L2,L3) ) ;
-				(not(visited(I,Y)), not(visited(X,Iy)) ,visited(D,Y)  	  , visited(X,Dy)     , assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) ) ;
-				(not(visited(I,Y)), visited(X,Iy) 	   ,not(visited(D,Y)) , not(visited(X,Dy)), assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(D,Y))  , includeList(D,Y,L1,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
-				(not(visited(I,Y)), visited(X,Iy) 	   ,not(visited(D,Y)) , visited(X,Dy)     , assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(D,Y))  , includeList(D,Y,L1,L3)  ) ;
-				(not(visited(I,Y)), visited(X,Iy) 	   ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(I,Y))  , includeList(I,Y,L,L1) , assert(safe(X,Dy)) , includeList(X,Dy,L1,L4) ) ;
-				(not(visited(I,Y)), visited(X,Iy) 	   ,visited(D,Y) 	  , visited(X,Dy)     , assert(safe(I,Y))  , includeList(I,Y,L,L1)  ) ;
-				(visited(I,Y)	  , not(visited(X,Iy)) ,not(visited(D,Y)) , not(visited(X,Dy)), assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
-				(visited(I,Y)	  , not(visited(X,Iy)) ,not(visited(D,Y)) , visited(X,Dy)     , assert(safe(X,Iy)) , includeList(X,Iy,L1,L2) , assert(safe(D,Y))  , includeList(D,Y,L2,L3) ) ;
-				(visited(I,Y)	  , not(visited(X,Iy)) ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(X,Iy))  ,includeList(X,Iy,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
-				(visited(I,Y)	  , not(visited(X,Iy)) ,visited(D,Y) 	  , visited(X,Dy)     , assert(safe(X,Iy))  ,includeList(X,Iy,L2,L3)  ) ;
-				(visited(I,Y)	  , visited(X,Iy) 	   ,not(visited(D,Y)) , not(visited(X,Dy)), assert(safe(D,Y))  , includeList(D,Y,L2,L3) , assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ;
-				(visited(I,Y)	  , visited(X,Iy) 	   ,not(visited(D,Y)) , visited(X,Dy)     , assert(safe(D,Y))  , includeList(D,Y,L2,L3)  ) ;
-				(visited(I,Y)	  , visited(X,Iy) 	   ,visited(D,Y) 	  , not(visited(X,Dy)), assert(safe(X,Dy)) , includeList(X,Dy,L3,L4) ) ) .
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ), ( not(visited(X,Iy)) , not(safe(X,Iy)) ) , ( not(visited(D,Y)) , not(safe(D,Y)) ) , ( not(visited(X,Dy)) , not(safe(X,Dy)))   , 
+					includeList(I,Y,L,L1)  , includeList(X,Iy,L1,L2)   , includeList(D,Y,L2,L3) ,   includeList(X,Dy,L3,L4) ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ), ( not(visited(X,Iy)) , not(safe(X,Iy)) ) , ( not(visited(D,Y)) , not(safe(D,Y)) ) ,(visited(X,Dy) ; safe(X,Dy) ) 	    , 
+					includeList(I,Y,L,L1) ,   includeList(X,Iy,L1,L2)   , includeList(D,Y,L2,L3) ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ), ( not(visited(X,Iy)) , not(safe(X,Iy)) ) ,(visited(D,Y) ; safe(D,Y) )  , ( not(visited(X,Dy)) , not(safe(X,Dy)) )  , 
+					includeList(I,Y,L,L1) ,   includeList(X,Iy,L1,L2)  , includeList(X,Dy,L2,L3) ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ), ( not(visited(X,Iy)) , not(safe(X,Iy)) ) ,(visited(D,Y) ; safe(D,Y) )  	  ,(visited(X,Dy) ; safe(X,Dy) )       , 
+					includeList(I,Y,L,L1)  , includeList(X,Iy,L1,L2) ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,( not(visited(D,Y)) , not(safe(D,Y)) ) , ( not(visited(X,Dy)) , not(safe(X,Dy)) )  , 
+					includeList(I,Y,L,L1)   , includeList(D,Y,L1,L3) ,   includeList(X,Dy,L3,L4) ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,( not(visited(D,Y)) , not(safe(D,Y)) ) ,(visited(X,Dy) ; safe(X,Dy) )       , 
+					includeList(I,Y,L,L1)   , includeList(D,Y,L1,L3)  ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,(visited(D,Y) ; safe(D,Y) ) 	    , (not(visited(X,Dy)),not(safe(X,Dy)) )   , 
+					includeList(I,Y,L,L1) ,  includeList(X,Dy,L1,L4) ) ;
+
+				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,(visited(D,Y) ; safe(D,Y) ) 	  ,(visited(X,Dy) ; safe(X,Dy) )       , 
+					includeList(I,Y,L,L1)  ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  , ( not(visited(X,Iy)) , not(safe(X,Iy)) ) ,(not(visited(D,Y)) , not(safe(D,Y)) ) , (not(visited(X,Dy)) , not(safe(X,Dy)) ),   
+					includeList(X,Iy,L,L2)   , includeList(D,Y,L2,L3)   , includeList(X,Dy,L3,L4) ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  , ( not(visited(X,Iy)) , not(safe(X,Iy)) ) ,(not(visited(D,Y)) , not(safe(D,Y)) ) ,(visited(X,Dy) ; safe(X,Dy) )     , 
+					includeList(X,Iy,L,L2)   , includeList(D,Y,L2,L3) ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  , ( not(visited(X,Iy)) , not(safe(X,Iy)) ) ,(visited(D,Y) ; safe(D,Y) ) 	  , (not(visited(X,Dy)) , not(safe(X,Dy)) ),  
+					includeList(X,Iy,L,L3)  , includeList(X,Dy,L3,L4) ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  , ( not(visited(X,Iy)) , not(safe(X,Iy)) ) ,(visited(D,Y) ; safe(D,Y) ) 	  ,(visited(X,Dy) ; safe(X,Dy) )       ,
+					includeList(X,Iy,L,L3)  ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  ,(visited(X,Iy) ; safe(X,Iy) ) 	   ,( not(visited(D,Y)) ,not(safe(D,Y)) ) , (not(visited(X,Dy)) , not(safe(X,Dy))  ) , 
+					includeList(D,Y,L,L3)  , includeList(X,Dy,L3,L4) ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  ,(visited(X,Iy) ; safe(X,Iy) ) 	   ,( not(visited(D,Y)) ,not(safe(D,Y)) ) ,(visited(X,Dy) ; safe(X,Dy) )       , 
+					includeList(D,Y,L,L3)  ) ;
+
+				((visited(I,Y) ; safe(I,Y) )	  ,(visited(X,Iy) ; safe(X,Iy) ) 	   ,(visited(D,Y) ; safe(D,Y) ) 	  , (not(visited(X,Dy)),not(safe(X,Dy))) , 
+					includeList(X,Dy,L,L4) ) )  .
 
 
 
@@ -353,44 +456,6 @@ updFacing(D) :- retract(facing(X)) , assert(facing(D)) .
 %-----------------------------------
 
 
-%-----------------------------------
-% Some rules
-%-----------------------------------
-
-% se o local é safe e ainda nao foi visitado coloca na lista
-includeList(X,Y,L,L1) :- not(visited(X,Y)) , X \== -1 , X \== 42 , Y \== 0 , Y \== 42 , addList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
-
-% se o local acabou de ser visitado tira da lista
-takeList(X,Y,L,L1) :- delList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
-
-
-% se ash está em X,Y, então este local foi visitado
-visited(X,Y) :- at(X,Y) .
-
-% se o ash esta em X,Y e não tem trainador ali, ali é seguro.
-safe(X,Y) :- at(X,Y) , not(trainer(X,Y)) .
-
-
-putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
-putMart(X,Y) :- assert(mart(X,Y)) .
-putPokeCenter(X,Y) :- assert(pokeCenter(X,Y)).
-putTrainer(X,Y) :- assert(trainer(X,Y)).
-
-removeSafe(X,Y) :- retract(safe(X,Y)) ,  safeLst(L) , ( takeList(X,Y,L,L1) ; not(takeList(X,Y,L,L1)) ) . 
-
-
-% verifica compatibilidade de pokemon e terreno
-iscomp(G) :-   (G == 71) ;
-			   (G == 65 , water);
-			   (G == 67 , eletric);
-			   (G == 77 , flying);
-			   (G == 76 , fire)  .
-
-allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
-
-%-----------------------------------
-% End of some rules
-%-----------------------------------
 
 
 
@@ -457,45 +522,17 @@ bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , (not(sa
 
 
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D)  , not(visited(D,Y)) ,  allowed(D,Y)  , not(hurtPokemon) ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
-bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) , not(hurtPokemon) ), assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) , not(hurtPokemon) ),  assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
 bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) , not(hurtPokemon) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) , not(hurtPokemon) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
 
-bestMove(aStar(Xg,Yg)) :- safeLst(L) , not(isEmpty(L)) , isAllowed(H,L) , H = safe(Xg,Yg) , ( takeList(Xg,Yg,L,LR) ; not(takeList(Xg,Yg,L,LR) ) ) , retract(at(X,Y)) , assert(at(Xg,Yg)) .
+bestMove(aStar(Xg,Yg)) :- safeLst(L) , not(isEmpty(L)) , isAllowed(H,L) , H = safe(Xg,Yg) , ( takeList(Xg,Yg,L,LR) ) , retract(at(X,Y)) , assert(at(Xg,Yg)) .
 
 
 %-----------------------------------
 % End of Best moves
 %-----------------------------------
 
-%-----------------------------------
-% Lists
-%-----------------------------------
 
-
-addList(X,L,[X|L]).
-
-delList(X,[X|Tail],Tail).
-delList(X,[Y|Tail],[Y|Tail1]) :- delList(X,Tail,Tail1).
-
-isPart(X,[X|Tail]).
-isPart(X,[Head|Tail]) :- isPart(X,Tail).
-
-removeHead([Head|Tail],Head,Tail).
-
-% rem(V,[V|Tail],Tail) , V=safe(X,Y) , allowed(X,Y).
-% rem(V,[Q|Tail],[Q|Tail1]) :- rem(V,Tail,Tail1).
-
-remove(X,Y,[L|LS],L1) :- removeHead([L|LS],L,Tail) , L = safe(X,Y) , allowed(X,Y).
-
-isAllowed(H,[H|R]) :- H = safe(X,Y) , allowed(X,Y) .
-isAllowed(H,[Y|R]) :- isAllowed(H,R).
-
-
-isEmpty([]).
-
-%-----------------------------------
-% End of Lists
-%-----------------------------------
 
