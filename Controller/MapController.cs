@@ -1,9 +1,10 @@
-﻿//#define TEST
+﻿#define TEST
 using Controller.Properties;
 using ManagedProlog;
 using Model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -34,17 +35,8 @@ namespace Controller
         #region /* PRIVATE PROPERTIES */
 
         private const int mapLength = 42 * 42;
-        
 
-        public int _actualpathcost = 0; //firststep
-
-        private Helper.Point[] posAshBdg;
-
-        private int[][] distMap = new int[9][];
-        public int[][] DistMap
-        {
-            get { return distMap; }
-        }
+        public StreamWriter sw = new StreamWriter(@"..\..\..\Resources\steps.out");
 
         #endregion
 
@@ -59,26 +51,10 @@ namespace Controller
 
         public AshMovedDelegate listenersAsh;
         
-        
-
         #region /* CONSTRUCTOR */
 
 
-        private MapController()
-        {
-            /* Creates Map */
-
-
-            posAshBdg = Map.Instance.ashAndBdgsPos;
-
-            /*Creates distances matrix*/
-
-            for (int i = 0; i < distMap.Length; i++)
-            {
-                distMap[i] = new int[9];
-            }
-            
-        }
+        private MapController() { }
 
         #endregion
 
@@ -143,6 +119,8 @@ namespace Controller
             {
                 DecidePutElems(point);
                 Ash.Step();
+                sw.WriteLine(point.ToString());
+
                 Map.Instance.GetTile(point).Status = TileState.Visited;
                 foreach (var safeNgh in point.SafeNeighborhood().Where(p => !p.Equals(oldIndex)) ) 
                 {
@@ -188,7 +166,6 @@ namespace Controller
             listenersAsh(Ash.Pos, Ash.direcition);
 #endif
         }
-
 
         private void DecidePutElems(Helper.Point pt)
         {

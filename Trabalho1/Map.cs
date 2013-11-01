@@ -41,6 +41,7 @@ namespace Model
             }
         }
 
+
         private Helper.Point _ashIndex;
         public Helper.Point AshIndex
         {
@@ -193,9 +194,11 @@ namespace Model
         private void ReadTileElem(string path , PokeElem elem )
         {
             StreamReader sr;
+            StreamWriter sw;
             try
             {
                 sr = new StreamReader(path);
+                sw = new StreamWriter(Path.Combine(Path.GetDirectoryName(path), Enum.GetName( typeof(PokeElem) ,elem) + ".gen"));
             }
             catch (IOException ex)
             {
@@ -222,12 +225,13 @@ namespace Model
                             t = GetTile(x,y);
                         }while(t.Elem != PokeElem.None);
                         t.Elem = elem;
+                        sw.WriteLine(x + " " + y);
                     }
                     else
                         GetTile(x, y).Elem = elem;
-                }
-                   
+                }                   
             }
+            sw.Close();
 
         }
 

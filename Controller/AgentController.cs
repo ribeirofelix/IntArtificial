@@ -8,6 +8,7 @@ using System.Timers;
 using Model;
 using System.Security.Cryptography;
 using ManagedProlog;
+using System.IO;
 
 namespace Controller
 {
@@ -15,57 +16,87 @@ namespace Controller
     {
       
         public MapController mapCont;
-    
-        public Pokedex pokedex;
+
        
-        public static int currentCost;
-       
-
-        public int PathCost { get { return mapCont._actualpathcost; } }
-
-        private static System.Timers.Timer aTimer;
-
         public AgentController(MapController mapController)
         {
-            unsafe { 
-                updatePerceptions(Map.Instance.Ash.Pos);
-            }
+            updatePerceptions(Map.Instance.Ash.Pos);
             mapCont = mapController;   
-            pokedex = new Pokedex(Map.Instance); 
-
         }
 
         public void Walk()
         {
             var aStar = new AStar(Map.Instance);
-            while (Map.Instance.Ash.PokeCount <= 150)
+            while (Map.Instance.Ash.PokeCount <= 149)
             {
                 Helper.Action act;
                 unsafe { act = Helper.GetAction(Prolog.BestMove()); }
 
-
+                int totalCost;
                 switch (act.move)
                 {
                     case BestMove.Launch: mapCont.Ash.Pokeball(); break;
                     case BestMove.Heal: mapCont.Ash.HealPokemons(); break;
                     case BestMove.Buy: mapCont.Ash.BuyPokeballs(); break;
-                    case BestMove.Battle: mapCont.Ash.Battle(act.win); break;
+                    case BestMove.Battle:
+
+                        if (act.win == false)
+                        {
+                            Prolog.Trainers();
+                            mapCont.sw.Close();
+                            mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
+                            while (true)
+                            {
+                                mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
+                            }
+                            throw new Exception(act.point.ToString());
+                        }
+                        else
+                        mapCont.Ash.Battle(act.win,act.point); 
+                        break;
                     case BestMove.Move: updatePerceptions(act.point);  mapCont.StepAsh(act.point); break;
                     case BestMove.AStar :
-                        int totaCost ;
-                        var path = aStar.Star(Map.Instance.Ash.Pos, act.point, out totaCost) ;
+                        var path = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
                         mapCont.AshFromTo(path, updatePerceptions);
                         break;
                     case BestMove.TurnRight:
                     case BestMove.TurnLeft:
                         mapCont.TurnAsh(act.move); break;
+                    case BestMove.Joker:
+                        mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
+                        Prolog.Safes();
+                        Prolog.Pokemons();
+                        break;
+                    case BestMove.KillGary:
+                        var pathK = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
+                        mapCont.Ash.Battle(true,act.point);
+                        mapCont.AshFromTo(pathK, updatePerceptions);                        
+                        Prolog.Trainers();
+                        break;
+                    case BestMove.GoPokeCenter:
+                        var pathG = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
+                        mapCont.AshFromTo(pathG, updatePerceptions);
+                        mapCont.Ash.HealPokemons();
+                        break;
+                    case BestMove.CatchPokemon:
+                        var pathC = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
+                        mapCont.AshFromTo(pathC, updatePerceptions);
+                        break;
                     default:
                         break;
                 }
 
             }
-            
+            mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
 
+            Prolog.ScreamsT();
+            Prolog.Trainers();
+            Prolog.Pokemons();
+            mapCont.sw.Close();
+            mapCont.Ash.listenersCost(Map.Instance.Ash.TotalCost);
+            Console.WriteLine(mapCont.Ash.TotalCost);
+
+            
         }
 
         private void updatePerceptions(Helper.Point from)
@@ -104,15 +135,10 @@ namespace Controller
                 Prolog.UpdPerc(from.x,from.y,Helper.StrToSbt(pokeName),hasPerfum,hasScreamS,hasScreamT,hasPokemon);
             }
 
-            Prolog.Safes();
-
+          
 
         }
 
-   
-    
-
-   
 
     }
 }

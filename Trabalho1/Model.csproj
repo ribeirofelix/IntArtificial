@@ -332,6 +332,7 @@
     <None Include="Resources\pidgey.png" />
     <None Include="Resources\Pikachu.png" />
     <None Include="Resources\pinsir.png" />
+    <None Include="Resources\gary.png" />
     <Content Include="Resources\pokecenter.png" />
   </ItemGroup>
   <ItemGroup>

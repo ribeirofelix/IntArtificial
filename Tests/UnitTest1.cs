@@ -164,9 +164,6 @@ namespace Tests
             var agen = new AgentController(MapController.Instance);
             agen.Walk();
 
-
-            //Assert.IsTrue(capt.All(a => a));
-
         }
 
         public void TestHeapMinEmptySimple()

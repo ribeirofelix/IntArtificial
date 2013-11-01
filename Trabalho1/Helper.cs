@@ -122,6 +122,10 @@ namespace Model
                     case BestMove.Buy:
                     case BestMove.Move:
                     case BestMove.AStar:
+                    case BestMove.Joker:
+                    case BestMove.GoPokeCenter:
+                    case BestMove.KillGary:
+                    case BestMove.CatchPokemon:
                         point = new Point(vAct[1], vAct[2]);
                         break;
                     case BestMove.Battle:

@@ -70,6 +70,32 @@ namespace ManagedProlog {
 		{
 			PrologC::Prolog::safes();
 		}
+
+		static bool IsHurt()
+		{
+			return PrologC::Prolog::hurtPokemon();
+		}
+
+		static void Trainers()
+		{
+			PrologC::Prolog::trainers();
+		}
+
+		static void Pokemons()
+		{
+			PrologC::Prolog::pokemons();
+		}
+
+		static void ScreamsT()
+		{
+			PrologC::Prolog::screamsT();
+		}
+
+		static void FreeProlog()
+		{
+			PlEngine * e = (PlEngine *) eng;
+			free(e);
+		}
 	private:
 		static void * eng;
 	

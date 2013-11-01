@@ -1,4 +1,4 @@
-﻿//#define TEST
+﻿#define TEST
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -11,6 +11,7 @@ namespace Model
 {
     public delegate void CostChangedDelegate(int newCost);
     public delegate void ShowPokemon(Pokemon poke);
+    public delegate void PrintHurt(bool isHurt);
 
 
     public class Ash
@@ -27,8 +28,11 @@ namespace Model
         private bool hurtedPokemons ;
         private int totalCost ;
 
+        public int TotalCost { get { return totalCost; } }
+
         public CostChangedDelegate listenersCost;
         public ShowPokemon showPoke;
+        public PrintHurt printHurt;
 
 
         public Direction direcition { get; set; }
@@ -120,26 +124,27 @@ namespace Model
             this.totalCost--;
 #if !TEST
             listenersCost(totalCost);
+            printHurt(ManagedProlog.Prolog.IsHurt());
 #endif
         }
 
         public void HealPokemons()
         {
-            totalCost -= 100;
+            totalCost -= 10;
             hurtedPokemons = true;
 #if !TEST
             listenersCost(totalCost);
 #endif
         }
 
-        public void Battle(bool win)
+        public void Battle(bool win, Helper.Point trnPoint )
         {
             if (!win)
                 totalCost -= 1000;
             else
             {
                 totalCost += 150;
-                Map.Instance.GetTile(Pos).Elem = PokeElem.None;
+                Map.Instance.GetTile(trnPoint).Elem = PokeElem.None;
             }
 #if !TEST
             listenersCost(totalCost);

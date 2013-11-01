@@ -131,7 +131,7 @@ namespace Controller
             int xFin = posFin.x ;
             int yFin = posFin.y ;
 
-            return (int)Math.Sqrt( Math.Pow( (xIni - xFin), 2) + Math.Pow( (yIni - yFin), 2)*100)  ;
+            return (int)Math.Sqrt( Math.Pow( (xIni - xFin), 2) + Math.Pow( (yIni - yFin), 2))  ;
         }
 
         

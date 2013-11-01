@@ -17,10 +17,11 @@
 :- dynamic flying/0.
 :- dynamic fire/0.
 :- dynamic water/0.
-:- dynamic eletric/0.
+:- dynamic electric/0.
 :- dynamic hurtPokemon/0.
 :- dynamic pokeball/1.
 :- dynamic safeLst/1 .
+:- dynamic pokedex/1.
 
 %-----------------------------------
 % End of dynamic procedures
@@ -64,23 +65,23 @@ isEmpty([]).
 %-----------------------------------
 
 % se o local é safe e ainda nao foi visitado coloca na lista
-includeList(X,Y,L,L1) :- not(visited(X,Y)) , X \== -1 , X \== 42 , Y \== -1 , Y \== 42 , addList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
+includeList(X,Y,L,L1) :- not(visited(X,Y)) , (X > -1  , X < 42) , (Y > -1 , Y < 42 ) , addList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
 
 % se o local acabou de ser visitado tira da lista
 takeList(X,Y,L,L1) :- delList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
 
 
 % se ash está em X,Y, então este local foi visitado
-visited(X,Y) :- at(X,Y) .
+% visited(X,Y) :- at(X,Y) .
 
 % se o ash esta em X,Y e não tem trainador ali, ali é seguro.
 safe(X,Y) :- safeLst(L) , isSafe(safe(X,Y),L) .
 
 
 putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
-putMart(X,Y) :- assert(mart(X,Y)) .
-putPokeCenter(X,Y) :- assert(pokeCenter(X,Y)).
-putTrainer(X,Y) :- assert(trainer(X,Y)).
+putMart(X,Y) :-  not(mart(X,Y)) , assert(mart(X,Y)) .
+putPokeCenter(X,Y) :- not(pokeCenter(X,Y)) , assert(pokeCenter(X,Y)).
+putTrainer(X,Y) :- not(trainer(X,Y)) , assert(trainer(X,Y)).
 
 removeSafe(X,Y) :- safeLst(L) , ( takeList(X,Y,L,L1) ) . 
 
@@ -88,11 +89,14 @@ removeSafe(X,Y) :- safeLst(L) , ( takeList(X,Y,L,L1) ) .
 % verifica compatibilidade de pokemon e terreno
 iscomp(G) :-   (G == 71) ;
 			   (G == 65 , water);
-			   (G == 67 , eletric);
+			   (G == 67 , electric);
 			   (G == 77 , flying);
 			   (G == 76 , fire)  .
 
 allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
+
+setType(P) :- ( type(P,T) , type(P,K) , T \== K , assert(T) , assert(K) ) ; (type(P,K) , assert(K) ).
+
 
 %-----------------------------------
 % End of some rules
@@ -180,7 +184,7 @@ type(mr_Mime,psychic).
 type(jynx,psychic).
 type(mewtwo,psychic).
 
-%eletric
+%electric
 
 type(pikachu,electric).
 type(raichu,electric).
@@ -386,17 +390,17 @@ type(weezing,poison).
 % Perceptions
 %-----------------------------------
 
-pokeCenter(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , perfumeJoy(I,Y) , perfumeJoy(X,Iy) , perfumeJoy(D,Y) , perfumeJoy(X,Dy)), assert(pokeCenter(X,Y)). 
+updPokeCenter(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , perfumeJoy(I,Y) , perfumeJoy(X,Iy) , perfumeJoy(D,Y) , perfumeJoy(X,Dy)), putPokeCenter(X,Y) . 
 
-mart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , screamSeller(X,Iy) , screamSeller(D,Y) , screamSeller(X,Dy)), assert(mart(X,Y)).
+updMart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , screamSeller(X,Iy) , screamSeller(D,Y) , screamSeller(X,Dy)), putMart(X,Y) .
 
-trainer(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy)) , assert(trainer(X,Y)).
+updTrainer(X,Y) :-  (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy)) , putTrainer(X,Y) .
 
-% E SE TREINADOR ESTIVER EM X,Y+1, ASH EM X,Y E TREINADOR EM X+1,Y? QUANTAS PERCEPCOES?
-tryPokeCenter(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , pokeCenter(I,Y) , pokeCenter(X,Iy) , pokeCenter(D,Y) , pokeCenter(X,Dy) .
-tryTrainer(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , trainer(I,Y) , trainer(X,Iy) , trainer(D,Y) , trainer(X,Dy) .
-trySeller(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , mart(I,Y) , mart(X,Iy) , mart(D,Y) , mart(X,Dy).
-setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
+
+tryPokeCenter(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updPokeCenter(I,Y);true) , (updPokeCenter(X,Iy);true) , (updPokeCenter(D,Y);true) , (updPokeCenter(X,Dy);true) .
+tryTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updTrainer(I,Y);true) , (updTrainer(X,Iy);true) , (updTrainer(D,Y);true) , (updTrainer(X,Dy);true) .
+trySeller(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updMart(I,Y);true) , (updMart(X,Iy);true) , (updMart(D,Y);true) , (updMart(X,Dy);true).
+setSafe(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
 
 				(( not(visited(I,Y)) , not(safe(I,Y)) ), ( not(visited(X,Iy)) , not(safe(X,Iy)) ) , ( not(visited(D,Y)) , not(safe(D,Y)) ) , ( not(visited(X,Dy)) , not(safe(X,Dy)))   , 
 					includeList(I,Y,L,L1)  , includeList(X,Iy,L1,L2)   , includeList(D,Y,L2,L3) ,   includeList(X,Dy,L3,L4) ) ;
@@ -449,7 +453,7 @@ setSafe(X,Y) :- inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
 updPerfum(X,Y) :-  assert(perfumeJoy(X,Y)) , tryPokeCenter(X,Y) .
 updPerScremS(X,Y) :- assert(screamSeller(X,Y)) , trySeller(X,Y) .
 updPerScremT(X,Y,SCREAMT) :- (SCREAMT == 1 , assert(screamTrainer(X,Y)) , tryTrainer(X,Y)) ; (SCREAMT == 0 , setSafe(X,Y)) . 
-updPokemon(X,Y,P) :- assert(pokemon(X,Y,P)) .
+updPokemon(X,Y,P) :- not(pokemon(X,Y,P)) , assert(pokemon(X,Y,P)) .
 updFacing(D) :- retract(facing(X)) , assert(facing(D)) .
 %-----------------------------------
 % End of perceptions
@@ -464,17 +468,13 @@ updFacing(D) :- retract(facing(X)) , assert(facing(D)) .
 %-----------------------------------
 
 at(19,24).
+visited(19,24).
 facing(south).
 pokeball(25).
 safeLst([]).
-% allowed(20,24).
-% allowed(21,24).
-% allowed(22,24).
-% trainer(20,24).
-% trainer(23,24).
+pokedex(0).
 
-
-
+isHurt(N) :- ( hurtPokemon , N = 1) ; ( not(hurtPokemon) , N = 0 ) .
 
 %-----------------------------------
 % End Facts
@@ -489,22 +489,28 @@ safeLst([]).
 inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
+% gary killer mode !
+bestMove(killGary(Xg,Yg)) :- pokedex(N) , N == 149 , not(hurtPokemon) , trainer(X,Y) , Xg = X , Yg = Y , assert(hurtPokemon) , retract(trainer(X,Y)) , retract(at(C,D)) , assert(at(Xg,Yg)) .
+bestMove(goPokeCenter(Xg,Yg)) :- pokedex(N) , N == 149 , hurtPokemon , pokeCenter(X,Y) , Xg = X , Yg = Y , retract(hurtPokemon) , retract(at(C,D)) , assert(at(Xg,Yg))  .
+% Final - gary killer mode !
 
-bestMove(launchPokeball(P)) :- (at(X,Y) , pokemon(X,Y,P), pokeball(N) , N > 0 ) , retract(pokemon(X,Y,P)) , dec(N,ND) , retract(pokeball(N)) , assert(pokeball(ND)) , type(P,U) , assert(U) .
+bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P), pokeball(N) , (  N > 0  , retract(pokemon(X,Y,P)) , dec(N,ND) , retract(pokeball(N)) , assert(pokeball(ND)) , setType(P) , pokedex(PN) , inc(PN,IPN) , retract(pokedex(PN)) , assert(pokedex(IPN)) ) .
+bestMove(catchPokemon(Xg,Yg)) :- pokemon(X,Y,P) , visited(X,Y) ,Xg = X , Yg = Y  ,pokeball(N) , N >  0 , retract(at(H,J)) , assert(at(X,Y)) .
+
 bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract(hurtPokemon) .
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y) , pokeball(N) , N < 150 , retract(mart(X,Y)) , NM is N + 25 , retract(pokeball(N)) , assert(pokeball(NM)) .
 bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
 
-bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(visited(D,Y)) ,  allowed(D,Y) )
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X > 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(trainer( D ,Y))  , not(visited(D,Y)) ,  allowed(D,Y) )
 											, assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y))  ,removeSafe(D,Y) .
 
-bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(visited(I,Y)) ,allowed(I,Y) ) 
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X < 41 , facing(south) , inc(X,I) , safe(I ,Y) , not(trainer(I ,Y)) , not(visited(I,Y)) ,allowed(I,Y) ) 
 											, assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) ,removeSafe(I,Y) .
 
-bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , safe(X,I) , not(visited(X,I)) ,  allowed(X,I) ) 
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y < 41 , facing(east) , inc(Y,I) , safe(X,I) , not(trainer(X,I)) , not(visited(X,I)) ,  allowed(X,I) ) 
 											, assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) ,removeSafe(X,I)  .
 
-bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , safe(X,D) , not(visited(X,D)) , allowed(X,D) ) 
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y > 0 ,  facing(west) , dec(Y,D) , safe(X,D), not(trainer(X,D))  , not(visited(X,D)) , allowed(X,D) ) 
 											, assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) ,removeSafe(X,D) .
 
 % mais uma regra pra aleatorio.
@@ -521,14 +527,16 @@ bestMove(turnLeft) :- 	(facing(north) , at(X,Y) , dec(X,D) , dec(Y,DY) , (not(sa
 						(facing(west) ,  at(X,Y) , dec(Y,D) , inc(X,I)  , (not(safe(X,D)) ; not(allowed(X,D)) ; visited(X,D) )  , safe(I,Y)  ,allowed(I,Y) , not(visited(I,Y)) ,  assert(facing(south)) , retract(facing(west)) ).
 
 
-bestMove(moveUp(D,Y)) :- (at(X,Y) , X \== 0 , facing(north) , dec(X,D)  , not(visited(D,Y)) ,  allowed(D,Y)  , not(hurtPokemon) ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
-bestMove(moveDown(I,Y)) :- (at(X,Y) , X \== 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) , not(hurtPokemon) ),  assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
-bestMove(moveRight(X,I)) :- (at(X,Y) , Y \== 0 , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) , not(hurtPokemon) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
-bestMove(moveLeft(X,D)) :- (at(X,Y) , Y \== 41 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) , not(hurtPokemon) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
+bestMove(moveUp(D,Y)) :- (at(X,Y) , X > 0 , facing(north) , dec(X,D)  , not(visited(D,Y)) ,  allowed(D,Y)  , not(hurtPokemon) ) , assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y)) .
+bestMove(moveDown(I,Y)) :- (at(X,Y) , X < 41 , facing(south) , inc(X,I)  , not(visited(I,Y)) ,allowed(I,Y) , not(hurtPokemon) ),  assert(at(I,Y)) , retract(at(X,Y)) , assert(visited(I,Y)) .
+bestMove(moveRight(X,I)) :- (at(X,Y) , Y < 41  , facing(east) , inc(Y,I) , not(visited(X,I)) ,  allowed(X,I) , not(hurtPokemon) ) , assert(at(X,I)) , retract(at(X,Y)) , assert(visited(X,I)) .
+bestMove(moveLeft(X,D)) :- (at(X,Y) , Y > 0 ,  facing(west) , dec(Y,D) , not(visited(X,D)) , allowed(X,D) , not(hurtPokemon) ) , assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) .
 
 
-bestMove(aStar(Xg,Yg)) :- safeLst(L) , not(isEmpty(L)) , isAllowed(H,L) , H = safe(Xg,Yg) , ( takeList(Xg,Yg,L,LR) ) , retract(at(X,Y)) , assert(at(Xg,Yg)) .
+bestMove(aStar(Xg,Yg)) :- safeLst(L) , not(isEmpty(L)) , isAllowed(H,L) , H = safe(Xg,Yg) , ( takeList(Xg,Yg,L,LR) ) , retract(at(X,Y)) , assert(at(Xg,Yg)) , assert(visited(Xg,Yg)) .
 
+
+bestMove(joker(0,0)) .
 
 %-----------------------------------
 % End of Best moves

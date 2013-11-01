@@ -40,6 +40,10 @@ public enum BestMove
     TurnLeft,
     AStar,
     TurnBack,
+    Joker ,
+    KillGary ,
+    GoPokeCenter,
+    CatchPokemon,
 
 };
 

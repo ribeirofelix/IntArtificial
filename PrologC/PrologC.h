@@ -27,7 +27,7 @@ namespace PrologC {
 			 q.next_solution();
 			 char * ret =  ( char*)av[0];
 			int * res   = parseBestMove(ret);
-
+			
 			 return res;
  
 		}
@@ -66,17 +66,6 @@ namespace PrologC {
 				av[2] = PlCompound( pokeName);
 				PlCall("updPokemon",av);
 			}
-
-			
-				/*PlTermv av(3);
-				av[0] = x ;
-				av[1] = y ;
-				PlQuery qp("iscomp",av);
-
-				while (qp.next_solution())
-				{
-					char * poke = (char*) av[2];
-				}*/
 		
 		}
 
@@ -86,8 +75,9 @@ namespace PrologC {
 			av[0] = x ;
 			av[1] = y ;
 			PlQuery q("visited",av);
-
-			return q.next_solution() == 1 ;
+			bool resp = q.next_solution() == 1 ;
+			
+			return resp;
 		}
 
 
@@ -98,8 +88,9 @@ namespace PrologC {
 			av[0] = x ;
 			av[1] = y ;
 			PlQuery q("safe",av);
-
-			return q.next_solution() == 1 ;
+			bool resp = q.next_solution() == 1 ;
+			
+			return resp;
 		}
 
 		static void safes()
@@ -114,8 +105,65 @@ namespace PrologC {
 				System::Console::WriteLine("{0},{1}",(int)av[0],(int)av[1]);
 			}
 			System::Console::WriteLine("----END safes----");
-
+			
 		}
+
+		static bool hurtPokemon()
+		{
+			PlTermv av(1);
+			
+			PlQuery q("isHurt" ,av);
+			q.next_solution();
+			return ( (int) av[0] ) == 1;
+			
+		}
+		
+		static void trainers()
+		{
+			PlTermv av(2);
+
+			PlQuery q("trainer",av);
+
+			System::Console::WriteLine("----trainers----");
+			while( q.next_solution() )
+			{
+				System::Console::WriteLine("{0},{1}",(int)av[0],(int)av[1]);
+			}
+			System::Console::WriteLine("----END trainers----");
+			
+		}
+				
+		static void pokemons()
+		{
+			PlTermv av(3);
+
+			PlQuery q("pokemon",av);
+
+			System::Console::WriteLine("----pokemons----");
+			while( q.next_solution() )
+			{
+				char * poke = (char *) av[2];
+				
+				System::Console::WriteLine("{0},{1},{2}{3}{4}",(int)av[0],(int)av[1], poke[0],poke[1],poke[2] );
+			}
+			System::Console::WriteLine("----END pokemons----");
+			
+		}
+		
+		static void screamsT()
+		{
+			PlTermv av(2);
+
+			PlQuery q("screamTrainer",av);
+
+			System::Console::WriteLine("----screams gary----");
+			while( q.next_solution() )
+			{
+				System::Console::WriteLine("{0},{1}",(int)av[0],(int)av[1] );
+			}
+			System::Console::WriteLine("----END screams gary----");
+		}
+
 
 
 		/********************/
@@ -239,6 +287,10 @@ namespace PrologC {
 				}
 			case 'h' : ret[retIdx] = Move ; break;
 			case 'a': ret[retIdx] = AStar ;  break;
+			case 'j' : ret[retIdx] = Joker ; break;
+			case 'k' : ret[retIdx] = KillGary ; break ;
+			case 'g' : ret[retIdx] = GoPokeCenter ; break ;
+			case 'c': ret[retIdx] = CatchPokemon; break;
 			default:
 				printf("predicado inesperado!"); exit(1);
 				break;
@@ -248,7 +300,7 @@ namespace PrologC {
 			for (int i = 0; i <= argIx; i++ , retIdx++)
 			{
 				int numArg = (int) strtol(args[i],NULL,0);
-				if(numArg == 0 ) // then is a string as value, a pokemon!
+				if(numArg == 0 &&  strcmp( args[i] , "0" ) != 0  ) // then is a string as value, a pokemon!
 					ret[retIdx] = -1;
 				else
 					ret[retIdx] = numArg;
@@ -272,6 +324,11 @@ namespace PrologC {
 			TurnRight,
 			TurnLeft,
 			AStar ,
+			TurnBack,
+		    Joker ,
+			KillGary ,
+			GoPokeCenter ,
+			CatchPokemon ,
 
 		};
 	};

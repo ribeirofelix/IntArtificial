@@ -12,16 +12,16 @@ namespace View
 {
     public class PictureMap : PictureBox
     {
-        Image ash = Map.Instance.GetTile(new Helper.Point(19, 24)).Ash.AshImage;
-        public Helper.Point ashPoint = new Helper.Point(19, 24);
+        Image ash = Map.Instance.Ash.AshImage ;
+        public Helper.Point ashPoint = Map.Instance.AshIndex;
         public Direction ashDir = Direction.South;
         private System.ComponentModel.IContainer components;
-        private Graphics paintG;
+       
         private const int prop = 22;
         public PictureMap(MapController kantoMap) :base ()
         {
-            this.Width = 1920;
-            this.Height = 1080;
+            this.Width = 1000;
+            this.Height = 1000;
             this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
 
@@ -30,22 +30,19 @@ namespace View
         protected override void OnPaint(PaintEventArgs pe)
         {
           
-            pe.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-
-            DrawMap(pe.Graphics);
-            paintG = pe.Graphics;
             base.OnPaint(pe);
+            pe.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            DrawMap(pe.Graphics);
         }
-               
-
+     
         private void DrawMap(Graphics graphic)
         {
-            var yPoint = 0;
+            var yPoint =0;
             this.Invalidate();
-            foreach (var tileLine in Map.Instance.KantoMap)
+            foreach (var tileLine in Map.Instance.KantoMap )
             {
-                var xPoint = 0;
-                foreach (var tile in tileLine)
+                var xPoint =0;
+                foreach (var tile in tileLine )
                 {
                     // All tiles have a backgroud!
                     graphic.DrawImage(tile.TileBackgroud, xPoint, yPoint);
