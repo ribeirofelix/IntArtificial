@@ -164,7 +164,16 @@ namespace PrologC {
 			System::Console::WriteLine("----END screams gary----");
 		}
 
+		static int pokeballs()
+		{
+			PlTermv av(1);
 
+			PlQuery q("pokeball",av);
+			q.next_solution();
+
+			return (int)av[0];
+
+		}
 
 		/********************/
 		/* Assertions rules */

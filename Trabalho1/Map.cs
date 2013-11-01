@@ -129,11 +129,12 @@ namespace Model
         private void ReadPokemons(string pokemonFile)
         {
             StreamReader st = null;
-
+            StreamWriter sw = null;
             /* Try to open a text file */
             try
             {
                 st = new System.IO.StreamReader(pokemonFile);
+                sw = new StreamWriter(pokemonFile + ".out");
             }
             catch (FileNotFoundException e)
             {
@@ -146,19 +147,24 @@ namespace Model
 
             for (int i = 0; i < 150; i++)
             {
-                /* Read tuple <type, x, y> */
-#if !DEBUG
+                /* Read tuple <x, y, pokemon> */
+
                 var line = st.ReadLine().Split(' ');
-                char t = char.Parse(line[2]);
-                int x = int.Parse(line[1]);
-                int y = int.Parse(line[0]);
-#else
-                int nPoke = rndType.Next(pokemons.Count);
-                Pokemons t = pokemons[nPoke];
-                pokemons.RemoveAt(nPoke);
-                int x = -1;
-                int y = -1;
-#endif
+                string pokeN = line[2];
+                int x = int.Parse(line[0]);
+                int y = int.Parse(line[1]);
+
+                Pokemons t ;
+                if (pokeN == "-1") // aleatory Pokemon
+                {
+                    int nPoke = rndType.Next(pokemons.Count);
+                    t = pokemons[nPoke];
+                    pokemons.RemoveAt(nPoke);
+                }
+                else
+                    t = (Pokemons) Enum.Parse(typeof(Pokemons), pokeN);
+                
+
                 /* If random position */
                 if (x == -1 && y == -1)
                 {
@@ -178,6 +184,7 @@ namespace Model
                     GetTile(x, y).hasMart ||
                        GetTile(x, y).HasAsh );
                     
+                    
                 }
 
                 /* Create pokemon */
@@ -186,7 +193,9 @@ namespace Model
 
                 /* Assign pokemon */
                 GetTile(x, y).Pokemon = _pokemon;
+                sw.WriteLine(x + " " + y + " " + _pokemon.ToString() );
             }
+            sw.Close();
         }
 
         #endregion
@@ -223,7 +232,7 @@ namespace Model
                         {
                             x = rnd.Next(42); y = rnd.Next(42);
                             t = GetTile(x,y);
-                        }while(t.Elem != PokeElem.None);
+                        }while(t.Elem != PokeElem.None && !t.HasAsh );
                         t.Elem = elem;
                         sw.WriteLine(x + " " + y);
                     }
@@ -283,10 +292,11 @@ namespace Model
         {
             Helper.InitializeProlog(Resources.Prolog);
             ReadMap(Resources.Mapa01);
+            PositionAsh();
             ReadTileElem(Resources.PositionMarts, PokeElem.Mart);
             ReadTileElem(Resources.PositionPokeCenters, PokeElem.PokeCenter);
             ReadTileElem(Resources.PositionTrainers, PokeElem.Trainer);
-            PositionAsh();
+           
             ReadPokemons(Resources.PosicaoPokemons);
 
         }

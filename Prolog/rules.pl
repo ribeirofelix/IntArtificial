@@ -47,10 +47,6 @@ removeHead([Head|Tail],Head,Tail).
 
 remove(X,Y,[L|LS],L1) :- removeHead([L|LS],L,Tail) , L = safe(X,Y) , allowed(X,Y).
 
-isAllowed(H,[H|R]) :- H = safe(X,Y) , allowed(X,Y) .
-isAllowed(H,[Y|R]) :- isAllowed(H,R).
-
-
 isSafe(H,[H|R]) :- H = safe(X,Y) .
 isSafe(H,[Y|R]) :- isSafe(H,R).
 
@@ -96,6 +92,24 @@ iscomp(G) :-   (G == 71) ;
 allowed(X,Y) :- groundType(X,Y,G) , iscomp(G) .
 
 setType(P) :- ( type(P,T) , type(P,K) , T \== K , assert(T) , assert(K) ) ; (type(P,K) , assert(K) ).
+
+
+distance_min(L,MinXY ) :-  at(X,Y) , distance_min(L, X, Y, MinXY).
+distance_min(L, X0, Y0, MinXY) :-    aggregate( min(D, [Xt,Yt]) , (member([Xt,Yt], L) , D is sqrt((Xt-X0)^2+(Yt-Y0)^2)), MinXY).
+
+nrstPokeCenter(X,Y) :- setof([Xs,Ys], pokeCenter(Xs,Ys),L) , distance_min(L,MinXY) , MinXY = min(D,[X,Y]) .
+
+nrstTrainer(X,Y) :- setof([Xs,Ys], trainer(Xs,Ys),L) , distance_min(L,MinXY) , MinXY = min(D,[X,Y]) .
+
+nrstPokemon(X,Y) :- setof([Xs,Ys], pokemon(Xs,Ys),L) , distance_min(L,MinXY) , MinXY = min(D,[X,Y]) .
+
+pokemon(X,Y) :- pokemon(X,Y,_).
+
+
+nrstAllowed(L,MinXY ) :-  at(X,Y) , nrstAllowed(L, X, Y, MinXY).
+nrstAllowed(L, X0, Y0, MinXY) :-    aggregate( min(D, safe(Xt,Yt)) , (member(safe(Xt,Yt), L) , D is sqrt((Xt-X0)^2+(Yt-Y0)^2) , allowed(Xt,Yt) ), MinXY).
+
+isAllowed(H,L) :- nrstAllowed(L,MinSfAlw) , MinSfAlw = min(D,H) .
 
 
 %-----------------------------------
@@ -490,15 +504,16 @@ inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
 % gary killer mode !
-bestMove(killGary(Xg,Yg)) :- pokedex(N) , N == 149 , not(hurtPokemon) , trainer(X,Y) , Xg = X , Yg = Y , assert(hurtPokemon) , retract(trainer(X,Y)) , retract(at(C,D)) , assert(at(Xg,Yg)) .
-bestMove(goPokeCenter(Xg,Yg)) :- pokedex(N) , N == 149 , hurtPokemon , pokeCenter(X,Y) , Xg = X , Yg = Y , retract(hurtPokemon) , retract(at(C,D)) , assert(at(Xg,Yg))  .
+bestMove(killGary(Xg,Yg)) :- pokedex(N) , N == 149 , not(hurtPokemon) , nrstTrainer(X,Y) , Xg = X , Yg = Y , assert(hurtPokemon) , retract(trainer(X,Y)) , retract(at(C,D)) , assert(at(Xg,Yg)) .
+bestMove(goPokeCenter(Xg,Yg)) :- pokedex(N) , N == 149, hurtPokemon , nrstPokeCenter(X,Y) , Xg = X , Yg = Y , retract(hurtPokemon) , retract(at(C,D)) , assert(at(Xg,Yg))  .
 % Final - gary killer mode !
 
+
 bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P), pokeball(N) , (  N > 0  , retract(pokemon(X,Y,P)) , dec(N,ND) , retract(pokeball(N)) , assert(pokeball(ND)) , setType(P) , pokedex(PN) , inc(PN,IPN) , retract(pokedex(PN)) , assert(pokedex(IPN)) ) .
-bestMove(catchPokemon(Xg,Yg)) :- pokemon(X,Y,P) , visited(X,Y) ,Xg = X , Yg = Y  ,pokeball(N) , N >  0 , retract(at(H,J)) , assert(at(X,Y)) .
+bestMove(catchPokemon(Xg,Yg)) :- nrstPokemon(X,Y), pokemon(X,Y,P) , visited(X,Y) ,Xg = X , Yg = Y  ,pokeball(N) , N >  0 , retract(at(H,J)) , assert(at(X,Y)) .
 
 bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract(hurtPokemon) .
-bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y) , pokeball(N) , N < 150 , retract(mart(X,Y)) , NM is N + 25 , retract(pokeball(N)) , assert(pokeball(NM)) .
+bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y) , pokeball(N) , pokedex(D) , ND is  N + D , ND < 150 , retract(mart(X,Y)) , NM is N + 25 , retract(pokeball(N)) , assert(pokeball(NM)) .
 bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
 
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X > 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(trainer( D ,Y))  , not(visited(D,Y)) ,  allowed(D,Y) )
@@ -513,7 +528,6 @@ bestMove(moveRight(X,I)) :- (at(X,Y) , Y < 41 , facing(east) , inc(Y,I) , safe(X
 bestMove(moveLeft(X,D)) :- (at(X,Y) , Y > 0 ,  facing(west) , dec(Y,D) , safe(X,D), not(trainer(X,D))  , not(visited(X,D)) , allowed(X,D) ) 
 											, assert(at(X,D)) , retract(at(X,Y)) , assert(visited(X,D)) ,removeSafe(X,D) .
 
-% mais uma regra pra aleatorio.
 
 
 bestMove(turnRight) :- 	(facing(north) , at(X,Y) , dec(X,D) , inc(Y,I) , (not(safe(D,Y)) ; not(allowed(D,Y)) ; visited(D,Y) )  , safe(X,I) , allowed(X,I)  , not(visited(X,I)) ,  assert(facing(east)) , retract(facing(north)) );

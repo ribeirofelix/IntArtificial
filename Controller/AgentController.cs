@@ -63,9 +63,7 @@ namespace Controller
                     case BestMove.TurnLeft:
                         mapCont.TurnAsh(act.move); break;
                     case BestMove.Joker:
-                        mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
-                        Prolog.Safes();
-                        Prolog.Pokemons();
+                        goto looser;
                         break;
                     case BestMove.KillGary:
                         var pathK = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
@@ -87,13 +85,13 @@ namespace Controller
                 }
 
             }
-            mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
+looser:            mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
 
             Prolog.ScreamsT();
             Prolog.Trainers();
             Prolog.Pokemons();
             mapCont.sw.Close();
-            mapCont.Ash.listenersCost(Map.Instance.Ash.TotalCost);
+            mapCont.Ash.listenerInfo(mapCont.Ash);
             Console.WriteLine(mapCont.Ash.TotalCost);
 
             

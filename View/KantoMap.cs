@@ -20,7 +20,8 @@ namespace View
         Label costTextLabel;
         Label numberCostTextLabel;
         Label isHurt;
-      
+        Label pokeCount;
+        Label pokeballs;
         PictureMap picsMap;
      
         public KantoMap()
@@ -43,13 +44,7 @@ namespace View
             costTextLabel.Size = new Size(150, 50);
             costTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);
 
-            isHurt = new Label();
-            this.Controls.Add(isHurt);
-            isHurt.Location = new Point(1000, 200);
-            isHurt.Text = "Not Hurt!";
-            isHurt.Size = new Size(150, 50);
-            isHurt.Font = new Font(isHurt.Font.FontFamily.Name, 10);
-
+          
             numberCostTextLabel = new Label();
             this.Controls.Add(numberCostTextLabel);
             numberCostTextLabel .Location = new Point(1000, 170);
@@ -57,7 +52,26 @@ namespace View
             numberCostTextLabel.Size = new Size(150, 50);
             numberCostTextLabel.Font = new Font(costTextLabel.Font.FontFamily.Name, 20);
 
-         
+           isHurt = new Label();
+            this.Controls.Add(isHurt);
+            isHurt.Location = new Point(1000, 200);
+            isHurt.Text = "Not Hurt!";
+            isHurt.Size = new Size(150, 50);
+            isHurt.Font = new Font(isHurt.Font.FontFamily.Name, 10);
+
+            pokeCount = new Label();
+            this.Controls.Add(pokeCount);
+            pokeCount.Location = new Point(1000, 260);
+            pokeCount.Text = "0";
+            pokeCount.Size = new Size(150, 50);
+            pokeCount.Font = new Font(isHurt.Font.FontFamily.Name, 10);
+
+            pokeballs = new Label();
+            this.Controls.Add(pokeballs);
+            pokeballs.Location = new Point(1000, 320);
+            pokeballs.Text = "0";
+            pokeballs.Size = new Size(150, 50);
+            pokeballs.Font = new Font(isHurt.Font.FontFamily.Name, 10);
 
 
 
@@ -73,21 +87,25 @@ namespace View
             this.Controls.Add(picsMap);
 
             InitializeComponent();
-            MapController.Instance.Ash.listenersCost += SetNewCost;
+            MapController.Instance.Ash.listenerInfo += SetNewInfos;
             MapController.Instance.listenersAsh += UpdateAshPosition;
             MapController.Instance.Ash.showPoke += ShowPokemon;
-            MapController.Instance.Ash.printHurt += PrintHurt;
-
+       
 
         }
 
    
-        public void SetNewCost(int cost)
+        public void SetNewInfos(Ash  ash)
         {
 
-            AutoClosingMessageBox.Show("Cost:" + cost.ToString(), "Cost:" + cost.ToString(), 50);           
-            numberCostTextLabel.Text = cost.ToString();
-            numberCostTextLabel.Invalidate();
+            numberCostTextLabel.Text = ash.TotalCost.ToString();
+            isHurt.Text = ash.IsHurted ? "Hurted!" : "Not hurted!";
+            pokeballs.Text = ash.Pokeballs.ToString();
+            pokeCount.Text = ash.PokeCount.ToString();
+
+            isHurt.Update();
+            pokeballs.Update();
+            pokeCount.Update();
             numberCostTextLabel.Update();
         }
 
@@ -110,13 +128,8 @@ namespace View
             lsvMyPokemnos.Update();
         }
 
-        public void PrintHurt(bool isHurt)
-        {
-           
-            this.isHurt.Text = isHurt ? "Hurt!" : "Not Hurt!";
-            this.Update();
-
-        }
+    
+        
      
 
 

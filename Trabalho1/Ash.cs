@@ -9,7 +9,7 @@ using Model.Properties;
 
 namespace Model
 {
-    public delegate void CostChangedDelegate(int newCost);
+    public delegate void UpdateInfos(Ash ash);
     public delegate void ShowPokemon(Pokemon poke);
     public delegate void PrintHurt(bool isHurt);
 
@@ -27,13 +27,13 @@ namespace Model
 
         private bool hurtedPokemons ;
         private int totalCost ;
-
+     
         public int TotalCost { get { return totalCost; } }
+        public bool IsHurted { get { return hurtedPokemons; } }
+        public int Pokeballs { get { return ManagedProlog.Prolog.Pokeballs(); } }
 
-        public CostChangedDelegate listenersCost;
+        public UpdateInfos listenerInfo;
         public ShowPokemon showPoke;
-        public PrintHurt printHurt;
-
 
         public Direction direcition { get; set; }
 
@@ -74,10 +74,8 @@ namespace Model
              Map.Instance.GetTile(this.Pos).Pokemon = null;
             this.pokeCount++;
             this.totalCost -= 5;
-#if !TEST
-            listenersCost(totalCost);
-#endif
-           
+
+            listenerInfo(this);
             
         }
 
@@ -114,27 +112,27 @@ namespace Model
             }
 
             totalCost -= 1;
-#if !TEST
-            listenersCost(totalCost);
-#endif
+            listenerInfo(this);
+
         }
 
         public void Step()
         {
             this.totalCost--;
+            listenerInfo(this);
 #if !TEST
-            listenersCost(totalCost);
+           
             printHurt(ManagedProlog.Prolog.IsHurt());
 #endif
         }
 
         public void HealPokemons()
         {
-            totalCost -= 10;
+            totalCost -= 100;
             hurtedPokemons = true;
-#if !TEST
-            listenersCost(totalCost);
-#endif
+
+            listenerInfo(this);
+
         }
 
         public void Battle(bool win, Helper.Point trnPoint )
@@ -146,17 +144,17 @@ namespace Model
                 totalCost += 150;
                 Map.Instance.GetTile(trnPoint).Elem = PokeElem.None;
             }
-#if !TEST
-            listenersCost(totalCost);
-#endif
+
+            listenerInfo(this);
+
         }
 
         public void BuyPokeballs()
         {
             totalCost -= 10;
-#if !TEST
-            listenersCost(totalCost);
-#endif
+
+            listenerInfo(this);
+
         }
         
     }

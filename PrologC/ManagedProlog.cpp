@@ -91,10 +91,9 @@ namespace ManagedProlog {
 			PrologC::Prolog::screamsT();
 		}
 
-		static void FreeProlog()
+		static int Pokeballs()
 		{
-			PlEngine * e = (PlEngine *) eng;
-			free(e);
+			return PrologC::Prolog::pokeballs();
 		}
 	private:
 		static void * eng;
