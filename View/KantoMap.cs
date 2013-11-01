@@ -23,6 +23,8 @@ namespace View
         Label pokeCount;
         Label pokeballs;
         PictureMap picsMap;
+
+        AshImage imgAsh;
      
         public KantoMap()
         {
@@ -83,8 +85,12 @@ namespace View
             };
 
             picsMap = new PictureMap(MapController.Instance);
+            imgAsh = new AshImage(this);
+
+
 
             this.Controls.Add(picsMap);
+            this.Controls.Add(imgAsh);
 
             InitializeComponent();
             MapController.Instance.Ash.listenerInfo += SetNewInfos;
@@ -137,4 +143,33 @@ namespace View
      
       
     }
+
+
+    public class AshImage : PictureBox
+    {
+        
+
+        private Helper.Point position;
+
+        public AshImage(Form fm)
+        {
+            this.InitialImage = Map.Instance.Ash.AshImage;
+            this.Width = 100;
+            this.Height = 100;
+            this.Location = new Point(100, 500);
+
+            InitLayout();
+
+        }
+
+        
+
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
+            this.Invalidate();
+            pe.Graphics.DrawImage(Map.Instance.Ash.AshImage, 1000, 500);
+        }
+    }
+
 }
