@@ -28,7 +28,12 @@ namespace Model
         public PokeElem Elem
         {
             get { return _pokeElem; }
-            set { _pokeElem = value; }
+            set 
+            {
+                _pokeElem = value; 
+                if(listUpdView != null)
+                    listUpdView();
+            }
         }
 
         private TileState status;
@@ -42,6 +47,9 @@ namespace Model
                     status = TileState.VisitedSafe;
                 else
                     status = value;
+
+                if (listUpdView != null)
+                    listUpdView();
             }
         }
 
@@ -108,6 +116,8 @@ namespace Model
                 _pokemon = value;
                 if(_pokemon != null)
                     _pokemon.Pos = new Helper.Point(this.XPoint, this.YPoint);
+                if (listUpdView != null)
+                    listUpdView();
             }
         }
 
@@ -142,12 +152,7 @@ namespace Model
 		    set { _yPoint = value;}
 	    }
 	
-        
-
-        /* Constructor of Tile class
-         * Parameter: type - type of pokemon
-         */
-
+          
         public Tile(char type,int xPoint, int yPoint , Map map )
         {
             _xPoint = xPoint;
@@ -165,7 +170,6 @@ namespace Model
                 default: break;
             }
         }
-
 
         override public string ToString()
         {

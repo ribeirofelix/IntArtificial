@@ -35,7 +35,7 @@ namespace Controller
                 int totalCost;
                 switch (act.move)
                 {
-                    case BestMove.Launch: mapCont.Ash.Pokeball(); mapCont.listenersAsh(Map.Instance.AshIndex, Map.Instance.Ash.direcition); break;
+                    case BestMove.Launch: mapCont.Ash.Pokeball(); break;
                     case BestMove.Heal: mapCont.Ash.HealPokemons(); break;
                     case BestMove.Buy: mapCont.Ash.BuyPokeballs(); break;
                     case BestMove.Battle:
@@ -44,11 +44,6 @@ namespace Controller
                         {
                             Prolog.Trainers();
                             mapCont.sw.Close();
-                            mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
-                            while (true)
-                            {
-                                mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
-                            }
                             throw new Exception(act.point.ToString());
                         }
                         else
@@ -85,7 +80,7 @@ namespace Controller
                 }
 
             }
-looser:            mapCont.listenersAsh(mapCont.Ash.Pos, mapCont.Ash.direcition);
+looser: 
 
             Prolog.ScreamsT();
             Prolog.Trainers();

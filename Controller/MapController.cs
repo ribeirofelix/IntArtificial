@@ -49,8 +49,7 @@ namespace Controller
 
         #endregion
 
-        public AshMovedDelegate listenersAsh;
-        
+       
         #region /* CONSTRUCTOR */
 
 
@@ -126,10 +125,7 @@ namespace Controller
                 {
                     Map.Instance.GetTile(safeNgh).Status = TileState.Safe;
                 }
-                
-#if !TEST
-                listenersAsh(point,Ash.direcition);
-#endif
+
             }
         }
 
@@ -162,9 +158,7 @@ namespace Controller
         public void TurnAsh(BestMove dir)
         {
             Ash.Turn(dir);          
-#if !TEST
-            listenersAsh(Ash.Pos, Ash.direcition);
-#endif
+
         }
 
         private void DecidePutElems(Helper.Point pt)

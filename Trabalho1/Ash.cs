@@ -16,6 +16,8 @@ namespace Model
 
     public class Ash
     {
+        public UpdateView listUpdView;
+
      
         private Image _ashImage;
         private int pokeCount = 0;
@@ -105,6 +107,8 @@ namespace Model
 
             totalCost -= 1;
             listenerInfo(this);
+            Map.Instance.GetTile(this.Pos).listUpdView();
+          
 
         }
 
@@ -112,6 +116,7 @@ namespace Model
         {
             this.totalCost--;
             listenerInfo(this);
+                      
         }
 
         public void HealPokemons()

@@ -28,8 +28,6 @@ namespace Model
 
         private const int MAXTILES = 42;
         
-        public Helper.Point[] ashAndBdgsPos = new Helper.Point[9];
-        public Pokedex pokedex;
         private Tile[][] _map = new Tile[MAXTILES][];// Enumerable.Repeat<Tile[]>(new Tile[MAXTILES],MAXTILES).ToArray();
 
         public ICollection<ICollection<Tile>> KantoMap
@@ -51,9 +49,10 @@ namespace Model
             }
             set
             {
-                _ashIndex = value;
-                ashAndBdgsPos[0] = _ashIndex;
+                var oldIndex = _ashIndex; 
+                _ashIndex = value;               
                 this.Ash.Pos = new Helper.Point(_ashIndex.x, _ashIndex.y);
+                GetTile(oldIndex).listUpdView();
             }
         }
 
@@ -253,7 +252,7 @@ namespace Model
            this.Ash = new Ash() {}; //ash
            this.Ash.Pos = new Helper.Point(19, 24);
            _ashIndex = new Helper.Point(19, 24);
-           ashAndBdgsPos[0] = _ashIndex;
+          
             
         }
 

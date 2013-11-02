@@ -89,7 +89,6 @@ namespace View
            
             InitializeComponent();
             MapController.Instance.Ash.listenerInfo += SetNewInfos;
-            MapController.Instance.listenersAsh += UpdateAshPosition;
             MapController.Instance.Ash.showPoke += ShowPokemon;
        
 
@@ -110,15 +109,6 @@ namespace View
             numberCostTextLabel.Update();
         }
 
-        public void UpdateAshPosition(Helper.Point newAshPoint, Direction dir  )
-        {
-            picsMap.mapImage[newAshPoint.x][newAshPoint.y].ash = Map.Instance.Ash.AshImage;
-
-            picsMap.mapImage[newAshPoint.x][newAshPoint.y].Invalidate();
-            picsMap.mapImage[newAshPoint.x][newAshPoint.y].Update();
-        
-            
-        }
         public void ShowPokemon(Pokemon poke)
         {
             
@@ -135,11 +125,10 @@ namespace View
              
         Tile tile ;
         private const int prop = 22;
-
+        int i;
        
         public Direction ashDir = Direction.South;
-        public Image ash;
-
+     
 
         public TileImage(Tile tl, int x , int y)
         {
@@ -178,11 +167,11 @@ namespace View
             if (statsImg != null)
                 graphic.DrawImage(statsImg, xPoint, yPoint);
 
-            if (ash != null)
+            if (tile.HasAsh)
             {
-                Bitmap ashBit = new Bitmap(ash);
+                Bitmap ashBit = new Bitmap(tile.Ash.AshImage);
 
-                switch (ashDir)
+                switch (tile.Ash.direcition)
                 {
                     case Direction.North:
                         ashBit = rotateImage(ashBit, 180);
@@ -196,15 +185,21 @@ namespace View
                     default:
                         break;
                 }
-                graphic.DrawImage(ashBit, Map.Instance.AshIndex.y * prop, Map.Instance.AshIndex.x * prop);
+                graphic.DrawImage(ashBit, xPoint , yPoint);
 
             }
         }
 
         private void UpdateTile()
         {
+            int i = 0 ;
+            while (i < 10000000 )
+                i++;
+
             this.Invalidate();
             this.Update();
+         
+            
         }
 
         private Bitmap rotateImage(Bitmap b, float angle)
