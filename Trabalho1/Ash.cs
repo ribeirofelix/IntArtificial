@@ -1,4 +1,4 @@
-﻿#define TEST
+﻿//#define TEST
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,7 +16,7 @@ namespace Model
 
     public class Ash
     {
-        private Dictionary<PokemonTypes, bool> _pokemons = new Dictionary<PokemonTypes, bool>(5);
+     
         private Image _ashImage;
         private int pokeCount = 0;
         public int PokeCount
@@ -50,17 +50,10 @@ namespace Model
 
         public Ash()
         {
-
-            foreach (PokemonTypes i in Enum.GetValues(typeof(PokemonTypes)))
-                _pokemons.Add(i, false);
             direcition = Direction.South;
-
         }
 
-        public bool HasPokemon(PokemonTypes poke)
-        {
-            return _pokemons[poke];
-        }
+       
 
         public Helper.Point Pos { get; set; }
 
@@ -71,10 +64,9 @@ namespace Model
 #if !TEST
              showPoke(Map.Instance.GetTile(this.Pos).Pokemon );
 #endif
-             Map.Instance.GetTile(this.Pos).Pokemon = null;
+            Map.Instance.GetTile(this.Pos).Pokemon = null;
             this.pokeCount++;
             this.totalCost -= 5;
-
             listenerInfo(this);
             
         }
@@ -120,10 +112,6 @@ namespace Model
         {
             this.totalCost--;
             listenerInfo(this);
-#if !TEST
-           
-            printHurt(ManagedProlog.Prolog.IsHurt());
-#endif
         }
 
         public void HealPokemons()

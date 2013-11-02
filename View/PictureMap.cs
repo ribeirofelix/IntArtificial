@@ -15,92 +15,22 @@ namespace View
         Image ash = Map.Instance.Ash.AshImage ;
         public Helper.Point ashPoint = Map.Instance.AshIndex;
         public Direction ashDir = Direction.South;
-        private System.ComponentModel.IContainer components;
+
+        public TileImage[][] mapImage = new TileImage[42][];
        
         private const int prop = 22;
+
         public PictureMap(MapController kantoMap) :base ()
         {
             this.Width = 1000;
             this.Height = 1000;
             this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
             this.UpdateStyles();
+            InitilizeMatrix();
 
         }
-
-        protected override void OnPaint(PaintEventArgs pe)
-        {
           
-            base.OnPaint(pe);
-            pe.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            DrawMap(pe.Graphics);
-        }
-     
-        private void DrawMap(Graphics graphic)
-        {
-            var yPoint =0;
-            this.Invalidate();
-            foreach (var tileLine in Map.Instance.KantoMap )
-            {
-                var xPoint =0;
-                foreach (var tile in tileLine )
-                {
-                    // All tiles have a backgroud!
-                    graphic.DrawImage(tile.TileBackgroud, xPoint, yPoint);
-
-                    if (tile.HasPokemon)
-                        graphic.DrawImage(tile.Pokemon.PokeImage, xPoint, yPoint);
-
-                    Image pokeElemIg = tile.PokeElemImag;
-                    if (pokeElemIg != null)
-                        graphic.DrawImage(pokeElemIg, xPoint, yPoint);
-
-                    Image statsImg = tile.StatusImg;
-                    if (statsImg != null)
-                        graphic.DrawImage(statsImg, xPoint, yPoint);
-
-                    xPoint += prop;
-                }
-                yPoint += prop;
-            }
-
-            Bitmap ashBit = new Bitmap(ash);
-            switch (ashDir)
-            {
-                case Direction.North:
-                    ashBit = rotateImage( ashBit , 180);
-                    break;
-                case Direction.East:
-                    ashBit = rotateImage(ashBit, 279);
-                    break;
-                case Direction.West:
-                    ashBit = rotateImage(ashBit, 90);
-                    break;
-                default:
-                    break;
-            }
-            graphic.DrawImage(ashBit, ashPoint.y * prop, ashPoint.x * prop);
-
-        }
-
-       
-
-        private Bitmap rotateImage(Bitmap b, float angle)
-        {
-            //create a new empty bitmap to hold rotated image
-            Bitmap returnBitmap = new Bitmap(b.Width, b.Height);
-            //make a graphics object from the empty bitmap
-            Graphics g = Graphics.FromImage(returnBitmap);
-            //move rotation point to center of image
-            g.TranslateTransform((float)b.Width / 2, (float)b.Height / 2);
-            //rotate
-            g.RotateTransform(angle);
-            //move image back
-            g.TranslateTransform(-(float)b.Width / 2, -(float)b.Height / 2);
-            //draw passed in image onto graphics object
-            g.DrawImage(b, new Point(0, 0));
-            return returnBitmap;
-        }
-
+        
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -110,10 +40,29 @@ namespace View
 
         }
 
-       
 
-     
-    
+        private void InitilizeMatrix()
+        {
+            var yPoint =0;
+            int i = 0;
+            foreach (var tileLine in Map.Instance.KantoMap)
+            {
+                var xPoint = 0;
+                int j = 0;
+                mapImage[i] = new TileImage[42];
+                foreach (var tile in tileLine)
+                {
+                    mapImage[i][j] = new TileImage(tile, xPoint, yPoint);
+                    this.Controls.Add(  mapImage[i][j] );
+                    xPoint += prop;
+                    j++;
+                }
+                i++;
+                yPoint += prop;
+            }
+
+        }
+         
     
     }
 }

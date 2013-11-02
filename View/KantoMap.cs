@@ -24,8 +24,6 @@ namespace View
         Label pokeballs;
         PictureMap picsMap;
 
-        AshImage imgAsh;
-     
         public KantoMap()
         {
             this.SetStyle(System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
@@ -85,13 +83,10 @@ namespace View
             };
 
             picsMap = new PictureMap(MapController.Instance);
-            imgAsh = new AshImage(this);
-
-
+            
 
             this.Controls.Add(picsMap);
-            this.Controls.Add(imgAsh);
-
+           
             InitializeComponent();
             MapController.Instance.Ash.listenerInfo += SetNewInfos;
             MapController.Instance.listenersAsh += UpdateAshPosition;
@@ -115,14 +110,12 @@ namespace View
             numberCostTextLabel.Update();
         }
 
-        public void UpdateAshPosition(Helper.Point newAshPoint, Direction dir )
+        public void UpdateAshPosition(Helper.Point newAshPoint, Direction dir  )
         {
-        
-            picsMap.ashPoint.x = newAshPoint.x;
-            picsMap.ashPoint.y = newAshPoint.y;
-            picsMap.ashDir = dir;
-            picsMap.Update();
+            picsMap.mapImage[newAshPoint.x][newAshPoint.y].ash = Map.Instance.Ash.AshImage;
 
+            picsMap.mapImage[newAshPoint.x][newAshPoint.y].Invalidate();
+            picsMap.mapImage[newAshPoint.x][newAshPoint.y].Update();
         
             
         }
@@ -132,44 +125,105 @@ namespace View
 
             lsvMyPokemnos.Items.Add(poke.ToString());
             lsvMyPokemnos.Update();
-        }
-
-    
-        
-     
-
-
-  
-     
+        }    
       
     }
 
 
-    public class AshImage : PictureBox
+    public class TileImage : PictureBox
     {
-        
+             
+        Tile tile ;
+        private const int prop = 22;
 
-        private Helper.Point position;
+       
+        public Direction ashDir = Direction.South;
+        public Image ash;
 
-        public AshImage(Form fm)
+
+        public TileImage(Tile tl, int x , int y)
         {
-            this.InitialImage = Map.Instance.Ash.AshImage;
-            this.Width = 100;
-            this.Height = 100;
-            this.Location = new Point(100, 500);
-
+            this.Width = prop;
+            this.Height = prop;
+            this.Location = new Point(x, y);
+            this.tile = tl;
+            this.tile.listUpdView += UpdateTile;
+          
             InitLayout();
 
         }
-
         
-
         protected override void OnPaint(PaintEventArgs pe)
         {
+            pe.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+          
             base.OnPaint(pe);
-            this.Invalidate();
-            pe.Graphics.DrawImage(Map.Instance.Ash.AshImage, 1000, 500);
+           
+            var graphic = pe.Graphics;
+
+            var xPoint = 0;
+            var yPoint = 0;
+
+            // All tiles have a backgroud!
+            graphic.DrawImage(tile.TileBackgroud, xPoint , yPoint);
+
+            if (tile.HasPokemon)
+                graphic.DrawImage(tile.Pokemon.PokeImage, xPoint, yPoint);
+
+            Image pokeElemIg = tile.PokeElemImag;
+            if (pokeElemIg != null)
+                graphic.DrawImage(pokeElemIg, xPoint, yPoint);
+
+            Image statsImg = tile.StatusImg;
+            if (statsImg != null)
+                graphic.DrawImage(statsImg, xPoint, yPoint);
+
+            if (ash != null)
+            {
+                Bitmap ashBit = new Bitmap(ash);
+
+                switch (ashDir)
+                {
+                    case Direction.North:
+                        ashBit = rotateImage(ashBit, 180);
+                        break;
+                    case Direction.East:
+                        ashBit = rotateImage(ashBit, 279);
+                        break;
+                    case Direction.West:
+                        ashBit = rotateImage(ashBit, 90);
+                        break;
+                    default:
+                        break;
+                }
+                graphic.DrawImage(ashBit, Map.Instance.AshIndex.y * prop, Map.Instance.AshIndex.x * prop);
+
+            }
         }
+
+        private void UpdateTile()
+        {
+            this.Invalidate();
+            this.Update();
+        }
+
+        private Bitmap rotateImage(Bitmap b, float angle)
+        {
+            //create a new empty bitmap to hold rotated image
+            Bitmap returnBitmap = new Bitmap(b.Width, b.Height);
+            //make a graphics object from the empty bitmap
+            Graphics g = Graphics.FromImage(returnBitmap);
+            //move rotation point to center of image
+            g.TranslateTransform((float)b.Width / 2, (float)b.Height / 2);
+            //rotate
+            g.RotateTransform(angle);
+            //move image back
+            g.TranslateTransform(-(float)b.Width / 2, -(float)b.Height / 2);
+            //draw passed in image onto graphics object
+            g.DrawImage(b, new Point(0, 0));
+            return returnBitmap;
+        }
+       
     }
 
 }

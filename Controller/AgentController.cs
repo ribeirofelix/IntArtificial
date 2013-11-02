@@ -35,7 +35,7 @@ namespace Controller
                 int totalCost;
                 switch (act.move)
                 {
-                    case BestMove.Launch: mapCont.Ash.Pokeball(); break;
+                    case BestMove.Launch: mapCont.Ash.Pokeball(); mapCont.listenersAsh(Map.Instance.AshIndex, Map.Instance.Ash.direcition); break;
                     case BestMove.Heal: mapCont.Ash.HealPokemons(); break;
                     case BestMove.Buy: mapCont.Ash.BuyPokeballs(); break;
                     case BestMove.Battle:

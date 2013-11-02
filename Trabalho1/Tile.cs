@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Model
 {
+    public delegate void UpdateView();
+  
+
     public class Tile
     {
+        public UpdateView listUpdView;
 
         private Map MapContent;
       
@@ -55,8 +59,6 @@ namespace Model
             }
         }
         
-
-
         public Image TileBackgroud
         {
             get 
@@ -125,38 +127,7 @@ namespace Model
         }
         public bool HasAsh { get { return (this.MapContent.Ash.Pos.x == this.XPoint && this.MapContent.Ash.Pos.y == this.YPoint); } }
        
-        private int _cost;
-        public int TileCost 
-        {
-            get 
-            {
-                switch (this._type)
-                {
-                    case TileTypes.Water:
-                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Water))
-                            return _cost / 10;
-                        break;
-                    case TileTypes.Cave:
-                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Electric))
-                            return _cost / 10;
-                        break;
-                    case TileTypes.Mountain:
-                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Flying))
-                            return _cost / 10;
-                        break;
-                    case TileTypes.Volcano:
-                        if (this.MapContent.Ash.HasPokemon(PokemonTypes.Fire))
-                            return _cost / 10;
-                        break;
-                    default:
-                        return _cost;
-                }
-                return _cost;
-            }
-            set { _cost = value; }
-        }
-
-
+    
         private int _xPoint;
         public int XPoint
         {
@@ -186,11 +157,11 @@ namespace Model
             this.MapContent = map;
             switch (type)
             {
-                case 'G': _type = TileTypes.Grass; _cost = 10; break;
-                case 'M': _type = TileTypes.Mountain; _cost = 120; break;
-                case 'L': _type = TileTypes.Volcano; _cost = 150; break;
-                case 'A': _type = TileTypes.Water; _cost = 100; break;
-                case 'C': _type = TileTypes.Cave; _cost = 120; break;
+                case 'G': _type = TileTypes.Grass; break;
+                case 'M': _type = TileTypes.Mountain; break;
+                case 'L': _type = TileTypes.Volcano; break;
+                case 'A': _type = TileTypes.Water; break;
+                case 'C': _type = TileTypes.Cave; break;
                 default: break;
             }
         }

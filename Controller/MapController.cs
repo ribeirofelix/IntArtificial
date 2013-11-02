@@ -1,4 +1,4 @@
-﻿#define TEST
+﻿//#define TEST
 using Controller.Properties;
 using ManagedProlog;
 using Model;
