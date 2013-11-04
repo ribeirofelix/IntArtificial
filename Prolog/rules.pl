@@ -412,9 +412,18 @@ updMart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y)
 
 updTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy) , putTrainer(X,Y) .
 
+updTrainerFirstLine(X,Y) :- X=0 , inc(Y,Iy) , dec(Y,Dy) , screamTrainer(1,Y) , screamTrainer(X,Iy)  , screamTrainer(X,Dy) , putTrainer(X,Y) .
+updTrainerLastLine(X,Y) :- X=41 , inc(Y,Iy) , dec(Y,Dy) , screamTrainer(40,Y) , screamTrainer(X,Iy)  , screamTrainer(X,Dy) , putTrainer(X,Y) .
+updTrainerFirstColumn(X,Y) :- Y=0 , inc(X,I) , dec(X,D) , screamTrainer(X,1) , screamTrainer(I,Y)  , screamTrainer(D,Y) , putTrainer(X,Y) .
+updTrainerLastColumn(X,Y) :- Y=41 , inc(X,I) , dec(X,D) , screamTrainer(X,40) , screamTrainer(I,Y)  , screamTrainer(D,Y) , putTrainer(X,Y) .
+updTrainerZeroZero(X,Y) :- X=0 , Y=0 , inc(X,I) , inc(Y,Iy) , screamTrainer(X,Iy) , screamTrainer(I,Y) , putTrainer(X,Y) .
+updTrainerZeroLast(X,Y) :- X=0 , Y=41 , inc(X,I) , dec(Y,D) , screamTrainer(X,D) , screamTrainer(I,Y) , putTrainer(X,Y) . 
+updTrainerLastZero(X,Y) :- X=41 , Y=0 , dec(X,D) , inc(Y,Iy) , screamTrainer(X,Iy) , screamTrainer(D,Y) , putTrainer(X,Y) . 
+updTrainerLastLast(X,Y) :- X=41 , Y=41 , dec(X,D) , dec(Y,Dy) , screamTrainer(X,Dy) , screamTrainer(D,Y) , putTrainer(X,Y) .  
 
 tryPokeCenter(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updPokeCenter(I,Y);true) , (updPokeCenter(X,Iy);true) , (updPokeCenter(D,Y);true) , (updPokeCenter(X,Dy);true) .
-tryTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updTrainer(I,Y);true) , (updTrainer(X,Iy);true) , (updTrainer(D,Y);true) , (updTrainer(X,Dy);true) .
+tryTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updTrainer(I,Y);true) , (updTrainer(X,Iy);true) , (updTrainer(D,Y);true) , (updTrainer(X,Dy);true). 
+
 trySeller(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updMart(I,Y);true) , (updMart(X,Iy);true) , (updMart(D,Y);true) , (updMart(X,Dy);true).
 setSafe(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
 
