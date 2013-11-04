@@ -228,6 +228,69 @@ namespace PrologC {
 		/* End - Assertions rules */
 		/**************************/
 
+
+		static void removeMart(int x, int y)
+		{
+			PlTermv av(2);
+			av[0] = x  ;
+			av[1] = y ;
+			PlCall("rmvMart",av);
+		}
+		static void removePokeCenter(int x, int y)
+		{
+			PlTermv av(2);
+			av[0] = x  ;
+			av[1] = y ;
+			PlCall("rmvPokeCenter",av);
+		}
+		static void removeTrainer(int x,int y)
+		{
+			PlTermv av(2);
+			av[0] = x  ;
+			av[1] = y ;
+			PlCall("rmvTrainer",av);
+		}
+
+
+		
+		static bool isMart(int x, int y)
+		{
+			
+			PlTermv av(2);
+			av[0] = x ;
+			av[1] = y ;
+			PlQuery q("mart",av);
+			bool resp = q.next_solution() == 1 ;
+			
+			return resp;
+		}
+
+		
+		static bool isPokeCenter(int x, int y)
+		{
+			
+			PlTermv av(2);
+			av[0] = x ;
+			av[1] = y ;
+			PlQuery q("pokeCenter",av);
+			bool resp = q.next_solution() == 1 ;
+			
+			return resp;
+		}
+
+		
+		static bool isTrainer(int x, int y)
+		{
+			
+			PlTermv av(2);
+			av[0] = x ;
+			av[1] = y ;
+			PlQuery q("trainer",av);
+			bool resp = q.next_solution() == 1 ;
+			
+			return resp;
+		}
+
 	private:
 
 

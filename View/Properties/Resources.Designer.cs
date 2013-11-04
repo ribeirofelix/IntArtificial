@@ -61,6 +61,15 @@ namespace View.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _01___Tema_De_Pokémon__Português_do_Brasil_ {
+            get {
+                return ResourceManager.GetStream("_01___Tema_De_Pokémon__Português_do_Brasil_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pokeelectric {

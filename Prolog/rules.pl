@@ -79,6 +79,14 @@ putMart(X,Y) :-  not(mart(X,Y)) , assert(mart(X,Y)) .
 putPokeCenter(X,Y) :- not(pokeCenter(X,Y)) , assert(pokeCenter(X,Y)).
 putTrainer(X,Y) :- not(trainer(X,Y)) , assert(trainer(X,Y)) , safeLst(L) , takeList(X,Y,L,L1).
 
+
+rmvMart(X,Y) :- retract(mart(X,Y)) .
+rmvPokeCenter(X,Y) :- retract(pokeCenter(X,Y)).
+rmvTrainer(X,Y) :- retract(trainer(X,Y)) , not(safe(X,Y)) , safeLst(L) , includeList(X,Y,L,L1).
+
+
+
+
 removeSafe(X,Y) :- safeLst(L) , ( takeList(X,Y,L,L1) ) . 
 
 

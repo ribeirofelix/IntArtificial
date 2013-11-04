@@ -168,6 +168,18 @@ namespace Controller
                 case PokeElem.PokeCenter: Helper.PutPokeCenter(pt.x, pt.y); break;
                 case PokeElem.Mart: Helper.PutMart(pt.x, pt.y); break;
                 case PokeElem.Trainer: Helper.PutTrainer(pt.x, pt.y); break;
+                case PokeElem.None:
+                    {
+                        if (Prolog.IsMart(pt.x, pt.y))
+                            Prolog.RemoveMart(pt.x, pt.y);
+
+                        if (Prolog.IsPokeCenter(pt.x, pt.y))
+                            Prolog.RemovePokeCenter(pt.x, pt.y);
+
+                        if (Prolog.IsTrainer(pt.x, pt.y))
+                            Prolog.RemoveTrainer(pt.x, pt.y);
+                    }
+                    break;
             }
         }
         

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Model;    
 using Controller;
 using System.Threading;
+using View.Properties;
+using System.Media;
 
 namespace View
 {
@@ -90,7 +92,14 @@ namespace View
             {
                 _agentController = new AgentController(MapController.Instance);
                 buttonStartSearch.Enabled = false;
-               _agentController.Walk();
+
+                SoundPlayer a = new SoundPlayer();
+                a.Stream = Resources._01___Tema_De_Pokémon__Português_do_Brasil_;
+               // a.Load();
+               // a.PlayLooping();
+
+
+                _agentController.Walk();
             };
 
             picsMap = new PictureMap(MapController.Instance);
@@ -101,8 +110,9 @@ namespace View
             InitializeComponent();
             MapController.Instance.Ash.listenerInfo += SetNewInfos;
             MapController.Instance.Ash.showPoke += ShowPokemon;
-       
 
+
+           
         }
 
         void txInterval_KeyUp(object sender, KeyEventArgs e)

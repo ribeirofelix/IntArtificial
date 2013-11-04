@@ -56,6 +56,36 @@ namespace ManagedProlog {
 			PrologC::Prolog::putTrainer(x,y);
 		}
 
+		static void RemoveMart(int x, int y )
+		{			
+			PrologC::Prolog::removeMart(x,y);
+		}
+		static void RemovePokeCenter(int x, int y)
+		{			
+			PrologC::Prolog::removePokeCenter(x,y);
+		}
+		static void RemoveTrainer(int x, int y )
+		{			
+			PrologC::Prolog::removeTrainer(x,y);
+		}
+
+		static bool IsMart(int x, int y)
+		{
+			return PrologC::Prolog::isMart(x,y);
+		}
+
+		
+		static bool IsPokeCenter(int x, int y)
+		{
+			return PrologC::Prolog::isPokeCenter(x,y);
+		}
+
+		
+		static bool IsTrainer(int x, int y)
+		{
+			return PrologC::Prolog::isTrainer(x,y);
+		}
+
 		static void UpdFacing(char * direction)
 		{
 			PrologC::Prolog::updFacing(direction);
