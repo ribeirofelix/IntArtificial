@@ -61,7 +61,7 @@ isEmpty([]).
 %-----------------------------------
 
 % se o local é safe e ainda nao foi visitado coloca na lista
-includeList(X,Y,L,L1) :- not(visited(X,Y)) , (X > -1  , X < 42) , (Y > -1 , Y < 42 ) , addList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
+includeList(X,Y,L,L1) :- (not(visited(X,Y)) , (X > -1  , X < 42) , (Y > -1 , Y < 42 ) , addList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) ) ; true .
 
 % se o local acabou de ser visitado tira da lista
 takeList(X,Y,L,L1) :- delList(safe(X,Y),L,L1) , retract(safeLst(L)) , assert(safeLst(L1)) .
@@ -77,7 +77,7 @@ safe(X,Y) :- safeLst(L) , isSafe(safe(X,Y),L) .
 putGround(X,Y,T) :- assert(groundType(X,Y,T)) .
 putMart(X,Y) :-  not(mart(X,Y)) , assert(mart(X,Y)) .
 putPokeCenter(X,Y) :- not(pokeCenter(X,Y)) , assert(pokeCenter(X,Y)).
-putTrainer(X,Y) :- not(trainer(X,Y)) , assert(trainer(X,Y)).
+putTrainer(X,Y) :- not(trainer(X,Y)) , assert(trainer(X,Y)) , safeLst(L) , takeList(X,Y,L,L1).
 
 removeSafe(X,Y) :- safeLst(L) , ( takeList(X,Y,L,L1) ) . 
 
@@ -398,6 +398,8 @@ type(weezing,poison).
 % ----------------------------------
 
 
+border(X,Y) :- X == 0 ; X == 41 ; Y == 0 ; Y == 41.
+
 
 
 %-----------------------------------
@@ -408,7 +410,7 @@ updPokeCenter(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , perfumeJoy(
 
 updMart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , screamSeller(X,Iy) , screamSeller(D,Y) , screamSeller(X,Dy)), putMart(X,Y) .
 
-updTrainer(X,Y) :-  (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy)) , putTrainer(X,Y) .
+updTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy) , putTrainer(X,Y) .
 
 
 tryPokeCenter(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updPokeCenter(I,Y);true) , (updPokeCenter(X,Iy);true) , (updPokeCenter(D,Y);true) , (updPokeCenter(X,Dy);true) .
@@ -434,7 +436,7 @@ setSafe(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , safeLst(L) ,(
 				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,( not(visited(D,Y)) , not(safe(D,Y)) ) ,(visited(X,Dy) ; safe(X,Dy) )       , 
 					includeList(I,Y,L,L1)   , includeList(D,Y,L1,L3)  ) ;
 
-				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,(visited(D,Y) ; safe(D,Y) ) 	    , (not(visited(X,Dy)),not(safe(X,Dy)) )   , 
+				(( not(visited(I,Y)) , not(safe(I,Y)) ),( visited(X,Iy) ; safe(X,Iy) ) 	   ,(visited(D,Y) ; safe(D,Y) ) 	    , (not(visited(X,Dy)),not(safe(X,Dy)) )   , 
 					includeList(I,Y,L,L1) ,  includeList(X,Dy,L1,L4) ) ;
 
 				(( not(visited(I,Y)) , not(safe(I,Y)) ),(visited(X,Iy) ; safe(X,Iy) ) 	   ,(visited(D,Y) ; safe(D,Y) ) 	  ,(visited(X,Dy) ; safe(X,Dy) )       , 
@@ -504,8 +506,8 @@ inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
 % gary killer mode !
-bestMove(killGary(Xg,Yg)) :- pokedex(N) , N == 149 , not(hurtPokemon) , nrstTrainer(X,Y) , Xg = X , Yg = Y , assert(hurtPokemon) , retract(trainer(X,Y)) , retract(at(C,D)) , assert(at(Xg,Yg)) .
-bestMove(goPokeCenter(Xg,Yg)) :- pokedex(N) , N == 149, hurtPokemon , nrstPokeCenter(X,Y) , Xg = X , Yg = Y , retract(hurtPokemon) , retract(at(C,D)) , assert(at(Xg,Yg))  .
+bestMove(killGary(Xg,Yg)) :- ( (pokedex(N) , N == 149) ; (safeLst(L) , isEmpty(L)) ), not(hurtPokemon) , nrstTrainer(X,Y) , Xg = X , Yg = Y , assert(hurtPokemon) , retract(trainer(X,Y)) , retract(at(C,D)) , assert(at(Xg,Yg)) .
+bestMove(goPokeCenter(Xg,Yg)) :- ( (pokedex(N) , N == 149) ; (safeLst(L) , isEmpty(L)) ), hurtPokemon , nrstPokeCenter(X,Y) , Xg = X , Yg = Y , retract(hurtPokemon) , retract(at(C,D)) , assert(at(Xg,Yg))  .
 % Final - gary killer mode !
 
 

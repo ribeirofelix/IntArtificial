@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;    
 using Controller;
+using System.Threading;
 
 namespace View
 {
@@ -22,7 +23,10 @@ namespace View
         Label isHurt;
         Label pokeCount;
         Label pokeballs;
+        TextBox txInterval;
         PictureMap picsMap;
+
+        public static int Interval = 10;
 
         public KantoMap()
         {
@@ -73,6 +77,13 @@ namespace View
             pokeballs.Size = new Size(150, 50);
             pokeballs.Font = new Font(isHurt.Font.FontFamily.Name, 10);
 
+            txInterval = new TextBox();
+            this.Controls.Add(txInterval);
+            txInterval.Location = new Point(1000, 400);
+            txInterval.Text = "10";
+            txInterval.Size = new Size(150, 50);
+            txInterval.Font = new Font(isHurt.Font.FontFamily.Name, 10);
+            txInterval.KeyUp += txInterval_KeyUp;
 
 
             this.buttonStartSearch.Click += delegate(object sender, EventArgs e)
@@ -94,7 +105,12 @@ namespace View
 
         }
 
-   
+        void txInterval_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            int.TryParse(this.txInterval.Text, out KantoMap.Interval);
+        }
+           
         public void SetNewInfos(Ash  ash)
         {
 
@@ -117,6 +133,8 @@ namespace View
             lsvMyPokemnos.Update();
         }    
       
+
+
     }
 
 
@@ -192,10 +210,7 @@ namespace View
 
         private void UpdateTile()
         {
-            int i = 0 ;
-            while (i < 10000000 )
-                i++;
-
+            Thread.Sleep( KantoMap.Interval );
             this.Invalidate();
             this.Update();
          

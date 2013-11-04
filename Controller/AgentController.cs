@@ -85,6 +85,7 @@ looser:
             Prolog.ScreamsT();
             Prolog.Trainers();
             Prolog.Pokemons();
+            Prolog.Safes();
             mapCont.sw.Close();
             mapCont.Ash.listenerInfo(mapCont.Ash);
             Console.WriteLine(mapCont.Ash.TotalCost);
