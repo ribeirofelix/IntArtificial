@@ -357,7 +357,7 @@ namespace PrologC {
 					
 					break;
 				}
-			case 'h' : ret[retIdx] = Move ; break;
+			case 'h' : ret[retIdx] = Heal ; break;
 			case 'a': ret[retIdx] = AStar ;  break;
 			case 'j' : ret[retIdx] = Joker ; break;
 			case 'k' : ret[retIdx] = KillGary ; break ;

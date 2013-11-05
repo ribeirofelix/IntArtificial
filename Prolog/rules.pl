@@ -418,16 +418,16 @@ updPokeCenter(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , perfumeJoy(
 
 updMart(X,Y) :- (inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamSeller(I,Y) , screamSeller(X,Iy) , screamSeller(D,Y) , screamSeller(X,Dy)), putMart(X,Y) .
 
-updTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy) , putTrainer(X,Y) .
-
-updTrainerFirstLine(X,Y) :- X=0 , inc(Y,Iy) , dec(Y,Dy) , screamTrainer(1,Y) , screamTrainer(X,Iy)  , screamTrainer(X,Dy) , putTrainer(X,Y) .
-updTrainerLastLine(X,Y) :- X=41 , inc(Y,Iy) , dec(Y,Dy) , screamTrainer(40,Y) , screamTrainer(X,Iy)  , screamTrainer(X,Dy) , putTrainer(X,Y) .
-updTrainerFirstColumn(X,Y) :- Y=0 , inc(X,I) , dec(X,D) , screamTrainer(X,1) , screamTrainer(I,Y)  , screamTrainer(D,Y) , putTrainer(X,Y) .
-updTrainerLastColumn(X,Y) :- Y=41 , inc(X,I) , dec(X,D) , screamTrainer(X,40) , screamTrainer(I,Y)  , screamTrainer(D,Y) , putTrainer(X,Y) .
-updTrainerZeroZero(X,Y) :- X=0 , Y=0 , inc(X,I) , inc(Y,Iy) , screamTrainer(X,Iy) , screamTrainer(I,Y) , putTrainer(X,Y) .
-updTrainerZeroLast(X,Y) :- X=0 , Y=41 , inc(X,I) , dec(Y,D) , screamTrainer(X,D) , screamTrainer(I,Y) , putTrainer(X,Y) . 
-updTrainerLastZero(X,Y) :- X=41 , Y=0 , dec(X,D) , inc(Y,Iy) , screamTrainer(X,Iy) , screamTrainer(D,Y) , putTrainer(X,Y) . 
-updTrainerLastLast(X,Y) :- X=41 , Y=41 , dec(X,D) , dec(Y,Dy) , screamTrainer(X,Dy) , screamTrainer(D,Y) , putTrainer(X,Y) .  
+updTrainer(X,Y) :-  
+(X==0 , inc(Y,Iy) , dec(Y,Dy) , screamTrainer(1,Y) , screamTrainer(X,Iy)  , screamTrainer(X,Dy) , putTrainer(X,Y) ) ;
+(X==41 , inc(Y,Iy) , dec(Y,Dy) , screamTrainer(40,Y) , screamTrainer(X,Iy)  , screamTrainer(X,Dy) , putTrainer(X,Y) ) ;
+(Y==0 , inc(X,I) , dec(X,D) , screamTrainer(X,1) , screamTrainer(I,Y)  , screamTrainer(D,Y) , putTrainer(X,Y) ) ;
+(Y==41 , inc(X,I) , dec(X,D) , screamTrainer(X,40) , screamTrainer(I,Y)  , screamTrainer(D,Y) , putTrainer(X,Y) ) ;
+(X==0 , Y=0 , inc(X,I) , inc(Y,Iy) , screamTrainer(X,Iy) , screamTrainer(I,Y) , putTrainer(X,Y) ) ;
+(X==0 , Y=41 , inc(X,I) , dec(Y,D) , screamTrainer(X,D) , screamTrainer(I,Y) , putTrainer(X,Y) ) ; 
+(X==41 , Y=0 , dec(X,D) , inc(Y,Iy) , screamTrainer(X,Iy) , screamTrainer(D,Y) , putTrainer(X,Y) ) ; 
+(X==41 , Y=41 , dec(X,D) , dec(Y,Dy) , screamTrainer(X,Dy) , screamTrainer(D,Y) , putTrainer(X,Y) ) ;  
+(inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , screamTrainer(I,Y) , screamTrainer(X,Iy)  , screamTrainer(D,Y) , screamTrainer(X,Dy) , putTrainer(X,Y)) .
 
 tryPokeCenter(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updPokeCenter(I,Y);true) , (updPokeCenter(X,Iy);true) , (updPokeCenter(D,Y);true) , (updPokeCenter(X,Dy);true) .
 tryTrainer(X,Y) :-  inc(X,I) , inc(Y,Iy) , dec(X,D) , dec(Y,Dy) , (updTrainer(I,Y);true) , (updTrainer(X,Iy);true) , (updTrainer(D,Y);true) , (updTrainer(X,Dy);true). 
@@ -522,18 +522,22 @@ isHurt(N) :- ( hurtPokemon , N = 1) ; ( not(hurtPokemon) , N = 0 ) .
 inc(A, W) :- W is A + 1.
 dec(B, K) :- K is B - 1.
 
-% gary killer mode !
-bestMove(killGary(Xg,Yg)) :- ( (pokedex(N) , N == 149) ; (safeLst(L) , isEmpty(L)) ), not(hurtPokemon) , nrstTrainer(X,Y) , Xg = X , Yg = Y , assert(hurtPokemon) , retract(trainer(X,Y)) , retract(at(C,D)) , assert(at(Xg,Yg)) .
-bestMove(goPokeCenter(Xg,Yg)) :- ( (pokedex(N) , N == 149) ; (safeLst(L) , isEmpty(L)) ), hurtPokemon , nrstPokeCenter(X,Y) , Xg = X , Yg = Y , retract(hurtPokemon) , retract(at(C,D)) , assert(at(Xg,Yg))  .
-% Final - gary killer mode !
 
+
+
+bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract(hurtPokemon) .
+bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
+
+
+% gary killer mode !
+bestMove(killGary(Xg,Yg)) :- ( (pokedex(N) , N == 149) ; (safeLst(L) , isEmpty(L)) ), not(hurtPokemon) , nrstTrainer(X,Y) , Xg = X , Yg = Y , retract(at(C,D)) , assert(at(Xg,Yg)) .
+bestMove(goPokeCenter(Xg,Yg)) :- ( (pokedex(N) , N == 149) ; (safeLst(L) , isEmpty(L)) ), hurtPokemon , nrstPokeCenter(X,Y) , Xg = X , Yg = Y , retract(at(C,D)) , assert(at(Xg,Yg))  .
+% Final - gary killer mode !
 
 bestMove(launchPokeball(P)) :- at(X,Y) , pokemon(X,Y,P), pokeball(N) , (  N > 0  , retract(pokemon(X,Y,P)) , dec(N,ND) , retract(pokeball(N)) , assert(pokeball(ND)) , setType(P) , pokedex(PN) , inc(PN,IPN) , retract(pokedex(PN)) , assert(pokedex(IPN)) ) .
 bestMove(catchPokemon(Xg,Yg)) :- nrstPokemon(X,Y), pokemon(X,Y,P) , visited(X,Y) ,Xg = X , Yg = Y  ,pokeball(N) , N >  0 , retract(at(H,J)) , assert(at(X,Y)) .
-
-bestMove(healPokemon(X,Y)) :- at(X,Y) , pokeCenter(X,Y) ,  hurtPokemon , retract(hurtPokemon) .
 bestMove(buyPokeball(X,Y)) :- at(X,Y) , mart(X,Y) , pokeball(N) , pokedex(D) , ND is  N + D , ND < 150 , retract(mart(X,Y)) , NM is N + 25 , retract(pokeball(N)) , assert(pokeball(NM)) .
-bestMove(battleTrainer(X,Y,R)) :- at(X,Y), trainer(X,Y) , ( ( hurtPokemon , R = 0 ) ; ( not(hurtPokemon) , R = 1 , assert(hurtPokemon) , retract(trainer(X,Y)) ) ) .
+
 
 bestMove(moveUp(D,Y)) :- (at(X,Y) , X > 0 , facing(north) , dec(X,D) , safe( D ,Y) , not(trainer( D ,Y))  , not(visited(D,Y)) ,  allowed(D,Y) )
 											, assert(at(D,Y)) , retract(at(X,Y)) , assert(visited(D,Y))  ,removeSafe(D,Y) .

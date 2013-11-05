@@ -149,19 +149,19 @@ namespace Model
                 /* Read tuple <x, y, pokemon> */
 
                 var line = st.ReadLine().Split(' ');
-                string pokeN = line[2];
+                int pokeN = int.Parse( line[2] );
                 int x = int.Parse(line[0]);
                 int y = int.Parse(line[1]);
 
                 Pokemons t ;
-                if (pokeN == "-1") // aleatory Pokemon
+                if (pokeN == -1) // aleatory Pokemon
                 {
                     int nPoke = rndType.Next(pokemons.Count);
                     t = pokemons[nPoke];
                     pokemons.RemoveAt(nPoke);
                 }
                 else
-                    t = (Pokemons) Enum.Parse(typeof(Pokemons), pokeN);
+                    t = (Pokemons) (pokeN -1 );
                 
 
                 /* If random position */
@@ -222,7 +222,7 @@ namespace Model
                 if (lineArgs.Length == 2)
                 {
                     int x = int.Parse(lineArgs[posX]);
-                    int y = int.Parse(lineArgs[posY]);
+                    int y = int.Parse(lineArgs[posY].Replace('\r',' ').Trim() );
                     if (x == -1 || y == -1) // aleatory mode!
                     {
                         Random rnd = new Random(DateTime.Now.Millisecond);

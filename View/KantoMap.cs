@@ -12,6 +12,7 @@ using Controller;
 using System.Threading;
 using View.Properties;
 using System.Media;
+using System.IO;
 
 namespace View
 {
@@ -29,6 +30,8 @@ namespace View
         PictureMap picsMap;
 
         public static int Interval = 10;
+
+        public static Stream battleMusic = Resources.Pokemon_Gameboy_Music;
 
         public KantoMap()
         {
@@ -93,11 +96,7 @@ namespace View
                 _agentController = new AgentController(MapController.Instance);
                 buttonStartSearch.Enabled = false;
 
-                SoundPlayer a = new SoundPlayer();
-                a.Stream = Resources._01___Tema_De_Pokémon__Português_do_Brasil_;
-               // a.Load();
-               // a.PlayLooping();
-
+                Helper.PlayMusic(Resources.Pokemon_Gameboy_Music);
 
                 _agentController.Walk();
             };
@@ -153,7 +152,6 @@ namespace View
              
         Tile tile ;
         private const int prop = 22;
-        int i;
        
         public Direction ashDir = Direction.South;
      

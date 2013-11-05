@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagedProlog;
 using System.Runtime.InteropServices;
+using System.Media;
+using System.IO;
 
 namespace Model
 {
@@ -211,6 +213,22 @@ namespace Model
 
                 return retInxs;
             }
+        }
+
+
+        private static SoundPlayer sp ;
+
+        public static void PlayMusic(Stream music)
+        {
+            if(sp == null)
+            {
+                sp = new SoundPlayer();
+            }
+            sp.Stop();
+            sp.Stream = music;
+           
+            sp.Load();
+            sp.PlayLooping();
         }
 
 

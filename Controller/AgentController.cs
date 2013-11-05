@@ -62,14 +62,14 @@ namespace Controller
                         break;
                     case BestMove.KillGary:
                         var pathK = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
-                        mapCont.Ash.Battle(true,act.point);
+                        //mapCont.Ash.Battle(true,act.point);
                         mapCont.AshFromTo(pathK, updatePerceptions);                        
                         Prolog.Trainers();
                         break;
                     case BestMove.GoPokeCenter:
                         var pathG = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
                         mapCont.AshFromTo(pathG, updatePerceptions);
-                        mapCont.Ash.HealPokemons();
+                      
                         break;
                     case BestMove.CatchPokemon:
                         var pathC = aStar.Star(Map.Instance.Ash.Pos, act.point, out totalCost) ;
