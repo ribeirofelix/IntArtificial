@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201311072005164_pokeIdString.Designer.cs">
       <DependentUpon>201311072005164_pokeIdString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311112219599_PokeIdIntAndPokeBody.cs" />
+    <Compile Include="Migrations\201311112219599_PokeIdIntAndPokeBody.Designer.cs">
+      <DependentUpon>201311112219599_PokeIdIntAndPokeBody.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="model\PokeContext.cs" />
     <Compile Include="model\Pokemon.cs" />
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311072005164_pokeIdString.resx">
       <DependentUpon>201311072005164_pokeIdString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311112219599_PokeIdIntAndPokeBody.resx">
+      <DependentUpon>201311112219599_PokeIdIntAndPokeBody.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,3600 @@
+
+type: head
+|-
+|090
+|{{MS|090|Shellder (Pokémon)}}
+|{{p|Shellder}}
+{{typetable2|Water}}
+|-
+|091
+|{{MS|091|Cloyster (Pokémon)}}
+|{{p|Cloyster}}
+{{typetable|Water}}
+{{typetable|Ice}}
+|-
+|092
+|{{MS|092|Gastly (Pokémon)}}
+|{{p|Gastly}}
+{{typetable|Ghost}}
+{{typetable|Poison}}
+|-
+|100
+|{{MS|100|Voltorb (Pokémon)}}
+|{{p|Voltorb}}
+{{typetable2|Electric}}
+|-
+|101
+|{{MS|101|Electrode (Pokémon)}}
+|{{p|Electrode}}
+{{typetable2|Electric}}
+|-
+|109
+|{{MS|109|Koffing (Pokémon)}}
+|{{p|Koffing}}
+{{typetable2|Poison}}
+|-
+|132
+|{{MS|132|Ditto (Pokémon)}}
+|{{p|Ditto}}
+{{typetable2|Normal}}
+|-
+|191
+|{{MS|191|Sunkern (Pokémon)}}
+|{{p|Sunkern}}
+{{typetable2|Grass}}
+|-
+|200
+|{{MS|200|Misdreavus (Pokémon)}}
+|{{p|Misdreavus}}
+{{typetable2|Ghost}}
+|-
+|201
+|{{MS|201|Unown (Pokémon)}}
+|{{p|Unown}}
+{{typetable2|Psychic}}
+|-
+|204
+|{{MS|204|Pineco (Pokémon)}}
+|{{p|Pineco}}
+{{typetable2|Bug}}
+|-
+|205
+|{{MS|205|Forretress (Pokémon)}}
+|{{p|Forretress}}
+{{typetable|Bug}}
+{{typetable|Steel}}
+|-
+|266
+|{{MS|266|Silcoon (Pokémon)}}
+|{{p|Silcoon}}
+{{typetable2|Bug}}
+|-
+|268
+|{{MS|268|Cascoon (Pokémon)}}
+|{{p|Cascoon}}
+{{typetable2|Bug}}
+|-
+|337
+|{{MS|337|Lunatone (Pokémon)}}
+|{{p|Lunatone}}
+{{typetable|Rock}}
+{{typetable|Psychic}}
+|-
+|338
+|{{MS|338|Solrock (Pokémon)}}
+|{{p|Solrock}}
+{{typetable|Rock}}
+{{typetable|Psychic}}
+|-
+|351
+|{{MS|351|Castform (Pokémon)}}
+|{{p|Castform}}
+{{typetable2|Normal}}
+|-
+|353
+|{{MS|353|Shuppet (Pokémon)}}
+|{{p|Shuppet}}
+{{typetable2|Ghost}}
+|-
+|362
+|{{MS|362|Glalie (Pokémon)}}
+|{{p|Glalie}}
+{{typetable2|Ice}}
+|-
+|366
+|{{MS|366|Clamperl (Pokémon)}}
+|{{p|Clamperl}}
+{{typetable2|Water}}
+|-
+|429
+|{{MS|429|Mismagius (Pokémon)}}
+|{{p|Mismagius}}
+{{typetable2|Ghost}}
+|-
+|436
+|{{MS|436|Bronzor (Pokémon)}}
+|{{p|Bronzor}}
+{{typetable|Steel}}
+{{typetable|Psychic}}
+|-
+|479
+|{{MS|479|Rotom (Pokémon)}}
+|{{p|Rotom}}
+{{typetable|Electric}}
+{{typetable|Ghost}}
+|-
+|544
+|{{MS|544|Whirlipede (Pokémon)}}
+|{{p|Whirlipede}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|546
+|{{MS|546|Cottonee (Pokémon)}}
+|{{p|Cottonee}}
+{{typetable2|Grass}}
+|-
+|577
+|{{MS|577|Solosis (Pokémon)}}
+|{{p|Solosis}}
+{{typetable2|Psychic}}
+|-
+|578
+|{{MS|578|Duosion (Pokémon)}}
+|{{p|Duosion}}
+{{typetable2|Psychic}}
+|-
+|597
+|{{MS|597|Ferroseed (Pokémon)}}
+|{{p|Ferroseed}}
+{{typetable|Grass}}
+{{typetable|Steel}}
+|-
+|615
+|{{MS|615|Cryogonal (Pokémon)}}
+|{{p|Cryogonal}}
+{{typetable2|Ice}}
+|-
+|616
+|{{MS|616|Shelmet (Pokémon)}}
+|{{p|Shelmet}}
+{{typetable2|Bug}}
+|}
+
+type: serpertine
+|-
+|010
+|{{MS|010|Caterpie (Pokémon)}}
+|{{p|Caterpie}}
+{{typetable2|Bug}}
+|-
+|011
+|{{MS|011|Metapod (Pokémon)}}
+|{{p|Metapod}}
+{{typetable2|Bug}}
+|-
+|013
+|{{MS|013|Weedle (Pokémon)}}
+|{{p|Weedle}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|014
+|{{MS|014|Kakuna (Pokémon)}}
+|{{p|Kakuna}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|023
+|{{MS|023|Ekans (Pokémon)}}
+|{{p|Ekans}}
+{{typetable2|Poison}}
+|-
+|024
+|{{MS|024|Arbok (Pokémon)}}
+|{{p|Arbok}}
+{{typetable2|Poison}}
+|-
+|095
+|{{MS|095|Onix (Pokémon)}}
+|{{p|Onix}}
+{{typetable|Rock}}
+{{typetable|Ground}}
+|-
+|130
+|{{MS|130|Gyarados (Pokémon)}}
+|{{p|Gyarados}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|147
+|{{MS|147|Dratini (Pokémon)}}
+|{{p|Dratini}}
+{{typetable2|Dragon}}
+|-
+|148
+|{{MS|148|Dragonair (Pokémon)}}
+|{{p|Dragonair}}
+{{typetable2|Dragon}}
+|-
+|206
+|{{MS|206|Dunsparce (Pokémon)}}
+|{{p|Dunsparce}}
+{{typetable2|Normal}}
+|-
+|208
+|{{MS|208|Steelix (Pokémon)}}
+|{{p|Steelix}}
+{{typetable|Steel}}
+{{typetable|Ground}}
+|-
+|218
+|{{MS|218|Slugma (Pokémon)}}
+|{{p|Slugma}}
+{{typetable2|Fire}}
+|-
+|219
+|{{MS|219|Magcargo (Pokémon)}}
+|{{p|Magcargo}}
+{{typetable|Fire}}
+{{typetable|Rock}}
+|-
+|247
+|{{MS|247|Pupitar (Pokémon)}}
+|{{p|Pupitar}}
+{{typetable|Rock}}
+{{typetable|Ground}}
+|-
+|265
+|{{MS|265|Wurmple (Pokémon)}}
+|{{p|Wurmple}}
+{{typetable2|Bug}}
+|-
+|336
+|{{MS|336|Seviper (Pokémon)}}
+|{{p|Seviper}}
+{{typetable2|Poison}}
+|-
+|350
+|{{MS|350|Milotic (Pokémon)}}
+|{{p|Milotic}}
+{{typetable2|Water}}
+|-
+|367
+|{{MS|367|Huntail (Pokémon)}}
+|{{p|Huntail}}
+{{typetable2|Water}}
+|-
+|368
+|{{MS|368|Gorebyss (Pokémon)}}
+|{{p|Gorebyss}}
+{{typetable2|Water}}
+|-
+|384
+|{{MS|384|Rayquaza (Pokémon)}}
+|{{p|Rayquaza}}
+{{typetable|Dragon}}
+{{typetable|Flying}}
+|-
+|412
+| {{MS|412|Burmy (Pokémon)}}
+|{{p|Burmy}}
+{{typetable2|Bug}}
+|-
+|413
+| {{MS|413|Wormadam (Pokémon)}}
+|{{p|Wormadam}}
+{{typetable|Bug}}
+{{typetable|Grass}}
+|-
+|413
+| {{MS|413G|Wormadam (Pokémon)}}
+|{{p|Wormadam}}
+{{typetable|Bug}}
+{{typetable|Ground}}
+|-
+|413
+| {{MS|413S|Wormadam (Pokémon)}}
+|{{p|Wormadam}}
+{{typetable|Bug}}
+{{typetable|Steel}}
+|-
+|487
+| {{MS|487O|Giratina (Pokémon)}}
+|{{p|Giratina}}{{tt|*|Origin Forme}}
+{{typetable|Ghost}}
+{{typetable|Dragon}}
+|-
+|497
+| {{MS|497|Serperior (Pokémon)}}
+|{{p|Serperior}}
+{{typetable2|Grass}}
+|}
+
+type: fins
+|-
+|086
+|{{MS|086|Seel (Pokémon)}}
+|{{p|Seel}}
+{{typetable2|Water}}
+|-
+|087
+|{{MS|087|Dewgong (Pokémon)}}
+|{{p|Dewgong}}
+{{typetable|Water}}
+{{typetable|Ice}}
+|-
+|118
+|{{MS|118|Goldeen (Pokémon)}}
+|{{p|Goldeen}}
+{{typetable2|Water}}
+|-
+|119
+|{{MS|119|Seaking (Pokémon)}}
+|{{p|Seaking}}
+{{typetable2|Water}}
+|-
+|129
+|{{MS|129|Magikarp (Pokémon)}}
+|{{p|Magikarp}}
+{{typetable2|Water}}
+|-
+|131
+|{{MS|131|Lapras (Pokémon)}}
+|{{p|Lapras}}
+{{typetable|Water}}
+{{typetable|Ice}}
+|-
+|170
+|{{MS|170|Chinchou (Pokémon)}}
+|{{p|Chinchou}}
+{{typetable|Water}}
+{{typetable|Electric}}
+|-
+|171
+|{{MS|171|Lanturn (Pokémon)}}
+|{{p|Lanturn}}
+{{typetable|Water}}
+{{typetable|Electric}}
+|-
+|211
+|{{MS|211|Qwilfish (Pokémon)}}
+|{{p|Qwilfish}}
+{{typetable|Water}}
+{{typetable|Poison}}
+|-
+|223
+|{{MS|223|Remoraid (Pokémon)}}
+|{{p|Remoraid}}
+{{typetable2|Water}}
+|-
+|318
+|{{MS|318|Carvanha (Pokémon)}}
+|{{p|Carvanha}}
+{{typetable|Water}}
+{{typetable|Dark}}
+|-
+|319
+|{{MS|319|Sharpedo (Pokémon)}}
+|{{p|Sharpedo}}
+{{typetable|Water}}
+{{typetable|Dark}}
+|-
+|320
+|{{MS|320|Wailmer (Pokémon)}}
+|{{p|Wailmer}}
+{{typetable2|Water}}
+|-
+|321
+|{{MS|321|Wailord (Pokémon)}}
+|{{p|Wailord}}
+{{typetable2|Water}}
+|-
+|339
+|{{MS|339|Barboach (Pokémon)}}
+|{{p|Barboach}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|340
+|{{MS|340|Whiscash (Pokémon)}}
+|{{p|Whiscash}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|349
+|{{MS|349|Feebas (Pokémon)}}
+|{{p|Feebas}}
+{{typetable2|Water}}
+|-
+|363
+|{{MS|363|Spheal (Pokémon)}}
+|{{p|Spheal}}
+{{typetable|Ice}}
+{{typetable|Water}}
+|-
+|364
+|{{MS|364|Sealeo (Pokémon)}}
+|{{p|Sealeo}}
+{{typetable|Ice}}
+{{typetable|Water}}
+|-
+|369
+|{{MS|369|Relicanth (Pokémon)}}
+|{{p|Relicanth}}
+{{typetable|Water}}
+{{typetable|Rock}}
+|-
+|370
+|{{MS|370|Luvdisc (Pokémon)}}
+|{{p|Luvdisc}}
+{{typetable2|Water}}
+|-
+|382
+|{{MS|382|Kyogre (Pokémon)}}
+|{{p|Kyogre}}
+{{typetable2|Water}}
+|-
+|456
+|{{MS|456|Finneon (Pokémon)}}
+|{{p|Finneon}}
+{{typetable2|Water}}
+|-
+|457
+|{{MS|457|Lumineon (Pokémon)}}
+|{{p|Lumineon}}
+{{typetable2|Water}}
+|-
+|535
+|{{MS|535|Tympole (Pokémon)}}
+|{{p|Tympole}}
+{{typetable2|Water}}
+|-
+|550
+|{{MS|550|Basculin (Pokémon)}}
+|{{p|Basculin}}
+{{typetable2|Water}}
+|-
+|594
+|{{MS|594|Alomomola (Pokémon)}}
+|{{p|Alomomola}}
+{{typetable2|Water}}
+|-
+|602
+|{{MS|602|Tynamo (Pokémon)}}
+|{{p|Tynamo}}
+{{typetable2|Electric}}
+|-
+|603
+|{{MS|603|Eelektrik (Pokémon)}}
+|{{p|Eelektrik}}
+{{typetable2|Electric}}
+|-
+|604
+|{{MS|604|Eelektross (Pokémon)}}
+|{{p|Eelektross}}
+{{typetable2|Electric}}
+|-
+|618
+|{{MS|618|Stunfisk (Pokémon)}}
+|{{p|Stunfisk}}
+{{typetable|Ground}}
+{{typetable|Electric}}
+|}
+
+type: headArms
+|-
+|074
+|{{MS|074|Geodude (Pokémon)}}
+|{{p|Geodude}}
+{{typetable|Rock}}
+{{typetable|Ground}}
+|-
+|081
+|{{MS|081|Magnemite (Pokémon)}}
+|{{p|Magnemite}}
+{{typetable|Electric}}
+{{typetable|Steel}}
+|-
+|088
+|{{MS|088|Grimer (Pokémon)}}
+|{{p|Grimer}}
+{{typetable2|Poison}}
+|-
+|089
+|{{MS|089|Muk (Pokémon)}}
+|{{p|Muk}}
+{{typetable2|Poison}}
+|-
+|093
+|{{MS|093|Haunter (Pokémon)}}
+|{{p|Haunter}}
+{{typetable|Ghost}}
+{{typetable|Poison}}
+|-
+|316
+|{{MS|316|Gulpin (Pokémon)}}
+|{{p|Gulpin}}
+{{typetable2|Poison}}
+|-
+|317
+|{{MS|317|Swalot (Pokémon)}}
+|{{p|Swalot}}
+{{typetable2|Poison}}
+|-
+|325
+|{{MS|325|Spoink (Pokémon)}}
+|{{p|Spoink}}
+{{typetable2|Psychic}}
+|-
+|343
+|{{MS|343|Baltoy (Pokémon)}}
+|{{p|Baltoy}}
+{{typetable|Ground}}
+{{typetable|Psychic}}
+|-
+|344
+|{{MS|344|Claydol (Pokémon)}}
+|{{p|Claydol}}
+{{typetable|Ground}}
+{{typetable|Psychic}}
+|-
+|355
+|{{MS|355|Duskull (Pokémon)}}
+|{{p|Duskull}}
+{{typetable2|Ghost}}
+|-
+|358
+|{{MS|358|Chimecho (Pokémon)}}
+|{{p|Chimecho}}
+{{typetable2|Psychic}}
+|-
+|375
+|{{MS|375|Metang (Pokémon)}}
+|{{p|Metang}}
+{{typetable|Steel}}
+{{typetable|Psychic}}
+|-
+|425
+|{{MS|425|Drifloon (Pokémon)}}
+|{{p|Drifloon}}
+{{typetable|Ghost}}
+{{typetable|Flying}}
+|-
+|426
+|{{MS|426|Drifblim (Pokémon)}}
+|{{p|Drifblim}}
+{{typetable|Ghost}}
+{{typetable|Flying}}
+|-
+|437
+|{{MS|437|Bronzong (Pokémon)}}
+|{{p|Bronzong}}
+{{typetable|Steel}}
+{{typetable|Psychic}}
+|-
+|462
+|{{MS|462|Magnezone (Pokémon)}}
+|{{p|Magnezone}}
+{{typetable|Electric}}
+{{typetable|Steel}}
+|-
+|474
+|{{MS|474|Porygon-Z (Pokémon)}}
+|{{p|Porygon-Z}}
+{{typetable2|Normal}}
+|-
+|477
+|{{MS|477|Dusknoir (Pokémon)}}
+|{{p|Dusknoir}}
+{{typetable2|Ghost}}
+|-
+|478
+|{{MS|478|Froslass (Pokémon)}}
+|{{p|Froslass}}
+{{typetable|Ice}}
+{{typetable|Ghost}}
+|-
+|489
+|{{MS|489|Phione (Pokémon)}}
+|{{p|Phione}}
+{{typetable2|Water}}
+|-
+|541
+|{{MS|541|Swadloon (Pokémon)}}
+|{{p|Swadloon}}
+{{typetable|Bug}}
+{{typetable|Grass}}
+|-
+|562
+|{{MS|562|Yamask (Pokémon)}}
+|{{p|Yamask}}
+{{typetable2|Ghost}}
+|-
+|579
+|{{MS|579|Reuniclus (Pokémon)}}
+|{{p|Reuniclus}}
+{{typetable2|Psychic}}
+|-
+|589
+|{{MS|589|Escavalier (Pokémon)}}
+|{{p|Escavalier}}
+{{typetable|Bug}}
+{{typetable|Steel}}
+|-
+|590
+|{{MS|590|Foongus (Pokémon)}}
+|{{p|Foongus}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|591
+|{{MS|591|Amoonguss (Pokémon)}}
+|{{p|Amoonguss}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|608
+|{{MS|608|Lampent (Pokémon)}}
+|{{p|Lampent}}
+{{typetable|Ghost}}
+{{typetable|Fire}}
+|-
+|609
+|{{MS|609|Chandelure (Pokémon)}}
+|{{p|Chandelure}}
+{{typetable|Ghost}}
+{{typetable|Fire}}
+|-
+|617
+|{{MS|617|Accelgor (Pokémon)}}
+|{{p|Accelgor}}
+{{typetable2|Bug}}
+|-
+|641
+|{{MS|641|Tornadus (Pokémon)}}
+|{{p|Tornadus}}
+{{typetable2|Flying}}
+|-
+|642
+|{{MS|642|Thundurus (Pokémon)}}
+|{{p|Thundurus}}
+{{typetable|Electric}}
+{{typetable|Flying}}
+|-
+|645
+|{{MS|645|Landorus (Pokémon)}}
+|{{p|Landorus}}
+{{typetable|Ground}}
+{{typetable|Flying}}
+|}
+
+type: headBase
+|-
+|050
+|{{MS|050|Diglett (Pokémon)}}
+|{{p|Diglett}}
+{{typetable2|Ground}}
+|-
+|070
+|{{MS|070|Weepinbell (Pokémon)}}
+|{{p|Weepinbell}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|071
+|{{MS|071|Victreebel (Pokémon)}}
+|{{p|Victreebel}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|116
+|{{MS|116|Horsea (Pokémon)}}
+|{{p|Horsea}}
+{{typetable2|Water}}
+|-
+|117
+|{{MS|117|Seadra (Pokémon)}}
+|{{p|Seadra}}
+{{typetable2|Water}}
+|-
+|120
+|{{MS|120|Staryu (Pokémon)}}
+|{{p|Staryu}}
+{{typetable2|Water}}
+|-
+|121
+|{{MS|121|Starmie (Pokémon)}}
+|{{p|Starmie}}
+{{typetable|Water}}
+{{typetable|Psychic}}
+|-
+|202
+|{{MS|202|Wobbuffet (Pokémon)}}
+|{{p|Wobbuffet}}
+{{typetable2|Psychic}}
+|-
+|230
+|{{MS|230|Kingdra (Pokémon)}}
+|{{p|Kingdra}}
+{{typetable|Water}}
+{{typetable|Dragon}}
+|-
+|292
+|{{MS|292|Shedinja (Pokémon)}}
+|{{p|Shedinja}}
+{{typetable|Bug}}
+{{typetable|Ghost}}
+|-
+|345
+|{{MS|345|Lileep (Pokémon)}}
+|{{p|Lileep}}
+{{typetable|Rock}}
+{{typetable|Grass}}
+|-
+|346
+|{{MS|346|Cradily (Pokémon)}}
+|{{p|Cradily}}
+{{typetable|Rock}}
+{{typetable|Grass}}
+|-
+|374
+|{{MS|374|Beldum (Pokémon)}}
+|{{p|Beldum}}
+{{typetable|Steel}}
+{{typetable|Psychic}}
+|-
+|442
+|{{MS|442|Spiritomb (Pokémon)}}
+|{{p|Spiritomb}}
+{{typetable|Ghost}}
+{{typetable|Dark}}
+|-
+|548
+|{{MS|548|Petilil (Pokémon)}}
+|{{p|Petilil}}
+{{typetable2|Grass}}
+|-
+|549
+|{{MS|549|Lilligant (Pokémon)}}
+|{{p|Lilligant}}
+{{typetable2|Grass}}
+|-
+|556
+|{{MS|556|Maractus (Pokémon)}}
+|{{p|Maractus}}
+{{typetable2|Grass}}
+|-
+|563
+|{{MS|563|Cofagrigus (Pokémon)}}
+|{{p|Cofagrigus}}
+{{typetable2|Ghost}}
+|-
+|582
+|{{MS|582|Vanillite (Pokémon)}}
+|{{p|Vanillite}}
+{{typetable2|Ice}}
+|-
+|583
+|{{MS|583|Vanillish (Pokémon)}}
+|{{p|Vanillish}}
+{{typetable2|Ice}}
+|-
+|607
+|{{MS|607|Litwick (Pokémon)}}
+|{{p|Litwick}}
+{{typetable|Ghost}}
+{{typetable|Fire}}
+|}
+
+type: bipedalTailed
+|-
+|004
+|{{MS|004|Charmander (Pokémon)}}
+|{{p|Charmander}}
+{{typetable2|Fire}}
+|-
+|005
+|{{MS|005|Charmeleon (Pokémon)}}
+|{{p|Charmeleon}}
+{{typetable2|Fire}}
+|-
+|006
+|{{MS|006|Charizard (Pokémon)}}
+|{{p|Charizard}}
+{{typetable|Fire}}
+{{typetable|Flying}}
+|-
+|007
+|{{MS|007|Squirtle (Pokémon)}}
+|{{p|Squirtle}}
+{{typetable2|Water}}
+|-
+|008
+|{{MS|008|Wartortle (Pokémon)}}
+|{{p|Wartortle}}
+{{typetable2|Water}}
+|-
+|009
+|{{MS|009|Blastoise (Pokémon)}}
+|{{p|Blastoise}}
+{{typetable2|Water}}
+|-
+|026
+|{{MS|026|Raichu (Pokémon)}}
+|{{p|Raichu}}
+{{typetable2|Electric}}
+|-
+|027
+|{{MS|027|Sandshrew (Pokémon)}}
+|{{p|Sandshrew}}
+{{typetable2|Ground}}
+|-
+|028
+|{{MS|028|Sandslash (Pokémon)}}
+|{{p|Sandslash}}
+{{typetable2|Ground}}
+|-
+|031
+|{{MS|031|Nidoqueen (Pokémon)}}
+|{{p|Nidoqueen}}
+{{typetable|Poison}}
+{{typetable|Ground}}
+|-
+|034
+|{{MS|034|Nidorina (Pokémon)}}
+|{{p|Nidoking}}
+{{typetable|Poison}}
+{{typetable|Ground}}
+|-
+|035
+|{{MS|035|Clefairy (Pokémon)}}
+|{{p|Clefairy}}
+{{typetable2|Normal}}
+|-
+|036
+|{{MS|036|Clefable (Pokémon)}}
+|{{p|Clefable}}
+{{typetable2|Normal}}
+|-
+|054
+|{{MS|054|Psyduck (Pokémon)}}
+|{{p|Psyduck}}
+{{typetable2|Water}}
+|-
+|055
+|{{MS|055|Golduck (Pokémon)}}
+|{{p|Golduck}}
+{{typetable2|Water}}
+|-
+|056
+|{{MS|056|Mankey (Pokémon)}}
+|{{p|Mankey}}
+{{typetable2|Fighting}}
+|-
+|057
+|{{MS|057|Primeape (Pokémon)}}
+|{{p|Primeape}}
+{{typetable2|Fighting}}
+|-
+|063
+|{{MS|063|Abra (Pokémon)}}
+|{{p|Abra}}
+{{typetable2|Psychic}}
+|-
+|064
+|{{MS|064|Kadabra (Pokémon)}}
+|{{p|Kadabra}}
+{{typetable2|Psychic}}
+|-
+|066
+|{{MS|066|Machop (Pokémon)}}
+|{{p|Machop}}
+{{typetable2|Fighting}}
+|-
+|080
+|{{MS|080|Slowbro (Pokémon)}}
+|{{p|Slowbro}}
+{{typetable|Water}}
+{{typetable|Psychic}}
+|-
+|094
+|{{MS|094|Gengar (Pokémon)}}
+|{{p|Gengar}}
+{{typetable|Ghost}}
+{{typetable|Poison}}
+|-
+|104
+|{{MS|104|Cubone (Pokémon)}}
+|{{p|Cubone}}
+{{typetable2|Ground}}
+|-
+|105
+|{{MS|105|Marowak (Pokémon)}}
+|{{p|Marowak}}
+{{typetable2|Ground}}
+|-
+|108
+|{{MS|108|Lickitung (Pokémon)}}
+|{{p|Lickitung}}
+{{typetable2|Normal}}
+|-
+|112
+|{{MS|112|Rhydon (Pokémon)}}
+|{{p|Rhydon}}
+{{typetable|Ground}}
+{{typetable|Rock}}
+|-
+|113
+|{{MS|113|Chansey (Pokémon)}}
+|{{p|Chansey}}
+{{typetable2|Normal}}
+|-
+|115
+|{{MS|115|Kangaskhan (Pokémon)}}
+|{{p|Kangaskhan}}
+{{typetable2|Normal}}
+|-
+|125
+|{{MS|125|Electabuzz (Pokémon)}}
+|{{p|Electabuzz}}
+{{typetable2|Electric}}
+|-
+|126
+|{{MS|126|Magmar (Pokémon)}}
+|{{p|Magmar}}
+{{typetable2|Fire}}
+|-
+|141
+|{{MS|141|Kabutops (Pokémon)}}
+|{{p|Kabutops}}
+{{typetable|Rock}}
+{{typetable|Water}}
+|-
+|149
+|{{MS|149|Dragonite (Pokémon)}}
+|{{p|Dragonite}}
+{{typetable|Dragon}}
+{{typetable|Flying}}
+|-
+|150
+|{{MS|150|Mewtwo (Pokémon)}}
+|{{p|Mewtwo}}
+{{typetable2|Psychic}}
+|-
+|151
+|{{MS|151|Mew (Pokémon)}}
+|{{p|Mew}}
+{{typetable2|Psychic}}
+|-
+|158
+|{{MS|158|Totodile (Pokémon)}}
+|{{p|Totodile}}
+{{typetable2|Water}}
+|-
+|159
+|{{MS|159|Croconaw (Pokémon)}}
+|{{p|Croconaw}}
+{{typetable2|Water}}
+|-
+|160
+|{{MS|160|Feraligatr (Pokémon)}}
+|{{p|Feraligatr}}
+{{typetable2|Water}}
+|-
+|173
+|{{MS|173|Cleffa (Pokémon)}}
+|{{p|Cleffa}}
+{{typetable2|Normal}}
+|-
+|180
+|{{MS|180|Flaaffy (Pokémon)}}
+|{{p|Flaaffy}}
+{{typetable2|Electric}}
+|-
+|181
+|{{MS|181|Ampharos (Pokémon)}}
+|{{p|Ampharos}}
+{{typetable2|Electric}}
+|-
+|183
+|{{MS|183|Marill (Pokémon)}}
+|{{p|Marill}}
+{{typetable2|Water}}
+|-
+|184
+|{{MS|184|Azumarill (Pokémon)}}
+|{{p|Azumarill}}
+{{typetable2|Water}}
+|-
+|187
+|{{MS|187|Hoppip (Pokémon)}}
+|{{p|Hoppip}}
+{{typetable|Grass}}
+{{typetable|Flying}}
+|-
+|188
+|{{MS|188|Skiploom (Pokémon)}}
+|{{p|Skiploom}}
+{{typetable|Grass}}
+{{typetable|Flying}}
+|-
+|189
+|{{MS|189|Jumpluff (Pokémon)}}
+|{{p|Jumpluff}}
+{{typetable|Grass}}
+{{typetable|Flying}}
+|-
+|190
+|{{MS|190|Aipom (Pokémon)}}
+|{{p|Aipom}}
+{{typetable2|Normal}}
+|-
+|195
+|{{MS|195|Quagsire (Pokémon)}}
+|{{p|Quagsire}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|199
+|{{MS|199|Slowking (Pokémon)}}
+|{{p|Slowking}}
+{{typetable|Water}}
+{{typetable|Psychic}}
+|-
+|210
+|{{MS|210|Granbull (Pokémon)}}
+|{{p|Granbull}}
+{{typetable2|Normal}}
+|-
+|215
+|{{MS|215|Sneasel (Pokémon)}}
+|{{p|Sneasel}}
+{{typetable|Dark}}
+{{typetable|Ice}}
+|-
+|216
+|{{MS|216|Teddiursa (Pokémon)}}
+|{{p|Teddiursa}}
+{{typetable2|Normal}}
+|-
+|217
+|{{MS|217|Ursaring (Pokémon)}}
+|{{p|Ursaring}}
+{{typetable2|Normal}}
+|-
+|235
+|{{MS|235|Smeargle (Pokémon)}}
+|{{p|Smeargle}}
+{{typetable2|Normal}}
+|-
+|237
+|{{MS|237|Hitmontop (Pokémon)}}
+|{{p|Hitmontop}}
+{{typetable2|Fighting}}
+|-
+|240
+|{{MS|240|Magby (Pokémon)}}
+|{{p|Magby}}
+{{typetable2|Fire}}
+|-
+|241
+|{{MS|241|Miltank (Pokémon)}}
+|{{p|Miltank}}
+{{typetable2|Normal}}
+|-
+|246
+|{{MS|246|Larvitar (Pokémon)}}
+|{{p|Larvitar}}
+{{typetable|Rock}}
+{{typetable|Ground}}
+|-
+|248
+|{{MS|248|Tyranitar (Pokémon)}}
+|{{p|Tyranitar}}
+{{typetable|Rock}}
+{{typetable|Dark}}
+|-
+|252
+|{{MS|252|Treecko (Pokémon)}}
+|{{p|Treecko}}
+{{typetable2|Grass}}
+|-
+|253
+|{{MS|253|Grovyle (Pokémon)}}
+|{{p|Grovyle}}
+{{typetable2|Grass}}
+|-
+|254
+|{{MS|254|Sceptile (Pokémon)}}
+|{{p|Sceptile}}
+{{typetable2|Grass}}
+|-
+|256
+|{{MS|256|Combusken (Pokémon)}}
+|{{p|Combusken}}
+{{typetable|Fire}}
+{{typetable|Fighting}}
+|-
+|257
+|{{MS|257|Swampert (Pokémon)}}
+|{{p|Blaziken}}
+{{typetable|Fire}}
+{{typetable|Fighting}}
+|-
+|259
+|{{MS|259|Marshtomp (Pokémon)}}
+|{{p|Marshtomp}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|260
+|{{MS|260|Swampert (Pokémon)}}
+|{{p|Swampert}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|286
+|{{MS|286|Breloom (Pokémon)}}
+|{{p|Breloom}}
+{{typetable|Grass}}
+{{typetable|Fighting}}
+|-
+|288
+|{{MS|288|Vigoroth (Pokémon)}}
+|{{p|Vigoroth}}
+{{typetable2|Normal}}
+|-
+|293
+|{{MS|293|Whismur (Pokémon)}}
+|{{p|Whismur}}
+{{typetable2|Normal}}
+|-
+|294
+|{{MS|294|Loudred (Pokémon)}}
+|{{p|Loudred}}
+{{typetable2|Normal}}
+|-
+|295
+|{{MS|295|Exploud (Pokémon)}}
+|{{p|Exploud}}
+{{typetable2|Normal}}
+|-
+|306
+|{{MS|306|Aggron (Pokémon)}}
+|{{p|Aggron}}
+{{typetable|Steel}}
+{{typetable|Rock}}
+|-
+|311
+|{{MS|311|Plusle (Pokémon)}}
+|{{p|Plusle}}
+{{typetable2|Electric}}
+|-
+|312
+|{{MS|312|Minun (Pokémon)}}
+|{{p|Minun}}
+{{typetable2|Electric}}
+|-
+|313
+|{{MS|313|Volbeat (Pokémon)}}
+|{{p|Volbeat}}
+{{typetable2|Bug}}
+|-
+|326
+|{{MS|326|Grumpig (Pokémon)}}
+|{{p|Grumpig}}
+{{typetable2|Psychic}}
+|-
+|327
+|{{MS|327|Spinda (Pokémon)}}
+|{{p|Spinda}}
+{{typetable2|Normal}}
+|-
+|335
+|{{MS|335|Zangoose (Pokémon)}}
+|{{p|Zangoose}}
+{{typetable2|Normal}}
+|-
+|348
+|{{MS|348|Armaldo (Pokémon)}}
+|{{p|Armaldo}}
+{{typetable|Rock}}
+{{typetable|Bug}}
+|-
+|352
+|{{MS|352|Kecleon (Pokémon)}}
+|{{p|Kecleon}}
+{{typetable2|Normal}}
+|-
+|354
+|{{MS|354|Banette (Pokémon)}}
+|{{p|Banette}}
+{{typetable2|Ghost}}
+|-
+|360
+|{{MS|360|Wynaut (Pokémon)}}
+|{{p|Wynaut}}
+{{typetable2|Psychic}}
+|-
+|383
+|{{MS|383|Groudon (Pokémon)}}
+|{{p|Groudon}}
+{{typetable2|Ground}}
+|-
+|390
+|{{MS|390|Chimchar (Pokémon)}}
+|{{p|Chimchar}}
+{{typetable2|Fire}}
+|-
+|391
+|{{MS|391|Monferno (Pokémon)}}
+|{{p|Monferno}}
+{{typetable|Fire}}
+{{typetable|Fighting}}
+|-
+|392
+|{{MS|392|Infernape (Pokémon)}}
+|{{p|Infernape}}
+{{typetable|Fire}}
+{{typetable|Fighting}}
+|-
+|394
+|{{MS|394|Prinplup (Pokémon)}}
+|{{p|Prinplup}}
+{{typetable2|Water}}
+|-
+|395
+|{{MS|395|Empoleon (Pokémon)}}
+|{{p|Empoleon}}
+{{typetable|Water}}
+{{typetable|Steel}}
+|-
+|400
+|{{MS|400|Bibarel (Pokémon)}}
+|{{p|Bibarel}}
+{{typetable|Normal}}
+{{typetable|Water}}
+|-
+|408
+|{{MS|408|Cranidos (Pokémon)}}
+|{{p|Cranidos}}
+{{typetable2|Rock}}
+|-
+|409
+|{{MS|409|Rampardos (Pokémon)}}
+|{{p|Rampardos}}
+{{typetable2|Rock}}
+|-
+|424
+|{{MS|424|Ambipom (Pokémon)}}
+|{{p|Ambipom}}
+{{typetable2|Normal}}
+|-
+|427
+|{{MS|427|Buneary (Pokémon)}}
+|{{p|Buneary}}
+{{typetable2|Normal}}
+|-
+|428
+|{{MS|428|Lopunny (Pokémon)}}
+|{{p|Lopunny}}
+{{typetable2|Normal}}
+|-
+|443
+|{{MS|443|Gible (Pokémon)}}
+|{{p|Gible}}
+{{typetable|Dragon}}
+{{typetable|Ground}}
+|-
+|444
+|{{MS|444|Gabite (Pokémon)}}
+|{{p|Gabite}}
+{{typetable|Dragon}}
+{{typetable|Ground}}
+|-
+|445
+|{{MS|445|Garchomp (Pokémon)}}
+|{{p|Garchomp}}
+{{typetable|Dragon}}
+{{typetable|Ground}}
+|-
+|447
+|{{MS|447|Riolu (Pokémon)}}
+|{{p|Riolu}}
+{{typetable2|Fighting}}
+|-
+|448
+|{{MS|448|Lucario (Pokémon)}}
+|{{p|Lucario}}
+{{typetable|Fighting}}
+{{typetable|Steel}}
+|-
+|459
+|{{MS|459|Snover (Pokémon)}}
+|{{p|Snover}}
+{{typetable|Grass}}
+{{typetable|Ice}}
+|-
+|460
+|{{MS|460|Abomasnow (Pokémon)}}
+|{{p|Abomasnow}}
+{{typetable|Grass}}
+{{typetable|Ice}}
+|-
+|461
+|{{MS|461|Weavile (Pokémon)}}
+|{{p|Weavile}}
+{{typetable|Dark}}
+{{typetable|Ice}}
+|-
+|464
+|{{MS|464|Rhyperior (Pokémon)}}
+|{{p|Rhyperior}}
+{{typetable|Ground}}
+{{typetable|Rock}}
+|-
+|466
+|{{MS|466|Electivire (Pokémon)}}
+|{{p|Electivire}}
+{{typetable2|Electric}}
+|-
+|467
+|{{MS|467|Magmortar (Pokémon)}}
+|{{p|Magmortar}}
+{{typetable2|Fire}}
+|-
+|480
+|{{MS|480|Uxie (Pokémon)}}
+|{{p|Uxie}}
+{{typetable2|Psychic}}
+|-
+|481
+|{{MS|481|Mesprit (Pokémon)}}
+|{{p|Mesprit}}
+{{typetable2|Psychic}}
+|-
+|482
+|{{MS|482|Azelf (Pokémon)}}
+|{{p|Azelf}}
+{{typetable2|Psychic}}
+|-
+|484
+|{{MS|484|Palkia (Pokémon)}}
+|{{p|Palkia}}
+{{typetable|Water}}
+{{typetable|Dragon}}
+|-
+|495
+|{{MS|495|Snivy (Pokémon)}}
+|{{p|Snivy}}
+{{typetable2|Grass}}
+|-
+|496
+|{{MS|496|Servine (Pokémon)}}
+|{{p|Servine}}
+{{typetable2|Grass}}
+|-
+|499
+|{{MS|499|Pignite (Pokémon)}}
+|{{p|Pignite}}
+{{typetable|Fire}}
+{{typetable|Fighting}}
+|-
+|500
+|{{MS|500|Emboar (Pokémon)}}
+|{{p|Emboar}}
+{{typetable|Fire}}
+{{typetable|Fighting}}
+|-
+|501
+|{{MS|501|Oshawott (Pokémon)}}
+|{{p|Oshawott}}
+{{typetable2|Water}}
+|-
+|502
+|{{MS|502|Dewott (Pokémon)}}
+|{{p|Dewott}}
+{{typetable2|Water}}
+|-
+|505
+|{{MS|505|Watchog (Pokémon)}}
+|{{p|Watchog}}
+{{typetable2|Normal}}
+|-
+|511
+|{{MS|511|Pansage (Pokémon)}}
+|{{p|Pansage}}
+{{typetable2|Grass}}
+|-
+|512
+|{{MS|512|Simisage (Pokémon)}}
+|{{p|Simisage}}
+{{typetable2|Grass}}
+|-
+|513
+|{{MS|513|Pansear (Pokémon)}}
+|{{p|Pansear}}
+{{typetable2|Fire}}
+|-
+|514
+|{{MS|514|Simisear (Pokémon)}}
+|{{p|Simisear}}
+{{typetable2|Fire}}
+|-
+|515
+|{{MS|515|Panpour (Pokémon)}}
+|{{p|Panpour}}
+{{typetable2|Water}}
+|-
+|516
+|{{MS|516|Simipour (Pokémon)}}
+|{{p|Simipour}}
+{{typetable2|Water}}
+|-
+|529
+|{{MS|529|Drilbur (Pokémon)}}
+|{{p|Drilbur}}
+{{typetable2|Ground}}
+|-
+|531
+|{{MS|531|Audino (Pokémon)}}
+|{{p|Audino}}
+{{typetable2|Normal}}
+|-
+|536
+|{{MS|536|Palpitoad (Pokémon)}}
+|{{p|Palpitoad}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|553
+|{{MS|553|Krookodile (Pokémon)}}
+|{{p|Krookodile}}
+{{typetable|Ground}}
+{{typetable|Dark}}
+|-
+|559
+|{{MS|559|Scraggy (Pokémon)}}
+|{{p|Scraggy}}
+{{typetable|Dark}}
+{{typetable|Fighting}}
+|-
+|560
+|{{MS|560|Scrafty (Pokémon)}}
+|{{p|Scrafty}}
+{{typetable|Dark}}
+{{typetable|Fighting}}
+|-
+|565
+|{{MS|565|Carracosta (Pokémon)}}
+|{{p|Carracosta}}
+{{typetable|Water}}
+{{typetable|Rock}}
+|-
+|571
+|{{MS|571|Zoroark (Pokémon)}}
+|{{p|Zoroark}}
+{{typetable2|Dark}}
+|-
+|605
+|{{MS|605|Elgyem (Pokémon)}}
+|{{p|Elgyem}}
+{{typetable2|Psychic}}
+|-
+|610
+|{{MS|610|Axew (Pokémon)}}
+|{{p|Axew}}
+{{typetable2|Dragon}}
+|-
+|611
+|{{MS|611|Fraxure (Pokémon)}}
+|{{p|Fraxure}}
+{{typetable2|Dragon}}
+|-
+|612
+|{{MS|612|Haxorus (Pokémon)}}
+|{{p|Haxorus}}
+{{typetable2|Dragon}}
+|-
+|613
+|{{MS|613|Cubchoo (Pokémon)}}
+|{{p|Cubchoo}}
+{{typetable2|Ice}}
+|-
+|619
+|{{MS|619|Mienfoo (Pokémon)}}
+|{{p|Mienfoo}}
+{{typetable2|Fighting}}
+|-
+|620
+|{{MS|620|Mienshao (Pokémon)}}
+|{{p|Mienshao}}
+{{typetable2|Fighting}}
+|-
+|621
+|{{MS|621|Druddigon (Pokémon)}}
+|{{p|Druddigon}}
+{{typetable2|Dragon}}
+|-
+|631
+|{{MS|631|Heatmor (Pokémon)}}
+|{{p|Heatmor}}
+{{typetable2|Fire}}
+|-
+|635
+|{{MS|635|Hydreigon (Pokémon)}}
+|{{p|Hydreigon}}
+{{typetable|Dark}}
+{{typetable|Dragon}}
+|-
+|644
+|{{MS|644|Zekrom (Pokémon)}}
+|{{p|Zekrom}}
+{{typetable|Dragon}}
+{{typetable|Electric}}
+|-
+|646
+|{{MS|646|Kyurem (Pokémon)}}
+|{{p|Kyurem}}
+{{typetable|Dragon}}
+{{typetable|Ice}}
+|}
+
+type: headLegs
+|-
+|043
+|{{MS|043|Oddish (Pokémon)}}
+|{{p|Oddish}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|060
+|{{MS|060|Poliwag (Pokémon)}}
+|{{p|Poliwag}}
+{{typetable2|Water}}
+|-
+|084
+|{{MS|084|Doduo (Pokémon)}}
+|{{p|Doduo}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|085
+|{{MS|085|Dodrio (Pokémon)}}
+|{{p|Dodrio}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|103
+|{{MS|103|Exeggutor (Pokémon)}}
+|{{p|Exeggutor}}
+{{typetable|Grass}}
+{{typetable|Psychic}}
+|-
+|114
+|{{MS|114|Tangela (Pokémon)}}
+|{{p|Tangela}}
+{{typetable2|Grass}}
+|-
+|137
+|{{MS|137|Porygon (Pokémon)}}
+|{{p|Porygon}}
+{{typetable2|Normal}}
+|-
+|194
+|{{MS|194|Wooper (Pokémon)}}
+|{{p|Wooper}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|233
+|{{MS|233|Porygon2 (Pokémon)}}
+|{{p|Porygon2}}
+{{typetable2|Normal}}
+|-
+|255
+|{{MS|255|Torchic (Pokémon)}}
+|{{p|Torchic}}
+{{typetable2|Fire}}
+|-
+|273
+|{{MS|273|Seedot (Pokémon)}}
+|{{p|Seedot}}
+{{typetable2|Grass}}
+|-
+|285
+|{{MS|285|Shroomish (Pokémon)}}
+|{{p|Shroomish}}
+{{typetable2|Grass}}
+|-
+|298
+|{{MS|298|Azurill (Pokémon)}}
+|{{p|Azurill}}
+{{typetable2|Normal}}
+|-
+|421
+|{{MS|421|Cherrim (Pokémon)}}
+|{{p|Cherrim}}
+{{typetable2|Grass}}
+|-
+|438
+|{{MS|438|Bonsly (Pokémon)}}
+|{{p|Bonsly}}
+{{typetable2|Rock}}
+|-
+|524
+|{{MS|524|Roggenrola (Pokémon)}}
+|{{p|Roggenrola}}
+{{typetable2|Rock}}
+|}
+
+type: quadruped
+|-
+|001
+|{{MS|001|Bulbasaur (Pokémon)}}
+|{{p|Bulbasaur}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|002
+|{{MS|002|Ivysaur (Pokémon)}}
+|{{p|Ivysaur}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|003
+|{{MS|003|Venusaur (Pokémon)}}
+|{{p|Venusaur}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|019
+|{{MS|019|Rattata (Pokémon)}}
+|{{p|Rattata}}
+{{typetable2|Normal}}
+|-
+|020
+|{{MS|020|Raticate (Pokémon)}}
+|{{p|Raticate}}
+{{typetable2|Normal}}
+|-
+|025
+|{{MS|025|Pikachu (Pokémon)}}
+|{{p|Pikachu}}
+{{typetable2|Electric}}
+|-
+|029
+|{{MS|029|Nidoran♀ (Pokémon)}}
+|{{p|Nidoran♀}}
+{{typetable2|Poison}}
+|-
+|030
+|{{MS|030|Nidorina (Pokémon)}}
+|{{p|Nidorina}}
+{{typetable2|Poison}}
+|-
+|032
+|{{MS|032|Nidoran♂ (Pokémon)}}
+|{{p|Nidoran♂}}
+{{typetable2|Poison}}
+|-
+|033
+|{{MS|033|Nidorino (Pokémon)}}
+|{{p|Nidorino}}
+{{typetable2|Poison}}
+|-
+|037
+|{{MS|037|Vulpix (Pokémon)}}
+|{{p|Vulpix}}
+{{typetable2|Fire}}
+|-
+|038
+|{{MS|038|Ninetales (Pokémon)}}
+|{{p|Ninetales}}
+{{typetable2|Fire}}
+|-
+|052
+|{{MS|052|Meowth (Pokémon)}}
+|{{p|Meowth}}
+{{typetable2|Normal}}
+|-
+|053
+|{{MS|053|Persian (Pokémon)}}
+|{{p|Persian}}
+{{typetable2|Normal}}
+|-
+|058
+|{{MS|058|Growlithe (Pokémon)}}
+|{{p|Growlithe}}
+{{typetable2|Fire}}
+|-
+|059
+|{{MS|059|Arcanine (Pokémon)}}
+|{{p|Arcanine}}
+{{typetable2|Fire}}
+|-
+|077
+|{{MS|077|Ponyta (Pokémon)}}
+|{{p|Ponyta}}
+{{typetable2|Fire}}
+|-
+|078
+|{{MS|078|Rapidash (Pokémon)}}
+|{{p|Rapidash}}
+{{typetable2|Fire}}
+|-
+|079
+|{{MS|079|Slowpoke (Pokémon)}}
+|{{p|Slowpoke}}
+{{typetable|Water}}
+{{typetable|Psychic}}
+|-
+|111
+|{{MS|111|Rhyhorn (Pokémon)}}
+|{{p|Rhyhorn}}
+{{typetable|Ground}}
+{{typetable|Rock}}
+|-
+|128
+|{{MS|128|Tauros (Pokémon)}}
+|{{p|Tauros}}
+{{typetable2|Normal}}
+|-
+|133
+|{{MS|133|Eevee (Pokémon)}}
+|{{p|Eevee}}
+{{typetable2|Normal}}
+|-
+|134
+|{{MS|134|Vaporeon (Pokémon)}}
+|{{p|Vaporeon}}
+{{typetable2|Water}}
+|-
+|135
+|{{MS|135|Jolteon (Pokémon)}}
+|{{p|Jolteon}}
+{{typetable2|Electric}}
+|-
+|136
+|{{MS|136|Flareon (Pokémon)}}
+|{{p|Flareon}}
+{{typetable2|Fire}}
+|-
+|152
+|{{MS|152|Chikorita (Pokémon)}}
+|{{p|Chikorita}}
+{{typetable2|Grass}}
+|-
+|153
+|{{MS|153|Bayleef (Pokémon)}}
+|{{p|Bayleef}}
+{{typetable2|Grass}}
+|-
+|154
+|{{MS|154|Meganium (Pokémon)}}
+|{{p|Meganium}}
+{{typetable2|Grass}}
+|-
+|156
+|{{MS|156|Quilava (Pokémon)}}
+|{{p|Quilava}}
+{{typetable2|Fire}}
+|-
+|157
+|{{MS|157|Typhlosion (Pokémon)}}
+|{{p|Typhlosion}}
+{{typetable2|Fire}}
+|-
+|161
+|{{MS|161|Sentret (Pokémon)}}
+|{{p|Sentret}}
+{{typetable2|Normal}}
+|-
+|162
+|{{MS|162|Furret (Pokémon)}}
+|{{p|Furret}}
+{{typetable2|Normal}}
+|-
+|172
+|{{MS|172|Pichu (Pokémon)}}
+|{{p|Pichu}}
+{{typetable2|Electric}}
+|-
+|179
+|{{MS|179|Mareep (Pokémon)}}
+|{{p|Mareep}}
+{{typetable2|Electric}}
+|-
+|196
+|{{MS|196|Espeon (Pokémon)}}
+|{{p|Espeon}}
+{{typetable2|Psychic}}
+|-
+|197
+|{{MS|197|Umbreon (Pokémon)}}
+|{{p|Umbreon}}
+{{typetable2|Dark}}
+|-
+|203
+|{{MS|203|Girafarig (Pokémon)}}
+|{{p|Girafarig}}
+{{typetable|Normal}}
+{{typetable|Psychic}}
+|-
+|220
+|{{MS|220|Swinub (Pokémon)}}
+|{{p|Swinub}}
+{{typetable|Ice}}
+{{typetable|Ground}}
+|-
+|221
+|{{MS|221|Piloswine (Pokémon)}}
+|{{p|Piloswine}}
+{{typetable|Ice}}
+{{typetable|Ground}}
+|-
+|228
+|{{MS|228|Houndour (Pokémon)}}
+|{{p|Houndour}}
+{{typetable|Dark}}
+{{typetable|Fire}}
+|-
+|229
+|{{MS|229|Houndoom (Pokémon)}}
+|{{p|Houndoom}}
+{{typetable|Dark}}
+{{typetable|Fire}}
+|-
+|231
+|{{MS|231|Phanpy (Pokémon)}}
+|{{p|Phanpy}}
+{{typetable2|Ground}}
+|-
+|232
+|{{MS|232|Donphan (Pokémon)}}
+|{{p|Donphan}}
+{{typetable2|Ground}}
+|-
+|234
+|{{MS|234|Stantler (Pokémon)}}
+|{{p|Stantler}}
+{{typetable2|Normal}}
+|-
+|243
+|{{MS|243|Raikou (Pokémon)}}
+|{{p|Raikou}}
+{{typetable2|Electric}}
+|-
+|244
+|{{MS|244|Entei (Pokémon)}}
+|{{p|Entei}}
+{{typetable2|Fire}}
+|-
+|245
+|{{MS|245|Suicune (Pokémon)}}
+|{{p|Suicune}}
+{{typetable2|Water}}
+|-
+|258
+|{{MS|258|Mudkip (Pokémon)}}
+|{{p|Mudkip}}
+{{typetable2|Water}}
+|-
+|261
+|{{MS|261|Poochyena (Pokémon)}}
+|{{p|Poochyena}}
+{{typetable2|Dark}}
+|-
+|262
+|{{MS|262|Mightyena (Pokémon)}}
+|{{p|Mightyena}}
+{{typetable2|Dark}}
+|-
+|263
+|{{MS|263|Zigzagoon (Pokémon)}}
+|{{p|Zigzagoon}}
+{{typetable2|Normal}}
+|-
+|264
+|{{MS|264|Linoone (Pokémon)}}
+|{{p|Linoone}}
+{{typetable2|Normal}}
+|-
+|287
+|{{MS|287|Slakoth (Pokémon)}}
+|{{p|Slakoth}}
+{{typetable2|Normal}}
+|-
+|300
+|{{MS|300|Skitty (Pokémon)}}
+|{{p|Skitty}}
+{{typetable2|Normal}}
+|-
+|301
+|{{MS|301|Delcatty (Pokémon)}}
+|{{p|Delcatty}}
+{{typetable2|Normal}}
+|-
+|304
+|{{MS|304|Aron (Pokémon)}}
+|{{p|Aron}}
+{{typetable|Steel}}
+{{typetable|Rock}}
+|-
+|305
+|{{MS|305|Lairon (Pokémon)}}
+|{{p|Lairon}}
+{{typetable|Steel}}
+{{typetable|Rock}}
+|-
+|309
+|{{MS|309|Electrike (Pokémon)}}
+|{{p|Electrike}}
+{{typetable2|Electric}}
+|-
+|310
+|{{MS|310|Manectric (Pokémon)}}
+|{{p|Manectric}}
+{{typetable2|Electric}}
+|-
+|322
+|{{MS|322|Numel (Pokémon)}}
+|{{p|Numel}}
+{{typetable|Fire}}
+{{typetable|Ground}}
+|-
+|323
+|{{MS|323|Camerupt (Pokémon)}}
+|{{p|Camerupt}}
+{{typetable|Fire}}
+{{typetable|Ground}}
+|-
+|324
+|{{MS|324|Torkoal (Pokémon)}}
+|{{p|Torkoal}}
+{{typetable2|Fire}}
+|-
+|357
+|{{MS|357|Tropius (Pokémon)}}
+|{{p|Tropius}}
+{{typetable|Grass}}
+{{typetable|Flying}}
+|-
+|359
+|{{MS|359|Absol (Pokémon)}}
+|{{p|Absol}}
+{{typetable2|Dark}}
+|-
+|365
+|{{MS|365|Walrein (Pokémon)}}
+|{{p|Walrein}}
+{{typetable|Ice}}
+{{typetable|Water}}
+|-
+|372
+|{{MS|372|Shelgon (Pokémon)}}
+|{{p|Shelgon}}
+{{typetable2|Dragon}}
+|-
+|373
+|{{MS|373|Salamence (Pokémon)}}
+|{{p|Salamence}}
+{{typetable|Dragon}}
+{{typetable|Flying}}
+|-
+|387
+|{{MS|387|Turtwig (Pokémon)}}
+|{{p|Turtwig}}
+{{typetable2|Grass}}
+|-
+|388
+|{{MS|388|Grotle (Pokémon)}}
+|{{p|Grotle}}
+{{typetable2|Grass}}
+|-
+|389
+|{{MS|389|Torterra (Pokémon)}}
+|{{p|Torterra}}
+{{typetable|Grass}}
+{{typetable|Ground}}
+|-
+|399
+|{{MS|399|Bidoof (Pokémon)}}
+|{{p|Bidoof}}
+{{typetable2|Normal}}
+|-
+|403
+|{{MS|403|Shinx (Pokémon)}}
+|{{p|Shinx}}
+{{typetable2|Electric}}
+|-
+|404
+|{{MS|404|Luxio (Pokémon)}}
+|{{p|Luxio}}
+{{typetable2|Electric}}
+|-
+|405
+|{{MS|405|Luxray (Pokémon)}}
+|{{p|Luxray}}
+{{typetable2|Electric}}
+|-
+|410
+|{{MS|410|Shieldon (Pokémon)}}
+|{{p|Shieldon}}
+{{typetable|Rock}}
+{{typetable|Steel}}
+|-
+|411
+|{{MS|411|Bastiodon (Pokémon)}}
+|{{p|Bastiodon}}
+{{typetable|Rock}}
+{{typetable|Steel}}
+|-
+|417
+|{{MS|417|Pachirisu (Pokémon)}}
+|{{p|Pachirisu}}
+{{typetable2|Electric}}
+|-
+|418
+|{{MS|418|Buizel (Pokémon)}}
+|{{p|Buizel}}
+{{typetable2|Water}}
+|-
+|419
+|{{MS|419|Floatzel (Pokémon)}}
+|{{p|Floatzel}}
+{{typetable2|Water}}
+|-
+|431
+|{{MS|431|Glameow (Pokémon)}}
+|{{p|Glameow}}
+{{typetable2|Normal}}
+|-
+|432
+|{{MS|432|Purugly (Pokémon)}}
+|{{p|Purugly}}
+{{typetable2|Normal}}
+|-
+|434
+|{{MS|434|Stunky (Pokémon)}}
+|{{p|Stunky}}
+{{typetable|Poison}}
+{{typetable|Dark}}
+|-
+|435
+|{{MS|435|Skuntank (Pokémon)}}
+|{{p|Skuntank}}
+{{typetable|Poison}}
+{{typetable|Dark}}
+|-
+|449
+|{{MS|449|Hippopotas (Pokémon)}}
+|{{p|Hippopotas}}
+{{typetable2|Ground}}
+|-
+|450
+|{{MS|450|Hippowdon (Pokémon)}}
+|{{p|Hippowdon}}
+{{typetable2|Ground}}
+|-
+|470
+|{{MS|470|Leafeon (Pokémon)}}
+|{{p|Leafeon}}
+{{typetable2|Grass}}
+|-
+|471
+|{{MS|471|Glaceon (Pokémon)}}
+|{{p|Glaceon}}
+{{typetable2|Ice}}
+|-
+|473
+|{{MS|473|Mamoswine (Pokémon)}}
+|{{p|Mamoswine}}
+{{typetable|Ice}}
+{{typetable|Ground}}
+|-
+|483
+|{{MS|483|Dialga (Pokémon)}}
+|{{p|Dialga}}
+{{typetable|Steel}}
+{{typetable|Dragon}}
+|-
+|485
+|{{MS|485|Heatran (Pokémon)}}
+|{{p|Heatran}}
+{{typetable|Fire}}
+{{typetable|Steel}}
+|-
+|492
+|{{MS|492|Shaymin (Pokémon)}}
+|{{p|Shaymin}}
+{{typetable2|Grass}}
+|-
+|493
+|{{MS|493|Arceus (Pokémon)}}
+|{{p|Arceus}}
+{{typetable2|Normal}}
+|-
+|498
+|{{MS|498|Tepig (Pokémon)}}
+|{{p|Tepig}}
+{{typetable2|Fire}}
+|-
+|503
+|{{MS|503|Samurott (Pokémon)}}
+|{{p|Samurott}}
+{{typetable2|Water}}
+|-
+|504
+|{{MS|504|Patrat (Pokémon)}}
+|{{p|Patrat}}
+{{typetable2|Normal}}
+|-
+|506
+|{{MS|506|Lillipup (Pokémon)}}
+|{{p|Lillipup}}
+{{typetable2|Normal}}
+|-
+|507
+|{{MS|507|Herdier (Pokémon)}}
+|{{p|Herdier}}
+{{typetable2|Normal}}
+|-
+|508
+|{{MS|508|Stoutland (Pokémon)}}
+|{{p|Stoutland}}
+{{typetable2|Normal}}
+|-
+|509
+|{{MS|509|Purrloin (Pokémon)}}
+|{{p|Purrloin}}
+{{typetable2|Dark}}
+|-
+|510
+|{{MS|510|Liepard (Pokémon)}}
+|{{p|Liepard}}
+{{typetable2|Dark}}
+|-
+|517
+|{{MS|517|Munna (Pokémon)}}
+|{{p|Munna}}
+{{typetable2|Psychic}}
+|-
+|522
+|{{MS|522|Blitzle (Pokémon)}}
+|{{p|Blitzle}}
+{{typetable2|Electric}}
+|-
+|523
+|{{MS|523|Zebstrika (Pokémon)}}
+|{{p|Zebstrika}}
+{{typetable2|Electric}}
+|-
+|551
+|{{MS|551|Sandile (Pokémon)}}
+|{{p|Sandile}}
+{{typetable|Ground}}
+{{typetable|Dark}}
+|-
+|552
+|{{MS|552|Krokorok (Pokémon)}}
+|{{p|Krokorok}}
+{{typetable|Ground}}
+{{typetable|Dark}}
+|-
+|555
+|{{MS|555|Darmanitan (Pokémon)}}
+|{{p|Darmanitan}}
+{{typetable2|Fire}}
+|-
+|564
+|{{MS|564|Tirtouga (Pokémon)}}
+|{{p|Tirtouga}}
+{{typetable|Water}}
+{{typetable|Rock}}
+|-
+|570
+|{{MS|570|Zorua (Pokémon)}}
+|{{p|Zorua}}
+{{typetable2|Dark}}
+|-
+|572
+|{{MS|572|Minccino (Pokémon)}}
+|{{p|Minccino}}
+{{typetable2|Normal}}
+|-
+|573
+|{{MS|573|Cinccino (Pokémon)}}
+|{{p|Cinccino}}
+{{typetable2|Normal}}
+|-
+|585
+|{{MS|585|Deerling (Pokémon)}}
+|{{p|Deerling}}
+{{typetable|Normal}}
+{{typetable|Grass}}
+|-
+|586
+|{{MS|586|Sawsbuck (Pokémon)}}
+|{{p|Sawsbuck}}
+{{typetable|Normal}}
+{{typetable|Grass}}
+|-
+|587
+|{{MS|587|Emolga (Pokémon)}}
+|{{p|Emolga}}
+{{typetable|Electric}}
+{{typetable|Flying}}
+|-
+|614
+|{{MS|614|Beartic (Pokémon)}}
+|{{p|Beartic}}
+{{typetable2|Ice}}
+|-
+|626
+|{{MS|626|Bouffalant (Pokémon)}}
+|{{p|Bouffalant}}
+{{typetable2|Normal}}
+|-
+|633
+|{{MS|633|Deino (Pokémon)}}
+|{{p|Deino}}
+{{typetable|Dark}}
+{{typetable|Dragon}}
+|-
+|634
+|{{MS|634|Zweilous (Pokémon)}}
+|{{p|Zweilous}}
+{{typetable|Dark}}
+{{typetable|Dragon}}
+|-
+|638
+|{{MS|638|Cobalion (Pokémon)}}
+|{{p|Cobalion}}
+{{typetable|Steel}}
+{{typetable|Fighting}}
+|-
+|639
+|{{MS|639|Terrakion (Pokémon)}}
+|{{p|Terrakion}}
+{{typetable|Rock}}
+{{typetable|Fighting}}
+|-
+|640
+|{{MS|640|Virizion (Pokémon)}}
+|{{p|Virizion}}
+{{typetable|Grass}}
+{{typetable|Fighting}}
+|-
+|647
+|{{MS|647|Keldeo (Pokémon)}}
+|{{p|Keldeo}}
+{{typetable|Water}}
+{{typetable|Fighting}}
+|}
+
+type: singleWings
+|-
+|016
+|{{MS|016|Pidgey (Pokémon)}}
+|{{p|Pidgey}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|017
+|{{MS|017|Pidgeotto (Pokémon)}}
+|{{p|Pidgeotto}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|018
+|{{MS|018|Pidgeot (Pokémon)}}
+|{{p|Pidgeot}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|021
+|{{MS|021|Spearow (Pokémon)}}
+|{{p|Spearow}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|022
+|{{MS|022|Fearow (Pokémon)}}
+|{{p|Fearow}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|041
+|{{MS|041|Zubat (Pokémon)}}
+|{{p|Zubat}}
+{{typetable|Poison}}
+{{typetable|Flying}}
+|-
+|042
+|{{MS|042|Golbat (Pokémon)}}
+|{{p|Golbat}}
+{{typetable|Poison}}
+{{typetable|Flying}}
+|-
+|083
+|{{MS|083|Farfetch'd (Pokémon)}}
+|{{p|Farfetch'd}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|142
+|{{MS|142|Aerodactyl (Pokémon)}}
+|{{p|Aerodactyl}}
+{{typetable|Rock}}
+{{typetable|Flying}}
+|-
+|144
+|{{MS|144|Articuno (Pokémon)}}
+|{{p|Articuno}}
+{{typetable|Ice}}
+{{typetable|Flying}}
+|-
+|145
+|{{MS|145|Zapdos (Pokémon)}}
+|{{p|Zapdos}}
+{{typetable|Electric}}
+{{typetable|Flying}}
+|-
+|146
+|{{MS|146|Moltres (Pokémon)}}
+|{{p|Moltres}}
+{{typetable|Fire}}
+{{typetable|Flying}}
+|-
+|163
+|{{MS|163|Hoothoot (Pokémon)}}
+|{{p|Hoothoot}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|164
+|{{MS|164|Noctowl (Pokémon)}}
+|{{p|Noctowl}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|165
+|{{MS|165|Ledyba (Pokémon)}}
+|{{p|Ledyba}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|166
+|{{MS|166|Ledian (Pokémon)}}
+|{{p|Ledian}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|177
+|{{MS|177|Natu (Pokémon)}}
+|{{p|Natu}}
+{{typetable|Psychic}}
+{{typetable|Flying}}
+|-
+|178
+|{{MS|178|Xatu (Pokémon)}}
+|{{p|Xatu}}
+{{typetable|Psychic}}
+{{typetable|Flying}}
+|-
+|198
+|{{MS|198|Murkrow (Pokémon)}}
+|{{p|Murkrow}}
+{{typetable|Dark}}
+{{typetable|Flying}}
+|-
+|207
+|{{MS|207|Gligar (Pokémon)}}
+|{{p|Gligar}}
+{{typetable|Ground}}
+{{typetable|Flying}}
+|-
+|225
+|{{MS|225|Delibird (Pokémon)}}
+|{{p|Delibird}}
+{{typetable|Ice}}
+{{typetable|Flying}}
+|-
+|226
+|{{MS|226|Mantine (Pokémon)}}
+|{{p|Mantine}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|227
+|{{MS|227|Skarmory (Pokémon)}}
+|{{p|Skarmory}}
+{{typetable|Steel}}
+{{typetable|Flying}}
+|-
+|249
+|{{MS|249|Lugia (Pokémon)}}
+|{{p|Lugia}}
+{{typetable|Psychic}}
+{{typetable|Flying}}
+|-
+|250
+|{{MS|250|Ho-Oh (Pokémon)}}
+|{{p|Ho-Oh}}
+{{typetable|Fire}}
+{{typetable|Flying}}
+|-
+|276
+|{{MS|276|Taillow (Pokémon)}}
+|{{p|Taillow}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|277
+|{{MS|277|Swellow (Pokémon)}}
+|{{p|Swellow}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|278
+|{{MS|278|Wingull (Pokémon)}}
+|{{p|Wingull}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|279
+|{{MS|279|Pelipper (Pokémon)}}
+|{{p|Pelipper}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|330
+|{{MS|330|Flygon (Pokémon)}}
+|{{p|Flygon}}
+{{typetable|Ground}}
+{{typetable|Dragon}}
+|-
+|333
+|{{MS|333|Swablu (Pokémon)}}
+|{{p|Swablu}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|334
+|{{MS|334|Altaria (Pokémon)}}
+|{{p|Altaria}}
+{{typetable|Dragon}}
+{{typetable|Flying}}
+|-
+|380
+|{{MS|380|Latias (Pokémon)}}
+|{{p|Latias}}
+{{typetable|Dragon}}
+{{typetable|Psychic}}
+|-
+|381
+|{{MS|381|Latios (Pokémon)}}
+|{{p|Latios}}
+{{typetable|Dragon}}
+{{typetable|Psychic}}
+|-
+|396
+|{{MS|396|Starly (Pokémon)}}
+|{{p|Starly}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|397
+|{{MS|397|Staravia (Pokémon)}}
+|{{p|Staravia}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|398
+|{{MS|398|Staraptor (Pokémon)}}
+|{{p|Staraptor}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|430
+|{{MS|430|Honchkrow (Pokémon)}}
+|{{p|Honchkrow}}
+{{typetable|Dark}}
+{{typetable|Flying}}
+|-
+|441
+|{{MS|441|Chatot (Pokémon)}}
+|{{p|Chatot}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|458
+|{{MS|458|Mantyke (Pokémon)}}
+|{{p|Mantyke}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|468
+|{{MS|468|Togekiss (Pokémon)}}
+|{{p|Togekiss}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|472
+|{{MS|472|Gliscor (Pokémon)}}
+|{{p|Gliscor}}
+{{typetable|Ground}}
+{{typetable|Flying}}
+|-
+|519
+|{{MS|519|Pidove (Pokémon)}}
+|{{p|Pidove}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|520
+|{{MS|520|Tranquill (Pokémon)}}
+|{{p|Tranquill}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|521
+|{{MS|521|Unfezant (Pokémon)}}
+|{{p|Unfezant}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|527
+|{{MS|527|Woobat (Pokémon)}}
+|{{p|Woobat}}
+{{typetable|Psychic}}
+{{typetable|Flying}}
+|-
+|528
+|{{MS|528|Swoobat (Pokémon)}}
+|{{p|Swoobat}}
+{{typetable|Psychic}}
+{{typetable|Flying}}
+|-
+|561
+|{{MS|561|Sigilyph (Pokémon)}}
+|{{p|Sigilyph}}
+{{typetable|Psychic}}
+{{typetable|Flying}}
+|-
+|566
+|{{MS|566|Archen (Pokémon)}}
+|{{p|Archen}}
+{{typetable|Rock}}
+{{typetable|Flying}}
+|-
+|567
+|{{MS|567|Archeops (Pokémon)}}
+|{{p|Archeops}}
+{{typetable|Rock}}
+{{typetable|Flying}}
+|-
+|580
+|{{MS|580|Ducklett (Pokémon)}}
+|{{p|Ducklett}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|581
+|{{MS|581|Swanna (Pokémon)}}
+|{{p|Swanna}}
+{{typetable|Water}}
+{{typetable|Flying}}
+|-
+|627
+|{{MS|627|Rufflet (Pokémon)}}
+|{{p|Rufflet}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|628
+|{{MS|628|Braviary (Pokémon)}}
+|{{p|Braviary}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|629
+|{{MS|629|Vullaby (Pokémon)}}
+|{{p|Vullaby}}
+{{typetable|Dark}}
+{{typetable|Flying}}
+|-
+|630
+|{{MS|630|Mandibuzz (Pokémon)}}
+|{{p|Mandibuzz}}
+{{typetable|Dark}}
+{{typetable|Flying}}
+|-
+|643
+|{{MS|643|Reshiram (Pokémon)}}
+|{{p|Reshiram}}
+{{typetable|Dragon}}
+{{typetable|Fire}}
+|}
+
+type: multiped
+|-
+|072
+|{{MS|072|Tentacool (Pokémon)}}
+|{{p|Tentacool}}
+{{typetable|Water}}
+{{typetable|Poison}}
+|-
+|073
+|{{MS|073|Tentacruel (Pokémon)}}
+|{{p|Tentacruel}}
+{{typetable|Water}}
+{{typetable|Poison}}
+|-
+|138
+|{{MS|138|Omanyte (Pokémon)}}
+|{{p|Omanyte}}
+{{typetable|Rock}}
+{{typetable|Water}}
+|-
+|139
+|{{MS|139|Omastar (Pokémon)}}
+|{{p|Omastar}}
+{{typetable|Rock}}
+{{typetable|Water}}
+|-
+|224
+|{{MS|224|Octillery (Pokémon)}}
+|{{p|Octillery}}
+{{typetable2|Water}}
+|-
+|455
+|{{MS|455|Carnivine (Pokémon)}}
+|{{p|Carnivine}}
+{{typetable2|Grass}}
+|-
+|487
+|{{MS|487|Giratina (Pokémon)}}
+|{{p|Giratina}}{{tt|*|Altered Forme}}
+{{typetable|Ghost}}
+{{typetable|Dragon}}
+|-
+|525
+|{{MS|525|Boldore (Pokémon)}}
+|{{p|Boldore}}
+{{typetable2|Rock}}
+|-
+|526
+|{{MS|526|Gigalith (Pokémon)}}
+|{{p|Gigalith}}
+{{typetable2|Rock}}
+|-
+|592
+|{{MS|592|Frillish (Pokémon)}}
+|{{p|Frillish}}
+{{typetable|Water}}
+{{typetable|Ghost}}
+|-
+|593
+|{{MS|593|Jellicent (Pokémon)}}
+|{{p|Jellicent}}
+{{typetable|Water}}
+{{typetable|Ghost}}
+|-
+|598
+|{{MS|598|Ferrothorn (Pokémon)}}
+|{{p|Ferrothorn}}
+{{typetable|Grass}}
+{{typetable|Steel}}
+|}
+
+type: multiBody
+|-
+|051
+|{{MS|051|Dugtrio (Pokémon)}}
+|{{p|Dugtrio}}
+{{typetable2|Ground}}
+|-
+|082
+|{{MS|082|Magneton (Pokémon)}}
+|{{p|Magneton}}
+{{typetable|Electric}}
+{{typetable|Steel}}
+|-
+|102
+|{{MS|102|Exeggcute (Pokémon)}}
+|{{p|Exeggcute}}
+{{typetable|Grass}}
+{{typetable|Psychic}}
+|-
+|110
+|{{MS|110|Weezing (Pokémon)}}
+|{{p|Weezing}}
+{{typetable2|Poison}}
+|-
+|376
+|{{MS|376|Metagross (Pokémon)}}
+|{{p|Metagross}}
+{{typetable|Steel}}
+{{typetable|Psychic}}
+|-
+|415
+|{{MS|415|Combee (Pokémon)}}
+|{{p|Combee}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|420
+|{{MS|420|Cherubi (Pokémon)}}
+|{{p|Cherubi}}
+{{typetable2|Grass}}
+|-
+|476
+|{{MS|476|Probopass (Pokémon)}}
+|{{p|Probopass}}
+{{typetable|Rock}}
+{{typetable|Steel}}
+|-
+|584
+|{{MS|584|Vanilluxe (Pokémon)}}
+|{{p|Vanilluxe}}
+{{typetable2|Ice}}
+|-
+|599
+|{{MS|599|Klink (Pokémon)}}
+|{{p|Klink}}
+{{typetable2|Steel}}
+|-
+|600
+|{{MS|600|Klang (Pokémon)}}
+|{{p|Klang}}
+{{typetable2|Steel}}
+|-
+|601
+|{{MS|601|Klinklang (Pokémon)}}
+|{{p|Klinklang}}
+{{typetable2|Steel}}
+|}
+
+type: bipedalTailless
+|-
+|039
+|{{MS|039|Jigglypuff (Pokémon)}}
+|{{p|Jigglypuff}}
+{{typetable2|Normal}}
+|-
+|040
+|{{MS|040|Wigglytuff (Pokémon)}}
+|{{p|Wigglytuff}}
+{{typetable2|Normal}}
+|-
+|044
+|{{MS|044|Gloom (Pokémon)}}
+|{{p|Gloom}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|045
+|{{MS|045|Vileplume (Pokémon)}}
+|{{p|Vileplume}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|048
+|{{MS|048|Venonat (Pokémon)}}
+|{{p|Venonat}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|061
+|{{MS|061|Poliwhirl (Pokémon)}}
+|{{p|Poliwhirl}}
+{{typetable2|Water}}
+|-
+|062
+|{{MS|062|Poliwrath (Pokémon)}}
+|{{p|Poliwrath}}
+{{typetable|Water}}
+{{typetable|Fighting}}
+|-
+|065
+|{{MS|065|Alakazam (Pokémon)}}
+|{{p|Alakazam}}
+{{typetable2|Psychic}}
+|-
+|067
+|{{MS|067|Machoke (Pokémon)}}
+|{{p|Machoke}}
+{{typetable2|Fighting}}
+|-
+|068
+|{{MS|068|Machamp (Pokémon)}}
+|{{p|Machamp}}
+{{typetable2|Fighting}}
+|-
+|069
+|{{MS|069|Bellsprout (Pokémon)}}
+|{{p|Bellsprout}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|075
+|{{MS|075|Graveler (Pokémon)}}
+|{{p|Graveler}}
+{{typetable|Rock}}
+{{typetable|Ground}}
+|-
+|076
+|{{MS|076|Golem (Pokémon)}}
+|{{p|Golem}}
+{{typetable|Rock}}
+{{typetable|Ground}}
+|-
+|096
+|{{MS|096|Drowzee (Pokémon)}}
+|{{p|Drowzee}}
+{{typetable2|Psychic}}
+|-
+|097
+|{{MS|097|Hypno (Pokémon)}}
+|{{p|Hypno}}
+{{typetable2|Psychic}}
+|-
+|106
+|{{MS|106|Hitmonlee (Pokémon)}}
+|{{p|Hitmonlee}}
+{{typetable2|Fighting}}
+|-
+|107
+|{{MS|107|Hitmonchan (Pokémon)}}
+|{{p|Hitmonchan}}
+{{typetable2|Fighting}}
+|-
+|122
+|{{MS|122|Mr. Mime (Pokémon)}}
+|{{p|Mr. Mime}}
+{{typetable2|Psychic}}
+|-
+|124
+|{{MS|124|Jynx (Pokémon)}}
+|{{p|Jynx}}
+{{typetable|Ice}}
+{{typetable|Psychic}}
+|-
+|127
+|{{MS|127|Pinsir (Pokémon)}}
+|{{p|Pinsir}}
+{{typetable2|Bug}}
+|-
+|143
+|{{MS|143|Snorlax (Pokémon)}}
+|{{p|Snorlax}}
+{{typetable2|Normal}}
+|-
+|155
+|{{MS|155|Cyndaquil (Pokémon)}}
+|{{p|Cyndaquil}}
+{{typetable2|Fire}}
+|-
+|174
+|{{MS|174|Igglybuff (Pokémon)}}
+|{{p|Igglybuff}}
+{{typetable2|Normal}}
+|-
+|175
+|{{MS|175|Togepi (Pokémon)}}
+|{{p|Togepi}}
+{{typetable2|Normal}}
+|-
+|176
+|{{MS|176|Togetic (Pokémon)}}
+|{{p|Togetic}}
+{{typetable|Normal}}
+{{typetable|Flying}}
+|-
+|182
+|{{MS|182|Bellossom (Pokémon)}}
+|{{p|Bellossom}}
+{{typetable2|Grass}}
+|-
+|185
+|{{MS|185|Sudowoodo (Pokémon)}}
+|{{p|Sudowoodo}}
+{{typetable2|Rock}}
+|-
+|186
+|{{MS|186|Politoed (Pokémon)}}
+|{{p|Politoed}}
+{{typetable2|Water}}
+|-
+|192
+|{{MS|192|Sunflora (Pokémon)}}
+|{{p|Sunflora}}
+{{typetable2|Grass}}
+|-
+|209
+|{{MS|209|Snubbull (Pokémon)}}
+|{{p|Snubbull}}
+{{typetable2|Normal}}
+|-
+|214
+|{{MS|214|Heracross (Pokémon)}}
+|{{p|Heracross}}
+{{typetable|Bug}}
+{{typetable|Fighting}}
+|-
+|236
+|{{MS|236|Tyrogue (Pokémon)}}
+|{{p|Tyrogue}}
+{{typetable2|Fighting}}
+|-
+|238
+|{{MS|238|Smoochum (Pokémon)}}
+|{{p|Smoochum}}
+{{typetable|Ice}}
+{{typetable|Psychic}}
+|-
+|239
+|{{MS|239|Elekid (Pokémon)}}
+|{{p|Elekid}}
+{{typetable2|Electric}}
+|-
+|242
+|{{MS|242|Blissey (Pokémon)}}
+|{{p|Blissey}}
+{{typetable2|Normal}}
+|-
+|251
+|{{MS|251|Celebi (Pokémon)}}
+|{{p|Celebi}}
+{{typetable|Psychic}}
+{{typetable|Grass}}
+|-
+|271
+|{{MS|271|Lombre (Pokémon)}}
+|{{p|Lombre}}
+{{typetable|Water}}
+{{typetable|Grass}}
+|-
+|272
+|{{MS|272|Ludicolo (Pokémon)}}
+|{{p|Ludicolo}}
+{{typetable|Water}}
+{{typetable|Grass}}
+|-
+|274
+|{{MS|274|Nuzleaf (Pokémon)}}
+|{{p|Nuzleaf}}
+{{typetable|Grass}}
+{{typetable|Dark}}
+|-
+|275
+|{{MS|275|Shiftry (Pokémon)}}
+|{{p|Shiftry}}
+{{typetable|Grass}}
+{{typetable|Dark}}
+|-
+|280
+|{{MS|280|Ralts (Pokémon)}}
+|{{p|Ralts}}
+{{typetable2|Psychic}}
+|-
+|281
+|{{MS|281|Kirlia (Pokémon)}}
+|{{p|Kirlia}}
+{{typetable2|Psychic}}
+|-
+|282
+|{{MS|282|Gardevoir (Pokémon)}}
+|{{p|Gardevoir}}
+{{typetable2|Psychic}}
+|-
+|289
+|{{MS|289|Slaking (Pokémon)}}
+|{{p|Slaking}}
+{{typetable2|Normal}}
+|-
+|296
+|{{MS|296|Makuhita (Pokémon)}}
+|{{p|Makuhita}}
+{{typetable2|Fighting}}
+|-
+|297
+|{{MS|297|Hariyama (Pokémon)}}
+|{{p|Hariyama}}
+{{typetable2|Fighting}}
+|-
+|299
+|{{MS|299|Nosepass (Pokémon)}}
+|{{p|Nosepass}}
+{{typetable2|Rock}}
+|-
+|302
+|{{MS|302|Sableye (Pokémon)}}
+|{{p|Sableye}}
+{{typetable|Dark}}
+{{typetable|Ghost}}
+|-
+|303
+|{{MS|303|Mawile (Pokémon)}}
+|{{p|Mawile}}
+{{typetable2|Steel}}
+|-
+|307
+|{{MS|307|Meditite (Pokémon)}}
+|{{p|Meditite}}
+{{typetable|Fighting}}
+{{typetable|Psychic}}
+|-
+|308
+|{{MS|308|Medicham (Pokémon)}}
+|{{p|Medicham}}
+{{typetable|Fighting}}
+{{typetable|Psychic}}
+|-
+|314
+|{{MS|314|Illumise (Pokémon)}}
+|{{p|Illumise}}
+{{typetable2|Bug}}
+|-
+|315
+|{{MS|315|Roselia (Pokémon)}}
+|{{p|Roselia}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|331
+|{{MS|331|Cacnea (Pokémon)}}
+|{{p|Cacnea}}
+{{typetable2|Grass}}
+|-
+|332
+|{{MS|332|Cacturne (Pokémon)}}
+|{{p|Cacturne}}
+{{typetable|Grass}}
+{{typetable|Dark}}
+|-
+|356
+|{{MS|356|Dusclops (Pokémon)}}
+|{{p|Dusclops}}
+{{typetable2|Ghost}}
+|-
+|361
+|{{MS|361|Snorunt (Pokémon)}}
+|{{p|Snorunt}}
+{{typetable2|Ice}}
+|-
+|371
+|{{MS|371|Bagon (Pokémon)}}
+|{{p|Bagon}}
+{{typetable2|Dragon}}
+|-
+|377
+|{{MS|377|Regirock (Pokémon)}}
+|{{p|Regirock}}
+{{typetable2|Rock}}
+|-
+|378
+|{{MS|378|Regice (Pokémon)}}
+|{{p|Regice}}
+{{typetable2|Ice}}
+|-
+|379
+|{{MS|379|Registeel (Pokémon)}}
+|{{p|Registeel}}
+{{typetable2|Steel}}
+|-
+|385
+|{{MS|385|Jirachi (Pokémon)}}
+|{{p|Jirachi}}
+{{typetable|Steel}}
+{{typetable|Psychic}}
+|-
+|386
+|{{MS|386|Deoxys (Pokémon)}}
+|{{p|Deoxys}}
+{{typetable2|Psychic}}
+|-
+|393
+|{{MS|393|Piplup (Pokémon)}}
+|{{p|Piplup}}
+{{typetable2|Water}}
+|-
+|401
+|{{MS|401|Kricketot (Pokémon)}}
+|{{p|Kricketot}}
+{{typetable2|Bug}}
+|-
+|406
+|{{MS|406|Budew (Pokémon)}}
+|{{p|Budew}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|407
+|{{MS|407|Roserade (Pokémon)}}
+|{{p|Roserade}}
+{{typetable|Grass}}
+{{typetable|Poison}}
+|-
+|433
+|{{MS|433|Chingling (Pokémon)}}
+|{{p|Chingling}}
+{{typetable2|Psychic}}
+|-
+|439
+|{{MS|439|Mime Jr. (Pokémon)}}
+|{{p|Mime Jr.}}
+{{typetable2|Psychic}}
+|-
+|440
+|{{MS|440|Happiny (Pokémon)}}
+|{{p|Happiny}}
+{{typetable2|Normal}}
+|-
+|446
+|{{MS|446|Munchlax (Pokémon)}}
+|{{p|Munchlax}}
+{{typetable2|Normal}}
+|-
+|453
+|{{MS|453|Croagunk (Pokémon)}}
+|{{p|Croagunk}}
+{{typetable|Poison}}
+{{typetable|Fighting}}
+|-
+|454
+|{{MS|454|Toxicroak (Pokémon)}}
+|{{p|Toxicroak}}
+{{typetable|Poison}}
+{{typetable|Fighting}}
+|-
+|463
+|{{MS|463|Lickilicky (Pokémon)}}
+|{{p|Lickilicky}}
+{{typetable2|Normal}}
+|-
+|465
+|{{MS|465|Tangrowth (Pokémon)}}
+|{{p|Tangrowth}}
+{{typetable2|Grass}}
+|-
+|475
+|{{MS|475|Gallade (Pokémon)}}
+|{{p|Gallade}}
+{{typetable|Psychic}}
+{{typetable|Fighting}}
+|-
+|486
+|{{MS|486|Regigigas (Pokémon)}}
+|{{p|Regigigas}}
+{{typetable2|Normal}}
+|-
+|490
+|{{MS|490|Manaphy (Pokémon)}}
+|{{p|Manaphy}}
+{{typetable2|Water}}
+|-
+|491
+|{{MS|491|Darkrai (Pokémon)}}
+|{{p|Darkrai}}
+{{typetable2|Dark}}
+|-
+|494
+|{{MS|494|Victini (Pokémon)}}
+|{{p|Victini}}
+{{typetable|Psychic}}
+{{typetable|Fire}}
+|-
+|518
+|{{MS|518|Musharna (Pokémon)}}
+|{{p|Musharna}}
+{{typetable2|Psychic}}
+|-
+|530
+|{{MS|530|Excadrill (Pokémon)}}
+|{{p|Excadrill}}
+{{typetable|Ground}}
+{{typetable|Steel}}
+|-
+|532
+|{{MS|532|Timburr (Pokémon)}}
+|{{p|Timburr}}
+{{typetable2|Fighting}}
+|-
+|533
+|{{MS|533|Gurdurr (Pokémon)}}
+|{{p|Gurdurr}}
+{{typetable2|Fighting}}
+|-
+|534
+|{{MS|534|Conkeldurr (Pokémon)}}
+|{{p|Conkeldurr}}
+{{typetable2|Fighting}}
+|-
+|537
+|{{MS|537|Seismitoad (Pokémon)}}
+|{{p|Seismitoad}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|538
+|{{MS|538|Throh (Pokémon)}}
+|{{p|Throh}}
+{{typetable2|Fighting}}
+|-
+|539
+|{{MS|539|Sawk (Pokémon)}}
+|{{p|Sawk}}
+{{typetable2|Fighting}}
+|-
+|542
+|{{MS|542|Leavanny (Pokémon)}}
+|{{p|Leavanny}}
+{{typetable|Bug}}
+{{typetable|Grass}}
+|-
+|547
+|{{MS|547|Whimsicott (Pokémon)}}
+|{{p|Whimsicott}}
+{{typetable2|Grass}}
+|-
+|554
+|{{MS|554|Darumaka (Pokémon)}}
+|{{p|Darumaka}}
+{{typetable2|Fire}}
+|-
+|568
+|{{MS|568|Trubbish (Pokémon)}}
+|{{p|Trubbish}}
+{{typetable2|Poison}}
+|-
+|569
+|{{MS|569|Garbodor (Pokémon)}}
+|{{p|Garbodor}}
+{{typetable2|Poison}}
+|-
+|574
+|{{MS|574|Gothita (Pokémon)}}
+|{{p|Gothita}}
+{{typetable2|Psychic}}
+|-
+|575
+|{{MS|575|Gothorita (Pokémon)}}
+|{{p|Gothorita}}
+{{typetable2|Psychic}}
+|-
+|576
+|{{MS|576|Gothitelle (Pokémon)}}
+|{{p|Gothitelle}}
+{{typetable2|Psychic}}
+|-
+|588
+|{{MS|588|Karrablast (Pokémon)}}
+|{{p|Karrablast}}
+{{typetable2|Bug}}
+|-
+|606
+|{{MS|606|Beheeyem (Pokémon)}}
+|{{p|Beheeyem}}
+{{typetable2|Psychic}}
+|-
+|622
+|{{MS|622|Golett (Pokémon)}}
+|{{p|Golett}}
+{{typetable|Ground}}
+{{typetable|Ghost}}
+|-
+|623
+|{{MS|623|Golurk (Pokémon)}}
+|{{p|Golurk}}
+{{typetable|Ground}}
+{{typetable|Ghost}}
+|-
+|624
+|{{MS|624|Pawniard (Pokémon)}}
+|{{p|Pawniard}}
+{{typetable|Dark}}
+{{typetable|Steel}}
+|-
+|625
+|{{MS|625|Bisharp (Pokémon)}}
+|{{p|Bisharp}}
+{{typetable|Dark}}
+{{typetable|Steel}}
+|-
+|648
+|{{MS|648|Meloetta (Pokémon)}}
+|{{p|Meloetta}}
+{{typetable|Normal}}
+{{typetable|Psychic}}
+|-
+|649
+|{{MS|649|Genesect (Pokémon)}}
+|{{p|Genesect}}
+{{typetable|Bug}}
+{{typetable|Steel}}
+|}
+
+type: TwoMoreWings
+|-
+|012
+|{{MS|012|Butterfree (Pokémon)}}
+|{{p|Butterfree}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|015
+|{{MS|015|Beedrill (Pokémon)}}
+|{{p|Beedrill}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|049
+|{{MS|049|Venomoth (Pokémon)}}
+|{{p|Venomoth}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|123
+|{{MS|123|Scyther (Pokémon)}}
+|{{p|Scyther}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|169
+|{{MS|169|Crobat (Pokémon)}}
+|{{p|Crobat}}
+{{typetable|Poison}}
+{{typetable|Flying}}
+|-
+|193
+|{{MS|193|Yanma (Pokémon)}}
+|{{p|Yanma}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|212
+|{{MS|212|Scizor (Pokémon)}}
+|{{p|Scizor}}
+{{typetable|Bug}}
+{{typetable|Steel}}
+|-
+|267
+|{{MS|267|Beautifly (Pokémon)}}
+|{{p|Beautifly}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|269
+|{{MS|269|Dustox (Pokémon)}}
+|{{p|Dustox}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|284
+|{{MS|284|Masquerain (Pokémon)}}
+|{{p|Masquerain}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|291
+|{{MS|291|Ninjask (Pokémon)}}
+|{{p|Ninjask}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|329
+|{{MS|329|Vibrava (Pokémon)}}
+|{{p|Vibrava}}
+{{typetable|Ground}}
+{{typetable|Dragon}}
+|-
+|402
+|{{MS|402|Kricketune (Pokémon)}}
+|{{p|Kricketune}}
+{{typetable2|Bug}}
+|-
+|414
+|{{MS|414|Mothim (Pokémon)}}
+|{{p|Mothim}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|416
+|{{MS|416|Vespiquen (Pokémon)}}
+|{{p|Vespiquen}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|469
+|{{MS|469|Yanmega (Pokémon)}}
+|{{p|Yanmega}}
+{{typetable|Bug}}
+{{typetable|Flying}}
+|-
+|637
+|{{MS|637|Volcarona (Pokémon)}}
+|{{p|Volcarona}}
+{{typetable|Bug}}
+{{typetable|Fire}}
+|}
+
+type: insectoid
+|-
+|046
+|{{MS|046|Paras (Pokémon)}}
+|{{p|Paras}}
+{{typetable|Bug}}
+{{typetable|Grass}}
+|-
+|047
+|{{MS|047|Parasect (Pokémon)}}
+|{{p|Parasect}}
+{{typetable|Bug}}
+{{typetable|Grass}}
+|-
+|098
+|{{MS|098|Krabby (Pokémon)}}
+|{{p|Krabby}}
+{{typetable2|Water}}
+|-
+|099
+|{{MS|099|Kingler (Pokémon)}}
+|{{p|Kingler}}
+{{typetable2|Water}}
+|-
+|140
+|{{MS|140|Kabuto (Pokémon)}}
+|{{p|Kabuto}}
+{{typetable|Rock}}
+{{typetable|Water}}
+|-
+|167
+|{{MS|167|Spinarak (Pokémon)}}
+|{{p|Spinarak}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|168
+|{{MS|168|Ariados (Pokémon)}}
+|{{p|Ariados}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|213
+|{{MS|213|Shuckle (Pokémon)}}
+|{{p|Shuckle}}
+{{typetable|Bug}}
+{{typetable|Rock}}
+|-
+|222
+|{{MS|222|Corsola (Pokémon)}}
+|{{p|Corsola}}
+{{typetable|Water}}
+{{typetable|Rock}}
+|-
+|270
+|{{MS|270|Lotad (Pokémon)}}
+|{{p|Lotad}}
+{{typetable|Water}}
+{{typetable|Grass}}
+|-
+|283
+|{{MS|283|Surskit (Pokémon)}}
+|{{p|Surskit}}
+{{typetable|Bug}}
+{{typetable|Water}}
+|-
+|290
+|{{MS|290|Nincada (Pokémon)}}
+|{{p|Nincada}}
+{{typetable|Bug}}
+{{typetable|Ground}}
+|-
+|328
+|{{MS|328|Trapinch (Pokémon)}}
+|{{p|Trapinch}}
+{{typetable2|Ground}}
+|-
+|341
+|{{MS|341|Corphish (Pokémon)}}
+|{{p|Corphish}}
+{{typetable2|Water}}
+|-
+|342
+|{{MS|342|Crawdaunt (Pokémon)}}
+|{{p|Crawdaunt}}
+{{typetable|Water}}
+{{typetable|Dark}}
+|-
+|347
+|{{MS|347|Anorith (Pokémon)}}
+|{{p|Anorith}}
+{{typetable|Rock}}
+{{typetable|Bug}}
+|-
+|422
+|{{MS|422|Shellos (Pokémon)}}
+|{{p|Shellos}}
+{{typetable2|Water}}
+|-
+|423
+|{{MS|423|Gastrodon (Pokémon)}}
+|{{p|Gastrodon}}
+{{typetable|Water}}
+{{typetable|Ground}}
+|-
+|451
+|{{MS|451|Skorupi (Pokémon)}}
+|{{p|Skorupi}}
+{{typetable|Poison}}
+{{typetable|Bug}}
+|-
+|452
+|{{MS|452|Drapion (Pokémon)}}
+|{{p|Drapion}}
+{{typetable|Poison}}
+{{typetable|Dark}}
+|-
+|488
+|{{MS|488|Cresselia (Pokémon)}}
+|{{p|Cresselia}}
+{{typetable2|Psychic}}
+|-
+|540
+|{{MS|540|Sewaddle (Pokémon)}}
+|{{p|Sewaddle}}
+{{typetable|Bug}}
+{{typetable|Grass}}
+|-
+|543
+|{{MS|543|Venipede (Pokémon)}}
+|{{p|Venipede}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|545
+|{{MS|545|Scolipede (Pokémon)}}
+|{{p|Scolipede}}
+{{typetable|Bug}}
+{{typetable|Poison}}
+|-
+|557
+|{{MS|557|Dwebble (Pokémon)}}
+|{{p|Dwebble}}
+{{typetable|Bug}}
+{{typetable|Rock}}
+|-
+|558
+|{{MS|558|Crustle (Pokémon)}}
+|{{p|Crustle}}
+{{typetable|Bug}}
+{{typetable|Rock}}
+|-
+|595
+|{{MS|595|Joltik (Pokémon)}}
+|{{p|Joltik}}
+{{typetable|Bug}}
+{{typetable|Electric}}
+|-
+|596
+|{{MS|596|Galvantula (Pokémon)}}
+|{{p|Galvantula}}
+{{typetable|Bug}}
+{{typetable|Electric}}
+|-
+|632
+|{{MS|632|Durant (Pokémon)}}
+|{{p|Durant}}
+{{typetable|Bug}}
+{{typetable|Steel}}
+|-
+|636
+|{{MS|636|Larvesta (Pokémon)}}
+|{{p|Larvesta}}
+{{typetable|Bug}}
+{{typetable|Fire}}
+|}

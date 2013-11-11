@@ -18,7 +18,7 @@ namespace MachineLearning
 
         private const string pokefolder = @"..\..\PokeFiles";
         static Regex regFloat = new Regex(@"[0-9]+\.[0-9]+");
-        static Regex regInt = new Regex(@"[0-9][0-9][0-9]([A-Z])?");
+        static Regex regInt = new Regex(@"[0-9][0-9][0-9]");
         static PokeContext ct = new PokeContext();
            
 
@@ -26,7 +26,8 @@ namespace MachineLearning
         static void Main(string[] args)
         {        
             
-            ParseHeight();          
+            ParseHeight();
+            ParseBodies();
         }
         
         static void ParseHeight()
@@ -56,7 +57,7 @@ namespace MachineLearning
                     var pokes = regInt.Matches(line);
                     foreach (Match pokeMatch in pokes)
                     {
-                        var pokeId = pokeMatch.Value ;
+                        var pokeId = int.Parse( pokeMatch.Value );
                         var poke = ct.Pokemons.Where(p => p.PokeId == pokeId ).FirstOrDefault(); // Doing a query to find the pokemon with this ID
                         if (poke != null) // if the pokemons exists, we just set the height!
                             poke.Height = height;
@@ -69,7 +70,75 @@ namespace MachineLearning
             ct.SaveChanges();
         }
 
-   
+
+        static void ParseBodies()
+        {
+
+            string file = (new StreamReader(Path.Combine(pokefolder, "pokeBodies.txt"))).ReadToEnd();
+            var bodiesGroups = file.Replace('\r', ' ').Replace('\n',' ').Split(new string[] { "type:" }, StringSplitOptions.None);
+
+            foreach (var group in bodiesGroups) // iterate over height groups
+            {
+                string type = (new String( group.TakeWhile(c => c != '|').ToArray() )).Trim();
+
+                var pokes = regInt.Matches(group);
+                foreach (Match pokeMatch in pokes)
+                {
+                    var pokeId = int.Parse( pokeMatch.Value);
+                    var poke = ct.Pokemons.Where(p => p.PokeId == pokeId).FirstOrDefault(); // Doing a query to find the pokemon with this ID
+                    if (poke != null) // if the pokemons exists, we just set the bodytype !
+                        poke.Body = (PokeBody) Enum.Parse(typeof(PokeBody),type);
+                    else // if the variabel is null, then the pokemon doenst exists in the database, let's create it!
+                        ct.Pokemons.Add(new Pokemon() { PokeId = pokeId, Body = (PokeBody) Enum.Parse(typeof(PokeBody),type) });
+
+                    ct.SaveChanges();
+                }
+
+             
+            }
+
+            
+           
+        }
+
+
+        static void ParseStatsBase()
+        {
+            string file = (new StreamReader(Path.Combine(pokefolder, "pokeBodies.txt"))).ReadToEnd();
+            var pokes = file.Replace('\r', ' ').Split('\n');
+
+            foreach (var poke in pokes)
+            {
+                var infos = poke.Split('|');
+                int pokeId;
+                int idInx = 0;
+                int hpInx = 2;
+                int attkInx = 3;
+                int defInx = 4;
+                int spAttkInx = 5;
+                int spDefInx = 6;
+                int speedInx = 7;
+                int totalInx = 8;
+                int avgInx = 9;
+                if (int.TryParse(infos[0], out pokeId))// sucesso no parse! é um pokemon valido, sem letra no final
+                {
+                   
+                    var pokeBase = ct.Pokemons.Where(p => p.PokeId == pokeId).FirstOrDefault(); // Doing a query to find the pokemon with this ID
+                    if (pokeBase != null) // if the pokemons exists, we just set the bodytype !
+                    {
+                       //preencher
+                    }
+                    else // if the variabel is null, then the pokemon doenst exists in the database, let's create it!
+                      //  ct.Pokemons.Add(new Pokemon() { PokeId = pokeId, Body = (PokeBody) Enum.Parse(typeof(PokeBody),type) });
+                        //preencher !
+                    ct.SaveChanges();
+                }
+            }
+
+
+
+        }
+
     }
 
  

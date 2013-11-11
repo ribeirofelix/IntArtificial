@@ -5,6 +5,23 @@
     Water,
     Electric
 }
+public enum PokeBody
+{
+    head,
+    serpertine,
+    fins,
+    headArms,
+    headBase,
+    bipedalTailed,
+    headLegs,
+    quadruped,
+    singleWings,
+    multiped,
+    multiBody,
+    bipedalTailless,
+    TwoMoreWings,
+    insectoid
+}
 
 public enum PokeNum {
 Bulbasaur = 001,
