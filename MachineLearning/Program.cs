@@ -18,7 +18,7 @@ namespace MachineLearning
 
         private const string pokefolder = @"..\..\PokeFiles";
         static Regex regFloat = new Regex(@"[0-9]+\.[0-9]+");
-        static Regex regInt = new Regex(@"[0-9][0-9][0-9]([A-Z])?");
+        static Regex regInt = new Regex(@"[0-9][0-9][0-9]");
         static PokeContext ct = new PokeContext();
            
 
@@ -56,7 +56,7 @@ namespace MachineLearning
                     var pokes = regInt.Matches(line);
                     foreach (Match pokeMatch in pokes)
                     {
-                        var pokeId = pokeMatch.Value ;
+                        var pokeId = int.Parse(pokeMatch.Value) ;
                         var poke = ct.Pokemons.Where(p => p.PokeId == pokeId ).FirstOrDefault(); // Doing a query to find the pokemon with this ID
                         if (poke != null) // if the pokemons exists, we just set the height!
                             poke.Height = height;
@@ -66,6 +66,37 @@ namespace MachineLearning
                 }
             }
 
+            ct.SaveChanges();
+        }
+
+        static void ParseWeight()
+        {
+            string file = (new StreamReader(Path.Combine(pokefolder, "pokeWeight.txt"))).ReadToEnd();
+            file = file.Replace('\r', ' ');
+
+            var pokeLine = regInt.Split(file);
+
+            foreach (var poke in pokeLine)
+            {
+                // LEMBRAR: PORYGON-Z PARA PORYGONZ, NIDORANMACHO PARA NIDORANM, NIDORANFEMEA PARA NIDORANF
+                float weight;
+                String name;
+                int i = 0;
+
+                var pokeInf = poke.Split('|');
+
+                name = pokeInf[0];
+
+                weight = float.Parse(pokeInf[4]);
+
+                int en = (int)Enum.GetValue(typeof(PokeNum), name);
+
+                var pokeBase = ct.Pokemons.Where(p => p.PokeId == en).FirstOrDefault(); // Doing a query to find the pokemon with this ID
+                if (pokeBase != null) // if the pokemons exists, we just set the height!
+                    pokeBase.Weight = weight;
+                else // if the variabel is null, then the pokemon doenst exists in the database, let's create it!
+                    ct.Pokemons.Add(new Pokemon() { PokeId = en, Weight = weight });
+            }
             ct.SaveChanges();
         }
 

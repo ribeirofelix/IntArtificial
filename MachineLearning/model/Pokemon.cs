@@ -12,10 +12,11 @@ namespace MachineLearning.model
     {
         
         public int Id { get; set; }
-        public string PokeId { get; set; }
+        public int PokeId { get; set; }
         public float Height { get; set; }
         public float Widht { get; set; }
         public float Weight { get; set; }
+        public String Color { get; set; }
         public PokeType Type { get; set; }
     }
 }
