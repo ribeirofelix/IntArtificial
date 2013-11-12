@@ -1,0 +1,680 @@
+grass
+{{ndex|019|Rattata|1|Normal}}
+{{ndex|020|Raticate|1|Normal}}
+{{ndex|161|Sentret|1|Normal}}
+{{ndex|162|Furret|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|263|Zigzagoon|1|Normal}}
+{{ndex|264|Linoone|1|Normal}}
+{{ndex|261|Poochyena|1|Dark}}
+{{ndex|262|Mightyena|1|Dark}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|029|Nidoran♀|1|Poison}}
+{{ndex|030|Nidorina|1|Poison}}
+{{ndex|031|Nidoqueen|2|Poison|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|032|Nidoran♂|1|Poison}}
+{{ndex|033|Nidorino|1|Poison}}
+{{ndex|034|Nidoking|2|Poison|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|084|Doduo|2|Normal|Flying}}
+{{ndex|085|Dodrio|2|Normal|Flying}}
+{{ndex|276|Taillow|2|Normal|Flying}}
+{{ndex|277|Swellow|2|Normal|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|114|Tangela|1|Grass}}
+{{ndex|315|Roselia|2|Grass|Poison}}
+{{ndex|191|Sunkern|1|Grass}}
+{{ndex|192|Sunflora|1|Grass}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|187|Hoppip|2|Grass|Flying}}
+{{ndex|188|Skiploom|2|Grass|Flying}}
+{{ndex|189|Jumpluff|2|Grass|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|043|Oddish|2|Grass|Poison}}
+{{ndex|044|Gloom|2|Grass|Poison}}
+{{ndex|045|Vileplume|2|Grass|Poison}}
+{{ndex|182|Bellossom|1|Grass}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|023|Ekans|1|Poison}}
+{{ndex|024|Arbok|1|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|174|Igglybuff|1|Normal}}
+{{ndex|039|Jigglypuff|1|Normal}}
+{{ndex|040|Wigglytuff|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|179|Mareep|1|Electric}}
+{{ndex|180|Flaaffy|1|Electric}}
+{{ndex|181|Ampharos|1|Electric}}
+|- style="background: #fff;"
+! colspan="5" | Page 12
+{{ndex|083|Farfetch'd|2|Normal|Flying}}
+{{ndex|108|Lickitung|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 13
+{{ndex|123|Scyther|2|Bug|Flying}}
+{{ndex|212|Scizor|2|Bug|Steel}}
+|- style="background: #fff;"
+! colspan="5" | Page 14
+{{ndex|096|Drowzee|1|Psychic}}
+{{ndex|097|Hypno|1|Psychic}}
+{{ndex|316|Gulpin|1|Poison}}
+{{ndex|317|Swalot|1|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 15
+{{ndex|115|Kangaskhan|1|Normal}}
+{{ndex|203|Girafarig|2|Normal|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 16
+{{ndex|128|Tauros|1|Normal}}
+{{ndex|241|Miltank|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 17
+{{ndex|037|Vulpix|1|Fire}}
+{{ndex|038|Ninetales|1|Fire}}
+{{ndex|077|Ponyta|1|Fire}}
+{{ndex|078|Rapidash|1|Fire}}
+|- style="background: #fff;"
+! colspan="5" | Page 18
+{{ndex|239|Elekid|1|Electric}}
+{{ndex|125|Electabuzz|1|Electric}}
+{{ndex|309|Electrike|1|Electric}}
+{{ndex|310|Manectric|1|Electric}}
+|- style="background: #fff;"
+! colspan="5" | Page 19
+{{ndex|335|Zangoose|1|Normal}}
+{{ndex|336|Seviper|1|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 20
+{{ndex|311|Plusle|1|Electric}}
+{{ndex|312|Minun|1|Electric}}
+|- style="background: #fff;"
+! colspan="5" | Page 21
+{{ndex|058|Growlithe|1|Fire}}
+{{ndex|059|Arcanine|1|Fire}}
+|- style="background: #fff;"
+! colspan="5" | Page 22
+{{ndex|351|Castform|1|Normal}}
+{{ndex|358|Chimecho|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 23
+{{ndex|001|Bulbasaur|2|Grass|Poison}}
+{{ndex|002|Ivysaur|2|Grass|Poison}}
+{{ndex|003|Venusaur|2|Grass|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 24
+{{ndex|152|Chikorita|1|Grass}}
+{{ndex|153|Bayleef|1|Grass}}
+{{ndex|154|Meganium|1|Grass}}
+|- style="background: #fff;"
+! colspan="5" | Page 25
+{{ndex|155|Cyndaquil|1|Fire}}
+{{ndex|156|Quilava|1|Fire}}
+{{ndex|157|Typhlosion|1|Fire}}
+|- style="background: #fff;"
+! colspan="5" | Page 26
+{{ndex|255|Torchic|1|Fire}}
+{{ndex|256|Combusken|2|Fire|Fighting}}
+{{ndex|257|Blaziken|2|Fire|Fighting}}
+|- style="background: #fff;"
+! colspan="5" | Page 27
+{{ndex|243|Raikou|1|Electric}}
+{{ndex|244|Entei|1|Fire}}
+{{ndex|245|Suicune|1|Water}}
+|}
+END
+forest
+{{ndex|010|Caterpie|1|Bug}}
+{{ndex|011|Metapod|1|Bug}}
+{{ndex|012|Butterfree|2|Bug|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|013|Weedle|2|Bug|Poison}}
+{{ndex|014|Kakuna|2|Bug|Poison}}
+{{ndex|015|Beedrill|2|Bug|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|265|Wurmple|1|Bug}}
+{{ndex|266|Silcoon|1|Bug}}
+{{ndex|267|Beautifly|2|Bug|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|268|Cascoon|1|Bug}}
+{{ndex|269|Dustox|2|Bug|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|016|Pidgey|2|Normal|Flying}}
+{{ndex|017|Pidgeotto|2|Normal|Flying}}
+{{ndex|018|Pidgeot|2|Normal|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|163|Hoothoot|2|Normal|Flying}}
+{{ndex|164|Noctowl|2|Normal|Flying}}
+{{ndex|177|Natu|2|Psychic|Flying}}
+{{ndex|178|Xatu|2|Psychic|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|172|Pichu|1|Electric}}
+{{ndex|025|Pikachu|1|Electric}}
+{{ndex|026|Raichu|1|Electric}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|069|Bellsprout|2|Grass|Poison}}
+{{ndex|070|Weepinbell|2|Grass|Poison}}
+{{ndex|071|Victreebel|2|Grass|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|046|Paras|2|Bug|Grass}}
+{{ndex|047|Parasect|2|Bug|Grass}}
+{{ndex|285|Shroomish|1|Grass}}
+{{ndex|286|Breloom|2|Grass|Fighting}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|273|Seedot|1|Grass}}
+{{ndex|274|Nuzleaf|2|Grass|Dark}}
+{{ndex|275|Shiftry|2|Grass|Dark}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|048|Venonat|2|Bug|Poison}}
+{{ndex|049|Venomoth|2|Bug|Poison}}
+{{ndex|193|Yanma|2|Bug|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 12
+{{ndex|165|Ledyba|2|Bug|Flying}}
+{{ndex|166|Ledian|2|Bug|Flying}}
+{{ndex|167|Spinarak|2|Bug|Poison}}
+{{ndex|168|Ariados|2|Bug|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 13
+{{ndex|290|Nincada|2|Bug|Ground}}
+{{ndex|291|Ninjask|2|Bug|Flying}}
+{{ndex|292|Shedinja|2|Bug|Ghost}}
+|- style="background: #fff;"
+! colspan="5" | Page 14
+{{ndex|313|Volbeat|1|Bug}}
+{{ndex|314|Illumise|1|Bug}}
+|- style="background: #fff;"
+! colspan="5" | Page 15
+{{ndex|204|Pineco|1|Bug}}
+{{ndex|205|Forretress|2|Bug|Steel}}
+|- style="background: #fff;"
+! colspan="5" | Page 16
+{{ndex|287|Slakoth|1|Normal}}
+{{ndex|288|Vigoroth|1|Normal}}
+{{ndex|289|Slaking|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 17
+{{ndex|300|Skitty|1|Normal}}
+{{ndex|301|Delcatty|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 18
+{{ndex|198|Murkrow|2|Dark|Flying}}
+{{ndex|215|Sneasel|2|Dark|Ice}}
+|- style="background: #fff;"
+! colspan="5" | Page 19
+{{ndex|102|Exeggcute|2|Grass|Psychic}}
+{{ndex|103|Exeggutor|2|Grass|Psychic}}
+{{ndex|185|Sudowoodo|1|Rock}}
+|- style="background: #fff;"
+! colspan="5" | Page 20
+{{ndex|190|Aipom|1|Normal}}
+{{ndex|234|Stantler|1|Normal}}
+{{ndex|352|Kecleon|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 21
+{{ndex|127|Pinsir|1|Bug}}
+{{ndex|214|Heracross|2|Bug|Fighting}}
+|- style="background: #fff;"
+! colspan="5" | Page 22
+{{ndex|333|Swablu|2|Normal|Flying}}
+{{ndex|334|Altaria|2|Dragon|Flying}}
+{{ndex|357|Tropius|2|Grass|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 23
+{{ndex|355|Duskull|1|Ghost}}
+{{ndex|356|Dusclops|1|Ghost}}
+|- style="background: #fff;"
+! colspan="5" | Page 24
+{{ndex|175|Togepi|1|Normal}}
+{{ndex|176|Togetic|2|Normal|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 25
+{{ndex|252|Treecko|1|Grass}}
+{{ndex|253|Grovyle|1|Grass}}
+{{ndex|254|Sceptile|1|Grass}}
+|- style="background: #fff;"
+! colspan="5" | Page 26
+{{ndex|251|Celebi|2|Psychic|Grass}}
+|}
+END
+water
+{{ndex|118|Goldeen|1|Water}}
+{{ndex|119|Seaking|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|129|Magikarp|1|Water}}
+{{ndex|130|Gyarados|2|Water|Flying}}
+{{ndex|098|Krabby|1|Water}}
+{{ndex|099|Kingler|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|341|Corphish|1|Water}}
+{{ndex|342|Crawdaunt|2|Water|Dark}}
+{{ndex|339|Barboach|2|Water|Ground}}
+{{ndex|340|Whiscash|2|Water|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|270|Lotad|2|Water|Grass}}
+{{ndex|271|Lombre|2|Water|Grass}}
+{{ndex|272|Ludicolo|2|Water|Grass}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|283|Surskit|2|Bug|Water}}
+{{ndex|284|Masquerain|2|Bug|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|054|Psyduck|1|Water}}
+{{ndex|055|Golduck|1|Water}}
+{{ndex|194|Wooper|2|Water|Ground}}
+{{ndex|195|Quagsire|2|Water|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|060|Poliwag|1|Water}}
+{{ndex|061|Poliwhirl|1|Water}}
+{{ndex|062|Poliwrath|2|Water|Fighting}}
+{{ndex|186|Politoed|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|298|Azurill|1|Normal}}
+{{ndex|183|Marill|1|Water}}
+{{ndex|184|Azumarill|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|079|Slowpoke|2|Water|Psychic}}
+{{ndex|080|Slowbro|2|Water|Psychic}}
+{{ndex|199|Slowking|2|Water|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|349|Feebas|1|Water}}
+{{ndex|350|Milotic|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|347|Anorith|2|Rock|Bug}}
+{{ndex|348|Armaldo|2|Rock|Bug}}
+|- style="background: #fff;"
+! colspan="5" | Page 12
+{{ndex|147|Dratini|1|Dragon}}
+{{ndex|148|Dragonair|1|Dragon}}
+{{ndex|149|Dragonite|2|Dragon|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 13
+{{ndex|007|Squirtle|1|Water}}
+{{ndex|008|Wartortle|1|Water}}
+{{ndex|009|Blastoise|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 14
+{{ndex|158|Totodile|1|Water}}
+{{ndex|159|Croconaw|1|Water}}
+{{ndex|160|Feraligatr|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 15
+{{ndex|258|Mudkip|1|Water}}
+{{ndex|259|Marshtomp|2|Water|Ground}}
+{{ndex|260|Swampert|2|Water|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 16
+{{ndex|380|Latias|2|Dragon|Psychic}}
+{{ndex|381|Latios|2|Dragon|Psychic}}
+|}
+END
+sea
+{{ndex|072|Tentacool|2|Water|Poison}}
+{{ndex|073|Tentacruel|2|Water|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|278|Wingull|2|Water|Flying}}
+{{ndex|279|Pelipper|2|Water|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|120|Staryu|1|Water}}
+{{ndex|121|Starmie|2|Water|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|170|Chinchou|2|Water|Electric}}
+{{ndex|171|Lanturn|2|Water|Electric}}
+{{ndex|223|Remoraid|1|Water}}
+{{ndex|224|Octillery|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|090|Shellder|1|Water}}
+{{ndex|091|Cloyster|2|Water|Ice}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|366|Clamperl|1|Water}}
+{{ndex|367|Huntail|1|Water}}
+{{ndex|368|Gorebyss|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|211|Qwilfish|2|Water|Poison}}
+{{ndex|222|Corsola|2|Water|Rock}}
+{{ndex|226|Mantine|2|Water|Flying}}
+{{ndex|370|Luvdisc|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|086|Seel|1|Water}}
+{{ndex|087|Dewgong|2|Water|Ice}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|363|Spheal|2|Ice|Water}}
+{{ndex|364|Sealeo|2|Ice|Water}}
+{{ndex|365|Walrein|2|Ice|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|318|Carvanha|2|Water|Dark}}
+{{ndex|319|Sharpedo|2|Water|Dark}}
+{{ndex|320|Wailmer|1|Water}}
+{{ndex|321|Wailord|1|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|116|Horsea|1|Water}}
+{{ndex|117|Seadra|1|Water}}
+{{ndex|230|Kingdra|2|Water|Dragon}}
+|- style="background: #fff;"
+! colspan="5" | Page 12
+{{ndex|369|Relicanth|2|Water|Rock}}
+|- style="background: #fff;"
+! colspan="5" | Page 13
+{{ndex|131|Lapras|2|Water|Ice}}
+|- style="background: #fff;"
+! colspan="5" | Page 14
+{{ndex|138|Omanyte|2|Rock|Water}}
+{{ndex|139|Omastar|2|Rock|Water}}
+{{ndex|140|Kabuto|2|Rock|Water}}
+{{ndex|141|Kabutops|2|Rock|Water}}
+|- style="background: #fff;"
+! colspan="5" | Page 15
+{{ndex|345|Lileep|2|Rock|Grass}}
+{{ndex|346|Cradily|2|Rock|Grass}}
+|- style="background: #fff;"
+! colspan="5" | Page 16
+{{ndex|382|Kyogre|1|Water}}
+|}
+END
+cave
+{{ndex|041|Zubat|2|Poison|Flying}}
+{{ndex|042|Golbat|2|Poison|Flying}}
+{{ndex|169|Crobat|2|Poison|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|050|Diglett|1|Ground}}
+{{ndex|051|Dugtrio|1|Ground}}
+{{ndex|095|Onix|2|Rock|Ground}}
+{{ndex|208|Steelix|2|Steel|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|220|Swinub|2|Ice|Ground}}
+{{ndex|221|Piloswine|2|Ice|Ground}}
+{{ndex|361|Snorunt|1|Ice}}
+{{ndex|362|Glalie|1|Ice}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|293|Whismur|1|Normal}}
+{{ndex|294|Loudred|1|Normal}}
+{{ndex|295|Exploud|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|200|Misdreavus|1|Ghost}}
+{{ndex|206|Dunsparce|1|Normal}}
+{{ndex|299|Nosepass|1|Rock}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|302|Sableye|2|Dark|Ghost}}
+{{ndex|303|Mawile|1|Steel}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|092|Gastly|2|Ghost|Poison}}
+{{ndex|093|Haunter|2|Ghost|Poison}}
+{{ndex|094|Gengar|2|Ghost|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|360|Wynaut|1|Psychic}}
+{{ndex|202|Wobbuffet|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|337|Lunatone|2|Rock|Psychic}}
+{{ndex|338|Solrock|2|Rock|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|377|Regirock|1|Rock}}
+{{ndex|378|Regice|1|Ice}}
+{{ndex|379|Registeel|1|Steel}}
+|}
+END
+mountain
+{{ndex|074|Geodude|2|Rock|Ground}}
+{{ndex|075|Graveler|2|Rock|Ground}}
+{{ndex|076|Golem|2|Rock|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|056|Mankey|1|Fighting}}
+{{ndex|057|Primeape|1|Fighting}}
+{{ndex|325|Spoink|1|Psychic}}
+{{ndex|326|Grumpig|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|066|Machop|1|Fighting}}
+{{ndex|067|Machoke|1|Fighting}}
+{{ndex|068|Machamp|1|Fighting}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|173|Cleffa|1|Normal}}
+{{ndex|035|Clefairy|1|Normal}}
+{{ndex|036|Clefable|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|104|Cubone|1|Ground}}
+{{ndex|105|Marowak|1|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|218|Slugma|1|Fire}}
+{{ndex|219|Magcargo|2|Fire|Rock}}
+{{ndex|322|Numel|2|Fire|Ground}}
+{{ndex|323|Camerupt|2|Fire|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|296|Makuhita|1|Fighting}}
+{{ndex|297|Hariyama|1|Fighting}}
+{{ndex|307|Meditite|2|Fighting|Psychic}}
+{{ndex|308|Medicham|2|Fighting|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|213|Shuckle|2|Bug|Rock}}
+{{ndex|216|Teddiursa|1|Normal}}
+{{ndex|217|Ursaring|1|Normal}}
+{{ndex|225|Delibird|2|Ice|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|207|Gligar|2|Ground|Flying}}
+{{ndex|327|Spinda|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|240|Magby|1|Fire}}
+{{ndex|126|Magmar|1|Fire}}
+{{ndex|324|Torkoal|1|Fire}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|304|Aron|2|Steel|Rock}}
+{{ndex|305|Lairon|2|Steel|Rock}}
+{{ndex|306|Aggron|2|Steel|Rock}}
+|- style="background: #fff;"
+! colspan="5" | Page 12
+{{ndex|246|Larvitar|2|Rock|Ground}}
+{{ndex|247|Pupitar|2|Rock|Ground}}
+{{ndex|248|Tyranitar|2|Rock|Dark}}
+|- style="background: #fff;"
+! colspan="5" | Page 13
+{{ndex|143|Snorlax|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 14
+{{ndex|359|Absol|1|Dark}}
+|- style="background: #fff;"
+! colspan="5" | Page 15
+{{ndex|142|Aerodactyl|2|Rock|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 16
+{{ndex|004|Charmander|1|Fire}}
+{{ndex|005|Charmeleon|1|Fire}}
+{{ndex|006|Charizard|2|Fire|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 17
+{{ndex|385|Jirachi|2|Steel|Psychic}}
+|}
+END
+rough
+{{ndex|021|Spearow|2|Normal|Flying}}
+{{ndex|022|Fearow|2|Normal|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|027|Sandshrew|1|Ground}}
+{{ndex|028|Sandslash|1|Ground}}
+{{ndex|111|Rhyhorn|2|Ground|Rock}}
+{{ndex|112|Rhydon|2|Ground|Rock}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|081|Magnemite|2|Electric|Steel}}
+{{ndex|082|Magneton|2|Electric|Steel}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|228|Houndour|2|Dark|Fire}}
+{{ndex|229|Houndoom|2|Dark|Fire}}
+{{ndex|231|Phanpy|1|Ground}}
+{{ndex|232|Donphan|1|Ground}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|331|Cacnea|1|Grass}}
+{{ndex|332|Cacturne|2|Grass|Dark}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|328|Trapinch|1|Ground}}
+{{ndex|329|Vibrava|2|Ground|Dragon}}
+{{ndex|330|Flygon|2|Ground|Dragon}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|227|Skarmory|2|Steel|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|343|Baltoy|2|Ground|Psychic}}
+{{ndex|344|Claydol|2|Ground|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|371|Bagon|1|Dragon}}
+{{ndex|372|Shelgon|1|Dragon}}
+{{ndex|373|Salamence|2|Dragon|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|374|Beldum|2|Steel|Psychic}}
+{{ndex|375|Metang|2|Steel|Psychic}}
+{{ndex|376|Metagross|2|Steel|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|383|Groudon|1|Ground}}
+|}
+END
+urban
+{{ndex|052|Meowth|1|Normal}}
+{{ndex|053|Persian|1|Normal}}
+{{ndex|209|Snubbull|1|Normal}}
+{{ndex|210|Granbull|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|088|Grimer|1|Poison}}
+{{ndex|089|Muk|1|Poison}}
+{{ndex|109|Koffing|1|Poison}}
+{{ndex|110|Weezing|1|Poison}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|353|Shuppet|1|Ghost}}
+{{ndex|354|Banette|1|Ghost}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|063|Abra|1|Psychic}}
+{{ndex|064|Kadabra|1|Psychic}}
+{{ndex|065|Alakazam|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|280|Ralts|1|Psychic}}
+{{ndex|281|Kirlia|1|Psychic}}
+{{ndex|282|Gardevoir|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|238|Smoochum|2|Ice|Psychic}}
+{{ndex|124|Jynx|2|Ice|Psychic}}
+{{ndex|122|Mr. Mime|1|Psychic}}
+{{ndex|235|Smeargle|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|236|Tyrogue|1|Fighting}}
+{{ndex|106|Hitmonlee|1|Fighting}}
+{{ndex|107|Hitmonchan|1|Fighting}}
+{{ndex|237|Hitmontop|1|Fighting}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|113|Chansey|1|Normal}}
+{{ndex|242|Blissey|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 9
+{{ndex|100|Voltorb|1|Electric}}
+{{ndex|101|Electrode|1|Electric}}
+{{ndex|137|Porygon|1|Normal}}
+{{ndex|233|Porygon2|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 10
+{{ndex|132|Ditto|1|Normal}}
+|- style="background: #fff;"
+! colspan="5" | Page 11
+{{ndex|133|Eevee|1|Normal}}
+{{ndex|134|Vaporeon|1|Water}}
+{{ndex|135|Jolteon|1|Electric}}
+{{ndex|136|Flareon|1|Fire}}
+|- style="background: #fff;"
+! colspan="5" | Page 12
+{{ndex|196|Espeon|1|Psychic}}
+{{ndex|197|Umbreon|1|Dark}}
+|}
+END
+rare
+{{ndex|201|Unown|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 2
+{{ndex|144|Articuno|2|Ice|Flying}}
+{{ndex|145|Zapdos|2|Electric|Flying}}
+{{ndex|146|Moltres|2|Fire|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 3
+{{ndex|249|Lugia|2|Psychic|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 4
+{{ndex|250|Ho-Oh|2|Fire|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 5
+{{ndex|384|Rayquaza|2|Dragon|Flying}}
+|- style="background: #fff;"
+! colspan="5" | Page 6
+{{ndex|386|Deoxys|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 7
+{{ndex|150|Mewtwo|1|Psychic}}
+|- style="background: #fff;"
+! colspan="5" | Page 8
+{{ndex|151|Mew|1|Psychic}}
+|}

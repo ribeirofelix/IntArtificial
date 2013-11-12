@@ -1,0 +1,3245 @@
+010
+|{{MSP|010|Caterpie}}
+| {{p|Caterpie}}
+255
+|-
+013
+|{{MSP|013|Weedle}}
+| {{p|Weedle}}
+255
+|-
+016
+|{{MSP|016|Pidgey}}
+| {{p|Pidgey}}
+255
+|-
+019
+|{{MSP|019|Rattata}}
+| {{p|Rattata}}
+255
+|-
+021
+|{{MSP|021|Spearow}}
+| {{p|Spearow}}
+255
+|-
+023
+|{{MSP|023|Ekans}}
+| {{p|Ekans}}
+255
+|-
+027
+|{{MSP|027|Sandshrew}}
+| {{p|Sandshrew}}
+255
+|-
+041
+|{{MSP|041|Zubat}}
+| {{p|Zubat}}
+255
+|-
+043
+|{{MSP|043|Oddish}}
+| {{p|Oddish}}
+255
+|-
+050
+|{{MSP|050|Diglett}}
+| {{p|Diglett}}
+255
+|-
+052
+|{{MSP|052|Meowth}}
+| {{p|Meowth}}
+255
+|-
+060
+|{{MSP|060|Poliwag}}
+| {{p|Poliwag}}
+255
+|-
+069
+|{{MSP|069|Bellsprout}}
+| {{p|Bellsprout}}
+255
+|-
+074
+|{{MSP|074|Geodude}}
+| {{p|Geodude}}
+255
+|-
+129
+|{{MSP|129|Magikarp}}
+| {{p|Magikarp}}
+255
+|-
+161
+|{{MSP|161|Sentret}}
+| {{p|Sentret}}
+255
+|-
+163
+|{{MSP|163|Hoothoot}}
+| {{p|Hoothoot}}
+255
+|-
+165
+|{{MSP|165|Ledyba}}
+| {{p|Ledyba}}
+255
+|-
+167
+|{{MSP|167|Spinarak}}
+| {{p|Spinarak}}
+255
+|-
+187
+|{{MSP|187|Hoppip}}
+| {{p|Hoppip}}
+255
+|-
+194
+|{{MSP|194|Wooper}}
+| {{p|Wooper}}
+255
+|-
+261
+|{{MSP|261|Poochyena}}
+| {{p|Poochyena}}
+255
+|-
+263
+|{{MSP|263|Zigzagoon}}
+| {{p|Zigzagoon}}
+255
+|-
+265
+|{{MSP|265|Wurmple}}
+| {{p|Wurmple}}
+255
+|-
+270
+|{{MSP|270|Lotad}}
+| {{p|Lotad}}
+255
+|-
+273
+|{{MSP|273|Seedot}}
+| {{p|Seedot}}
+255
+|-
+285
+|{{MSP|285|Shroomish}}
+| {{p|Shroomish}}
+255
+|-
+287
+|{{MSP|287|Slakoth}}
+| {{p|Slakoth}}
+255
+|-
+290
+|{{MSP|290|Nincada}}
+| {{p|Nincada}}
+255
+|-
+299
+|{{MSP|299|Nosepass}}
+| {{p|Nosepass}}
+255
+|-
+300
+|{{MSP|300|Skitty}}
+| {{p|Skitty}}
+255
+|-
+322
+|{{MSP|322|Numel}}
+| {{p|Numel}}
+255
+|-
+325
+|{{MSP|325|Spoink}}
+| {{p|Spoink}}
+255
+|-
+327
+|{{MSP|327|Spinda}}
+| {{p|Spinda}}
+255
+|-
+328
+|{{MSP|328|Trapinch}}
+| {{p|Trapinch}}
+255
+|-
+333
+|{{MSP|333|Swablu}}
+| {{p|Swablu}}
+255
+|-
+343
+|{{MSP|343|Baltoy}}
+| {{p|Baltoy}}
+255
+|-
+349
+|{{MSP|349|Feebas}}
+| {{p|Feebas}}
+255
+|-
+363
+|{{MSP|363|Spheal}}
+| {{p|Spheal}}
+255
+|-
+366
+|{{MSP|366|Clamperl}}
+| {{p|Clamperl}}
+255
+|-
+396
+|{{MSP|396|Starly}}
+| {{p|Starly}}
+255
+|-
+399
+|{{MSP|399|Bidoof}}
+| {{p|Bidoof}}
+255
+|-
+401
+|{{MSP|401|Kricketot}}
+| {{p|Kricketot}}
+255
+|-
+406
+|{{MSP|406|Budew}}
+| {{p|Budew}}
+255
+|-
+436
+|{{MSP|436|Bronzor}}
+| {{p|Bronzor}}
+255
+|-
+438
+|{{MSP|438|Bonsly}}
+| {{p|Bonsly}}
+255
+|-
+504
+|{{MSP|504|Patrat}}
+| {{p|Patrat}}
+255 
+|-
+505
+|{{MSP|505|Watchog}}
+| {{p|Watchog}}
+255
+|-
+506
+|{{MSP|506|Lillipup}}
+| {{p|Lillipup}}
+255 
+|-
+509
+|{{MSP|509|Purrloin}}
+| {{p|Purrloin}}
+255
+|-
+519
+|{{MSP|519|Pidove}}
+| {{p|Pidove}}
+255
+|-
+524
+|{{MSP|524|Roggenrola}}
+| {{p|Roggenrola}}
+255
+|-
+531
+|{{MSP|531|Audino}}
+| {{p|Audino}}
+255
+|-
+535
+|{{MSP|535|Tympole}}
+| {{p|Tympole}}
+255
+|-
+540
+|{{MSP|540|Sewaddle}}
+| {{p|Sewaddle}}
+255
+|-
+543
+|{{MSP|543|Venipede}}
+| {{p|Venipede}}
+255
+|-
+556
+|{{MSP|556|Maractus}}
+| {{p|Maractus}}
+255
+|-
+572
+|{{MSP|572|Minccino}}
+| {{p|Minccino}}
+255
+|-
+582
+|{{MSP|582|Vanillite}}
+| {{p|Vanillite}}
+255
+|-
+597
+|{{MSP|597|Ferroseed}}
+| {{p|Ferroseed}}
+255
+|-
+605
+|{{MSP|605|Elgyem}}
+| {{p|Elgyem}}
+255
+|-
+029
+|{{MSP|029|Nidoran♀}}
+| {{p|Nidoran♀}}
+235
+|-
+032
+|{{MSP|032|Nidoran♂}}
+| {{p|Nidoran♂}}
+235
+|-
+179
+|{{MSP|179|Mareep}}
+| {{p|Mareep}}
+235
+|-
+191
+|{{MSP|191|Sunkern}}
+| {{p|Sunkern}}
+235
+|-
+280
+|{{MSP|280|Ralts}}
+| {{p|Ralts}}
+235
+|-
+403
+|{{MSP|403|Shinx}}
+| {{p|Shinx}}
+235
+|-
+098
+|{{MSP|098|Krabby}}
+| {{p|Krabby}}
+225
+|-
+116
+|{{MSP|116|Horsea}}
+| {{p|Horsea}}
+225
+|-
+118
+|{{MSP|118|Goldeen}}
+| {{p|Goldeen}}
+225
+|-
+120
+|{{MSP|120|Staryu}}
+| {{p|Staryu}}
+225
+|-
+201
+|{{MSP|201|Unown}}
+| {{p|Unown}}
+225
+|-
+220
+|{{MSP|220|Swinub}}
+| {{p|Swinub}}
+225
+|-
+316
+|{{MSP|316|Gulpin}}
+| {{p|Gulpin}}
+225
+|-
+318
+|{{MSP|318|Carvanha}}
+| {{p|Carvanha}}
+225
+|-
+353
+|{{MSP|353|Shuppet}}
+| {{p|Shuppet}}
+225
+|-
+370
+|{{MSP|370|Luvdisc}}
+| {{p|Luvdisc}}
+225
+|-
+434
+|{{MSP|434|Stunky}}
+| {{p|Stunky}}
+225
+|-
+341
+|{{MSP|341|Corphish}}
+| {{p|Corphish}}
+205
+|-
+063
+|{{MSP|063|Abra}}
+| {{p|Abra}}
+200
+|-
+276
+|{{MSP|276|Taillow}}
+| {{p|Taillow}}
+200
+|-
+283
+|{{MSP|283|Surskit}}
+| {{p|Surskit}}
+200
+|-
+297
+|{{MSP|297|Hariyama}}
+| {{p|Hariyama}}
+200
+|-
+311
+|{{MSP|311|Plusle}}
+| {{p|Plusle}}
+200
+|-
+312
+|{{MSP|312|Minun}}
+| {{p|Minun}}
+200
+|-
+352
+|{{MSP|352|Kecleon}}
+| {{p|Kecleon}}
+200
+|-
+357
+|{{MSP|357|Tropius}}
+| {{p|Tropius}}
+200
+|-
+417
+|{{MSP|417|Pachirisu}}
+| {{p|Pachirisu}}
+200
+|-
+455
+|{{MSP|455|Carnivine}}
+| {{p|Carnivine}}
+200
+|-
+574
+|{{MSP|574|Gothita}}
+| {{p|Gothita}}
+200
+|-
+577
+|{{MSP|577|Solosis}}
+| {{p|Solosis}}
+200
+|-
+587
+|{{MSP|587|Emolga}}
+| {{p|Emolga}}
+200
+|-
+588
+|{{MSP|588|Karrablast}}
+| {{p|Karrablast}}
+200
+|-
+616
+|{{MSP|616|Shelmet}}
+| {{p|Shelmet}}
+200
+|-
+025
+|{{MSP|025|Pikachu}}
+| {{p|Pikachu}}
+190
+|-
+037
+|{{MSP|037|Vulpix}}
+| {{p|Vulpix}}
+190
+|-
+046
+|{{MSP|046|Paras}}
+| {{p|Paras}}
+190
+|-
+048
+|{{MSP|048|Venonat}}
+| {{p|Venonat}}
+190
+|-
+054
+|{{MSP|054|Psyduck}}
+| {{p|Psyduck}}
+190
+|-
+056
+|{{MSP|056|Mankey}}
+| {{p|Mankey}}
+190
+|-
+058
+|{{MSP|058|Growlithe}}
+| {{p|Growlithe}}
+190
+|-
+072
+|{{MSP|072|Tentacool}}
+| {{p|Tentacool}}
+190
+|-
+077
+|{{MSP|077|Ponyta}}
+| {{p|Ponyta}}
+190
+|-
+079
+|{{MSP|079|Slowpoke}}
+| {{p|Slowpoke}}
+190
+|-
+081
+|{{MSP|081|Magnemite}}
+| {{p|Magnemite}}
+190
+|-
+084
+|{{MSP|084|Doduo}}
+| {{p|Doduo}}
+190
+|-
+086
+|{{MSP|086|Seel}}
+| {{p|Seel}}
+190
+|-
+088
+|{{MSP|088|Grimer}}
+| {{p|Grimer}}
+190
+|-
+090
+|{{MSP|090|Shellder}}
+| {{p|Shellder}}
+190
+|-
+092
+|{{MSP|092|Gastly}}
+| {{p|Gastly}}
+190
+|-
+096
+|{{MSP|096|Drowzee}}
+| {{p|Drowzee}}
+190
+|-
+100
+|{{MSP|100|Voltorb}}
+| {{p|Voltorb}}
+190
+|-
+104
+|{{MSP|104|Cubone}}
+| {{p|Cubone}}
+190
+|-
+109
+|{{MSP|109|Koffing}}
+| {{p|Koffing}}
+190
+|-
+170
+|{{MSP|170|Chinchou}}
+| {{p|Chinchou}}
+190
+|-
+172
+|{{MSP|172|Pichu}}
+| {{p|Pichu}}
+190
+|-
+175
+|{{MSP|175|Togepi}}
+| {{p|Togepi}}
+190
+|-
+177
+|{{MSP|177|Natu}}
+| {{p|Natu}}
+190
+|-
+183
+|{{MSP|183|Marill}}
+| {{p|Marill}}
+190
+|-
+204
+|{{MSP|204|Pineco}}
+| {{p|Pineco}}
+190
+|-
+206
+|{{MSP|206|Dunsparce}}
+| {{p|Dunsparce}}
+190
+|-
+209
+|{{MSP|209|Snubbull}}
+| {{p|Snubbull}}
+190
+|-
+213
+|{{MSP|213|Shuckle}}
+| {{p|Shuckle}}
+190
+|-
+218
+|{{MSP|218|Slugma}}
+| {{p|Slugma}}
+190
+|-
+223
+|{{MSP|223|Remoraid}}
+| {{p|Remoraid}}
+190
+|-
+278
+|{{MSP|278|Wingull}}
+| {{p|Wingull}}
+190
+|-
+293
+|{{MSP|293|Whismur}}
+| {{p|Whismur}}
+190
+|-
+331
+|{{MSP|331|Cacnea}}
+| {{p|Cacnea}}
+190
+|-
+339
+|{{MSP|339|Barboach}}
+| {{p|Barboach}}
+190
+|-
+355
+|{{MSP|355|Duskull}}
+| {{p|Duskull}}
+190
+|-
+361
+|{{MSP|361|Snorunt}}
+| {{p|Snorunt}}
+190
+|-
+418
+|{{MSP|418|Buizel}}
+| {{p|Buizel}}
+190
+|-
+420
+|{{MSP|420|Cherubi}}
+| {{p|Cherubi}}
+190
+|-
+422
+|{{MSP|422|Shellos}}
+| {{p|Shellos}}
+190
+|-
+427
+|{{MSP|427|Buneary}}
+| {{p|Buneary}}
+190
+|-
+431
+|{{MSP|431|Glameow}}
+| {{p|Glameow}}
+190
+|-
+456
+|{{MSP|456|Finneon}}
+| {{p|Finneon}}
+190
+|-
+517
+|{{MSP|517|Munna}}
+| {{p|Munna}}
+190
+|-
+522
+|{{MSP|522|Blitzle}}
+| {{p|Blitzle}}
+190
+|-
+527
+|{{MSP|527|Woobat}}
+| {{p|Woobat}}
+190
+|-
+546
+|{{MSP|546|Cottonee}}
+| {{p|Cottonee}}
+190
+|-
+548
+|{{MSP|548|Petilil}}
+| {{p|Petilil}}
+190
+|-
+557
+|{{MSP|557|Dwebble}}
+| {{p|Dwebble}}
+190
+|-
+562
+|{{MSP|562|Yamask}}
+| {{p|Yamask}}
+190
+|-
+568
+|{{MSP|568|Trubbish}}
+| {{p|Trubbish}}
+190
+|-
+580
+|{{MSP|580|Ducklett}}
+| {{p|Ducklett}}
+190
+|-
+585
+|{{MSP|585|Deerling}}
+| {{p|Deerling}}
+190
+|-
+590
+|{{MSP|590|Foongus}}
+| {{p|Foongus}}
+190
+|-
+592
+|{{MSP|592|Frillish}}
+| {{p|Frillish}}
+190
+|-
+595
+|{{MSP|595|Joltik}}
+| {{p|Joltik}}
+190
+|-
+602
+|{{MSP|602|Tynamo}}
+| {{p|Tynamo}}
+190
+|-
+607
+|{{MSP|607|Litwick}}
+| {{p|Litwick}}
+190
+|-
+622
+|{{MSP|622|Golett}}
+| {{p|Golett}}
+190
+|-
+627
+|{{MSP|627|Rufflet}}
+| {{p|Rufflet}}
+190
+|-
+629
+|{{MSP|629|Vullaby}}
+| {{p|Vullaby}}
+190
+|-
+066
+|{{MSP|066|Machop}}
+| {{p|Machop}}
+180
+|-
+296
+|{{MSP|296|Makuhita}}
+| {{p|Makuhita}}
+180
+|-
+304
+|{{MSP|304|Aron}}
+| {{p|Aron}}
+180
+|-
+307
+|{{MSP|307|Meditite}}
+| {{p|Meditite}}
+180
+|-
+532
+|{{MSP|532|Timburr}}
+| {{p|Timburr}}
+180
+|-
+551
+|{{MSP|551|Sandile}}
+| {{p|Sandile}}
+180
+|-
+559
+|{{MSP|559|Scraggy}}
+| {{p|Scraggy}}
+180
+|-
+619
+|{{MSP|619|Mienfoo}}
+| {{p|Mienfoo}}
+180
+|-
+039
+|{{MSP|039|Jigglypuff}}
+| {{p|Jigglypuff}}
+170
+|-
+174
+|{{MSP|174|Igglybuff}}
+| {{p|Igglybuff}}
+170
+|-
+342
+|{{MSP|342|Crawdaunt}}
+| {{p|Crawdaunt}}
+155
+|-
+035
+|{{MSP|035|Clefairy}}
+| {{p|Clefairy}}
+150
+|-
+173
+|{{MSP|173|Cleffa}}
+| {{p|Cleffa}}
+150
+|-
+298
+|{{MSP|298|Azurill}}
+| {{p|Azurill}}
+150
+|-
+313
+|{{MSP|313|Volbeat}}
+| {{p|Volbeat}}
+150
+|-
+314
+|{{MSP|314|Illumise}}
+| {{p|Illumise}}
+150
+|-
+315
+|{{MSP|315|Roselia}}
+| {{p|Roselia}}
+150
+|-
+323
+|{{MSP|323|Camerupt}}
+| {{p|Camerupt}}
+150
+|-
+439
+|{{MSP|439|Mime Jr.}}
+| {{p|Mime Jr.}}
+145
+|-
+449
+|{{MSP|449|Hippopotas}}
+| {{p|Hippopotas}}
+140
+|-
+453
+|{{MSP|453|Croagunk}}
+| {{p|Croagunk}}
+140
+|-
+440
+|{{MSP|440|Happiny}}
+| {{p|Happiny}}
+130
+|-
+599
+|{{MSP|599|Klink}}
+| {{p|Klink}}
+130
+|-
+020
+|{{MSP|020|Raticate}}
+| {{p|Raticate}}
+127
+|-
+262
+|{{MSP|262|Mightyena}}
+| {{p|Mightyena}}
+127
+|-
+400
+|{{MSP|400|Bibarel}}
+| {{p|Bibarel}}
+127
+|-
+320
+|{{MSP|320|Wailmer}}
+| {{p|Wailmer}}
+125
+|-
+360
+|{{MSP|360|Wynaut}}
+| {{p|Wynaut}}
+125
+|-
+425
+|{{MSP|425|Drifloon}}
+| {{p|Drifloon}}
+125
+|-
+011
+|{{MSP|011|Metapod}}
+| {{p|Metapod}}
+120
+|-
+014
+|{{MSP|014|Kakuna}}
+| {{p|Kakuna}}
+120
+|-
+017
+|{{MSP|017|Pidgeotto}}
+| {{p|Pidgeotto}}
+120
+|-
+030
+|{{MSP|030|Nidorina}}
+| {{p|Nidorina}}
+120
+|-
+033
+|{{MSP|033|Nidorino}}
+| {{p|Nidorino}}
+120
+|-
+044
+|{{MSP|044|Gloom}}
+| {{p|Gloom}}
+120
+|-
+061
+|{{MSP|061|Poliwhirl}}
+| {{p|Poliwhirl}}
+120
+|-
+070
+|{{MSP|070|Weepinbell}}
+| {{p|Weepinbell}}
+120
+|-
+075
+|{{MSP|075|Graveler}}
+| {{p|Graveler}}
+120
+|-
+111
+|{{MSP|111|Rhyhorn}}
+| {{p|Rhyhorn}}
+120
+|-
+180
+|{{MSP|180|Flaaffy}}
+| {{p|Flaaffy}}
+120
+|-
+188
+|{{MSP|188|Skiploom}}
+| {{p|Skiploom}}
+120
+|-
+192
+|{{MSP|192|Sunflora}}
+| {{p|Sunflora}}
+120
+|-
+216
+|{{MSP|216|Teddiursa}}
+| {{p|Teddiursa}}
+120
+|-
+228
+|{{MSP|228|Houndour}}
+| {{p|Houndour}}
+120
+|-
+231
+|{{MSP|231|Phanpy}}
+| {{p|Phanpy}}
+120
+|-
+266
+|{{MSP|266|Silcoon}}
+| {{p|Silcoon}}
+120
+|-
+268
+|{{MSP|268|Cascoon}}
+| {{p|Cascoon}}
+120
+|-
+271
+|{{MSP|271|Lombre}}
+| {{p|Lombre}}
+120
+|-
+274
+|{{MSP|274|Nuzleaf}}
+| {{p|Nuzleaf}}
+120
+|-
+281
+|{{MSP|281|Kirlia}}
+| {{p|Kirlia}}
+120
+|-
+288
+|{{MSP|288|Vigoroth}}
+| {{p|Vigoroth}}
+120
+|-
+291
+|{{MSP|291|Ninjask}}
+| {{p|Ninjask}}
+120
+|-
+294
+|{{MSP|294|Loudred}}
+| {{p|Loudred}}
+120
+|-
+309
+|{{MSP|309|Electrike}}
+| {{p|Electrike}}
+120
+|-
+329
+|{{MSP|329|Vibrava}}
+| {{p|Vibrava}}
+120
+|-
+364
+|{{MSP|364|Sealeo}}
+| {{p|Sealeo}}
+120
+|-
+397
+|{{MSP|397|Staravia}}
+| {{p|Staravia}}
+120
+|-
+404
+|{{MSP|404|Luxio}}
+| {{p|Luxio}}
+120
+|-
+412
+|{{MSP|412|Burmy}}
+| {{p|Burmy}}
+120
+|-
+415
+|{{MSP|415|Combee}}
+| {{p|Combee}}
+120
+|-
+433
+|{{MSP|433|Chingling}}
+| {{p|Chingling}}
+120
+|-
+451
+|{{MSP|451|Skorupi}}
+| {{p|Skorupi}}
+120
+|-
+459
+|{{MSP|459|Snover}}
+| {{p|Snover}}
+120
+|-
+507
+|{{MSP|507|Herdier}}
+| {{p|Herdier}}
+120 
+|-
+520
+|{{MSP|520|Tranquill}}
+| {{p|Tranquill}}
+120
+|-
+525
+|{{MSP|525|Boldore}}
+| {{p|Boldore}}
+120
+|-
+529
+|{{MSP|529|Drilbur}}
+| {{p|Drilbur}}
+120
+|-
+536
+|{{MSP|536|Palpitoad}}
+| {{p|Palpitoad}}
+120
+|-
+541
+|{{MSP|541|Swadloon}}
+| {{p|Swadloon}}
+120
+|-
+544
+|{{MSP|544|Whirlipede}}
+| {{p|Whirlipede}}
+120
+|-
+554
+|{{MSP|554|Darumaka}}
+| {{p|Darumaka}}
+120
+|-
+583
+|{{MSP|583|Vanillish}}
+| {{p|Vanillish}}
+120
+|-
+613
+|{{MSP|613|Cubchoo}}
+| {{p|Cubchoo}}
+120
+|-
+624
+|{{MSP|624|Pawniard}}
+| {{p|Pawniard}}
+120
+|-
+064
+|{{MSP|064|Kadabra}}
+| {{p|Kadabra}}
+100
+|-
+442
+|{{MSP|442|Spiritomb}}
+| {{p|Spiritomb}}
+100
+|-
+575
+|{{MSP|575|Gothorita}}
+| {{p|Gothorita}}
+100
+|-
+578
+|{{MSP|578|Duosion}}
+| {{p|Duosion}}
+100
+|-
+022
+|{{MSP|022|Fearow}}
+| {{p|Fearow}}
+90
+|-
+024
+|{{MSP|024|Arbok}}
+| {{p|Arbok}}
+90
+|-
+028
+|{{MSP|028|Sandslash}}
+| {{p|Sandslash}}
+90
+|-
+042
+|{{MSP|042|Golbat}}
+| {{p|Golbat}}
+90
+|-
+053
+|{{MSP|053|Persian}}
+| {{p|Persian}}
+90
+|-
+067
+|{{MSP|067|Machoke}}
+| {{p|Machoke}}
+90
+|-
+093
+|{{MSP|093|Haunter}}
+| {{p|Haunter}}
+90
+|-
+102
+|{{MSP|102|Exeggcute}}
+| {{p|Exeggcute}}
+90
+|-
+162
+|{{MSP|162|Furret}}
+| {{p|Furret}}
+90
+|-
+164
+|{{MSP|164|Noctowl}}
+| {{p|Noctowl}}
+90
+|-
+166
+|{{MSP|166|Ledian}}
+| {{p|Ledian}}
+90
+|-
+168
+|{{MSP|168|Ariados}}
+| {{p|Ariados}}
+90
+|-
+169
+|{{MSP|169|Crobat}}
+| {{p|Crobat}}
+90
+|-
+195
+|{{MSP|195|Quagsire}}
+| {{p|Quagsire}}
+90
+|-
+264
+|{{MSP|264|Linoone}}
+| {{p|Linoone}}
+90
+|-
+286
+|{{MSP|286|Breloom}}
+| {{p|Breloom}}
+90
+|-
+305
+|{{MSP|305|Lairon}}
+| {{p|Lairon}}
+90
+|-
+308
+|{{MSP|308|Medicham}}
+| {{p|Medicham}}
+90
+|-
+324
+|{{MSP|324|Torkoal}}
+| {{p|Torkoal}}
+90
+|-
+335
+|{{MSP|335|Zangoose}}
+| {{p|Zangoose}}
+90
+|-
+336
+|{{MSP|336|Seviper}}
+| {{p|Seviper}}
+90
+|-
+344
+|{{MSP|344|Claydol}}
+| {{p|Claydol}}
+90
+|-
+356
+|{{MSP|356|Dusclops}}
+| {{p|Dusclops}}
+90
+|-
+437
+|{{MSP|437|Bronzong}}
+| {{p|Bronzong}}
+90
+|-
+510
+|{{MSP|510|Liepard}}
+| {{p|Liepard}}
+90
+|-
+533
+|{{MSP|533|Gurdurr}}
+| {{p|Gurdurr}}
+90
+|-
+552
+|{{MSP|552|Krokorok}}
+| {{p|Krokorok}}
+90
+|-
+560
+|{{MSP|560|Scrafty}}
+| {{p|Scrafty}}
+90
+|-
+563
+|{{MSP|563|Cofagrigus}}
+| {{p|Cofagrigus}}
+90
+|-
+598
+|{{MSP|598|Ferrothorn}}
+| {{p|Ferrothorn}}
+90
+|-
+606
+|{{MSP|606|Beheeyem}}
+| {{p|Beheeyem}}
+90
+|-
+608
+|{{MSP|608|Lampent}}
+| {{p|Lampent}}
+90
+|-
+623
+|{{MSP|623|Golurk}}
+| {{p|Golurk}}
+90
+|-
+631
+|{{MSP|631|Heatmor}}
+| {{p|Heatmor}}
+90
+|-
+632
+|{{MSP|632|Durant}}
+| {{p|Durant}}
+90
+|-
+026
+|{{MSP|026|Raichu}}
+| {{p|Raichu}}
+75
+|-
+038
+|{{MSP|038|Ninetales}}
+| {{p|Ninetales}}
+75
+|-
+047
+|{{MSP|047|Parasect}}
+| {{p|Parasect}}
+75
+|-
+049
+|{{MSP|049|Venomoth}}
+| {{p|Venomoth}}
+75
+|-
+055
+|{{MSP|055|Golduck}}
+| {{p|Golduck}}
+75
+|-
+057
+|{{MSP|057|Primeape}}
+| {{p|Primeape}}
+75
+|-
+059
+|{{MSP|059|Arcanine}}
+| {{p|Arcanine}}
+75
+|-
+080
+|{{MSP|080|Slowbro}}
+| {{p|Slowbro}}
+75
+|-
+087
+|{{MSP|087|Dewgong}}
+| {{p|Dewgong}}
+75
+|-
+089
+|{{MSP|089|Muk}}
+| {{p|Muk}}
+75
+|-
+097
+|{{MSP|097|Hypno}}
+| {{p|Hypno}}
+75
+|-
+105
+|{{MSP|105|Marowak}}
+| {{p|Marowak}}
+75
+|-
+117
+|{{MSP|117|Seadra}}
+| {{p|Seadra}}
+75
+|-
+171
+|{{MSP|171|Lanturn}}
+| {{p|Lanturn}}
+75
+|-
+176
+|{{MSP|176|Togetic}}
+| {{p|Togetic}}
+75
+|-
+178
+|{{MSP|178|Xatu}}
+| {{p|Xatu}}
+75
+|-
+184
+|{{MSP|184|Azumarill}}
+| {{p|Azumarill}}
+75
+|-
+193
+|{{MSP|193|Yanma}}
+| {{p|Yanma}}
+75
+|-
+205
+|{{MSP|205|Forretress}}
+| {{p|Forretress}}
+75
+|-
+210
+|{{MSP|210|Granbull}}
+| {{p|Granbull}}
+75
+|-
+219
+|{{MSP|219|Magcargo}}
+| {{p|Magcargo}}
+75
+|-
+221
+|{{MSP|221|Piloswine}}
+| {{p|Piloswine}}
+75
+|-
+224
+|{{MSP|224|Octillery}}
+| {{p|Octillery}}
+75
+|-
+236
+|{{MSP|236|Tyrogue}}
+| {{p|Tyrogue}}
+75
+|-
+284
+|{{MSP|284|Masquerain}}
+| {{p|Masquerain}}
+75
+|-
+317
+|{{MSP|317|Swalot}}
+| {{p|Swalot}}
+75
+|-
+340
+|{{MSP|340|Whiscash}}
+| {{p|Whiscash}}
+75
+|-
+362
+|{{MSP|362|Glalie}}
+| {{p|Glalie}}
+75
+|-
+407
+|{{MSP|407|Roserade}}
+| {{p|Roserade}}
+75
+|-
+419
+|{{MSP|419|Floatzel}}
+| {{p|Floatzel}}
+75
+|-
+421
+|{{MSP|421|Cherrim}}
+| {{p|Cherrim}}
+75
+|-
+423
+|{{MSP|423|Gastrodon}}
+| {{p|Gastrodon}}
+75
+|-
+432
+|{{MSP|432|Purugly}}
+| {{p|Purugly}}
+75
+|-
+447
+|{{MSP|447|Riolu}}
+| {{p|Riolu}}
+75
+|-
+454
+|{{MSP|454|Toxicroak}}
+| {{p|Toxicroak}}
+75
+|-
+457
+|{{MSP|457|Lumineon}}
+| {{p|Lumineon}}
+75
+|-
+478
+|{{MSP|478|Froslass}}
+| {{p|Froslass}}
+75
+|-
+518
+|{{MSP|518|Musharna}}
+| {{p|Musharna}}
+75
+|-
+523
+|{{MSP|523|Zebstrika}}
+| {{p|Zebstrika}}
+75
+|-
+547
+|{{MSP|547|Whimsicott}}
+| {{p|Whimsicott}}
+75
+|-
+549
+|{{MSP|549|Lilligant}}
+| {{p|Lilligant}}
+75
+|-
+558
+|{{MSP|558|Crustle}}
+| {{p|Crustle}}
+75
+|-
+570
+|{{MSP|570|Zorua}}
+| {{p|Zorua}}
+75 
+|-
+586
+|{{MSP|586|Sawsbuck}}
+| {{p|Sawsbuck}}
+75
+|-
+589
+|{{MSP|589|Escavalier}}
+| {{p|Escavalier}}
+75
+|-
+591
+|{{MSP|591|Amoonguss}}
+| {{p|Amoonguss}}
+75
+|-
+594
+|{{MSP|594|Alomomola}}
+| {{p|Alomomola}}
+75
+|-
+596
+|{{MSP|596|Galvantula}}
+| {{p|Galvantula}}
+75 
+|-
+610
+|{{MSP|610|Axew}}
+| {{p|Axew}}
+75
+|-
+617
+|{{MSP|617|Accelgor}}
+| {{p|Accelgor}}
+75
+|-
+618
+|{{MSP|618|Stunfisk}}
+| {{p|Stunfisk}}
+75
+|-
+199
+|{{MSP|199|Slowking}}
+| {{p|Slowking}}
+70
+|-
+185
+|{{MSP|185|Sudowoodo}}
+| {{p|Sudowoodo}}
+65
+|-
+511
+|{{MSP|511|Pansage}}
+| {{p|Pansage}}
+65
+|-
+512
+|{{MSP|512|Simisage}}
+| {{p|Simisage}}
+65
+|-
+513
+|{{MSP|513|Pansear}}
+| {{p|Pansear}}
+65
+|-
+514
+|{{MSP|514|Simisear}}
+| {{p|Simisear}}
+65
+|-
+515
+|{{MSP|515|Panpour}}
+| {{p|Panpour}}
+65
+|-
+516
+|{{MSP|516|Simipour}}
+| {{p|Simipour}}
+65
+|-
+073
+|{{MSP|073|Tentacruel}}
+| {{p|Tentacruel}}
+60
+|-
+078
+|{{MSP|078|Rapidash}}
+| {{p|Rapidash}}
+60
+|-
+082
+|{{MSP|082|Magneton}}
+| {{p|Magneton}}
+60
+|-
+091
+|{{MSP|091|Cloyster}}
+| {{p|Cloyster}}
+60
+|-
+099
+|{{MSP|099|Kingler}}
+| {{p|Kingler}}
+60
+|-
+101
+|{{MSP|101|Electrode}}
+| {{p|Electrode}}
+60
+|-
+110
+|{{MSP|110|Weezing}}
+| {{p|Weezing}}
+60
+|-
+112
+|{{MSP|112|Rhydon}}
+| {{p|Rhydon}}
+60
+|-
+119
+|{{MSP|119|Seaking}}
+| {{p|Seaking}}
+60
+|-
+121
+|{{MSP|121|Starmie}}
+| {{p|Starmie}}
+60
+|-
+203
+|{{MSP|203|Girafarig}}
+| {{p|Girafarig}}
+60
+|-
+207
+|{{MSP|207|Gligar}}
+| {{p|Gligar}}
+60
+|-
+215
+|{{MSP|215|Sneasel}}
+| {{p|Sneasel}}
+60
+|-
+217
+|{{MSP|217|Ursaring}}
+| {{p|Ursaring}}
+60
+|-
+222
+|{{MSP|222|Corsola}}
+| {{p|Corsola}}
+60
+|-
+232
+|{{MSP|232|Donphan}}
+| {{p|Donphan}}
+60
+|-
+301
+|{{MSP|301|Delcatty}}
+| {{p|Delcatty}}
+60
+|-
+319
+|{{MSP|319|Sharpedo}}
+| {{p|Sharpedo}}
+60
+|-
+321
+|{{MSP|321|Wailord}}
+| {{p|Wailord}}
+60
+|-
+326
+|{{MSP|326|Grumpig}}
+| {{p|Grumpig}}
+60
+|-
+332
+|{{MSP|332|Cacturne}}
+| {{p|Cacturne}}
+60
+|-
+350
+|{{MSP|350|Milotic}}
+| {{p|Milotic}}
+60
+|-
+367
+|{{MSP|367|Huntail}}
+| {{p|Huntail}}
+60
+|-
+368
+|{{MSP|368|Gorebyss}}
+| {{p|Gorebyss}}
+60
+|-
+426
+|{{MSP|426|Drifblim}}
+| {{p|Drifblim}}
+60
+|-
+428
+|{{MSP|428|Lopunny}}
+| {{p|Lopunny}}
+60
+|-
+435
+|{{MSP|435|Skuntank}}
+| {{p|Skuntank}}
+60
+|-
+450
+|{{MSP|450|Hippowdon}}
+| {{p|Hippowdon}}
+60
+|-
+460
+|{{MSP|460|Abomasnow}}
+| {{p|Abomasnow}}
+60
+|-
+476
+|{{MSP|476|Probopass}}
+| {{p|Probopass}}
+60
+|-
+530
+|{{MSP|530|Excadrill}}
+| {{p|Excadrill}}
+60
+|-
+555
+|{{MSP|555|Darmanitan}}
+| {{p|Darmanitan}}
+60
+|-
+569
+|{{MSP|569|Garbodor}}
+| {{p|Garbodor}}
+60
+|-
+573
+|{{MSP|573|Cinccino}}
+| {{p|Cinccino}}
+60
+|-
+593
+|{{MSP|593|Jellicent}}
+| {{p|Jellicent}}
+60
+|-
+600
+|{{MSP|600|Klang}}
+| {{p|Klang}}
+60
+|-
+603
+|{{MSP|603|Eelektrik}}
+| {{p|Eelektrik}}
+60
+|-
+611
+|{{MSP|611|Fraxure}}
+| {{p|Fraxure}}
+60
+|-
+614
+|{{MSP|614|Beartic}}
+| {{p|Beartic}}
+60
+|-
+628
+|{{MSP|628|Braviary}}
+| {{p|Braviary}}
+60
+|-
+630
+|{{MSP|630|Mandibuzz}}
+| {{p|Mandibuzz}}
+60
+|-
+040
+|{{MSP|040|Wigglytuff}}
+| {{p|Wigglytuff}}
+50
+|-
+051
+|{{MSP|051|Dugtrio}}
+| {{p|Dugtrio}}
+50
+|-
+065
+|{{MSP|065|Alakazam}}
+| {{p|Alakazam}}
+50
+|-
+446
+|{{MSP|446|Munchlax}}
+| {{p|Munchlax}}
+50
+|-
+473
+|{{MSP|473|Mamoswine}}
+| {{p|Mamoswine}}
+50
+|-
+576
+|{{MSP|576|Gothitelle}}
+| {{p|Gothitelle}}
+50
+|-
+579
+|{{MSP|579|Reuniclus}}
+| {{p|Reuniclus}}
+50
+|-
+001
+|{{MSP|001|Bulbasaur}}
+| {{p|Bulbasaur}}
+45
+|-
+002
+|{{MSP|002|Ivysaur}}
+| {{p|Ivysaur}}
+45
+|-
+003
+|{{MSP|003|Venusaur}}
+| {{p|Venusaur}}
+45
+|-
+004
+|{{MSP|004|Charmander}}
+| {{p|Charmander}}
+45
+|-
+005
+|{{MSP|005|Charmeleon}}
+| {{p|Charmeleon}}
+45
+|-
+006
+|{{MSP|006|Charmeleon}}
+| {{p|Charizard}}
+45
+|-
+007
+|{{MSP|007|Squirtle}}
+| {{p|Squirtle}}
+45
+|-
+008
+|{{MSP|008|Wartortle}}
+| {{p|Wartortle}}
+45
+|-
+009
+|{{MSP|009|Blastoise}}
+| {{p|Blastoise}}
+45
+|-
+012
+|{{MSP|012|Butterfree}}
+| {{p|Butterfree}}
+45
+|-
+015
+|{{MSP|015|Beedrill}}
+| {{p|Beedrill}}
+45
+|-
+018
+|{{MSP|018|Pidgeot}}
+| {{p|Pidgeot}}
+45
+|-
+031
+|{{MSP|031|Nidoqueen}}
+| {{p|Nidoqueen}}
+45
+|-
+034
+|{{MSP|034|Nidoking}}
+| {{p|Nidoking}}
+45
+|-
+045
+|{{MSP|045|Vileplume}}
+| {{p|Vileplume}}
+45
+|-
+062
+|{{MSP|062|Poliwrath}}
+| {{p|Poliwrath}}
+45
+|-
+068
+|{{MSP|068|Machamp}}
+| {{p|Machamp}}
+45
+|-
+071
+|{{MSP|071|Victreebel}}
+| {{p|Victreebel}}
+45
+|-
+076
+|{{MSP|076|Golem}}
+| {{p|Golem}}
+45
+|-
+083
+|{{MSP|083|Farfetch'd}}
+| {{p|Farfetch'd}}
+45
+|-
+085
+|{{MSP|085|Dodrio}}
+| {{p|Dodrio}}
+45
+|-
+094
+|{{MSP|094|Gengar}}
+| {{p|Gengar}}
+45
+|-
+095
+|{{MSP|095|Onix}}
+| {{p|Onix}}
+45
+|-
+103
+|{{MSP|103|Exeggutor}}
+| {{p|Exeggutor}}
+45
+|-
+106
+|{{MSP|106|Hitmonlee}}
+| {{p|Hitmonlee}}
+45
+|-
+107
+|{{MSP|107|Hitmonchan}}
+| {{p|Hitmonchan}}
+45
+|-
+108
+|{{MSP|108|Lickitung}}
+| {{p|Lickitung}}
+45
+|-
+114
+|{{MSP|114|Tangela}}
+| {{p|Tangela}}
+45
+|-
+115
+|{{MSP|115|Kangaskhan}}
+| {{p|Kangaskhan}}
+45
+|-
+122
+|{{MSP|122|Mr. Mime}}
+| {{p|Mr. Mime}}
+45
+|-
+123
+|{{MSP|123|Scyther}}
+| {{p|Scyther}}
+45
+|-
+124
+|{{MSP|124|Jynx}}
+| {{p|Jynx}}
+45
+|-
+125
+|{{MSP|125|Electabuzz}}
+| {{p|Electabuzz}}
+45
+|-
+126
+|{{MSP|126|Magmar}}
+| {{p|Magmar}}
+45
+|-
+127
+|{{MSP|127|Pinsir}}
+| {{p|Pinsir}}
+45
+|-
+128
+|{{MSP|128|Tauros}}
+| {{p|Tauros}}
+45
+|-
+130
+|{{MSP|130|Gyarados}}
+| {{p|Gyarados}}
+45
+|-
+131
+|{{MSP|131|Lapras}}
+| {{p|Lapras}}
+45
+|-
+133
+|{{MSP|133|Eevee}}
+| {{p|Eevee}}
+45
+|-
+134
+|{{MSP|134|Vaporeon}}
+| {{p|Vaporeon}}
+45
+|-
+135
+|{{MSP|135|Jolteon}}
+| {{p|Jolteon}}
+45
+|-
+136
+|{{MSP|136|Flareon}}
+| {{p|Flareon}}
+45
+|-
+137
+|{{MSP|137|Porygon}}
+| {{p|Porygon}}
+45
+|-
+138
+|{{MSP|138|Omanyte}}
+| {{p|Omanyte}}
+45
+|-
+139
+|{{MSP|139|Omastar}}
+| {{p|Omastar}}
+45
+|-
+140
+|{{MSP|140|Kabuto}}
+| {{p|Kabuto}}
+45
+|-
+141
+|{{MSP|141|Kabutops}}
+| {{p|Kabutops}}
+45
+|-
+142
+|{{MSP|142|Aerodactyl}}
+| {{p|Aerodactyl}}
+45
+|-
+147
+|{{MSP|147|Dratini}}
+| {{p|Dratini}}
+45
+|-
+148
+|{{MSP|148|Dragonair}}
+| {{p|Dragonair}}
+45
+|-
+149
+|{{MSP|149|Dragonite}}
+| {{p|Dragonite}}
+45
+|-
+151
+|{{MSP|151|Mew}}
+| {{p|Mew}}
+45
+|-
+152
+|{{MSP|152|Chikorita}}
+| {{p|Chikorita}}
+45
+|-
+153
+|{{MSP|153|Bayleef}}
+| {{p|Bayleef}}
+45
+|-
+154
+|{{MSP|154|Meganium}}
+| {{p|Meganium}}
+45
+|-
+155
+|{{MSP|155|Cyndaquil}}
+| {{p|Cyndaquil}}
+45
+|-
+156
+|{{MSP|156|Quilava}}
+| {{p|Quilava}}
+45
+|-
+157
+|{{MSP|157|Typhlosion}}
+| {{p|Typhlosion}}
+45
+|-
+158
+|{{MSP|158|Totodile}}
+| {{p|Totodile}}
+45
+|-
+159
+|{{MSP|159|Croconaw}}
+| {{p|Croconaw}}
+45
+|-
+160
+|{{MSP|160|Feraligatr}}
+| {{p|Feraligatr}}
+45
+|-
+181
+|{{MSP|181|Ampharos}}
+| {{p|Ampharos}}
+45
+|-
+182
+|{{MSP|182|Bellossom}}
+| {{p|Bellossom}}
+45
+|-
+186
+|{{MSP|186|Politoed}}
+| {{p|Politoed}}
+45
+|-
+189
+|{{MSP|189|Jumpluff}}
+| {{p|Jumpluff}}
+45
+|-
+190
+|{{MSP|190|Aipom}}
+| {{p|Aipom}}
+45
+|-
+196
+|{{MSP|196|Espeon}}
+| {{p|Espeon}}
+45
+|-
+197
+|{{MSP|197|Umbreon}}
+| {{p|Umbreon}}
+45
+|-
+200
+|{{MSP|200|Misdreavus}}
+| {{p|Misdreavus}}
+45
+|-
+202
+|{{MSP|202|Wobbuffet}}
+| {{p|Wobbuffet}}
+45
+|-
+211
+|{{MSP|211|Qwilfish}}
+| {{p|Qwilfish}}
+45
+|-
+214
+|{{MSP|214|Heracross}}
+| {{p|Heracross}}
+45
+|-
+225
+|{{MSP|225|Delibird}}
+| {{p|Delibird}}
+45
+|-
+229
+|{{MSP|229|Houndoom}}
+| {{p|Houndoom}}
+45
+|-
+230
+|{{MSP|230|Kingdra}}
+| {{p|Kingdra}}
+45
+|-
+233
+|{{MSP|233|Porygon2}}
+| {{p|Porygon2}}
+45
+|-
+234
+|{{MSP|234|Stantler}}
+| {{p|Stantler}}
+45
+|-
+235
+|{{MSP|235|Smeargle}}
+| {{p|Smeargle}}
+45
+|-
+237
+|{{MSP|237|Hitmontop}}
+| {{p|Hitmontop}}
+45
+|-
+238
+|{{MSP|238|Smoochum}}
+| {{p|Smoochum}}
+45
+|-
+239
+|{{MSP|239|Elekid}}
+| {{p|Elekid}}
+45
+|-
+240
+|{{MSP|240|Magby}}
+| {{p|Magby}}
+45
+|-
+241
+|{{MSP|241|Miltank}}
+| {{p|Miltank}}
+45
+|-
+246
+|{{MSP|246|Larvitar}}
+| {{p|Larvitar}}
+45
+|-
+247
+|{{MSP|247|Pupitar}}
+| {{p|Pupitar}}
+45
+|-
+248
+|{{MSP|248|Tyranitar}}
+| {{p|Tyranitar}}
+45
+|-
+251
+|{{MSP|251|Celebi}}
+| {{p|Celebi}}
+45
+|-
+252
+|{{MSP|252|Treecko}}
+| {{p|Treecko}}
+45
+|-
+253
+|{{MSP|253|Grovyle}}
+| {{p|Grovyle}}
+45
+|-
+254
+|{{MSP|254|Sceptile}}
+| {{p|Sceptile}}
+45
+|-
+255
+|{{MSP|255|Torchic}}
+| {{p|Torchic}}
+45
+|-
+256
+|{{MSP|256|Combusken}}
+| {{p|Combusken}}
+45
+|-
+257
+|{{MSP|257|Blaziken}}
+| {{p|Blaziken}}
+45
+|-
+258
+|{{MSP|258|Mudkip}}
+| {{p|Mudkip}}
+45
+|-
+259
+|{{MSP|259|Marshtomp}}
+| {{p|Marshtomp}}
+45
+|-
+260
+|{{MSP|260|Swampert}}
+| {{p|Swampert}}
+45
+|-
+267
+|{{MSP|267|Beautifly}}
+| {{p|Beautifly}}
+45
+|-
+269
+|{{MSP|269|Dustox}}
+| {{p|Dustox}}
+45
+|-
+272
+|{{MSP|272|Ludicolo}}
+| {{p|Ludicolo}}
+45
+|-
+275
+|{{MSP|275|Shiftry}}
+| {{p|Shiftry}}
+45
+|-
+277
+|{{MSP|277|Swellow}}
+| {{p|Swellow}}
+45
+|-
+279
+|{{MSP|279|Pelipper}}
+| {{p|Pelipper}}
+45
+|-
+282
+|{{MSP|282|Gardevoir}}
+| {{p|Gardevoir}}
+45
+|-
+289
+|{{MSP|289|Slaking}}
+| {{p|Slaking}}
+45
+|-
+292
+|{{MSP|292|Shedinja}}
+| {{p|Shedinja}}
+45
+|-
+295
+|{{MSP|295|Exploud}}
+| {{p|Exploud}}
+45
+|-
+302
+|{{MSP|302|Sableye}}
+| {{p|Sableye}}
+45
+|-
+303
+|{{MSP|303|Mawile}}
+| {{p|Mawile}}
+45
+|-
+306
+|{{MSP|306|Aggron}}
+| {{p|Aggron}}
+45
+|-
+310
+|{{MSP|310|Manectric}}
+| {{p|Manectric}}
+45
+|-
+330
+|{{MSP|330|Flygon}}
+| {{p|Flygon}}
+45
+|-
+334
+|{{MSP|334|Altaria}}
+| {{p|Altaria}}
+45
+|-
+337
+|{{MSP|337|Lunatone}}
+| {{p|Lunatone}}
+45
+|-
+338
+|{{MSP|338|Solrock}}
+| {{p|Solrock}}
+45
+|-
+345
+|{{MSP|345|Lileep}}
+| {{p|Lileep}}
+45
+|-
+346
+|{{MSP|346|Cradily}}
+| {{p|Cradily}}
+45
+|-
+347
+|{{MSP|347|Anorith}}
+| {{p|Anorith}}
+45
+|-
+348
+|{{MSP|348|Armaldo}}
+| {{p|Armaldo}}
+45
+|-
+351
+|{{MSP|351|Castform}}
+| {{p|Castform}}
+45
+|-
+354
+|{{MSP|354|Banette}}
+| {{p|Banette}}
+45
+|-
+358
+|{{MSP|358|Chimecho}}
+| {{p|Chimecho}}
+45
+|-
+365
+|{{MSP|365|Walrein}}
+| {{p|Walrein}}
+45
+|-
+371
+|{{MSP|371|Bagon}}
+| {{p|Bagon}}
+45
+|-
+372
+|{{MSP|372|Shelgon}}
+| {{p|Shelgon}}
+45
+|-
+373
+|{{MSP|373|Salamence}}
+| {{p|Salamence}}
+45
+|-
+387
+|{{MSP|387|Turtwig}}
+| {{p|Turtwig}}
+45
+|-
+388
+|{{MSP|388|Grotle}}
+| {{p|Grotle}}
+45
+|-
+389
+|{{MSP|389|Torterra}}
+| {{p|Torterra}}
+45
+|-
+390
+|{{MSP|390|Chimchar}}
+| {{p|Chimchar}}
+45
+|-
+391
+|{{MSP|391|Monferno}}
+| {{p|Monferno}}
+45
+|-
+392
+|{{MSP|392|Infernape}}
+| {{p|Infernape}}
+45
+|-
+393
+|{{MSP|393|Piplup}}
+| {{p|Piplup}}
+45
+|-
+394
+|{{MSP|394|Prinplup}}
+| {{p|Prinplup}}
+45
+|-
+395
+|{{MSP|395|Empoleon}}
+| {{p|Empoleon}}
+45
+|-
+398
+|{{MSP|398|Staraptor}}
+| {{p|Staraptor}}
+45
+|-
+402
+|{{MSP|402|Kricketune}}
+| {{p|Kricketune}}
+45
+|-
+405
+|{{MSP|405|Luxray}}
+| {{p|Luxray}}
+45
+|-
+408
+|{{MSP|408|Cranidos}}
+| {{p|Cranidos}}
+45
+|-
+409
+|{{MSP|409|Rampardos}}
+| {{p|Rampardos}}
+45
+|-
+410
+|{{MSP|410|Shieldon}}
+| {{p|Shieldon}}
+45
+|-
+411
+|{{MSP|411|Bastiodon}}
+| {{p|Bastiodon}}
+45
+|-
+413
+|{{MSP|413|Wormadam}}
+| {{p|Wormadam}}
+45
+|-
+414
+|{{MSP|414|Mothim}}
+| {{p|Mothim}}
+45
+|-
+416
+|{{MSP|416|Vespiquen}}
+| {{p|Vespiquen}}
+45
+|-
+424
+|{{MSP|424|Ambipom}}
+| {{p|Ambipom}}
+45
+|-
+429
+|{{MSP|429|Mismagius}}
+| {{p|Mismagius}}
+45
+|-
+443
+|{{MSP|443|Gible}}
+| {{p|Gible}}
+45
+|-
+444
+|{{MSP|444|Gabite}}
+| {{p|Gabite}}
+45
+|-
+445
+|{{MSP|445|Garchomp}}
+| {{p|Garchomp}}
+45
+|-
+448
+|{{MSP|448|Lucario}}
+| {{p|Lucario}}
+45
+|-
+452
+|{{MSP|452|Drapion}}
+| {{p|Drapion}}
+45
+|-
+461
+|{{MSP|461|Weavile}}
+| {{p|Weavile}}
+45
+|-
+470
+|{{MSP|470|Leafeon}}
+| {{p|Leafeon}}
+45
+|-
+471
+|{{MSP|471|Glaceon}}
+| {{p|Glaceon}}
+45
+|-
+475
+|{{MSP|475|Gallade}}
+| {{p|Gallade}}
+45
+|-
+477
+|{{MSP|477|Dusknoir}}
+| {{p|Dusknoir}}
+45
+|-
+479
+|{{MSP|479|Rotom}}
+| {{p|Rotom}}
+45
+|-
+492
+|{{MSP|492|Shaymin}}
+| {{p|Shaymin}}
+45
+|-
+495
+|{{MSP|495|Snivy}}
+| {{p|Snivy}}
+45 
+|-
+496
+|{{MSP|496|Servine}}
+| {{p|Servine}}
+45 
+|-
+497
+|{{MSP|497|Serperior}}
+| {{p|Serperior}}
+45 
+|-
+498
+|{{MSP|498|Tepig}}
+| {{p|Tepig}}
+45 
+|-
+499
+|{{MSP|499|Pignite}}
+| {{p|Pignite}}
+45 
+|-
+500
+|{{MSP|500|Emboar}}
+| {{p|Emboar}}
+45 
+|-
+501
+|{{MSP|501|Oshawott}}
+| {{p|Oshawott}}
+45 
+|-
+502
+|{{MSP|502|Dewott}}
+| {{p|Dewott}}
+45 
+|-
+503
+|{{MSP|503|Samurott}}
+| {{p|Samurott}}
+45 
+|-
+508
+|{{MSP|508|Stoutland}}
+| {{p|Stoutland}}
+45 
+|-
+521
+|{{MSP|521|Unfezant}}
+| {{p|Unfezant}}
+45
+|-
+526
+|{{MSP|526|Gigalith}}
+| {{p|Gigalith}}
+45
+|-
+528
+|{{MSP|528|Swoobat}}
+| {{p|Swoobat}}
+45
+|-
+534
+|{{MSP|534|Conkeldurr}}
+| {{p|Conkeldurr}}
+45
+|-
+537
+|{{MSP|537|Seismitoad}}
+| {{p|Seismitoad}}
+45
+|-
+538
+|{{MSP|538|Throh}}
+| {{p|Throh}}
+45
+|-
+539
+|{{MSP|539|Sawk}}
+| {{p|Sawk}}
+45
+|-
+542
+|{{MSP|542|Leavanny}}
+| {{p|Leavanny}}
+45
+|-
+545
+|{{MSP|545|Scolipede}}
+| {{p|Scolipede}}
+45
+|-
+553
+|{{MSP|553|Krookodile}}
+| {{p|Krookodile}}
+45
+|-
+561
+|{{MSP|561|Sigilyph}}
+| {{p|Sigilyph}}
+45 
+|-
+564
+|{{MSP|564|Tirtouga}}
+| {{p|Tirtouga}}
+45
+|-
+565
+|{{MSP|565|Carracosta}}
+| {{p|Carracosta}}
+45
+|-
+566
+|{{MSP|566|Archen}}
+| {{p|Archen}}
+45
+|-
+567
+|{{MSP|567|Archeops}}
+| {{p|Archeops}}
+45
+|-
+571
+|{{MSP|571|Zoroark}}
+| {{p|Zoroark}}
+45
+|-
+581
+|{{MSP|581|Swanna}}
+| {{p|Swanna}}
+45
+|-
+584
+|{{MSP|584|Vanilluxe}}
+| {{p|Vanilluxe}}
+45
+|-
+609
+|{{MSP|609|Chandelure}}
+| {{p|Chandelure}}
+45
+|-
+612
+|{{MSP|612|Haxorus}}
+| {{p|Haxorus}}
+45
+|-
+620
+|{{MSP|620|Mienshao}}
+| {{p|Mienshao}}
+45
+|-
+621
+|{{MSP|621|Druddigon}}
+| {{p|Druddigon}}
+45
+|-
+625
+|{{MSP|625|Bisharp}}
+| {{p|Bisharp}}
+45
+|-
+626
+|{{MSP|626|Bouffalant}}
+| {{p|Bouffalant}}
+45
+|-
+633
+|{{MSP|633|Deino}}
+| {{p|Deino}}
+45
+|-
+634
+|{{MSP|634|Zweilous}}
+| {{p|Zweilous}}
+45 
+|-
+635
+|{{MSP|635|Hydreigon}}
+| {{p|Hydreigon}}
+45
+|-
+636
+|{{MSP|636|Larvesta}}
+| {{p|Larvesta}}
+45
+|-
+643
+|{{MSP|643|Reshiram}}
+| {{p|Reshiram}}
+45
+|-
+644
+|{{MSP|644|Zekrom}}
+| {{p|Zekrom}}
+45
+|-
+132
+|{{MSP|132|Ditto}}
+| {{p|Ditto}}
+35
+|-
+113
+|{{MSP|113|Chansey}}
+| {{p|Chansey}}
+30
+|-
+198
+|{{MSP|198|Murkrow}}
+| {{p|Murkrow}}
+30
+|-
+242
+|{{MSP|242|Blissey}}
+| {{p|Blissey}}
+30
+|-
+359
+|{{MSP|359|Absol}}
+| {{p|Absol}}
+30
+|-
+430
+|{{MSP|430|Honchkrow}}
+| {{p|Honchkrow}}
+30
+|-
+441
+|{{MSP|441|Chatot}}
+| {{p|Chatot}}
+30
+|-
+462
+|{{MSP|462|Magnezone}}
+| {{p|Magnezone}}
+30
+|-
+463
+|{{MSP|463|Lickilicky}}
+| {{p|Lickilicky}}
+30
+|-
+464
+|{{MSP|464|Rhyperior}}
+| {{p|Rhyperior}}
+30
+|-
+465
+|{{MSP|465|Tangrowth}}
+| {{p|Tangrowth}}
+30
+|-
+466
+|{{MSP|466|Electivire}}
+| {{p|Electivire}}
+30
+|-
+467
+|{{MSP|467|Magmortar}}
+| {{p|Magmortar}}
+30
+|-
+468
+|{{MSP|468|Togekiss}}
+| {{p|Togekiss}}
+30
+|-
+469
+|{{MSP|469|Yanmega}}
+| {{p|Yanmega}}
+30
+|-
+472
+|{{MSP|472|Gliscor}}
+| {{p|Gliscor}}
+30
+|-
+474
+|{{MSP|474|Porygon-Z}}
+| {{p|Porygon-Z}}
+30
+|-
+483
+|{{MSP|483|Dialga}}
+| {{p|Dialga}}
+30
+|-
+484
+|{{MSP|484|Palkia}}
+| {{p|Palkia}}
+30
+|-
+489
+|{{MSP|489|Phione}}
+| {{p|Phione}}
+30
+|-
+601
+|{{MSP|601|Klinklang}}
+| {{p|Klinklang}}
+30
+|-
+604
+|{{MSP|604|Eelektross}}
+| {{p|Eelektross}}
+30
+|-
+036
+|{{MSP|036|Clefable}}
+| {{p|Clefable}}
+25
+|-
+143
+|{{MSP|143|Snorlax}}
+| {{p|Snorlax}}
+25
+|-
+208
+|{{MSP|208|Steelix}}
+| {{p|Steelix}}
+25
+|-
+212
+|{{MSP|212|Scizor}}
+| {{p|Scizor}}
+25
+|-
+226
+|{{MSP|226|Mantine}}
+| {{p|Mantine}}
+25
+|-
+227
+|{{MSP|227|Skarmory}}
+| {{p|Skarmory}}
+25
+|-
+369
+|{{MSP|369|Relicanth}}
+| {{p|Relicanth}}
+25
+|-
+458
+|{{MSP|458|Mantyke}}
+| {{p|Mantyke}}
+25
+|-
+550
+|{{MSP|550|Basculin}}
+| {{p|Basculin}}
+25
+|-
+615
+|{{MSP|615|Cryogonal}}
+| {{p|Cryogonal}}
+25
+|-
+637
+|{{MSP|637|Volcarona}}
+| {{p|Volcarona}}
+15
+|-
+382
+|{{MSP|382|Kyogre}}
+| {{p|Kyogre}}
+5
+|-
+383
+|{{MSP|383|Groudon}}
+| {{p|Groudon}}
+5
+|-
+144
+|{{MSP|144|Articuno}}
+| {{p|Articuno}}
+3
+|-
+145
+|{{MSP|145|Zapdos}}
+| {{p|Zapdos}}
+3
+|-
+146
+|{{MSP|146|Moltres}}
+| {{p|Moltres}}
+3
+|-
+150
+|{{MSP|150|Mewtwo}}
+| {{p|Mewtwo}}
+3
+|-
+243
+|{{MSP|243|Raikou}}
+| {{p|Raikou}}
+3
+|-
+244
+|{{MSP|244|Entei}}
+| {{p|Entei}}
+3
+|-
+245
+|{{MSP|245|Suicune}}
+| {{p|Suicune}}
+3
+|-
+249
+|{{MSP|249|Lugia}}
+| {{p|Lugia}}
+3
+|-
+250
+|{{MSP|250|Ho-Oh}}
+| {{p|Ho-Oh}}
+3
+|-
+374
+|{{MSP|374|Beldum}}
+| {{p|Beldum}}
+3
+|-
+375
+|{{MSP|375|Metang}}
+| {{p|Metang}}
+3
+|-
+376
+|{{MSP|376|Metagross}}
+| {{p|Metagross}}
+3
+|-
+377
+|{{MSP|377|Regirock}}
+| {{p|Regirock}}
+3
+|-
+378
+|{{MSP|378|Regice}}
+| {{p|Regice}}
+3
+|-
+379
+|{{MSP|379|Registeel}}
+| {{p|Registeel}}
+3
+|-
+380
+|{{MSP|380|Latias}}
+| {{p|Latias}}
+3
+|-
+381
+|{{MSP|381|Latios}}
+| {{p|Latios}}
+3
+|-
+384
+|{{MSP|384|Rayquaza}}
+| {{p|Rayquaza}}
+3
+|-
+385
+|{{MSP|385|Jirachi}}
+| {{p|Jirachi}}
+3
+|-
+386
+|{{MSP|386|Deoxys}}
+| {{p|Deoxys}}
+3
+|-
+480
+|{{MSP|480|Uxie}}
+| {{p|Uxie}}
+3
+|-
+481
+|{{MSP|481|Mesprit}}
+| {{p|Mesprit}}
+3
+|-
+482
+|{{MSP|482|Azelf}}
+| {{p|Azelf}}
+3
+|-
+485
+|{{MSP|485|Heatran}}
+| {{p|Heatran}}
+3
+|-
+486
+|{{MSP|486|Regigigas}}
+| {{p|Regigigas}}
+3
+|-
+487
+|{{MSP|487|Giratina}}
+| {{p|Giratina}}
+3
+|-
+488
+|{{MSP|488|Cresselia}}
+| {{p|Cresselia}}
+3
+|-
+490
+|{{MSP|490|Manaphy}}
+| {{p|Manaphy}}
+3
+|-
+491
+|{{MSP|491|Darkrai}}
+| {{p|Darkrai}}
+3
+|-
+493
+|{{MSP|493|Arceus}}
+| {{p|Arceus}}
+3
+|-
+494
+|{{MSP|494|Victini}}
+| {{p|Victini}}
+3
+|-
+638
+|{{MSP|638|Cobalion}}
+| {{p|Cobalion}}
+3
+|-
+639
+|{{MSP|639|Terrakion}}
+| {{p|Terrakion}}
+3
+|-
+640
+|{{MSP|640|Virizion}}
+| {{p|Virizion}}
+3
+|-
+641
+|{{MSP|641|Tornadus}}
+| {{p|Tornadus}}
+3
+|-
+642
+|{{MSP|642|Thundurus}}
+| {{p|Thundurus}}
+3
+|-
+645
+|{{MSP|645|Landorus}}
+| {{p|Landorus}}
+3
+|-
+646
+|{{MSP|646|Kyurem}}
+| {{p|Kyurem}}
+3
+|-
+647
+|{{MSP|647|Keldeo}}
+| {{p|Keldeo}}
+3
+|-
+648
+|{{MSP|648|Meloetta}}
+| {{p|Meloetta}}
+3
+|-
+649
+|{{MSP|649|Genesect}}
+| {{p|Genesect}}
+3
+|-
