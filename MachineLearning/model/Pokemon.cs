@@ -16,6 +16,7 @@ namespace MachineLearning.model
         public float Height { get; set; }
         public float Widht { get; set; }
         public float Weight { get; set; }
+
         public int Hp { get; set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
@@ -24,6 +25,9 @@ namespace MachineLearning.model
         public int Speed { get; set; }
         public int Total { get; set; }
         public int Avarage { get; set; }
+
+        public String Color { get; set; }
+
         public PokeType Type { get; set; }
         public PokeBody Body { get; set; }
     }
