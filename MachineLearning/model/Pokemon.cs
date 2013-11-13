@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 
 namespace MachineLearning.model
 {
@@ -49,6 +50,32 @@ namespace MachineLearning.model
 
         public PokeType Type { get; set; }
         public PokeBody Body { get; set; }
+
+        public override string ToString()
+        {
+            var cult = new CultureInfo("en-US");
+            return // Height.ToString(cult) + "," +
+                    //Weight.ToString(cult) + "," +
+                    Body + "," +
+                    //CatchRate + "," +
+                    //(PerfSpeed == 0 ? "?" : PerfSpeed.ToString() )+ "," +
+                    //(PerfPower == 0 ? "?" : PerfPower.ToString())+ "," +
+                    //(PerfSkill == 0 ? "?" : PerfSkill.ToString())+ "," +
+                    //(PerfStamina == 0 ? "?" : PerfStamina.ToString())+ "," +
+                    //(PerfJump == 0 ? "?" : PerfJump.ToString())+ "," +
+                    //BaseHp + "," +
+                    //BaseAttack + "," +
+                    //BaseDefense + "," +
+                    //BaseSpAttack + "," +
+                    //BaseSpDefense + "," +
+                    //BaseSpeed + "," +
+                    (Color == null ? "?" : (Color.Trim() == "" ? "?" : "\"" + Color + "\"")) + "," +
+                    (Habitat == null ? "?" : (Habitat.Trim() == "" ? "?" : "\"" + Habitat + "\"")) + "," +
+                    (Ability1 == null ? "?" : (Ability1.Trim() == "" ? "?" : "\""+ Ability1 +"\"")) + "," +
+                    (Ability2 == null ? "?" : (Ability2.Trim() == "" ? "?" : "\"" + Ability2 + "\"")) + "," +
+                  //  (Hidden == null ? "?" : (Hidden.Trim() == "" ? "?" : "\"" + Hidden + "\"")) + "," +
+                    (Type);
+        }
     }
 
 

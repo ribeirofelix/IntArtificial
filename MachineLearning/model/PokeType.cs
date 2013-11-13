@@ -1,9 +1,23 @@
 ﻿public enum PokeType
 {
-    Grass,
+    Grass =1 ,
     Fire,
     Water,
-    Electric
+    Bug,
+    Normal,
+    Poison,
+    Electric,
+    Ground,
+    Fairy,
+    Fighting,
+    Rock,
+    Ghost,
+    Psychic,
+    Ice,
+    Dragon,
+    Dark,
+    Steel,
+    Flying,
 }
 public enum PokeBody
 {
