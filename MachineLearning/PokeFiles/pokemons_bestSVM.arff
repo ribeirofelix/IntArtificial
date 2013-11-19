@@ -1,0 +1,725 @@
+@relation 'PokeSet-weka.filters.supervised.attribute.Discretize-E-R3,16,17,18,19,20-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.Remove-R1-2,4-15-weka.filters.unsupervised.attribute.Remove-R6-weka.filters.unsupervised.attribute.Remove-R1-3'
+
+@attribute Ability1 {Adaptability,Aftermath,'Air Lock',Anticipation,'Bad Dreams','Battle Armor','Big Pecks',Blaze,Chlorophyll,'Clear Body','Color Change','Compound Eyes','Cute Charm',Damp,Defeatist,Defiant,Download,Drizzle,Drought,'Early Bird','Effect Spore','Flame Body','Flash Fire','Flower Gift',Forecast,Forewarn,Frisk,Gluttony,Guts,Healer,'Honey Gather',Hustle,Hydration,'Hyper Cutter','Ice Body',Illuminate,Illusion,Immunity,'Inner Focus',Insomnia,Intimidate,'Iron Barbs','Iron Fist',Justified,'Keen Eye','Leaf Guard',Levitate,Lightningrod,Limber,'Liquid Ooze','Magma Armor','Magnet Pull','Marvel Scale',Minus,'Mold Breaker','Motor Drive',Multitype,Mummy,'Natural Cure',Oblivious,Overcoat,Overgrow,'Own Tempo',Pickup,Plus,'Poison Point',Prankster,Pressure,'Pure Power',Reckless,Rivalry,'Rock Head','Rough Skin','Run Away','Sand Force','Sand Rush','Sand Stream','Sand Veil','Serene Grace','Shadow Tag','Shed Skin','Sheer Force','Shell Armor','Shield Dust',Simple,'Slow Start','Snow Cloak','Snow Warning','Solid Rock',Soundproof,'Speed Boost',Static,Steadfast,Stench,'Sticky Hold',Sturdy,'Suction Cups',Swarm,'Swift Swim',Synchronize,Technician,Telepathy,Teravolt,'Thick Fat',Torrent,Trace,Truant,Turboblaze,Unaware,'Victory Star','Vital Spirit','Volt Absorb','Water Absorb','Water Veil','White Smoke','Wonder Guard','Wonder Skin'}
+@attribute Ability2 {Adaptability,Aftermath,'Anger Point',Anticipation,'Arena Trap','Battle Armor','Big Pecks',Chlorophyll,'Cloud Nine','Compound Eyes','Cursed Body',Damp,Download,'Dry Skin','Early Bird',Filter,'Flame Body','Flash Fire',Forewarn,Frisk,Gluttony,Guts,Heatproof,'Huge Power',Hustle,Hydration,'Ice Body',Illuminate,Infiltrator,'Inner Focus',Insomnia,Intimidate,'Iron Fist','Keen Eye',Klutz,'Leaf Guard',Lightningrod,Limber,'Liquid Ooze','Magic Guard','Magnet Pull',Minus,'Mold Breaker','Motor Drive',Moxie,'Natural Cure','No Guard',Normalize,Oblivious,Overcoat,'Own Tempo',Pickup,'Poison Heal','Poison Point','Poison Touch',Pressure,'Quick Feet','Rain Dish',Reckless,Regenerator,Rivalry,'Rock Head','Run Away','Sand Force','Sand Rush','Sand Veil','Sap Sipper',Scrappy,'Serene Grace','Shed Skin','Sheer Force','Shell Armor',Simple,'Skill Link',Sniper,'Snow Cloak','Solar Power','Solid Rock',Stall,Static,Steadfast,'Sticky Hold','Storm Drain',Sturdy,'Super Luck',Swarm,'Swift Swim',Synchronize,'Tangled Feet',Technician,'Thick Fat','Tinted Lens',Trace,Unaware,Unburden,Unnerve,'Water Absorb','Water Veil','Weak Armor'}
+@attribute class {Grass,Fire,Water,Bug,Normal,Poison,Electric,Ground,Fairy,Fighting,Rock,Ghost,Psychic,Ice,Dragon,Dark,Steel,Flying}
+
+@data
+'Shell Armor','Skill Link',Water
+'Shell Armor','Skill Link',Water
+Levitate,'Shell Armor',Ghost
+Soundproof,Static,Electric
+Soundproof,Static,Electric
+Levitate,'Shell Armor',Poison
+Limber,'Shell Armor',Normal
+Chlorophyll,'Solar Power',Grass
+Levitate,'Shell Armor',Ghost
+Levitate,'Shell Armor',Psychic
+Sturdy,'Shell Armor',Bug
+Sturdy,'Shell Armor',Bug
+'Shed Skin','Shell Armor',Bug
+'Shed Skin','Shell Armor',Bug
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Rock
+Forecast,'Shell Armor',Normal
+Insomnia,Frisk,Ghost
+'Inner Focus','Ice Body',Ice
+'Shell Armor','Shell Armor',Water
+Levitate,'Shell Armor',Ghost
+Levitate,Heatproof,Steel
+Levitate,'Shell Armor',Electric
+'Poison Point',Swarm,Bug
+Prankster,Infiltrator,Grass
+Overcoat,'Magic Guard',Psychic
+Overcoat,'Magic Guard',Psychic
+'Iron Barbs','Shell Armor',Grass
+Levitate,'Shell Armor',Ice
+Hydration,'Shell Armor',Bug
+'Shield Dust','Shell Armor',Bug
+'Shed Skin','Shell Armor',Bug
+'Shield Dust','Shell Armor',Bug
+'Shed Skin','Shell Armor',Bug
+Intimidate,'Shed Skin',Poison
+Intimidate,'Shed Skin',Poison
+'Rock Head',Sturdy,Rock
+Intimidate,'Shell Armor',Water
+'Shed Skin','Shell Armor',Dragon
+'Shed Skin','Shell Armor',Dragon
+'Serene Grace','Run Away',Normal
+'Rock Head',Sturdy,Steel
+'Magma Armor','Flame Body',Fire
+'Magma Armor','Flame Body',Fire
+'Shed Skin','Shell Armor',Rock
+'Shield Dust','Shell Armor',Bug
+'Shed Skin','Shell Armor',Poison
+'Marvel Scale','Shell Armor',Water
+'Swift Swim','Shell Armor',Water
+'Swift Swim','Shell Armor',Water
+'Air Lock','Shell Armor',Dragon
+'Shed Skin','Shell Armor',Bug
+Anticipation,'Shell Armor',Bug
+Pressure,'Shell Armor',Ghost
+Overgrow,'Shell Armor',Grass
+'Thick Fat',Hydration,Water
+'Thick Fat',Hydration,Water
+'Swift Swim','Water Veil',Water
+'Swift Swim','Water Veil',Water
+'Swift Swim','Shell Armor',Water
+'Water Absorb','Shell Armor',Water
+'Volt Absorb',Illuminate,Water
+'Volt Absorb',Illuminate,Water
+'Poison Point','Swift Swim',Water
+Hustle,Sniper,Water
+'Rough Skin','Shell Armor',Water
+'Rough Skin','Shell Armor',Water
+'Water Veil',Oblivious,Water
+'Water Veil',Oblivious,Water
+Oblivious,Anticipation,Water
+Oblivious,Anticipation,Water
+'Swift Swim','Shell Armor',Water
+'Thick Fat','Ice Body',Ice
+'Thick Fat','Ice Body',Ice
+'Swift Swim','Rock Head',Water
+'Swift Swim','Shell Armor',Water
+Drizzle,'Shell Armor',Water
+'Swift Swim','Storm Drain',Water
+'Swift Swim','Storm Drain',Water
+'Swift Swim',Hydration,Water
+Reckless,Adaptability,Water
+Healer,Hydration,Water
+Levitate,'Shell Armor',Electric
+Levitate,'Shell Armor',Electric
+Levitate,'Shell Armor',Electric
+Static,Limber,Ground
+'Rock Head',Sturdy,Rock
+'Magnet Pull',Sturdy,Electric
+Stench,'Sticky Hold',Poison
+Stench,'Sticky Hold',Poison
+Levitate,'Shell Armor',Ghost
+'Liquid Ooze','Sticky Hold',Poison
+'Liquid Ooze','Sticky Hold',Poison
+'Thick Fat','Own Tempo',Psychic
+Levitate,'Shell Armor',Ground
+Levitate,'Shell Armor',Ground
+Levitate,'Shell Armor',Ghost
+Levitate,'Shell Armor',Psychic
+'Clear Body','Shell Armor',Steel
+Aftermath,Unburden,Ghost
+Aftermath,Unburden,Ghost
+Levitate,Heatproof,Steel
+'Magnet Pull',Sturdy,Electric
+Adaptability,Download,Normal
+Pressure,'Shell Armor',Ghost
+'Snow Cloak','Shell Armor',Ice
+Hydration,'Shell Armor',Water
+'Leaf Guard',Chlorophyll,Bug
+Mummy,'Shell Armor',Ghost
+Overcoat,'Magic Guard',Psychic
+Swarm,'Shell Armor',Bug
+'Effect Spore','Shell Armor',Grass
+'Effect Spore','Shell Armor',Grass
+'Flash Fire','Flame Body',Ghost
+'Flash Fire','Flame Body',Ghost
+Hydration,'Sticky Hold',Bug
+Prankster,'Shell Armor',Flying
+Prankster,'Shell Armor',Electric
+'Sand Force','Shell Armor',Ground
+'Sand Veil','Arena Trap',Ground
+Chlorophyll,'Shell Armor',Grass
+Chlorophyll,'Shell Armor',Grass
+'Swift Swim',Sniper,Water
+'Poison Point',Sniper,Water
+Illuminate,'Natural Cure',Water
+Illuminate,'Natural Cure',Water
+'Shadow Tag','Shell Armor',Psychic
+'Swift Swim',Sniper,Water
+'Wonder Guard','Shell Armor',Bug
+'Suction Cups','Shell Armor',Rock
+'Suction Cups','Shell Armor',Rock
+'Clear Body','Shell Armor',Steel
+Pressure,'Shell Armor',Ghost
+Chlorophyll,'Own Tempo',Grass
+Chlorophyll,'Own Tempo',Grass
+'Water Absorb',Chlorophyll,Grass
+Mummy,'Shell Armor',Ghost
+'Ice Body','Shell Armor',Ice
+'Ice Body','Shell Armor',Ice
+'Flash Fire','Flame Body',Ghost
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+Static,'Shell Armor',Electric
+'Sand Veil','Shell Armor',Ground
+'Sand Veil','Shell Armor',Ground
+'Poison Point',Rivalry,Poison
+'Poison Point',Rivalry,Poison
+'Cute Charm','Magic Guard',Fairy
+'Cute Charm','Magic Guard',Fairy
+Damp,'Cloud Nine',Water
+Damp,'Cloud Nine',Water
+'Vital Spirit','Anger Point',Fighting
+'Vital Spirit','Anger Point',Fighting
+Synchronize,'Inner Focus',Psychic
+Synchronize,'Inner Focus',Psychic
+Guts,'No Guard',Fighting
+Oblivious,'Own Tempo',Water
+Levitate,'Shell Armor',Ghost
+'Rock Head',Lightningrod,Ground
+'Rock Head',Lightningrod,Ground
+'Own Tempo',Oblivious,Normal
+Lightningrod,'Rock Head',Ground
+'Natural Cure','Serene Grace',Normal
+'Early Bird',Scrappy,Normal
+Static,'Shell Armor',Electric
+'Flame Body','Shell Armor',Fire
+'Swift Swim','Battle Armor',Rock
+'Inner Focus','Shell Armor',Dragon
+Pressure,'Shell Armor',Psychic
+Synchronize,'Shell Armor',Psychic
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+'Cute Charm','Magic Guard',Fairy
+Static,'Shell Armor',Electric
+Static,'Shell Armor',Electric
+'Thick Fat','Huge Power',Water
+'Thick Fat','Huge Power',Water
+Chlorophyll,'Leaf Guard',Grass
+Chlorophyll,'Leaf Guard',Grass
+Chlorophyll,'Leaf Guard',Grass
+'Run Away',Pickup,Normal
+Damp,'Water Absorb',Water
+Oblivious,'Own Tempo',Water
+Intimidate,'Quick Feet',Fairy
+'Inner Focus','Keen Eye',Dark
+Pickup,'Quick Feet',Normal
+Guts,'Quick Feet',Normal
+'Own Tempo',Technician,Normal
+Intimidate,Technician,Fighting
+'Flame Body','Shell Armor',Fire
+'Thick Fat',Scrappy,Normal
+Guts,'Shell Armor',Rock
+'Sand Stream','Shell Armor',Rock
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+'Effect Spore','Poison Heal',Grass
+'Vital Spirit','Shell Armor',Normal
+Soundproof,'Shell Armor',Normal
+Soundproof,'Shell Armor',Normal
+Soundproof,'Shell Armor',Normal
+Sturdy,'Rock Head',Steel
+Plus,'Shell Armor',Electric
+Minus,'Shell Armor',Electric
+Illuminate,Swarm,Bug
+'Thick Fat','Own Tempo',Psychic
+'Own Tempo','Tangled Feet',Normal
+Immunity,'Shell Armor',Normal
+'Battle Armor','Shell Armor',Rock
+'Color Change','Shell Armor',Normal
+Insomnia,Frisk,Ghost
+'Shadow Tag','Shell Armor',Psychic
+Drought,'Shell Armor',Ground
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+Simple,Unaware,Normal
+'Mold Breaker','Shell Armor',Rock
+'Mold Breaker','Shell Armor',Rock
+Technician,Pickup,Normal
+'Run Away',Klutz,Normal
+'Cute Charm',Klutz,Normal
+'Sand Veil','Shell Armor',Dragon
+'Sand Veil','Shell Armor',Dragon
+'Sand Veil','Shell Armor',Dragon
+Steadfast,'Inner Focus',Fighting
+Steadfast,'Inner Focus',Fighting
+'Snow Warning','Shell Armor',Grass
+'Snow Warning','Shell Armor',Grass
+Pressure,'Shell Armor',Dark
+Lightningrod,'Solid Rock',Ground
+'Motor Drive','Shell Armor',Electric
+'Flame Body','Shell Armor',Fire
+Levitate,'Shell Armor',Psychic
+Levitate,'Shell Armor',Psychic
+Levitate,'Shell Armor',Psychic
+Pressure,'Shell Armor',Water
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+Torrent,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+Illuminate,'Keen Eye',Normal
+Gluttony,'Shell Armor',Grass
+Gluttony,'Shell Armor',Grass
+Gluttony,'Shell Armor',Fire
+Gluttony,'Shell Armor',Fire
+Gluttony,'Shell Armor',Water
+Gluttony,'Shell Armor',Water
+'Sand Rush','Sand Force',Ground
+Healer,Regenerator,Normal
+'Swift Swim',Hydration,Water
+Intimidate,Moxie,Ground
+'Shed Skin',Moxie,Dark
+'Shed Skin',Moxie,Dark
+'Solid Rock',Sturdy,Water
+Illusion,'Shell Armor',Dark
+Telepathy,Synchronize,Psychic
+Rivalry,'Mold Breaker',Dragon
+Rivalry,'Mold Breaker',Dragon
+Rivalry,'Mold Breaker',Dragon
+'Snow Cloak','Shell Armor',Ice
+'Inner Focus',Regenerator,Fighting
+'Inner Focus',Regenerator,Fighting
+'Rough Skin','Sheer Force',Dragon
+Gluttony,'Flash Fire',Fire
+Levitate,'Shell Armor',Dark
+Teravolt,'Shell Armor',Dragon
+Pressure,'Shell Armor',Dragon
+Chlorophyll,'Shell Armor',Grass
+'Water Absorb',Damp,Water
+'Run Away','Early Bird',Normal
+'Run Away','Early Bird',Normal
+Chlorophyll,'Shell Armor',Grass
+Chlorophyll,'Leaf Guard',Grass
+Trace,Download,Normal
+Damp,'Water Absorb',Water
+Trace,Download,Normal
+Blaze,'Shell Armor',Fire
+Chlorophyll,'Early Bird',Grass
+'Effect Spore','Poison Heal',Grass
+'Thick Fat','Huge Power',Normal
+'Flower Gift','Shell Armor',Grass
+Sturdy,'Rock Head',Rock
+Sturdy,'Shell Armor',Rock
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+'Run Away',Guts,Normal
+'Run Away',Guts,Normal
+Static,'Shell Armor',Electric
+'Poison Point',Rivalry,Poison
+'Poison Point',Rivalry,Poison
+'Poison Point',Rivalry,Poison
+'Poison Point',Rivalry,Poison
+'Flash Fire','Shell Armor',Fire
+'Flash Fire','Shell Armor',Fire
+Pickup,Technician,Normal
+Limber,Technician,Normal
+Intimidate,'Flash Fire',Fire
+Intimidate,'Flash Fire',Fire
+'Run Away','Flash Fire',Fire
+'Run Away','Flash Fire',Fire
+Oblivious,'Own Tempo',Water
+Lightningrod,'Rock Head',Ground
+Intimidate,'Anger Point',Normal
+'Run Away',Adaptability,Normal
+'Water Absorb','Shell Armor',Water
+'Volt Absorb','Shell Armor',Electric
+'Flash Fire','Shell Armor',Fire
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Blaze,'Shell Armor',Fire
+Blaze,'Shell Armor',Fire
+'Run Away','Keen Eye',Normal
+'Run Away','Keen Eye',Normal
+Static,'Shell Armor',Electric
+Static,'Shell Armor',Electric
+Synchronize,'Shell Armor',Psychic
+Synchronize,'Shell Armor',Dark
+'Inner Focus','Early Bird',Normal
+Oblivious,'Snow Cloak',Ice
+Oblivious,'Snow Cloak',Ice
+'Early Bird','Flash Fire',Dark
+'Early Bird','Flash Fire',Dark
+Pickup,'Shell Armor',Ground
+Sturdy,'Shell Armor',Ground
+Intimidate,Frisk,Normal
+Pressure,'Shell Armor',Electric
+Pressure,'Shell Armor',Fire
+Pressure,'Shell Armor',Water
+Torrent,'Shell Armor',Water
+'Run Away','Quick Feet',Dark
+Intimidate,'Quick Feet',Dark
+Pickup,Gluttony,Normal
+Pickup,Gluttony,Normal
+Truant,'Shell Armor',Normal
+'Cute Charm',Normalize,Normal
+'Cute Charm',Normalize,Normal
+Sturdy,'Rock Head',Steel
+Sturdy,'Rock Head',Steel
+Static,Lightningrod,Electric
+Static,Lightningrod,Electric
+Oblivious,Simple,Fire
+'Magma Armor','Solid Rock',Fire
+'White Smoke','Shell Armor',Fire
+Chlorophyll,'Solar Power',Grass
+Pressure,'Super Luck',Dark
+'Thick Fat','Ice Body',Ice
+'Rock Head','Shell Armor',Dragon
+Intimidate,'Shell Armor',Dragon
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Overgrow,'Shell Armor',Grass
+Simple,Unaware,Normal
+Rivalry,Intimidate,Electric
+Rivalry,Intimidate,Electric
+Rivalry,Intimidate,Electric
+Sturdy,'Shell Armor',Rock
+Sturdy,'Shell Armor',Rock
+'Run Away',Pickup,Electric
+'Swift Swim','Shell Armor',Water
+'Swift Swim','Shell Armor',Water
+Limber,'Own Tempo',Normal
+'Thick Fat','Own Tempo',Normal
+Stench,Aftermath,Poison
+Stench,Aftermath,Poison
+'Sand Stream','Shell Armor',Ground
+'Sand Stream','Shell Armor',Ground
+'Leaf Guard','Shell Armor',Grass
+'Snow Cloak','Shell Armor',Ice
+Oblivious,'Snow Cloak',Ice
+Pressure,'Shell Armor',Steel
+'Flash Fire','Shell Armor',Fire
+'Natural Cure','Shell Armor',Grass
+Multitype,'Shell Armor',Normal
+Blaze,'Shell Armor',Fire
+Torrent,'Shell Armor',Water
+'Run Away','Keen Eye',Normal
+'Vital Spirit',Pickup,Normal
+Intimidate,'Sand Rush',Normal
+Intimidate,'Sand Rush',Normal
+Limber,Unburden,Dark
+Limber,Unburden,Dark
+Forewarn,Synchronize,Psychic
+Lightningrod,'Motor Drive',Electric
+Lightningrod,'Motor Drive',Electric
+Intimidate,Moxie,Ground
+Intimidate,Moxie,Ground
+'Sheer Force','Shell Armor',Fire
+'Solid Rock',Sturdy,Water
+Illusion,'Shell Armor',Dark
+'Cute Charm',Technician,Normal
+'Cute Charm',Technician,Normal
+Chlorophyll,'Sap Sipper',Normal
+Chlorophyll,'Sap Sipper',Normal
+Static,'Shell Armor',Electric
+'Snow Cloak','Shell Armor',Ice
+Reckless,'Sap Sipper',Normal
+Hustle,'Shell Armor',Dark
+Hustle,'Shell Armor',Dark
+Justified,'Shell Armor',Steel
+Justified,'Shell Armor',Rock
+Justified,'Shell Armor',Grass
+Justified,'Shell Armor',Water
+'Keen Eye','Tangled Feet',Normal
+'Keen Eye','Tangled Feet',Normal
+'Keen Eye','Tangled Feet',Normal
+'Keen Eye','Shell Armor',Normal
+'Keen Eye','Shell Armor',Normal
+'Inner Focus','Shell Armor',Poison
+'Inner Focus','Shell Armor',Poison
+'Keen Eye','Inner Focus',Normal
+'Rock Head',Pressure,Rock
+Pressure,'Shell Armor',Ice
+Pressure,'Shell Armor',Electric
+Pressure,'Shell Armor',Fire
+Insomnia,'Keen Eye',Normal
+Insomnia,'Keen Eye',Normal
+Swarm,'Early Bird',Bug
+Swarm,'Early Bird',Bug
+Synchronize,'Early Bird',Psychic
+Synchronize,'Early Bird',Psychic
+Insomnia,'Super Luck',Dark
+'Hyper Cutter','Sand Veil',Ground
+'Vital Spirit',Hustle,Ice
+'Swift Swim','Water Absorb',Water
+'Keen Eye',Sturdy,Steel
+Pressure,'Shell Armor',Psychic
+Pressure,'Shell Armor',Fire
+Guts,'Shell Armor',Normal
+Guts,'Shell Armor',Normal
+'Keen Eye','Shell Armor',Water
+'Keen Eye','Shell Armor',Water
+Levitate,'Shell Armor',Ground
+'Natural Cure','Shell Armor',Normal
+'Natural Cure','Shell Armor',Dragon
+Levitate,'Shell Armor',Dragon
+Levitate,'Shell Armor',Dragon
+'Keen Eye','Shell Armor',Normal
+Intimidate,'Shell Armor',Normal
+Intimidate,'Shell Armor',Normal
+Insomnia,'Super Luck',Dark
+'Keen Eye','Tangled Feet',Normal
+'Swift Swim','Water Absorb',Water
+Hustle,'Serene Grace',Fairy
+'Hyper Cutter','Sand Veil',Ground
+'Big Pecks','Super Luck',Normal
+'Big Pecks','Super Luck',Normal
+'Big Pecks','Super Luck',Normal
+Unaware,Klutz,Psychic
+Unaware,Klutz,Psychic
+'Wonder Skin','Magic Guard',Psychic
+Defeatist,'Shell Armor',Rock
+Defeatist,'Shell Armor',Rock
+'Keen Eye','Big Pecks',Water
+'Keen Eye','Big Pecks',Water
+'Keen Eye','Sheer Force',Normal
+'Keen Eye','Sheer Force',Normal
+'Big Pecks',Overcoat,Dark
+'Big Pecks',Overcoat,Dark
+Turboblaze,'Shell Armor',Dragon
+'Clear Body','Liquid Ooze',Water
+'Clear Body','Liquid Ooze',Water
+'Swift Swim','Shell Armor',Rock
+'Swift Swim','Shell Armor',Rock
+'Suction Cups',Sniper,Water
+Levitate,'Shell Armor',Grass
+Sturdy,'Shell Armor',Rock
+Sturdy,'Shell Armor',Rock
+'Water Absorb','Cursed Body',Water
+'Water Absorb','Cursed Body',Water
+'Iron Barbs','Shell Armor',Grass
+'Sand Veil','Arena Trap',Ground
+'Magnet Pull',Sturdy,Electric
+Chlorophyll,'Shell Armor',Grass
+Levitate,'Shell Armor',Poison
+'Clear Body','Shell Armor',Steel
+'Honey Gather','Shell Armor',Bug
+Chlorophyll,'Shell Armor',Grass
+Sturdy,'Magnet Pull',Rock
+'Ice Body','Shell Armor',Ice
+Plus,Minus,Steel
+Plus,Minus,Steel
+Plus,Minus,Steel
+'Cute Charm','Shell Armor',Normal
+'Cute Charm','Shell Armor',Normal
+Chlorophyll,'Shell Armor',Grass
+Chlorophyll,'Shell Armor',Grass
+'Compound Eyes','Tinted Lens',Bug
+'Water Absorb',Damp,Water
+'Water Absorb',Damp,Water
+Synchronize,'Inner Focus',Psychic
+Guts,'No Guard',Fighting
+Guts,'No Guard',Fighting
+Chlorophyll,'Shell Armor',Grass
+'Rock Head',Sturdy,Rock
+'Rock Head',Sturdy,Rock
+Insomnia,Forewarn,Psychic
+Insomnia,Forewarn,Psychic
+Limber,Reckless,Fighting
+'Keen Eye','Iron Fist',Fighting
+Soundproof,Filter,Psychic
+Oblivious,Forewarn,Ice
+'Hyper Cutter','Mold Breaker',Bug
+Immunity,'Thick Fat',Normal
+Blaze,'Shell Armor',Fire
+'Cute Charm','Shell Armor',Normal
+Hustle,'Serene Grace',Fairy
+Hustle,'Serene Grace',Fairy
+Chlorophyll,'Shell Armor',Grass
+Sturdy,'Rock Head',Rock
+'Water Absorb',Damp,Water
+Chlorophyll,'Solar Power',Grass
+Intimidate,'Run Away',Fairy
+Swarm,Guts,Bug
+Guts,Steadfast,Fighting
+Oblivious,Forewarn,Ice
+Static,'Shell Armor',Electric
+'Natural Cure','Serene Grace',Normal
+'Natural Cure','Shell Armor',Psychic
+'Swift Swim','Rain Dish',Water
+'Swift Swim','Rain Dish',Water
+Chlorophyll,'Early Bird',Grass
+Chlorophyll,'Early Bird',Grass
+Synchronize,Trace,Psychic
+Synchronize,Trace,Psychic
+Synchronize,Trace,Psychic
+Truant,'Shell Armor',Normal
+'Thick Fat',Guts,Fighting
+'Thick Fat',Guts,Fighting
+Sturdy,'Magnet Pull',Rock
+'Keen Eye',Stall,Dark
+'Hyper Cutter',Intimidate,Steel
+'Pure Power','Shell Armor',Fighting
+'Pure Power','Shell Armor',Fighting
+Oblivious,'Tinted Lens',Bug
+'Natural Cure','Poison Point',Grass
+'Sand Veil','Shell Armor',Grass
+'Sand Veil','Shell Armor',Grass
+Pressure,'Shell Armor',Ghost
+'Inner Focus','Ice Body',Ice
+'Rock Head','Shell Armor',Dragon
+'Clear Body','Shell Armor',Rock
+'Clear Body','Shell Armor',Ice
+'Clear Body','Shell Armor',Steel
+'Serene Grace','Shell Armor',Steel
+Pressure,'Shell Armor',Psychic
+Torrent,'Shell Armor',Water
+'Shed Skin','Shell Armor',Bug
+'Natural Cure','Poison Point',Grass
+'Natural Cure','Poison Point',Grass
+Levitate,'Shell Armor',Psychic
+Soundproof,Filter,Psychic
+'Natural Cure','Serene Grace',Normal
+Pickup,'Thick Fat',Normal
+Anticipation,'Dry Skin',Poison
+Anticipation,'Dry Skin',Poison
+'Own Tempo',Oblivious,Normal
+Chlorophyll,'Leaf Guard',Grass
+Steadfast,'Shell Armor',Psychic
+'Slow Start','Shell Armor',Normal
+Hydration,'Shell Armor',Water
+'Bad Dreams','Shell Armor',Dark
+'Victory Star','Shell Armor',Psychic
+Forewarn,Synchronize,Psychic
+'Sand Rush','Sand Force',Ground
+Guts,'Sheer Force',Fighting
+Guts,'Sheer Force',Fighting
+Guts,'Sheer Force',Fighting
+'Swift Swim','Poison Touch',Water
+Guts,'Inner Focus',Fighting
+Sturdy,'Inner Focus',Fighting
+Swarm,Chlorophyll,Bug
+Prankster,Infiltrator,Grass
+Hustle,'Shell Armor',Fire
+Stench,'Sticky Hold',Poison
+Stench,'Weak Armor',Poison
+Frisk,'Shell Armor',Psychic
+Frisk,'Shell Armor',Psychic
+Frisk,'Shell Armor',Psychic
+Swarm,'Shed Skin',Bug
+Telepathy,Synchronize,Psychic
+'Iron Fist',Klutz,Ground
+'Iron Fist',Klutz,Ground
+Defiant,'Inner Focus',Dark
+Defiant,'Inner Focus',Dark
+'Serene Grace','Shell Armor',Normal
+Download,'Shell Armor',Bug
+'Compound Eyes','Shell Armor',Bug
+Swarm,'Shell Armor',Bug
+'Shield Dust','Tinted Lens',Bug
+Swarm,Technician,Bug
+'Inner Focus','Shell Armor',Poison
+'Speed Boost','Compound Eyes',Bug
+Swarm,Technician,Bug
+Swarm,'Shell Armor',Bug
+'Shield Dust','Shell Armor',Bug
+Intimidate,'Shell Armor',Bug
+'Speed Boost','Shell Armor',Bug
+Levitate,'Shell Armor',Ground
+Swarm,'Shell Armor',Bug
+Swarm,'Shell Armor',Bug
+Pressure,'Shell Armor',Bug
+'Speed Boost','Tinted Lens',Bug
+'Flame Body','Shell Armor',Bug
+'Effect Spore','Dry Skin',Bug
+'Effect Spore','Dry Skin',Bug
+'Hyper Cutter','Shell Armor',Water
+'Hyper Cutter','Shell Armor',Water
+'Swift Swim','Battle Armor',Rock
+Swarm,Insomnia,Bug
+Swarm,Insomnia,Bug
+Sturdy,Gluttony,Bug
+Hustle,'Natural Cure',Water
+'Swift Swim','Rain Dish',Water
+'Swift Swim','Shell Armor',Bug
+'Compound Eyes','Shell Armor',Bug
+'Hyper Cutter','Arena Trap',Ground
+'Hyper Cutter','Shell Armor',Water
+'Hyper Cutter','Shell Armor',Water
+'Battle Armor','Shell Armor',Rock
+'Sticky Hold','Storm Drain',Water
+'Sticky Hold','Storm Drain',Water
+'Battle Armor',Sniper,Poison
+'Battle Armor',Sniper,Poison
+Levitate,'Shell Armor',Psychic
+Swarm,Chlorophyll,Bug
+'Poison Point',Swarm,Bug
+'Poison Point',Swarm,Bug
+Sturdy,'Shell Armor',Bug
+Sturdy,'Shell Armor',Bug
+'Compound Eyes',Unnerve,Bug
+'Compound Eyes',Unnerve,Bug
+Swarm,Hustle,Bug
+'Flame Body','Shell Armor',Bug
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Electric
+Levitate,'Shell Armor',Steel
+Levitate,'Shell Armor',Water
+Levitate,'Shell Armor',Normal
+Levitate,'Shell Armor',Bug
+Levitate,'Shell Armor',Bug
+Levitate,'Shell Armor',Psychic
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Dragon
+Levitate,'Shell Armor',Ghost
+Levitate,'Shell Armor',Grass
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Normal
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Dark
+Levitate,'Shell Armor',Ghost
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Electric
+Levitate,'Shell Armor',Poison
+Levitate,'Shell Armor',Water
+Levitate,'Shell Armor',Flying
+Levitate,'Shell Armor',Fighting
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Water
+Levitate,'Shell Armor',Psychic
+Levitate,'Shell Armor',Grass
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Ghost
+Levitate,'Shell Armor',Steel
+Levitate,'Shell Armor',Steel
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Fighting
+Levitate,'Shell Armor',Dragon
+Levitate,'Shell Armor',Grass
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Normal
+Levitate,'Shell Armor',Electric
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Ice
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Bug
+Levitate,'Shell Armor',Normal
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Water
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Water
+Levitate,'Shell Armor',Fire
+Levitate,'Shell Armor',Dark
+Levitate,'Shell Armor',Ghost
+Levitate,'Shell Armor',Flying
+Levitate,'Shell Armor',Grass
+Levitate,'Shell Armor',Grass
+Levitate,'Shell Armor',Steel
+Levitate,'Shell Armor',Poison
+Levitate,'Shell Armor',Dragon
+Levitate,'Shell Armor',Ice
+Levitate,'Shell Armor',Fighting
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Rock
+Levitate,'Shell Armor',Fairy
+Levitate,'Shell Armor',Dragon
+Levitate,'Shell Armor',Dark

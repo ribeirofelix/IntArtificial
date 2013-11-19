@@ -16,725 +16,727 @@
 @attribute BaseSpeed real
 @attribute Color { 'black' ,'blue' ,'brown' ,'gray' ,'green' ,'pink' ,'purple' ,'red' ,'silver' ,'yellow' }
 @attribute Habitat {'cave' ,'forest' ,'grass' ,'mountain' ,'rare' ,'rough' ,'sea' ,'urban' ,'water' }
+@attribute Ability1 { 'Adaptability' ,'Aftermath' ,'Air Lock' ,'Anticipation' ,'Bad Dreams' ,'Battle Armor' ,'Big Pecks' ,'Blaze' ,'Chlorophyll' ,'Clear Body' ,'Color Change' ,'Compound Eyes' ,'Cute Charm' ,'Damp' ,'Defeatist' ,'Defiant' ,'Download' ,'Drizzle' ,'Drought' ,'Early Bird' ,'Effect Spore' ,'Flame Body' ,'Flash Fire' ,'Flower Gift' ,'Forecast' ,'Forewarn' ,'Frisk' ,'Gluttony' ,'Guts' ,'Healer' ,'Honey Gather' ,'Hustle' ,'Hydration' ,'Hyper Cutter' ,'Ice Body' ,'Illuminate' ,'Illusion' ,'Immunity' ,'Inner Focus' ,'Insomnia' ,'Intimidate' ,'Iron Barbs' ,'Iron Fist' ,'Justified' ,'Keen Eye' ,'Leaf Guard' ,'Levitate' ,'Lightningrod' ,'Limber' ,'Liquid Ooze' ,'Magma Armor' ,'Magnet Pull' ,'Marvel Scale' ,'Minus' ,'Mold Breaker' ,'Motor Drive' ,'Multitype' ,'Mummy' ,'Natural Cure' ,'Oblivious' ,'Overcoat' ,'Overgrow' ,'Own Tempo' ,'Pickup' ,'Plus' ,'Poison Point' ,'Prankster' ,'Pressure' ,'Pure Power' ,'Reckless' ,'Rivalry' ,'Rock Head' ,'Rough Skin' ,'Run Away' ,'Sand Force' ,'Sand Rush' ,'Sand Stream' ,'Sand Veil' ,'Serene Grace' ,'Shadow Tag' ,'Shed Skin' ,'Sheer Force' ,'Shell Armor' ,'Shield Dust' ,'Simple' ,'Slow Start' ,'Snow Cloak' ,'Snow Warning' ,'Solid Rock' ,'Soundproof' ,'Speed Boost' ,'Static' ,'Steadfast' ,'Stench' ,'Sticky Hold' ,'Sturdy' ,'Suction Cups' ,'Swarm' ,'Swift Swim' ,'Synchronize' ,'Technician' ,'Telepathy' ,'Teravolt' ,'Thick Fat' ,'Torrent' ,'Trace' ,'Truant' ,'Turboblaze' ,'Unaware' ,'Victory Star' ,'Vital Spirit' ,'Volt Absorb' ,'Water Absorb' ,'Water Veil' ,'White Smoke' ,'Wonder Guard' ,'Wonder Skin' }
 @attribute Ability2 {'Adaptability' ,'Aftermath' ,'Anger Point' ,'Anticipation' ,'Arena Trap' ,'Battle Armor' ,'Big Pecks' ,'Chlorophyll' ,'Cloud Nine' ,'Compound Eyes' ,'Cursed Body' ,'Damp' ,'Download' ,'Dry Skin' ,'Early Bird' ,'Filter' ,'Flame Body' ,'Flash Fire' ,'Forewarn' ,'Frisk' ,'Gluttony' ,'Guts' ,'Heatproof' ,'Huge Power' ,'Hustle' ,'Hydration' ,'Ice Body' ,'Illuminate' ,'Infiltrator' ,'Inner Focus' ,'Insomnia' ,'Intimidate' ,'Iron Fist' ,'Keen Eye' ,'Klutz' ,'Leaf Guard' ,'Lightningrod' ,'Limber' ,'Liquid Ooze' ,'Magic Guard' ,'Magnet Pull' ,'Minus' ,'Mold Breaker' ,'Motor Drive' ,'Moxie' ,'Natural Cure' ,'No Guard' ,'Normalize' ,'Oblivious' ,'Overcoat' ,'Own Tempo' ,'Pickup' ,'Poison Heal' ,'Poison Point' ,'Poison Touch' ,'Pressure' ,'Quick Feet' ,'Rain Dish' ,'Reckless' ,'Regenerator' ,'Rivalry' ,'Rock Head' ,'Run Away' ,'Sand Force' ,'Sand Rush' ,'Sand Veil' ,'Sap Sipper' ,'Scrappy' ,'Serene Grace' ,'Shed Skin' ,'Sheer Force' ,'Shell Armor' ,'Simple' ,'Skill Link' ,'Sniper' ,'Snow Cloak' ,'Solar Power' ,'Solid Rock' ,'Stall' ,'Static' ,'Steadfast' ,'Sticky Hold' ,'Storm Drain' ,'Sturdy' ,'Super Luck' ,'Swarm' ,'Swift Swim' ,'Synchronize' ,'Tangled Feet' ,'Technician' ,'Thick Fat' ,'Tinted Lens' ,'Trace' ,'Unaware' ,'Unburden' ,'Unnerve' ,'Water Absorb' ,'Water Veil' ,'Weak Armor' }
 @attribute Hidden {'Analytic' ,'Anger Point' ,'Anticipation' ,'Big Pecks' ,'Contrary' ,'Cursed Body' ,'Damp' ,'Defiant' ,'Dry Skin' ,'Early Bird' ,'Friend Guard' ,'Harvest' ,'Honey Gather' ,'Hustle' ,'Hydration' ,'Ice Body' ,'Infiltrator' ,'Inner Focus' ,'Justified' ,'Light Metal' ,'Moody' ,'Moxie' ,'Oblivious' ,'Overcoat' ,'Own Tempo' ,'Prankster' ,'Quick Feet' ,'Rattled' ,'Regenerator' ,'Run Away' ,'Sap Sipper' ,'Sheer Force' ,'Steadfast' ,'Technician' ,'Thick Fat' ,'Unaware' ,'Unburden' ,'Unnerve' ,'Vital Spirit' ,'Wonder Skin' }
+@attribute Exp {Erratic, Fast , Fluctuating, MediumFast, MediumSlow, Slow }
 @attribute class { Grass,Fire,Water,Bug,Normal,Poison,Electric,Ground,Fairy,Fighting,Rock,Ghost,Psychic,Ice,Dragon,Dark,Steel,Flying}
 @data 
-0.3,4,head,190,3,3,2,4,2,30,65,100,45,25,40,"purple","sea","Skill Link","Overcoat",Water
-1.5,132.5,head,60,2,5,1,4,2,50,95,180,85,45,70,"purple","sea","Skill Link","Overcoat",Water
-1.3,0.1,head,190,4,1,4,2,4,30,35,30,100,35,80,"purple","cave",?,?,Ghost
-0.5,10.4,head,190,5,2,3,2,5,40,30,50,55,55,100,"red","urban","Static",?,Electric
-1.2,66.6,head,60,5,3,3,4,4,60,50,70,80,80,140,"red","urban","Static",?,Electric
-0.6,1,head,190,3,3,3,4,3,40,65,95,60,45,35,"purple","urban",?,?,Poison
-0.3,4,head,35,5,5,5,5,5,48,48,48,48,48,48,"purple","urban",?,?,Normal
-0.3,1.8,head,235,5,5,5,5,5,30,30,30,30,30,30,"yellow","grass","Solar Power","Early Bird",Grass
-0.7,1,head,45,4,2,3,2,5,60,60,60,85,85,85,"gray","cave",?,?,Ghost
-0.5,5,head,225,4,3,5,4,5,48,72,48,72,48,48,"black","rare",?,?,Psychic
-0.6,7.2,head,190,3,5,4,5,3,50,65,90,35,35,15,"gray","forest",?,?,Bug
-1.2,125.8,head,75,2,4,4,5,3,75,90,140,60,60,40,"purple","forest",?,?,Bug
-0.6,10,head,120,3,3,3,4,2,50,35,55,25,25,15,"silver","forest",?,?,Bug
-0.7,11.5,head,120,2,3,4,4,2,50,35,55,25,25,15,"purple","forest",?,?,Bug
-1,168,head,45,3,3,4,4,3,70,55,65,95,85,70,"yellow","cave",?,?,Rock
-1.2,154,head,45,3,5,4,4,3,70,95,85,55,65,70,"red","cave",?,?,Rock
-0.3,0.8,head,45,4,4,4,4,4,70,70,70,70,70,70,"silver","grass",?,?,Normal
-0.6,2.3,head,225,5,2,3,3,4,44,75,35,63,33,45,"black","urban","Frisk","Cursed Body",Ghost
-1.5,256.5,head,75,3,5,2,5,2,80,80,80,80,80,80,"gray","cave","Ice Body","Moody",Ice
-0.4,52.5,head,255,3,3,3,5,3,35,64,85,74,55,32,"blue","sea",?,?,Water
-0.9,4.4,head,45,4,2,5,3,5,60,60,60,105,105,105,"purple",?,?,?,Ghost
-0.5,60.5,head,255,3,4,1,5,4,57,24,86,24,86,23,"green",?,"Heatproof",?,Steel
-0.3,0.3,head,45,5,3,5,4,5,50,65,107,105,107,86,"red",?,?,?,Electric
-1.2,58.5,head,120,?,?,?,?,?,40,55,99,40,79,47,"gray",?,"Swarm",?,Bug
-0.3,0.6,head,190,?,?,?,?,?,40,27,60,37,50,66,"green",?,"Infiltrator",?,Grass
-0.3,1,head,200,?,?,?,?,?,45,30,40,105,50,20,"green",?,"Magic Guard",?,Psychic
-0.6,8,head,100,?,?,?,?,?,65,40,50,125,60,30,"green",?,"Magic Guard",?,Psychic
-0.6,18.8,head,255,?,?,?,?,?,44,50,91,24,86,10,"gray",?,?,?,Grass
-1.1,148,head,25,?,?,?,?,?,70,50,30,95,135,105,"blue",?,?,?,Ice
-0.4,7.7,head,200,?,?,?,?,?,50,40,85,40,65,25,"red",?,"Shell Armor",?,Bug
-0.3,2.9,serpertine,255,3,3,4,3,2,45,30,35,20,20,45,"green","forest",?,?,Bug
-0.7,9.9,serpertine,120,3,3,1,5,3,50,20,55,25,25,30,"green","forest",?,?,Bug
-0.3,3.2,serpertine,255,3,4,4,3,2,40,35,30,20,20,50,"brown","forest",?,?,Bug
-0.6,10,serpertine,120,3,3,1,5,3,45,25,50,25,25,35,"yellow","forest",?,?,Bug
-2,6.9,serpertine,255,5,4,3,3,3,35,60,44,40,54,55,"purple","grass","Shed Skin",?,Poison
-3.5,65,serpertine,90,4,5,3,4,3,60,85,69,65,79,80,"purple","grass","Shed Skin",?,Poison
-8.8,210,serpertine,45,4,2,2,4,3,35,45,160,30,45,70,"gray","cave","Sturdy",?,Rock
-6.5,672.4,serpertine,45,3,5,2,4,5,95,155,109,70,130,81,"blue","water",?,?,Water
-1.8,3.3,serpertine,45,5,3,3,4,3,41,64,45,50,50,50,"blue","water",?,?,Dragon
-4,16.5,serpertine,45,4,3,4,3,5,61,84,65,70,70,70,"blue","water",?,?,Dragon
-1.5,14,serpertine,190,3,4,2,4,5,100,70,70,65,65,45,"yellow","cave","Run Away",?,Normal
-9.2,400,serpertine,25,2,5,2,5,2,75,85,200,55,65,30,"gray","cave","Sturdy",?,Steel
-0.7,35,serpertine,190,2,3,3,4,2,40,40,40,70,40,20,"red","mountain","Flame Body",?,Fire
-0.8,55,serpertine,75,1,4,2,5,2,50,50,120,80,80,30,"red","mountain","Flame Body",?,Fire
-1.2,152,serpertine,45,4,4,1,4,4,70,84,70,65,70,51,"gray","mountain",?,?,Rock
-0.3,3.6,serpertine,255,3,3,5,4,3,45,45,35,20,30,20,"red","forest",?,?,Bug
-2.7,52.5,serpertine,90,4,4,5,5,2,73,100,60,100,60,65,"black","grass",?,?,Poison
-6.2,162,serpertine,60,4,3,5,5,3,95,60,79,100,125,81,"pink","water",?,?,Water
-1.7,27,serpertine,60,4,5,2,3,3,55,104,105,94,75,52,"blue","sea",?,?,Water
-1.8,22.6,serpertine,60,4,3,4,3,3,55,84,105,114,75,52,"pink","sea",?,?,Water
-7,206.5,serpertine,3,5,5,3,5,5,105,150,90,150,90,95,"green","rare",?,?,Dragon
-0.2,3.4,serpertine,120,4,5,3,5,3,40,29,45,29,45,36,"gray",?,?,?,Bug
-0.5,14.3,serpertine,45,3,5,3,5,2,60,69,95,69,95,36,"gray",?,?,?,Bug
-6.9,650,multiped,3,5,5,5,5,5,150,120,100,120,100,90,"black",?,?,?,Ghost
-3.3,63,serpertine,45,?,?,?,?,?,75,75,95,75,95,113,"green",?,?,?,Grass
-1.1,90,fins,190,3,3,2,4,3,65,45,55,45,70,45,"silver","sea","Hydration","Ice Body",Water
-1.7,120,fins,75,2,3,2,5,3,90,70,80,70,95,70,"silver","sea","Hydration","Ice Body",Water
-0.6,15,fins,225,4,4,3,2,3,45,67,60,35,50,63,"red","water","Water Veil",?,Water
-1.3,39,fins,60,4,4,3,3,3,80,92,65,65,80,68,"red","water","Water Veil",?,Water
-0.9,10,fins,255,5,4,3,5,4,20,10,55,15,20,80,"red","water",?,?,Water
-2.5,220,fins,45,3,4,4,5,3,130,85,80,85,95,60,"blue","sea","Shell Armor",?,Water
-0.5,12,fins,190,4,3,5,4,3,75,38,38,56,56,67,"blue","sea","Illuminate",?,Water
-1.2,22.5,fins,75,3,3,3,4,4,125,58,58,76,76,67,"blue","sea","Illuminate",?,Water
-0.5,3.9,fins,45,3,4,3,5,3,65,95,75,55,55,85,"gray","sea","Swift Swim",?,Water
-0.6,12,fins,190,3,3,5,3,3,35,65,35,65,35,65,"gray","sea","Sniper","Moody",Water
-0.8,20.8,fins,225,4,4,4,3,3,45,90,20,65,20,65,"red","sea",?,?,Water
-1.8,88.8,fins,60,4,4,4,2,3,70,120,40,95,40,95,"blue","sea",?,?,Water
-2,130,fins,125,3,4,3,5,4,130,70,35,70,35,60,"blue","sea","Oblivious",?,Water
-14.5,398,fins,60,3,5,1,5,4,170,90,45,90,45,60,"blue","sea","Oblivious",?,Water
-0.4,1.9,fins,190,4,3,4,5,3,50,48,43,46,41,60,"gray","water","Anticipation","Hydration",Water
-0.9,23.6,fins,75,2,5,4,5,2,110,78,73,76,71,60,"blue","water","Anticipation","Hydration",Water
-0.6,7.4,fins,255,5,2,1,1,2,20,15,20,10,55,80,"brown","water",?,?,Water
-0.8,39.5,fins,255,4,4,2,4,2,70,40,50,55,50,25,"blue","sea","Ice Body","Oblivious",Ice
-1.1,87.6,fins,120,4,4,2,4,2,90,60,70,75,70,45,"blue","sea","Ice Body","Oblivious",Ice
-1,23.4,fins,25,3,4,3,5,3,100,90,130,45,65,55,"gray","sea","Rock Head",?,Water
-0.6,8.7,fins,225,5,1,1,5,3,43,30,55,40,65,97,"pink","sea",?,?,Water
-4.5,352,fins,5,4,4,5,5,4,100,100,90,150,140,90,"blue","sea",?,?,Water
-0.4,7,fins,190,5,2,4,4,4,49,49,56,49,61,66,"blue",?,"Storm Drain",?,Water
-1.2,24,fins,75,5,3,4,5,4,69,69,76,69,86,91,"blue",?,"Storm Drain",?,Water
-0.5,4.5,fins,255,?,?,?,?,?,50,50,40,50,40,64,"blue",?,"Hydration",?,Water
-1,18,fins,25,?,?,?,?,?,70,92,65,80,55,98,"green",?,"Adaptability",?,Water
-1.2,31.6,fins,75,?,?,?,?,?,165,75,80,40,45,65,"pink",?,"Hydration",?,Water
-0.2,0.3,fins,190,?,?,?,?,?,35,55,40,45,40,60,"silver",?,?,?,Electric
-1.2,22,fins,60,?,?,?,?,?,65,85,70,75,70,40,"blue",?,?,?,Electric
-2.1,80.5,fins,30,?,?,?,?,?,85,115,80,105,80,50,"blue",?,?,?,Electric
-0.7,11,fins,75,?,?,?,?,?,109,66,84,81,99,32,"brown",?,"Limber",?,Ground
-0.4,20,headArms,255,2,3,2,4,2,40,80,100,30,30,20,"brown","mountain","Sturdy",?,Rock
-0.3,6,headArms,190,4,2,4,2,4,25,35,70,95,55,45,"gray","rough","Sturdy",?,Electric
-0.9,30,headArms,190,1,4,2,5,2,80,80,50,40,50,25,"purple","urban","Sticky Hold",?,Poison
-1.2,30,headArms,75,5,4,5,5,5,105,105,75,65,100,50,"purple","urban","Sticky Hold",?,Poison
-1.6,0.1,headArms,90,4,1,5,4,4,45,50,45,115,55,95,"purple","cave",?,?,Ghost
-0.4,10.3,headArms,225,2,2,2,4,2,70,43,53,43,53,40,"green","grass","Sticky Hold",?,Poison
-1.7,80,headArms,75,2,4,3,5,2,100,73,83,73,83,55,"purple","grass","Sticky Hold",?,Poison
-0.7,30.6,headArms,255,3,3,3,4,5,60,25,35,70,80,60,"black","mountain","Own Tempo",?,Psychic
-0.5,21.5,headArms,255,4,3,5,4,3,40,40,55,40,70,55,"brown","rough",?,?,Ground
-1.5,107.9,headArms,90,3,3,5,4,4,60,70,105,70,120,75,"black","rough",?,?,Ground
-0.8,15,headArms,190,4,3,3,3,4,20,40,90,30,90,25,"black","forest",?,?,Ghost
-0.6,1,headArms,45,5,2,2,2,5,65,50,70,95,80,65,"blue","grass",?,?,Psychic
-1.2,202.5,headArms,3,3,4,3,4,4,60,75,100,55,80,50,"blue","rough",?,?,Steel
-0.4,1.2,headArms,125,5,1,4,4,5,90,50,34,60,44,70,"purple",?,"Unburden",?,Ghost
-1.2,15,headArms,60,4,3,2,5,5,150,80,44,90,54,80,"purple",?,"Unburden",?,Ghost
-1.3,187,headArms,90,1,5,3,5,5,67,89,116,79,116,33,"green",?,"Heatproof",?,Steel
-1.2,180,headArms,30,2,3,5,4,5,70,70,115,130,90,60,"gray",?,"Sturdy",?,Electric
-0.9,34,headArms,30,4,5,5,1,4,85,80,70,135,75,90,"red",?,"Download",?,Normal
-2.2,106.6,headArms,45,2,4,4,4,4,45,100,135,65,135,45,"black",?,?,?,Ghost
-1.3,26.6,headArms,75,4,3,5,3,5,70,80,70,80,70,110,"silver",?,?,?,Ice
-0.4,3.1,headArms,30,5,2,5,3,3,80,80,80,80,80,80,"blue",?,?,?,Water
-0.5,7.3,headArms,120,?,?,?,?,?,55,63,90,50,80,42,"green",?,"Chlorophyll",?,Bug
-0.5,1.5,headArms,190,?,?,?,?,?,38,30,85,55,65,30,"black",?,?,?,Ghost
-1,20.1,headArms,50,?,?,?,?,?,110,65,75,125,85,30,"green",?,"Magic Guard",?,Psychic
-1,33,headArms,75,?,?,?,?,?,70,135,105,60,105,20,"gray",?,"Shell Armor",?,Bug
-0.2,1,headArms,190,?,?,?,?,?,69,55,45,55,55,15,"silver",?,?,?,Grass
-0.6,10.5,headArms,75,?,?,?,?,?,114,85,70,85,80,30,"silver",?,?,?,Grass
-0.6,13,headArms,90,?,?,?,?,?,60,40,60,95,60,55,"black",?,"Flame Body",?,Ghost
-1,34.3,headArms,45,?,?,?,?,?,60,55,90,145,90,80,"black",?,"Flame Body",?,Ghost
-0.8,25.3,headArms,75,?,?,?,?,?,80,70,40,100,60,145,"red",?,"Sticky Hold",?,Bug
-1.5,63,headArms,3,?,?,?,?,?,79,100,80,110,90,121,"green",?,?,?,Flying
-3,65,headArms,3,?,?,?,?,?,79,105,70,145,80,101,"blue",?,?,?,Electric
-1.5,68,headArms,3,?,?,?,?,?,89,145,90,105,80,91,"brown",?,?,?,Ground
-0.2,0.8,headBase,255,5,2,4,4,1,10,55,25,35,45,95,"brown","cave","Arena Trap",?,Ground
-1,6.4,headBase,120,2,3,2,4,3,65,90,50,85,45,55,"green","forest",?,?,Grass
-1.7,15.5,headBase,45,1,4,4,4,3,80,105,65,100,60,70,"green","forest",?,?,Grass
-0.4,8,headBase,225,4,3,3,3,3,30,40,70,70,25,60,"blue","sea","Sniper","Damp",Water
-1.2,25,headBase,75,3,3,4,4,3,55,65,95,95,45,85,"blue","sea","Sniper","Damp",Water
-0.8,34.5,headBase,225,5,3,3,3,3,30,45,55,70,55,85,"brown","sea","Natural Cure",?,Water
-1.1,80,headBase,60,5,5,3,3,4,60,75,85,100,85,115,"purple","sea","Natural Cure",?,Water
-1.3,28.5,headBase,45,2,4,5,5,3,190,33,58,33,58,33,"blue","cave",?,?,Psychic
-1.8,152,headBase,45,5,4,3,5,2,75,95,95,95,95,85,"blue","sea","Sniper","Damp",Water
-0.8,1.2,headBase,45,2,3,3,5,5,1,90,45,30,30,40,"brown","forest",?,?,Bug
-1,23.8,headBase,45,3,4,3,5,2,66,41,77,61,87,23,"purple","sea",?,?,Rock
-1.5,60.4,headBase,45,1,4,3,5,2,86,81,97,81,107,43,"green","sea",?,?,Rock
-0.6,95.2,headBase,3,4,4,1,3,4,40,55,80,35,60,30,"blue","rough",?,?,Steel
-1,108,headBase,100,2,4,2,5,2,50,92,108,92,108,35,"purple",?,?,?,Ghost
-0.5,6.6,headBase,190,?,?,?,?,?,45,35,50,70,50,30,"green",?,"Own Tempo",?,Grass
-1.1,16.3,headBase,75,?,?,?,?,?,70,60,75,110,75,90,"green",?,"Own Tempo",?,Grass
-1,28,headBase,255,?,?,?,?,?,75,86,67,106,67,60,"green",?,"Chlorophyll",?,Grass
-1.7,76.5,headBase,90,?,?,?,?,?,58,50,145,95,105,30,"yellow",?,?,?,Ghost
-0.4,5.7,headBase,255,?,?,?,?,?,36,50,50,65,60,44,"silver",?,?,?,Ice
-1.1,41,headBase,120,?,?,?,?,?,51,65,65,80,75,59,"silver",?,?,?,Ice
-0.3,3.1,headBase,190,?,?,?,?,?,50,30,55,65,55,20,"silver",?,"Flame Body",?,Ghost
-0.6,8.5,bipedalTailed,45,3,5,4,3,3,39,52,43,60,50,65,"red","mountain",?,?,Fire
-1.1,19,bipedalTailed,45,3,4,4,2,3,58,64,58,80,65,80,"red","mountain",?,?,Fire
-1.7,243.6,bipedalTailed,45,3,3,2,5,5,78,104,78,159,115,100,"red","mountain",?,?,Fire
-0.5,9,bipedalTailed,45,3,3,4,4,2,44,48,65,50,64,43,"blue","water",?,?,Water
-1,22.5,bipedalTailed,45,4,3,5,4,3,59,63,80,65,80,58,"blue","water",?,?,Water
-1.6,222.9,bipedalTailed,45,3,5,3,5,3,79,103,120,135,115,78,"blue","water",?,?,Water
-0.8,30,bipedalTailed,75,3,5,5,5,3,60,90,55,90,80,100,"yellow","forest",?,?,Electric
-0.6,12,bipedalTailed,255,4,3,5,3,3,50,75,85,20,30,40,"yellow","rough",?,?,Ground
-1,29.5,bipedalTailed,90,3,4,5,3,2,75,100,110,45,55,65,"yellow","rough",?,?,Ground
-1.3,60,bipedalTailed,45,3,5,3,5,2,90,82,87,75,85,76,"blue","grass","Rivalry","Sheer Force",Poison
-1.4,62,bipedalTailed,45,3,5,3,4,2,81,92,77,85,75,85,"purple","grass","Rivalry","Sheer Force",Poison
-0.6,7.5,bipedalTailed,150,5,3,5,4,3,70,45,48,60,65,35,"pink","mountain","Magic Guard","Friend Guard",Fairy
-1.3,40,bipedalTailed,25,3,3,5,5,3,95,70,73,85,90,60,"pink","mountain","Magic Guard","Unaware",Fairy
-0.8,19.6,bipedalTailed,190,5,5,5,5,4,50,52,48,65,50,55,"yellow","water","Cloud Nine",?,Water
-1.7,76.6,bipedalTailed,75,3,4,3,4,4,80,82,78,95,80,85,"blue","water","Cloud Nine",?,Water
-0.5,28,bipedalTailed,190,4,3,5,2,3,40,80,35,35,45,70,"brown","mountain","Anger Point","Defiant",Fighting
-1,32,bipedalTailed,75,3,5,1,3,3,65,105,60,60,70,95,"brown","mountain","Anger Point","Defiant",Fighting
-0.9,19.5,bipedalTailed,200,5,1,5,4,5,25,20,15,105,55,90,"brown","urban","Inner Focus",?,Psychic
-1.3,56.5,bipedalTailed,100,4,3,5,3,3,40,35,30,120,70,105,"brown","urban","Inner Focus",?,Psychic
-0.8,19.5,bipedalTailed,180,4,4,3,3,2,70,80,50,35,35,35,"gray","mountain","No Guard","Steadfast",Fighting
-1.6,78.5,bipedalTailed,75,1,3,5,5,3,95,75,110,100,80,30,"pink","water","Own Tempo",?,Water
-1.5,40.5,bipedalTailed,45,3,3,5,4,3,60,65,80,170,95,130,"purple","cave",?,?,Ghost
-0.4,6.5,bipedalTailed,190,4,5,3,3,3,50,50,95,40,50,35,"brown","mountain","Lightningrod",?,Ground
-1,45,bipedalTailed,75,3,5,3,4,2,60,80,110,50,80,45,"brown","mountain","Lightningrod",?,Ground
-1.2,65.5,bipedalTailed,45,3,4,3,5,3,90,55,75,60,75,30,"pink","grass","Oblivious",?,Normal
-1.9,120,bipedalTailed,60,2,5,3,5,3,105,130,120,45,45,40,"gray","rough","Rock Head",?,Ground
-1.1,34.6,bipedalTailed,30,3,4,4,5,3,250,5,5,35,105,50,"pink","urban","Serene Grace",?,Normal
-2.2,220.5,bipedalTailed,45,4,5,4,5,2,105,125,100,60,100,100,"brown","grass","Scrappy","Inner Focus",Normal
-1.1,30,bipedalTailed,45,4,4,4,4,3,65,83,57,95,85,105,"yellow","grass",?,?,Electric
-1.3,44.5,bipedalTailed,45,2,3,5,5,3,65,95,57,100,85,93,"red","mountain",?,?,Fire
-1.3,40.5,bipedalTailed,45,5,5,3,3,3,60,115,105,65,70,80,"brown","sea","Battle Armor",?,Rock
-2.2,210,bipedalTailed,45,5,5,3,4,5,91,134,95,100,100,80,"brown","water",?,?,Dragon
-2.3,280,bipedalTailed,3,5,5,5,4,4,106,150,70,194,120,140,"purple","rare",?,?,Psychic
-0.4,4,bipedalTailed,45,5,5,5,5,5,100,100,100,100,100,100,"pink","rare",?,?,Psychic
-0.6,9.5,bipedalTailed,45,4,5,3,3,3,50,65,64,44,48,43,"blue","water",?,?,Water
-1.1,25,bipedalTailed,45,3,5,3,5,3,65,80,80,59,63,58,"blue","water",?,?,Water
-2.3,88.8,bipedalTailed,45,4,5,4,4,2,85,105,100,79,83,78,"blue","water",?,?,Water
-0.3,3,bipedalTailed,150,5,2,4,3,3,50,25,28,45,55,15,"pink","mountain","Magic Guard","Friend Guard",Fairy
-0.8,13.3,bipedalTailed,120,3,3,3,4,3,70,55,55,80,60,45,"pink","grass",?,?,Electric
-1.4,61.5,bipedalTailed,45,3,4,4,5,3,90,95,105,165,110,45,"yellow","grass",?,?,Electric
-0.4,8.5,bipedalTailed,190,4,5,3,3,3,70,20,50,20,50,40,"blue","water","Huge Power",?,Water
-0.8,28.5,bipedalTailed,75,3,5,3,4,2,100,50,80,50,80,50,"blue","water","Huge Power",?,Water
-0.4,0.5,bipedalTailed,255,5,2,1,1,5,35,35,40,35,55,50,"pink","grass","Leaf Guard","Infiltrator",Grass
-0.6,1,bipedalTailed,120,5,3,1,2,5,55,45,50,45,65,80,"green","grass","Leaf Guard","Infiltrator",Grass
-0.8,3,bipedalTailed,45,5,3,2,2,5,75,55,70,55,85,110,"blue","grass","Leaf Guard","Infiltrator",Grass
-0.8,11.5,bipedalTailed,45,4,3,4,3,4,55,70,55,40,55,85,"purple","forest","Pickup",?,Normal
-1.4,75,bipedalTailed,90,2,4,4,5,2,95,85,85,65,65,35,"blue","water","Water Absorb",?,Water
-2,79.5,bipedalTailed,70,3,3,5,3,3,95,75,80,100,110,30,"pink","water","Own Tempo",?,Water
-1.4,48.7,bipedalTailed,75,2,5,4,3,2,90,120,75,60,60,45,"purple","urban","Quick Feet","Rattled",Fairy
-0.9,28,bipedalTailed,60,5,3,5,1,4,55,95,55,35,75,115,"black","forest","Keen Eye",?,Dark
-0.6,8.8,bipedalTailed,120,3,3,4,5,3,60,80,50,50,50,40,"brown","mountain","Quick Feet","Honey Gather",Normal
-1.8,125.8,bipedalTailed,60,3,5,3,5,2,90,130,75,75,75,55,"brown","mountain","Quick Feet","Unnerve",Normal
-1.2,58,bipedalTailed,45,3,3,5,3,3,55,20,35,20,45,75,"silver","urban","Technician","Moody",Normal
-1.4,48,bipedalTailed,45,3,3,5,3,3,50,95,95,35,110,70,"brown","urban","Technician","Steadfast",Fighting
-0.7,21.4,bipedalTailed,45,3,3,3,3,3,45,75,37,70,55,83,"red","mountain",?,?,Fire
-1.2,75.5,bipedalTailed,45,3,4,4,5,3,95,80,105,40,70,100,"pink","grass","Scrappy","Sap Sipper",Normal
-0.6,72,bipedalTailed,45,3,4,4,3,3,50,64,50,45,50,41,"green","mountain",?,?,Rock
-2.5,562.2,bipedalTailed,45,2,5,4,5,2,100,164,150,95,120,71,"green","mountain",?,?,Rock
-0.5,5,bipedalTailed,45,5,3,5,2,3,40,45,35,65,55,70,"green","forest",?,?,Grass
-0.9,21.6,bipedalTailed,45,5,4,5,4,4,50,65,45,85,65,95,"green","forest",?,?,Grass
-1.7,52.2,bipedalTailed,45,4,5,5,4,4,70,85,65,105,85,120,"green","forest",?,?,Grass
-0.9,19.5,bipedalTailed,45,4,5,4,3,4,60,85,60,85,60,55,"red","grass",?,?,Fire
-1.9,52,bipedalTailed,45,2,5,5,4,4,80,160,80,130,80,100,"red","grass",?,?,Fire
-0.7,28,bipedalTailed,45,3,4,4,5,3,70,85,70,60,70,50,"blue","water",?,?,Water
-1.5,81.9,bipedalTailed,45,3,5,5,5,2,100,110,90,85,90,60,"blue","water",?,?,Water
-1.2,39.2,bipedalTailed,90,3,5,5,3,3,60,130,80,60,60,70,"green","forest","Poison Heal","Technician",Grass
-1.4,46.5,bipedalTailed,120,5,3,4,4,4,80,80,80,55,55,90,"silver","forest",?,?,Normal
-0.6,16.3,bipedalTailed,190,5,3,4,3,3,64,51,23,51,23,28,"pink","cave",?,?,Normal
-1,40.5,bipedalTailed,120,4,4,4,4,3,84,71,43,71,43,48,"blue","cave",?,?,Normal
-1.5,84,bipedalTailed,45,3,4,4,5,2,104,91,63,91,63,68,"blue","cave",?,?,Normal
-2.2,870.8,bipedalTailed,45,2,5,4,4,2,70,140,230,60,80,50,"gray","mountain","Rock Head",?,Steel
-0.4,4.2,bipedalTailed,200,4,2,2,3,4,60,50,40,85,75,95,"yellow","grass",?,?,Electric
-0.4,4.2,bipedalTailed,200,4,2,2,3,4,60,40,50,75,85,95,"yellow","grass",?,?,Electric
-0.7,17.7,bipedalTailed,150,4,3,2,3,5,65,73,55,47,75,85,"gray","forest","Swarm",?,Bug
-0.9,71.5,bipedalTailed,60,2,5,5,5,3,80,45,65,90,110,80,"purple","mountain","Own Tempo",?,Psychic
-1.1,5,bipedalTailed,255,3,3,4,3,3,60,60,60,60,60,60,"brown","mountain","Tangled Feet","Contrary",Normal
-1.3,40.3,bipedalTailed,90,3,5,4,5,3,73,115,60,60,60,90,"silver","grass",?,?,Normal
-1.5,68.2,bipedalTailed,45,2,5,4,5,2,75,125,100,70,80,45,"gray","water",?,?,Rock
-1,22,bipedalTailed,200,4,3,5,4,3,60,90,70,60,120,40,"green","forest",?,?,Normal
-1.2,28.7,bipedalTailed,45,3,4,4,3,3,64,165,75,93,83,75,"black","urban","Frisk","Cursed Body",Ghost
-0.6,14,bipedalTailed,125,5,3,4,5,3,95,23,48,23,48,23,"blue","cave",?,?,Psychic
-3.5,0,bipedalTailed,5,2,5,5,5,2,100,150,140,100,90,90,"red","rough",?,?,Ground
-0.5,6.2,bipedalTailed,45,5,4,4,2,3,44,58,44,58,44,61,"brown",?,?,?,Fire
-0.9,22,bipedalTailed,45,5,4,5,2,3,64,78,52,78,52,81,"brown",?,?,?,Fire
-1.2,55,bipedalTailed,45,4,5,5,2,3,76,104,71,104,71,108,"brown",?,?,?,Fire
-0.8,23,bipedalTailed,45,4,4,4,5,4,64,66,68,81,76,50,"blue",?,?,?,Water
-1.7,84.5,bipedalTailed,45,3,5,3,5,4,84,86,88,111,101,60,"blue",?,?,?,Water
-1,31.5,bipedalTailed,127,4,4,4,5,2,79,85,60,55,60,71,"brown",?,"Unaware",?,Normal
-0.9,31.5,bipedalTailed,45,4,5,3,3,3,67,125,40,30,30,58,"blue",?,?,?,Rock
-1.6,102.5,bipedalTailed,45,3,5,3,4,3,97,165,60,65,50,58,"blue",?,?,?,Rock
-1.2,20.3,bipedalTailed,45,4,4,5,4,4,75,100,66,60,66,115,"purple",?,"Pickup",?,Normal
-0.4,5.5,bipedalTailed,190,5,4,2,4,4,55,66,44,44,56,85,"brown",?,"Klutz",?,Normal
-1.2,33.3,bipedalTailed,60,5,4,2,4,4,65,76,84,54,96,105,"brown",?,"Klutz",?,Normal
-0.7,20.5,bipedalTailed,45,4,4,3,3,2,58,70,45,40,45,42,"blue",?,?,?,Dragon
-1.4,56,bipedalTailed,45,3,4,4,4,3,68,90,65,50,55,82,"blue",?,?,?,Dragon
-1.9,95,bipedalTailed,45,3,5,5,4,2,108,170,115,120,95,92,"blue",?,?,?,Dragon
-0.7,20.2,bipedalTailed,75,5,4,5,3,4,40,70,40,35,40,60,"blue",?,"Inner Focus",?,Fighting
-1.3,126.8,bipedalTailed,45,4,5,5,3,4,70,145,88,140,70,112,"blue",?,"Inner Focus",?,Fighting
-1,50.5,bipedalTailed,120,4,4,4,4,3,60,62,50,62,60,40,"silver",?,?,?,Grass
-2.7,407.8,bipedalTailed,60,2,5,5,5,2,90,132,105,132,105,30,"silver",?,?,?,Grass
-1.1,34,bipedalTailed,45,5,5,5,3,3,70,120,65,45,85,125,"black",?,?,?,Dark
-2.4,282.8,bipedalTailed,30,1,5,4,5,2,115,140,130,55,55,40,"gray",?,"Solid Rock",?,Ground
-1.8,138.6,bipedalTailed,30,5,4,5,4,2,75,123,67,95,85,95,"yellow",?,?,?,Electric
-1.6,68,bipedalTailed,30,2,5,5,5,2,75,95,67,125,95,83,"red",?,?,?,Fire
-0.3,0.3,bipedalTailed,3,4,4,4,5,5,75,75,130,75,130,95,"yellow",?,?,?,Psychic
-0.3,0.3,bipedalTailed,3,3,5,4,4,5,80,105,105,105,105,80,"pink",?,?,?,Psychic
-0.3,0.3,bipedalTailed,3,4,3,5,3,4,75,125,70,125,70,115,"blue",?,?,?,Psychic
-4.2,336,bipedalTailed,30,3,5,5,5,5,90,120,100,150,120,100,"purple",?,?,?,Water
-0.6,8.1,bipedalTailed,45,?,?,?,?,?,45,45,55,45,55,63,"green",?,?,?,Grass
-0.8,16,bipedalTailed,45,?,?,?,?,?,60,60,75,60,75,83,"green",?,?,?,Grass
-1,55.5,bipedalTailed,45,?,?,?,?,?,90,93,55,70,55,55,"red",?,?,?,Fire
-1.6,150,bipedalTailed,45,?,?,?,?,?,110,123,65,100,65,65,"red",?,?,?,Fire
-0.5,5.9,bipedalTailed,45,?,?,?,?,?,55,55,45,63,45,45,"blue",?,?,?,Water
-0.8,24.5,bipedalTailed,45,?,?,?,?,?,75,75,60,83,60,60,"blue",?,?,?,Water
-1.1,27,bipedalTailed,255,?,?,?,?,?,60,85,69,60,69,77,"brown",?,"Keen Eye",?,Normal
-0.6,10.5,bipedalTailed,65,?,?,?,?,?,50,53,48,53,48,64,"green",?,?,?,Grass
-1.1,30.5,bipedalTailed,65,?,?,?,?,?,75,98,63,98,63,101,"green",?,?,?,Grass
-0.6,11,bipedalTailed,65,?,?,?,?,?,50,53,48,53,48,64,"red",?,?,?,Fire
-1,28,bipedalTailed,65,?,?,?,?,?,75,98,63,98,63,101,"red",?,?,?,Fire
-0.6,13.5,bipedalTailed,65,?,?,?,?,?,50,53,48,53,48,64,"blue",?,?,?,Water
-1,29,bipedalTailed,65,?,?,?,?,?,75,98,63,98,63,101,"blue",?,?,?,Water
-0.3,8.5,bipedalTailed,120,?,?,?,?,?,60,85,40,30,45,68,"gray",?,"Sand Force",?,Ground
-1.1,31,bipedalTailed,255,?,?,?,?,?,103,60,86,60,86,50,"pink",?,"Regenerator",?,Normal
-0.8,17,bipedalTailed,120,?,?,?,?,?,75,65,55,65,55,69,"blue",?,"Hydration",?,Water
-1.5,96.3,bipedalTailed,45,?,?,?,?,?,95,117,70,65,70,92,"red",?,"Moxie",?,Ground
-0.6,11.8,bipedalTailed,180,?,?,?,?,?,50,75,70,35,70,48,"yellow",?,"Moxie",?,Dark
-1.1,30,bipedalTailed,90,?,?,?,?,?,65,90,115,45,115,58,"red",?,"Moxie",?,Dark
-1.2,81,bipedalTailed,45,?,?,?,?,?,74,108,133,83,65,32,"blue",?,"Sturdy",?,Water
-1.6,81.1,bipedalTailed,45,?,?,?,?,?,60,105,60,120,60,105,"gray",?,?,?,Dark
-0.5,9,bipedalTailed,255,?,?,?,?,?,55,55,55,85,55,30,"blue",?,"Synchronize",?,Psychic
-0.6,18,bipedalTailed,75,?,?,?,?,?,46,87,60,30,40,57,"green",?,"Mold Breaker",?,Dragon
-1,36,bipedalTailed,60,?,?,?,?,?,66,117,70,40,50,67,"green",?,"Mold Breaker",?,Dragon
-1.8,105.5,bipedalTailed,45,?,?,?,?,?,76,147,90,60,70,97,"yellow",?,"Mold Breaker",?,Dragon
-0.5,8.5,bipedalTailed,120,?,?,?,?,?,55,70,40,60,40,40,"silver",?,?,?,Ice
-0.9,20,bipedalTailed,180,?,?,?,?,?,45,85,50,55,50,65,"yellow",?,"Regenerator",?,Fighting
-1.4,35.5,bipedalTailed,45,?,?,?,?,?,65,125,60,95,60,105,"purple",?,"Regenerator",?,Fighting
-1.6,139,bipedalTailed,45,?,?,?,?,?,77,120,90,60,90,48,"red",?,"Sheer Force",?,Dragon
-1.4,58,bipedalTailed,90,?,?,?,?,?,85,97,66,105,66,65,"red",?,"Flash Fire",?,Fire
-1.8,160,bipedalTailed,45,?,?,?,?,?,92,105,90,125,90,98,"blue",?,?,?,Dark
-2.9,345,bipedalTailed,45,?,?,?,?,?,100,150,120,120,100,90,"black",?,?,?,Dragon
-3.6,325,bipedalTailed,3,?,?,?,?,?,125,120,90,170,100,95,"gray",?,?,?,Dragon
-0.5,5.4,headLegs,255,5,3,4,4,3,45,50,55,75,65,30,"blue","grass",?,?,Grass
-0.6,12.4,headLegs,255,4,2,3,5,4,40,50,40,40,40,90,"blue","water","Damp",?,Water
-1.4,39.2,headLegs,190,5,3,3,4,3,35,85,45,35,35,75,"brown","grass","Early Bird",?,Normal
-1.8,85.2,headLegs,45,5,4,2,2,3,60,110,70,60,60,100,"brown","grass","Early Bird",?,Normal
-2,120,headLegs,45,3,4,3,4,3,95,95,85,125,65,55,"yellow","forest",?,?,Grass
-1,35,headLegs,45,3,4,4,4,3,65,55,115,100,40,60,"blue","grass","Leaf Guard","Regenerator",Grass
-0.8,36.5,headLegs,45,3,3,3,5,3,65,60,70,85,75,40,"pink","urban","Download","Analytic",Normal
-0.4,8.5,headLegs,255,3,3,3,4,3,55,45,45,25,25,15,"blue","water","Water Absorb",?,Water
-0.6,32.5,headLegs,45,4,4,4,4,4,85,80,90,105,95,60,"red","urban","Download","Analytic",Normal
-0.4,2.5,headLegs,45,5,4,4,3,4,45,60,40,70,50,45,"red","grass",?,?,Fire
-0.5,4,headLegs,255,4,3,4,4,3,40,40,50,30,30,30,"brown","forest","Early Bird",?,Grass
-0.4,4.5,headLegs,255,3,3,2,5,3,60,40,60,40,60,35,"brown","forest","Poison Heal","Quick Feet",Grass
-0.2,2,headLegs,150,5,2,3,3,4,50,20,40,20,40,20,"blue","water","Huge Power",?,Normal
-0.5,9.3,headLegs,75,4,3,5,4,3,70,60,70,87,78,85,"pink",?,?,?,Grass
-0.5,15,headLegs,255,4,3,3,4,3,50,80,95,10,45,10,"brown",?,"Rock Head",?,Rock
-0.4,18,headLegs,255,?,?,?,?,?,55,75,85,25,25,15,"blue",?,?,?,Rock
-0.7,6.9,quadruped,45,3,3,4,4,3,45,49,49,65,65,45,"green","grass",?,?,Grass
-1,13,quadruped,45,2,3,5,5,3,60,62,63,80,80,60,"green","grass",?,?,Grass
-2.4,342.8,quadruped,45,2,5,3,5,2,80,100,123,122,120,80,"green","grass",?,?,Grass
-0.3,3.5,quadruped,255,5,3,3,3,3,30,56,35,25,35,72,"purple","grass","Guts",?,Normal
-0.7,18.5,quadruped,127,5,4,3,3,3,55,81,60,50,70,97,"brown","grass","Guts",?,Normal
-0.4,6,quadruped,190,4,4,4,4,4,35,55,30,50,40,90,"yellow","forest",?,?,Electric
-0.4,7,quadruped,235,5,3,3,3,3,55,47,52,40,40,41,"blue","grass","Rivalry","Hustle",Poison
-0.8,20,quadruped,120,4,4,3,4,3,70,62,67,55,55,56,"blue","grass","Rivalry","Hustle",Poison
-0.5,9,quadruped,235,5,4,3,2,3,46,57,40,40,40,50,"purple","grass","Rivalry","Hustle",Poison
-0.9,19.5,quadruped,120,4,4,3,3,3,61,72,57,55,55,65,"purple","grass","Rivalry","Hustle",Poison
-0.6,9.9,quadruped,190,5,3,4,3,3,38,41,40,50,65,65,"brown","grass",?,?,Fire
-1.1,19.9,quadruped,75,4,3,5,3,3,73,76,75,81,100,100,"yellow","grass",?,?,Fire
-0.4,4.2,quadruped,255,4,2,4,1,4,40,45,35,40,40,90,"yellow","urban","Technician","Unnerve",Normal
-1,32,quadruped,90,5,3,5,1,4,65,70,60,65,65,115,"yellow","urban","Technician","Unnerve",Normal
-0.7,19,quadruped,190,4,4,4,3,4,55,70,45,70,50,60,"brown","grass","Flash Fire",?,Fire
-1.9,155,quadruped,75,5,5,2,3,3,90,110,80,100,80,95,"brown","grass","Flash Fire",?,Fire
-1,30,quadruped,190,5,2,2,3,4,50,85,55,65,65,90,"yellow","grass","Flash Fire",?,Fire
-1.7,95,quadruped,60,5,3,2,4,4,65,100,70,80,80,105,"yellow","grass","Flash Fire",?,Fire
-1.2,36,quadruped,190,1,2,5,5,2,90,65,65,40,40,15,"pink","water","Own Tempo",?,Water
-1,115,quadruped,120,5,5,2,4,2,80,85,95,30,30,25,"gray","rough","Rock Head",?,Ground
-1.4,88.4,quadruped,45,4,5,2,5,2,75,100,95,40,70,110,"brown","grass","Anger Point","Sheer Force",Normal
-0.3,6.5,quadruped,45,4,4,4,4,3,55,55,50,45,65,55,"brown","urban","Adaptability","Anticipation",Normal
-1,29,quadruped,45,3,3,5,5,3,130,65,60,110,95,65,"blue","urban",?,?,Water
-0.8,24.5,quadruped,45,5,3,5,2,3,65,65,60,110,95,130,"yellow","urban",?,?,Electric
-0.9,25,quadruped,45,4,5,3,3,3,65,130,60,95,110,65,"red","urban",?,?,Fire
-0.9,6.4,quadruped,45,4,3,4,5,3,45,49,65,49,65,45,"green","grass",?,?,Grass
-1.2,15.8,quadruped,45,3,3,5,5,3,60,62,80,63,80,60,"green","grass",?,?,Grass
-1.8,100.5,quadruped,45,2,5,5,5,2,80,82,100,83,100,80,"green","grass",?,?,Grass
-0.9,19,quadruped,45,5,4,3,4,3,58,64,58,80,65,80,"yellow","grass",?,?,Fire
-1.7,79.5,quadruped,45,4,5,3,5,3,78,84,78,109,85,100,"yellow","grass",?,?,Fire
-0.8,6,quadruped,255,5,3,4,4,4,35,46,34,35,45,20,"brown","grass","Keen Eye",?,Normal
-1.8,32.5,quadruped,90,5,3,3,3,3,85,76,64,45,55,90,"brown","grass","Keen Eye",?,Normal
-0.3,2,quadruped,190,5,1,5,3,4,20,40,15,35,35,60,"yellow","forest",?,?,Electric
-0.6,7.8,quadruped,235,3,3,3,4,2,55,40,40,65,45,35,"silver","grass",?,?,Electric
-0.9,26.5,quadruped,45,3,3,5,2,4,65,65,60,130,95,110,"purple","urban",?,?,Psychic
-1,27,quadruped,45,3,4,2,5,3,95,65,110,60,130,65,"black","urban",?,?,Dark
-1.5,41.5,quadruped,60,4,4,4,3,3,70,80,65,90,65,85,"yellow","grass","Early Bird",?,Normal
-0.4,6.5,quadruped,225,3,4,2,4,3,50,50,40,30,30,50,"brown","cave","Snow Cloak","Thick Fat",Ice
-1.1,55.8,quadruped,75,2,4,2,5,2,100,100,80,60,60,50,"brown","cave","Snow Cloak","Thick Fat",Ice
-0.6,10.8,quadruped,120,4,3,4,3,4,45,60,30,80,50,65,"black","rough","Flash Fire",?,Dark
-1.9,109.1,quadruped,45,4,3,2,4,4,75,90,90,140,90,115,"black","rough","Flash Fire",?,Dark
-0.5,33.5,quadruped,120,3,5,3,4,3,90,60,60,40,40,40,"blue","rough",?,?,Ground
-1.1,120,quadruped,60,4,5,2,4,2,90,120,120,60,60,50,"gray","rough",?,?,Ground
-1.4,71.2,quadruped,45,3,4,3,4,3,73,95,62,85,65,85,"brown","forest","Frisk","Sap Sipper",Normal
-1.9,178,quadruped,3,5,4,4,3,3,90,85,75,115,100,115,"yellow","grass",?,?,Electric
-2.1,198,quadruped,3,4,5,3,4,3,115,115,85,90,75,100,"brown","grass",?,?,Fire
-2,187,quadruped,3,5,4,5,3,4,100,75,115,90,115,85,"blue","grass",?,?,Water
-0.4,7.6,quadruped,45,4,4,3,5,3,50,70,50,50,50,40,"blue","water",?,?,Water
-0.5,13.6,quadruped,255,4,4,4,5,3,35,55,35,30,30,35,"gray","grass","Quick Feet","Rattled",Dark
-1,37,quadruped,127,4,5,3,5,3,70,90,70,60,60,70,"gray","grass","Quick Feet","Moxie",Dark
-0.4,17.5,quadruped,255,4,4,5,4,3,38,30,41,30,41,60,"brown","grass","Gluttony","Quick Feet",Normal
-0.5,32.5,quadruped,90,5,4,3,4,3,78,70,61,50,61,100,"silver","grass","Gluttony","Quick Feet",Normal
-0.8,24,quadruped,255,2,2,2,5,2,60,60,60,35,35,30,"brown","forest",?,?,Normal
-0.6,11,quadruped,255,5,3,3,3,4,50,45,45,35,35,50,"pink","forest","Normalize","Wonder Skin",Normal
-1.1,32.6,quadruped,60,5,3,4,4,4,70,65,65,55,55,70,"purple","forest","Normalize","Wonder Skin",Normal
-0.4,60,quadruped,180,3,5,3,3,2,50,70,100,40,40,30,"gray","mountain","Rock Head",?,Steel
-0.9,120,quadruped,90,3,5,4,4,2,60,90,140,50,50,40,"gray","mountain","Rock Head",?,Steel
-0.6,15.2,quadruped,120,5,3,4,3,4,40,45,40,65,40,65,"green","grass","Lightningrod",?,Electric
-1.8,97,quadruped,45,5,3,4,3,4,70,75,80,135,80,135,"yellow","grass","Lightningrod",?,Electric
-0.7,24,quadruped,255,3,4,2,4,2,60,60,40,65,45,35,"yellow","mountain","Simple","Own Tempo",Fire
-1.9,220,quadruped,150,3,5,2,4,2,70,100,70,105,75,40,"red","mountain","Solid Rock","Anger Point",Fire
-0.5,80.4,quadruped,90,2,5,3,5,2,70,85,140,85,70,20,"brown","mountain",?,?,Fire
-2,100,quadruped,200,4,5,2,4,5,99,68,83,72,87,51,"green","forest","Solar Power","Harvest",Grass
-1.2,108,quadruped,30,5,4,3,4,3,65,150,60,115,60,115,"silver","mountain","Super Luck","Justified",Dark
-1.4,150.6,quadruped,45,2,5,1,5,2,110,80,90,95,90,65,"blue","sea","Ice Body","Oblivious",Ice
-1.1,110.5,quadruped,45,2,5,2,5,2,65,95,100,60,50,50,"silver","rough",?,?,Dragon
-1.5,102.6,quadruped,45,3,5,3,3,5,95,135,80,110,80,100,"blue","rough",?,?,Dragon
-0.4,10.2,quadruped,45,4,4,3,4,3,55,68,64,45,55,31,"green",?,?,?,Grass
-1.1,97,quadruped,45,3,4,3,5,3,75,89,85,55,65,36,"green",?,?,?,Grass
-2.2,310,quadruped,45,2,5,3,5,2,95,109,105,75,85,56,"green",?,?,?,Grass
-0.5,20,quadruped,255,4,4,4,4,2,59,45,40,35,40,31,"brown",?,"Unaware",?,Normal
-0.5,9.5,quadruped,235,4,4,4,3,3,45,65,34,40,34,45,"blue",?,"Intimidate",?,Electric
-0.9,30.5,quadruped,120,4,4,3,4,3,60,85,49,60,49,60,"blue",?,"Intimidate",?,Electric
-1.4,42,quadruped,45,3,5,4,4,3,80,120,79,95,79,70,"blue",?,"Intimidate",?,Electric
-0.5,57,quadruped,45,3,4,3,5,2,30,42,118,42,88,30,"gray",?,?,?,Rock
-1.3,149.5,quadruped,45,2,5,3,5,2,60,52,168,47,138,30,"gray",?,?,?,Rock
-0.4,3.9,quadruped,200,5,3,5,3,3,60,45,70,45,90,95,"silver",?,"Pickup",?,Electric
-0.7,29.5,quadruped,190,5,4,4,4,3,55,65,35,60,30,85,"brown",?,?,?,Water
-1.1,33.5,quadruped,75,4,4,5,5,3,85,105,55,85,50,115,"brown",?,?,?,Water
-0.5,3.9,quadruped,190,5,5,4,3,4,49,55,42,42,37,85,"gray",?,"Own Tempo",?,Normal
-1,43.8,quadruped,75,4,5,2,4,3,71,82,64,64,59,112,"gray",?,"Own Tempo",?,Normal
-0.4,19.2,quadruped,225,5,4,3,3,3,63,63,47,41,41,74,"purple",?,"Aftermath",?,Poison
-1,38,quadruped,60,3,5,4,4,2,103,93,67,71,61,84,"purple",?,"Aftermath",?,Poison
-0.8,49.5,quadruped,140,3,5,3,5,3,68,72,78,38,42,32,"brown",?,?,?,Ground
-2,300,quadruped,60,2,5,2,5,2,108,112,118,68,72,47,"brown",?,?,?,Ground
-1,25.5,quadruped,45,3,4,4,5,4,65,110,130,60,65,95,"green",?,?,?,Grass
-0.8,25.9,quadruped,45,4,4,5,4,3,65,60,110,130,95,65,"blue",?,?,?,Ice
-2.5,291,quadruped,50,4,5,3,5,2,110,130,80,70,60,80,"brown",?,"Snow Cloak",?,Ice
-5.4,683,quadruped,30,3,5,5,5,5,100,120,120,150,100,90,"silver",?,?,?,Steel
-1.7,430,quadruped,3,3,5,5,5,2,91,90,106,130,106,77,"brown",?,?,?,Fire
-0.4,11.5,quadruped,45,5,4,4,3,5,100,103,75,120,75,127,"green",?,?,?,Grass
-3.2,320,quadruped,3,5,5,5,5,5,120,120,120,120,120,120,"gray",?,?,?,Normal
-0.5,9.9,quadruped,45,?,?,?,?,?,65,63,45,45,45,45,"red",?,?,?,Fire
-1.5,94.6,quadruped,45,?,?,?,?,?,95,100,85,108,70,70,"blue",?,?,?,Water
-0.5,11.6,quadruped,255,?,?,?,?,?,45,55,39,35,39,42,"brown",?,"Keen Eye",?,Normal
-0.4,4.1,quadruped,255,?,?,?,?,?,45,60,45,25,45,55,"brown",?,"Pickup",?,Normal
-0.9,14.7,quadruped,120,?,?,?,?,?,65,80,65,35,65,60,"gray",?,"Sand Rush",?,Normal
-1.2,61,quadruped,45,?,?,?,?,?,85,110,90,45,90,80,"gray",?,"Sand Rush",?,Normal
-0.4,10.1,quadruped,255,?,?,?,?,?,41,50,37,50,37,66,"purple",?,"Unburden",?,Dark
-1.1,37.5,quadruped,90,?,?,?,?,?,64,88,50,88,50,106,"purple",?,"Unburden",?,Dark
-0.6,23.3,quadruped,190,?,?,?,?,?,76,25,45,67,55,24,"pink",?,"Synchronize",?,Psychic
-0.8,29.8,quadruped,190,?,?,?,?,?,45,60,32,50,32,76,"black",?,"Motor Drive",?,Electric
-1.6,79.5,quadruped,75,?,?,?,?,?,75,100,63,80,63,116,"black",?,"Motor Drive",?,Electric
-0.7,15.2,quadruped,180,?,?,?,?,?,50,72,35,35,35,65,"brown",?,"Moxie",?,Ground
-1,33.4,quadruped,90,?,?,?,?,?,60,82,45,45,45,74,"brown",?,"Moxie",?,Ground
-1.3,92.9,quadruped,60,?,?,?,?,?,105,30,105,140,105,55,"red",?,?,?,Fire
-0.7,16.5,quadruped,45,?,?,?,?,?,54,78,103,53,45,22,"blue",?,"Sturdy",?,Water
-0.7,12.5,quadruped,75,?,?,?,?,?,40,65,40,80,40,65,"gray",?,?,?,Dark
-0.4,5.8,quadruped,255,?,?,?,?,?,55,50,40,40,40,75,"gray",?,"Technician",?,Normal
-0.5,7.5,quadruped,60,?,?,?,?,?,75,95,60,65,60,115,"gray",?,"Technician",?,Normal
-0.6,19.5,quadruped,190,?,?,?,?,?,60,60,50,40,50,75,"yellow",?,"Sap Sipper",?,Normal
-1.9,92.5,quadruped,75,?,?,?,?,?,80,100,70,60,70,95,"brown",?,"Sap Sipper",?,Normal
-0.4,5,quadruped,200,?,?,?,?,?,55,75,60,75,60,103,"silver",?,?,?,Electric
-2.6,260,quadruped,60,?,?,?,?,?,95,110,80,70,80,50,"silver",?,?,?,Ice
-1.6,94.5,quadruped,45,?,?,?,?,?,95,110,95,40,95,55,"brown",?,"Sap Sipper",?,Normal
-0.8,17.3,quadruped,45,?,?,?,?,?,52,65,50,45,50,38,"blue",?,?,?,Dark
-1.4,50,quadruped,45,?,?,?,?,?,72,85,70,65,70,58,"blue",?,?,?,Dark
-2.1,250,quadruped,3,?,?,?,?,?,91,90,129,90,72,108,"blue",?,?,?,Steel
-1.9,260,quadruped,3,?,?,?,?,?,91,129,90,72,90,108,"gray",?,?,?,Rock
-2,200,quadruped,3,?,?,?,?,?,91,90,72,90,129,108,"green",?,?,?,Grass
-1.4,48.5,quadruped,3,?,?,?,?,?,91,72,90,129,90,108,"yellow",?,?,?,Water
-0.3,1.8,singleWings,255,5,3,4,3,5,40,45,40,35,35,56,"brown","forest","Tangled Feet","Big Pecks",Normal
-1.1,30,singleWings,120,4,3,3,4,5,63,60,55,50,50,71,"brown","forest","Tangled Feet","Big Pecks",Normal
-1.5,39.5,singleWings,45,4,5,3,4,5,83,80,75,70,70,91,"brown","forest","Tangled Feet","Big Pecks",Normal
-0.3,2,singleWings,255,5,4,3,3,5,40,60,30,31,31,70,"brown","rough",?,?,Normal
-1.2,38,singleWings,90,4,5,3,3,5,65,90,65,61,61,100,"brown","rough",?,?,Normal
-0.8,7.5,singleWings,255,5,3,4,3,5,40,45,35,30,40,55,"purple","cave",?,?,Poison
-1.6,55,singleWings,90,5,3,3,4,5,75,80,70,65,75,90,"purple","cave",?,?,Poison
-0.8,15,singleWings,45,3,4,3,3,4,52,65,55,58,62,60,"brown","grass","Inner Focus",?,Normal
-2.1,174.2,singleWings,45,5,3,2,3,5,80,135,85,70,95,150,"purple","mountain","Pressure",?,Rock
-1.7,55.4,singleWings,3,4,4,5,3,5,90,85,100,95,125,85,"blue","rare",?,?,Ice
-1.6,52.6,singleWings,3,5,5,5,3,5,90,90,85,125,90,100,"yellow","rare",?,?,Electric
-2,60,singleWings,3,4,5,5,5,5,90,100,90,125,85,90,"yellow","rare",?,?,Fire
-0.7,21.2,singleWings,255,3,3,5,3,4,60,30,30,36,56,50,"brown","forest","Keen Eye",?,Normal
-1.6,40.8,singleWings,90,3,3,3,4,5,100,50,50,76,96,70,"brown","forest","Keen Eye",?,Normal
-1,10.8,singleWings,255,5,2,5,3,5,40,20,30,40,80,55,"red","forest","Early Bird",?,Bug
-1.4,35.6,singleWings,90,5,2,5,3,5,55,35,50,55,110,85,"red","forest","Early Bird",?,Bug
-0.2,2,singleWings,190,4,3,2,4,4,40,50,45,70,45,70,"green","forest","Early Bird",?,Psychic
-1.5,15,singleWings,75,3,3,3,4,4,65,75,70,95,70,95,"green","forest","Early Bird",?,Psychic
-0.5,2.1,singleWings,30,4,3,4,4,4,60,85,42,85,42,91,"black","forest","Super Luck","Prankster",Dark
-1.1,64.8,singleWings,60,4,3,3,2,5,65,75,105,35,65,85,"purple","mountain","Sand Veil",?,Ground
-0.9,16,singleWings,45,3,3,4,5,3,45,55,45,65,45,75,"red","mountain","Hustle",?,Ice
-2.1,220,singleWings,25,4,4,3,5,3,65,40,70,80,140,70,"purple","sea","Water Absorb",?,Water
-1.7,50.5,singleWings,25,5,3,2,4,5,65,80,140,40,70,70,"gray","rough","Sturdy",?,Steel
-5.2,216,singleWings,3,4,5,4,4,5,106,90,130,90,154,110,"silver","rare",?,?,Psychic
-3.8,199,singleWings,3,4,4,5,4,5,106,130,90,110,154,90,"red","rare",?,?,Fire
-0.3,2.3,singleWings,200,4,4,3,4,5,40,55,30,30,30,85,"blue","grass",?,?,Normal
-0.7,19.8,singleWings,45,3,5,2,4,5,60,85,60,50,50,125,"blue","grass",?,?,Normal
-0.6,9.5,singleWings,190,4,3,3,4,5,40,30,30,55,30,85,"silver","sea",?,?,Water
-1.2,28,singleWings,45,3,4,2,5,5,60,50,100,85,70,65,"yellow","sea",?,?,Water
-2,82,singleWings,45,4,5,4,2,5,80,100,80,80,80,100,"green","rough",?,?,Ground
-0.4,1.2,singleWings,255,3,3,4,4,5,45,40,60,40,75,50,"blue","forest",?,?,Normal
-1.1,20.6,singleWings,45,3,3,4,4,5,75,70,90,70,105,80,"blue","forest",?,?,Dragon
-1.4,40,singleWings,3,5,4,5,3,5,80,80,90,110,130,110,"red","water",?,?,Dragon
-2,60,singleWings,3,5,4,5,3,5,80,90,80,130,110,110,"blue","water",?,?,Dragon
-0.3,2,singleWings,255,4,3,2,3,5,40,55,30,30,30,60,"brown",?,?,?,Normal
-0.6,15.5,singleWings,120,4,3,3,4,5,55,75,50,40,40,80,"brown",?,?,?,Normal
-1.2,24.9,singleWings,45,3,5,3,4,5,85,120,70,50,50,100,"brown",?,?,?,Normal
-0.9,27.3,singleWings,30,3,4,3,5,5,100,125,52,105,52,71,"black",?,"Super Luck",?,Dark
-0.5,1.9,singleWings,30,4,3,4,3,5,76,65,45,92,42,91,"black",?,"Tangled Feet",?,Normal
-1,65,singleWings,25,4,3,2,4,4,45,20,50,60,120,50,"blue",?,"Water Absorb",?,Water
-1.5,38,singleWings,30,4,3,4,4,5,85,50,95,120,115,80,"silver",?,"Serene Grace",?,Fairy
-2,42.5,singleWings,30,3,5,5,4,5,75,95,125,45,75,95,"purple",?,"Sand Veil",?,Ground
-0.3,2.1,singleWings,255,?,?,?,?,?,50,55,50,36,30,43,"gray",?,"Super Luck",?,Normal
-0.6,15,singleWings,120,?,?,?,?,?,62,77,62,50,42,65,"gray",?,"Super Luck",?,Normal
-1.2,29,singleWings,45,?,?,?,?,?,80,105,80,65,55,93,"gray",?,"Super Luck",?,Normal
-0.4,2.1,singleWings,190,?,?,?,?,?,55,45,43,55,43,72,"blue",?,"Klutz",?,Psychic
-0.9,10.5,singleWings,45,?,?,?,?,?,67,57,55,77,55,114,"blue",?,"Klutz",?,Psychic
-1.4,14,singleWings,45,?,?,?,?,?,72,58,80,103,80,97,"black",?,"Magic Guard",?,Psychic
-0.6,9.5,singleWings,45,?,?,?,?,?,55,112,45,74,45,70,"yellow",?,?,?,Rock
-1.4,32,singleWings,45,?,?,?,?,?,75,140,65,112,65,110,"yellow",?,?,?,Rock
-0.5,5.5,singleWings,190,?,?,?,?,?,62,44,50,44,50,55,"blue",?,"Big Pecks",?,Water
-1.3,24.2,singleWings,45,?,?,?,?,?,75,87,63,87,63,98,"silver",?,"Big Pecks",?,Water
-0.5,10.5,singleWings,190,?,?,?,?,?,70,83,50,37,50,60,"silver",?,"Sheer Force",?,Normal
-1.5,41,singleWings,60,?,?,?,?,?,100,123,75,57,75,80,"red",?,"Sheer Force",?,Normal
-0.5,9,singleWings,190,?,?,?,?,?,70,55,75,45,65,60,"brown",?,"Overcoat",?,Dark
-1.2,39.5,singleWings,60,?,?,?,?,?,110,65,105,55,95,80,"brown",?,"Overcoat",?,Dark
-3.2,330,singleWings,45,?,?,?,?,?,100,120,100,150,120,90,"silver",?,?,?,Dragon
-0.9,45.5,multiped,190,3,3,5,4,3,40,40,35,50,100,70,"blue","sea","Liquid Ooze",?,Water
-1.6,55,multiped,60,2,3,4,4,3,80,70,65,80,120,100,"blue","sea","Liquid Ooze",?,Water
-0.4,7.5,multiped,45,3,3,4,4,3,35,40,100,90,55,35,"blue","sea","Shell Armor",?,Rock
-1,35,multiped,45,3,4,4,3,2,70,60,125,115,70,55,"blue","sea","Shell Armor",?,Rock
-0.9,28.5,multiped,75,2,4,4,5,2,75,105,75,105,75,45,"red","sea","Sniper","Moody",Water
-1.4,27,multiped,200,3,5,3,3,5,74,100,72,90,72,46,"green",?,?,?,Grass
-0.9,102,multiped,120,?,?,?,?,?,70,105,105,50,40,20,"blue",?,?,?,Rock
-1.7,260,multiped,45,?,?,?,?,?,85,135,130,60,70,25,"blue",?,?,?,Rock
-1.2,33,multiped,190,?,?,?,?,?,55,40,50,65,85,40,"silver",?,"Cursed Body",?,Water
-2.2,135,multiped,60,?,?,?,?,?,100,60,70,85,105,60,"silver",?,"Cursed Body",?,Water
-1,110,multiped,90,?,?,?,?,?,74,94,131,54,116,20,"gray",?,?,?,Grass
-0.7,33.3,multiBody,50,5,4,3,4,1,35,80,50,50,70,120,"brown","cave","Arena Trap",?,Ground
-1,60,multiBody,60,3,3,4,4,4,50,60,95,120,70,70,"gray","rough","Sturdy",?,Electric
-0.4,2.5,multiBody,90,3,3,3,4,3,60,40,80,60,45,40,"pink","forest",?,?,Grass
-1.2,9.5,multiBody,60,2,4,3,4,3,65,90,120,85,70,60,"purple","urban",?,?,Poison
-1.6,550,multiBody,3,2,5,4,5,2,80,135,130,95,90,70,"blue","rough",?,?,Steel
-0.3,5.5,multiBody,120,5,2,1,2,5,30,30,42,30,42,70,"yellow",?,?,?,Bug
-0.4,3.3,multiBody,190,4,3,3,3,3,45,35,45,62,53,35,"pink",?,?,?,Grass
-1.4,340,multiBody,60,2,5,4,5,5,60,55,145,75,150,40,"gray",?,"Magnet Pull",?,Rock
-1.3,57.5,multiBody,45,?,?,?,?,?,71,95,85,110,95,79,"silver",?,?,?,Ice
-0.3,21,multiBody,130,?,?,?,?,?,40,55,70,45,60,30,"gray",?,"Minus",?,Steel
-0.6,51,multiBody,60,?,?,?,?,?,60,80,95,70,85,50,"gray",?,"Minus",?,Steel
-0.6,81,multiBody,30,?,?,?,?,?,60,100,115,70,85,90,"gray",?,"Minus",?,Steel
-0.5,5.5,bipedalTailless,170,5,3,4,5,3,115,45,20,45,25,20,"pink","grass",?,?,Normal
-1,12,bipedalTailless,50,3,4,4,5,3,140,70,45,75,50,45,"pink","grass",?,?,Normal
-0.8,8.6,bipedalTailless,120,4,3,4,5,3,60,65,70,85,75,40,"blue","grass",?,?,Grass
-1.2,18.6,bipedalTailless,45,2,3,3,5,3,75,80,85,100,90,50,"red","grass",?,?,Grass
-1,30,bipedalTailless,190,5,3,3,4,3,60,55,50,40,55,45,"purple","forest","Tinted Lens","Run Away",Bug
-1,20,bipedalTailless,120,3,3,4,4,4,65,65,65,50,50,90,"blue","water","Damp",?,Water
-1.3,54,bipedalTailless,45,2,5,4,5,2,90,85,95,70,90,70,"blue","water","Damp",?,Water
-1.5,48,bipedalTailless,50,4,1,5,1,2,55,50,65,175,95,150,"brown","urban","Inner Focus",?,Psychic
-1.5,70.5,bipedalTailless,90,2,4,3,4,2,80,100,70,50,60,45,"gray","mountain","No Guard","Steadfast",Fighting
-1.6,130,bipedalTailless,45,2,5,4,3,2,90,130,80,65,85,55,"gray","mountain","No Guard","Steadfast",Fighting
-0.7,4,bipedalTailless,255,2,2,2,5,3,50,75,35,70,30,40,"green","forest",?,?,Grass
-1,105,bipedalTailless,120,2,4,2,4,2,55,95,115,45,45,35,"brown","mountain","Sturdy",?,Rock
-1.4,300,bipedalTailless,45,2,4,2,4,2,80,110,130,55,65,45,"brown","mountain","Sturdy",?,Rock
-1,32.4,bipedalTailless,190,2,4,3,5,3,60,48,45,43,90,42,"yellow","grass","Forewarn","Inner Focus",Psychic
-1.6,75.6,bipedalTailless,75,3,3,5,3,3,85,73,70,73,115,67,"yellow","grass","Forewarn","Inner Focus",Psychic
-1.5,49.8,bipedalTailless,45,3,4,3,3,4,50,120,53,35,110,87,"brown","urban","Reckless","Unburden",Fighting
-1.4,50.2,bipedalTailless,45,3,4,5,4,3,50,105,79,35,110,76,"brown","urban","Iron Fist","Inner Focus",Fighting
-1.3,54.5,bipedalTailless,45,3,3,5,4,3,40,45,65,100,120,90,"pink","urban","Filter","Technician",Psychic
-1.4,40.6,bipedalTailless,45,3,3,5,4,3,65,50,35,115,95,95,"red","urban","Forewarn","Dry Skin",Ice
-1.7,130.1,bipedalTailless,45,2,5,4,5,3,65,155,120,65,90,105,"brown","forest","Mold Breaker","Moxie",Bug
-2.1,460,bipedalTailless,25,2,5,3,5,2,160,110,65,65,110,30,"black","mountain","Thick Fat",?,Normal
-0.5,7.9,bipedalTailless,45,5,4,3,3,3,39,52,43,60,50,65,"yellow","grass",?,?,Fire
-0.3,1,bipedalTailless,170,4,3,3,4,4,90,30,15,40,20,15,"pink","grass",?,?,Normal
-0.3,1.5,bipedalTailless,190,5,3,3,5,4,35,20,65,40,65,20,"silver","forest","Serene Grace",?,Fairy
-0.6,3.2,bipedalTailless,75,4,5,3,5,5,55,40,85,80,105,40,"silver","forest","Serene Grace",?,Fairy
-0.4,5.8,bipedalTailless,45,4,3,5,3,4,75,80,85,90,100,50,"green","grass",?,?,Grass
-1.2,38,bipedalTailless,65,2,4,4,5,3,70,100,115,30,65,30,"brown","forest","Rock Head",?,Rock
-1.1,33.9,bipedalTailless,45,3,4,4,4,4,90,75,75,90,100,70,"green","water","Damp",?,Water
-0.8,8.5,bipedalTailless,120,2,5,3,5,3,75,75,55,105,85,30,"yellow","grass","Solar Power","Early Bird",Grass
-0.6,7.8,bipedalTailless,190,3,5,4,3,3,60,80,50,40,40,30,"pink","urban","Run Away",?,Fairy
-1.7,137.8,bipedalTailless,45,3,5,3,3,3,80,185,115,40,105,75,"blue","forest","Guts",?,Bug
-0.7,21,bipedalTailless,75,4,4,4,2,3,35,35,35,35,35,35,"purple","urban","Steadfast","Vital Spirit",Fighting
-0.4,6,bipedalTailless,45,4,2,4,3,3,45,30,15,85,65,65,"pink","urban","Forewarn","Hydration",Ice
-0.6,23.5,bipedalTailless,45,4,3,3,2,3,45,63,37,65,55,95,"yellow","grass",?,?,Electric
-1.5,46.8,bipedalTailless,30,3,3,3,5,3,255,10,10,75,135,55,"pink","urban","Serene Grace",?,Normal
-0.6,5,bipedalTailless,45,5,3,5,3,5,100,100,100,100,100,100,"green","forest",?,?,Psychic
-1.2,32.5,bipedalTailless,120,3,4,5,4,3,60,50,50,60,70,50,"green","water","Rain Dish",?,Water
-1.5,55,bipedalTailless,45,4,4,5,5,3,80,70,70,90,100,70,"green","water","Rain Dish",?,Water
-1,28,bipedalTailless,120,5,4,4,2,3,70,70,40,60,40,60,"brown","forest","Early Bird",?,Grass
-1.3,59.6,bipedalTailless,45,4,4,4,4,4,90,100,60,90,60,80,"brown","forest","Early Bird",?,Grass
-0.4,6.6,bipedalTailless,235,4,1,5,4,3,28,25,25,45,35,40,"silver","urban","Trace",?,Psychic
-0.8,20.2,bipedalTailless,120,3,4,5,3,3,38,35,35,65,55,50,"silver","urban","Trace",?,Psychic
-1.6,48.4,bipedalTailless,45,4,3,5,2,4,68,85,65,165,135,100,"silver","urban","Trace",?,Psychic
-2,130.5,bipedalTailless,45,1,5,2,5,2,150,160,100,95,65,100,"brown","forest",?,?,Normal
-1,86.4,bipedalTailless,180,3,5,3,4,5,72,60,30,20,30,25,"yellow","mountain","Guts",?,Fighting
-2.3,253.8,bipedalTailless,200,2,5,3,4,5,144,120,60,40,60,50,"brown","mountain","Guts",?,Fighting
-1,97,bipedalTailless,255,2,4,3,5,3,30,45,135,45,90,30,"gray","cave","Magnet Pull",?,Rock
-0.5,11,bipedalTailless,45,4,4,4,4,3,50,75,75,65,65,50,"purple","cave","Stall","Prankster",Dark
-1,51.8,bipedalTailless,45,4,5,4,4,3,50,105,125,55,95,50,"black","cave","Intimidate",?,Steel
-0.6,11.2,bipedalTailless,180,2,2,5,3,5,30,40,55,40,55,60,"blue","mountain",?,?,Fighting
-1.3,31.5,bipedalTailless,90,5,5,5,3,4,60,100,85,80,85,100,"red","mountain",?,?,Fighting
-0.6,17.7,bipedalTailless,150,4,2,3,3,5,65,47,55,73,75,85,"purple","forest","Tinted Lens","Prankster",Bug
-0.3,2,bipedalTailless,150,3,3,5,3,3,50,60,45,100,80,65,"green","grass","Poison Point",?,Grass
-0.4,51.3,bipedalTailless,190,3,4,4,5,3,50,85,40,85,40,35,"green","rough",?,?,Grass
-1.3,77.4,bipedalTailless,60,4,4,5,3,3,70,115,60,115,60,55,"green","rough",?,?,Grass
-1.6,30.6,bipedalTailless,90,3,4,4,5,2,40,70,130,60,130,25,"black","forest",?,?,Ghost
-0.7,16.8,bipedalTailless,190,5,3,4,3,3,50,50,50,50,50,50,"gray","cave","Ice Body","Moody",Ice
-0.6,42.1,bipedalTailless,45,4,4,4,4,3,45,75,60,40,30,50,"blue","rough",?,?,Dragon
-1.7,230,bipedalTailless,3,2,5,5,5,2,80,100,200,50,100,50,"brown","cave",?,?,Rock
-1.8,175,bipedalTailless,3,2,4,5,5,2,80,50,100,100,200,50,"blue","cave",?,?,Ice
-1.9,205,bipedalTailless,3,2,5,5,5,2,80,75,150,75,150,50,"gray","cave",?,?,Steel
-0.3,1.1,bipedalTailless,3,5,3,5,4,3,100,100,100,100,100,100,"yellow","mountain",?,?,Steel
-1.7,60.8,bipedalTailless,3,5,3,5,4,4,50,95,90,95,90,180,"red","rare",?,?,Psychic
-0.4,5.2,bipedalTailless,45,5,4,3,3,5,53,51,53,61,56,40,"blue",?,?,?,Water
-0.3,2.2,bipedalTailless,255,4,3,4,3,3,37,25,41,25,41,25,"red",?,?,?,Bug
-0.2,1.2,bipedalTailless,255,5,3,3,3,3,40,30,35,50,70,55,"green",?,"Poison Point",?,Grass
-0.9,14.5,bipedalTailless,75,4,4,5,3,3,60,70,55,125,105,90,"green",?,"Poison Point",?,Grass
-0.2,0.6,bipedalTailless,120,4,3,3,3,5,45,30,50,65,50,45,"yellow",?,?,?,Psychic
-0.6,13,bipedalTailless,145,5,2,5,3,3,20,25,45,70,90,60,"pink",?,"Filter",?,Psychic
-0.6,24.4,bipedalTailless,130,4,3,4,4,3,100,5,5,15,65,30,"pink",?,"Serene Grace",?,Normal
-0.6,105,bipedalTailless,50,3,5,4,5,2,135,85,40,40,85,5,"black",?,"Thick Fat",?,Normal
-0.7,23,bipedalTailless,140,5,4,5,3,4,48,61,40,61,40,50,"blue",?,"Dry Skin",?,Poison
-1.3,44.4,bipedalTailless,75,4,4,5,4,4,83,106,65,86,65,85,"blue",?,"Dry Skin",?,Poison
-1.7,140,bipedalTailless,30,2,4,5,5,2,110,85,95,80,95,50,"pink",?,"Oblivious",?,Normal
-2,128.6,bipedalTailless,30,2,5,5,5,2,100,100,125,110,50,50,"blue",?,"Leaf Guard",?,Grass
-1.6,52,bipedalTailless,45,4,5,5,2,4,68,125,65,65,115,80,"silver",?,?,?,Psychic
-3.7,420,bipedalTailless,3,3,5,5,5,2,110,160,110,80,110,100,"silver",?,?,?,Normal
-0.3,1.4,bipedalTailless,3,4,3,5,4,3,100,100,100,100,100,100,"blue",?,?,?,Water
-1.5,50.5,bipedalTailless,3,4,4,5,3,5,70,90,90,135,90,125,"black",?,?,?,Dark
-0.4,4,bipedalTailless,3,?,?,?,?,?,100,100,100,100,100,100,"yellow",?,?,?,Psychic
-1.1,60.5,bipedalTailless,75,?,?,?,?,?,116,55,85,107,95,29,"pink",?,"Synchronize",?,Psychic
-0.7,40.4,bipedalTailless,60,?,?,?,?,?,110,135,60,50,65,88,"gray",?,"Sand Force",?,Ground
-0.6,12.5,bipedalTailless,180,?,?,?,?,?,75,80,55,25,35,35,"gray",?,"Sheer Force",?,Fighting
-1.2,40,bipedalTailless,90,?,?,?,?,?,85,105,85,40,50,40,"gray",?,"Sheer Force",?,Fighting
-1.5,87,bipedalTailless,45,?,?,?,?,?,105,140,95,55,65,45,"brown",?,"Sheer Force",?,Fighting
-1.5,62,bipedalTailless,45,?,?,?,?,?,105,85,75,85,75,74,"blue",?,"Poison Touch",?,Water
-1.3,55.5,bipedalTailless,45,?,?,?,?,?,120,100,85,30,85,45,"red",?,"Inner Focus",?,Fighting
-1.4,51,bipedalTailless,45,?,?,?,?,?,75,125,75,30,75,85,"blue",?,"Inner Focus",?,Fighting
-1.2,20.5,bipedalTailless,45,?,?,?,?,?,75,103,80,70,70,92,"yellow",?,"Chlorophyll",?,Bug
-0.7,6.6,bipedalTailless,75,?,?,?,?,?,60,67,85,77,75,116,"green",?,"Infiltrator",?,Grass
-0.6,37.5,bipedalTailless,120,?,?,?,?,?,70,90,45,15,45,50,"red",?,?,?,Fire
-0.6,31,bipedalTailless,190,?,?,?,?,?,50,50,62,40,62,65,"green",?,"Sticky Hold",?,Poison
-1.9,107.3,bipedalTailless,60,?,?,?,?,?,80,95,82,60,82,75,"green",?,"Weak Armor",?,Poison
-0.4,5.8,bipedalTailless,200,?,?,?,?,?,45,30,50,55,65,45,"purple",?,?,?,Psychic
-0.7,18,bipedalTailless,100,?,?,?,?,?,60,45,70,75,85,55,"purple",?,?,?,Psychic
-1.5,44,bipedalTailless,50,?,?,?,?,?,70,55,95,95,110,65,"purple",?,?,?,Psychic
-0.5,5.9,bipedalTailless,200,?,?,?,?,?,50,75,45,40,45,60,"blue",?,"Shed Skin",?,Bug
-1,34.5,bipedalTailless,90,?,?,?,?,?,75,75,75,125,95,40,"brown",?,"Synchronize",?,Psychic
-1,92,bipedalTailless,190,?,?,?,?,?,59,74,50,35,50,35,"green",?,"Klutz",?,Ground
-2.8,330,bipedalTailless,90,?,?,?,?,?,89,124,80,55,80,55,"green",?,"Klutz",?,Ground
-0.5,10.2,bipedalTailless,120,?,?,?,?,?,45,85,70,40,40,60,"red",?,"Inner Focus",?,Dark
-1.6,70,bipedalTailless,45,?,?,?,?,?,65,125,100,60,70,70,"red",?,"Inner Focus",?,Dark
-0.6,6.5,bipedalTailless,3,?,?,?,?,?,100,128,90,77,77,128,"silver",?,?,?,Normal
-1.5,82.5,bipedalTailless,3,?,?,?,?,?,71,120,95,120,95,99,"purple",?,?,?,Bug
-1.1,32,TwoMoreWings,45,4,3,3,3,5,60,45,50,80,80,70,"silver","forest",?,?,Bug
-1,29.5,TwoMoreWings,45,4,4,4,2,5,65,80,40,45,80,75,"yellow","forest",?,?,Bug
-1.5,12.5,TwoMoreWings,75,3,4,3,3,5,70,65,60,90,75,90,"purple","forest","Tinted Lens","Wonder Skin",Bug
-1.5,56,TwoMoreWings,45,4,4,5,2,5,70,110,80,55,80,105,"green","grass","Technician","Steadfast",Bug
-1.8,75,TwoMoreWings,90,5,3,3,2,5,85,90,80,70,80,130,"purple","cave",?,?,Poison
-1.2,38,TwoMoreWings,75,5,2,1,3,5,65,65,45,75,45,95,"red","forest","Compound Eyes",?,Bug
-2,275.6,TwoMoreWings,25,2,5,5,5,3,70,150,140,65,100,75,"red","grass","Technician","Light Metal",Bug
-1,28.4,TwoMoreWings,45,3,4,3,5,5,60,70,50,90,50,65,"yellow","forest",?,?,Bug
-1.2,31.6,TwoMoreWings,45,4,3,5,3,5,60,50,70,50,90,65,"green","forest",?,?,Bug
-0.8,3.6,TwoMoreWings,75,4,3,3,4,5,70,60,62,80,82,60,"blue","water",?,?,Bug
-0.8,12,TwoMoreWings,120,5,3,3,2,5,61,90,45,50,50,160,"yellow","forest",?,?,Bug
-1.1,15.3,TwoMoreWings,120,4,3,5,3,4,50,70,50,50,50,70,"green","rough",?,?,Ground
-1,25.5,TwoMoreWings,45,4,3,5,3,3,77,85,51,55,51,65,"red",?,?,?,Bug
-0.9,23.3,TwoMoreWings,45,5,4,4,2,5,70,94,50,94,50,66,"yellow",?,?,?,Bug
-1.2,38.5,TwoMoreWings,45,3,3,5,5,5,70,80,102,80,102,40,"yellow",?,?,?,Bug
-1.9,51.5,TwoMoreWings,30,5,3,3,3,5,86,76,86,116,56,95,"green",?,"Tinted Lens",?,Bug
-1.6,46,TwoMoreWings,15,?,?,?,?,?,85,60,65,135,105,100,"silver",?,?,?,Bug
-0.3,5.4,insectoid,190,5,3,4,3,3,35,70,55,45,55,25,"red","forest","Dry Skin","Damp",Bug
-1,29.5,insectoid,75,3,4,4,5,3,60,95,80,60,80,30,"red","forest","Dry Skin","Damp",Bug
-0.4,6.5,insectoid,225,3,4,3,4,3,30,105,90,25,25,50,"red","water","Shell Armor",?,Water
-1.3,60,insectoid,60,2,5,3,5,2,55,130,115,50,50,75,"red","water","Shell Armor",?,Water
-0.5,11.5,insectoid,45,4,4,3,3,3,30,80,90,55,45,55,"brown","sea","Battle Armor",?,Rock
-0.5,8.5,insectoid,255,4,3,4,4,3,40,60,40,40,40,30,"green","forest","Insomnia",?,Bug
-1.1,33.5,insectoid,90,4,3,4,4,3,70,90,70,60,60,40,"red","forest","Insomnia",?,Bug
-0.6,20.5,insectoid,190,2,4,2,5,2,20,10,230,10,230,5,"yellow","mountain","Gluttony","Contrary",Bug
-0.6,5,insectoid,60,4,3,3,3,3,55,55,85,65,85,35,"pink","sea","Natural Cure",?,Water
-0.5,2.6,insectoid,255,3,4,4,5,3,40,30,30,40,50,30,"green","water","Rain Dish",?,Water
-0.5,1.7,insectoid,200,5,3,3,3,3,40,30,32,50,52,65,"blue","water",?,?,Bug
-0.5,5.5,insectoid,255,3,3,4,5,3,31,45,90,30,30,40,"gray","forest",?,?,Bug
-0.7,15,insectoid,255,2,5,3,5,2,45,100,45,45,45,10,"brown","rough","Arena Trap",?,Ground
-0.6,11.5,insectoid,205,4,4,4,4,2,43,80,65,50,35,35,"red","water","Shell Armor",?,Water
-1.1,32.8,insectoid,155,3,5,4,4,3,63,120,85,90,55,55,"red","water","Shell Armor",?,Water
-0.7,12.5,insectoid,45,5,3,5,3,2,45,95,50,40,50,75,"gray","water",?,?,Rock
-0.3,6.3,insectoid,190,3,4,3,5,2,76,48,48,57,62,34,"purple",?,"Storm Drain",?,Water
-0.9,29.9,insectoid,75,2,5,3,5,2,111,83,68,92,82,39,"purple",?,"Storm Drain",?,Water
-0.8,12,insectoid,120,2,4,5,4,2,40,50,90,30,55,65,"purple",?,"Sniper",?,Poison
-1.3,61.5,insectoid,45,2,5,5,4,2,70,90,110,60,75,95,"purple",?,"Sniper",?,Poison
-1.5,85.6,insectoid,3,4,3,5,5,5,120,70,120,75,130,85,"yellow",?,?,?,Psychic
-0.3,2.5,insectoid,255,?,?,?,?,?,45,53,70,40,60,42,"yellow",?,"Chlorophyll",?,Bug
-0.4,5.3,insectoid,255,?,?,?,?,?,30,45,59,30,39,57,"red",?,"Swarm",?,Bug
-2.5,200.5,insectoid,45,?,?,?,?,?,60,90,89,55,69,112,"red",?,"Swarm",?,Bug
-0.3,14.5,insectoid,190,?,?,?,?,?,50,65,85,35,35,55,"red",?,"Shell Armor",?,Bug
-1.4,200,insectoid,75,?,?,?,?,?,70,95,125,65,75,45,"red",?,"Shell Armor",?,Bug
-0.1,0.6,insectoid,190,?,?,?,?,?,50,47,50,57,50,65,"yellow",?,"Unnerve",?,Bug
-0.8,14.3,insectoid,75,?,?,?,?,?,70,77,60,97,60,108,"yellow",?,"Unnerve",?,Bug
-0.3,33,insectoid,90,?,?,?,?,?,58,109,112,48,48,109,"gray",?,"Hustle",?,Bug
-1.1,28.8,insectoid,45,?,?,?,?,?,55,85,55,50,55,60,"silver",?,?,?,Bug
-0.1,0.1,head,0,?,?,?,?,?,44,38,39,61,79,42,"silver",?,?,?,Fairy
-0.2,0.9,head,0,?,?,?,?,?,54,45,47,75,98,52,"silver",?,?,?,Fairy
-0.2,0.5,head,0,?,?,?,?,?,78,52,60,63,65,23,"pink",?,?,?,Fairy
-0.2,2.2,head,0,?,?,?,?,?,67,58,57,81,67,101,?,?,?,?,Electric
-0.2,3,head,0,?,?,?,?,?,57,80,91,80,87,75,?,?,?,?,Steel
-0.3,7,head,0,?,?,?,?,?,41,56,40,62,44,71,"blue",?,?,?,Water
-0.3,1.7,head,0,?,?,?,?,?,45,50,43,40,38,62,"red",?,?,?,Normal
-0.3,2.5,head,0,?,?,?,?,?,38,35,40,27,25,35,"black",?,?,?,Bug
-0.3,8.4,head,0,?,?,?,?,?,45,22,60,27,30,29,"black",?,?,?,Bug
-0.3,3.5,head,0,?,?,?,?,?,62,48,54,63,60,68,"gray",?,?,?,Psychic
-0.3,5.7,head,0,?,?,?,?,?,50,50,150,50,150,50,?,?,?,?,Rock
-0.3,2.8,head,0,?,?,?,?,?,45,50,35,55,75,40,?,?,?,?,Dragon
-0.3,33.1,head,0,?,?,?,?,?,59,66,70,44,55,41,?,?,?,?,Ghost
-0.4,9,head,0,?,?,?,?,?,56,61,65,48,45,33,"green",?,?,?,Grass
-0.4,9.4,head,0,?,?,?,?,?,40,45,40,62,60,60,"red",?,?,?,Fire
-0.4,5,head,0,?,?,?,?,?,38,36,38,32,36,57,"brown",?,?,?,Normal
-0.4,3.5,head,0,?,?,?,?,?,62,48,66,59,57,49,"silver",?,?,?,Fairy
-0.4,3.5,head,0,?,?,?,?,?,53,54,37,46,45,45,"blue",?,?,?,Dark
-0.4,7,head,0,?,?,?,?,?,43,70,48,50,60,38,?,?,?,?,Ghost
-0.5,31,head,0,?,?,?,?,?,42,52,67,39,56,50,"brown",?,?,?,Rock
-0.5,6,head,0,?,?,?,?,?,44,38,33,61,43,70,"yellow",?,?,?,Electric
-0.5,7.3,head,0,?,?,?,?,?,50,60,60,60,60,30,"brown",?,?,?,Poison
-0.5,8.3,head,0,?,?,?,?,?,50,53,62,58,63,44,"blue",?,?,?,Water
-0.5,8,head,0,?,?,?,?,?,40,30,35,45,40,55,?,?,?,?,Flying
-0.6,8,head,0,?,?,?,?,?,67,82,62,46,48,43,"silver",?,?,?,Fighting
-0.6,13.5,head,0,?,?,?,?,?,62,50,58,73,54,72,"brown",?,?,?,Fire
-0.6,10.9,head,0,?,?,?,?,?,54,63,52,83,56,97,"blue",?,?,?,Water
-0.6,8.5,head,0,?,?,?,?,?,74,48,76,83,81,104,"silver",?,?,?,Psychic
-0.7,29,head,0,?,?,?,?,?,61,78,95,56,58,57,"green",?,?,?,Grass
-0.7,16,head,0,?,?,?,?,?,62,73,55,56,52,84,"red",?,?,?,Fire
-0.7,86,head,0,?,?,?,?,?,85,100,122,58,75,54,?,?,?,?,Ghost
-0.8,2,head,0,?,?,?,?,?,45,80,100,35,37,28,"brown",?,?,?,Steel
-0.8,4.5,head,0,?,?,?,?,?,59,110,150,45,49,35,"brown",?,?,?,Steel
-0.8,26,head,0,?,?,?,?,?,58,89,77,45,45,48,"brown",?,?,?,Rock
-0.8,15.5,head,0,?,?,?,?,?,101,72,72,99,89,29,"pink",?,?,?,Fairy
-0.8,5,head,0,?,?,?,?,?,82,80,86,85,75,72,"silver",?,?,?,Fairy
-0.8,21.5,head,0,?,?,?,?,?,78,92,75,74,63,118,"green",?,?,?,Fighting
-0.8,17.5,head,0,?,?,?,?,?,68,75,53,83,113,60,?,?,?,?,Dragon
-0.9,31,head,0,?,?,?,?,?,66,65,48,62,57,52,"brown",?,?,?,Grass
-1,14.5,head,0,?,?,?,?,?,59,59,58,90,70,73,"red",?,?,?,Fire
-1,42.4,head,0,?,?,?,?,?,85,56,77,50,77,78,"brown",?,?,?,Normal
-1,21,head,0,?,?,?,?,?,62,55,52,109,94,109,"yellow",?,?,?,Electric
-1,23.5,head,0,?,?,?,?,?,95,65,65,110,130,60,"pink",?,?,?,Fairy
-1,99.5,head,0,?,?,?,?,?,55,69,85,32,35,28,?,?,?,?,Ice
-1.1,10,head,0,?,?,?,?,?,78,65,68,112,154,75,"silver",?,?,?,Fairy
-1.2,24.5,head,0,?,?,?,?,?,78,81,71,74,69,126,"red",?,?,?,Fire
-1.2,17,head,0,?,?,?,?,?,80,52,50,90,50,89,"black",?,?,?,Bug
-1.2,28,head,0,?,?,?,?,?,75,80,60,65,90,102,"silver",?,?,?,Normal
-1.3,96,head,0,?,?,?,?,?,72,105,115,54,86,68,"brown",?,?,?,Rock
-1.3,35.3,head,0,?,?,?,?,?,71,73,88,120,89,59,"blue",?,?,?,Water
-1.3,25.2,head,0,?,?,?,?,?,77,59,50,67,63,46,"blue",?,?,?,Rock
-1.5,39,head,0,?,?,?,?,?,75,69,72,114,100,104,"red",?,?,?,Fire
-1.5,40,head,0,?,?,?,?,?,72,95,67,103,71,122,"blue",?,?,?,Water
-1.5,81.5,head,0,?,?,?,?,?,86,68,72,109,66,106,"brown",?,?,?,Fire
-1.5,47,head,0,?,?,?,?,?,86,92,88,68,75,73,"blue",?,?,?,Dark
-1.5,71,head,0,?,?,?,?,?,85,110,76,65,82,56,?,?,?,?,Ghost
-1.5,85,head,0,?,?,?,?,?,85,70,80,97,80,123,?,?,?,?,Flying
-1.6,90,head,0,?,?,?,?,?,88,107,122,74,75,64,"green",?,?,?,Grass
-1.7,91,head,0,?,?,?,?,?,123,100,62,97,81,68,"brown",?,?,?,Grass
-1.7,53,head,0,?,?,?,?,?,60,150,50,150,50,60,"brown",?,?,?,Steel
-1.8,81.5,head,0,?,?,?,?,?,65,75,90,97,123,44,"brown",?,?,?,Poison
-2,150.5,head,0,?,?,?,?,?,90,100,70,110,150,80,?,?,?,?,Dragon
-2,505,head,0,?,?,?,?,?,95,117,184,44,46,28,?,?,?,?,Ice
-2.1,136,head,0,?,?,?,?,?,95,124,78,69,71,58,"silver",?,?,?,Fighting
-2.5,270,head,0,?,?,?,?,?,82,121,119,69,59,71,"red",?,?,?,Rock
-2.7,225,head,0,?,?,?,?,?,123,77,72,99,92,58,"blue",?,?,?,Rock
-3,215,head,0,?,?,?,?,?,126,131,95,131,98,99,?,?,?,?,Fairy
-5,305,head,0,?,?,?,?,?,108,100,121,81,95,95,?,?,?,?,Dragon
-5.8,203,head,0,?,?,?,?,?,126,131,95,131,98,99,?,?,?,?,Dark
+0.3,4,head,190,3,3,2,4,2,30,65,100,45,25,40,"purple","sea","Shell Armor","Skill Link","Overcoat",Slow,Water
+1.5,132.5,head,60,2,5,1,4,2,50,95,180,85,45,70,"purple","sea","Shell Armor","Skill Link","Overcoat",Slow,Water
+1.3,0.1,head,190,4,1,4,2,4,30,35,30,100,35,80,"purple","cave","Levitate",?,?,MediumSlow,Ghost
+0.5,10.4,head,190,5,2,3,2,5,40,30,50,55,55,100,"red","urban","Soundproof","Static",?,MediumFast,Electric
+1.2,66.6,head,60,5,3,3,4,4,60,50,70,80,80,140,"red","urban","Soundproof","Static",?,MediumFast,Electric
+0.6,1,head,190,3,3,3,4,3,40,65,95,60,45,35,"purple","urban","Levitate",?,?,MediumFast,Poison
+0.3,4,head,35,5,5,5,5,5,48,48,48,48,48,48,"purple","urban","Limber",?,?,MediumFast,Normal
+0.3,1.8,head,235,5,5,5,5,5,30,30,30,30,30,30,"yellow","grass","Chlorophyll","Solar Power","Early Bird",MediumSlow,Grass
+0.7,1,head,45,4,2,3,2,5,60,60,60,85,85,85,"gray","cave","Levitate",?,?,Fast,Ghost
+0.5,5,head,225,4,3,5,4,5,48,72,48,72,48,48,"black","rare","Levitate",?,?,MediumFast,Psychic
+0.6,7.2,head,190,3,5,4,5,3,50,65,90,35,35,15,"gray","forest","Sturdy",?,?,MediumFast,Bug
+1.2,125.8,head,75,2,4,4,5,3,75,90,140,60,60,40,"purple","forest","Sturdy",?,?,MediumFast,Bug
+0.6,10,head,120,3,3,3,4,2,50,35,55,25,25,15,"silver","forest","Shed Skin",?,?,MediumFast,Bug
+0.7,11.5,head,120,2,3,4,4,2,50,35,55,25,25,15,"purple","forest","Shed Skin",?,?,MediumFast,Bug
+1,168,head,45,3,3,4,4,3,70,55,65,95,85,70,"yellow","cave","Levitate",?,?,Fast,Rock
+1.2,154,head,45,3,5,4,4,3,70,95,85,55,65,70,"red","cave","Levitate",?,?,Fast,Rock
+0.3,0.8,head,45,4,4,4,4,4,70,70,70,70,70,70,"silver","grass","Forecast",?,?,MediumFast,Normal
+0.6,2.3,head,225,5,2,3,3,4,44,75,35,63,33,45,"black","urban","Insomnia","Frisk","Cursed Body",Fast,Ghost
+1.5,256.5,head,75,3,5,2,5,2,80,80,80,80,80,80,"gray","cave","Inner Focus","Ice Body","Moody",MediumFast,Ice
+0.4,52.5,head,255,3,3,3,5,3,35,64,85,74,55,32,"blue","sea","Shell Armor",?,?,Erratic,Water
+0.9,4.4,head,45,4,2,5,3,5,60,60,60,105,105,105,"purple",?,"Levitate",?,?,Fast,Ghost
+0.5,60.5,head,255,3,4,1,5,4,57,24,86,24,86,23,"green",?,"Levitate","Heatproof",?,MediumFast,Steel
+0.3,0.3,head,45,5,3,5,4,5,50,65,107,105,107,86,"red",?,"Levitate",?,?,MediumFast,Electric
+1.2,58.5,head,120,?,?,?,?,?,40,55,99,40,79,47,"gray",?,"Poison Point","Swarm",?,MediumSlow,Bug
+0.3,0.6,head,190,?,?,?,?,?,40,27,60,37,50,66,"green",?,"Prankster","Infiltrator",?,MediumFast,Grass
+0.3,1,head,200,?,?,?,?,?,45,30,40,105,50,20,"green",?,"Overcoat","Magic Guard",?,MediumSlow,Psychic
+0.6,8,head,100,?,?,?,?,?,65,40,50,125,60,30,"green",?,"Overcoat","Magic Guard",?,MediumSlow,Psychic
+0.6,18.8,head,255,?,?,?,?,?,44,50,91,24,86,10,"gray",?,"Iron Barbs",?,?,MediumFast,Grass
+1.1,148,head,25,?,?,?,?,?,70,50,30,95,135,105,"blue",?,"Levitate",?,?,MediumFast,Ice
+0.4,7.7,head,200,?,?,?,?,?,50,40,85,40,65,25,"red",?,"Hydration","Shell Armor",?,MediumFast,Bug
+0.3,2.9,serpertine,255,3,3,4,3,2,45,30,35,20,20,45,"green","forest","Shield Dust",?,?,MediumFast,Bug
+0.7,9.9,serpertine,120,3,3,1,5,3,50,20,55,25,25,30,"green","forest","Shed Skin",?,?,MediumFast,Bug
+0.3,3.2,serpertine,255,3,4,4,3,2,40,35,30,20,20,50,"brown","forest","Shield Dust",?,?,MediumFast,Bug
+0.6,10,serpertine,120,3,3,1,5,3,45,25,50,25,25,35,"yellow","forest","Shed Skin",?,?,MediumFast,Bug
+2,6.9,serpertine,255,5,4,3,3,3,35,60,44,40,54,55,"purple","grass","Intimidate","Shed Skin",?,MediumFast,Poison
+3.5,65,serpertine,90,4,5,3,4,3,60,85,69,65,79,80,"purple","grass","Intimidate","Shed Skin",?,MediumFast,Poison
+8.8,210,serpertine,45,4,2,2,4,3,35,45,160,30,45,70,"gray","cave","Rock Head","Sturdy",?,MediumFast,Rock
+6.5,672.4,serpertine,45,3,5,2,4,5,95,155,109,70,130,81,"blue","water","Intimidate",?,?,Slow,Water
+1.8,3.3,serpertine,45,5,3,3,4,3,41,64,45,50,50,50,"blue","water","Shed Skin",?,?,Slow,Dragon
+4,16.5,serpertine,45,4,3,4,3,5,61,84,65,70,70,70,"blue","water","Shed Skin",?,?,Slow,Dragon
+1.5,14,serpertine,190,3,4,2,4,5,100,70,70,65,65,45,"yellow","cave","Serene Grace","Run Away",?,MediumFast,Normal
+9.2,400,serpertine,25,2,5,2,5,2,75,85,200,55,65,30,"gray","cave","Rock Head","Sturdy",?,MediumFast,Steel
+0.7,35,serpertine,190,2,3,3,4,2,40,40,40,70,40,20,"red","mountain","Magma Armor","Flame Body",?,MediumFast,Fire
+0.8,55,serpertine,75,1,4,2,5,2,50,50,120,80,80,30,"red","mountain","Magma Armor","Flame Body",?,MediumFast,Fire
+1.2,152,serpertine,45,4,4,1,4,4,70,84,70,65,70,51,"gray","mountain","Shed Skin",?,?,Slow,Rock
+0.3,3.6,serpertine,255,3,3,5,4,3,45,45,35,20,30,20,"red","forest","Shield Dust",?,?,MediumFast,Bug
+2.7,52.5,serpertine,90,4,4,5,5,2,73,100,60,100,60,65,"black","grass","Shed Skin",?,?,Fluctuating,Poison
+6.2,162,serpertine,60,4,3,5,5,3,95,60,79,100,125,81,"pink","water","Marvel Scale",?,?,Erratic,Water
+1.7,27,serpertine,60,4,5,2,3,3,55,104,105,94,75,52,"blue","sea","Swift Swim",?,?,Erratic,Water
+1.8,22.6,serpertine,60,4,3,4,3,3,55,84,105,114,75,52,"pink","sea","Swift Swim",?,?,Erratic,Water
+7,206.5,serpertine,3,5,5,3,5,5,105,150,90,150,90,95,"green","rare","Air Lock",?,?,Slow,Dragon
+0.2,3.4,serpertine,120,4,5,3,5,3,40,29,45,29,45,36,"gray",?,"Shed Skin",?,?,MediumFast,Bug
+0.5,14.3,serpertine,45,3,5,3,5,2,60,69,95,69,95,36,"gray",?,"Anticipation",?,?,MediumFast,Bug
+6.9,650,multiped,3,5,5,5,5,5,150,120,100,120,100,90,"black",?,"Pressure",?,?,Slow,Ghost
+3.3,63,serpertine,45,?,?,?,?,?,75,75,95,75,95,113,"green",?,"Overgrow",?,?,MediumSlow,Grass
+1.1,90,fins,190,3,3,2,4,3,65,45,55,45,70,45,"silver","sea","Thick Fat","Hydration","Ice Body",MediumFast,Water
+1.7,120,fins,75,2,3,2,5,3,90,70,80,70,95,70,"silver","sea","Thick Fat","Hydration","Ice Body",MediumFast,Water
+0.6,15,fins,225,4,4,3,2,3,45,67,60,35,50,63,"red","water","Swift Swim","Water Veil",?,MediumFast,Water
+1.3,39,fins,60,4,4,3,3,3,80,92,65,65,80,68,"red","water","Swift Swim","Water Veil",?,MediumFast,Water
+0.9,10,fins,255,5,4,3,5,4,20,10,55,15,20,80,"red","water","Swift Swim",?,?,Slow,Water
+2.5,220,fins,45,3,4,4,5,3,130,85,80,85,95,60,"blue","sea","Water Absorb","Shell Armor",?,Slow,Water
+0.5,12,fins,190,4,3,5,4,3,75,38,38,56,56,67,"blue","sea","Volt Absorb","Illuminate",?,Slow,Water
+1.2,22.5,fins,75,3,3,3,4,4,125,58,58,76,76,67,"blue","sea","Volt Absorb","Illuminate",?,Slow,Water
+0.5,3.9,fins,45,3,4,3,5,3,65,95,75,55,55,85,"gray","sea","Poison Point","Swift Swim",?,MediumFast,Water
+0.6,12,fins,190,3,3,5,3,3,35,65,35,65,35,65,"gray","sea","Hustle","Sniper","Moody",MediumFast,Water
+0.8,20.8,fins,225,4,4,4,3,3,45,90,20,65,20,65,"red","sea","Rough Skin",?,?,Slow,Water
+1.8,88.8,fins,60,4,4,4,2,3,70,120,40,95,40,95,"blue","sea","Rough Skin",?,?,Slow,Water
+2,130,fins,125,3,4,3,5,4,130,70,35,70,35,60,"blue","sea","Water Veil","Oblivious",?,Fluctuating,Water
+14.5,398,fins,60,3,5,1,5,4,170,90,45,90,45,60,"blue","sea","Water Veil","Oblivious",?,Fluctuating,Water
+0.4,1.9,fins,190,4,3,4,5,3,50,48,43,46,41,60,"gray","water","Oblivious","Anticipation","Hydration",MediumFast,Water
+0.9,23.6,fins,75,2,5,4,5,2,110,78,73,76,71,60,"blue","water","Oblivious","Anticipation","Hydration",MediumFast,Water
+0.6,7.4,fins,255,5,2,1,1,2,20,15,20,10,55,80,"brown","water","Swift Swim",?,?,Erratic,Water
+0.8,39.5,fins,255,4,4,2,4,2,70,40,50,55,50,25,"blue","sea","Thick Fat","Ice Body","Oblivious",MediumSlow,Ice
+1.1,87.6,fins,120,4,4,2,4,2,90,60,70,75,70,45,"blue","sea","Thick Fat","Ice Body","Oblivious",MediumSlow,Ice
+1,23.4,fins,25,3,4,3,5,3,100,90,130,45,65,55,"gray","sea","Swift Swim","Rock Head",?,Slow,Water
+0.6,8.7,fins,225,5,1,1,5,3,43,30,55,40,65,97,"pink","sea","Swift Swim",?,?,Fast,Water
+4.5,352,fins,5,4,4,5,5,4,100,100,90,150,140,90,"blue","sea","Drizzle",?,?,Slow,Water
+0.4,7,fins,190,5,2,4,4,4,49,49,56,49,61,66,"blue",?,"Swift Swim","Storm Drain",?,Erratic,Water
+1.2,24,fins,75,5,3,4,5,4,69,69,76,69,86,91,"blue",?,"Swift Swim","Storm Drain",?,Erratic,Water
+0.5,4.5,fins,255,?,?,?,?,?,50,50,40,50,40,64,"blue",?,"Swift Swim","Hydration",?,MediumSlow,Water
+1,18,fins,25,?,?,?,?,?,70,92,65,80,55,98,"green",?,"Reckless","Adaptability",?,MediumFast,Water
+1.2,31.6,fins,75,?,?,?,?,?,165,75,80,40,45,65,"pink",?,"Healer","Hydration",?,Fast,Water
+0.2,0.3,fins,190,?,?,?,?,?,35,55,40,45,40,60,"silver",?,"Levitate",?,?,Slow,Electric
+1.2,22,fins,60,?,?,?,?,?,65,85,70,75,70,40,"blue",?,"Levitate",?,?,Slow,Electric
+2.1,80.5,fins,30,?,?,?,?,?,85,115,80,105,80,50,"blue",?,"Levitate",?,?,Slow,Electric
+0.7,11,fins,75,?,?,?,?,?,109,66,84,81,99,32,"brown",?,"Static","Limber",?,MediumFast,Ground
+0.4,20,headArms,255,2,3,2,4,2,40,80,100,30,30,20,"brown","mountain","Rock Head","Sturdy",?,MediumSlow,Rock
+0.3,6,headArms,190,4,2,4,2,4,25,35,70,95,55,45,"gray","rough","Magnet Pull","Sturdy",?,MediumFast,Electric
+0.9,30,headArms,190,1,4,2,5,2,80,80,50,40,50,25,"purple","urban","Stench","Sticky Hold",?,MediumFast,Poison
+1.2,30,headArms,75,5,4,5,5,5,105,105,75,65,100,50,"purple","urban","Stench","Sticky Hold",?,MediumFast,Poison
+1.6,0.1,headArms,90,4,1,5,4,4,45,50,45,115,55,95,"purple","cave","Levitate",?,?,MediumSlow,Ghost
+0.4,10.3,headArms,225,2,2,2,4,2,70,43,53,43,53,40,"green","grass","Liquid Ooze","Sticky Hold",?,Fluctuating,Poison
+1.7,80,headArms,75,2,4,3,5,2,100,73,83,73,83,55,"purple","grass","Liquid Ooze","Sticky Hold",?,Fluctuating,Poison
+0.7,30.6,headArms,255,3,3,3,4,5,60,25,35,70,80,60,"black","mountain","Thick Fat","Own Tempo",?,Fast,Psychic
+0.5,21.5,headArms,255,4,3,5,4,3,40,40,55,40,70,55,"brown","rough","Levitate",?,?,MediumFast,Ground
+1.5,107.9,headArms,90,3,3,5,4,4,60,70,105,70,120,75,"black","rough","Levitate",?,?,MediumFast,Ground
+0.8,15,headArms,190,4,3,3,3,4,20,40,90,30,90,25,"black","forest","Levitate",?,?,Fast,Ghost
+0.6,1,headArms,45,5,2,2,2,5,65,50,70,95,80,65,"blue","grass","Levitate",?,?,Fast,Psychic
+1.2,202.5,headArms,3,3,4,3,4,4,60,75,100,55,80,50,"blue","rough","Clear Body",?,?,Slow,Steel
+0.4,1.2,headArms,125,5,1,4,4,5,90,50,34,60,44,70,"purple",?,"Aftermath","Unburden",?,Fluctuating,Ghost
+1.2,15,headArms,60,4,3,2,5,5,150,80,44,90,54,80,"purple",?,"Aftermath","Unburden",?,Fluctuating,Ghost
+1.3,187,headArms,90,1,5,3,5,5,67,89,116,79,116,33,"green",?,"Levitate","Heatproof",?,MediumFast,Steel
+1.2,180,headArms,30,2,3,5,4,5,70,70,115,130,90,60,"gray",?,"Magnet Pull","Sturdy",?,MediumFast,Electric
+0.9,34,headArms,30,4,5,5,1,4,85,80,70,135,75,90,"red",?,"Adaptability","Download",?,MediumFast,Normal
+2.2,106.6,headArms,45,2,4,4,4,4,45,100,135,65,135,45,"black",?,"Pressure",?,?,Fast,Ghost
+1.3,26.6,headArms,75,4,3,5,3,5,70,80,70,80,70,110,"silver",?,"Snow Cloak",?,?,MediumFast,Ice
+0.4,3.1,headArms,30,5,2,5,3,3,80,80,80,80,80,80,"blue",?,"Hydration",?,?,Slow,Water
+0.5,7.3,headArms,120,?,?,?,?,?,55,63,90,50,80,42,"green",?,"Leaf Guard","Chlorophyll",?,MediumSlow,Bug
+0.5,1.5,headArms,190,?,?,?,?,?,38,30,85,55,65,30,"black",?,"Mummy",?,?,MediumFast,Ghost
+1,20.1,headArms,50,?,?,?,?,?,110,65,75,125,85,30,"green",?,"Overcoat","Magic Guard",?,MediumSlow,Psychic
+1,33,headArms,75,?,?,?,?,?,70,135,105,60,105,20,"gray",?,"Swarm","Shell Armor",?,MediumFast,Bug
+0.2,1,headArms,190,?,?,?,?,?,69,55,45,55,55,15,"silver",?,"Effect Spore",?,?,MediumFast,Grass
+0.6,10.5,headArms,75,?,?,?,?,?,114,85,70,85,80,30,"silver",?,"Effect Spore",?,?,MediumFast,Grass
+0.6,13,headArms,90,?,?,?,?,?,60,40,60,95,60,55,"black",?,"Flash Fire","Flame Body",?,MediumSlow,Ghost
+1,34.3,headArms,45,?,?,?,?,?,60,55,90,145,90,80,"black",?,"Flash Fire","Flame Body",?,MediumSlow,Ghost
+0.8,25.3,headArms,75,?,?,?,?,?,80,70,40,100,60,145,"red",?,"Hydration","Sticky Hold",?,MediumFast,Bug
+1.5,63,headArms,3,?,?,?,?,?,79,100,80,110,90,121,"green",?,"Prankster",?,?,Slow,Flying
+3,65,headArms,3,?,?,?,?,?,79,105,70,145,80,101,"blue",?,"Prankster",?,?,Slow,Electric
+1.5,68,headArms,3,?,?,?,?,?,89,145,90,105,80,91,"brown",?,"Sand Force",?,?,Slow,Ground
+0.2,0.8,headBase,255,5,2,4,4,1,10,55,25,35,45,95,"brown","cave","Sand Veil","Arena Trap",?,MediumFast,Ground
+1,6.4,headBase,120,2,3,2,4,3,65,90,50,85,45,55,"green","forest","Chlorophyll",?,?,MediumSlow,Grass
+1.7,15.5,headBase,45,1,4,4,4,3,80,105,65,100,60,70,"green","forest","Chlorophyll",?,?,MediumSlow,Grass
+0.4,8,headBase,225,4,3,3,3,3,30,40,70,70,25,60,"blue","sea","Swift Swim","Sniper","Damp",MediumFast,Water
+1.2,25,headBase,75,3,3,4,4,3,55,65,95,95,45,85,"blue","sea","Poison Point","Sniper","Damp",MediumFast,Water
+0.8,34.5,headBase,225,5,3,3,3,3,30,45,55,70,55,85,"brown","sea","Illuminate","Natural Cure",?,Slow,Water
+1.1,80,headBase,60,5,5,3,3,4,60,75,85,100,85,115,"purple","sea","Illuminate","Natural Cure",?,Slow,Water
+1.3,28.5,headBase,45,2,4,5,5,3,190,33,58,33,58,33,"blue","cave","Shadow Tag",?,?,MediumFast,Psychic
+1.8,152,headBase,45,5,4,3,5,2,75,95,95,95,95,85,"blue","sea","Swift Swim","Sniper","Damp",MediumFast,Water
+0.8,1.2,headBase,45,2,3,3,5,5,1,90,45,30,30,40,"brown","forest","Wonder Guard",?,?,Erratic,Bug
+1,23.8,headBase,45,3,4,3,5,2,66,41,77,61,87,23,"purple","sea","Suction Cups",?,?,Erratic,Rock
+1.5,60.4,headBase,45,1,4,3,5,2,86,81,97,81,107,43,"green","sea","Suction Cups",?,?,Erratic,Rock
+0.6,95.2,headBase,3,4,4,1,3,4,40,55,80,35,60,30,"blue","rough","Clear Body",?,?,Slow,Steel
+1,108,headBase,100,2,4,2,5,2,50,92,108,92,108,35,"purple",?,"Pressure",?,?,MediumFast,Ghost
+0.5,6.6,headBase,190,?,?,?,?,?,45,35,50,70,50,30,"green",?,"Chlorophyll","Own Tempo",?,MediumFast,Grass
+1.1,16.3,headBase,75,?,?,?,?,?,70,60,75,110,75,90,"green",?,"Chlorophyll","Own Tempo",?,MediumFast,Grass
+1,28,headBase,255,?,?,?,?,?,75,86,67,106,67,60,"green",?,"Water Absorb","Chlorophyll",?,MediumFast,Grass
+1.7,76.5,headBase,90,?,?,?,?,?,58,50,145,95,105,30,"yellow",?,"Mummy",?,?,MediumFast,Ghost
+0.4,5.7,headBase,255,?,?,?,?,?,36,50,50,65,60,44,"silver",?,"Ice Body",?,?,Slow,Ice
+1.1,41,headBase,120,?,?,?,?,?,51,65,65,80,75,59,"silver",?,"Ice Body",?,?,Slow,Ice
+0.3,3.1,headBase,190,?,?,?,?,?,50,30,55,65,55,20,"silver",?,"Flash Fire","Flame Body",?,MediumSlow,Ghost
+0.6,8.5,bipedalTailed,45,3,5,4,3,3,39,52,43,60,50,65,"red","mountain","Blaze",?,?,MediumSlow,Fire
+1.1,19,bipedalTailed,45,3,4,4,2,3,58,64,58,80,65,80,"red","mountain","Blaze",?,?,MediumSlow,Fire
+1.7,243.6,bipedalTailed,45,3,3,2,5,5,78,104,78,159,115,100,"red","mountain","Blaze",?,?,MediumSlow,Fire
+0.5,9,bipedalTailed,45,3,3,4,4,2,44,48,65,50,64,43,"blue","water","Torrent",?,?,MediumSlow,Water
+1,22.5,bipedalTailed,45,4,3,5,4,3,59,63,80,65,80,58,"blue","water","Torrent",?,?,MediumSlow,Water
+1.6,222.9,bipedalTailed,45,3,5,3,5,3,79,103,120,135,115,78,"blue","water","Torrent",?,?,MediumSlow,Water
+0.8,30,bipedalTailed,75,3,5,5,5,3,60,90,55,90,80,100,"yellow","forest","Static",?,?,MediumFast,Electric
+0.6,12,bipedalTailed,255,4,3,5,3,3,50,75,85,20,30,40,"yellow","rough","Sand Veil",?,?,MediumFast,Ground
+1,29.5,bipedalTailed,90,3,4,5,3,2,75,100,110,45,55,65,"yellow","rough","Sand Veil",?,?,MediumFast,Ground
+1.3,60,bipedalTailed,45,3,5,3,5,2,90,82,87,75,85,76,"blue","grass","Poison Point","Rivalry","Sheer Force",MediumSlow,Poison
+1.4,62,bipedalTailed,45,3,5,3,4,2,81,92,77,85,75,85,"purple","grass","Poison Point","Rivalry","Sheer Force",MediumSlow,Poison
+0.6,7.5,bipedalTailed,150,5,3,5,4,3,70,45,48,60,65,35,"pink","mountain","Cute Charm","Magic Guard","Friend Guard",Fast,Fairy
+1.3,40,bipedalTailed,25,3,3,5,5,3,95,70,73,85,90,60,"pink","mountain","Cute Charm","Magic Guard","Unaware",Fast,Fairy
+0.8,19.6,bipedalTailed,190,5,5,5,5,4,50,52,48,65,50,55,"yellow","water","Damp","Cloud Nine",?,MediumFast,Water
+1.7,76.6,bipedalTailed,75,3,4,3,4,4,80,82,78,95,80,85,"blue","water","Damp","Cloud Nine",?,MediumFast,Water
+0.5,28,bipedalTailed,190,4,3,5,2,3,40,80,35,35,45,70,"brown","mountain","Vital Spirit","Anger Point","Defiant",MediumFast,Fighting
+1,32,bipedalTailed,75,3,5,1,3,3,65,105,60,60,70,95,"brown","mountain","Vital Spirit","Anger Point","Defiant",MediumFast,Fighting
+0.9,19.5,bipedalTailed,200,5,1,5,4,5,25,20,15,105,55,90,"brown","urban","Synchronize","Inner Focus",?,MediumSlow,Psychic
+1.3,56.5,bipedalTailed,100,4,3,5,3,3,40,35,30,120,70,105,"brown","urban","Synchronize","Inner Focus",?,MediumSlow,Psychic
+0.8,19.5,bipedalTailed,180,4,4,3,3,2,70,80,50,35,35,35,"gray","mountain","Guts","No Guard","Steadfast",MediumSlow,Fighting
+1.6,78.5,bipedalTailed,75,1,3,5,5,3,95,75,110,100,80,30,"pink","water","Oblivious","Own Tempo",?,MediumFast,Water
+1.5,40.5,bipedalTailed,45,3,3,5,4,3,60,65,80,170,95,130,"purple","cave","Levitate",?,?,MediumSlow,Ghost
+0.4,6.5,bipedalTailed,190,4,5,3,3,3,50,50,95,40,50,35,"brown","mountain","Rock Head","Lightningrod",?,MediumFast,Ground
+1,45,bipedalTailed,75,3,5,3,4,2,60,80,110,50,80,45,"brown","mountain","Rock Head","Lightningrod",?,MediumFast,Ground
+1.2,65.5,bipedalTailed,45,3,4,3,5,3,90,55,75,60,75,30,"pink","grass","Own Tempo","Oblivious",?,MediumFast,Normal
+1.9,120,bipedalTailed,60,2,5,3,5,3,105,130,120,45,45,40,"gray","rough","Lightningrod","Rock Head",?,Slow,Ground
+1.1,34.6,bipedalTailed,30,3,4,4,5,3,250,5,5,35,105,50,"pink","urban","Natural Cure","Serene Grace",?,Fast,Normal
+2.2,220.5,bipedalTailed,45,4,5,4,5,2,105,125,100,60,100,100,"brown","grass","Early Bird","Scrappy","Inner Focus",MediumFast,Normal
+1.1,30,bipedalTailed,45,4,4,4,4,3,65,83,57,95,85,105,"yellow","grass","Static",?,?,MediumFast,Electric
+1.3,44.5,bipedalTailed,45,2,3,5,5,3,65,95,57,100,85,93,"red","mountain","Flame Body",?,?,MediumFast,Fire
+1.3,40.5,bipedalTailed,45,5,5,3,3,3,60,115,105,65,70,80,"brown","sea","Swift Swim","Battle Armor",?,MediumFast,Rock
+2.2,210,bipedalTailed,45,5,5,3,4,5,91,134,95,100,100,80,"brown","water","Inner Focus",?,?,Slow,Dragon
+2.3,280,bipedalTailed,3,5,5,5,4,4,106,150,70,194,120,140,"purple","rare","Pressure",?,?,Slow,Psychic
+0.4,4,bipedalTailed,45,5,5,5,5,5,100,100,100,100,100,100,"pink","rare","Synchronize",?,?,MediumSlow,Psychic
+0.6,9.5,bipedalTailed,45,4,5,3,3,3,50,65,64,44,48,43,"blue","water","Torrent",?,?,MediumSlow,Water
+1.1,25,bipedalTailed,45,3,5,3,5,3,65,80,80,59,63,58,"blue","water","Torrent",?,?,MediumSlow,Water
+2.3,88.8,bipedalTailed,45,4,5,4,4,2,85,105,100,79,83,78,"blue","water","Torrent",?,?,MediumSlow,Water
+0.3,3,bipedalTailed,150,5,2,4,3,3,50,25,28,45,55,15,"pink","mountain","Cute Charm","Magic Guard","Friend Guard",Fast,Fairy
+0.8,13.3,bipedalTailed,120,3,3,3,4,3,70,55,55,80,60,45,"pink","grass","Static",?,?,MediumSlow,Electric
+1.4,61.5,bipedalTailed,45,3,4,4,5,3,90,95,105,165,110,45,"yellow","grass","Static",?,?,MediumSlow,Electric
+0.4,8.5,bipedalTailed,190,4,5,3,3,3,70,20,50,20,50,40,"blue","water","Thick Fat","Huge Power",?,Fast,Water
+0.8,28.5,bipedalTailed,75,3,5,3,4,2,100,50,80,50,80,50,"blue","water","Thick Fat","Huge Power",?,Fast,Water
+0.4,0.5,bipedalTailed,255,5,2,1,1,5,35,35,40,35,55,50,"pink","grass","Chlorophyll","Leaf Guard","Infiltrator",MediumSlow,Grass
+0.6,1,bipedalTailed,120,5,3,1,2,5,55,45,50,45,65,80,"green","grass","Chlorophyll","Leaf Guard","Infiltrator",MediumSlow,Grass
+0.8,3,bipedalTailed,45,5,3,2,2,5,75,55,70,55,85,110,"blue","grass","Chlorophyll","Leaf Guard","Infiltrator",MediumSlow,Grass
+0.8,11.5,bipedalTailed,45,4,3,4,3,4,55,70,55,40,55,85,"purple","forest","Run Away","Pickup",?,Fast,Normal
+1.4,75,bipedalTailed,90,2,4,4,5,2,95,85,85,65,65,35,"blue","water","Damp","Water Absorb",?,MediumFast,Water
+2,79.5,bipedalTailed,70,3,3,5,3,3,95,75,80,100,110,30,"pink","water","Oblivious","Own Tempo",?,MediumFast,Water
+1.4,48.7,bipedalTailed,75,2,5,4,3,2,90,120,75,60,60,45,"purple","urban","Intimidate","Quick Feet","Rattled",Fast,Fairy
+0.9,28,bipedalTailed,60,5,3,5,1,4,55,95,55,35,75,115,"black","forest","Inner Focus","Keen Eye",?,MediumSlow,Dark
+0.6,8.8,bipedalTailed,120,3,3,4,5,3,60,80,50,50,50,40,"brown","mountain","Pickup","Quick Feet","Honey Gather",MediumFast,Normal
+1.8,125.8,bipedalTailed,60,3,5,3,5,2,90,130,75,75,75,55,"brown","mountain","Guts","Quick Feet","Unnerve",MediumFast,Normal
+1.2,58,bipedalTailed,45,3,3,5,3,3,55,20,35,20,45,75,"silver","urban","Own Tempo","Technician","Moody",Fast,Normal
+1.4,48,bipedalTailed,45,3,3,5,3,3,50,95,95,35,110,70,"brown","urban","Intimidate","Technician","Steadfast",MediumFast,Fighting
+0.7,21.4,bipedalTailed,45,3,3,3,3,3,45,75,37,70,55,83,"red","mountain","Flame Body",?,?,MediumFast,Fire
+1.2,75.5,bipedalTailed,45,3,4,4,5,3,95,80,105,40,70,100,"pink","grass","Thick Fat","Scrappy","Sap Sipper",Slow,Normal
+0.6,72,bipedalTailed,45,3,4,4,3,3,50,64,50,45,50,41,"green","mountain","Guts",?,?,Slow,Rock
+2.5,562.2,bipedalTailed,45,2,5,4,5,2,100,164,150,95,120,71,"green","mountain","Sand Stream",?,?,Slow,Rock
+0.5,5,bipedalTailed,45,5,3,5,2,3,40,45,35,65,55,70,"green","forest","Overgrow",?,?,MediumSlow,Grass
+0.9,21.6,bipedalTailed,45,5,4,5,4,4,50,65,45,85,65,95,"green","forest","Overgrow",?,?,MediumSlow,Grass
+1.7,52.2,bipedalTailed,45,4,5,5,4,4,70,85,65,105,85,120,"green","forest","Overgrow",?,?,MediumSlow,Grass
+0.9,19.5,bipedalTailed,45,4,5,4,3,4,60,85,60,85,60,55,"red","grass","Blaze",?,?,MediumSlow,Fire
+1.9,52,bipedalTailed,45,2,5,5,4,4,80,160,80,130,80,100,"red","grass","Blaze",?,?,MediumSlow,Fire
+0.7,28,bipedalTailed,45,3,4,4,5,3,70,85,70,60,70,50,"blue","water","Torrent",?,?,MediumSlow,Water
+1.5,81.9,bipedalTailed,45,3,5,5,5,2,100,110,90,85,90,60,"blue","water","Torrent",?,?,MediumSlow,Water
+1.2,39.2,bipedalTailed,90,3,5,5,3,3,60,130,80,60,60,70,"green","forest","Effect Spore","Poison Heal","Technician",Fluctuating,Grass
+1.4,46.5,bipedalTailed,120,5,3,4,4,4,80,80,80,55,55,90,"silver","forest","Vital Spirit",?,?,Slow,Normal
+0.6,16.3,bipedalTailed,190,5,3,4,3,3,64,51,23,51,23,28,"pink","cave","Soundproof",?,?,MediumSlow,Normal
+1,40.5,bipedalTailed,120,4,4,4,4,3,84,71,43,71,43,48,"blue","cave","Soundproof",?,?,MediumSlow,Normal
+1.5,84,bipedalTailed,45,3,4,4,5,2,104,91,63,91,63,68,"blue","cave","Soundproof",?,?,MediumSlow,Normal
+2.2,870.8,bipedalTailed,45,2,5,4,4,2,70,140,230,60,80,50,"gray","mountain","Sturdy","Rock Head",?,Slow,Steel
+0.4,4.2,bipedalTailed,200,4,2,2,3,4,60,50,40,85,75,95,"yellow","grass","Plus",?,?,MediumFast,Electric
+0.4,4.2,bipedalTailed,200,4,2,2,3,4,60,40,50,75,85,95,"yellow","grass","Minus",?,?,MediumFast,Electric
+0.7,17.7,bipedalTailed,150,4,3,2,3,5,65,73,55,47,75,85,"gray","forest","Illuminate","Swarm",?,Erratic,Bug
+0.9,71.5,bipedalTailed,60,2,5,5,5,3,80,45,65,90,110,80,"purple","mountain","Thick Fat","Own Tempo",?,Fast,Psychic
+1.1,5,bipedalTailed,255,3,3,4,3,3,60,60,60,60,60,60,"brown","mountain","Own Tempo","Tangled Feet","Contrary",Fast,Normal
+1.3,40.3,bipedalTailed,90,3,5,4,5,3,73,115,60,60,60,90,"silver","grass","Immunity",?,?,Erratic,Normal
+1.5,68.2,bipedalTailed,45,2,5,4,5,2,75,125,100,70,80,45,"gray","water","Battle Armor",?,?,Erratic,Rock
+1,22,bipedalTailed,200,4,3,5,4,3,60,90,70,60,120,40,"green","forest","Color Change",?,?,MediumSlow,Normal
+1.2,28.7,bipedalTailed,45,3,4,4,3,3,64,165,75,93,83,75,"black","urban","Insomnia","Frisk","Cursed Body",Fast,Ghost
+0.6,14,bipedalTailed,125,5,3,4,5,3,95,23,48,23,48,23,"blue","cave","Shadow Tag",?,?,MediumFast,Psychic
+3.5,0,bipedalTailed,5,2,5,5,5,2,100,150,140,100,90,90,"red","rough","Drought",?,?,Slow,Ground
+0.5,6.2,bipedalTailed,45,5,4,4,2,3,44,58,44,58,44,61,"brown",?,"Blaze",?,?,MediumSlow,Fire
+0.9,22,bipedalTailed,45,5,4,5,2,3,64,78,52,78,52,81,"brown",?,"Blaze",?,?,MediumSlow,Fire
+1.2,55,bipedalTailed,45,4,5,5,2,3,76,104,71,104,71,108,"brown",?,"Blaze",?,?,MediumSlow,Fire
+0.8,23,bipedalTailed,45,4,4,4,5,4,64,66,68,81,76,50,"blue",?,"Torrent",?,?,MediumSlow,Water
+1.7,84.5,bipedalTailed,45,3,5,3,5,4,84,86,88,111,101,60,"blue",?,"Torrent",?,?,MediumSlow,Water
+1,31.5,bipedalTailed,127,4,4,4,5,2,79,85,60,55,60,71,"brown",?,"Simple","Unaware",?,MediumFast,Normal
+0.9,31.5,bipedalTailed,45,4,5,3,3,3,67,125,40,30,30,58,"blue",?,"Mold Breaker",?,?,Erratic,Rock
+1.6,102.5,bipedalTailed,45,3,5,3,4,3,97,165,60,65,50,58,"blue",?,"Mold Breaker",?,?,Erratic,Rock
+1.2,20.3,bipedalTailed,45,4,4,5,4,4,75,100,66,60,66,115,"purple",?,"Technician","Pickup",?,Fast,Normal
+0.4,5.5,bipedalTailed,190,5,4,2,4,4,55,66,44,44,56,85,"brown",?,"Run Away","Klutz",?,MediumFast,Normal
+1.2,33.3,bipedalTailed,60,5,4,2,4,4,65,76,84,54,96,105,"brown",?,"Cute Charm","Klutz",?,MediumFast,Normal
+0.7,20.5,bipedalTailed,45,4,4,3,3,2,58,70,45,40,45,42,"blue",?,"Sand Veil",?,?,Slow,Dragon
+1.4,56,bipedalTailed,45,3,4,4,4,3,68,90,65,50,55,82,"blue",?,"Sand Veil",?,?,Slow,Dragon
+1.9,95,bipedalTailed,45,3,5,5,4,2,108,170,115,120,95,92,"blue",?,"Sand Veil",?,?,Slow,Dragon
+0.7,20.2,bipedalTailed,75,5,4,5,3,4,40,70,40,35,40,60,"blue",?,"Steadfast","Inner Focus",?,MediumSlow,Fighting
+1.3,126.8,bipedalTailed,45,4,5,5,3,4,70,145,88,140,70,112,"blue",?,"Steadfast","Inner Focus",?,MediumSlow,Fighting
+1,50.5,bipedalTailed,120,4,4,4,4,3,60,62,50,62,60,40,"silver",?,"Snow Warning",?,?,Slow,Grass
+2.7,407.8,bipedalTailed,60,2,5,5,5,2,90,132,105,132,105,30,"silver",?,"Snow Warning",?,?,Slow,Grass
+1.1,34,bipedalTailed,45,5,5,5,3,3,70,120,65,45,85,125,"black",?,"Pressure",?,?,MediumSlow,Dark
+2.4,282.8,bipedalTailed,30,1,5,4,5,2,115,140,130,55,55,40,"gray",?,"Lightningrod","Solid Rock",?,Slow,Ground
+1.8,138.6,bipedalTailed,30,5,4,5,4,2,75,123,67,95,85,95,"yellow",?,"Motor Drive",?,?,MediumFast,Electric
+1.6,68,bipedalTailed,30,2,5,5,5,2,75,95,67,125,95,83,"red",?,"Flame Body",?,?,MediumFast,Fire
+0.3,0.3,bipedalTailed,3,4,4,4,5,5,75,75,130,75,130,95,"yellow",?,"Levitate",?,?,Slow,Psychic
+0.3,0.3,bipedalTailed,3,3,5,4,4,5,80,105,105,105,105,80,"pink",?,"Levitate",?,?,Slow,Psychic
+0.3,0.3,bipedalTailed,3,4,3,5,3,4,75,125,70,125,70,115,"blue",?,"Levitate",?,?,Slow,Psychic
+4.2,336,bipedalTailed,30,3,5,5,5,5,90,120,100,150,120,100,"purple",?,"Pressure",?,?,Slow,Water
+0.6,8.1,bipedalTailed,45,?,?,?,?,?,45,45,55,45,55,63,"green",?,"Overgrow",?,?,MediumSlow,Grass
+0.8,16,bipedalTailed,45,?,?,?,?,?,60,60,75,60,75,83,"green",?,"Overgrow",?,?,MediumSlow,Grass
+1,55.5,bipedalTailed,45,?,?,?,?,?,90,93,55,70,55,55,"red",?,"Blaze",?,?,MediumSlow,Fire
+1.6,150,bipedalTailed,45,?,?,?,?,?,110,123,65,100,65,65,"red",?,"Blaze",?,?,MediumSlow,Fire
+0.5,5.9,bipedalTailed,45,?,?,?,?,?,55,55,45,63,45,45,"blue",?,"Torrent",?,?,MediumSlow,Water
+0.8,24.5,bipedalTailed,45,?,?,?,?,?,75,75,60,83,60,60,"blue",?,"Torrent",?,?,MediumSlow,Water
+1.1,27,bipedalTailed,255,?,?,?,?,?,60,85,69,60,69,77,"brown",?,"Illuminate","Keen Eye",?,MediumFast,Normal
+0.6,10.5,bipedalTailed,65,?,?,?,?,?,50,53,48,53,48,64,"green",?,"Gluttony",?,?,MediumFast,Grass
+1.1,30.5,bipedalTailed,65,?,?,?,?,?,75,98,63,98,63,101,"green",?,"Gluttony",?,?,MediumFast,Grass
+0.6,11,bipedalTailed,65,?,?,?,?,?,50,53,48,53,48,64,"red",?,"Gluttony",?,?,MediumFast,Fire
+1,28,bipedalTailed,65,?,?,?,?,?,75,98,63,98,63,101,"red",?,"Gluttony",?,?,MediumFast,Fire
+0.6,13.5,bipedalTailed,65,?,?,?,?,?,50,53,48,53,48,64,"blue",?,"Gluttony",?,?,MediumFast,Water
+1,29,bipedalTailed,65,?,?,?,?,?,75,98,63,98,63,101,"blue",?,"Gluttony",?,?,MediumFast,Water
+0.3,8.5,bipedalTailed,120,?,?,?,?,?,60,85,40,30,45,68,"gray",?,"Sand Rush","Sand Force",?,MediumFast,Ground
+1.1,31,bipedalTailed,255,?,?,?,?,?,103,60,86,60,86,50,"pink",?,"Healer","Regenerator",?,Fast,Normal
+0.8,17,bipedalTailed,120,?,?,?,?,?,75,65,55,65,55,69,"blue",?,"Swift Swim","Hydration",?,MediumSlow,Water
+1.5,96.3,bipedalTailed,45,?,?,?,?,?,95,117,70,65,70,92,"red",?,"Intimidate","Moxie",?,MediumSlow,Ground
+0.6,11.8,bipedalTailed,180,?,?,?,?,?,50,75,70,35,70,48,"yellow",?,"Shed Skin","Moxie",?,MediumFast,Dark
+1.1,30,bipedalTailed,90,?,?,?,?,?,65,90,115,45,115,58,"red",?,"Shed Skin","Moxie",?,MediumFast,Dark
+1.2,81,bipedalTailed,45,?,?,?,?,?,74,108,133,83,65,32,"blue",?,"Solid Rock","Sturdy",?,MediumFast,Water
+1.6,81.1,bipedalTailed,45,?,?,?,?,?,60,105,60,120,60,105,"gray",?,"Illusion",?,?,MediumSlow,Dark
+0.5,9,bipedalTailed,255,?,?,?,?,?,55,55,55,85,55,30,"blue",?,"Telepathy","Synchronize",?,MediumFast,Psychic
+0.6,18,bipedalTailed,75,?,?,?,?,?,46,87,60,30,40,57,"green",?,"Rivalry","Mold Breaker",?,Slow,Dragon
+1,36,bipedalTailed,60,?,?,?,?,?,66,117,70,40,50,67,"green",?,"Rivalry","Mold Breaker",?,Slow,Dragon
+1.8,105.5,bipedalTailed,45,?,?,?,?,?,76,147,90,60,70,97,"yellow",?,"Rivalry","Mold Breaker",?,Slow,Dragon
+0.5,8.5,bipedalTailed,120,?,?,?,?,?,55,70,40,60,40,40,"silver",?,"Snow Cloak",?,?,MediumFast,Ice
+0.9,20,bipedalTailed,180,?,?,?,?,?,45,85,50,55,50,65,"yellow",?,"Inner Focus","Regenerator",?,MediumSlow,Fighting
+1.4,35.5,bipedalTailed,45,?,?,?,?,?,65,125,60,95,60,105,"purple",?,"Inner Focus","Regenerator",?,MediumSlow,Fighting
+1.6,139,bipedalTailed,45,?,?,?,?,?,77,120,90,60,90,48,"red",?,"Rough Skin","Sheer Force",?,MediumFast,Dragon
+1.4,58,bipedalTailed,90,?,?,?,?,?,85,97,66,105,66,65,"red",?,"Gluttony","Flash Fire",?,MediumFast,Fire
+1.8,160,bipedalTailed,45,?,?,?,?,?,92,105,90,125,90,98,"blue",?,"Levitate",?,?,Slow,Dark
+2.9,345,bipedalTailed,45,?,?,?,?,?,100,150,120,120,100,90,"black",?,"Teravolt",?,?,Slow,Dragon
+3.6,325,bipedalTailed,3,?,?,?,?,?,125,120,90,170,100,95,"gray",?,"Pressure",?,?,Slow,Dragon
+0.5,5.4,headLegs,255,5,3,4,4,3,45,50,55,75,65,30,"blue","grass","Chlorophyll",?,?,MediumSlow,Grass
+0.6,12.4,headLegs,255,4,2,3,5,4,40,50,40,40,40,90,"blue","water","Water Absorb","Damp",?,MediumSlow,Water
+1.4,39.2,headLegs,190,5,3,3,4,3,35,85,45,35,35,75,"brown","grass","Run Away","Early Bird",?,MediumFast,Normal
+1.8,85.2,headLegs,45,5,4,2,2,3,60,110,70,60,60,100,"brown","grass","Run Away","Early Bird",?,MediumFast,Normal
+2,120,headLegs,45,3,4,3,4,3,95,95,85,125,65,55,"yellow","forest","Chlorophyll",?,?,Slow,Grass
+1,35,headLegs,45,3,4,4,4,3,65,55,115,100,40,60,"blue","grass","Chlorophyll","Leaf Guard","Regenerator",MediumFast,Grass
+0.8,36.5,headLegs,45,3,3,3,5,3,65,60,70,85,75,40,"pink","urban","Trace","Download","Analytic",MediumFast,Normal
+0.4,8.5,headLegs,255,3,3,3,4,3,55,45,45,25,25,15,"blue","water","Damp","Water Absorb",?,MediumFast,Water
+0.6,32.5,headLegs,45,4,4,4,4,4,85,80,90,105,95,60,"red","urban","Trace","Download","Analytic",MediumFast,Normal
+0.4,2.5,headLegs,45,5,4,4,3,4,45,60,40,70,50,45,"red","grass","Blaze",?,?,MediumSlow,Fire
+0.5,4,headLegs,255,4,3,4,4,3,40,40,50,30,30,30,"brown","forest","Chlorophyll","Early Bird",?,MediumSlow,Grass
+0.4,4.5,headLegs,255,3,3,2,5,3,60,40,60,40,60,35,"brown","forest","Effect Spore","Poison Heal","Quick Feet",Fluctuating,Grass
+0.2,2,headLegs,150,5,2,3,3,4,50,20,40,20,40,20,"blue","water","Thick Fat","Huge Power",?,Fast,Normal
+0.5,9.3,headLegs,75,4,3,5,4,3,70,60,70,87,78,85,"pink",?,"Flower Gift",?,?,MediumFast,Grass
+0.5,15,headLegs,255,4,3,3,4,3,50,80,95,10,45,10,"brown",?,"Sturdy","Rock Head",?,MediumFast,Rock
+0.4,18,headLegs,255,?,?,?,?,?,55,75,85,25,25,15,"blue",?,"Sturdy",?,?,MediumSlow,Rock
+0.7,6.9,quadruped,45,3,3,4,4,3,45,49,49,65,65,45,"green","grass","Overgrow",?,?,MediumSlow,Grass
+1,13,quadruped,45,2,3,5,5,3,60,62,63,80,80,60,"green","grass","Overgrow",?,?,MediumSlow,Grass
+2.4,342.8,quadruped,45,2,5,3,5,2,80,100,123,122,120,80,"green","grass","Overgrow",?,?,MediumSlow,Grass
+0.3,3.5,quadruped,255,5,3,3,3,3,30,56,35,25,35,72,"purple","grass","Run Away","Guts",?,MediumFast,Normal
+0.7,18.5,quadruped,127,5,4,3,3,3,55,81,60,50,70,97,"brown","grass","Run Away","Guts",?,MediumFast,Normal
+0.4,6,quadruped,190,4,4,4,4,4,35,55,30,50,40,90,"yellow","forest","Static",?,?,MediumFast,Electric
+0.4,7,quadruped,235,5,3,3,3,3,55,47,52,40,40,41,"blue","grass","Poison Point","Rivalry","Hustle",MediumSlow,Poison
+0.8,20,quadruped,120,4,4,3,4,3,70,62,67,55,55,56,"blue","grass","Poison Point","Rivalry","Hustle",MediumSlow,Poison
+0.5,9,quadruped,235,5,4,3,2,3,46,57,40,40,40,50,"purple","grass","Poison Point","Rivalry","Hustle",MediumSlow,Poison
+0.9,19.5,quadruped,120,4,4,3,3,3,61,72,57,55,55,65,"purple","grass","Poison Point","Rivalry","Hustle",MediumSlow,Poison
+0.6,9.9,quadruped,190,5,3,4,3,3,38,41,40,50,65,65,"brown","grass","Flash Fire",?,?,MediumFast,Fire
+1.1,19.9,quadruped,75,4,3,5,3,3,73,76,75,81,100,100,"yellow","grass","Flash Fire",?,?,MediumFast,Fire
+0.4,4.2,quadruped,255,4,2,4,1,4,40,45,35,40,40,90,"yellow","urban","Pickup","Technician","Unnerve",MediumFast,Normal
+1,32,quadruped,90,5,3,5,1,4,65,70,60,65,65,115,"yellow","urban","Limber","Technician","Unnerve",MediumFast,Normal
+0.7,19,quadruped,190,4,4,4,3,4,55,70,45,70,50,60,"brown","grass","Intimidate","Flash Fire",?,Slow,Fire
+1.9,155,quadruped,75,5,5,2,3,3,90,110,80,100,80,95,"brown","grass","Intimidate","Flash Fire",?,Slow,Fire
+1,30,quadruped,190,5,2,2,3,4,50,85,55,65,65,90,"yellow","grass","Run Away","Flash Fire",?,MediumFast,Fire
+1.7,95,quadruped,60,5,3,2,4,4,65,100,70,80,80,105,"yellow","grass","Run Away","Flash Fire",?,MediumFast,Fire
+1.2,36,quadruped,190,1,2,5,5,2,90,65,65,40,40,15,"pink","water","Oblivious","Own Tempo",?,MediumFast,Water
+1,115,quadruped,120,5,5,2,4,2,80,85,95,30,30,25,"gray","rough","Lightningrod","Rock Head",?,Slow,Ground
+1.4,88.4,quadruped,45,4,5,2,5,2,75,100,95,40,70,110,"brown","grass","Intimidate","Anger Point","Sheer Force",Slow,Normal
+0.3,6.5,quadruped,45,4,4,4,4,3,55,55,50,45,65,55,"brown","urban","Run Away","Adaptability","Anticipation",MediumFast,Normal
+1,29,quadruped,45,3,3,5,5,3,130,65,60,110,95,65,"blue","urban","Water Absorb",?,?,MediumFast,Water
+0.8,24.5,quadruped,45,5,3,5,2,3,65,65,60,110,95,130,"yellow","urban","Volt Absorb",?,?,MediumFast,Electric
+0.9,25,quadruped,45,4,5,3,3,3,65,130,60,95,110,65,"red","urban","Flash Fire",?,?,MediumFast,Fire
+0.9,6.4,quadruped,45,4,3,4,5,3,45,49,65,49,65,45,"green","grass","Overgrow",?,?,MediumSlow,Grass
+1.2,15.8,quadruped,45,3,3,5,5,3,60,62,80,63,80,60,"green","grass","Overgrow",?,?,MediumSlow,Grass
+1.8,100.5,quadruped,45,2,5,5,5,2,80,82,100,83,100,80,"green","grass","Overgrow",?,?,MediumSlow,Grass
+0.9,19,quadruped,45,5,4,3,4,3,58,64,58,80,65,80,"yellow","grass","Blaze",?,?,MediumSlow,Fire
+1.7,79.5,quadruped,45,4,5,3,5,3,78,84,78,109,85,100,"yellow","grass","Blaze",?,?,MediumSlow,Fire
+0.8,6,quadruped,255,5,3,4,4,4,35,46,34,35,45,20,"brown","grass","Run Away","Keen Eye",?,MediumFast,Normal
+1.8,32.5,quadruped,90,5,3,3,3,3,85,76,64,45,55,90,"brown","grass","Run Away","Keen Eye",?,MediumFast,Normal
+0.3,2,quadruped,190,5,1,5,3,4,20,40,15,35,35,60,"yellow","forest","Static",?,?,MediumFast,Electric
+0.6,7.8,quadruped,235,3,3,3,4,2,55,40,40,65,45,35,"silver","grass","Static",?,?,MediumSlow,Electric
+0.9,26.5,quadruped,45,3,3,5,2,4,65,65,60,130,95,110,"purple","urban","Synchronize",?,?,MediumFast,Psychic
+1,27,quadruped,45,3,4,2,5,3,95,65,110,60,130,65,"black","urban","Synchronize",?,?,MediumFast,Dark
+1.5,41.5,quadruped,60,4,4,4,3,3,70,80,65,90,65,85,"yellow","grass","Inner Focus","Early Bird",?,MediumFast,Normal
+0.4,6.5,quadruped,225,3,4,2,4,3,50,50,40,30,30,50,"brown","cave","Oblivious","Snow Cloak","Thick Fat",Slow,Ice
+1.1,55.8,quadruped,75,2,4,2,5,2,100,100,80,60,60,50,"brown","cave","Oblivious","Snow Cloak","Thick Fat",Slow,Ice
+0.6,10.8,quadruped,120,4,3,4,3,4,45,60,30,80,50,65,"black","rough","Early Bird","Flash Fire",?,Slow,Dark
+1.9,109.1,quadruped,45,4,3,2,4,4,75,90,90,140,90,115,"black","rough","Early Bird","Flash Fire",?,Slow,Dark
+0.5,33.5,quadruped,120,3,5,3,4,3,90,60,60,40,40,40,"blue","rough","Pickup",?,?,MediumFast,Ground
+1.1,120,quadruped,60,4,5,2,4,2,90,120,120,60,60,50,"gray","rough","Sturdy",?,?,MediumFast,Ground
+1.4,71.2,quadruped,45,3,4,3,4,3,73,95,62,85,65,85,"brown","forest","Intimidate","Frisk","Sap Sipper",Slow,Normal
+1.9,178,quadruped,3,5,4,4,3,3,90,85,75,115,100,115,"yellow","grass","Pressure",?,?,Slow,Electric
+2.1,198,quadruped,3,4,5,3,4,3,115,115,85,90,75,100,"brown","grass","Pressure",?,?,Slow,Fire
+2,187,quadruped,3,5,4,5,3,4,100,75,115,90,115,85,"blue","grass","Pressure",?,?,Slow,Water
+0.4,7.6,quadruped,45,4,4,3,5,3,50,70,50,50,50,40,"blue","water","Torrent",?,?,MediumSlow,Water
+0.5,13.6,quadruped,255,4,4,4,5,3,35,55,35,30,30,35,"gray","grass","Run Away","Quick Feet","Rattled",MediumFast,Dark
+1,37,quadruped,127,4,5,3,5,3,70,90,70,60,60,70,"gray","grass","Intimidate","Quick Feet","Moxie",MediumFast,Dark
+0.4,17.5,quadruped,255,4,4,5,4,3,38,30,41,30,41,60,"brown","grass","Pickup","Gluttony","Quick Feet",MediumFast,Normal
+0.5,32.5,quadruped,90,5,4,3,4,3,78,70,61,50,61,100,"silver","grass","Pickup","Gluttony","Quick Feet",MediumFast,Normal
+0.8,24,quadruped,255,2,2,2,5,2,60,60,60,35,35,30,"brown","forest","Truant",?,?,Slow,Normal
+0.6,11,quadruped,255,5,3,3,3,4,50,45,45,35,35,50,"pink","forest","Cute Charm","Normalize","Wonder Skin",Fast,Normal
+1.1,32.6,quadruped,60,5,3,4,4,4,70,65,65,55,55,70,"purple","forest","Cute Charm","Normalize","Wonder Skin",Fast,Normal
+0.4,60,quadruped,180,3,5,3,3,2,50,70,100,40,40,30,"gray","mountain","Sturdy","Rock Head",?,Slow,Steel
+0.9,120,quadruped,90,3,5,4,4,2,60,90,140,50,50,40,"gray","mountain","Sturdy","Rock Head",?,Slow,Steel
+0.6,15.2,quadruped,120,5,3,4,3,4,40,45,40,65,40,65,"green","grass","Static","Lightningrod",?,Slow,Electric
+1.8,97,quadruped,45,5,3,4,3,4,70,75,80,135,80,135,"yellow","grass","Static","Lightningrod",?,Slow,Electric
+0.7,24,quadruped,255,3,4,2,4,2,60,60,40,65,45,35,"yellow","mountain","Oblivious","Simple","Own Tempo",MediumFast,Fire
+1.9,220,quadruped,150,3,5,2,4,2,70,100,70,105,75,40,"red","mountain","Magma Armor","Solid Rock","Anger Point",MediumFast,Fire
+0.5,80.4,quadruped,90,2,5,3,5,2,70,85,140,85,70,20,"brown","mountain","White Smoke",?,?,MediumFast,Fire
+2,100,quadruped,200,4,5,2,4,5,99,68,83,72,87,51,"green","forest","Chlorophyll","Solar Power","Harvest",Slow,Grass
+1.2,108,quadruped,30,5,4,3,4,3,65,150,60,115,60,115,"silver","mountain","Pressure","Super Luck","Justified",MediumSlow,Dark
+1.4,150.6,quadruped,45,2,5,1,5,2,110,80,90,95,90,65,"blue","sea","Thick Fat","Ice Body","Oblivious",MediumSlow,Ice
+1.1,110.5,quadruped,45,2,5,2,5,2,65,95,100,60,50,50,"silver","rough","Rock Head",?,?,Slow,Dragon
+1.5,102.6,quadruped,45,3,5,3,3,5,95,135,80,110,80,100,"blue","rough","Intimidate",?,?,Slow,Dragon
+0.4,10.2,quadruped,45,4,4,3,4,3,55,68,64,45,55,31,"green",?,"Overgrow",?,?,MediumSlow,Grass
+1.1,97,quadruped,45,3,4,3,5,3,75,89,85,55,65,36,"green",?,"Overgrow",?,?,MediumSlow,Grass
+2.2,310,quadruped,45,2,5,3,5,2,95,109,105,75,85,56,"green",?,"Overgrow",?,?,MediumSlow,Grass
+0.5,20,quadruped,255,4,4,4,4,2,59,45,40,35,40,31,"brown",?,"Simple","Unaware",?,MediumFast,Normal
+0.5,9.5,quadruped,235,4,4,4,3,3,45,65,34,40,34,45,"blue",?,"Rivalry","Intimidate",?,MediumSlow,Electric
+0.9,30.5,quadruped,120,4,4,3,4,3,60,85,49,60,49,60,"blue",?,"Rivalry","Intimidate",?,MediumSlow,Electric
+1.4,42,quadruped,45,3,5,4,4,3,80,120,79,95,79,70,"blue",?,"Rivalry","Intimidate",?,MediumSlow,Electric
+0.5,57,quadruped,45,3,4,3,5,2,30,42,118,42,88,30,"gray",?,"Sturdy",?,?,Erratic,Rock
+1.3,149.5,quadruped,45,2,5,3,5,2,60,52,168,47,138,30,"gray",?,"Sturdy",?,?,Erratic,Rock
+0.4,3.9,quadruped,200,5,3,5,3,3,60,45,70,45,90,95,"silver",?,"Run Away","Pickup",?,MediumFast,Electric
+0.7,29.5,quadruped,190,5,4,4,4,3,55,65,35,60,30,85,"brown",?,"Swift Swim",?,?,MediumFast,Water
+1.1,33.5,quadruped,75,4,4,5,5,3,85,105,55,85,50,115,"brown",?,"Swift Swim",?,?,MediumFast,Water
+0.5,3.9,quadruped,190,5,5,4,3,4,49,55,42,42,37,85,"gray",?,"Limber","Own Tempo",?,Fast,Normal
+1,43.8,quadruped,75,4,5,2,4,3,71,82,64,64,59,112,"gray",?,"Thick Fat","Own Tempo",?,Fast,Normal
+0.4,19.2,quadruped,225,5,4,3,3,3,63,63,47,41,41,74,"purple",?,"Stench","Aftermath",?,MediumFast,Poison
+1,38,quadruped,60,3,5,4,4,2,103,93,67,71,61,84,"purple",?,"Stench","Aftermath",?,MediumFast,Poison
+0.8,49.5,quadruped,140,3,5,3,5,3,68,72,78,38,42,32,"brown",?,"Sand Stream",?,?,Slow,Ground
+2,300,quadruped,60,2,5,2,5,2,108,112,118,68,72,47,"brown",?,"Sand Stream",?,?,Slow,Ground
+1,25.5,quadruped,45,3,4,4,5,4,65,110,130,60,65,95,"green",?,"Leaf Guard",?,?,MediumFast,Grass
+0.8,25.9,quadruped,45,4,4,5,4,3,65,60,110,130,95,65,"blue",?,"Snow Cloak",?,?,MediumFast,Ice
+2.5,291,quadruped,50,4,5,3,5,2,110,130,80,70,60,80,"brown",?,"Oblivious","Snow Cloak",?,Slow,Ice
+5.4,683,quadruped,30,3,5,5,5,5,100,120,120,150,100,90,"silver",?,"Pressure",?,?,Slow,Steel
+1.7,430,quadruped,3,3,5,5,5,2,91,90,106,130,106,77,"brown",?,"Flash Fire",?,?,Slow,Fire
+0.4,11.5,quadruped,45,5,4,4,3,5,100,103,75,120,75,127,"green",?,"Natural Cure",?,?,MediumSlow,Grass
+3.2,320,quadruped,3,5,5,5,5,5,120,120,120,120,120,120,"gray",?,"Multitype",?,?,Slow,Normal
+0.5,9.9,quadruped,45,?,?,?,?,?,65,63,45,45,45,45,"red",?,"Blaze",?,?,MediumSlow,Fire
+1.5,94.6,quadruped,45,?,?,?,?,?,95,100,85,108,70,70,"blue",?,"Torrent",?,?,MediumSlow,Water
+0.5,11.6,quadruped,255,?,?,?,?,?,45,55,39,35,39,42,"brown",?,"Run Away","Keen Eye",?,MediumFast,Normal
+0.4,4.1,quadruped,255,?,?,?,?,?,45,60,45,25,45,55,"brown",?,"Vital Spirit","Pickup",?,MediumSlow,Normal
+0.9,14.7,quadruped,120,?,?,?,?,?,65,80,65,35,65,60,"gray",?,"Intimidate","Sand Rush",?,MediumSlow,Normal
+1.2,61,quadruped,45,?,?,?,?,?,85,110,90,45,90,80,"gray",?,"Intimidate","Sand Rush",?,MediumSlow,Normal
+0.4,10.1,quadruped,255,?,?,?,?,?,41,50,37,50,37,66,"purple",?,"Limber","Unburden",?,MediumFast,Dark
+1.1,37.5,quadruped,90,?,?,?,?,?,64,88,50,88,50,106,"purple",?,"Limber","Unburden",?,MediumFast,Dark
+0.6,23.3,quadruped,190,?,?,?,?,?,76,25,45,67,55,24,"pink",?,"Forewarn","Synchronize",?,Fast,Psychic
+0.8,29.8,quadruped,190,?,?,?,?,?,45,60,32,50,32,76,"black",?,"Lightningrod","Motor Drive",?,MediumFast,Electric
+1.6,79.5,quadruped,75,?,?,?,?,?,75,100,63,80,63,116,"black",?,"Lightningrod","Motor Drive",?,MediumFast,Electric
+0.7,15.2,quadruped,180,?,?,?,?,?,50,72,35,35,35,65,"brown",?,"Intimidate","Moxie",?,MediumSlow,Ground
+1,33.4,quadruped,90,?,?,?,?,?,60,82,45,45,45,74,"brown",?,"Intimidate","Moxie",?,MediumSlow,Ground
+1.3,92.9,quadruped,60,?,?,?,?,?,105,30,105,140,105,55,"red",?,"Sheer Force",?,?,MediumSlow,Fire
+0.7,16.5,quadruped,45,?,?,?,?,?,54,78,103,53,45,22,"blue",?,"Solid Rock","Sturdy",?,MediumFast,Water
+0.7,12.5,quadruped,75,?,?,?,?,?,40,65,40,80,40,65,"gray",?,"Illusion",?,?,MediumSlow,Dark
+0.4,5.8,quadruped,255,?,?,?,?,?,55,50,40,40,40,75,"gray",?,"Cute Charm","Technician",?,Fast,Normal
+0.5,7.5,quadruped,60,?,?,?,?,?,75,95,60,65,60,115,"gray",?,"Cute Charm","Technician",?,Fast,Normal
+0.6,19.5,quadruped,190,?,?,?,?,?,60,60,50,40,50,75,"yellow",?,"Chlorophyll","Sap Sipper",?,MediumFast,Normal
+1.9,92.5,quadruped,75,?,?,?,?,?,80,100,70,60,70,95,"brown",?,"Chlorophyll","Sap Sipper",?,MediumFast,Normal
+0.4,5,quadruped,200,?,?,?,?,?,55,75,60,75,60,103,"silver",?,"Static",?,?,MediumFast,Electric
+2.6,260,quadruped,60,?,?,?,?,?,95,110,80,70,80,50,"silver",?,"Snow Cloak",?,?,MediumFast,Ice
+1.6,94.5,quadruped,45,?,?,?,?,?,95,110,95,40,95,55,"brown",?,"Reckless","Sap Sipper",?,MediumFast,Normal
+0.8,17.3,quadruped,45,?,?,?,?,?,52,65,50,45,50,38,"blue",?,"Hustle",?,?,Slow,Dark
+1.4,50,quadruped,45,?,?,?,?,?,72,85,70,65,70,58,"blue",?,"Hustle",?,?,Slow,Dark
+2.1,250,quadruped,3,?,?,?,?,?,91,90,129,90,72,108,"blue",?,"Justified",?,?,Slow,Steel
+1.9,260,quadruped,3,?,?,?,?,?,91,129,90,72,90,108,"gray",?,"Justified",?,?,Slow,Rock
+2,200,quadruped,3,?,?,?,?,?,91,90,72,90,129,108,"green",?,"Justified",?,?,Slow,Grass
+1.4,48.5,quadruped,3,?,?,?,?,?,91,72,90,129,90,108,"yellow",?,"Justified",?,?,Slow,Water
+0.3,1.8,singleWings,255,5,3,4,3,5,40,45,40,35,35,56,"brown","forest","Keen Eye","Tangled Feet","Big Pecks",MediumSlow,Normal
+1.1,30,singleWings,120,4,3,3,4,5,63,60,55,50,50,71,"brown","forest","Keen Eye","Tangled Feet","Big Pecks",MediumSlow,Normal
+1.5,39.5,singleWings,45,4,5,3,4,5,83,80,75,70,70,91,"brown","forest","Keen Eye","Tangled Feet","Big Pecks",MediumSlow,Normal
+0.3,2,singleWings,255,5,4,3,3,5,40,60,30,31,31,70,"brown","rough","Keen Eye",?,?,MediumFast,Normal
+1.2,38,singleWings,90,4,5,3,3,5,65,90,65,61,61,100,"brown","rough","Keen Eye",?,?,MediumFast,Normal
+0.8,7.5,singleWings,255,5,3,4,3,5,40,45,35,30,40,55,"purple","cave","Inner Focus",?,?,MediumFast,Poison
+1.6,55,singleWings,90,5,3,3,4,5,75,80,70,65,75,90,"purple","cave","Inner Focus",?,?,MediumFast,Poison
+0.8,15,singleWings,45,3,4,3,3,4,52,65,55,58,62,60,"brown","grass","Keen Eye","Inner Focus",?,MediumFast,Normal
+2.1,174.2,singleWings,45,5,3,2,3,5,80,135,85,70,95,150,"purple","mountain","Rock Head","Pressure",?,Slow,Rock
+1.7,55.4,singleWings,3,4,4,5,3,5,90,85,100,95,125,85,"blue","rare","Pressure",?,?,Slow,Ice
+1.6,52.6,singleWings,3,5,5,5,3,5,90,90,85,125,90,100,"yellow","rare","Pressure",?,?,Slow,Electric
+2,60,singleWings,3,4,5,5,5,5,90,100,90,125,85,90,"yellow","rare","Pressure",?,?,Slow,Fire
+0.7,21.2,singleWings,255,3,3,5,3,4,60,30,30,36,56,50,"brown","forest","Insomnia","Keen Eye",?,MediumFast,Normal
+1.6,40.8,singleWings,90,3,3,3,4,5,100,50,50,76,96,70,"brown","forest","Insomnia","Keen Eye",?,MediumFast,Normal
+1,10.8,singleWings,255,5,2,5,3,5,40,20,30,40,80,55,"red","forest","Swarm","Early Bird",?,Fast,Bug
+1.4,35.6,singleWings,90,5,2,5,3,5,55,35,50,55,110,85,"red","forest","Swarm","Early Bird",?,Fast,Bug
+0.2,2,singleWings,190,4,3,2,4,4,40,50,45,70,45,70,"green","forest","Synchronize","Early Bird",?,MediumFast,Psychic
+1.5,15,singleWings,75,3,3,3,4,4,65,75,70,95,70,95,"green","forest","Synchronize","Early Bird",?,MediumFast,Psychic
+0.5,2.1,singleWings,30,4,3,4,4,4,60,85,42,85,42,91,"black","forest","Insomnia","Super Luck","Prankster",MediumSlow,Dark
+1.1,64.8,singleWings,60,4,3,3,2,5,65,75,105,35,65,85,"purple","mountain","Hyper Cutter","Sand Veil",?,MediumSlow,Ground
+0.9,16,singleWings,45,3,3,4,5,3,45,55,45,65,45,75,"red","mountain","Vital Spirit","Hustle",?,Fast,Ice
+2.1,220,singleWings,25,4,4,3,5,3,65,40,70,80,140,70,"purple","sea","Swift Swim","Water Absorb",?,Slow,Water
+1.7,50.5,singleWings,25,5,3,2,4,5,65,80,140,40,70,70,"gray","rough","Keen Eye","Sturdy",?,Slow,Steel
+5.2,216,singleWings,3,4,5,4,4,5,106,90,130,90,154,110,"silver","rare","Pressure",?,?,Slow,Psychic
+3.8,199,singleWings,3,4,4,5,4,5,106,130,90,110,154,90,"red","rare","Pressure",?,?,Slow,Fire
+0.3,2.3,singleWings,200,4,4,3,4,5,40,55,30,30,30,85,"blue","grass","Guts",?,?,MediumSlow,Normal
+0.7,19.8,singleWings,45,3,5,2,4,5,60,85,60,50,50,125,"blue","grass","Guts",?,?,MediumSlow,Normal
+0.6,9.5,singleWings,190,4,3,3,4,5,40,30,30,55,30,85,"silver","sea","Keen Eye",?,?,MediumFast,Water
+1.2,28,singleWings,45,3,4,2,5,5,60,50,100,85,70,65,"yellow","sea","Keen Eye",?,?,MediumFast,Water
+2,82,singleWings,45,4,5,4,2,5,80,100,80,80,80,100,"green","rough","Levitate",?,?,MediumSlow,Ground
+0.4,1.2,singleWings,255,3,3,4,4,5,45,40,60,40,75,50,"blue","forest","Natural Cure",?,?,Erratic,Normal
+1.1,20.6,singleWings,45,3,3,4,4,5,75,70,90,70,105,80,"blue","forest","Natural Cure",?,?,Erratic,Dragon
+1.4,40,singleWings,3,5,4,5,3,5,80,80,90,110,130,110,"red","water","Levitate",?,?,Slow,Dragon
+2,60,singleWings,3,5,4,5,3,5,80,90,80,130,110,110,"blue","water","Levitate",?,?,Slow,Dragon
+0.3,2,singleWings,255,4,3,2,3,5,40,55,30,30,30,60,"brown",?,"Keen Eye",?,?,MediumSlow,Normal
+0.6,15.5,singleWings,120,4,3,3,4,5,55,75,50,40,40,80,"brown",?,"Intimidate",?,?,MediumSlow,Normal
+1.2,24.9,singleWings,45,3,5,3,4,5,85,120,70,50,50,100,"brown",?,"Intimidate",?,?,MediumSlow,Normal
+0.9,27.3,singleWings,30,3,4,3,5,5,100,125,52,105,52,71,"black",?,"Insomnia","Super Luck",?,MediumSlow,Dark
+0.5,1.9,singleWings,30,4,3,4,3,5,76,65,45,92,42,91,"black",?,"Keen Eye","Tangled Feet",?,MediumSlow,Normal
+1,65,singleWings,25,4,3,2,4,4,45,20,50,60,120,50,"blue",?,"Swift Swim","Water Absorb",?,Slow,Water
+1.5,38,singleWings,30,4,3,4,4,5,85,50,95,120,115,80,"silver",?,"Hustle","Serene Grace",?,Fast,Fairy
+2,42.5,singleWings,30,3,5,5,4,5,75,95,125,45,75,95,"purple",?,"Hyper Cutter","Sand Veil",?,MediumSlow,Ground
+0.3,2.1,singleWings,255,?,?,?,?,?,50,55,50,36,30,43,"gray",?,"Big Pecks","Super Luck",?,MediumSlow,Normal
+0.6,15,singleWings,120,?,?,?,?,?,62,77,62,50,42,65,"gray",?,"Big Pecks","Super Luck",?,MediumSlow,Normal
+1.2,29,singleWings,45,?,?,?,?,?,80,105,80,65,55,93,"gray",?,"Big Pecks","Super Luck",?,MediumSlow,Normal
+0.4,2.1,singleWings,190,?,?,?,?,?,55,45,43,55,43,72,"blue",?,"Unaware","Klutz",?,MediumFast,Psychic
+0.9,10.5,singleWings,45,?,?,?,?,?,67,57,55,77,55,114,"blue",?,"Unaware","Klutz",?,MediumFast,Psychic
+1.4,14,singleWings,45,?,?,?,?,?,72,58,80,103,80,97,"black",?,"Wonder Skin","Magic Guard",?,MediumFast,Psychic
+0.6,9.5,singleWings,45,?,?,?,?,?,55,112,45,74,45,70,"yellow",?,"Defeatist",?,?,MediumFast,Rock
+1.4,32,singleWings,45,?,?,?,?,?,75,140,65,112,65,110,"yellow",?,"Defeatist",?,?,MediumFast,Rock
+0.5,5.5,singleWings,190,?,?,?,?,?,62,44,50,44,50,55,"blue",?,"Keen Eye","Big Pecks",?,MediumFast,Water
+1.3,24.2,singleWings,45,?,?,?,?,?,75,87,63,87,63,98,"silver",?,"Keen Eye","Big Pecks",?,MediumFast,Water
+0.5,10.5,singleWings,190,?,?,?,?,?,70,83,50,37,50,60,"silver",?,"Keen Eye","Sheer Force",?,Slow,Normal
+1.5,41,singleWings,60,?,?,?,?,?,100,123,75,57,75,80,"red",?,"Keen Eye","Sheer Force",?,Slow,Normal
+0.5,9,singleWings,190,?,?,?,?,?,70,55,75,45,65,60,"brown",?,"Big Pecks","Overcoat",?,Slow,Dark
+1.2,39.5,singleWings,60,?,?,?,?,?,110,65,105,55,95,80,"brown",?,"Big Pecks","Overcoat",?,Slow,Dark
+3.2,330,singleWings,45,?,?,?,?,?,100,120,100,150,120,90,"silver",?,"Turboblaze",?,?,Slow,Dragon
+0.9,45.5,multiped,190,3,3,5,4,3,40,40,35,50,100,70,"blue","sea","Clear Body","Liquid Ooze",?,Slow,Water
+1.6,55,multiped,60,2,3,4,4,3,80,70,65,80,120,100,"blue","sea","Clear Body","Liquid Ooze",?,Slow,Water
+0.4,7.5,multiped,45,3,3,4,4,3,35,40,100,90,55,35,"blue","sea","Swift Swim","Shell Armor",?,MediumFast,Rock
+1,35,multiped,45,3,4,4,3,2,70,60,125,115,70,55,"blue","sea","Swift Swim","Shell Armor",?,MediumFast,Rock
+0.9,28.5,multiped,75,2,4,4,5,2,75,105,75,105,75,45,"red","sea","Suction Cups","Sniper","Moody",MediumFast,Water
+1.4,27,multiped,200,3,5,3,3,5,74,100,72,90,72,46,"green",?,"Levitate",?,?,Slow,Grass
+0.9,102,multiped,120,?,?,?,?,?,70,105,105,50,40,20,"blue",?,"Sturdy",?,?,MediumSlow,Rock
+1.7,260,multiped,45,?,?,?,?,?,85,135,130,60,70,25,"blue",?,"Sturdy",?,?,MediumSlow,Rock
+1.2,33,multiped,190,?,?,?,?,?,55,40,50,65,85,40,"silver",?,"Water Absorb","Cursed Body",?,MediumFast,Water
+2.2,135,multiped,60,?,?,?,?,?,100,60,70,85,105,60,"silver",?,"Water Absorb","Cursed Body",?,MediumFast,Water
+1,110,multiped,90,?,?,?,?,?,74,94,131,54,116,20,"gray",?,"Iron Barbs",?,?,MediumFast,Grass
+0.7,33.3,multiBody,50,5,4,3,4,1,35,80,50,50,70,120,"brown","cave","Sand Veil","Arena Trap",?,MediumFast,Ground
+1,60,multiBody,60,3,3,4,4,4,50,60,95,120,70,70,"gray","rough","Magnet Pull","Sturdy",?,MediumFast,Electric
+0.4,2.5,multiBody,90,3,3,3,4,3,60,40,80,60,45,40,"pink","forest","Chlorophyll",?,?,Slow,Grass
+1.2,9.5,multiBody,60,2,4,3,4,3,65,90,120,85,70,60,"purple","urban","Levitate",?,?,MediumFast,Poison
+1.6,550,multiBody,3,2,5,4,5,2,80,135,130,95,90,70,"blue","rough","Clear Body",?,?,Slow,Steel
+0.3,5.5,multiBody,120,5,2,1,2,5,30,30,42,30,42,70,"yellow",?,"Honey Gather",?,?,MediumSlow,Bug
+0.4,3.3,multiBody,190,4,3,3,3,3,45,35,45,62,53,35,"pink",?,"Chlorophyll",?,?,MediumFast,Grass
+1.4,340,multiBody,60,2,5,4,5,5,60,55,145,75,150,40,"gray",?,"Sturdy","Magnet Pull",?,MediumFast,Rock
+1.3,57.5,multiBody,45,?,?,?,?,?,71,95,85,110,95,79,"silver",?,"Ice Body",?,?,Slow,Ice
+0.3,21,multiBody,130,?,?,?,?,?,40,55,70,45,60,30,"gray",?,"Plus","Minus",?,MediumSlow,Steel
+0.6,51,multiBody,60,?,?,?,?,?,60,80,95,70,85,50,"gray",?,"Plus","Minus",?,MediumSlow,Steel
+0.6,81,multiBody,30,?,?,?,?,?,60,100,115,70,85,90,"gray",?,"Plus","Minus",?,MediumSlow,Steel
+0.5,5.5,bipedalTailless,170,5,3,4,5,3,115,45,20,45,25,20,"pink","grass","Cute Charm",?,?,Fast,Normal
+1,12,bipedalTailless,50,3,4,4,5,3,140,70,45,75,50,45,"pink","grass","Cute Charm",?,?,Fast,Normal
+0.8,8.6,bipedalTailless,120,4,3,4,5,3,60,65,70,85,75,40,"blue","grass","Chlorophyll",?,?,MediumSlow,Grass
+1.2,18.6,bipedalTailless,45,2,3,3,5,3,75,80,85,100,90,50,"red","grass","Chlorophyll",?,?,MediumSlow,Grass
+1,30,bipedalTailless,190,5,3,3,4,3,60,55,50,40,55,45,"purple","forest","Compound Eyes","Tinted Lens","Run Away",MediumFast,Bug
+1,20,bipedalTailless,120,3,3,4,4,4,65,65,65,50,50,90,"blue","water","Water Absorb","Damp",?,MediumSlow,Water
+1.3,54,bipedalTailless,45,2,5,4,5,2,90,85,95,70,90,70,"blue","water","Water Absorb","Damp",?,MediumSlow,Water
+1.5,48,bipedalTailless,50,4,1,5,1,2,55,50,65,175,95,150,"brown","urban","Synchronize","Inner Focus",?,MediumSlow,Psychic
+1.5,70.5,bipedalTailless,90,2,4,3,4,2,80,100,70,50,60,45,"gray","mountain","Guts","No Guard","Steadfast",MediumSlow,Fighting
+1.6,130,bipedalTailless,45,2,5,4,3,2,90,130,80,65,85,55,"gray","mountain","Guts","No Guard","Steadfast",MediumSlow,Fighting
+0.7,4,bipedalTailless,255,2,2,2,5,3,50,75,35,70,30,40,"green","forest","Chlorophyll",?,?,MediumSlow,Grass
+1,105,bipedalTailless,120,2,4,2,4,2,55,95,115,45,45,35,"brown","mountain","Rock Head","Sturdy",?,MediumSlow,Rock
+1.4,300,bipedalTailless,45,2,4,2,4,2,80,110,130,55,65,45,"brown","mountain","Rock Head","Sturdy",?,MediumSlow,Rock
+1,32.4,bipedalTailless,190,2,4,3,5,3,60,48,45,43,90,42,"yellow","grass","Insomnia","Forewarn","Inner Focus",MediumFast,Psychic
+1.6,75.6,bipedalTailless,75,3,3,5,3,3,85,73,70,73,115,67,"yellow","grass","Insomnia","Forewarn","Inner Focus",MediumFast,Psychic
+1.5,49.8,bipedalTailless,45,3,4,3,3,4,50,120,53,35,110,87,"brown","urban","Limber","Reckless","Unburden",MediumFast,Fighting
+1.4,50.2,bipedalTailless,45,3,4,5,4,3,50,105,79,35,110,76,"brown","urban","Keen Eye","Iron Fist","Inner Focus",MediumFast,Fighting
+1.3,54.5,bipedalTailless,45,3,3,5,4,3,40,45,65,100,120,90,"pink","urban","Soundproof","Filter","Technician",MediumFast,Psychic
+1.4,40.6,bipedalTailless,45,3,3,5,4,3,65,50,35,115,95,95,"red","urban","Oblivious","Forewarn","Dry Skin",MediumFast,Ice
+1.7,130.1,bipedalTailless,45,2,5,4,5,3,65,155,120,65,90,105,"brown","forest","Hyper Cutter","Mold Breaker","Moxie",Slow,Bug
+2.1,460,bipedalTailless,25,2,5,3,5,2,160,110,65,65,110,30,"black","mountain","Immunity","Thick Fat",?,Slow,Normal
+0.5,7.9,bipedalTailless,45,5,4,3,3,3,39,52,43,60,50,65,"yellow","grass","Blaze",?,?,MediumSlow,Fire
+0.3,1,bipedalTailless,170,4,3,3,4,4,90,30,15,40,20,15,"pink","grass","Cute Charm",?,?,Fast,Normal
+0.3,1.5,bipedalTailless,190,5,3,3,5,4,35,20,65,40,65,20,"silver","forest","Hustle","Serene Grace",?,Fast,Fairy
+0.6,3.2,bipedalTailless,75,4,5,3,5,5,55,40,85,80,105,40,"silver","forest","Hustle","Serene Grace",?,Fast,Fairy
+0.4,5.8,bipedalTailless,45,4,3,5,3,4,75,80,85,90,100,50,"green","grass","Chlorophyll",?,?,MediumSlow,Grass
+1.2,38,bipedalTailless,65,2,4,4,5,3,70,100,115,30,65,30,"brown","forest","Sturdy","Rock Head",?,MediumFast,Rock
+1.1,33.9,bipedalTailless,45,3,4,4,4,4,90,75,75,90,100,70,"green","water","Water Absorb","Damp",?,MediumSlow,Water
+0.8,8.5,bipedalTailless,120,2,5,3,5,3,75,75,55,105,85,30,"yellow","grass","Chlorophyll","Solar Power","Early Bird",MediumSlow,Grass
+0.6,7.8,bipedalTailless,190,3,5,4,3,3,60,80,50,40,40,30,"pink","urban","Intimidate","Run Away",?,Fast,Fairy
+1.7,137.8,bipedalTailless,45,3,5,3,3,3,80,185,115,40,105,75,"blue","forest","Swarm","Guts",?,Slow,Bug
+0.7,21,bipedalTailless,75,4,4,4,2,3,35,35,35,35,35,35,"purple","urban","Guts","Steadfast","Vital Spirit",MediumFast,Fighting
+0.4,6,bipedalTailless,45,4,2,4,3,3,45,30,15,85,65,65,"pink","urban","Oblivious","Forewarn","Hydration",MediumFast,Ice
+0.6,23.5,bipedalTailless,45,4,3,3,2,3,45,63,37,65,55,95,"yellow","grass","Static",?,?,MediumFast,Electric
+1.5,46.8,bipedalTailless,30,3,3,3,5,3,255,10,10,75,135,55,"pink","urban","Natural Cure","Serene Grace",?,Fast,Normal
+0.6,5,bipedalTailless,45,5,3,5,3,5,100,100,100,100,100,100,"green","forest","Natural Cure",?,?,MediumSlow,Psychic
+1.2,32.5,bipedalTailless,120,3,4,5,4,3,60,50,50,60,70,50,"green","water","Swift Swim","Rain Dish",?,MediumSlow,Water
+1.5,55,bipedalTailless,45,4,4,5,5,3,80,70,70,90,100,70,"green","water","Swift Swim","Rain Dish",?,MediumSlow,Water
+1,28,bipedalTailless,120,5,4,4,2,3,70,70,40,60,40,60,"brown","forest","Chlorophyll","Early Bird",?,MediumSlow,Grass
+1.3,59.6,bipedalTailless,45,4,4,4,4,4,90,100,60,90,60,80,"brown","forest","Chlorophyll","Early Bird",?,MediumSlow,Grass
+0.4,6.6,bipedalTailless,235,4,1,5,4,3,28,25,25,45,35,40,"silver","urban","Synchronize","Trace",?,Slow,Psychic
+0.8,20.2,bipedalTailless,120,3,4,5,3,3,38,35,35,65,55,50,"silver","urban","Synchronize","Trace",?,Slow,Psychic
+1.6,48.4,bipedalTailless,45,4,3,5,2,4,68,85,65,165,135,100,"silver","urban","Synchronize","Trace",?,Slow,Psychic
+2,130.5,bipedalTailless,45,1,5,2,5,2,150,160,100,95,65,100,"brown","forest","Truant",?,?,Slow,Normal
+1,86.4,bipedalTailless,180,3,5,3,4,5,72,60,30,20,30,25,"yellow","mountain","Thick Fat","Guts",?,Fluctuating,Fighting
+2.3,253.8,bipedalTailless,200,2,5,3,4,5,144,120,60,40,60,50,"brown","mountain","Thick Fat","Guts",?,Fluctuating,Fighting
+1,97,bipedalTailless,255,2,4,3,5,3,30,45,135,45,90,30,"gray","cave","Sturdy","Magnet Pull",?,MediumFast,Rock
+0.5,11,bipedalTailless,45,4,4,4,4,3,50,75,75,65,65,50,"purple","cave","Keen Eye","Stall","Prankster",MediumSlow,Dark
+1,51.8,bipedalTailless,45,4,5,4,4,3,50,105,125,55,95,50,"black","cave","Hyper Cutter","Intimidate",?,Fast,Steel
+0.6,11.2,bipedalTailless,180,2,2,5,3,5,30,40,55,40,55,60,"blue","mountain","Pure Power",?,?,MediumFast,Fighting
+1.3,31.5,bipedalTailless,90,5,5,5,3,4,60,100,85,80,85,100,"red","mountain","Pure Power",?,?,MediumFast,Fighting
+0.6,17.7,bipedalTailless,150,4,2,3,3,5,65,47,55,73,75,85,"purple","forest","Oblivious","Tinted Lens","Prankster",Fluctuating,Bug
+0.3,2,bipedalTailless,150,3,3,5,3,3,50,60,45,100,80,65,"green","grass","Natural Cure","Poison Point",?,MediumSlow,Grass
+0.4,51.3,bipedalTailless,190,3,4,4,5,3,50,85,40,85,40,35,"green","rough","Sand Veil",?,?,MediumSlow,Grass
+1.3,77.4,bipedalTailless,60,4,4,5,3,3,70,115,60,115,60,55,"green","rough","Sand Veil",?,?,MediumSlow,Grass
+1.6,30.6,bipedalTailless,90,3,4,4,5,2,40,70,130,60,130,25,"black","forest","Pressure",?,?,Fast,Ghost
+0.7,16.8,bipedalTailless,190,5,3,4,3,3,50,50,50,50,50,50,"gray","cave","Inner Focus","Ice Body","Moody",MediumFast,Ice
+0.6,42.1,bipedalTailless,45,4,4,4,4,3,45,75,60,40,30,50,"blue","rough","Rock Head",?,?,Slow,Dragon
+1.7,230,bipedalTailless,3,2,5,5,5,2,80,100,200,50,100,50,"brown","cave","Clear Body",?,?,Slow,Rock
+1.8,175,bipedalTailless,3,2,4,5,5,2,80,50,100,100,200,50,"blue","cave","Clear Body",?,?,Slow,Ice
+1.9,205,bipedalTailless,3,2,5,5,5,2,80,75,150,75,150,50,"gray","cave","Clear Body",?,?,Slow,Steel
+0.3,1.1,bipedalTailless,3,5,3,5,4,3,100,100,100,100,100,100,"yellow","mountain","Serene Grace",?,?,Slow,Steel
+1.7,60.8,bipedalTailless,3,5,3,5,4,4,50,95,90,95,90,180,"red","rare","Pressure",?,?,Slow,Psychic
+0.4,5.2,bipedalTailless,45,5,4,3,3,5,53,51,53,61,56,40,"blue",?,"Torrent",?,?,MediumSlow,Water
+0.3,2.2,bipedalTailless,255,4,3,4,3,3,37,25,41,25,41,25,"red",?,"Shed Skin",?,?,MediumSlow,Bug
+0.2,1.2,bipedalTailless,255,5,3,3,3,3,40,30,35,50,70,55,"green",?,"Natural Cure","Poison Point",?,MediumSlow,Grass
+0.9,14.5,bipedalTailless,75,4,4,5,3,3,60,70,55,125,105,90,"green",?,"Natural Cure","Poison Point",?,MediumSlow,Grass
+0.2,0.6,bipedalTailless,120,4,3,3,3,5,45,30,50,65,50,45,"yellow",?,"Levitate",?,?,Fast,Psychic
+0.6,13,bipedalTailless,145,5,2,5,3,3,20,25,45,70,90,60,"pink",?,"Soundproof","Filter",?,MediumFast,Psychic
+0.6,24.4,bipedalTailless,130,4,3,4,4,3,100,5,5,15,65,30,"pink",?,"Natural Cure","Serene Grace",?,Fast,Normal
+0.6,105,bipedalTailless,50,3,5,4,5,2,135,85,40,40,85,5,"black",?,"Pickup","Thick Fat",?,Slow,Normal
+0.7,23,bipedalTailless,140,5,4,5,3,4,48,61,40,61,40,50,"blue",?,"Anticipation","Dry Skin",?,MediumFast,Poison
+1.3,44.4,bipedalTailless,75,4,4,5,4,4,83,106,65,86,65,85,"blue",?,"Anticipation","Dry Skin",?,MediumFast,Poison
+1.7,140,bipedalTailless,30,2,4,5,5,2,110,85,95,80,95,50,"pink",?,"Own Tempo","Oblivious",?,MediumFast,Normal
+2,128.6,bipedalTailless,30,2,5,5,5,2,100,100,125,110,50,50,"blue",?,"Chlorophyll","Leaf Guard",?,MediumFast,Grass
+1.6,52,bipedalTailless,45,4,5,5,2,4,68,125,65,65,115,80,"silver",?,"Steadfast",?,?,Slow,Psychic
+3.7,420,bipedalTailless,3,3,5,5,5,2,110,160,110,80,110,100,"silver",?,"Slow Start",?,?,Slow,Normal
+0.3,1.4,bipedalTailless,3,4,3,5,4,3,100,100,100,100,100,100,"blue",?,"Hydration",?,?,Slow,Water
+1.5,50.5,bipedalTailless,3,4,4,5,3,5,70,90,90,135,90,125,"black",?,"Bad Dreams",?,?,Slow,Dark
+0.4,4,bipedalTailless,3,?,?,?,?,?,100,100,100,100,100,100,"yellow",?,"Victory Star",?,?,Slow,Psychic
+1.1,60.5,bipedalTailless,75,?,?,?,?,?,116,55,85,107,95,29,"pink",?,"Forewarn","Synchronize",?,Fast,Psychic
+0.7,40.4,bipedalTailless,60,?,?,?,?,?,110,135,60,50,65,88,"gray",?,"Sand Rush","Sand Force",?,MediumFast,Ground
+0.6,12.5,bipedalTailless,180,?,?,?,?,?,75,80,55,25,35,35,"gray",?,"Guts","Sheer Force",?,MediumSlow,Fighting
+1.2,40,bipedalTailless,90,?,?,?,?,?,85,105,85,40,50,40,"gray",?,"Guts","Sheer Force",?,MediumSlow,Fighting
+1.5,87,bipedalTailless,45,?,?,?,?,?,105,140,95,55,65,45,"brown",?,"Guts","Sheer Force",?,MediumSlow,Fighting
+1.5,62,bipedalTailless,45,?,?,?,?,?,105,85,75,85,75,74,"blue",?,"Swift Swim","Poison Touch",?,MediumSlow,Water
+1.3,55.5,bipedalTailless,45,?,?,?,?,?,120,100,85,30,85,45,"red",?,"Guts","Inner Focus",?,MediumFast,Fighting
+1.4,51,bipedalTailless,45,?,?,?,?,?,75,125,75,30,75,85,"blue",?,"Sturdy","Inner Focus",?,MediumFast,Fighting
+1.2,20.5,bipedalTailless,45,?,?,?,?,?,75,103,80,70,70,92,"yellow",?,"Swarm","Chlorophyll",?,MediumSlow,Bug
+0.7,6.6,bipedalTailless,75,?,?,?,?,?,60,67,85,77,75,116,"green",?,"Prankster","Infiltrator",?,MediumFast,Grass
+0.6,37.5,bipedalTailless,120,?,?,?,?,?,70,90,45,15,45,50,"red",?,"Hustle",?,?,MediumSlow,Fire
+0.6,31,bipedalTailless,190,?,?,?,?,?,50,50,62,40,62,65,"green",?,"Stench","Sticky Hold",?,MediumFast,Poison
+1.9,107.3,bipedalTailless,60,?,?,?,?,?,80,95,82,60,82,75,"green",?,"Stench","Weak Armor",?,MediumFast,Poison
+0.4,5.8,bipedalTailless,200,?,?,?,?,?,45,30,50,55,65,45,"purple",?,"Frisk",?,?,MediumSlow,Psychic
+0.7,18,bipedalTailless,100,?,?,?,?,?,60,45,70,75,85,55,"purple",?,"Frisk",?,?,MediumSlow,Psychic
+1.5,44,bipedalTailless,50,?,?,?,?,?,70,55,95,95,110,65,"purple",?,"Frisk",?,?,MediumSlow,Psychic
+0.5,5.9,bipedalTailless,200,?,?,?,?,?,50,75,45,40,45,60,"blue",?,"Swarm","Shed Skin",?,MediumFast,Bug
+1,34.5,bipedalTailless,90,?,?,?,?,?,75,75,75,125,95,40,"brown",?,"Telepathy","Synchronize",?,MediumFast,Psychic
+1,92,bipedalTailless,190,?,?,?,?,?,59,74,50,35,50,35,"green",?,"Iron Fist","Klutz",?,MediumFast,Ground
+2.8,330,bipedalTailless,90,?,?,?,?,?,89,124,80,55,80,55,"green",?,"Iron Fist","Klutz",?,MediumFast,Ground
+0.5,10.2,bipedalTailless,120,?,?,?,?,?,45,85,70,40,40,60,"red",?,"Defiant","Inner Focus",?,MediumFast,Dark
+1.6,70,bipedalTailless,45,?,?,?,?,?,65,125,100,60,70,70,"red",?,"Defiant","Inner Focus",?,MediumFast,Dark
+0.6,6.5,bipedalTailless,3,?,?,?,?,?,100,128,90,77,77,128,"silver",?,"Serene Grace",?,?,Slow,Normal
+1.5,82.5,bipedalTailless,3,?,?,?,?,?,71,120,95,120,95,99,"purple",?,"Download",?,?,Slow,Bug
+1.1,32,TwoMoreWings,45,4,3,3,3,5,60,45,50,80,80,70,"silver","forest","Compound Eyes",?,?,MediumFast,Bug
+1,29.5,TwoMoreWings,45,4,4,4,2,5,65,80,40,45,80,75,"yellow","forest","Swarm",?,?,MediumFast,Bug
+1.5,12.5,TwoMoreWings,75,3,4,3,3,5,70,65,60,90,75,90,"purple","forest","Shield Dust","Tinted Lens","Wonder Skin",MediumFast,Bug
+1.5,56,TwoMoreWings,45,4,4,5,2,5,70,110,80,55,80,105,"green","grass","Swarm","Technician","Steadfast",MediumFast,Bug
+1.8,75,TwoMoreWings,90,5,3,3,2,5,85,90,80,70,80,130,"purple","cave","Inner Focus",?,?,MediumFast,Poison
+1.2,38,TwoMoreWings,75,5,2,1,3,5,65,65,45,75,45,95,"red","forest","Speed Boost","Compound Eyes",?,MediumFast,Bug
+2,275.6,TwoMoreWings,25,2,5,5,5,3,70,150,140,65,100,75,"red","grass","Swarm","Technician","Light Metal",MediumFast,Bug
+1,28.4,TwoMoreWings,45,3,4,3,5,5,60,70,50,90,50,65,"yellow","forest","Swarm",?,?,MediumFast,Bug
+1.2,31.6,TwoMoreWings,45,4,3,5,3,5,60,50,70,50,90,65,"green","forest","Shield Dust",?,?,MediumFast,Bug
+0.8,3.6,TwoMoreWings,75,4,3,3,4,5,70,60,62,80,82,60,"blue","water","Intimidate",?,?,MediumFast,Bug
+0.8,12,TwoMoreWings,120,5,3,3,2,5,61,90,45,50,50,160,"yellow","forest","Speed Boost",?,?,Erratic,Bug
+1.1,15.3,TwoMoreWings,120,4,3,5,3,4,50,70,50,50,50,70,"green","rough","Levitate",?,?,MediumSlow,Ground
+1,25.5,TwoMoreWings,45,4,3,5,3,3,77,85,51,55,51,65,"red",?,"Swarm",?,?,MediumSlow,Bug
+0.9,23.3,TwoMoreWings,45,5,4,4,2,5,70,94,50,94,50,66,"yellow",?,"Swarm",?,?,MediumFast,Bug
+1.2,38.5,TwoMoreWings,45,3,3,5,5,5,70,80,102,80,102,40,"yellow",?,"Pressure",?,?,MediumSlow,Bug
+1.9,51.5,TwoMoreWings,30,5,3,3,3,5,86,76,86,116,56,95,"green",?,"Speed Boost","Tinted Lens",?,MediumFast,Bug
+1.6,46,TwoMoreWings,15,?,?,?,?,?,85,60,65,135,105,100,"silver",?,"Flame Body",?,?,Slow,Bug
+0.3,5.4,insectoid,190,5,3,4,3,3,35,70,55,45,55,25,"red","forest","Effect Spore","Dry Skin","Damp",MediumFast,Bug
+1,29.5,insectoid,75,3,4,4,5,3,60,95,80,60,80,30,"red","forest","Effect Spore","Dry Skin","Damp",MediumFast,Bug
+0.4,6.5,insectoid,225,3,4,3,4,3,30,105,90,25,25,50,"red","water","Hyper Cutter","Shell Armor",?,MediumFast,Water
+1.3,60,insectoid,60,2,5,3,5,2,55,130,115,50,50,75,"red","water","Hyper Cutter","Shell Armor",?,MediumFast,Water
+0.5,11.5,insectoid,45,4,4,3,3,3,30,80,90,55,45,55,"brown","sea","Swift Swim","Battle Armor",?,MediumFast,Rock
+0.5,8.5,insectoid,255,4,3,4,4,3,40,60,40,40,40,30,"green","forest","Swarm","Insomnia",?,Fast,Bug
+1.1,33.5,insectoid,90,4,3,4,4,3,70,90,70,60,60,40,"red","forest","Swarm","Insomnia",?,Fast,Bug
+0.6,20.5,insectoid,190,2,4,2,5,2,20,10,230,10,230,5,"yellow","mountain","Sturdy","Gluttony","Contrary",MediumSlow,Bug
+0.6,5,insectoid,60,4,3,3,3,3,55,55,85,65,85,35,"pink","sea","Hustle","Natural Cure",?,Fast,Water
+0.5,2.6,insectoid,255,3,4,4,5,3,40,30,30,40,50,30,"green","water","Swift Swim","Rain Dish",?,MediumSlow,Water
+0.5,1.7,insectoid,200,5,3,3,3,3,40,30,32,50,52,65,"blue","water","Swift Swim",?,?,MediumFast,Bug
+0.5,5.5,insectoid,255,3,3,4,5,3,31,45,90,30,30,40,"gray","forest","Compound Eyes",?,?,Erratic,Bug
+0.7,15,insectoid,255,2,5,3,5,2,45,100,45,45,45,10,"brown","rough","Hyper Cutter","Arena Trap",?,MediumSlow,Ground
+0.6,11.5,insectoid,205,4,4,4,4,2,43,80,65,50,35,35,"red","water","Hyper Cutter","Shell Armor",?,Fluctuating,Water
+1.1,32.8,insectoid,155,3,5,4,4,3,63,120,85,90,55,55,"red","water","Hyper Cutter","Shell Armor",?,Fluctuating,Water
+0.7,12.5,insectoid,45,5,3,5,3,2,45,95,50,40,50,75,"gray","water","Battle Armor",?,?,Erratic,Rock
+0.3,6.3,insectoid,190,3,4,3,5,2,76,48,48,57,62,34,"purple",?,"Sticky Hold","Storm Drain",?,MediumFast,Water
+0.9,29.9,insectoid,75,2,5,3,5,2,111,83,68,92,82,39,"purple",?,"Sticky Hold","Storm Drain",?,MediumFast,Water
+0.8,12,insectoid,120,2,4,5,4,2,40,50,90,30,55,65,"purple",?,"Battle Armor","Sniper",?,Slow,Poison
+1.3,61.5,insectoid,45,2,5,5,4,2,70,90,110,60,75,95,"purple",?,"Battle Armor","Sniper",?,Slow,Poison
+1.5,85.6,insectoid,3,4,3,5,5,5,120,70,120,75,130,85,"yellow",?,"Levitate",?,?,Slow,Psychic
+0.3,2.5,insectoid,255,?,?,?,?,?,45,53,70,40,60,42,"yellow",?,"Swarm","Chlorophyll",?,MediumSlow,Bug
+0.4,5.3,insectoid,255,?,?,?,?,?,30,45,59,30,39,57,"red",?,"Poison Point","Swarm",?,MediumSlow,Bug
+2.5,200.5,insectoid,45,?,?,?,?,?,60,90,89,55,69,112,"red",?,"Poison Point","Swarm",?,MediumSlow,Bug
+0.3,14.5,insectoid,190,?,?,?,?,?,50,65,85,35,35,55,"red",?,"Sturdy","Shell Armor",?,MediumFast,Bug
+1.4,200,insectoid,75,?,?,?,?,?,70,95,125,65,75,45,"red",?,"Sturdy","Shell Armor",?,MediumFast,Bug
+0.1,0.6,insectoid,190,?,?,?,?,?,50,47,50,57,50,65,"yellow",?,"Compound Eyes","Unnerve",?,MediumFast,Bug
+0.8,14.3,insectoid,75,?,?,?,?,?,70,77,60,97,60,108,"yellow",?,"Compound Eyes","Unnerve",?,MediumFast,Bug
+0.3,33,insectoid,90,?,?,?,?,?,58,109,112,48,48,109,"gray",?,"Swarm","Hustle",?,MediumFast,Bug
+1.1,28.8,insectoid,45,?,?,?,?,?,55,85,55,50,55,60,"silver",?,"Flame Body",?,?,Slow,Bug
+0.1,0.1,head,0,?,?,?,?,?,44,38,39,61,79,42,"silver",?,?,?,?,MediumFast,Fairy
+0.2,0.9,head,0,?,?,?,?,?,54,45,47,75,98,52,"silver",?,?,?,?,MediumFast,Fairy
+0.2,0.5,head,0,?,?,?,?,?,78,52,60,63,65,23,"pink",?,?,?,?,MediumFast,Fairy
+0.2,2.2,head,0,?,?,?,?,?,67,58,57,81,67,101,?,?,?,?,?,MediumFast,Electric
+0.2,3,head,0,?,?,?,?,?,57,80,91,80,87,75,?,?,?,?,?,Fast,Steel
+0.3,7,head,0,?,?,?,?,?,41,56,40,62,44,71,"blue",?,?,?,?,MediumSlow,Water
+0.3,1.7,head,0,?,?,?,?,?,45,50,43,40,38,62,"red",?,?,?,?,MediumSlow,Normal
+0.3,2.5,head,0,?,?,?,?,?,38,35,40,27,25,35,"black",?,?,?,?,MediumFast,Bug
+0.3,8.4,head,0,?,?,?,?,?,45,22,60,27,30,29,"black",?,?,?,?,MediumFast,Bug
+0.3,3.5,head,0,?,?,?,?,?,62,48,54,63,60,68,"gray",?,?,?,?,MediumFast,Psychic
+0.3,5.7,head,0,?,?,?,?,?,50,50,150,50,150,50,?,?,?,?,?,Slow,Rock
+0.3,2.8,head,0,?,?,?,?,?,45,50,35,55,75,40,?,?,?,?,?,Slow,Dragon
+0.3,33.1,head,0,?,?,?,?,?,59,66,70,44,55,41,?,?,?,?,?,MediumFast,Ghost
+0.4,9,head,0,?,?,?,?,?,56,61,65,48,45,33,"green",?,?,?,?,MediumSlow,Grass
+0.4,9.4,head,0,?,?,?,?,?,40,45,40,62,60,60,"red",?,?,?,?,MediumSlow,Fire
+0.4,5,head,0,?,?,?,?,?,38,36,38,32,36,57,"brown",?,?,?,?,MediumFast,Normal
+0.4,3.5,head,0,?,?,?,?,?,62,48,66,59,57,49,"silver",?,?,?,?,MediumFast,Fairy
+0.4,3.5,head,0,?,?,?,?,?,53,54,37,46,45,45,"blue",?,?,?,?,MediumFast,Dark
+0.4,7,head,0,?,?,?,?,?,43,70,48,50,60,38,?,?,?,?,?,MediumFast,Ghost
+0.5,31,head,0,?,?,?,?,?,42,52,67,39,56,50,"brown",?,?,?,?,MediumFast,Rock
+0.5,6,head,0,?,?,?,?,?,44,38,33,61,43,70,"yellow",?,?,?,?,MediumFast,Electric
+0.5,7.3,head,0,?,?,?,?,?,50,60,60,60,60,30,"brown",?,?,?,?,MediumFast,Poison
+0.5,8.3,head,0,?,?,?,?,?,50,53,62,58,63,44,"blue",?,?,?,?,Slow,Water
+0.5,8,head,0,?,?,?,?,?,40,30,35,45,40,55,?,?,?,?,?,MediumFast,Flying
+0.6,8,head,0,?,?,?,?,?,67,82,62,46,48,43,"silver",?,?,?,?,MediumFast,Fighting
+0.6,13.5,head,0,?,?,?,?,?,62,50,58,73,54,72,"brown",?,?,?,?,MediumSlow,Fire
+0.6,10.9,head,0,?,?,?,?,?,54,63,52,83,56,97,"blue",?,?,?,?,MediumSlow,Water
+0.6,8.5,head,0,?,?,?,?,?,74,48,76,83,81,104,"silver",?,?,?,?,MediumFast,Psychic
+0.7,29,head,0,?,?,?,?,?,61,78,95,56,58,57,"green",?,?,?,?,MediumSlow,Grass
+0.7,16,head,0,?,?,?,?,?,62,73,55,56,52,84,"red",?,?,?,?,MediumSlow,Fire
+0.7,86,head,0,?,?,?,?,?,85,100,122,58,75,54,?,?,?,?,?,MediumFast,Ghost
+0.8,2,head,0,?,?,?,?,?,45,80,100,35,37,28,"brown",?,?,?,?,MediumFast,Steel
+0.8,4.5,head,0,?,?,?,?,?,59,110,150,45,49,35,"brown",?,?,?,?,MediumFast,Steel
+0.8,26,head,0,?,?,?,?,?,58,89,77,45,45,48,"brown",?,?,?,?,MediumFast,Rock
+0.8,15.5,head,0,?,?,?,?,?,101,72,72,99,89,29,"pink",?,?,?,?,MediumFast,Fairy
+0.8,5,head,0,?,?,?,?,?,82,80,86,85,75,72,"silver",?,?,?,?,MediumFast,Fairy
+0.8,21.5,head,0,?,?,?,?,?,78,92,75,74,63,118,"green",?,?,?,?,MediumFast,Fighting
+0.8,17.5,head,0,?,?,?,?,?,68,75,53,83,113,60,?,?,?,?,?,Slow,Dragon
+0.9,31,head,0,?,?,?,?,?,66,65,48,62,57,52,"brown",?,?,?,?,MediumFast,Grass
+1,14.5,head,0,?,?,?,?,?,59,59,58,90,70,73,"red",?,?,?,?,MediumSlow,Fire
+1,42.4,head,0,?,?,?,?,?,85,56,77,50,77,78,"brown",?,?,?,?,MediumFast,Normal
+1,21,head,0,?,?,?,?,?,62,55,52,109,94,109,"yellow",?,?,?,?,MediumFast,Electric
+1,23.5,head,0,?,?,?,?,?,95,65,65,110,130,60,"pink",?,?,?,?,MediumFast,Fairy
+1,99.5,head,0,?,?,?,?,?,55,69,85,32,35,28,?,?,?,?,?,MediumFast,Ice
+1.1,10,head,0,?,?,?,?,?,78,65,68,112,154,75,"silver",?,?,?,?,MediumFast,Fairy
+1.2,24.5,head,0,?,?,?,?,?,78,81,71,74,69,126,"red",?,?,?,?,MediumSlow,Fire
+1.2,17,head,0,?,?,?,?,?,80,52,50,90,50,89,"black",?,?,?,?,MediumFast,Bug
+1.2,28,head,0,?,?,?,?,?,75,80,60,65,90,102,"silver",?,?,?,?,MediumFast,Normal
+1.3,96,head,0,?,?,?,?,?,72,105,115,54,86,68,"brown",?,?,?,?,MediumFast,Rock
+1.3,35.3,head,0,?,?,?,?,?,71,73,88,120,89,59,"blue",?,?,?,?,Slow,Water
+1.3,25.2,head,0,?,?,?,?,?,77,59,50,67,63,46,"blue",?,?,?,?,MediumFast,Rock
+1.5,39,head,0,?,?,?,?,?,75,69,72,114,100,104,"red",?,?,?,?,MediumSlow,Fire
+1.5,40,head,0,?,?,?,?,?,72,95,67,103,71,122,"blue",?,?,?,?,MediumSlow,Water
+1.5,81.5,head,0,?,?,?,?,?,86,68,72,109,66,106,"brown",?,?,?,?,MediumSlow,Fire
+1.5,47,head,0,?,?,?,?,?,86,92,88,68,75,73,"blue",?,?,?,?,MediumFast,Dark
+1.5,71,head,0,?,?,?,?,?,85,110,76,65,82,56,?,?,?,?,?,MediumFast,Ghost
+1.5,85,head,0,?,?,?,?,?,85,70,80,97,80,123,?,?,?,?,?,MediumFast,Flying
+1.6,90,head,0,?,?,?,?,?,88,107,122,74,75,64,"green",?,?,?,?,MediumSlow,Grass
+1.7,91,head,0,?,?,?,?,?,123,100,62,97,81,68,"brown",?,?,?,?,MediumFast,Grass
+1.7,53,head,0,?,?,?,?,?,60,150,50,150,50,60,"brown",?,?,?,?,MediumFast,Steel
+1.8,81.5,head,0,?,?,?,?,?,65,75,90,97,123,44,"brown",?,?,?,?,MediumFast,Poison
+2,150.5,head,0,?,?,?,?,?,90,100,70,110,150,80,?,?,?,?,?,Slow,Dragon
+2,505,head,0,?,?,?,?,?,95,117,184,44,46,28,?,?,?,?,?,MediumFast,Ice
+2.1,136,head,0,?,?,?,?,?,95,124,78,69,71,58,"silver",?,?,?,?,MediumFast,Fighting
+2.5,270,head,0,?,?,?,?,?,82,121,119,69,59,71,"red",?,?,?,?,MediumFast,Rock
+2.7,225,head,0,?,?,?,?,?,123,77,72,99,92,58,"blue",?,?,?,?,MediumFast,Rock
+3,215,head,0,?,?,?,?,?,126,131,95,131,98,99,?,?,?,?,?,Slow,Fairy
+5,305,head,0,?,?,?,?,?,108,100,121,81,95,95,?,?,?,?,?,Slow,Dragon
+5.8,203,head,0,?,?,?,?,?,126,131,95,131,98,99,?,?,?,?,?,Slow,Dark

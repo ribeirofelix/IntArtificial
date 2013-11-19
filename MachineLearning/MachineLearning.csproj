@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201311121835022_LotOfChanges.Designer.cs">
       <DependentUpon>201311121835022_LotOfChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311181616110_ExpPokemon.cs" />
+    <Compile Include="Migrations\201311181616110_ExpPokemon.Designer.cs">
+      <DependentUpon>201311181616110_ExpPokemon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="model\PokeContext.cs" />
     <Compile Include="model\Pokemon.cs" />
@@ -97,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201311121835022_LotOfChanges.resx">
       <DependentUpon>201311121835022_LotOfChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311181616110_ExpPokemon.resx">
+      <DependentUpon>201311181616110_ExpPokemon.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

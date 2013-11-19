@@ -21,10 +21,18 @@ namespace MachineLearning
         static PokeContext ct = new PokeContext();
            
 
+        
+    delegate int twice (int arg);
+    static void foo() 
+    {
+        Expression<twice> del = x => x + x;
+        Console.WriteLine(del.Type);
+        int res = del.Compile()(3);
+    }
 
         static void Main(string[] args)
-        {        
-            
+        {
+          
          //   ParseHeight();
            // ParseBodies();
            // ParseStatsBase();
@@ -36,7 +44,9 @@ namespace MachineLearning
            // ParseAbility();
             //ParseTypes();
            //ct.SaveChanges();
-            GenFile();
+           GenFile();
+           //ParseExp();
+          // GenSVMFile();
             
         }
         
@@ -172,7 +182,6 @@ namespace MachineLearning
             {
                 if (poke == "" || poke == "|")
                     continue;
-                // LEMBRAR: PORYGON-Z PARA PORYGONZ, NIDORANMACHO PARA NIDORANM, NIDORANFEMEA PARA NIDORANF
                 float weight;
                 String name;
                 int i = 0;
@@ -414,6 +423,7 @@ namespace MachineLearning
 @attribute Ability1 { 'Adaptability' ,'Aftermath' ,'Air Lock' ,'Anticipation' ,'Bad Dreams' ,'Battle Armor' ,'Big Pecks' ,'Blaze' ,'Chlorophyll' ,'Clear Body' ,'Color Change' ,'Compound Eyes' ,'Cute Charm' ,'Damp' ,'Defeatist' ,'Defiant' ,'Download' ,'Drizzle' ,'Drought' ,'Early Bird' ,'Effect Spore' ,'Flame Body' ,'Flash Fire' ,'Flower Gift' ,'Forecast' ,'Forewarn' ,'Frisk' ,'Gluttony' ,'Guts' ,'Healer' ,'Honey Gather' ,'Hustle' ,'Hydration' ,'Hyper Cutter' ,'Ice Body' ,'Illuminate' ,'Illusion' ,'Immunity' ,'Inner Focus' ,'Insomnia' ,'Intimidate' ,'Iron Barbs' ,'Iron Fist' ,'Justified' ,'Keen Eye' ,'Leaf Guard' ,'Levitate' ,'Lightningrod' ,'Limber' ,'Liquid Ooze' ,'Magma Armor' ,'Magnet Pull' ,'Marvel Scale' ,'Minus' ,'Mold Breaker' ,'Motor Drive' ,'Multitype' ,'Mummy' ,'Natural Cure' ,'Oblivious' ,'Overcoat' ,'Overgrow' ,'Own Tempo' ,'Pickup' ,'Plus' ,'Poison Point' ,'Prankster' ,'Pressure' ,'Pure Power' ,'Reckless' ,'Rivalry' ,'Rock Head' ,'Rough Skin' ,'Run Away' ,'Sand Force' ,'Sand Rush' ,'Sand Stream' ,'Sand Veil' ,'Serene Grace' ,'Shadow Tag' ,'Shed Skin' ,'Sheer Force' ,'Shell Armor' ,'Shield Dust' ,'Simple' ,'Slow Start' ,'Snow Cloak' ,'Snow Warning' ,'Solid Rock' ,'Soundproof' ,'Speed Boost' ,'Static' ,'Steadfast' ,'Stench' ,'Sticky Hold' ,'Sturdy' ,'Suction Cups' ,'Swarm' ,'Swift Swim' ,'Synchronize' ,'Technician' ,'Telepathy' ,'Teravolt' ,'Thick Fat' ,'Torrent' ,'Trace' ,'Truant' ,'Turboblaze' ,'Unaware' ,'Victory Star' ,'Vital Spirit' ,'Volt Absorb' ,'Water Absorb' ,'Water Veil' ,'White Smoke' ,'Wonder Guard' ,'Wonder Skin' }
 @attribute Ability2 {'Adaptability' ,'Aftermath' ,'Anger Point' ,'Anticipation' ,'Arena Trap' ,'Battle Armor' ,'Big Pecks' ,'Chlorophyll' ,'Cloud Nine' ,'Compound Eyes' ,'Cursed Body' ,'Damp' ,'Download' ,'Dry Skin' ,'Early Bird' ,'Filter' ,'Flame Body' ,'Flash Fire' ,'Forewarn' ,'Frisk' ,'Gluttony' ,'Guts' ,'Heatproof' ,'Huge Power' ,'Hustle' ,'Hydration' ,'Ice Body' ,'Illuminate' ,'Infiltrator' ,'Inner Focus' ,'Insomnia' ,'Intimidate' ,'Iron Fist' ,'Keen Eye' ,'Klutz' ,'Leaf Guard' ,'Lightningrod' ,'Limber' ,'Liquid Ooze' ,'Magic Guard' ,'Magnet Pull' ,'Minus' ,'Mold Breaker' ,'Motor Drive' ,'Moxie' ,'Natural Cure' ,'No Guard' ,'Normalize' ,'Oblivious' ,'Overcoat' ,'Own Tempo' ,'Pickup' ,'Poison Heal' ,'Poison Point' ,'Poison Touch' ,'Pressure' ,'Quick Feet' ,'Rain Dish' ,'Reckless' ,'Regenerator' ,'Rivalry' ,'Rock Head' ,'Run Away' ,'Sand Force' ,'Sand Rush' ,'Sand Veil' ,'Sap Sipper' ,'Scrappy' ,'Serene Grace' ,'Shed Skin' ,'Sheer Force' ,'Shell Armor' ,'Simple' ,'Skill Link' ,'Sniper' ,'Snow Cloak' ,'Solar Power' ,'Solid Rock' ,'Stall' ,'Static' ,'Steadfast' ,'Sticky Hold' ,'Storm Drain' ,'Sturdy' ,'Super Luck' ,'Swarm' ,'Swift Swim' ,'Synchronize' ,'Tangled Feet' ,'Technician' ,'Thick Fat' ,'Tinted Lens' ,'Trace' ,'Unaware' ,'Unburden' ,'Unnerve' ,'Water Absorb' ,'Water Veil' ,'Weak Armor' }
 @attribute Hidden {'Analytic' ,'Anger Point' ,'Anticipation' ,'Big Pecks' ,'Contrary' ,'Cursed Body' ,'Damp' ,'Defiant' ,'Dry Skin' ,'Early Bird' ,'Friend Guard' ,'Harvest' ,'Honey Gather' ,'Hustle' ,'Hydration' ,'Ice Body' ,'Infiltrator' ,'Inner Focus' ,'Justified' ,'Light Metal' ,'Moody' ,'Moxie' ,'Oblivious' ,'Overcoat' ,'Own Tempo' ,'Prankster' ,'Quick Feet' ,'Rattled' ,'Regenerator' ,'Run Away' ,'Sap Sipper' ,'Sheer Force' ,'Steadfast' ,'Technician' ,'Thick Fat' ,'Unaware' ,'Unburden' ,'Unnerve' ,'Vital Spirit' ,'Wonder Skin' }
+@attribute Exp {Erratic, Fast , Fluctuating, MediumFast, MediumSlow, Slow }
 @attribute class { Grass,Fire,Water,Bug,Normal,Poison,Electric,Ground,Fairy,Fighting,Rock,Ghost,Psychic,Ice,Dragon,Dark,Steel,Flying}
 @data ";
             string total = header + "\n" + String.Join("\n", ct.Pokemons.ToList().Select(p => p.ToString()));
@@ -425,6 +435,72 @@ namespace MachineLearning
 
         }
 
+        static void GenSVMFile()
+        {
+            string header = @"@relation PokeSet
+@attribute Height real
+@attribute Weight real
+@attribute Body real
+@attribute CatchRate real
+@attribute PerfSpeed real
+@attribute PerfPower real
+@attribute PerfSkill real
+@attribute PerfStamina real
+@attribute PerfJump real
+@attribute BaseHp real
+@attribute BaseAttack real
+@attribute BaseDefense real
+@attribute BaseSpAttack real
+@attribute BaseSpDefense real
+@attribute BaseSpeed real
+@attribute Color real
+@attribute Habitat real
+@attribute Ability1 real
+@attribute Ability2 real
+@attribute Hidden real
+@attribute class { Grass,Fire,Water,Bug,Normal,Poison,Electric,Ground,Fairy,Fighting,Rock,Ghost,Psychic,Ice,Dragon,Dark,Steel,Flying}
+@data ";
+            string total = header + "\n" + String.Join("\n", ct.Pokemons.ToList().Select(p => p.ToString(true)));
+            StreamWriter sw = new StreamWriter(Path.Combine(pokefolder, "pokemonsSVM.arff"));
+            sw.Write(total);
+            sw.Close();
+
+
+        }
+
+        static void ParseExp()
+        {
+            string file = (new StreamReader(Path.Combine(pokefolder, "pokeExp.txt"))).ReadToEnd();
+            file = file.Replace('\r', ' ');
+
+            var pokeLine = file.Split('\n');
+            String exp = "";
+            foreach (var poke in pokeLine)
+            {
+                if (poke == "" || poke == "|")
+                    continue;
+
+                if (poke.StartsWith("#"))
+                {
+                    exp = poke.Replace('#', ' ').Trim();
+                    continue;
+                }
+           
+                int en = (int)Enum.Parse(typeof(PokeNum), poke);
+
+                var pokeBase = ct.Pokemons.Where(p => p.PokeId == en).FirstOrDefault(); // Doing a query to find the pokemon with this ID
+                if (pokeBase != null) // if the pokemons exists, we just set the height!
+                    pokeBase.Exp = exp;
+                else // if the variabel is null, then the pokemon doenst exists in the database, let's create it!
+                    ct.Pokemons.Add(new Pokemon() { PokeId = en, Exp = exp });
+
+                ct.SaveChanges();
+            }
+           
+        }
+       
+
+        
     }
 
  

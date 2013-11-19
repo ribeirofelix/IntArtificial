@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System;
 
 namespace MachineLearning.model
 {
@@ -51,31 +51,71 @@ namespace MachineLearning.model
         public PokeType Type { get; set; }
         public PokeBody Body { get; set; }
 
+        public string Exp { get; set; }
+
+        private void foo()
+        {
+            var p = new Pokemon();
+            var a = default(Pokemon).Type;
+            
+        }
+
         public override string ToString()
         {
             var cult = new CultureInfo("en-US");
-            return // Height.ToString(cult) + "," +
-                    //Weight.ToString(cult) + "," +
+            return Height.ToString(cult) + "," +
+                    Weight.ToString(cult) + "," +
                     Body + "," +
-                    //CatchRate + "," +
-                    //(PerfSpeed == 0 ? "?" : PerfSpeed.ToString() )+ "," +
-                    //(PerfPower == 0 ? "?" : PerfPower.ToString())+ "," +
-                    //(PerfSkill == 0 ? "?" : PerfSkill.ToString())+ "," +
-                    //(PerfStamina == 0 ? "?" : PerfStamina.ToString())+ "," +
-                    //(PerfJump == 0 ? "?" : PerfJump.ToString())+ "," +
-                    //BaseHp + "," +
-                    //BaseAttack + "," +
-                    //BaseDefense + "," +
-                    //BaseSpAttack + "," +
-                    //BaseSpDefense + "," +
-                    //BaseSpeed + "," +
+                    CatchRate + "," +
+                    (PerfSpeed == 0 ? "?" : PerfSpeed.ToString() )+ "," +
+                    (PerfPower == 0 ? "?" : PerfPower.ToString())+ "," +
+                    (PerfSkill == 0 ? "?" : PerfSkill.ToString())+ "," +
+                    (PerfStamina == 0 ? "?" : PerfStamina.ToString())+ "," +
+                    (PerfJump == 0 ? "?" : PerfJump.ToString())+ "," +
+                    BaseHp + "," +
+                    BaseAttack + "," +
+                    BaseDefense + "," +
+                    BaseSpAttack + "," +
+                    BaseSpDefense + "," +
+                    BaseSpeed + "," +
                     (Color == null ? "?" : (Color.Trim() == "" ? "?" : "\"" + Color + "\"")) + "," +
                     (Habitat == null ? "?" : (Habitat.Trim() == "" ? "?" : "\"" + Habitat + "\"")) + "," +
                     (Ability1 == null ? "?" : (Ability1.Trim() == "" ? "?" : "\""+ Ability1 +"\"")) + "," +
                     (Ability2 == null ? "?" : (Ability2.Trim() == "" ? "?" : "\"" + Ability2 + "\"")) + "," +
-                  //  (Hidden == null ? "?" : (Hidden.Trim() == "" ? "?" : "\"" + Hidden + "\"")) + "," +
+                    (Hidden == null ? "?" : (Hidden.Trim() == "" ? "?" : "\"" + Hidden + "\"")) + "," +
+                    (Exp) + ","+
                     (Type);
         }
+
+        public string ToString(bool numeric)
+        {
+            if (!numeric)
+                return ToString();
+            var cult = new CultureInfo("en-US");
+            return Height.ToString(cult) + "," +
+                    Weight.ToString(cult) + "," +
+                    (int)Body + "," +
+                    CatchRate + "," +
+                    (PerfSpeed == 0 ? "?" : PerfSpeed.ToString()) + "," +
+                    (PerfPower == 0 ? "?" : PerfPower.ToString()) + "," +
+                    (PerfSkill == 0 ? "?" : PerfSkill.ToString()) + "," +
+                    (PerfStamina == 0 ? "?" : PerfStamina.ToString()) + "," +
+                    (PerfJump == 0 ? "?" : PerfJump.ToString()) + "," +
+                    BaseHp + "," +
+                    BaseAttack + "," +
+                    BaseDefense + "," +
+                    BaseSpAttack + "," +
+                    BaseSpDefense + "," +
+                    BaseSpeed + "," +
+                    (Color == null ? "?" : (Color.Trim() == "" ? "?" :   ( (int) Enum.Parse(typeof(Color),Color.Replace(" ","_") ) ).ToString() )) + "," +
+                    (Habitat == null ? "?" : (Habitat.Trim() == "" ? "?" : ( (int) Enum.Parse(typeof(Habitat), Habitat.Replace(" ", "_"))).ToString() )) + "," +
+                    (Ability1 == null ? "?" : (Ability1.Trim() == "" ? "?" : ((int) Enum.Parse(typeof(Ability1), Ability1.Replace(" ", "_"))).ToString()  )) + "," +
+                    (Ability2 == null ? "?" : (Ability2.Trim() == "" ? "?" : ( (int) Enum.Parse(typeof(Ability2), Ability2.Replace(" ", "_"))).ToString() )) + "," +
+                    (Hidden == null ? "?" : (Hidden.Trim() == "" ? "?" :( (int) Enum.Parse(typeof(Hidden), Hidden.Replace(" ", "_"))).ToString() ) ) + "," +
+                    (int)(Type);
+
+        }
+    
     }
 
 
