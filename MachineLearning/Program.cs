@@ -44,9 +44,18 @@ namespace MachineLearning
            // ParseAbility();
             //ParseTypes();
            //ct.SaveChanges();
-           GenFile();
+          // GenFile();
            //ParseExp();
           // GenSVMFile();
+
+            Pokedex a = new Pokedex();
+            int res ;
+            var poke = ct.Pokemons.First();
+            if (a.Classify(poke, out res))
+                Console.WriteLine("foi");
+            else
+                Console.WriteLine("nao foi");
+
             
         }
         
