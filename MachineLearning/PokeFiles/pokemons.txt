@@ -1,0 +1,743 @@
+@relation PokeSet
+@attribute Height real
+@attribute Widht real
+@attribute Weight real
+@attribute Type real
+@attribute Body real
+@attribute CatchRate real
+@attribute PerfSpeed real
+@attribute PerfPower real
+@attribute PerfSkill real
+@attribute PerfStamina real
+@attribute PerfJump real
+@attribute BaseHp real
+@attribute BaseAttack real
+@attribute BaseDefense real
+@attribute BaseSpAttack real
+@attribute BaseSpDefense real
+@attribute BaseSpeed real
+@attribute Color string
+@attribute Habitat string
+@attribute Ability1 string
+@attribute Ability2 string
+@attribute Hidden string
+@attribute 'class' {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18}
+@data
+0,3,0,4,Water,head,190,3,3,2,4,2,30,65,100,45,25,40,purple,sea,Shell Armor,Skill Link,Overcoat,3
+1,5,0,132,5,Water,head,60,2,5,1,4,2,50,95,180,85,45,70,purple,sea,Shell Armor,Skill Link,Overcoat,3
+1,3,0,0,1,Ghost,head,190,4,1,4,2,4,30,35,30,100,35,80,purple,cave,Levitate,?,?,12
+0,5,0,10,4,Electric,head,190,5,2,3,2,5,40,30,50,55,55,100,red,urban,Soundproof,Static,?,7
+1,2,0,66,6,Electric,head,60,5,3,3,4,4,60,50,70,80,80,140,red,urban,Soundproof,Static,?,7
+0,6,0,1,Poison,head,190,3,3,3,4,3,40,65,95,60,45,35,purple,urban,Levitate,?,?,6
+0,3,0,4,Normal,head,35,5,5,5,5,5,48,48,48,48,48,48,purple,urban,Limber,?,?,5
+0,3,0,1,8,Grass,head,235,5,5,5,5,5,30,30,30,30,30,30,yellow,grass,Chlorophyll,Solar Power,Early Bird,1
+0,7,0,1,Ghost,head,45,4,2,3,2,5,60,60,60,85,85,85,gray,cave,Levitate,?,?,12
+0,5,0,5,Psychic,head,225,4,3,5,4,5,48,72,48,72,48,48,black,rare,Levitate,?,?,13
+0,6,0,7,2,Bug,head,190,3,5,4,5,3,50,65,90,35,35,15,gray,forest,Sturdy,?,?,4
+1,2,0,125,8,Bug,head,75,2,4,4,5,3,75,90,140,60,60,40,purple,forest,Sturdy,?,?,4
+0,6,0,10,Bug,head,120,3,3,3,4,2,50,35,55,25,25,15,silver,forest,Shed Skin,?,?,4
+0,7,0,11,5,Bug,head,120,2,3,4,4,2,50,35,55,25,25,15,purple,forest,Shed Skin,?,?,4
+1,0,168,Rock,head,45,3,3,4,4,3,70,55,65,95,85,70,yellow,cave,Levitate,?,?,11
+1,2,0,154,Rock,head,45,3,5,4,4,3,70,95,85,55,65,70,red,cave,Levitate,?,?,11
+0,3,0,0,8,Normal,head,45,4,4,4,4,4,70,70,70,70,70,70,silver,grass,Forecast,?,?,5
+0,6,0,2,3,Ghost,head,225,5,2,3,3,4,44,75,35,63,33,45,black,urban,Insomnia,Frisk,Cursed Body,12
+1,5,0,256,5,Ice,head,75,3,5,2,5,2,80,80,80,80,80,80,gray,cave,Inner Focus,Ice Body,Moody,14
+0,4,0,52,5,Water,head,255,3,3,3,5,3,35,64,85,74,55,32,blue,sea,Shell Armor,?,?,3
+0,9,0,4,4,Ghost,head,45,4,2,5,3,5,60,60,60,105,105,105,purple,?,Levitate,?,?,12
+0,5,0,60,5,Steel,head,255,3,4,1,5,4,57,24,86,24,86,23,green,?,Levitate,Heatproof,?,17
+0,3,0,0,3,Electric,head,45,5,3,5,4,5,50,65,107,105,107,86,red,?,Levitate,?,?,7
+1,2,0,58,5,Bug,head,120,0,0,0,0,0,40,55,99,40,79,47,gray,?,Poison Point,Swarm,?,4
+0,3,0,0,6,Grass,head,190,0,0,0,0,0,40,27,60,37,50,66,green,?,Prankster,Infiltrator,?,1
+0,3,0,1,Psychic,head,200,0,0,0,0,0,45,30,40,105,50,20,green,?,Overcoat,Magic Guard,?,13
+0,6,0,8,Psychic,head,100,0,0,0,0,0,65,40,50,125,60,30,green,?,Overcoat,Magic Guard,?,13
+0,6,0,18,8,Grass,head,255,0,0,0,0,0,44,50,91,24,86,10,gray,?,Iron Barbs,?,?,1
+1,1,0,148,Ice,head,25,0,0,0,0,0,70,50,30,95,135,105,blue,?,Levitate,?,?,14
+0,4,0,7,7,Bug,head,200,0,0,0,0,0,50,40,85,40,65,25,red,?,Hydration,Shell Armor,?,4
+0,3,0,2,9,Bug,serpertine,255,3,3,4,3,2,45,30,35,20,20,45,green,forest,Shield Dust,?,?,4
+0,7,0,9,9,Bug,serpertine,120,3,3,1,5,3,50,20,55,25,25,30,green,forest,Shed Skin,?,?,4
+0,3,0,3,2,Bug,serpertine,255,3,4,4,3,2,40,35,30,20,20,50,brown,forest,Shield Dust,?,?,4
+0,6,0,10,Bug,serpertine,120,3,3,1,5,3,45,25,50,25,25,35,yellow,forest,Shed Skin,?,?,4
+2,0,6,9,Poison,serpertine,255,5,4,3,3,3,35,60,44,40,54,55,purple,grass,Intimidate,Shed Skin,?,6
+3,5,0,65,Poison,serpertine,90,4,5,3,4,3,60,85,69,65,79,80,purple,grass,Intimidate,Shed Skin,?,6
+8,8,0,210,Rock,serpertine,45,4,2,2,4,3,35,45,160,30,45,70,gray,cave,Rock Head,Sturdy,?,11
+6,5,0,672,4,Water,serpertine,45,3,5,2,4,5,95,155,109,70,130,81,blue,water,Intimidate,?,?,3
+1,8,0,3,3,Dragon,serpertine,45,5,3,3,4,3,41,64,45,50,50,50,blue,water,Shed Skin,?,?,15
+4,0,16,5,Dragon,serpertine,45,4,3,4,3,5,61,84,65,70,70,70,blue,water,Shed Skin,?,?,15
+1,5,0,14,Normal,serpertine,190,3,4,2,4,5,100,70,70,65,65,45,yellow,cave,Serene Grace,Run Away,?,5
+9,2,0,400,Steel,serpertine,25,2,5,2,5,2,75,85,200,55,65,30,gray,cave,Rock Head,Sturdy,?,17
+0,7,0,35,Fire,serpertine,190,2,3,3,4,2,40,40,40,70,40,20,red,mountain,Magma Armor,Flame Body,?,2
+0,8,0,55,Fire,serpertine,75,1,4,2,5,2,50,50,120,80,80,30,red,mountain,Magma Armor,Flame Body,?,2
+1,2,0,152,Rock,serpertine,45,4,4,1,4,4,70,84,70,65,70,51,gray,mountain,Shed Skin,?,?,11
+0,3,0,3,6,Bug,serpertine,255,3,3,5,4,3,45,45,35,20,30,20,red,forest,Shield Dust,?,?,4
+2,7,0,52,5,Poison,serpertine,90,4,4,5,5,2,73,100,60,100,60,65,black,grass,Shed Skin,?,?,6
+6,2,0,162,Water,serpertine,60,4,3,5,5,3,95,60,79,100,125,81,pink,water,Marvel Scale,?,?,3
+1,7,0,27,Water,serpertine,60,4,5,2,3,3,55,104,105,94,75,52,blue,sea,Swift Swim,?,?,3
+1,8,0,22,6,Water,serpertine,60,4,3,4,3,3,55,84,105,114,75,52,pink,sea,Swift Swim,?,?,3
+7,0,206,5,Dragon,serpertine,3,5,5,3,5,5,105,150,90,150,90,95,green,rare,Air Lock,?,?,15
+0,2,0,3,4,Bug,serpertine,120,4,5,3,5,3,40,29,45,29,45,36,gray,?,Shed Skin,?,?,4
+0,5,0,14,3,Bug,serpertine,45,3,5,3,5,2,60,69,95,69,95,36,gray,?,Anticipation,?,?,4
+6,9,0,650,Ghost,multiped,3,5,5,5,5,5,150,120,100,120,100,90,black,?,Pressure,?,?,12
+3,3,0,63,Grass,serpertine,45,0,0,0,0,0,75,75,95,75,95,113,green,?,Overgrow,?,?,1
+1,1,0,90,Water,fins,190,3,3,2,4,3,65,45,55,45,70,45,silver,sea,Thick Fat,Hydration,Ice Body,3
+1,7,0,120,Water,fins,75,2,3,2,5,3,90,70,80,70,95,70,silver,sea,Thick Fat,Hydration,Ice Body,3
+0,6,0,15,Water,fins,225,4,4,3,2,3,45,67,60,35,50,63,red,water,Swift Swim,Water Veil,?,3
+1,3,0,39,Water,fins,60,4,4,3,3,3,80,92,65,65,80,68,red,water,Swift Swim,Water Veil,?,3
+0,9,0,10,Water,fins,255,5,4,3,5,4,20,10,55,15,20,80,red,water,Swift Swim,?,?,3
+2,5,0,220,Water,fins,45,3,4,4,5,3,130,85,80,85,95,60,blue,sea,Water Absorb,Shell Armor,?,3
+0,5,0,12,Water,fins,190,4,3,5,4,3,75,38,38,56,56,67,blue,sea,Volt Absorb,Illuminate,?,3
+1,2,0,22,5,Water,fins,75,3,3,3,4,4,125,58,58,76,76,67,blue,sea,Volt Absorb,Illuminate,?,3
+0,5,0,3,9,Water,fins,45,3,4,3,5,3,65,95,75,55,55,85,gray,sea,Poison Point,Swift Swim,?,3
+0,6,0,12,Water,fins,190,3,3,5,3,3,35,65,35,65,35,65,gray,sea,Hustle,Sniper,Moody,3
+0,8,0,20,8,Water,fins,225,4,4,4,3,3,45,90,20,65,20,65,red,sea,Rough Skin,?,?,3
+1,8,0,88,8,Water,fins,60,4,4,4,2,3,70,120,40,95,40,95,blue,sea,Rough Skin,?,?,3
+2,0,130,Water,fins,125,3,4,3,5,4,130,70,35,70,35,60,blue,sea,Water Veil,Oblivious,?,3
+14,5,0,398,Water,fins,60,3,5,1,5,4,170,90,45,90,45,60,blue,sea,Water Veil,Oblivious,?,3
+0,4,0,1,9,Water,fins,190,4,3,4,5,3,50,48,43,46,41,60,gray,water,Oblivious,Anticipation,Hydration,3
+0,9,0,23,6,Water,fins,75,2,5,4,5,2,110,78,73,76,71,60,blue,water,Oblivious,Anticipation,Hydration,3
+0,6,0,7,4,Water,fins,255,5,2,1,1,2,20,15,20,10,55,80,brown,water,Swift Swim,?,?,3
+0,8,0,39,5,Ice,fins,255,4,4,2,4,2,70,40,50,55,50,25,blue,sea,Thick Fat,Ice Body,Oblivious,14
+1,1,0,87,6,Ice,fins,120,4,4,2,4,2,90,60,70,75,70,45,blue,sea,Thick Fat,Ice Body,Oblivious,14
+1,0,23,4,Water,fins,25,3,4,3,5,3,100,90,130,45,65,55,gray,sea,Swift Swim,Rock Head,?,3
+0,6,0,8,7,Water,fins,225,5,1,1,5,3,43,30,55,40,65,97,pink,sea,Swift Swim,?,?,3
+4,5,0,352,Water,fins,5,4,4,5,5,4,100,100,90,150,140,90,blue,sea,Drizzle,?,?,3
+0,4,0,7,Water,fins,190,5,2,4,4,4,49,49,56,49,61,66,blue,?,Swift Swim,Storm Drain,?,3
+1,2,0,24,Water,fins,75,5,3,4,5,4,69,69,76,69,86,91,blue,?,Swift Swim,Storm Drain,?,3
+0,5,0,4,5,Water,fins,255,0,0,0,0,0,50,50,40,50,40,64,blue,?,Swift Swim,Hydration,?,3
+1,0,18,Water,fins,25,0,0,0,0,0,70,92,65,80,55,98,green,?,Reckless,Adaptability,?,3
+1,2,0,31,6,Water,fins,75,0,0,0,0,0,165,75,80,40,45,65,pink,?,Healer,Hydration,?,3
+0,2,0,0,3,Electric,fins,190,0,0,0,0,0,35,55,40,45,40,60,silver,?,Levitate,?,?,7
+1,2,0,22,Electric,fins,60,0,0,0,0,0,65,85,70,75,70,40,blue,?,Levitate,?,?,7
+2,1,0,80,5,Electric,fins,30,0,0,0,0,0,85,115,80,105,80,50,blue,?,Levitate,?,?,7
+0,7,0,11,Ground,fins,75,0,0,0,0,0,109,66,84,81,99,32,brown,?,Static,Limber,?,8
+0,4,0,20,Rock,headArms,255,2,3,2,4,2,40,80,100,30,30,20,brown,mountain,Rock Head,Sturdy,?,11
+0,3,0,6,Electric,headArms,190,4,2,4,2,4,25,35,70,95,55,45,gray,rough,Magnet Pull,Sturdy,?,7
+0,9,0,30,Poison,headArms,190,1,4,2,5,2,80,80,50,40,50,25,purple,urban,Stench,Sticky Hold,?,6
+1,2,0,30,Poison,headArms,75,5,4,5,5,5,105,105,75,65,100,50,purple,urban,Stench,Sticky Hold,?,6
+1,6,0,0,1,Ghost,headArms,90,4,1,5,4,4,45,50,45,115,55,95,purple,cave,Levitate,?,?,12
+0,4,0,10,3,Poison,headArms,225,2,2,2,4,2,70,43,53,43,53,40,green,grass,Liquid Ooze,Sticky Hold,?,6
+1,7,0,80,Poison,headArms,75,2,4,3,5,2,100,73,83,73,83,55,purple,grass,Liquid Ooze,Sticky Hold,?,6
+0,7,0,30,6,Psychic,headArms,255,3,3,3,4,5,60,25,35,70,80,60,black,mountain,Thick Fat,Own Tempo,?,13
+0,5,0,21,5,Ground,headArms,255,4,3,5,4,3,40,40,55,40,70,55,brown,rough,Levitate,?,?,8
+1,5,0,107,9,Ground,headArms,90,3,3,5,4,4,60,70,105,70,120,75,black,rough,Levitate,?,?,8
+0,8,0,15,Ghost,headArms,190,4,3,3,3,4,20,40,90,30,90,25,black,forest,Levitate,?,?,12
+0,6,0,1,Psychic,headArms,45,5,2,2,2,5,65,50,70,95,80,65,blue,grass,Levitate,?,?,13
+1,2,0,202,5,Steel,headArms,3,3,4,3,4,4,60,75,100,55,80,50,blue,rough,Clear Body,?,?,17
+0,4,0,1,2,Ghost,headArms,125,5,1,4,4,5,90,50,34,60,44,70,purple,?,Aftermath,Unburden,?,12
+1,2,0,15,Ghost,headArms,60,4,3,2,5,5,150,80,44,90,54,80,purple,?,Aftermath,Unburden,?,12
+1,3,0,187,Steel,headArms,90,1,5,3,5,5,67,89,116,79,116,33,green,?,Levitate,Heatproof,?,17
+1,2,0,180,Electric,headArms,30,2,3,5,4,5,70,70,115,130,90,60,gray,?,Magnet Pull,Sturdy,?,7
+0,9,0,34,Normal,headArms,30,4,5,5,1,4,85,80,70,135,75,90,red,?,Adaptability,Download,?,5
+2,2,0,106,6,Ghost,headArms,45,2,4,4,4,4,45,100,135,65,135,45,black,?,Pressure,?,?,12
+1,3,0,26,6,Ice,headArms,75,4,3,5,3,5,70,80,70,80,70,110,silver,?,Snow Cloak,?,?,14
+0,4,0,3,1,Water,headArms,30,5,2,5,3,3,80,80,80,80,80,80,blue,?,Hydration,?,?,3
+0,5,0,7,3,Bug,headArms,120,0,0,0,0,0,55,63,90,50,80,42,green,?,Leaf Guard,Chlorophyll,?,4
+0,5,0,1,5,Ghost,headArms,190,0,0,0,0,0,38,30,85,55,65,30,black,?,Mummy,?,?,12
+1,0,20,1,Psychic,headArms,50,0,0,0,0,0,110,65,75,125,85,30,green,?,Overcoat,Magic Guard,?,13
+1,0,33,Bug,headArms,75,0,0,0,0,0,70,135,105,60,105,20,gray,?,Swarm,Shell Armor,?,4
+0,2,0,1,Grass,headArms,190,0,0,0,0,0,69,55,45,55,55,15,silver,?,Effect Spore,?,?,1
+0,6,0,10,5,Grass,headArms,75,0,0,0,0,0,114,85,70,85,80,30,silver,?,Effect Spore,?,?,1
+0,6,0,13,Ghost,headArms,90,0,0,0,0,0,60,40,60,95,60,55,black,?,Flash Fire,Flame Body,?,12
+1,0,34,3,Ghost,headArms,45,0,0,0,0,0,60,55,90,145,90,80,black,?,Flash Fire,Flame Body,?,12
+0,8,0,25,3,Bug,headArms,75,0,0,0,0,0,80,70,40,100,60,145,red,?,Hydration,Sticky Hold,?,4
+1,5,0,63,Flying,headArms,3,0,0,0,0,0,79,100,80,110,90,121,green,?,Prankster,?,?,18
+3,0,65,Electric,headArms,3,0,0,0,0,0,79,105,70,145,80,101,blue,?,Prankster,?,?,7
+1,5,0,68,Ground,headArms,3,0,0,0,0,0,89,145,90,105,80,91,brown,?,Sand Force,?,?,8
+0,2,0,0,8,Ground,headBase,255,5,2,4,4,1,10,55,25,35,45,95,brown,cave,Sand Veil,Arena Trap,?,8
+1,0,6,4,Grass,headBase,120,2,3,2,4,3,65,90,50,85,45,55,green,forest,Chlorophyll,?,?,1
+1,7,0,15,5,Grass,headBase,45,1,4,4,4,3,80,105,65,100,60,70,green,forest,Chlorophyll,?,?,1
+0,4,0,8,Water,headBase,225,4,3,3,3,3,30,40,70,70,25,60,blue,sea,Swift Swim,Sniper,Damp,3
+1,2,0,25,Water,headBase,75,3,3,4,4,3,55,65,95,95,45,85,blue,sea,Poison Point,Sniper,Damp,3
+0,8,0,34,5,Water,headBase,225,5,3,3,3,3,30,45,55,70,55,85,brown,sea,Illuminate,Natural Cure,?,3
+1,1,0,80,Water,headBase,60,5,5,3,3,4,60,75,85,100,85,115,purple,sea,Illuminate,Natural Cure,?,3
+1,3,0,28,5,Psychic,headBase,45,2,4,5,5,3,190,33,58,33,58,33,blue,cave,Shadow Tag,?,?,13
+1,8,0,152,Water,headBase,45,5,4,3,5,2,75,95,95,95,95,85,blue,sea,Swift Swim,Sniper,Damp,3
+0,8,0,1,2,Bug,headBase,45,2,3,3,5,5,1,90,45,30,30,40,brown,forest,Wonder Guard,?,?,4
+1,0,23,8,Rock,headBase,45,3,4,3,5,2,66,41,77,61,87,23,purple,sea,Suction Cups,?,?,11
+1,5,0,60,4,Rock,headBase,45,1,4,3,5,2,86,81,97,81,107,43,green,sea,Suction Cups,?,?,11
+0,6,0,95,2,Steel,headBase,3,4,4,1,3,4,40,55,80,35,60,30,blue,rough,Clear Body,?,?,17
+1,0,108,Ghost,headBase,100,2,4,2,5,2,50,92,108,92,108,35,purple,?,Pressure,?,?,12
+0,5,0,6,6,Grass,headBase,190,0,0,0,0,0,45,35,50,70,50,30,green,?,Chlorophyll,Own Tempo,?,1
+1,1,0,16,3,Grass,headBase,75,0,0,0,0,0,70,60,75,110,75,90,green,?,Chlorophyll,Own Tempo,?,1
+1,0,28,Grass,headBase,255,0,0,0,0,0,75,86,67,106,67,60,green,?,Water Absorb,Chlorophyll,?,1
+1,7,0,76,5,Ghost,headBase,90,0,0,0,0,0,58,50,145,95,105,30,yellow,?,Mummy,?,?,12
+0,4,0,5,7,Ice,headBase,255,0,0,0,0,0,36,50,50,65,60,44,silver,?,Ice Body,?,?,14
+1,1,0,41,Ice,headBase,120,0,0,0,0,0,51,65,65,80,75,59,silver,?,Ice Body,?,?,14
+0,3,0,3,1,Ghost,headBase,190,0,0,0,0,0,50,30,55,65,55,20,silver,?,Flash Fire,Flame Body,?,12
+0,6,0,8,5,Fire,bipedalTailed,45,3,5,4,3,3,39,52,43,60,50,65,red,mountain,Blaze,?,?,2
+1,1,0,19,Fire,bipedalTailed,45,3,4,4,2,3,58,64,58,80,65,80,red,mountain,Blaze,?,?,2
+1,7,0,243,6,Fire,bipedalTailed,45,3,3,2,5,5,78,104,78,159,115,100,red,mountain,Blaze,?,?,2
+0,5,0,9,Water,bipedalTailed,45,3,3,4,4,2,44,48,65,50,64,43,blue,water,Torrent,?,?,3
+1,0,22,5,Water,bipedalTailed,45,4,3,5,4,3,59,63,80,65,80,58,blue,water,Torrent,?,?,3
+1,6,0,222,9,Water,bipedalTailed,45,3,5,3,5,3,79,103,120,135,115,78,blue,water,Torrent,?,?,3
+0,8,0,30,Electric,bipedalTailed,75,3,5,5,5,3,60,90,55,90,80,100,yellow,forest,Static,?,?,7
+0,6,0,12,Ground,bipedalTailed,255,4,3,5,3,3,50,75,85,20,30,40,yellow,rough,Sand Veil,?,?,8
+1,0,29,5,Ground,bipedalTailed,90,3,4,5,3,2,75,100,110,45,55,65,yellow,rough,Sand Veil,?,?,8
+1,3,0,60,Poison,bipedalTailed,45,3,5,3,5,2,90,82,87,75,85,76,blue,grass,Poison Point,Rivalry,Sheer Force,6
+1,4,0,62,Poison,bipedalTailed,45,3,5,3,4,2,81,92,77,85,75,85,purple,grass,Poison Point,Rivalry,Sheer Force,6
+0,6,0,7,5,Fairy,bipedalTailed,150,5,3,5,4,3,70,45,48,60,65,35,pink,mountain,Cute Charm,Magic Guard,Friend Guard,9
+1,3,0,40,Fairy,bipedalTailed,25,3,3,5,5,3,95,70,73,85,90,60,pink,mountain,Cute Charm,Magic Guard,Unaware,9
+0,8,0,19,6,Water,bipedalTailed,190,5,5,5,5,4,50,52,48,65,50,55,yellow,water,Damp,Cloud Nine,?,3
+1,7,0,76,6,Water,bipedalTailed,75,3,4,3,4,4,80,82,78,95,80,85,blue,water,Damp,Cloud Nine,?,3
+0,5,0,28,Fighting,bipedalTailed,190,4,3,5,2,3,40,80,35,35,45,70,brown,mountain,Vital Spirit,Anger Point,Defiant,10
+1,0,32,Fighting,bipedalTailed,75,3,5,1,3,3,65,105,60,60,70,95,brown,mountain,Vital Spirit,Anger Point,Defiant,10
+0,9,0,19,5,Psychic,bipedalTailed,200,5,1,5,4,5,25,20,15,105,55,90,brown,urban,Synchronize,Inner Focus,?,13
+1,3,0,56,5,Psychic,bipedalTailed,100,4,3,5,3,3,40,35,30,120,70,105,brown,urban,Synchronize,Inner Focus,?,13
+0,8,0,19,5,Fighting,bipedalTailed,180,4,4,3,3,2,70,80,50,35,35,35,gray,mountain,Guts,No Guard,Steadfast,10
+1,6,0,78,5,Water,bipedalTailed,75,1,3,5,5,3,95,75,110,100,80,30,pink,water,Oblivious,Own Tempo,?,3
+1,5,0,40,5,Ghost,bipedalTailed,45,3,3,5,4,3,60,65,80,170,95,130,purple,cave,Levitate,?,?,12
+0,4,0,6,5,Ground,bipedalTailed,190,4,5,3,3,3,50,50,95,40,50,35,brown,mountain,Rock Head,Lightningrod,?,8
+1,0,45,Ground,bipedalTailed,75,3,5,3,4,2,60,80,110,50,80,45,brown,mountain,Rock Head,Lightningrod,?,8
+1,2,0,65,5,Normal,bipedalTailed,45,3,4,3,5,3,90,55,75,60,75,30,pink,grass,Own Tempo,Oblivious,?,5
+1,9,0,120,Ground,bipedalTailed,60,2,5,3,5,3,105,130,120,45,45,40,gray,rough,Lightningrod,Rock Head,?,8
+1,1,0,34,6,Normal,bipedalTailed,30,3,4,4,5,3,250,5,5,35,105,50,pink,urban,Natural Cure,Serene Grace,?,5
+2,2,0,220,5,Normal,bipedalTailed,45,4,5,4,5,2,105,125,100,60,100,100,brown,grass,Early Bird,Scrappy,Inner Focus,5
+1,1,0,30,Electric,bipedalTailed,45,4,4,4,4,3,65,83,57,95,85,105,yellow,grass,Static,?,?,7
+1,3,0,44,5,Fire,bipedalTailed,45,2,3,5,5,3,65,95,57,100,85,93,red,mountain,Flame Body,?,?,2
+1,3,0,40,5,Rock,bipedalTailed,45,5,5,3,3,3,60,115,105,65,70,80,brown,sea,Swift Swim,Battle Armor,?,11
+2,2,0,210,Dragon,bipedalTailed,45,5,5,3,4,5,91,134,95,100,100,80,brown,water,Inner Focus,?,?,15
+2,3,0,280,Psychic,bipedalTailed,3,5,5,5,4,4,106,150,70,194,120,140,purple,rare,Pressure,?,?,13
+0,4,0,4,Psychic,bipedalTailed,45,5,5,5,5,5,100,100,100,100,100,100,pink,rare,Synchronize,?,?,13
+0,6,0,9,5,Water,bipedalTailed,45,4,5,3,3,3,50,65,64,44,48,43,blue,water,Torrent,?,?,3
+1,1,0,25,Water,bipedalTailed,45,3,5,3,5,3,65,80,80,59,63,58,blue,water,Torrent,?,?,3
+2,3,0,88,8,Water,bipedalTailed,45,4,5,4,4,2,85,105,100,79,83,78,blue,water,Torrent,?,?,3
+0,3,0,3,Fairy,bipedalTailed,150,5,2,4,3,3,50,25,28,45,55,15,pink,mountain,Cute Charm,Magic Guard,Friend Guard,9
+0,8,0,13,3,Electric,bipedalTailed,120,3,3,3,4,3,70,55,55,80,60,45,pink,grass,Static,?,?,7
+1,4,0,61,5,Electric,bipedalTailed,45,3,4,4,5,3,90,95,105,165,110,45,yellow,grass,Static,?,?,7
+0,4,0,8,5,Water,bipedalTailed,190,4,5,3,3,3,70,20,50,20,50,40,blue,water,Thick Fat,Huge Power,?,3
+0,8,0,28,5,Water,bipedalTailed,75,3,5,3,4,2,100,50,80,50,80,50,blue,water,Thick Fat,Huge Power,?,3
+0,4,0,0,5,Grass,bipedalTailed,255,5,2,1,1,5,35,35,40,35,55,50,pink,grass,Chlorophyll,Leaf Guard,Infiltrator,1
+0,6,0,1,Grass,bipedalTailed,120,5,3,1,2,5,55,45,50,45,65,80,green,grass,Chlorophyll,Leaf Guard,Infiltrator,1
+0,8,0,3,Grass,bipedalTailed,45,5,3,2,2,5,75,55,70,55,85,110,blue,grass,Chlorophyll,Leaf Guard,Infiltrator,1
+0,8,0,11,5,Normal,bipedalTailed,45,4,3,4,3,4,55,70,55,40,55,85,purple,forest,Run Away,Pickup,?,5
+1,4,0,75,Water,bipedalTailed,90,2,4,4,5,2,95,85,85,65,65,35,blue,water,Damp,Water Absorb,?,3
+2,0,79,5,Water,bipedalTailed,70,3,3,5,3,3,95,75,80,100,110,30,pink,water,Oblivious,Own Tempo,?,3
+1,4,0,48,7,Fairy,bipedalTailed,75,2,5,4,3,2,90,120,75,60,60,45,purple,urban,Intimidate,Quick Feet,Rattled,9
+0,9,0,28,Dark,bipedalTailed,60,5,3,5,1,4,55,95,55,35,75,115,black,forest,Inner Focus,Keen Eye,?,16
+0,6,0,8,8,Normal,bipedalTailed,120,3,3,4,5,3,60,80,50,50,50,40,brown,mountain,Pickup,Quick Feet,Honey Gather,5
+1,8,0,125,8,Normal,bipedalTailed,60,3,5,3,5,2,90,130,75,75,75,55,brown,mountain,Guts,Quick Feet,Unnerve,5
+1,2,0,58,Normal,bipedalTailed,45,3,3,5,3,3,55,20,35,20,45,75,silver,urban,Own Tempo,Technician,Moody,5
+1,4,0,48,Fighting,bipedalTailed,45,3,3,5,3,3,50,95,95,35,110,70,brown,urban,Intimidate,Technician,Steadfast,10
+0,7,0,21,4,Fire,bipedalTailed,45,3,3,3,3,3,45,75,37,70,55,83,red,mountain,Flame Body,?,?,2
+1,2,0,75,5,Normal,bipedalTailed,45,3,4,4,5,3,95,80,105,40,70,100,pink,grass,Thick Fat,Scrappy,Sap Sipper,5
+0,6,0,72,Rock,bipedalTailed,45,3,4,4,3,3,50,64,50,45,50,41,green,mountain,Guts,?,?,11
+2,5,0,562,2,Rock,bipedalTailed,45,2,5,4,5,2,100,164,150,95,120,71,green,mountain,Sand Stream,?,?,11
+0,5,0,5,Grass,bipedalTailed,45,5,3,5,2,3,40,45,35,65,55,70,green,forest,Overgrow,?,?,1
+0,9,0,21,6,Grass,bipedalTailed,45,5,4,5,4,4,50,65,45,85,65,95,green,forest,Overgrow,?,?,1
+1,7,0,52,2,Grass,bipedalTailed,45,4,5,5,4,4,70,85,65,105,85,120,green,forest,Overgrow,?,?,1
+0,9,0,19,5,Fire,bipedalTailed,45,4,5,4,3,4,60,85,60,85,60,55,red,grass,Blaze,?,?,2
+1,9,0,52,Fire,bipedalTailed,45,2,5,5,4,4,80,160,80,130,80,100,red,grass,Blaze,?,?,2
+0,7,0,28,Water,bipedalTailed,45,3,4,4,5,3,70,85,70,60,70,50,blue,water,Torrent,?,?,3
+1,5,0,81,9,Water,bipedalTailed,45,3,5,5,5,2,100,110,90,85,90,60,blue,water,Torrent,?,?,3
+1,2,0,39,2,Grass,bipedalTailed,90,3,5,5,3,3,60,130,80,60,60,70,green,forest,Effect Spore,Poison Heal,Technician,1
+1,4,0,46,5,Normal,bipedalTailed,120,5,3,4,4,4,80,80,80,55,55,90,silver,forest,Vital Spirit,?,?,5
+0,6,0,16,3,Normal,bipedalTailed,190,5,3,4,3,3,64,51,23,51,23,28,pink,cave,Soundproof,?,?,5
+1,0,40,5,Normal,bipedalTailed,120,4,4,4,4,3,84,71,43,71,43,48,blue,cave,Soundproof,?,?,5
+1,5,0,84,Normal,bipedalTailed,45,3,4,4,5,2,104,91,63,91,63,68,blue,cave,Soundproof,?,?,5
+2,2,0,870,8,Steel,bipedalTailed,45,2,5,4,4,2,70,140,230,60,80,50,gray,mountain,Sturdy,Rock Head,?,17
+0,4,0,4,2,Electric,bipedalTailed,200,4,2,2,3,4,60,50,40,85,75,95,yellow,grass,Plus,?,?,7
+0,4,0,4,2,Electric,bipedalTailed,200,4,2,2,3,4,60,40,50,75,85,95,yellow,grass,Minus,?,?,7
+0,7,0,17,7,Bug,bipedalTailed,150,4,3,2,3,5,65,73,55,47,75,85,gray,forest,Illuminate,Swarm,?,4
+0,9,0,71,5,Psychic,bipedalTailed,60,2,5,5,5,3,80,45,65,90,110,80,purple,mountain,Thick Fat,Own Tempo,?,13
+1,1,0,5,Normal,bipedalTailed,255,3,3,4,3,3,60,60,60,60,60,60,brown,mountain,Own Tempo,Tangled Feet,Contrary,5
+1,3,0,40,3,Normal,bipedalTailed,90,3,5,4,5,3,73,115,60,60,60,90,silver,grass,Immunity,?,?,5
+1,5,0,68,2,Rock,bipedalTailed,45,2,5,4,5,2,75,125,100,70,80,45,gray,water,Battle Armor,?,?,11
+1,0,22,Normal,bipedalTailed,200,4,3,5,4,3,60,90,70,60,120,40,green,forest,Color Change,?,?,5
+1,2,0,28,7,Ghost,bipedalTailed,45,3,4,4,3,3,64,165,75,93,83,75,black,urban,Insomnia,Frisk,Cursed Body,12
+0,6,0,14,Psychic,bipedalTailed,125,5,3,4,5,3,95,23,48,23,48,23,blue,cave,Shadow Tag,?,?,13
+3,5,0,0,Ground,bipedalTailed,5,2,5,5,5,2,100,150,140,100,90,90,red,rough,Drought,?,?,8
+0,5,0,6,2,Fire,bipedalTailed,45,5,4,4,2,3,44,58,44,58,44,61,brown,?,Blaze,?,?,2
+0,9,0,22,Fire,bipedalTailed,45,5,4,5,2,3,64,78,52,78,52,81,brown,?,Blaze,?,?,2
+1,2,0,55,Fire,bipedalTailed,45,4,5,5,2,3,76,104,71,104,71,108,brown,?,Blaze,?,?,2
+0,8,0,23,Water,bipedalTailed,45,4,4,4,5,4,64,66,68,81,76,50,blue,?,Torrent,?,?,3
+1,7,0,84,5,Water,bipedalTailed,45,3,5,3,5,4,84,86,88,111,101,60,blue,?,Torrent,?,?,3
+1,0,31,5,Normal,bipedalTailed,127,4,4,4,5,2,79,85,60,55,60,71,brown,?,Simple,Unaware,?,5
+0,9,0,31,5,Rock,bipedalTailed,45,4,5,3,3,3,67,125,40,30,30,58,blue,?,Mold Breaker,?,?,11
+1,6,0,102,5,Rock,bipedalTailed,45,3,5,3,4,3,97,165,60,65,50,58,blue,?,Mold Breaker,?,?,11
+1,2,0,20,3,Normal,bipedalTailed,45,4,4,5,4,4,75,100,66,60,66,115,purple,?,Technician,Pickup,?,5
+0,4,0,5,5,Normal,bipedalTailed,190,5,4,2,4,4,55,66,44,44,56,85,brown,?,Run Away,Klutz,?,5
+1,2,0,33,3,Normal,bipedalTailed,60,5,4,2,4,4,65,76,84,54,96,105,brown,?,Cute Charm,Klutz,?,5
+0,7,0,20,5,Dragon,bipedalTailed,45,4,4,3,3,2,58,70,45,40,45,42,blue,?,Sand Veil,?,?,15
+1,4,0,56,Dragon,bipedalTailed,45,3,4,4,4,3,68,90,65,50,55,82,blue,?,Sand Veil,?,?,15
+1,9,0,95,Dragon,bipedalTailed,45,3,5,5,4,2,108,170,115,120,95,92,blue,?,Sand Veil,?,?,15
+0,7,0,20,2,Fighting,bipedalTailed,75,5,4,5,3,4,40,70,40,35,40,60,blue,?,Steadfast,Inner Focus,?,10
+1,3,0,126,8,Fighting,bipedalTailed,45,4,5,5,3,4,70,145,88,140,70,112,blue,?,Steadfast,Inner Focus,?,10
+1,0,50,5,Grass,bipedalTailed,120,4,4,4,4,3,60,62,50,62,60,40,silver,?,Snow Warning,?,?,1
+2,7,0,407,8,Grass,bipedalTailed,60,2,5,5,5,2,90,132,105,132,105,30,silver,?,Snow Warning,?,?,1
+1,1,0,34,Dark,bipedalTailed,45,5,5,5,3,3,70,120,65,45,85,125,black,?,Pressure,?,?,16
+2,4,0,282,8,Ground,bipedalTailed,30,1,5,4,5,2,115,140,130,55,55,40,gray,?,Lightningrod,Solid Rock,?,8
+1,8,0,138,6,Electric,bipedalTailed,30,5,4,5,4,2,75,123,67,95,85,95,yellow,?,Motor Drive,?,?,7
+1,6,0,68,Fire,bipedalTailed,30,2,5,5,5,2,75,95,67,125,95,83,red,?,Flame Body,?,?,2
+0,3,0,0,3,Psychic,bipedalTailed,3,4,4,4,5,5,75,75,130,75,130,95,yellow,?,Levitate,?,?,13
+0,3,0,0,3,Psychic,bipedalTailed,3,3,5,4,4,5,80,105,105,105,105,80,pink,?,Levitate,?,?,13
+0,3,0,0,3,Psychic,bipedalTailed,3,4,3,5,3,4,75,125,70,125,70,115,blue,?,Levitate,?,?,13
+4,2,0,336,Water,bipedalTailed,30,3,5,5,5,5,90,120,100,150,120,100,purple,?,Pressure,?,?,3
+0,6,0,8,1,Grass,bipedalTailed,45,0,0,0,0,0,45,45,55,45,55,63,green,?,Overgrow,?,?,1
+0,8,0,16,Grass,bipedalTailed,45,0,0,0,0,0,60,60,75,60,75,83,green,?,Overgrow,?,?,1
+1,0,55,5,Fire,bipedalTailed,45,0,0,0,0,0,90,93,55,70,55,55,red,?,Blaze,?,?,2
+1,6,0,150,Fire,bipedalTailed,45,0,0,0,0,0,110,123,65,100,65,65,red,?,Blaze,?,?,2
+0,5,0,5,9,Water,bipedalTailed,45,0,0,0,0,0,55,55,45,63,45,45,blue,?,Torrent,?,?,3
+0,8,0,24,5,Water,bipedalTailed,45,0,0,0,0,0,75,75,60,83,60,60,blue,?,Torrent,?,?,3
+1,1,0,27,Normal,bipedalTailed,255,0,0,0,0,0,60,85,69,60,69,77,brown,?,Illuminate,Keen Eye,?,5
+0,6,0,10,5,Grass,bipedalTailed,65,0,0,0,0,0,50,53,48,53,48,64,green,?,Gluttony,?,?,1
+1,1,0,30,5,Grass,bipedalTailed,65,0,0,0,0,0,75,98,63,98,63,101,green,?,Gluttony,?,?,1
+0,6,0,11,Fire,bipedalTailed,65,0,0,0,0,0,50,53,48,53,48,64,red,?,Gluttony,?,?,2
+1,0,28,Fire,bipedalTailed,65,0,0,0,0,0,75,98,63,98,63,101,red,?,Gluttony,?,?,2
+0,6,0,13,5,Water,bipedalTailed,65,0,0,0,0,0,50,53,48,53,48,64,blue,?,Gluttony,?,?,3
+1,0,29,Water,bipedalTailed,65,0,0,0,0,0,75,98,63,98,63,101,blue,?,Gluttony,?,?,3
+0,3,0,8,5,Ground,bipedalTailed,120,0,0,0,0,0,60,85,40,30,45,68,gray,?,Sand Rush,Sand Force,?,8
+1,1,0,31,Normal,bipedalTailed,255,0,0,0,0,0,103,60,86,60,86,50,pink,?,Healer,Regenerator,?,5
+0,8,0,17,Water,bipedalTailed,120,0,0,0,0,0,75,65,55,65,55,69,blue,?,Swift Swim,Hydration,?,3
+1,5,0,96,3,Ground,bipedalTailed,45,0,0,0,0,0,95,117,70,65,70,92,red,?,Intimidate,Moxie,?,8
+0,6,0,11,8,Dark,bipedalTailed,180,0,0,0,0,0,50,75,70,35,70,48,yellow,?,Shed Skin,Moxie,?,16
+1,1,0,30,Dark,bipedalTailed,90,0,0,0,0,0,65,90,115,45,115,58,red,?,Shed Skin,Moxie,?,16
+1,2,0,81,Water,bipedalTailed,45,0,0,0,0,0,74,108,133,83,65,32,blue,?,Solid Rock,Sturdy,?,3
+1,6,0,81,1,Dark,bipedalTailed,45,0,0,0,0,0,60,105,60,120,60,105,gray,?,Illusion,?,?,16
+0,5,0,9,Psychic,bipedalTailed,255,0,0,0,0,0,55,55,55,85,55,30,blue,?,Telepathy,Synchronize,?,13
+0,6,0,18,Dragon,bipedalTailed,75,0,0,0,0,0,46,87,60,30,40,57,green,?,Rivalry,Mold Breaker,?,15
+1,0,36,Dragon,bipedalTailed,60,0,0,0,0,0,66,117,70,40,50,67,green,?,Rivalry,Mold Breaker,?,15
+1,8,0,105,5,Dragon,bipedalTailed,45,0,0,0,0,0,76,147,90,60,70,97,yellow,?,Rivalry,Mold Breaker,?,15
+0,5,0,8,5,Ice,bipedalTailed,120,0,0,0,0,0,55,70,40,60,40,40,silver,?,Snow Cloak,?,?,14
+0,9,0,20,Fighting,bipedalTailed,180,0,0,0,0,0,45,85,50,55,50,65,yellow,?,Inner Focus,Regenerator,?,10
+1,4,0,35,5,Fighting,bipedalTailed,45,0,0,0,0,0,65,125,60,95,60,105,purple,?,Inner Focus,Regenerator,?,10
+1,6,0,139,Dragon,bipedalTailed,45,0,0,0,0,0,77,120,90,60,90,48,red,?,Rough Skin,Sheer Force,?,15
+1,4,0,58,Fire,bipedalTailed,90,0,0,0,0,0,85,97,66,105,66,65,red,?,Gluttony,Flash Fire,?,2
+1,8,0,160,Dark,bipedalTailed,45,0,0,0,0,0,92,105,90,125,90,98,blue,?,Levitate,?,?,16
+2,9,0,345,Dragon,bipedalTailed,45,0,0,0,0,0,100,150,120,120,100,90,black,?,Teravolt,?,?,15
+3,6,0,325,Dragon,bipedalTailed,3,0,0,0,0,0,125,120,90,170,100,95,gray,?,Pressure,?,?,15
+0,5,0,5,4,Grass,headLegs,255,5,3,4,4,3,45,50,55,75,65,30,blue,grass,Chlorophyll,?,?,1
+0,6,0,12,4,Water,headLegs,255,4,2,3,5,4,40,50,40,40,40,90,blue,water,Water Absorb,Damp,?,3
+1,4,0,39,2,Normal,headLegs,190,5,3,3,4,3,35,85,45,35,35,75,brown,grass,Run Away,Early Bird,?,5
+1,8,0,85,2,Normal,headLegs,45,5,4,2,2,3,60,110,70,60,60,100,brown,grass,Run Away,Early Bird,?,5
+2,0,120,Grass,headLegs,45,3,4,3,4,3,95,95,85,125,65,55,yellow,forest,Chlorophyll,?,?,1
+1,0,35,Grass,headLegs,45,3,4,4,4,3,65,55,115,100,40,60,blue,grass,Chlorophyll,Leaf Guard,Regenerator,1
+0,8,0,36,5,Normal,headLegs,45,3,3,3,5,3,65,60,70,85,75,40,pink,urban,Trace,Download,Analytic,5
+0,4,0,8,5,Water,headLegs,255,3,3,3,4,3,55,45,45,25,25,15,blue,water,Damp,Water Absorb,?,3
+0,6,0,32,5,Normal,headLegs,45,4,4,4,4,4,85,80,90,105,95,60,red,urban,Trace,Download,Analytic,5
+0,4,0,2,5,Fire,headLegs,45,5,4,4,3,4,45,60,40,70,50,45,red,grass,Blaze,?,?,2
+0,5,0,4,Grass,headLegs,255,4,3,4,4,3,40,40,50,30,30,30,brown,forest,Chlorophyll,Early Bird,?,1
+0,4,0,4,5,Grass,headLegs,255,3,3,2,5,3,60,40,60,40,60,35,brown,forest,Effect Spore,Poison Heal,Quick Feet,1
+0,2,0,2,Normal,headLegs,150,5,2,3,3,4,50,20,40,20,40,20,blue,water,Thick Fat,Huge Power,?,5
+0,5,0,9,3,Grass,headLegs,75,4,3,5,4,3,70,60,70,87,78,85,pink,?,Flower Gift,?,?,1
+0,5,0,15,Rock,headLegs,255,4,3,3,4,3,50,80,95,10,45,10,brown,?,Sturdy,Rock Head,?,11
+0,4,0,18,Rock,headLegs,255,0,0,0,0,0,55,75,85,25,25,15,blue,?,Sturdy,?,?,11
+0,7,0,6,9,Grass,quadruped,45,3,3,4,4,3,45,49,49,65,65,45,green,grass,Overgrow,?,?,1
+1,0,13,Grass,quadruped,45,2,3,5,5,3,60,62,63,80,80,60,green,grass,Overgrow,?,?,1
+2,4,0,342,8,Grass,quadruped,45,2,5,3,5,2,80,100,123,122,120,80,green,grass,Overgrow,?,?,1
+0,3,0,3,5,Normal,quadruped,255,5,3,3,3,3,30,56,35,25,35,72,purple,grass,Run Away,Guts,?,5
+0,7,0,18,5,Normal,quadruped,127,5,4,3,3,3,55,81,60,50,70,97,brown,grass,Run Away,Guts,?,5
+0,4,0,6,Electric,quadruped,190,4,4,4,4,4,35,55,30,50,40,90,yellow,forest,Static,?,?,7
+0,4,0,7,Poison,quadruped,235,5,3,3,3,3,55,47,52,40,40,41,blue,grass,Poison Point,Rivalry,Hustle,6
+0,8,0,20,Poison,quadruped,120,4,4,3,4,3,70,62,67,55,55,56,blue,grass,Poison Point,Rivalry,Hustle,6
+0,5,0,9,Poison,quadruped,235,5,4,3,2,3,46,57,40,40,40,50,purple,grass,Poison Point,Rivalry,Hustle,6
+0,9,0,19,5,Poison,quadruped,120,4,4,3,3,3,61,72,57,55,55,65,purple,grass,Poison Point,Rivalry,Hustle,6
+0,6,0,9,9,Fire,quadruped,190,5,3,4,3,3,38,41,40,50,65,65,brown,grass,Flash Fire,?,?,2
+1,1,0,19,9,Fire,quadruped,75,4,3,5,3,3,73,76,75,81,100,100,yellow,grass,Flash Fire,?,?,2
+0,4,0,4,2,Normal,quadruped,255,4,2,4,1,4,40,45,35,40,40,90,yellow,urban,Pickup,Technician,Unnerve,5
+1,0,32,Normal,quadruped,90,5,3,5,1,4,65,70,60,65,65,115,yellow,urban,Limber,Technician,Unnerve,5
+0,7,0,19,Fire,quadruped,190,4,4,4,3,4,55,70,45,70,50,60,brown,grass,Intimidate,Flash Fire,?,2
+1,9,0,155,Fire,quadruped,75,5,5,2,3,3,90,110,80,100,80,95,brown,grass,Intimidate,Flash Fire,?,2
+1,0,30,Fire,quadruped,190,5,2,2,3,4,50,85,55,65,65,90,yellow,grass,Run Away,Flash Fire,?,2
+1,7,0,95,Fire,quadruped,60,5,3,2,4,4,65,100,70,80,80,105,yellow,grass,Run Away,Flash Fire,?,2
+1,2,0,36,Water,quadruped,190,1,2,5,5,2,90,65,65,40,40,15,pink,water,Oblivious,Own Tempo,?,3
+1,0,115,Ground,quadruped,120,5,5,2,4,2,80,85,95,30,30,25,gray,rough,Lightningrod,Rock Head,?,8
+1,4,0,88,4,Normal,quadruped,45,4,5,2,5,2,75,100,95,40,70,110,brown,grass,Intimidate,Anger Point,Sheer Force,5
+0,3,0,6,5,Normal,quadruped,45,4,4,4,4,3,55,55,50,45,65,55,brown,urban,Run Away,Adaptability,Anticipation,5
+1,0,29,Water,quadruped,45,3,3,5,5,3,130,65,60,110,95,65,blue,urban,Water Absorb,?,?,3
+0,8,0,24,5,Electric,quadruped,45,5,3,5,2,3,65,65,60,110,95,130,yellow,urban,Volt Absorb,?,?,7
+0,9,0,25,Fire,quadruped,45,4,5,3,3,3,65,130,60,95,110,65,red,urban,Flash Fire,?,?,2
+0,9,0,6,4,Grass,quadruped,45,4,3,4,5,3,45,49,65,49,65,45,green,grass,Overgrow,?,?,1
+1,2,0,15,8,Grass,quadruped,45,3,3,5,5,3,60,62,80,63,80,60,green,grass,Overgrow,?,?,1
+1,8,0,100,5,Grass,quadruped,45,2,5,5,5,2,80,82,100,83,100,80,green,grass,Overgrow,?,?,1
+0,9,0,19,Fire,quadruped,45,5,4,3,4,3,58,64,58,80,65,80,yellow,grass,Blaze,?,?,2
+1,7,0,79,5,Fire,quadruped,45,4,5,3,5,3,78,84,78,109,85,100,yellow,grass,Blaze,?,?,2
+0,8,0,6,Normal,quadruped,255,5,3,4,4,4,35,46,34,35,45,20,brown,grass,Run Away,Keen Eye,?,5
+1,8,0,32,5,Normal,quadruped,90,5,3,3,3,3,85,76,64,45,55,90,brown,grass,Run Away,Keen Eye,?,5
+0,3,0,2,Electric,quadruped,190,5,1,5,3,4,20,40,15,35,35,60,yellow,forest,Static,?,?,7
+0,6,0,7,8,Electric,quadruped,235,3,3,3,4,2,55,40,40,65,45,35,silver,grass,Static,?,?,7
+0,9,0,26,5,Psychic,quadruped,45,3,3,5,2,4,65,65,60,130,95,110,purple,urban,Synchronize,?,?,13
+1,0,27,Dark,quadruped,45,3,4,2,5,3,95,65,110,60,130,65,black,urban,Synchronize,?,?,16
+1,5,0,41,5,Normal,quadruped,60,4,4,4,3,3,70,80,65,90,65,85,yellow,grass,Inner Focus,Early Bird,?,5
+0,4,0,6,5,Ice,quadruped,225,3,4,2,4,3,50,50,40,30,30,50,brown,cave,Oblivious,Snow Cloak,Thick Fat,14
+1,1,0,55,8,Ice,quadruped,75,2,4,2,5,2,100,100,80,60,60,50,brown,cave,Oblivious,Snow Cloak,Thick Fat,14
+0,6,0,10,8,Dark,quadruped,120,4,3,4,3,4,45,60,30,80,50,65,black,rough,Early Bird,Flash Fire,?,16
+1,9,0,109,1,Dark,quadruped,45,4,3,2,4,4,75,90,90,140,90,115,black,rough,Early Bird,Flash Fire,?,16
+0,5,0,33,5,Ground,quadruped,120,3,5,3,4,3,90,60,60,40,40,40,blue,rough,Pickup,?,?,8
+1,1,0,120,Ground,quadruped,60,4,5,2,4,2,90,120,120,60,60,50,gray,rough,Sturdy,?,?,8
+1,4,0,71,2,Normal,quadruped,45,3,4,3,4,3,73,95,62,85,65,85,brown,forest,Intimidate,Frisk,Sap Sipper,5
+1,9,0,178,Electric,quadruped,3,5,4,4,3,3,90,85,75,115,100,115,yellow,grass,Pressure,?,?,7
+2,1,0,198,Fire,quadruped,3,4,5,3,4,3,115,115,85,90,75,100,brown,grass,Pressure,?,?,2
+2,0,187,Water,quadruped,3,5,4,5,3,4,100,75,115,90,115,85,blue,grass,Pressure,?,?,3
+0,4,0,7,6,Water,quadruped,45,4,4,3,5,3,50,70,50,50,50,40,blue,water,Torrent,?,?,3
+0,5,0,13,6,Dark,quadruped,255,4,4,4,5,3,35,55,35,30,30,35,gray,grass,Run Away,Quick Feet,Rattled,16
+1,0,37,Dark,quadruped,127,4,5,3,5,3,70,90,70,60,60,70,gray,grass,Intimidate,Quick Feet,Moxie,16
+0,4,0,17,5,Normal,quadruped,255,4,4,5,4,3,38,30,41,30,41,60,brown,grass,Pickup,Gluttony,Quick Feet,5
+0,5,0,32,5,Normal,quadruped,90,5,4,3,4,3,78,70,61,50,61,100,silver,grass,Pickup,Gluttony,Quick Feet,5
+0,8,0,24,Normal,quadruped,255,2,2,2,5,2,60,60,60,35,35,30,brown,forest,Truant,?,?,5
+0,6,0,11,Normal,quadruped,255,5,3,3,3,4,50,45,45,35,35,50,pink,forest,Cute Charm,Normalize,Wonder Skin,5
+1,1,0,32,6,Normal,quadruped,60,5,3,4,4,4,70,65,65,55,55,70,purple,forest,Cute Charm,Normalize,Wonder Skin,5
+0,4,0,60,Steel,quadruped,180,3,5,3,3,2,50,70,100,40,40,30,gray,mountain,Sturdy,Rock Head,?,17
+0,9,0,120,Steel,quadruped,90,3,5,4,4,2,60,90,140,50,50,40,gray,mountain,Sturdy,Rock Head,?,17
+0,6,0,15,2,Electric,quadruped,120,5,3,4,3,4,40,45,40,65,40,65,green,grass,Static,Lightningrod,?,7
+1,8,0,97,Electric,quadruped,45,5,3,4,3,4,70,75,80,135,80,135,yellow,grass,Static,Lightningrod,?,7
+0,7,0,24,Fire,quadruped,255,3,4,2,4,2,60,60,40,65,45,35,yellow,mountain,Oblivious,Simple,Own Tempo,2
+1,9,0,220,Fire,quadruped,150,3,5,2,4,2,70,100,70,105,75,40,red,mountain,Magma Armor,Solid Rock,Anger Point,2
+0,5,0,80,4,Fire,quadruped,90,2,5,3,5,2,70,85,140,85,70,20,brown,mountain,White Smoke,?,?,2
+2,0,100,Grass,quadruped,200,4,5,2,4,5,99,68,83,72,87,51,green,forest,Chlorophyll,Solar Power,Harvest,1
+1,2,0,108,Dark,quadruped,30,5,4,3,4,3,65,150,60,115,60,115,silver,mountain,Pressure,Super Luck,Justified,16
+1,4,0,150,6,Ice,quadruped,45,2,5,1,5,2,110,80,90,95,90,65,blue,sea,Thick Fat,Ice Body,Oblivious,14
+1,1,0,110,5,Dragon,quadruped,45,2,5,2,5,2,65,95,100,60,50,50,silver,rough,Rock Head,?,?,15
+1,5,0,102,6,Dragon,quadruped,45,3,5,3,3,5,95,135,80,110,80,100,blue,rough,Intimidate,?,?,15
+0,4,0,10,2,Grass,quadruped,45,4,4,3,4,3,55,68,64,45,55,31,green,?,Overgrow,?,?,1
+1,1,0,97,Grass,quadruped,45,3,4,3,5,3,75,89,85,55,65,36,green,?,Overgrow,?,?,1
+2,2,0,310,Grass,quadruped,45,2,5,3,5,2,95,109,105,75,85,56,green,?,Overgrow,?,?,1
+0,5,0,20,Normal,quadruped,255,4,4,4,4,2,59,45,40,35,40,31,brown,?,Simple,Unaware,?,5
+0,5,0,9,5,Electric,quadruped,235,4,4,4,3,3,45,65,34,40,34,45,blue,?,Rivalry,Intimidate,?,7
+0,9,0,30,5,Electric,quadruped,120,4,4,3,4,3,60,85,49,60,49,60,blue,?,Rivalry,Intimidate,?,7
+1,4,0,42,Electric,quadruped,45,3,5,4,4,3,80,120,79,95,79,70,blue,?,Rivalry,Intimidate,?,7
+0,5,0,57,Rock,quadruped,45,3,4,3,5,2,30,42,118,42,88,30,gray,?,Sturdy,?,?,11
+1,3,0,149,5,Rock,quadruped,45,2,5,3,5,2,60,52,168,47,138,30,gray,?,Sturdy,?,?,11
+0,4,0,3,9,Electric,quadruped,200,5,3,5,3,3,60,45,70,45,90,95,silver,?,Run Away,Pickup,?,7
+0,7,0,29,5,Water,quadruped,190,5,4,4,4,3,55,65,35,60,30,85,brown,?,Swift Swim,?,?,3
+1,1,0,33,5,Water,quadruped,75,4,4,5,5,3,85,105,55,85,50,115,brown,?,Swift Swim,?,?,3
+0,5,0,3,9,Normal,quadruped,190,5,5,4,3,4,49,55,42,42,37,85,gray,?,Limber,Own Tempo,?,5
+1,0,43,8,Normal,quadruped,75,4,5,2,4,3,71,82,64,64,59,112,gray,?,Thick Fat,Own Tempo,?,5
+0,4,0,19,2,Poison,quadruped,225,5,4,3,3,3,63,63,47,41,41,74,purple,?,Stench,Aftermath,?,6
+1,0,38,Poison,quadruped,60,3,5,4,4,2,103,93,67,71,61,84,purple,?,Stench,Aftermath,?,6
+0,8,0,49,5,Ground,quadruped,140,3,5,3,5,3,68,72,78,38,42,32,brown,?,Sand Stream,?,?,8
+2,0,300,Ground,quadruped,60,2,5,2,5,2,108,112,118,68,72,47,brown,?,Sand Stream,?,?,8
+1,0,25,5,Grass,quadruped,45,3,4,4,5,4,65,110,130,60,65,95,green,?,Leaf Guard,?,?,1
+0,8,0,25,9,Ice,quadruped,45,4,4,5,4,3,65,60,110,130,95,65,blue,?,Snow Cloak,?,?,14
+2,5,0,291,Ice,quadruped,50,4,5,3,5,2,110,130,80,70,60,80,brown,?,Oblivious,Snow Cloak,?,14
+5,4,0,683,Steel,quadruped,30,3,5,5,5,5,100,120,120,150,100,90,silver,?,Pressure,?,?,17
+1,7,0,430,Fire,quadruped,3,3,5,5,5,2,91,90,106,130,106,77,brown,?,Flash Fire,?,?,2
+0,4,0,11,5,Grass,quadruped,45,5,4,4,3,5,100,103,75,120,75,127,green,?,Natural Cure,?,?,1
+3,2,0,320,Normal,quadruped,3,5,5,5,5,5,120,120,120,120,120,120,gray,?,Multitype,?,?,5
+0,5,0,9,9,Fire,quadruped,45,0,0,0,0,0,65,63,45,45,45,45,red,?,Blaze,?,?,2
+1,5,0,94,6,Water,quadruped,45,0,0,0,0,0,95,100,85,108,70,70,blue,?,Torrent,?,?,3
+0,5,0,11,6,Normal,quadruped,255,0,0,0,0,0,45,55,39,35,39,42,brown,?,Run Away,Keen Eye,?,5
+0,4,0,4,1,Normal,quadruped,255,0,0,0,0,0,45,60,45,25,45,55,brown,?,Vital Spirit,Pickup,?,5
+0,9,0,14,7,Normal,quadruped,120,0,0,0,0,0,65,80,65,35,65,60,gray,?,Intimidate,Sand Rush,?,5
+1,2,0,61,Normal,quadruped,45,0,0,0,0,0,85,110,90,45,90,80,gray,?,Intimidate,Sand Rush,?,5
+0,4,0,10,1,Dark,quadruped,255,0,0,0,0,0,41,50,37,50,37,66,purple,?,Limber,Unburden,?,16
+1,1,0,37,5,Dark,quadruped,90,0,0,0,0,0,64,88,50,88,50,106,purple,?,Limber,Unburden,?,16
+0,6,0,23,3,Psychic,quadruped,190,0,0,0,0,0,76,25,45,67,55,24,pink,?,Forewarn,Synchronize,?,13
+0,8,0,29,8,Electric,quadruped,190,0,0,0,0,0,45,60,32,50,32,76,black,?,Lightningrod,Motor Drive,?,7
+1,6,0,79,5,Electric,quadruped,75,0,0,0,0,0,75,100,63,80,63,116,black,?,Lightningrod,Motor Drive,?,7
+0,7,0,15,2,Ground,quadruped,180,0,0,0,0,0,50,72,35,35,35,65,brown,?,Intimidate,Moxie,?,8
+1,0,33,4,Ground,quadruped,90,0,0,0,0,0,60,82,45,45,45,74,brown,?,Intimidate,Moxie,?,8
+1,3,0,92,9,Fire,quadruped,60,0,0,0,0,0,105,30,105,140,105,55,red,?,Sheer Force,?,?,2
+0,7,0,16,5,Water,quadruped,45,0,0,0,0,0,54,78,103,53,45,22,blue,?,Solid Rock,Sturdy,?,3
+0,7,0,12,5,Dark,quadruped,75,0,0,0,0,0,40,65,40,80,40,65,gray,?,Illusion,?,?,16
+0,4,0,5,8,Normal,quadruped,255,0,0,0,0,0,55,50,40,40,40,75,gray,?,Cute Charm,Technician,?,5
+0,5,0,7,5,Normal,quadruped,60,0,0,0,0,0,75,95,60,65,60,115,gray,?,Cute Charm,Technician,?,5
+0,6,0,19,5,Normal,quadruped,190,0,0,0,0,0,60,60,50,40,50,75,yellow,?,Chlorophyll,Sap Sipper,?,5
+1,9,0,92,5,Normal,quadruped,75,0,0,0,0,0,80,100,70,60,70,95,brown,?,Chlorophyll,Sap Sipper,?,5
+0,4,0,5,Electric,quadruped,200,0,0,0,0,0,55,75,60,75,60,103,silver,?,Static,?,?,7
+2,6,0,260,Ice,quadruped,60,0,0,0,0,0,95,110,80,70,80,50,silver,?,Snow Cloak,?,?,14
+1,6,0,94,5,Normal,quadruped,45,0,0,0,0,0,95,110,95,40,95,55,brown,?,Reckless,Sap Sipper,?,5
+0,8,0,17,3,Dark,quadruped,45,0,0,0,0,0,52,65,50,45,50,38,blue,?,Hustle,?,?,16
+1,4,0,50,Dark,quadruped,45,0,0,0,0,0,72,85,70,65,70,58,blue,?,Hustle,?,?,16
+2,1,0,250,Steel,quadruped,3,0,0,0,0,0,91,90,129,90,72,108,blue,?,Justified,?,?,17
+1,9,0,260,Rock,quadruped,3,0,0,0,0,0,91,129,90,72,90,108,gray,?,Justified,?,?,11
+2,0,200,Grass,quadruped,3,0,0,0,0,0,91,90,72,90,129,108,green,?,Justified,?,?,1
+1,4,0,48,5,Water,quadruped,3,0,0,0,0,0,91,72,90,129,90,108,yellow,?,Justified,?,?,3
+0,3,0,1,8,Normal,singleWings,255,5,3,4,3,5,40,45,40,35,35,56,brown,forest,Keen Eye,Tangled Feet,Big Pecks,5
+1,1,0,30,Normal,singleWings,120,4,3,3,4,5,63,60,55,50,50,71,brown,forest,Keen Eye,Tangled Feet,Big Pecks,5
+1,5,0,39,5,Normal,singleWings,45,4,5,3,4,5,83,80,75,70,70,91,brown,forest,Keen Eye,Tangled Feet,Big Pecks,5
+0,3,0,2,Normal,singleWings,255,5,4,3,3,5,40,60,30,31,31,70,brown,rough,Keen Eye,?,?,5
+1,2,0,38,Normal,singleWings,90,4,5,3,3,5,65,90,65,61,61,100,brown,rough,Keen Eye,?,?,5
+0,8,0,7,5,Poison,singleWings,255,5,3,4,3,5,40,45,35,30,40,55,purple,cave,Inner Focus,?,?,6
+1,6,0,55,Poison,singleWings,90,5,3,3,4,5,75,80,70,65,75,90,purple,cave,Inner Focus,?,?,6
+0,8,0,15,Normal,singleWings,45,3,4,3,3,4,52,65,55,58,62,60,brown,grass,Keen Eye,Inner Focus,?,5
+2,1,0,174,2,Rock,singleWings,45,5,3,2,3,5,80,135,85,70,95,150,purple,mountain,Rock Head,Pressure,?,11
+1,7,0,55,4,Ice,singleWings,3,4,4,5,3,5,90,85,100,95,125,85,blue,rare,Pressure,?,?,14
+1,6,0,52,6,Electric,singleWings,3,5,5,5,3,5,90,90,85,125,90,100,yellow,rare,Pressure,?,?,7
+2,0,60,Fire,singleWings,3,4,5,5,5,5,90,100,90,125,85,90,yellow,rare,Pressure,?,?,2
+0,7,0,21,2,Normal,singleWings,255,3,3,5,3,4,60,30,30,36,56,50,brown,forest,Insomnia,Keen Eye,?,5
+1,6,0,40,8,Normal,singleWings,90,3,3,3,4,5,100,50,50,76,96,70,brown,forest,Insomnia,Keen Eye,?,5
+1,0,10,8,Bug,singleWings,255,5,2,5,3,5,40,20,30,40,80,55,red,forest,Swarm,Early Bird,?,4
+1,4,0,35,6,Bug,singleWings,90,5,2,5,3,5,55,35,50,55,110,85,red,forest,Swarm,Early Bird,?,4
+0,2,0,2,Psychic,singleWings,190,4,3,2,4,4,40,50,45,70,45,70,green,forest,Synchronize,Early Bird,?,13
+1,5,0,15,Psychic,singleWings,75,3,3,3,4,4,65,75,70,95,70,95,green,forest,Synchronize,Early Bird,?,13
+0,5,0,2,1,Dark,singleWings,30,4,3,4,4,4,60,85,42,85,42,91,black,forest,Insomnia,Super Luck,Prankster,16
+1,1,0,64,8,Ground,singleWings,60,4,3,3,2,5,65,75,105,35,65,85,purple,mountain,Hyper Cutter,Sand Veil,?,8
+0,9,0,16,Ice,singleWings,45,3,3,4,5,3,45,55,45,65,45,75,red,mountain,Vital Spirit,Hustle,?,14
+2,1,0,220,Water,singleWings,25,4,4,3,5,3,65,40,70,80,140,70,purple,sea,Swift Swim,Water Absorb,?,3
+1,7,0,50,5,Steel,singleWings,25,5,3,2,4,5,65,80,140,40,70,70,gray,rough,Keen Eye,Sturdy,?,17
+5,2,0,216,Psychic,singleWings,3,4,5,4,4,5,106,90,130,90,154,110,silver,rare,Pressure,?,?,13
+3,8,0,199,Fire,singleWings,3,4,4,5,4,5,106,130,90,110,154,90,red,rare,Pressure,?,?,2
+0,3,0,2,3,Normal,singleWings,200,4,4,3,4,5,40,55,30,30,30,85,blue,grass,Guts,?,?,5
+0,7,0,19,8,Normal,singleWings,45,3,5,2,4,5,60,85,60,50,50,125,blue,grass,Guts,?,?,5
+0,6,0,9,5,Water,singleWings,190,4,3,3,4,5,40,30,30,55,30,85,silver,sea,Keen Eye,?,?,3
+1,2,0,28,Water,singleWings,45,3,4,2,5,5,60,50,100,85,70,65,yellow,sea,Keen Eye,?,?,3
+2,0,82,Ground,singleWings,45,4,5,4,2,5,80,100,80,80,80,100,green,rough,Levitate,?,?,8
+0,4,0,1,2,Normal,singleWings,255,3,3,4,4,5,45,40,60,40,75,50,blue,forest,Natural Cure,?,?,5
+1,1,0,20,6,Dragon,singleWings,45,3,3,4,4,5,75,70,90,70,105,80,blue,forest,Natural Cure,?,?,15
+1,4,0,40,Dragon,singleWings,3,5,4,5,3,5,80,80,90,110,130,110,red,water,Levitate,?,?,15
+2,0,60,Dragon,singleWings,3,5,4,5,3,5,80,90,80,130,110,110,blue,water,Levitate,?,?,15
+0,3,0,2,Normal,singleWings,255,4,3,2,3,5,40,55,30,30,30,60,brown,?,Keen Eye,?,?,5
+0,6,0,15,5,Normal,singleWings,120,4,3,3,4,5,55,75,50,40,40,80,brown,?,Intimidate,?,?,5
+1,2,0,24,9,Normal,singleWings,45,3,5,3,4,5,85,120,70,50,50,100,brown,?,Intimidate,?,?,5
+0,9,0,27,3,Dark,singleWings,30,3,4,3,5,5,100,125,52,105,52,71,black,?,Insomnia,Super Luck,?,16
+0,5,0,1,9,Normal,singleWings,30,4,3,4,3,5,76,65,45,92,42,91,black,?,Keen Eye,Tangled Feet,?,5
+1,0,65,Water,singleWings,25,4,3,2,4,4,45,20,50,60,120,50,blue,?,Swift Swim,Water Absorb,?,3
+1,5,0,38,Fairy,singleWings,30,4,3,4,4,5,85,50,95,120,115,80,silver,?,Hustle,Serene Grace,?,9
+2,0,42,5,Ground,singleWings,30,3,5,5,4,5,75,95,125,45,75,95,purple,?,Hyper Cutter,Sand Veil,?,8
+0,3,0,2,1,Normal,singleWings,255,0,0,0,0,0,50,55,50,36,30,43,gray,?,Big Pecks,Super Luck,?,5
+0,6,0,15,Normal,singleWings,120,0,0,0,0,0,62,77,62,50,42,65,gray,?,Big Pecks,Super Luck,?,5
+1,2,0,29,Normal,singleWings,45,0,0,0,0,0,80,105,80,65,55,93,gray,?,Big Pecks,Super Luck,?,5
+0,4,0,2,1,Psychic,singleWings,190,0,0,0,0,0,55,45,43,55,43,72,blue,?,Unaware,Klutz,?,13
+0,9,0,10,5,Psychic,singleWings,45,0,0,0,0,0,67,57,55,77,55,114,blue,?,Unaware,Klutz,?,13
+1,4,0,14,Psychic,singleWings,45,0,0,0,0,0,72,58,80,103,80,97,black,?,Wonder Skin,Magic Guard,?,13
+0,6,0,9,5,Rock,singleWings,45,0,0,0,0,0,55,112,45,74,45,70,yellow,?,Defeatist,?,?,11
+1,4,0,32,Rock,singleWings,45,0,0,0,0,0,75,140,65,112,65,110,yellow,?,Defeatist,?,?,11
+0,5,0,5,5,Water,singleWings,190,0,0,0,0,0,62,44,50,44,50,55,blue,?,Keen Eye,Big Pecks,?,3
+1,3,0,24,2,Water,singleWings,45,0,0,0,0,0,75,87,63,87,63,98,silver,?,Keen Eye,Big Pecks,?,3
+0,5,0,10,5,Normal,singleWings,190,0,0,0,0,0,70,83,50,37,50,60,silver,?,Keen Eye,Sheer Force,?,5
+1,5,0,41,Normal,singleWings,60,0,0,0,0,0,100,123,75,57,75,80,red,?,Keen Eye,Sheer Force,?,5
+0,5,0,9,Dark,singleWings,190,0,0,0,0,0,70,55,75,45,65,60,brown,?,Big Pecks,Overcoat,?,16
+1,2,0,39,5,Dark,singleWings,60,0,0,0,0,0,110,65,105,55,95,80,brown,?,Big Pecks,Overcoat,?,16
+3,2,0,330,Dragon,singleWings,45,0,0,0,0,0,100,120,100,150,120,90,silver,?,Turboblaze,?,?,15
+0,9,0,45,5,Water,multiped,190,3,3,5,4,3,40,40,35,50,100,70,blue,sea,Clear Body,Liquid Ooze,?,3
+1,6,0,55,Water,multiped,60,2,3,4,4,3,80,70,65,80,120,100,blue,sea,Clear Body,Liquid Ooze,?,3
+0,4,0,7,5,Rock,multiped,45,3,3,4,4,3,35,40,100,90,55,35,blue,sea,Swift Swim,Shell Armor,?,11
+1,0,35,Rock,multiped,45,3,4,4,3,2,70,60,125,115,70,55,blue,sea,Swift Swim,Shell Armor,?,11
+0,9,0,28,5,Water,multiped,75,2,4,4,5,2,75,105,75,105,75,45,red,sea,Suction Cups,Sniper,Moody,3
+1,4,0,27,Grass,multiped,200,3,5,3,3,5,74,100,72,90,72,46,green,?,Levitate,?,?,1
+0,9,0,102,Rock,multiped,120,0,0,0,0,0,70,105,105,50,40,20,blue,?,Sturdy,?,?,11
+1,7,0,260,Rock,multiped,45,0,0,0,0,0,85,135,130,60,70,25,blue,?,Sturdy,?,?,11
+1,2,0,33,Water,multiped,190,0,0,0,0,0,55,40,50,65,85,40,silver,?,Water Absorb,Cursed Body,?,3
+2,2,0,135,Water,multiped,60,0,0,0,0,0,100,60,70,85,105,60,silver,?,Water Absorb,Cursed Body,?,3
+1,0,110,Grass,multiped,90,0,0,0,0,0,74,94,131,54,116,20,gray,?,Iron Barbs,?,?,1
+0,7,0,33,3,Ground,multiBody,50,5,4,3,4,1,35,80,50,50,70,120,brown,cave,Sand Veil,Arena Trap,?,8
+1,0,60,Electric,multiBody,60,3,3,4,4,4,50,60,95,120,70,70,gray,rough,Magnet Pull,Sturdy,?,7
+0,4,0,2,5,Grass,multiBody,90,3,3,3,4,3,60,40,80,60,45,40,pink,forest,Chlorophyll,?,?,1
+1,2,0,9,5,Poison,multiBody,60,2,4,3,4,3,65,90,120,85,70,60,purple,urban,Levitate,?,?,6
+1,6,0,550,Steel,multiBody,3,2,5,4,5,2,80,135,130,95,90,70,blue,rough,Clear Body,?,?,17
+0,3,0,5,5,Bug,multiBody,120,5,2,1,2,5,30,30,42,30,42,70,yellow,?,Honey Gather,?,?,4
+0,4,0,3,3,Grass,multiBody,190,4,3,3,3,3,45,35,45,62,53,35,pink,?,Chlorophyll,?,?,1
+1,4,0,340,Rock,multiBody,60,2,5,4,5,5,60,55,145,75,150,40,gray,?,Sturdy,Magnet Pull,?,11
+1,3,0,57,5,Ice,multiBody,45,0,0,0,0,0,71,95,85,110,95,79,silver,?,Ice Body,?,?,14
+0,3,0,21,Steel,multiBody,130,0,0,0,0,0,40,55,70,45,60,30,gray,?,Plus,Minus,?,17
+0,6,0,51,Steel,multiBody,60,0,0,0,0,0,60,80,95,70,85,50,gray,?,Plus,Minus,?,17
+0,6,0,81,Steel,multiBody,30,0,0,0,0,0,60,100,115,70,85,90,gray,?,Plus,Minus,?,17
+0,5,0,5,5,Normal,bipedalTailless,170,5,3,4,5,3,115,45,20,45,25,20,pink,grass,Cute Charm,?,?,5
+1,0,12,Normal,bipedalTailless,50,3,4,4,5,3,140,70,45,75,50,45,pink,grass,Cute Charm,?,?,5
+0,8,0,8,6,Grass,bipedalTailless,120,4,3,4,5,3,60,65,70,85,75,40,blue,grass,Chlorophyll,?,?,1
+1,2,0,18,6,Grass,bipedalTailless,45,2,3,3,5,3,75,80,85,100,90,50,red,grass,Chlorophyll,?,?,1
+1,0,30,Bug,bipedalTailless,190,5,3,3,4,3,60,55,50,40,55,45,purple,forest,Compound Eyes,Tinted Lens,Run Away,4
+1,0,20,Water,bipedalTailless,120,3,3,4,4,4,65,65,65,50,50,90,blue,water,Water Absorb,Damp,?,3
+1,3,0,54,Water,bipedalTailless,45,2,5,4,5,2,90,85,95,70,90,70,blue,water,Water Absorb,Damp,?,3
+1,5,0,48,Psychic,bipedalTailless,50,4,1,5,1,2,55,50,65,175,95,150,brown,urban,Synchronize,Inner Focus,?,13
+1,5,0,70,5,Fighting,bipedalTailless,90,2,4,3,4,2,80,100,70,50,60,45,gray,mountain,Guts,No Guard,Steadfast,10
+1,6,0,130,Fighting,bipedalTailless,45,2,5,4,3,2,90,130,80,65,85,55,gray,mountain,Guts,No Guard,Steadfast,10
+0,7,0,4,Grass,bipedalTailless,255,2,2,2,5,3,50,75,35,70,30,40,green,forest,Chlorophyll,?,?,1
+1,0,105,Rock,bipedalTailless,120,2,4,2,4,2,55,95,115,45,45,35,brown,mountain,Rock Head,Sturdy,?,11
+1,4,0,300,Rock,bipedalTailless,45,2,4,2,4,2,80,110,130,55,65,45,brown,mountain,Rock Head,Sturdy,?,11
+1,0,32,4,Psychic,bipedalTailless,190,2,4,3,5,3,60,48,45,43,90,42,yellow,grass,Insomnia,Forewarn,Inner Focus,13
+1,6,0,75,6,Psychic,bipedalTailless,75,3,3,5,3,3,85,73,70,73,115,67,yellow,grass,Insomnia,Forewarn,Inner Focus,13
+1,5,0,49,8,Fighting,bipedalTailless,45,3,4,3,3,4,50,120,53,35,110,87,brown,urban,Limber,Reckless,Unburden,10
+1,4,0,50,2,Fighting,bipedalTailless,45,3,4,5,4,3,50,105,79,35,110,76,brown,urban,Keen Eye,Iron Fist,Inner Focus,10
+1,3,0,54,5,Psychic,bipedalTailless,45,3,3,5,4,3,40,45,65,100,120,90,pink,urban,Soundproof,Filter,Technician,13
+1,4,0,40,6,Ice,bipedalTailless,45,3,3,5,4,3,65,50,35,115,95,95,red,urban,Oblivious,Forewarn,Dry Skin,14
+1,7,0,130,1,Bug,bipedalTailless,45,2,5,4,5,3,65,155,120,65,90,105,brown,forest,Hyper Cutter,Mold Breaker,Moxie,4
+2,1,0,460,Normal,bipedalTailless,25,2,5,3,5,2,160,110,65,65,110,30,black,mountain,Immunity,Thick Fat,?,5
+0,5,0,7,9,Fire,bipedalTailless,45,5,4,3,3,3,39,52,43,60,50,65,yellow,grass,Blaze,?,?,2
+0,3,0,1,Normal,bipedalTailless,170,4,3,3,4,4,90,30,15,40,20,15,pink,grass,Cute Charm,?,?,5
+0,3,0,1,5,Fairy,bipedalTailless,190,5,3,3,5,4,35,20,65,40,65,20,silver,forest,Hustle,Serene Grace,?,9
+0,6,0,3,2,Fairy,bipedalTailless,75,4,5,3,5,5,55,40,85,80,105,40,silver,forest,Hustle,Serene Grace,?,9
+0,4,0,5,8,Grass,bipedalTailless,45,4,3,5,3,4,75,80,85,90,100,50,green,grass,Chlorophyll,?,?,1
+1,2,0,38,Rock,bipedalTailless,65,2,4,4,5,3,70,100,115,30,65,30,brown,forest,Sturdy,Rock Head,?,11
+1,1,0,33,9,Water,bipedalTailless,45,3,4,4,4,4,90,75,75,90,100,70,green,water,Water Absorb,Damp,?,3
+0,8,0,8,5,Grass,bipedalTailless,120,2,5,3,5,3,75,75,55,105,85,30,yellow,grass,Chlorophyll,Solar Power,Early Bird,1
+0,6,0,7,8,Fairy,bipedalTailless,190,3,5,4,3,3,60,80,50,40,40,30,pink,urban,Intimidate,Run Away,?,9
+1,7,0,137,8,Bug,bipedalTailless,45,3,5,3,3,3,80,185,115,40,105,75,blue,forest,Swarm,Guts,?,4
+0,7,0,21,Fighting,bipedalTailless,75,4,4,4,2,3,35,35,35,35,35,35,purple,urban,Guts,Steadfast,Vital Spirit,10
+0,4,0,6,Ice,bipedalTailless,45,4,2,4,3,3,45,30,15,85,65,65,pink,urban,Oblivious,Forewarn,Hydration,14
+0,6,0,23,5,Electric,bipedalTailless,45,4,3,3,2,3,45,63,37,65,55,95,yellow,grass,Static,?,?,7
+1,5,0,46,8,Normal,bipedalTailless,30,3,3,3,5,3,255,10,10,75,135,55,pink,urban,Natural Cure,Serene Grace,?,5
+0,6,0,5,Psychic,bipedalTailless,45,5,3,5,3,5,100,100,100,100,100,100,green,forest,Natural Cure,?,?,13
+1,2,0,32,5,Water,bipedalTailless,120,3,4,5,4,3,60,50,50,60,70,50,green,water,Swift Swim,Rain Dish,?,3
+1,5,0,55,Water,bipedalTailless,45,4,4,5,5,3,80,70,70,90,100,70,green,water,Swift Swim,Rain Dish,?,3
+1,0,28,Grass,bipedalTailless,120,5,4,4,2,3,70,70,40,60,40,60,brown,forest,Chlorophyll,Early Bird,?,1
+1,3,0,59,6,Grass,bipedalTailless,45,4,4,4,4,4,90,100,60,90,60,80,brown,forest,Chlorophyll,Early Bird,?,1
+0,4,0,6,6,Psychic,bipedalTailless,235,4,1,5,4,3,28,25,25,45,35,40,silver,urban,Synchronize,Trace,?,13
+0,8,0,20,2,Psychic,bipedalTailless,120,3,4,5,3,3,38,35,35,65,55,50,silver,urban,Synchronize,Trace,?,13
+1,6,0,48,4,Psychic,bipedalTailless,45,4,3,5,2,4,68,85,65,165,135,100,silver,urban,Synchronize,Trace,?,13
+2,0,130,5,Normal,bipedalTailless,45,1,5,2,5,2,150,160,100,95,65,100,brown,forest,Truant,?,?,5
+1,0,86,4,Fighting,bipedalTailless,180,3,5,3,4,5,72,60,30,20,30,25,yellow,mountain,Thick Fat,Guts,?,10
+2,3,0,253,8,Fighting,bipedalTailless,200,2,5,3,4,5,144,120,60,40,60,50,brown,mountain,Thick Fat,Guts,?,10
+1,0,97,Rock,bipedalTailless,255,2,4,3,5,3,30,45,135,45,90,30,gray,cave,Sturdy,Magnet Pull,?,11
+0,5,0,11,Dark,bipedalTailless,45,4,4,4,4,3,50,75,75,65,65,50,purple,cave,Keen Eye,Stall,Prankster,16
+1,0,51,8,Steel,bipedalTailless,45,4,5,4,4,3,50,105,125,55,95,50,black,cave,Hyper Cutter,Intimidate,?,17
+0,6,0,11,2,Fighting,bipedalTailless,180,2,2,5,3,5,30,40,55,40,55,60,blue,mountain,Pure Power,?,?,10
+1,3,0,31,5,Fighting,bipedalTailless,90,5,5,5,3,4,60,100,85,80,85,100,red,mountain,Pure Power,?,?,10
+0,6,0,17,7,Bug,bipedalTailless,150,4,2,3,3,5,65,47,55,73,75,85,purple,forest,Oblivious,Tinted Lens,Prankster,4
+0,3,0,2,Grass,bipedalTailless,150,3,3,5,3,3,50,60,45,100,80,65,green,grass,Natural Cure,Poison Point,?,1
+0,4,0,51,3,Grass,bipedalTailless,190,3,4,4,5,3,50,85,40,85,40,35,green,rough,Sand Veil,?,?,1
+1,3,0,77,4,Grass,bipedalTailless,60,4,4,5,3,3,70,115,60,115,60,55,green,rough,Sand Veil,?,?,1
+1,6,0,30,6,Ghost,bipedalTailless,90,3,4,4,5,2,40,70,130,60,130,25,black,forest,Pressure,?,?,12
+0,7,0,16,8,Ice,bipedalTailless,190,5,3,4,3,3,50,50,50,50,50,50,gray,cave,Inner Focus,Ice Body,Moody,14
+0,6,0,42,1,Dragon,bipedalTailless,45,4,4,4,4,3,45,75,60,40,30,50,blue,rough,Rock Head,?,?,15
+1,7,0,230,Rock,bipedalTailless,3,2,5,5,5,2,80,100,200,50,100,50,brown,cave,Clear Body,?,?,11
+1,8,0,175,Ice,bipedalTailless,3,2,4,5,5,2,80,50,100,100,200,50,blue,cave,Clear Body,?,?,14
+1,9,0,205,Steel,bipedalTailless,3,2,5,5,5,2,80,75,150,75,150,50,gray,cave,Clear Body,?,?,17
+0,3,0,1,1,Steel,bipedalTailless,3,5,3,5,4,3,100,100,100,100,100,100,yellow,mountain,Serene Grace,?,?,17
+1,7,0,60,8,Psychic,bipedalTailless,3,5,3,5,4,4,50,95,90,95,90,180,red,rare,Pressure,?,?,13
+0,4,0,5,2,Water,bipedalTailless,45,5,4,3,3,5,53,51,53,61,56,40,blue,?,Torrent,?,?,3
+0,3,0,2,2,Bug,bipedalTailless,255,4,3,4,3,3,37,25,41,25,41,25,red,?,Shed Skin,?,?,4
+0,2,0,1,2,Grass,bipedalTailless,255,5,3,3,3,3,40,30,35,50,70,55,green,?,Natural Cure,Poison Point,?,1
+0,9,0,14,5,Grass,bipedalTailless,75,4,4,5,3,3,60,70,55,125,105,90,green,?,Natural Cure,Poison Point,?,1
+0,2,0,0,6,Psychic,bipedalTailless,120,4,3,3,3,5,45,30,50,65,50,45,yellow,?,Levitate,?,?,13
+0,6,0,13,Psychic,bipedalTailless,145,5,2,5,3,3,20,25,45,70,90,60,pink,?,Soundproof,Filter,?,13
+0,6,0,24,4,Normal,bipedalTailless,130,4,3,4,4,3,100,5,5,15,65,30,pink,?,Natural Cure,Serene Grace,?,5
+0,6,0,105,Normal,bipedalTailless,50,3,5,4,5,2,135,85,40,40,85,5,black,?,Pickup,Thick Fat,?,5
+0,7,0,23,Poison,bipedalTailless,140,5,4,5,3,4,48,61,40,61,40,50,blue,?,Anticipation,Dry Skin,?,6
+1,3,0,44,4,Poison,bipedalTailless,75,4,4,5,4,4,83,106,65,86,65,85,blue,?,Anticipation,Dry Skin,?,6
+1,7,0,140,Normal,bipedalTailless,30,2,4,5,5,2,110,85,95,80,95,50,pink,?,Own Tempo,Oblivious,?,5
+2,0,128,6,Grass,bipedalTailless,30,2,5,5,5,2,100,100,125,110,50,50,blue,?,Chlorophyll,Leaf Guard,?,1
+1,6,0,52,Psychic,bipedalTailless,45,4,5,5,2,4,68,125,65,65,115,80,silver,?,Steadfast,?,?,13
+3,7,0,420,Normal,bipedalTailless,3,3,5,5,5,2,110,160,110,80,110,100,silver,?,Slow Start,?,?,5
+0,3,0,1,4,Water,bipedalTailless,3,4,3,5,4,3,100,100,100,100,100,100,blue,?,Hydration,?,?,3
+1,5,0,50,5,Dark,bipedalTailless,3,4,4,5,3,5,70,90,90,135,90,125,black,?,Bad Dreams,?,?,16
+0,4,0,4,Psychic,bipedalTailless,3,0,0,0,0,0,100,100,100,100,100,100,yellow,?,Victory Star,?,?,13
+1,1,0,60,5,Psychic,bipedalTailless,75,0,0,0,0,0,116,55,85,107,95,29,pink,?,Forewarn,Synchronize,?,13
+0,7,0,40,4,Ground,bipedalTailless,60,0,0,0,0,0,110,135,60,50,65,88,gray,?,Sand Rush,Sand Force,?,8
+0,6,0,12,5,Fighting,bipedalTailless,180,0,0,0,0,0,75,80,55,25,35,35,gray,?,Guts,Sheer Force,?,10
+1,2,0,40,Fighting,bipedalTailless,90,0,0,0,0,0,85,105,85,40,50,40,gray,?,Guts,Sheer Force,?,10
+1,5,0,87,Fighting,bipedalTailless,45,0,0,0,0,0,105,140,95,55,65,45,brown,?,Guts,Sheer Force,?,10
+1,5,0,62,Water,bipedalTailless,45,0,0,0,0,0,105,85,75,85,75,74,blue,?,Swift Swim,Poison Touch,?,3
+1,3,0,55,5,Fighting,bipedalTailless,45,0,0,0,0,0,120,100,85,30,85,45,red,?,Guts,Inner Focus,?,10
+1,4,0,51,Fighting,bipedalTailless,45,0,0,0,0,0,75,125,75,30,75,85,blue,?,Sturdy,Inner Focus,?,10
+1,2,0,20,5,Bug,bipedalTailless,45,0,0,0,0,0,75,103,80,70,70,92,yellow,?,Swarm,Chlorophyll,?,4
+0,7,0,6,6,Grass,bipedalTailless,75,0,0,0,0,0,60,67,85,77,75,116,green,?,Prankster,Infiltrator,?,1
+0,6,0,37,5,Fire,bipedalTailless,120,0,0,0,0,0,70,90,45,15,45,50,red,?,Hustle,?,?,2
+0,6,0,31,Poison,bipedalTailless,190,0,0,0,0,0,50,50,62,40,62,65,green,?,Stench,Sticky Hold,?,6
+1,9,0,107,3,Poison,bipedalTailless,60,0,0,0,0,0,80,95,82,60,82,75,green,?,Stench,Weak Armor,?,6
+0,4,0,5,8,Psychic,bipedalTailless,200,0,0,0,0,0,45,30,50,55,65,45,purple,?,Frisk,?,?,13
+0,7,0,18,Psychic,bipedalTailless,100,0,0,0,0,0,60,45,70,75,85,55,purple,?,Frisk,?,?,13
+1,5,0,44,Psychic,bipedalTailless,50,0,0,0,0,0,70,55,95,95,110,65,purple,?,Frisk,?,?,13
+0,5,0,5,9,Bug,bipedalTailless,200,0,0,0,0,0,50,75,45,40,45,60,blue,?,Swarm,Shed Skin,?,4
+1,0,34,5,Psychic,bipedalTailless,90,0,0,0,0,0,75,75,75,125,95,40,brown,?,Telepathy,Synchronize,?,13
+1,0,92,Ground,bipedalTailless,190,0,0,0,0,0,59,74,50,35,50,35,green,?,Iron Fist,Klutz,?,8
+2,8,0,330,Ground,bipedalTailless,90,0,0,0,0,0,89,124,80,55,80,55,green,?,Iron Fist,Klutz,?,8
+0,5,0,10,2,Dark,bipedalTailless,120,0,0,0,0,0,45,85,70,40,40,60,red,?,Defiant,Inner Focus,?,16
+1,6,0,70,Dark,bipedalTailless,45,0,0,0,0,0,65,125,100,60,70,70,red,?,Defiant,Inner Focus,?,16
+0,6,0,6,5,Normal,bipedalTailless,3,0,0,0,0,0,100,128,90,77,77,128,silver,?,Serene Grace,?,?,5
+1,5,0,82,5,Bug,bipedalTailless,3,0,0,0,0,0,71,120,95,120,95,99,purple,?,Download,?,?,4
+1,1,0,32,Bug,TwoMoreWings,45,4,3,3,3,5,60,45,50,80,80,70,silver,forest,Compound Eyes,?,?,4
+1,0,29,5,Bug,TwoMoreWings,45,4,4,4,2,5,65,80,40,45,80,75,yellow,forest,Swarm,?,?,4
+1,5,0,12,5,Bug,TwoMoreWings,75,3,4,3,3,5,70,65,60,90,75,90,purple,forest,Shield Dust,Tinted Lens,Wonder Skin,4
+1,5,0,56,Bug,TwoMoreWings,45,4,4,5,2,5,70,110,80,55,80,105,green,grass,Swarm,Technician,Steadfast,4
+1,8,0,75,Poison,TwoMoreWings,90,5,3,3,2,5,85,90,80,70,80,130,purple,cave,Inner Focus,?,?,6
+1,2,0,38,Bug,TwoMoreWings,75,5,2,1,3,5,65,65,45,75,45,95,red,forest,Speed Boost,Compound Eyes,?,4
+2,0,275,6,Bug,TwoMoreWings,25,2,5,5,5,3,70,150,140,65,100,75,red,grass,Swarm,Technician,Light Metal,4
+1,0,28,4,Bug,TwoMoreWings,45,3,4,3,5,5,60,70,50,90,50,65,yellow,forest,Swarm,?,?,4
+1,2,0,31,6,Bug,TwoMoreWings,45,4,3,5,3,5,60,50,70,50,90,65,green,forest,Shield Dust,?,?,4
+0,8,0,3,6,Bug,TwoMoreWings,75,4,3,3,4,5,70,60,62,80,82,60,blue,water,Intimidate,?,?,4
+0,8,0,12,Bug,TwoMoreWings,120,5,3,3,2,5,61,90,45,50,50,160,yellow,forest,Speed Boost,?,?,4
+1,1,0,15,3,Ground,TwoMoreWings,120,4,3,5,3,4,50,70,50,50,50,70,green,rough,Levitate,?,?,8
+1,0,25,5,Bug,TwoMoreWings,45,4,3,5,3,3,77,85,51,55,51,65,red,?,Swarm,?,?,4
+0,9,0,23,3,Bug,TwoMoreWings,45,5,4,4,2,5,70,94,50,94,50,66,yellow,?,Swarm,?,?,4
+1,2,0,38,5,Bug,TwoMoreWings,45,3,3,5,5,5,70,80,102,80,102,40,yellow,?,Pressure,?,?,4
+1,9,0,51,5,Bug,TwoMoreWings,30,5,3,3,3,5,86,76,86,116,56,95,green,?,Speed Boost,Tinted Lens,?,4
+1,6,0,46,Bug,TwoMoreWings,15,0,0,0,0,0,85,60,65,135,105,100,silver,?,Flame Body,?,?,4
+0,3,0,5,4,Bug,insectoid,190,5,3,4,3,3,35,70,55,45,55,25,red,forest,Effect Spore,Dry Skin,Damp,4
+1,0,29,5,Bug,insectoid,75,3,4,4,5,3,60,95,80,60,80,30,red,forest,Effect Spore,Dry Skin,Damp,4
+0,4,0,6,5,Water,insectoid,225,3,4,3,4,3,30,105,90,25,25,50,red,water,Hyper Cutter,Shell Armor,?,3
+1,3,0,60,Water,insectoid,60,2,5,3,5,2,55,130,115,50,50,75,red,water,Hyper Cutter,Shell Armor,?,3
+0,5,0,11,5,Rock,insectoid,45,4,4,3,3,3,30,80,90,55,45,55,brown,sea,Swift Swim,Battle Armor,?,11
+0,5,0,8,5,Bug,insectoid,255,4,3,4,4,3,40,60,40,40,40,30,green,forest,Swarm,Insomnia,?,4
+1,1,0,33,5,Bug,insectoid,90,4,3,4,4,3,70,90,70,60,60,40,red,forest,Swarm,Insomnia,?,4
+0,6,0,20,5,Bug,insectoid,190,2,4,2,5,2,20,10,230,10,230,5,yellow,mountain,Sturdy,Gluttony,Contrary,4
+0,6,0,5,Water,insectoid,60,4,3,3,3,3,55,55,85,65,85,35,pink,sea,Hustle,Natural Cure,?,3
+0,5,0,2,6,Water,insectoid,255,3,4,4,5,3,40,30,30,40,50,30,green,water,Swift Swim,Rain Dish,?,3
+0,5,0,1,7,Bug,insectoid,200,5,3,3,3,3,40,30,32,50,52,65,blue,water,Swift Swim,?,?,4
+0,5,0,5,5,Bug,insectoid,255,3,3,4,5,3,31,45,90,30,30,40,gray,forest,Compound Eyes,?,?,4
+0,7,0,15,Ground,insectoid,255,2,5,3,5,2,45,100,45,45,45,10,brown,rough,Hyper Cutter,Arena Trap,?,8
+0,6,0,11,5,Water,insectoid,205,4,4,4,4,2,43,80,65,50,35,35,red,water,Hyper Cutter,Shell Armor,?,3
+1,1,0,32,8,Water,insectoid,155,3,5,4,4,3,63,120,85,90,55,55,red,water,Hyper Cutter,Shell Armor,?,3
+0,7,0,12,5,Rock,insectoid,45,5,3,5,3,2,45,95,50,40,50,75,gray,water,Battle Armor,?,?,11
+0,3,0,6,3,Water,insectoid,190,3,4,3,5,2,76,48,48,57,62,34,purple,?,Sticky Hold,Storm Drain,?,3
+0,9,0,29,9,Water,insectoid,75,2,5,3,5,2,111,83,68,92,82,39,purple,?,Sticky Hold,Storm Drain,?,3
+0,8,0,12,Poison,insectoid,120,2,4,5,4,2,40,50,90,30,55,65,purple,?,Battle Armor,Sniper,?,6
+1,3,0,61,5,Poison,insectoid,45,2,5,5,4,2,70,90,110,60,75,95,purple,?,Battle Armor,Sniper,?,6
+1,5,0,85,6,Psychic,insectoid,3,4,3,5,5,5,120,70,120,75,130,85,yellow,?,Levitate,?,?,13
+0,3,0,2,5,Bug,insectoid,255,0,0,0,0,0,45,53,70,40,60,42,yellow,?,Swarm,Chlorophyll,?,4
+0,4,0,5,3,Bug,insectoid,255,0,0,0,0,0,30,45,59,30,39,57,red,?,Poison Point,Swarm,?,4
+2,5,0,200,5,Bug,insectoid,45,0,0,0,0,0,60,90,89,55,69,112,red,?,Poison Point,Swarm,?,4
+0,3,0,14,5,Bug,insectoid,190,0,0,0,0,0,50,65,85,35,35,55,red,?,Sturdy,Shell Armor,?,4
+1,4,0,200,Bug,insectoid,75,0,0,0,0,0,70,95,125,65,75,45,red,?,Sturdy,Shell Armor,?,4
+0,1,0,0,6,Bug,insectoid,190,0,0,0,0,0,50,47,50,57,50,65,yellow,?,Compound Eyes,Unnerve,?,4
+0,8,0,14,3,Bug,insectoid,75,0,0,0,0,0,70,77,60,97,60,108,yellow,?,Compound Eyes,Unnerve,?,4
+0,3,0,33,Bug,insectoid,90,0,0,0,0,0,58,109,112,48,48,109,gray,?,Swarm,Hustle,?,4
+1,1,0,28,8,Bug,insectoid,45,0,0,0,0,0,55,85,55,50,55,60,silver,?,Flame Body,?,?,4
+0,1,0,0,1,Fairy,head,0,0,0,0,0,0,44,38,39,61,79,42,silver,?,?,?,?,9
+0,2,0,0,9,Fairy,head,0,0,0,0,0,0,54,45,47,75,98,52,silver,?,?,?,?,9
+0,2,0,0,5,Fairy,head,0,0,0,0,0,0,78,52,60,63,65,23,pink,?,?,?,?,9
+0,2,0,2,2,Electric,head,0,0,0,0,0,0,67,58,57,81,67,101,?,?,?,?,?,7
+0,2,0,3,Steel,head,0,0,0,0,0,0,57,80,91,80,87,75,?,?,?,?,?,17
+0,3,0,7,Water,head,0,0,0,0,0,0,41,56,40,62,44,71,blue,?,?,?,?,3
+0,3,0,1,7,Normal,head,0,0,0,0,0,0,45,50,43,40,38,62,red,?,?,?,?,5
+0,3,0,2,5,Bug,head,0,0,0,0,0,0,38,35,40,27,25,35,black,?,?,?,?,4
+0,3,0,8,4,Bug,head,0,0,0,0,0,0,45,22,60,27,30,29,black,?,?,?,?,4
+0,3,0,3,5,Psychic,head,0,0,0,0,0,0,62,48,54,63,60,68,gray,?,?,?,?,13
+0,3,0,5,7,Rock,head,0,0,0,0,0,0,50,50,150,50,150,50,?,?,?,?,?,11
+0,3,0,2,8,Dragon,head,0,0,0,0,0,0,45,50,35,55,75,40,?,?,?,?,?,15
+0,3,0,33,1,Ghost,head,0,0,0,0,0,0,59,66,70,44,55,41,?,?,?,?,?,12
+0,4,0,9,Grass,head,0,0,0,0,0,0,56,61,65,48,45,33,green,?,?,?,?,1
+0,4,0,9,4,Fire,head,0,0,0,0,0,0,40,45,40,62,60,60,red,?,?,?,?,2
+0,4,0,5,Normal,head,0,0,0,0,0,0,38,36,38,32,36,57,brown,?,?,?,?,5
+0,4,0,3,5,Fairy,head,0,0,0,0,0,0,62,48,66,59,57,49,silver,?,?,?,?,9
+0,4,0,3,5,Dark,head,0,0,0,0,0,0,53,54,37,46,45,45,blue,?,?,?,?,16
+0,4,0,7,Ghost,head,0,0,0,0,0,0,43,70,48,50,60,38,?,?,?,?,?,12
+0,5,0,31,Rock,head,0,0,0,0,0,0,42,52,67,39,56,50,brown,?,?,?,?,11
+0,5,0,6,Electric,head,0,0,0,0,0,0,44,38,33,61,43,70,yellow,?,?,?,?,7
+0,5,0,7,3,Poison,head,0,0,0,0,0,0,50,60,60,60,60,30,brown,?,?,?,?,6
+0,5,0,8,3,Water,head,0,0,0,0,0,0,50,53,62,58,63,44,blue,?,?,?,?,3
+0,5,0,8,Flying,head,0,0,0,0,0,0,40,30,35,45,40,55,?,?,?,?,?,18
+0,6,0,8,Fighting,head,0,0,0,0,0,0,67,82,62,46,48,43,silver,?,?,?,?,10
+0,6,0,13,5,Fire,head,0,0,0,0,0,0,62,50,58,73,54,72,brown,?,?,?,?,2
+0,6,0,10,9,Water,head,0,0,0,0,0,0,54,63,52,83,56,97,blue,?,?,?,?,3
+0,6,0,8,5,Psychic,head,0,0,0,0,0,0,74,48,76,83,81,104,silver,?,?,?,?,13
+0,7,0,29,Grass,head,0,0,0,0,0,0,61,78,95,56,58,57,green,?,?,?,?,1
+0,7,0,16,Fire,head,0,0,0,0,0,0,62,73,55,56,52,84,red,?,?,?,?,2
+0,7,0,86,Ghost,head,0,0,0,0,0,0,85,100,122,58,75,54,?,?,?,?,?,12
+0,8,0,2,Steel,head,0,0,0,0,0,0,45,80,100,35,37,28,brown,?,?,?,?,17
+0,8,0,4,5,Steel,head,0,0,0,0,0,0,59,110,150,45,49,35,brown,?,?,?,?,17
+0,8,0,26,Rock,head,0,0,0,0,0,0,58,89,77,45,45,48,brown,?,?,?,?,11
+0,8,0,15,5,Fairy,head,0,0,0,0,0,0,101,72,72,99,89,29,pink,?,?,?,?,9
+0,8,0,5,Fairy,head,0,0,0,0,0,0,82,80,86,85,75,72,silver,?,?,?,?,9
+0,8,0,21,5,Fighting,head,0,0,0,0,0,0,78,92,75,74,63,118,green,?,?,?,?,10
+0,8,0,17,5,Dragon,head,0,0,0,0,0,0,68,75,53,83,113,60,?,?,?,?,?,15
+0,9,0,31,Grass,head,0,0,0,0,0,0,66,65,48,62,57,52,brown,?,?,?,?,1
+1,0,14,5,Fire,head,0,0,0,0,0,0,59,59,58,90,70,73,red,?,?,?,?,2
+1,0,42,4,Normal,head,0,0,0,0,0,0,85,56,77,50,77,78,brown,?,?,?,?,5
+1,0,21,Electric,head,0,0,0,0,0,0,62,55,52,109,94,109,yellow,?,?,?,?,7
+1,0,23,5,Fairy,head,0,0,0,0,0,0,95,65,65,110,130,60,pink,?,?,?,?,9
+1,0,99,5,Ice,head,0,0,0,0,0,0,55,69,85,32,35,28,?,?,?,?,?,14
+1,1,0,10,Fairy,head,0,0,0,0,0,0,78,65,68,112,154,75,silver,?,?,?,?,9
+1,2,0,24,5,Fire,head,0,0,0,0,0,0,78,81,71,74,69,126,red,?,?,?,?,2
+1,2,0,17,Bug,head,0,0,0,0,0,0,80,52,50,90,50,89,black,?,?,?,?,4
+1,2,0,28,Normal,head,0,0,0,0,0,0,75,80,60,65,90,102,silver,?,?,?,?,5
+1,3,0,96,Rock,head,0,0,0,0,0,0,72,105,115,54,86,68,brown,?,?,?,?,11
+1,3,0,35,3,Water,head,0,0,0,0,0,0,71,73,88,120,89,59,blue,?,?,?,?,3
+1,3,0,25,2,Rock,head,0,0,0,0,0,0,77,59,50,67,63,46,blue,?,?,?,?,11
+1,5,0,39,Fire,head,0,0,0,0,0,0,75,69,72,114,100,104,red,?,?,?,?,2
+1,5,0,40,Water,head,0,0,0,0,0,0,72,95,67,103,71,122,blue,?,?,?,?,3
+1,5,0,81,5,Fire,head,0,0,0,0,0,0,86,68,72,109,66,106,brown,?,?,?,?,2
+1,5,0,47,Dark,head,0,0,0,0,0,0,86,92,88,68,75,73,blue,?,?,?,?,16
+1,5,0,71,Ghost,head,0,0,0,0,0,0,85,110,76,65,82,56,?,?,?,?,?,12
+1,5,0,85,Flying,head,0,0,0,0,0,0,85,70,80,97,80,123,?,?,?,?,?,18
+1,6,0,90,Grass,head,0,0,0,0,0,0,88,107,122,74,75,64,green,?,?,?,?,1
+1,7,0,91,Grass,head,0,0,0,0,0,0,123,100,62,97,81,68,brown,?,?,?,?,1
+1,7,0,53,Steel,head,0,0,0,0,0,0,60,150,50,150,50,60,brown,?,?,?,?,17
+1,8,0,81,5,Poison,head,0,0,0,0,0,0,65,75,90,97,123,44,brown,?,?,?,?,6
+2,0,150,5,Dragon,head,0,0,0,0,0,0,90,100,70,110,150,80,?,?,?,?,?,15
+2,0,505,Ice,head,0,0,0,0,0,0,95,117,184,44,46,28,?,?,?,?,?,14
+2,1,0,136,Fighting,head,0,0,0,0,0,0,95,124,78,69,71,58,silver,?,?,?,?,10
+2,5,0,270,Rock,head,0,0,0,0,0,0,82,121,119,69,59,71,red,?,?,?,?,11
+2,7,0,225,Rock,head,0,0,0,0,0,0,123,77,72,99,92,58,blue,?,?,?,?,11
+3,0,215,Fairy,head,0,0,0,0,0,0,126,131,95,131,98,99,?,?,?,?,?,9
+5,0,305,Dragon,head,0,0,0,0,0,0,108,100,121,81,95,95,?,?,?,?,?,15
+5,8,0,203,Dark,head,0,0,0,0,0,0,126,131,95,131,98,99,?,?,?,?,?,16

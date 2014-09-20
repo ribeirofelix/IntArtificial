@@ -1,0 +1,729 @@
+@relation 'PokeSet-weka.filters.unsupervised.attribute.Remove-R1-2,4-15-weka.filters.unsupervised.attribute.Remove-R6-weka.filters.unsupervised.attribute.ReplaceMissingValues'
+
+@attribute Body {head,serpertine,fins,headArms,headBase,bipedalTailed,headLegs,quadruped,singleWings,multiped,multiBody,bipedalTailless,TwoMoreWings,insectoid}
+@attribute Color {black,blue,brown,gray,green,pink,purple,red,silver,yellow}
+@attribute Habitat {cave,forest,grass,mountain,rare,rough,sea,urban,water}
+@attribute Ability1 {Adaptability,Aftermath,'Air Lock',Anticipation,'Bad Dreams','Battle Armor','Big Pecks',Blaze,Chlorophyll,'Clear Body','Color Change','Compound Eyes','Cute Charm',Damp,Defeatist,Defiant,Download,Drizzle,Drought,'Early Bird','Effect Spore','Flame Body','Flash Fire','Flower Gift',Forecast,Forewarn,Frisk,Gluttony,Guts,Healer,'Honey Gather',Hustle,Hydration,'Hyper Cutter','Ice Body',Illuminate,Illusion,Immunity,'Inner Focus',Insomnia,Intimidate,'Iron Barbs','Iron Fist',Justified,'Keen Eye','Leaf Guard',Levitate,Lightningrod,Limber,'Liquid Ooze','Magma Armor','Magnet Pull','Marvel Scale',Minus,'Mold Breaker','Motor Drive',Multitype,Mummy,'Natural Cure',Oblivious,Overcoat,Overgrow,'Own Tempo',Pickup,Plus,'Poison Point',Prankster,Pressure,'Pure Power',Reckless,Rivalry,'Rock Head','Rough Skin','Run Away','Sand Force','Sand Rush','Sand Stream','Sand Veil','Serene Grace','Shadow Tag','Shed Skin','Sheer Force','Shell Armor','Shield Dust',Simple,'Slow Start','Snow Cloak','Snow Warning','Solid Rock',Soundproof,'Speed Boost',Static,Steadfast,Stench,'Sticky Hold',Sturdy,'Suction Cups',Swarm,'Swift Swim',Synchronize,Technician,Telepathy,Teravolt,'Thick Fat',Torrent,Trace,Truant,Turboblaze,Unaware,'Victory Star','Vital Spirit','Volt Absorb','Water Absorb','Water Veil','White Smoke','Wonder Guard','Wonder Skin'}
+@attribute Ability2 {Adaptability,Aftermath,'Anger Point',Anticipation,'Arena Trap','Battle Armor','Big Pecks',Chlorophyll,'Cloud Nine','Compound Eyes','Cursed Body',Damp,Download,'Dry Skin','Early Bird',Filter,'Flame Body','Flash Fire',Forewarn,Frisk,Gluttony,Guts,Heatproof,'Huge Power',Hustle,Hydration,'Ice Body',Illuminate,Infiltrator,'Inner Focus',Insomnia,Intimidate,'Iron Fist','Keen Eye',Klutz,'Leaf Guard',Lightningrod,Limber,'Liquid Ooze','Magic Guard','Magnet Pull',Minus,'Mold Breaker','Motor Drive',Moxie,'Natural Cure','No Guard',Normalize,Oblivious,Overcoat,'Own Tempo',Pickup,'Poison Heal','Poison Point','Poison Touch',Pressure,'Quick Feet','Rain Dish',Reckless,Regenerator,Rivalry,'Rock Head','Run Away','Sand Force','Sand Rush','Sand Veil','Sap Sipper',Scrappy,'Serene Grace','Shed Skin','Sheer Force','Shell Armor',Simple,'Skill Link',Sniper,'Snow Cloak','Solar Power','Solid Rock',Stall,Static,Steadfast,'Sticky Hold','Storm Drain',Sturdy,'Super Luck',Swarm,'Swift Swim',Synchronize,'Tangled Feet',Technician,'Thick Fat','Tinted Lens',Trace,Unaware,Unburden,Unnerve,'Water Absorb','Water Veil','Weak Armor'}
+@attribute Exp {Erratic,Fast,Fluctuating,MediumFast,MediumSlow,Slow}
+@attribute class {Grass,Fire,Water,Bug,Normal,Poison,Electric,Ground,Fairy,Fighting,Rock,Ghost,Psychic,Ice,Dragon,Dark,Steel,Flying}
+
+@data
+head,purple,sea,'Shell Armor','Skill Link',Slow,Water
+head,purple,sea,'Shell Armor','Skill Link',Slow,Water
+head,purple,cave,Levitate,'Shell Armor',MediumSlow,Ghost
+head,red,urban,Soundproof,Static,MediumFast,Electric
+head,red,urban,Soundproof,Static,MediumFast,Electric
+head,purple,urban,Levitate,'Shell Armor',MediumFast,Poison
+head,purple,urban,Limber,'Shell Armor',MediumFast,Normal
+head,yellow,grass,Chlorophyll,'Solar Power',MediumSlow,Grass
+head,gray,cave,Levitate,'Shell Armor',Fast,Ghost
+head,black,rare,Levitate,'Shell Armor',MediumFast,Psychic
+head,gray,forest,Sturdy,'Shell Armor',MediumFast,Bug
+head,purple,forest,Sturdy,'Shell Armor',MediumFast,Bug
+head,silver,forest,'Shed Skin','Shell Armor',MediumFast,Bug
+head,purple,forest,'Shed Skin','Shell Armor',MediumFast,Bug
+head,yellow,cave,Levitate,'Shell Armor',Fast,Rock
+head,red,cave,Levitate,'Shell Armor',Fast,Rock
+head,silver,grass,Forecast,'Shell Armor',MediumFast,Normal
+head,black,urban,Insomnia,Frisk,Fast,Ghost
+head,gray,cave,'Inner Focus','Ice Body',MediumFast,Ice
+head,blue,sea,'Shell Armor','Shell Armor',Erratic,Water
+head,purple,grass,Levitate,'Shell Armor',Fast,Ghost
+head,green,grass,Levitate,Heatproof,MediumFast,Steel
+head,red,grass,Levitate,'Shell Armor',MediumFast,Electric
+head,gray,grass,'Poison Point',Swarm,MediumSlow,Bug
+head,green,grass,Prankster,Infiltrator,MediumFast,Grass
+head,green,grass,Overcoat,'Magic Guard',MediumSlow,Psychic
+head,green,grass,Overcoat,'Magic Guard',MediumSlow,Psychic
+head,gray,grass,'Iron Barbs','Shell Armor',MediumFast,Grass
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ice
+head,red,grass,Hydration,'Shell Armor',MediumFast,Bug
+serpertine,green,forest,'Shield Dust','Shell Armor',MediumFast,Bug
+serpertine,green,forest,'Shed Skin','Shell Armor',MediumFast,Bug
+serpertine,brown,forest,'Shield Dust','Shell Armor',MediumFast,Bug
+serpertine,yellow,forest,'Shed Skin','Shell Armor',MediumFast,Bug
+serpertine,purple,grass,Intimidate,'Shed Skin',MediumFast,Poison
+serpertine,purple,grass,Intimidate,'Shed Skin',MediumFast,Poison
+serpertine,gray,cave,'Rock Head',Sturdy,MediumFast,Rock
+serpertine,blue,water,Intimidate,'Shell Armor',Slow,Water
+serpertine,blue,water,'Shed Skin','Shell Armor',Slow,Dragon
+serpertine,blue,water,'Shed Skin','Shell Armor',Slow,Dragon
+serpertine,yellow,cave,'Serene Grace','Run Away',MediumFast,Normal
+serpertine,gray,cave,'Rock Head',Sturdy,MediumFast,Steel
+serpertine,red,mountain,'Magma Armor','Flame Body',MediumFast,Fire
+serpertine,red,mountain,'Magma Armor','Flame Body',MediumFast,Fire
+serpertine,gray,mountain,'Shed Skin','Shell Armor',Slow,Rock
+serpertine,red,forest,'Shield Dust','Shell Armor',MediumFast,Bug
+serpertine,black,grass,'Shed Skin','Shell Armor',Fluctuating,Poison
+serpertine,pink,water,'Marvel Scale','Shell Armor',Erratic,Water
+serpertine,blue,sea,'Swift Swim','Shell Armor',Erratic,Water
+serpertine,pink,sea,'Swift Swim','Shell Armor',Erratic,Water
+serpertine,green,rare,'Air Lock','Shell Armor',Slow,Dragon
+serpertine,gray,grass,'Shed Skin','Shell Armor',MediumFast,Bug
+serpertine,gray,grass,Anticipation,'Shell Armor',MediumFast,Bug
+multiped,black,grass,Pressure,'Shell Armor',Slow,Ghost
+serpertine,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+fins,silver,sea,'Thick Fat',Hydration,MediumFast,Water
+fins,silver,sea,'Thick Fat',Hydration,MediumFast,Water
+fins,red,water,'Swift Swim','Water Veil',MediumFast,Water
+fins,red,water,'Swift Swim','Water Veil',MediumFast,Water
+fins,red,water,'Swift Swim','Shell Armor',Slow,Water
+fins,blue,sea,'Water Absorb','Shell Armor',Slow,Water
+fins,blue,sea,'Volt Absorb',Illuminate,Slow,Water
+fins,blue,sea,'Volt Absorb',Illuminate,Slow,Water
+fins,gray,sea,'Poison Point','Swift Swim',MediumFast,Water
+fins,gray,sea,Hustle,Sniper,MediumFast,Water
+fins,red,sea,'Rough Skin','Shell Armor',Slow,Water
+fins,blue,sea,'Rough Skin','Shell Armor',Slow,Water
+fins,blue,sea,'Water Veil',Oblivious,Fluctuating,Water
+fins,blue,sea,'Water Veil',Oblivious,Fluctuating,Water
+fins,gray,water,Oblivious,Anticipation,MediumFast,Water
+fins,blue,water,Oblivious,Anticipation,MediumFast,Water
+fins,brown,water,'Swift Swim','Shell Armor',Erratic,Water
+fins,blue,sea,'Thick Fat','Ice Body',MediumSlow,Ice
+fins,blue,sea,'Thick Fat','Ice Body',MediumSlow,Ice
+fins,gray,sea,'Swift Swim','Rock Head',Slow,Water
+fins,pink,sea,'Swift Swim','Shell Armor',Fast,Water
+fins,blue,sea,Drizzle,'Shell Armor',Slow,Water
+fins,blue,grass,'Swift Swim','Storm Drain',Erratic,Water
+fins,blue,grass,'Swift Swim','Storm Drain',Erratic,Water
+fins,blue,grass,'Swift Swim',Hydration,MediumSlow,Water
+fins,green,grass,Reckless,Adaptability,MediumFast,Water
+fins,pink,grass,Healer,Hydration,Fast,Water
+fins,silver,grass,Levitate,'Shell Armor',Slow,Electric
+fins,blue,grass,Levitate,'Shell Armor',Slow,Electric
+fins,blue,grass,Levitate,'Shell Armor',Slow,Electric
+fins,brown,grass,Static,Limber,MediumFast,Ground
+headArms,brown,mountain,'Rock Head',Sturdy,MediumSlow,Rock
+headArms,gray,rough,'Magnet Pull',Sturdy,MediumFast,Electric
+headArms,purple,urban,Stench,'Sticky Hold',MediumFast,Poison
+headArms,purple,urban,Stench,'Sticky Hold',MediumFast,Poison
+headArms,purple,cave,Levitate,'Shell Armor',MediumSlow,Ghost
+headArms,green,grass,'Liquid Ooze','Sticky Hold',Fluctuating,Poison
+headArms,purple,grass,'Liquid Ooze','Sticky Hold',Fluctuating,Poison
+headArms,black,mountain,'Thick Fat','Own Tempo',Fast,Psychic
+headArms,brown,rough,Levitate,'Shell Armor',MediumFast,Ground
+headArms,black,rough,Levitate,'Shell Armor',MediumFast,Ground
+headArms,black,forest,Levitate,'Shell Armor',Fast,Ghost
+headArms,blue,grass,Levitate,'Shell Armor',Fast,Psychic
+headArms,blue,rough,'Clear Body','Shell Armor',Slow,Steel
+headArms,purple,grass,Aftermath,Unburden,Fluctuating,Ghost
+headArms,purple,grass,Aftermath,Unburden,Fluctuating,Ghost
+headArms,green,grass,Levitate,Heatproof,MediumFast,Steel
+headArms,gray,grass,'Magnet Pull',Sturdy,MediumFast,Electric
+headArms,red,grass,Adaptability,Download,MediumFast,Normal
+headArms,black,grass,Pressure,'Shell Armor',Fast,Ghost
+headArms,silver,grass,'Snow Cloak','Shell Armor',MediumFast,Ice
+headArms,blue,grass,Hydration,'Shell Armor',Slow,Water
+headArms,green,grass,'Leaf Guard',Chlorophyll,MediumSlow,Bug
+headArms,black,grass,Mummy,'Shell Armor',MediumFast,Ghost
+headArms,green,grass,Overcoat,'Magic Guard',MediumSlow,Psychic
+headArms,gray,grass,Swarm,'Shell Armor',MediumFast,Bug
+headArms,silver,grass,'Effect Spore','Shell Armor',MediumFast,Grass
+headArms,silver,grass,'Effect Spore','Shell Armor',MediumFast,Grass
+headArms,black,grass,'Flash Fire','Flame Body',MediumSlow,Ghost
+headArms,black,grass,'Flash Fire','Flame Body',MediumSlow,Ghost
+headArms,red,grass,Hydration,'Sticky Hold',MediumFast,Bug
+headArms,green,grass,Prankster,'Shell Armor',Slow,Flying
+headArms,blue,grass,Prankster,'Shell Armor',Slow,Electric
+headArms,brown,grass,'Sand Force','Shell Armor',Slow,Ground
+headBase,brown,cave,'Sand Veil','Arena Trap',MediumFast,Ground
+headBase,green,forest,Chlorophyll,'Shell Armor',MediumSlow,Grass
+headBase,green,forest,Chlorophyll,'Shell Armor',MediumSlow,Grass
+headBase,blue,sea,'Swift Swim',Sniper,MediumFast,Water
+headBase,blue,sea,'Poison Point',Sniper,MediumFast,Water
+headBase,brown,sea,Illuminate,'Natural Cure',Slow,Water
+headBase,purple,sea,Illuminate,'Natural Cure',Slow,Water
+headBase,blue,cave,'Shadow Tag','Shell Armor',MediumFast,Psychic
+headBase,blue,sea,'Swift Swim',Sniper,MediumFast,Water
+headBase,brown,forest,'Wonder Guard','Shell Armor',Erratic,Bug
+headBase,purple,sea,'Suction Cups','Shell Armor',Erratic,Rock
+headBase,green,sea,'Suction Cups','Shell Armor',Erratic,Rock
+headBase,blue,rough,'Clear Body','Shell Armor',Slow,Steel
+headBase,purple,grass,Pressure,'Shell Armor',MediumFast,Ghost
+headBase,green,grass,Chlorophyll,'Own Tempo',MediumFast,Grass
+headBase,green,grass,Chlorophyll,'Own Tempo',MediumFast,Grass
+headBase,green,grass,'Water Absorb',Chlorophyll,MediumFast,Grass
+headBase,yellow,grass,Mummy,'Shell Armor',MediumFast,Ghost
+headBase,silver,grass,'Ice Body','Shell Armor',Slow,Ice
+headBase,silver,grass,'Ice Body','Shell Armor',Slow,Ice
+headBase,silver,grass,'Flash Fire','Flame Body',MediumSlow,Ghost
+bipedalTailed,red,mountain,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,red,mountain,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,red,mountain,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,yellow,forest,Static,'Shell Armor',MediumFast,Electric
+bipedalTailed,yellow,rough,'Sand Veil','Shell Armor',MediumFast,Ground
+bipedalTailed,yellow,rough,'Sand Veil','Shell Armor',MediumFast,Ground
+bipedalTailed,blue,grass,'Poison Point',Rivalry,MediumSlow,Poison
+bipedalTailed,purple,grass,'Poison Point',Rivalry,MediumSlow,Poison
+bipedalTailed,pink,mountain,'Cute Charm','Magic Guard',Fast,Fairy
+bipedalTailed,pink,mountain,'Cute Charm','Magic Guard',Fast,Fairy
+bipedalTailed,yellow,water,Damp,'Cloud Nine',MediumFast,Water
+bipedalTailed,blue,water,Damp,'Cloud Nine',MediumFast,Water
+bipedalTailed,brown,mountain,'Vital Spirit','Anger Point',MediumFast,Fighting
+bipedalTailed,brown,mountain,'Vital Spirit','Anger Point',MediumFast,Fighting
+bipedalTailed,brown,urban,Synchronize,'Inner Focus',MediumSlow,Psychic
+bipedalTailed,brown,urban,Synchronize,'Inner Focus',MediumSlow,Psychic
+bipedalTailed,gray,mountain,Guts,'No Guard',MediumSlow,Fighting
+bipedalTailed,pink,water,Oblivious,'Own Tempo',MediumFast,Water
+bipedalTailed,purple,cave,Levitate,'Shell Armor',MediumSlow,Ghost
+bipedalTailed,brown,mountain,'Rock Head',Lightningrod,MediumFast,Ground
+bipedalTailed,brown,mountain,'Rock Head',Lightningrod,MediumFast,Ground
+bipedalTailed,pink,grass,'Own Tempo',Oblivious,MediumFast,Normal
+bipedalTailed,gray,rough,Lightningrod,'Rock Head',Slow,Ground
+bipedalTailed,pink,urban,'Natural Cure','Serene Grace',Fast,Normal
+bipedalTailed,brown,grass,'Early Bird',Scrappy,MediumFast,Normal
+bipedalTailed,yellow,grass,Static,'Shell Armor',MediumFast,Electric
+bipedalTailed,red,mountain,'Flame Body','Shell Armor',MediumFast,Fire
+bipedalTailed,brown,sea,'Swift Swim','Battle Armor',MediumFast,Rock
+bipedalTailed,brown,water,'Inner Focus','Shell Armor',Slow,Dragon
+bipedalTailed,purple,rare,Pressure,'Shell Armor',Slow,Psychic
+bipedalTailed,pink,rare,Synchronize,'Shell Armor',MediumSlow,Psychic
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,pink,mountain,'Cute Charm','Magic Guard',Fast,Fairy
+bipedalTailed,pink,grass,Static,'Shell Armor',MediumSlow,Electric
+bipedalTailed,yellow,grass,Static,'Shell Armor',MediumSlow,Electric
+bipedalTailed,blue,water,'Thick Fat','Huge Power',Fast,Water
+bipedalTailed,blue,water,'Thick Fat','Huge Power',Fast,Water
+bipedalTailed,pink,grass,Chlorophyll,'Leaf Guard',MediumSlow,Grass
+bipedalTailed,green,grass,Chlorophyll,'Leaf Guard',MediumSlow,Grass
+bipedalTailed,blue,grass,Chlorophyll,'Leaf Guard',MediumSlow,Grass
+bipedalTailed,purple,forest,'Run Away',Pickup,Fast,Normal
+bipedalTailed,blue,water,Damp,'Water Absorb',MediumFast,Water
+bipedalTailed,pink,water,Oblivious,'Own Tempo',MediumFast,Water
+bipedalTailed,purple,urban,Intimidate,'Quick Feet',Fast,Fairy
+bipedalTailed,black,forest,'Inner Focus','Keen Eye',MediumSlow,Dark
+bipedalTailed,brown,mountain,Pickup,'Quick Feet',MediumFast,Normal
+bipedalTailed,brown,mountain,Guts,'Quick Feet',MediumFast,Normal
+bipedalTailed,silver,urban,'Own Tempo',Technician,Fast,Normal
+bipedalTailed,brown,urban,Intimidate,Technician,MediumFast,Fighting
+bipedalTailed,red,mountain,'Flame Body','Shell Armor',MediumFast,Fire
+bipedalTailed,pink,grass,'Thick Fat',Scrappy,Slow,Normal
+bipedalTailed,green,mountain,Guts,'Shell Armor',Slow,Rock
+bipedalTailed,green,mountain,'Sand Stream','Shell Armor',Slow,Rock
+bipedalTailed,green,forest,Overgrow,'Shell Armor',MediumSlow,Grass
+bipedalTailed,green,forest,Overgrow,'Shell Armor',MediumSlow,Grass
+bipedalTailed,green,forest,Overgrow,'Shell Armor',MediumSlow,Grass
+bipedalTailed,red,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,red,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,green,forest,'Effect Spore','Poison Heal',Fluctuating,Grass
+bipedalTailed,silver,forest,'Vital Spirit','Shell Armor',Slow,Normal
+bipedalTailed,pink,cave,Soundproof,'Shell Armor',MediumSlow,Normal
+bipedalTailed,blue,cave,Soundproof,'Shell Armor',MediumSlow,Normal
+bipedalTailed,blue,cave,Soundproof,'Shell Armor',MediumSlow,Normal
+bipedalTailed,gray,mountain,Sturdy,'Rock Head',Slow,Steel
+bipedalTailed,yellow,grass,Plus,'Shell Armor',MediumFast,Electric
+bipedalTailed,yellow,grass,Minus,'Shell Armor',MediumFast,Electric
+bipedalTailed,gray,forest,Illuminate,Swarm,Erratic,Bug
+bipedalTailed,purple,mountain,'Thick Fat','Own Tempo',Fast,Psychic
+bipedalTailed,brown,mountain,'Own Tempo','Tangled Feet',Fast,Normal
+bipedalTailed,silver,grass,Immunity,'Shell Armor',Erratic,Normal
+bipedalTailed,gray,water,'Battle Armor','Shell Armor',Erratic,Rock
+bipedalTailed,green,forest,'Color Change','Shell Armor',MediumSlow,Normal
+bipedalTailed,black,urban,Insomnia,Frisk,Fast,Ghost
+bipedalTailed,blue,cave,'Shadow Tag','Shell Armor',MediumFast,Psychic
+bipedalTailed,red,rough,Drought,'Shell Armor',Slow,Ground
+bipedalTailed,brown,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,brown,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,brown,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,blue,grass,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,grass,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,brown,grass,Simple,Unaware,MediumFast,Normal
+bipedalTailed,blue,grass,'Mold Breaker','Shell Armor',Erratic,Rock
+bipedalTailed,blue,grass,'Mold Breaker','Shell Armor',Erratic,Rock
+bipedalTailed,purple,grass,Technician,Pickup,Fast,Normal
+bipedalTailed,brown,grass,'Run Away',Klutz,MediumFast,Normal
+bipedalTailed,brown,grass,'Cute Charm',Klutz,MediumFast,Normal
+bipedalTailed,blue,grass,'Sand Veil','Shell Armor',Slow,Dragon
+bipedalTailed,blue,grass,'Sand Veil','Shell Armor',Slow,Dragon
+bipedalTailed,blue,grass,'Sand Veil','Shell Armor',Slow,Dragon
+bipedalTailed,blue,grass,Steadfast,'Inner Focus',MediumSlow,Fighting
+bipedalTailed,blue,grass,Steadfast,'Inner Focus',MediumSlow,Fighting
+bipedalTailed,silver,grass,'Snow Warning','Shell Armor',Slow,Grass
+bipedalTailed,silver,grass,'Snow Warning','Shell Armor',Slow,Grass
+bipedalTailed,black,grass,Pressure,'Shell Armor',MediumSlow,Dark
+bipedalTailed,gray,grass,Lightningrod,'Solid Rock',Slow,Ground
+bipedalTailed,yellow,grass,'Motor Drive','Shell Armor',MediumFast,Electric
+bipedalTailed,red,grass,'Flame Body','Shell Armor',MediumFast,Fire
+bipedalTailed,yellow,grass,Levitate,'Shell Armor',Slow,Psychic
+bipedalTailed,pink,grass,Levitate,'Shell Armor',Slow,Psychic
+bipedalTailed,blue,grass,Levitate,'Shell Armor',Slow,Psychic
+bipedalTailed,purple,grass,Pressure,'Shell Armor',Slow,Water
+bipedalTailed,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+bipedalTailed,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+bipedalTailed,red,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,red,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailed,blue,grass,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,blue,grass,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailed,brown,grass,Illuminate,'Keen Eye',MediumFast,Normal
+bipedalTailed,green,grass,Gluttony,'Shell Armor',MediumFast,Grass
+bipedalTailed,green,grass,Gluttony,'Shell Armor',MediumFast,Grass
+bipedalTailed,red,grass,Gluttony,'Shell Armor',MediumFast,Fire
+bipedalTailed,red,grass,Gluttony,'Shell Armor',MediumFast,Fire
+bipedalTailed,blue,grass,Gluttony,'Shell Armor',MediumFast,Water
+bipedalTailed,blue,grass,Gluttony,'Shell Armor',MediumFast,Water
+bipedalTailed,gray,grass,'Sand Rush','Sand Force',MediumFast,Ground
+bipedalTailed,pink,grass,Healer,Regenerator,Fast,Normal
+bipedalTailed,blue,grass,'Swift Swim',Hydration,MediumSlow,Water
+bipedalTailed,red,grass,Intimidate,Moxie,MediumSlow,Ground
+bipedalTailed,yellow,grass,'Shed Skin',Moxie,MediumFast,Dark
+bipedalTailed,red,grass,'Shed Skin',Moxie,MediumFast,Dark
+bipedalTailed,blue,grass,'Solid Rock',Sturdy,MediumFast,Water
+bipedalTailed,gray,grass,Illusion,'Shell Armor',MediumSlow,Dark
+bipedalTailed,blue,grass,Telepathy,Synchronize,MediumFast,Psychic
+bipedalTailed,green,grass,Rivalry,'Mold Breaker',Slow,Dragon
+bipedalTailed,green,grass,Rivalry,'Mold Breaker',Slow,Dragon
+bipedalTailed,yellow,grass,Rivalry,'Mold Breaker',Slow,Dragon
+bipedalTailed,silver,grass,'Snow Cloak','Shell Armor',MediumFast,Ice
+bipedalTailed,yellow,grass,'Inner Focus',Regenerator,MediumSlow,Fighting
+bipedalTailed,purple,grass,'Inner Focus',Regenerator,MediumSlow,Fighting
+bipedalTailed,red,grass,'Rough Skin','Sheer Force',MediumFast,Dragon
+bipedalTailed,red,grass,Gluttony,'Flash Fire',MediumFast,Fire
+bipedalTailed,blue,grass,Levitate,'Shell Armor',Slow,Dark
+bipedalTailed,black,grass,Teravolt,'Shell Armor',Slow,Dragon
+bipedalTailed,gray,grass,Pressure,'Shell Armor',Slow,Dragon
+headLegs,blue,grass,Chlorophyll,'Shell Armor',MediumSlow,Grass
+headLegs,blue,water,'Water Absorb',Damp,MediumSlow,Water
+headLegs,brown,grass,'Run Away','Early Bird',MediumFast,Normal
+headLegs,brown,grass,'Run Away','Early Bird',MediumFast,Normal
+headLegs,yellow,forest,Chlorophyll,'Shell Armor',Slow,Grass
+headLegs,blue,grass,Chlorophyll,'Leaf Guard',MediumFast,Grass
+headLegs,pink,urban,Trace,Download,MediumFast,Normal
+headLegs,blue,water,Damp,'Water Absorb',MediumFast,Water
+headLegs,red,urban,Trace,Download,MediumFast,Normal
+headLegs,red,grass,Blaze,'Shell Armor',MediumSlow,Fire
+headLegs,brown,forest,Chlorophyll,'Early Bird',MediumSlow,Grass
+headLegs,brown,forest,'Effect Spore','Poison Heal',Fluctuating,Grass
+headLegs,blue,water,'Thick Fat','Huge Power',Fast,Normal
+headLegs,pink,grass,'Flower Gift','Shell Armor',MediumFast,Grass
+headLegs,brown,grass,Sturdy,'Rock Head',MediumFast,Rock
+headLegs,blue,grass,Sturdy,'Shell Armor',MediumSlow,Rock
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,purple,grass,'Run Away',Guts,MediumFast,Normal
+quadruped,brown,grass,'Run Away',Guts,MediumFast,Normal
+quadruped,yellow,forest,Static,'Shell Armor',MediumFast,Electric
+quadruped,blue,grass,'Poison Point',Rivalry,MediumSlow,Poison
+quadruped,blue,grass,'Poison Point',Rivalry,MediumSlow,Poison
+quadruped,purple,grass,'Poison Point',Rivalry,MediumSlow,Poison
+quadruped,purple,grass,'Poison Point',Rivalry,MediumSlow,Poison
+quadruped,brown,grass,'Flash Fire','Shell Armor',MediumFast,Fire
+quadruped,yellow,grass,'Flash Fire','Shell Armor',MediumFast,Fire
+quadruped,yellow,urban,Pickup,Technician,MediumFast,Normal
+quadruped,yellow,urban,Limber,Technician,MediumFast,Normal
+quadruped,brown,grass,Intimidate,'Flash Fire',Slow,Fire
+quadruped,brown,grass,Intimidate,'Flash Fire',Slow,Fire
+quadruped,yellow,grass,'Run Away','Flash Fire',MediumFast,Fire
+quadruped,yellow,grass,'Run Away','Flash Fire',MediumFast,Fire
+quadruped,pink,water,Oblivious,'Own Tempo',MediumFast,Water
+quadruped,gray,rough,Lightningrod,'Rock Head',Slow,Ground
+quadruped,brown,grass,Intimidate,'Anger Point',Slow,Normal
+quadruped,brown,urban,'Run Away',Adaptability,MediumFast,Normal
+quadruped,blue,urban,'Water Absorb','Shell Armor',MediumFast,Water
+quadruped,yellow,urban,'Volt Absorb','Shell Armor',MediumFast,Electric
+quadruped,red,urban,'Flash Fire','Shell Armor',MediumFast,Fire
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,yellow,grass,Blaze,'Shell Armor',MediumSlow,Fire
+quadruped,yellow,grass,Blaze,'Shell Armor',MediumSlow,Fire
+quadruped,brown,grass,'Run Away','Keen Eye',MediumFast,Normal
+quadruped,brown,grass,'Run Away','Keen Eye',MediumFast,Normal
+quadruped,yellow,forest,Static,'Shell Armor',MediumFast,Electric
+quadruped,silver,grass,Static,'Shell Armor',MediumSlow,Electric
+quadruped,purple,urban,Synchronize,'Shell Armor',MediumFast,Psychic
+quadruped,black,urban,Synchronize,'Shell Armor',MediumFast,Dark
+quadruped,yellow,grass,'Inner Focus','Early Bird',MediumFast,Normal
+quadruped,brown,cave,Oblivious,'Snow Cloak',Slow,Ice
+quadruped,brown,cave,Oblivious,'Snow Cloak',Slow,Ice
+quadruped,black,rough,'Early Bird','Flash Fire',Slow,Dark
+quadruped,black,rough,'Early Bird','Flash Fire',Slow,Dark
+quadruped,blue,rough,Pickup,'Shell Armor',MediumFast,Ground
+quadruped,gray,rough,Sturdy,'Shell Armor',MediumFast,Ground
+quadruped,brown,forest,Intimidate,Frisk,Slow,Normal
+quadruped,yellow,grass,Pressure,'Shell Armor',Slow,Electric
+quadruped,brown,grass,Pressure,'Shell Armor',Slow,Fire
+quadruped,blue,grass,Pressure,'Shell Armor',Slow,Water
+quadruped,blue,water,Torrent,'Shell Armor',MediumSlow,Water
+quadruped,gray,grass,'Run Away','Quick Feet',MediumFast,Dark
+quadruped,gray,grass,Intimidate,'Quick Feet',MediumFast,Dark
+quadruped,brown,grass,Pickup,Gluttony,MediumFast,Normal
+quadruped,silver,grass,Pickup,Gluttony,MediumFast,Normal
+quadruped,brown,forest,Truant,'Shell Armor',Slow,Normal
+quadruped,pink,forest,'Cute Charm',Normalize,Fast,Normal
+quadruped,purple,forest,'Cute Charm',Normalize,Fast,Normal
+quadruped,gray,mountain,Sturdy,'Rock Head',Slow,Steel
+quadruped,gray,mountain,Sturdy,'Rock Head',Slow,Steel
+quadruped,green,grass,Static,Lightningrod,Slow,Electric
+quadruped,yellow,grass,Static,Lightningrod,Slow,Electric
+quadruped,yellow,mountain,Oblivious,Simple,MediumFast,Fire
+quadruped,red,mountain,'Magma Armor','Solid Rock',MediumFast,Fire
+quadruped,brown,mountain,'White Smoke','Shell Armor',MediumFast,Fire
+quadruped,green,forest,Chlorophyll,'Solar Power',Slow,Grass
+quadruped,silver,mountain,Pressure,'Super Luck',MediumSlow,Dark
+quadruped,blue,sea,'Thick Fat','Ice Body',MediumSlow,Ice
+quadruped,silver,rough,'Rock Head','Shell Armor',Slow,Dragon
+quadruped,blue,rough,Intimidate,'Shell Armor',Slow,Dragon
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,green,grass,Overgrow,'Shell Armor',MediumSlow,Grass
+quadruped,brown,grass,Simple,Unaware,MediumFast,Normal
+quadruped,blue,grass,Rivalry,Intimidate,MediumSlow,Electric
+quadruped,blue,grass,Rivalry,Intimidate,MediumSlow,Electric
+quadruped,blue,grass,Rivalry,Intimidate,MediumSlow,Electric
+quadruped,gray,grass,Sturdy,'Shell Armor',Erratic,Rock
+quadruped,gray,grass,Sturdy,'Shell Armor',Erratic,Rock
+quadruped,silver,grass,'Run Away',Pickup,MediumFast,Electric
+quadruped,brown,grass,'Swift Swim','Shell Armor',MediumFast,Water
+quadruped,brown,grass,'Swift Swim','Shell Armor',MediumFast,Water
+quadruped,gray,grass,Limber,'Own Tempo',Fast,Normal
+quadruped,gray,grass,'Thick Fat','Own Tempo',Fast,Normal
+quadruped,purple,grass,Stench,Aftermath,MediumFast,Poison
+quadruped,purple,grass,Stench,Aftermath,MediumFast,Poison
+quadruped,brown,grass,'Sand Stream','Shell Armor',Slow,Ground
+quadruped,brown,grass,'Sand Stream','Shell Armor',Slow,Ground
+quadruped,green,grass,'Leaf Guard','Shell Armor',MediumFast,Grass
+quadruped,blue,grass,'Snow Cloak','Shell Armor',MediumFast,Ice
+quadruped,brown,grass,Oblivious,'Snow Cloak',Slow,Ice
+quadruped,silver,grass,Pressure,'Shell Armor',Slow,Steel
+quadruped,brown,grass,'Flash Fire','Shell Armor',Slow,Fire
+quadruped,green,grass,'Natural Cure','Shell Armor',MediumSlow,Grass
+quadruped,gray,grass,Multitype,'Shell Armor',Slow,Normal
+quadruped,red,grass,Blaze,'Shell Armor',MediumSlow,Fire
+quadruped,blue,grass,Torrent,'Shell Armor',MediumSlow,Water
+quadruped,brown,grass,'Run Away','Keen Eye',MediumFast,Normal
+quadruped,brown,grass,'Vital Spirit',Pickup,MediumSlow,Normal
+quadruped,gray,grass,Intimidate,'Sand Rush',MediumSlow,Normal
+quadruped,gray,grass,Intimidate,'Sand Rush',MediumSlow,Normal
+quadruped,purple,grass,Limber,Unburden,MediumFast,Dark
+quadruped,purple,grass,Limber,Unburden,MediumFast,Dark
+quadruped,pink,grass,Forewarn,Synchronize,Fast,Psychic
+quadruped,black,grass,Lightningrod,'Motor Drive',MediumFast,Electric
+quadruped,black,grass,Lightningrod,'Motor Drive',MediumFast,Electric
+quadruped,brown,grass,Intimidate,Moxie,MediumSlow,Ground
+quadruped,brown,grass,Intimidate,Moxie,MediumSlow,Ground
+quadruped,red,grass,'Sheer Force','Shell Armor',MediumSlow,Fire
+quadruped,blue,grass,'Solid Rock',Sturdy,MediumFast,Water
+quadruped,gray,grass,Illusion,'Shell Armor',MediumSlow,Dark
+quadruped,gray,grass,'Cute Charm',Technician,Fast,Normal
+quadruped,gray,grass,'Cute Charm',Technician,Fast,Normal
+quadruped,yellow,grass,Chlorophyll,'Sap Sipper',MediumFast,Normal
+quadruped,brown,grass,Chlorophyll,'Sap Sipper',MediumFast,Normal
+quadruped,silver,grass,Static,'Shell Armor',MediumFast,Electric
+quadruped,silver,grass,'Snow Cloak','Shell Armor',MediumFast,Ice
+quadruped,brown,grass,Reckless,'Sap Sipper',MediumFast,Normal
+quadruped,blue,grass,Hustle,'Shell Armor',Slow,Dark
+quadruped,blue,grass,Hustle,'Shell Armor',Slow,Dark
+quadruped,blue,grass,Justified,'Shell Armor',Slow,Steel
+quadruped,gray,grass,Justified,'Shell Armor',Slow,Rock
+quadruped,green,grass,Justified,'Shell Armor',Slow,Grass
+quadruped,yellow,grass,Justified,'Shell Armor',Slow,Water
+singleWings,brown,forest,'Keen Eye','Tangled Feet',MediumSlow,Normal
+singleWings,brown,forest,'Keen Eye','Tangled Feet',MediumSlow,Normal
+singleWings,brown,forest,'Keen Eye','Tangled Feet',MediumSlow,Normal
+singleWings,brown,rough,'Keen Eye','Shell Armor',MediumFast,Normal
+singleWings,brown,rough,'Keen Eye','Shell Armor',MediumFast,Normal
+singleWings,purple,cave,'Inner Focus','Shell Armor',MediumFast,Poison
+singleWings,purple,cave,'Inner Focus','Shell Armor',MediumFast,Poison
+singleWings,brown,grass,'Keen Eye','Inner Focus',MediumFast,Normal
+singleWings,purple,mountain,'Rock Head',Pressure,Slow,Rock
+singleWings,blue,rare,Pressure,'Shell Armor',Slow,Ice
+singleWings,yellow,rare,Pressure,'Shell Armor',Slow,Electric
+singleWings,yellow,rare,Pressure,'Shell Armor',Slow,Fire
+singleWings,brown,forest,Insomnia,'Keen Eye',MediumFast,Normal
+singleWings,brown,forest,Insomnia,'Keen Eye',MediumFast,Normal
+singleWings,red,forest,Swarm,'Early Bird',Fast,Bug
+singleWings,red,forest,Swarm,'Early Bird',Fast,Bug
+singleWings,green,forest,Synchronize,'Early Bird',MediumFast,Psychic
+singleWings,green,forest,Synchronize,'Early Bird',MediumFast,Psychic
+singleWings,black,forest,Insomnia,'Super Luck',MediumSlow,Dark
+singleWings,purple,mountain,'Hyper Cutter','Sand Veil',MediumSlow,Ground
+singleWings,red,mountain,'Vital Spirit',Hustle,Fast,Ice
+singleWings,purple,sea,'Swift Swim','Water Absorb',Slow,Water
+singleWings,gray,rough,'Keen Eye',Sturdy,Slow,Steel
+singleWings,silver,rare,Pressure,'Shell Armor',Slow,Psychic
+singleWings,red,rare,Pressure,'Shell Armor',Slow,Fire
+singleWings,blue,grass,Guts,'Shell Armor',MediumSlow,Normal
+singleWings,blue,grass,Guts,'Shell Armor',MediumSlow,Normal
+singleWings,silver,sea,'Keen Eye','Shell Armor',MediumFast,Water
+singleWings,yellow,sea,'Keen Eye','Shell Armor',MediumFast,Water
+singleWings,green,rough,Levitate,'Shell Armor',MediumSlow,Ground
+singleWings,blue,forest,'Natural Cure','Shell Armor',Erratic,Normal
+singleWings,blue,forest,'Natural Cure','Shell Armor',Erratic,Dragon
+singleWings,red,water,Levitate,'Shell Armor',Slow,Dragon
+singleWings,blue,water,Levitate,'Shell Armor',Slow,Dragon
+singleWings,brown,grass,'Keen Eye','Shell Armor',MediumSlow,Normal
+singleWings,brown,grass,Intimidate,'Shell Armor',MediumSlow,Normal
+singleWings,brown,grass,Intimidate,'Shell Armor',MediumSlow,Normal
+singleWings,black,grass,Insomnia,'Super Luck',MediumSlow,Dark
+singleWings,black,grass,'Keen Eye','Tangled Feet',MediumSlow,Normal
+singleWings,blue,grass,'Swift Swim','Water Absorb',Slow,Water
+singleWings,silver,grass,Hustle,'Serene Grace',Fast,Fairy
+singleWings,purple,grass,'Hyper Cutter','Sand Veil',MediumSlow,Ground
+singleWings,gray,grass,'Big Pecks','Super Luck',MediumSlow,Normal
+singleWings,gray,grass,'Big Pecks','Super Luck',MediumSlow,Normal
+singleWings,gray,grass,'Big Pecks','Super Luck',MediumSlow,Normal
+singleWings,blue,grass,Unaware,Klutz,MediumFast,Psychic
+singleWings,blue,grass,Unaware,Klutz,MediumFast,Psychic
+singleWings,black,grass,'Wonder Skin','Magic Guard',MediumFast,Psychic
+singleWings,yellow,grass,Defeatist,'Shell Armor',MediumFast,Rock
+singleWings,yellow,grass,Defeatist,'Shell Armor',MediumFast,Rock
+singleWings,blue,grass,'Keen Eye','Big Pecks',MediumFast,Water
+singleWings,silver,grass,'Keen Eye','Big Pecks',MediumFast,Water
+singleWings,silver,grass,'Keen Eye','Sheer Force',Slow,Normal
+singleWings,red,grass,'Keen Eye','Sheer Force',Slow,Normal
+singleWings,brown,grass,'Big Pecks',Overcoat,Slow,Dark
+singleWings,brown,grass,'Big Pecks',Overcoat,Slow,Dark
+singleWings,silver,grass,Turboblaze,'Shell Armor',Slow,Dragon
+multiped,blue,sea,'Clear Body','Liquid Ooze',Slow,Water
+multiped,blue,sea,'Clear Body','Liquid Ooze',Slow,Water
+multiped,blue,sea,'Swift Swim','Shell Armor',MediumFast,Rock
+multiped,blue,sea,'Swift Swim','Shell Armor',MediumFast,Rock
+multiped,red,sea,'Suction Cups',Sniper,MediumFast,Water
+multiped,green,grass,Levitate,'Shell Armor',Slow,Grass
+multiped,blue,grass,Sturdy,'Shell Armor',MediumSlow,Rock
+multiped,blue,grass,Sturdy,'Shell Armor',MediumSlow,Rock
+multiped,silver,grass,'Water Absorb','Cursed Body',MediumFast,Water
+multiped,silver,grass,'Water Absorb','Cursed Body',MediumFast,Water
+multiped,gray,grass,'Iron Barbs','Shell Armor',MediumFast,Grass
+multiBody,brown,cave,'Sand Veil','Arena Trap',MediumFast,Ground
+multiBody,gray,rough,'Magnet Pull',Sturdy,MediumFast,Electric
+multiBody,pink,forest,Chlorophyll,'Shell Armor',Slow,Grass
+multiBody,purple,urban,Levitate,'Shell Armor',MediumFast,Poison
+multiBody,blue,rough,'Clear Body','Shell Armor',Slow,Steel
+multiBody,yellow,grass,'Honey Gather','Shell Armor',MediumSlow,Bug
+multiBody,pink,grass,Chlorophyll,'Shell Armor',MediumFast,Grass
+multiBody,gray,grass,Sturdy,'Magnet Pull',MediumFast,Rock
+multiBody,silver,grass,'Ice Body','Shell Armor',Slow,Ice
+multiBody,gray,grass,Plus,Minus,MediumSlow,Steel
+multiBody,gray,grass,Plus,Minus,MediumSlow,Steel
+multiBody,gray,grass,Plus,Minus,MediumSlow,Steel
+bipedalTailless,pink,grass,'Cute Charm','Shell Armor',Fast,Normal
+bipedalTailless,pink,grass,'Cute Charm','Shell Armor',Fast,Normal
+bipedalTailless,blue,grass,Chlorophyll,'Shell Armor',MediumSlow,Grass
+bipedalTailless,red,grass,Chlorophyll,'Shell Armor',MediumSlow,Grass
+bipedalTailless,purple,forest,'Compound Eyes','Tinted Lens',MediumFast,Bug
+bipedalTailless,blue,water,'Water Absorb',Damp,MediumSlow,Water
+bipedalTailless,blue,water,'Water Absorb',Damp,MediumSlow,Water
+bipedalTailless,brown,urban,Synchronize,'Inner Focus',MediumSlow,Psychic
+bipedalTailless,gray,mountain,Guts,'No Guard',MediumSlow,Fighting
+bipedalTailless,gray,mountain,Guts,'No Guard',MediumSlow,Fighting
+bipedalTailless,green,forest,Chlorophyll,'Shell Armor',MediumSlow,Grass
+bipedalTailless,brown,mountain,'Rock Head',Sturdy,MediumSlow,Rock
+bipedalTailless,brown,mountain,'Rock Head',Sturdy,MediumSlow,Rock
+bipedalTailless,yellow,grass,Insomnia,Forewarn,MediumFast,Psychic
+bipedalTailless,yellow,grass,Insomnia,Forewarn,MediumFast,Psychic
+bipedalTailless,brown,urban,Limber,Reckless,MediumFast,Fighting
+bipedalTailless,brown,urban,'Keen Eye','Iron Fist',MediumFast,Fighting
+bipedalTailless,pink,urban,Soundproof,Filter,MediumFast,Psychic
+bipedalTailless,red,urban,Oblivious,Forewarn,MediumFast,Ice
+bipedalTailless,brown,forest,'Hyper Cutter','Mold Breaker',Slow,Bug
+bipedalTailless,black,mountain,Immunity,'Thick Fat',Slow,Normal
+bipedalTailless,yellow,grass,Blaze,'Shell Armor',MediumSlow,Fire
+bipedalTailless,pink,grass,'Cute Charm','Shell Armor',Fast,Normal
+bipedalTailless,silver,forest,Hustle,'Serene Grace',Fast,Fairy
+bipedalTailless,silver,forest,Hustle,'Serene Grace',Fast,Fairy
+bipedalTailless,green,grass,Chlorophyll,'Shell Armor',MediumSlow,Grass
+bipedalTailless,brown,forest,Sturdy,'Rock Head',MediumFast,Rock
+bipedalTailless,green,water,'Water Absorb',Damp,MediumSlow,Water
+bipedalTailless,yellow,grass,Chlorophyll,'Solar Power',MediumSlow,Grass
+bipedalTailless,pink,urban,Intimidate,'Run Away',Fast,Fairy
+bipedalTailless,blue,forest,Swarm,Guts,Slow,Bug
+bipedalTailless,purple,urban,Guts,Steadfast,MediumFast,Fighting
+bipedalTailless,pink,urban,Oblivious,Forewarn,MediumFast,Ice
+bipedalTailless,yellow,grass,Static,'Shell Armor',MediumFast,Electric
+bipedalTailless,pink,urban,'Natural Cure','Serene Grace',Fast,Normal
+bipedalTailless,green,forest,'Natural Cure','Shell Armor',MediumSlow,Psychic
+bipedalTailless,green,water,'Swift Swim','Rain Dish',MediumSlow,Water
+bipedalTailless,green,water,'Swift Swim','Rain Dish',MediumSlow,Water
+bipedalTailless,brown,forest,Chlorophyll,'Early Bird',MediumSlow,Grass
+bipedalTailless,brown,forest,Chlorophyll,'Early Bird',MediumSlow,Grass
+bipedalTailless,silver,urban,Synchronize,Trace,Slow,Psychic
+bipedalTailless,silver,urban,Synchronize,Trace,Slow,Psychic
+bipedalTailless,silver,urban,Synchronize,Trace,Slow,Psychic
+bipedalTailless,brown,forest,Truant,'Shell Armor',Slow,Normal
+bipedalTailless,yellow,mountain,'Thick Fat',Guts,Fluctuating,Fighting
+bipedalTailless,brown,mountain,'Thick Fat',Guts,Fluctuating,Fighting
+bipedalTailless,gray,cave,Sturdy,'Magnet Pull',MediumFast,Rock
+bipedalTailless,purple,cave,'Keen Eye',Stall,MediumSlow,Dark
+bipedalTailless,black,cave,'Hyper Cutter',Intimidate,Fast,Steel
+bipedalTailless,blue,mountain,'Pure Power','Shell Armor',MediumFast,Fighting
+bipedalTailless,red,mountain,'Pure Power','Shell Armor',MediumFast,Fighting
+bipedalTailless,purple,forest,Oblivious,'Tinted Lens',Fluctuating,Bug
+bipedalTailless,green,grass,'Natural Cure','Poison Point',MediumSlow,Grass
+bipedalTailless,green,rough,'Sand Veil','Shell Armor',MediumSlow,Grass
+bipedalTailless,green,rough,'Sand Veil','Shell Armor',MediumSlow,Grass
+bipedalTailless,black,forest,Pressure,'Shell Armor',Fast,Ghost
+bipedalTailless,gray,cave,'Inner Focus','Ice Body',MediumFast,Ice
+bipedalTailless,blue,rough,'Rock Head','Shell Armor',Slow,Dragon
+bipedalTailless,brown,cave,'Clear Body','Shell Armor',Slow,Rock
+bipedalTailless,blue,cave,'Clear Body','Shell Armor',Slow,Ice
+bipedalTailless,gray,cave,'Clear Body','Shell Armor',Slow,Steel
+bipedalTailless,yellow,mountain,'Serene Grace','Shell Armor',Slow,Steel
+bipedalTailless,red,rare,Pressure,'Shell Armor',Slow,Psychic
+bipedalTailless,blue,grass,Torrent,'Shell Armor',MediumSlow,Water
+bipedalTailless,red,grass,'Shed Skin','Shell Armor',MediumSlow,Bug
+bipedalTailless,green,grass,'Natural Cure','Poison Point',MediumSlow,Grass
+bipedalTailless,green,grass,'Natural Cure','Poison Point',MediumSlow,Grass
+bipedalTailless,yellow,grass,Levitate,'Shell Armor',Fast,Psychic
+bipedalTailless,pink,grass,Soundproof,Filter,MediumFast,Psychic
+bipedalTailless,pink,grass,'Natural Cure','Serene Grace',Fast,Normal
+bipedalTailless,black,grass,Pickup,'Thick Fat',Slow,Normal
+bipedalTailless,blue,grass,Anticipation,'Dry Skin',MediumFast,Poison
+bipedalTailless,blue,grass,Anticipation,'Dry Skin',MediumFast,Poison
+bipedalTailless,pink,grass,'Own Tempo',Oblivious,MediumFast,Normal
+bipedalTailless,blue,grass,Chlorophyll,'Leaf Guard',MediumFast,Grass
+bipedalTailless,silver,grass,Steadfast,'Shell Armor',Slow,Psychic
+bipedalTailless,silver,grass,'Slow Start','Shell Armor',Slow,Normal
+bipedalTailless,blue,grass,Hydration,'Shell Armor',Slow,Water
+bipedalTailless,black,grass,'Bad Dreams','Shell Armor',Slow,Dark
+bipedalTailless,yellow,grass,'Victory Star','Shell Armor',Slow,Psychic
+bipedalTailless,pink,grass,Forewarn,Synchronize,Fast,Psychic
+bipedalTailless,gray,grass,'Sand Rush','Sand Force',MediumFast,Ground
+bipedalTailless,gray,grass,Guts,'Sheer Force',MediumSlow,Fighting
+bipedalTailless,gray,grass,Guts,'Sheer Force',MediumSlow,Fighting
+bipedalTailless,brown,grass,Guts,'Sheer Force',MediumSlow,Fighting
+bipedalTailless,blue,grass,'Swift Swim','Poison Touch',MediumSlow,Water
+bipedalTailless,red,grass,Guts,'Inner Focus',MediumFast,Fighting
+bipedalTailless,blue,grass,Sturdy,'Inner Focus',MediumFast,Fighting
+bipedalTailless,yellow,grass,Swarm,Chlorophyll,MediumSlow,Bug
+bipedalTailless,green,grass,Prankster,Infiltrator,MediumFast,Grass
+bipedalTailless,red,grass,Hustle,'Shell Armor',MediumSlow,Fire
+bipedalTailless,green,grass,Stench,'Sticky Hold',MediumFast,Poison
+bipedalTailless,green,grass,Stench,'Weak Armor',MediumFast,Poison
+bipedalTailless,purple,grass,Frisk,'Shell Armor',MediumSlow,Psychic
+bipedalTailless,purple,grass,Frisk,'Shell Armor',MediumSlow,Psychic
+bipedalTailless,purple,grass,Frisk,'Shell Armor',MediumSlow,Psychic
+bipedalTailless,blue,grass,Swarm,'Shed Skin',MediumFast,Bug
+bipedalTailless,brown,grass,Telepathy,Synchronize,MediumFast,Psychic
+bipedalTailless,green,grass,'Iron Fist',Klutz,MediumFast,Ground
+bipedalTailless,green,grass,'Iron Fist',Klutz,MediumFast,Ground
+bipedalTailless,red,grass,Defiant,'Inner Focus',MediumFast,Dark
+bipedalTailless,red,grass,Defiant,'Inner Focus',MediumFast,Dark
+bipedalTailless,silver,grass,'Serene Grace','Shell Armor',Slow,Normal
+bipedalTailless,purple,grass,Download,'Shell Armor',Slow,Bug
+TwoMoreWings,silver,forest,'Compound Eyes','Shell Armor',MediumFast,Bug
+TwoMoreWings,yellow,forest,Swarm,'Shell Armor',MediumFast,Bug
+TwoMoreWings,purple,forest,'Shield Dust','Tinted Lens',MediumFast,Bug
+TwoMoreWings,green,grass,Swarm,Technician,MediumFast,Bug
+TwoMoreWings,purple,cave,'Inner Focus','Shell Armor',MediumFast,Poison
+TwoMoreWings,red,forest,'Speed Boost','Compound Eyes',MediumFast,Bug
+TwoMoreWings,red,grass,Swarm,Technician,MediumFast,Bug
+TwoMoreWings,yellow,forest,Swarm,'Shell Armor',MediumFast,Bug
+TwoMoreWings,green,forest,'Shield Dust','Shell Armor',MediumFast,Bug
+TwoMoreWings,blue,water,Intimidate,'Shell Armor',MediumFast,Bug
+TwoMoreWings,yellow,forest,'Speed Boost','Shell Armor',Erratic,Bug
+TwoMoreWings,green,rough,Levitate,'Shell Armor',MediumSlow,Ground
+TwoMoreWings,red,grass,Swarm,'Shell Armor',MediumSlow,Bug
+TwoMoreWings,yellow,grass,Swarm,'Shell Armor',MediumFast,Bug
+TwoMoreWings,yellow,grass,Pressure,'Shell Armor',MediumSlow,Bug
+TwoMoreWings,green,grass,'Speed Boost','Tinted Lens',MediumFast,Bug
+TwoMoreWings,silver,grass,'Flame Body','Shell Armor',Slow,Bug
+insectoid,red,forest,'Effect Spore','Dry Skin',MediumFast,Bug
+insectoid,red,forest,'Effect Spore','Dry Skin',MediumFast,Bug
+insectoid,red,water,'Hyper Cutter','Shell Armor',MediumFast,Water
+insectoid,red,water,'Hyper Cutter','Shell Armor',MediumFast,Water
+insectoid,brown,sea,'Swift Swim','Battle Armor',MediumFast,Rock
+insectoid,green,forest,Swarm,Insomnia,Fast,Bug
+insectoid,red,forest,Swarm,Insomnia,Fast,Bug
+insectoid,yellow,mountain,Sturdy,Gluttony,MediumSlow,Bug
+insectoid,pink,sea,Hustle,'Natural Cure',Fast,Water
+insectoid,green,water,'Swift Swim','Rain Dish',MediumSlow,Water
+insectoid,blue,water,'Swift Swim','Shell Armor',MediumFast,Bug
+insectoid,gray,forest,'Compound Eyes','Shell Armor',Erratic,Bug
+insectoid,brown,rough,'Hyper Cutter','Arena Trap',MediumSlow,Ground
+insectoid,red,water,'Hyper Cutter','Shell Armor',Fluctuating,Water
+insectoid,red,water,'Hyper Cutter','Shell Armor',Fluctuating,Water
+insectoid,gray,water,'Battle Armor','Shell Armor',Erratic,Rock
+insectoid,purple,grass,'Sticky Hold','Storm Drain',MediumFast,Water
+insectoid,purple,grass,'Sticky Hold','Storm Drain',MediumFast,Water
+insectoid,purple,grass,'Battle Armor',Sniper,Slow,Poison
+insectoid,purple,grass,'Battle Armor',Sniper,Slow,Poison
+insectoid,yellow,grass,Levitate,'Shell Armor',Slow,Psychic
+insectoid,yellow,grass,Swarm,Chlorophyll,MediumSlow,Bug
+insectoid,red,grass,'Poison Point',Swarm,MediumSlow,Bug
+insectoid,red,grass,'Poison Point',Swarm,MediumSlow,Bug
+insectoid,red,grass,Sturdy,'Shell Armor',MediumFast,Bug
+insectoid,red,grass,Sturdy,'Shell Armor',MediumFast,Bug
+insectoid,yellow,grass,'Compound Eyes',Unnerve,MediumFast,Bug
+insectoid,yellow,grass,'Compound Eyes',Unnerve,MediumFast,Bug
+insectoid,gray,grass,Swarm,Hustle,MediumFast,Bug
+insectoid,silver,grass,'Flame Body','Shell Armor',Slow,Bug
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,pink,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Electric
+head,blue,grass,Levitate,'Shell Armor',Fast,Steel
+head,blue,grass,Levitate,'Shell Armor',MediumSlow,Water
+head,red,grass,Levitate,'Shell Armor',MediumSlow,Normal
+head,black,grass,Levitate,'Shell Armor',MediumFast,Bug
+head,black,grass,Levitate,'Shell Armor',MediumFast,Bug
+head,gray,grass,Levitate,'Shell Armor',MediumFast,Psychic
+head,blue,grass,Levitate,'Shell Armor',Slow,Rock
+head,blue,grass,Levitate,'Shell Armor',Slow,Dragon
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ghost
+head,green,grass,Levitate,'Shell Armor',MediumSlow,Grass
+head,red,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Normal
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Dark
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ghost
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Rock
+head,yellow,grass,Levitate,'Shell Armor',MediumFast,Electric
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Poison
+head,blue,grass,Levitate,'Shell Armor',Slow,Water
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Flying
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fighting
+head,brown,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,blue,grass,Levitate,'Shell Armor',MediumSlow,Water
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Psychic
+head,green,grass,Levitate,'Shell Armor',MediumSlow,Grass
+head,red,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ghost
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Steel
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Steel
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Rock
+head,pink,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,green,grass,Levitate,'Shell Armor',MediumFast,Fighting
+head,blue,grass,Levitate,'Shell Armor',Slow,Dragon
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Grass
+head,red,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Normal
+head,yellow,grass,Levitate,'Shell Armor',MediumFast,Electric
+head,pink,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ice
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fairy
+head,red,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,black,grass,Levitate,'Shell Armor',MediumFast,Bug
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Normal
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Rock
+head,blue,grass,Levitate,'Shell Armor',Slow,Water
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Rock
+head,red,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,blue,grass,Levitate,'Shell Armor',MediumSlow,Water
+head,brown,grass,Levitate,'Shell Armor',MediumSlow,Fire
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Dark
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ghost
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Flying
+head,green,grass,Levitate,'Shell Armor',MediumSlow,Grass
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Grass
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Steel
+head,brown,grass,Levitate,'Shell Armor',MediumFast,Poison
+head,blue,grass,Levitate,'Shell Armor',Slow,Dragon
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Ice
+head,silver,grass,Levitate,'Shell Armor',MediumFast,Fighting
+head,red,grass,Levitate,'Shell Armor',MediumFast,Rock
+head,blue,grass,Levitate,'Shell Armor',MediumFast,Rock
+head,blue,grass,Levitate,'Shell Armor',Slow,Fairy
+head,blue,grass,Levitate,'Shell Armor',Slow,Dragon
+head,blue,grass,Levitate,'Shell Armor',Slow,Dark

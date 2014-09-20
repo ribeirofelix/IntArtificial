@@ -1,0 +1,1396 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     PokeSet
+Instances:    718
+Attributes:   21
+              Height
+              Weight
+              Body
+              CatchRate
+              PerfSpeed
+              PerfPower
+              PerfSkill
+              PerfStamina
+              PerfJump
+              BaseHp
+              BaseAttack
+              BaseDefense
+              BaseSpAttack
+              BaseSpDefense
+              BaseSpeed
+              Color
+              Habitat
+              Ability1
+              Ability2
+              Hidden
+              class
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Ability1 = Adaptability: Normal (1.11/0.1)
+Ability1 = Aftermath: Ghost (2.21/0.2)
+Ability1 = Air Lock: Dragon (1.11/0.1)
+Ability1 = Anticipation: Poison (3.32/1.31)
+Ability1 = Bad Dreams: Dark (1.11/0.1)
+Ability1 = Battle Armor
+|   Color = black: Bug (0.02/0.0)
+|   Color = blue: Water (0.06/0.03)
+|   Color = brown: Rock (0.09/0.07)
+|   Color = gray: Rock (2.05/0.05)
+|   Color = green: Grass (0.03/0.01)
+|   Color = pink: Fairy (0.02/0.0)
+|   Color = purple: Poison (2.05/0.05)
+|   Color = red: Fire (0.04/0.01)
+|   Color = silver: Fairy (0.06/0.03)
+|   Color = yellow: Electric (0.01/0.0)
+Ability1 = Big Pecks
+|   Color = black: Bug (0.02/0.0)
+|   Color = blue: Water (0.07/0.03)
+|   Color = brown: Dark (2.16/0.16)
+|   Color = gray: Normal (3.08/0.08)
+|   Color = green: Grass (0.03/0.01)
+|   Color = pink: Fairy (0.02/0.0)
+|   Color = purple: Normal (0.0)
+|   Color = red: Fire (0.06/0.02)
+|   Color = silver: Fairy (0.07/0.03)
+|   Color = yellow: Electric (0.02/0.0)
+Ability1 = Blaze: Fire (16.59/1.43)
+Ability1 = Chlorophyll
+|   PerfPower <= 1
+|   |   Body = head: Fairy (2.66/2.31)
+|   |   Body = serpertine: Grass (0.0)
+|   |   Body = fins: Grass (0.0)
+|   |   Body = headArms: Grass (0.0)
+|   |   Body = headBase: Grass (2.0)
+|   |   Body = bipedalTailed: Grass (0.0)
+|   |   Body = headLegs: Grass (0.0)
+|   |   Body = quadruped: Normal (2.0)
+|   |   Body = singleWings: Grass (0.0)
+|   |   Body = multiped: Grass (0.0)
+|   |   Body = multiBody: Grass (0.0)
+|   |   Body = bipedalTailless: Grass (0.0)
+|   |   Body = TwoMoreWings: Grass (0.0)
+|   |   Body = insectoid: Grass (0.0)
+|   PerfPower > 1: Grass (21.0)
+Ability1 = Clear Body
+|   CatchRate <= 30: Steel (6.85/2.8)
+|   CatchRate > 30: Water (2.0)
+Ability1 = Color Change: Normal (1.11/0.1)
+Ability1 = Compound Eyes: Bug (5.53/0.51)
+Ability1 = Cute Charm
+|   Body = head: Fairy (1.17/1.02)
+|   Body = serpertine: Normal (0.0)
+|   Body = fins: Normal (0.0)
+|   Body = headArms: Normal (0.0)
+|   Body = headBase: Normal (0.0)
+|   Body = bipedalTailed: Fairy (4.0/1.0)
+|   Body = headLegs: Normal (0.0)
+|   Body = quadruped: Normal (4.0)
+|   Body = singleWings: Normal (0.0)
+|   Body = multiped: Normal (0.0)
+|   Body = multiBody: Normal (0.0)
+|   Body = bipedalTailless: Normal (3.0)
+|   Body = TwoMoreWings: Normal (0.0)
+|   Body = insectoid: Normal (0.0)
+Ability1 = Damp: Water (4.43/0.39)
+Ability1 = Defeatist: Rock (2.21/0.19)
+Ability1 = Defiant: Dark (2.21/0.2)
+Ability1 = Download: Bug (1.11/0.1)
+Ability1 = Drizzle: Water (1.11/0.1)
+Ability1 = Drought: Ground (1.11/0.11)
+Ability1 = Early Bird: Dark (3.32/1.31)
+Ability1 = Effect Spore: Grass (6.64/2.59)
+Ability1 = Flame Body
+|   PerfSpeed <= 1: Bug (2.53/0.51)
+|   PerfSpeed > 1: Fire (3.0)
+Ability1 = Flash Fire
+|   PerfStamina <= 1: Ghost (3.74/0.7)
+|   PerfStamina > 1: Fire (4.0)
+Ability1 = Flower Gift: Grass (1.11/0.1)
+Ability1 = Forecast: Normal (1.11/0.1)
+Ability1 = Forewarn: Psychic (2.21/0.21)
+Ability1 = Frisk: Psychic (3.32/0.31)
+Ability1 = Gluttony
+|   Color = black: Bug (0.03/0.0)
+|   Color = blue: Water (2.15/0.09)
+|   Color = brown: Rock (0.15/0.12)
+|   Color = gray: Psychic (0.01/0.0)
+|   Color = green: Grass (2.09/0.06)
+|   Color = pink: Fairy (0.03/0.0)
+|   Color = purple: Fire (0.0)
+|   Color = red: Fire (3.15/0.1)
+|   Color = silver: Fairy (0.1/0.05)
+|   Color = yellow: Electric (0.02/0.0)
+Ability1 = Guts
+|   Body = head: Fairy (1.28/1.11)
+|   Body = serpertine: Fighting (0.0)
+|   Body = fins: Fighting (0.0)
+|   Body = headArms: Fighting (0.0)
+|   Body = headBase: Fighting (0.0)
+|   Body = bipedalTailed: Normal (3.0/2.0)
+|   Body = headLegs: Fighting (0.0)
+|   Body = quadruped: Fighting (0.0)
+|   Body = singleWings: Normal (2.0)
+|   Body = multiped: Fighting (0.0)
+|   Body = multiBody: Fighting (0.0)
+|   Body = bipedalTailless: Fighting (7.0)
+|   Body = TwoMoreWings: Fighting (0.0)
+|   Body = insectoid: Fighting (0.0)
+Ability1 = Healer: Water (2.21/1.2)
+Ability1 = Honey Gather: Bug (1.11/0.1)
+Ability1 = Hustle
+|   PerfPower <= 1: Dark (3.85/1.81)
+|   PerfPower > 1
+|   |   PerfStamina <= 3: Water (2.0)
+|   |   PerfStamina > 3: Fairy (3.0)
+Ability1 = Hydration
+|   CatchRate <= 50: Water (2.43/0.39)
+|   CatchRate > 50: Bug (2.0)
+Ability1 = Hyper Cutter
+|   Body = head: Fairy (0.96/0.83)
+|   Body = serpertine: Water (0.0)
+|   Body = fins: Water (0.0)
+|   Body = headArms: Water (0.0)
+|   Body = headBase: Water (0.0)
+|   Body = bipedalTailed: Water (0.0)
+|   Body = headLegs: Water (0.0)
+|   Body = quadruped: Water (0.0)
+|   Body = singleWings: Ground (2.0)
+|   Body = multiped: Water (0.0)
+|   Body = multiBody: Water (0.0)
+|   Body = bipedalTailless: Bug (2.0/1.0)
+|   Body = TwoMoreWings: Water (0.0)
+|   Body = insectoid: Water (5.0/1.0)
+Ability1 = Ice Body: Ice (3.32/0.31)
+Ability1 = Illuminate
+|   PerfSpeed <= 4: Normal (2.43/1.4)
+|   PerfSpeed > 4: Water (2.0)
+Ability1 = Illusion: Dark (2.21/0.2)
+Ability1 = Immunity: Normal (2.21/0.2)
+Ability1 = Inner Focus
+|   Color = black: Dark (1.07/0.07)
+|   Color = blue: Water (0.14/0.06)
+|   Color = brown: Dragon (1.25/0.24)
+|   Color = gray: Ice (2.06/0.06)
+|   Color = green: Grass (0.06/0.02)
+|   Color = pink: Fairy (0.05/0.0)
+|   Color = purple: Poison (4.1/1.1)
+|   Color = red: Fire (0.11/0.03)
+|   Color = silver: Fairy (0.14/0.06)
+|   Color = yellow: Normal (2.08/1.08)
+Ability1 = Insomnia
+|   Color = black
+|   |   PerfStamina <= 3: Ghost (2.13/0.11)
+|   |   PerfStamina > 3: Dark (2.0)
+|   Color = blue: Water (0.11/0.05)
+|   Color = brown: Normal (2.23/0.2)
+|   Color = gray: Psychic (0.01/0.0)
+|   Color = green: Grass (0.05/0.01)
+|   Color = pink: Fairy (0.04/0.0)
+|   Color = purple: Normal (0.0)
+|   Color = red: Fire (0.09/0.03)
+|   Color = silver: Fairy (0.11/0.05)
+|   Color = yellow: Psychic (2.07/0.07)
+Ability1 = Intimidate
+|   Ability2 = Adaptability: Normal (0.0)
+|   Ability2 = Aftermath: Normal (0.0)
+|   Ability2 = Anger Point: Normal (1.48/0.33)
+|   Ability2 = Anticipation: Normal (0.0)
+|   Ability2 = Arena Trap: Normal (0.0)
+|   Ability2 = Battle Armor: Normal (0.0)
+|   Ability2 = Big Pecks: Normal (0.0)
+|   Ability2 = Chlorophyll: Normal (0.0)
+|   Ability2 = Cloud Nine: Normal (0.0)
+|   Ability2 = Compound Eyes: Normal (0.0)
+|   Ability2 = Cursed Body: Normal (0.0)
+|   Ability2 = Damp: Normal (0.0)
+|   Ability2 = Download: Normal (0.0)
+|   Ability2 = Dry Skin: Normal (0.0)
+|   Ability2 = Early Bird: Normal (0.0)
+|   Ability2 = Filter: Normal (0.0)
+|   Ability2 = Flame Body: Normal (0.0)
+|   Ability2 = Flash Fire: Fire (2.95/0.92)
+|   Ability2 = Forewarn: Normal (0.0)
+|   Ability2 = Frisk: Normal (1.48/0.33)
+|   Ability2 = Gluttony: Normal (0.0)
+|   Ability2 = Guts: Normal (0.0)
+|   Ability2 = Heatproof: Normal (0.0)
+|   Ability2 = Huge Power: Normal (0.0)
+|   Ability2 = Hustle: Normal (0.0)
+|   Ability2 = Hydration: Normal (0.0)
+|   Ability2 = Ice Body: Normal (0.0)
+|   Ability2 = Illuminate: Normal (0.0)
+|   Ability2 = Infiltrator: Normal (0.0)
+|   Ability2 = Inner Focus: Normal (0.0)
+|   Ability2 = Insomnia: Normal (0.0)
+|   Ability2 = Intimidate: Normal (0.0)
+|   Ability2 = Iron Fist: Normal (0.0)
+|   Ability2 = Keen Eye: Normal (0.0)
+|   Ability2 = Klutz: Normal (0.0)
+|   Ability2 = Leaf Guard: Normal (0.0)
+|   Ability2 = Lightningrod: Normal (0.0)
+|   Ability2 = Limber: Normal (0.0)
+|   Ability2 = Liquid Ooze: Normal (0.0)
+|   Ability2 = Magic Guard: Normal (0.0)
+|   Ability2 = Magnet Pull: Normal (0.0)
+|   Ability2 = Minus: Normal (0.0)
+|   Ability2 = Mold Breaker: Normal (0.0)
+|   Ability2 = Motor Drive: Normal (0.0)
+|   Ability2 = Moxie: Ground (4.43/1.43)
+|   Ability2 = Natural Cure: Normal (0.0)
+|   Ability2 = No Guard: Normal (0.0)
+|   Ability2 = Normalize: Normal (0.0)
+|   Ability2 = Oblivious: Normal (0.0)
+|   Ability2 = Overcoat: Normal (0.0)
+|   Ability2 = Own Tempo: Normal (0.0)
+|   Ability2 = Pickup: Normal (0.0)
+|   Ability2 = Poison Heal: Normal (0.0)
+|   Ability2 = Poison Point: Normal (0.0)
+|   Ability2 = Poison Touch: Normal (0.0)
+|   Ability2 = Pressure: Normal (0.0)
+|   Ability2 = Quick Feet: Fairy (2.95/1.91)
+|   Ability2 = Rain Dish: Normal (0.0)
+|   Ability2 = Reckless: Normal (0.0)
+|   Ability2 = Regenerator: Normal (0.0)
+|   Ability2 = Rivalry: Normal (0.0)
+|   Ability2 = Rock Head: Normal (0.0)
+|   Ability2 = Run Away: Fairy (1.48/0.46)
+|   Ability2 = Sand Force: Normal (0.0)
+|   Ability2 = Sand Rush: Normal (2.95/0.67)
+|   Ability2 = Sand Veil: Normal (0.0)
+|   Ability2 = Sap Sipper: Normal (0.0)
+|   Ability2 = Scrappy: Normal (0.0)
+|   Ability2 = Serene Grace: Normal (0.0)
+|   Ability2 = Shed Skin: Poison (2.95/0.94)
+|   Ability2 = Sheer Force: Normal (0.0)
+|   Ability2 = Shell Armor: Normal (0.0)
+|   Ability2 = Simple: Normal (0.0)
+|   Ability2 = Skill Link: Normal (0.0)
+|   Ability2 = Sniper: Normal (0.0)
+|   Ability2 = Snow Cloak: Normal (0.0)
+|   Ability2 = Solar Power: Normal (0.0)
+|   Ability2 = Solid Rock: Normal (0.0)
+|   Ability2 = Stall: Normal (0.0)
+|   Ability2 = Static: Normal (0.0)
+|   Ability2 = Steadfast: Normal (0.0)
+|   Ability2 = Sticky Hold: Normal (0.0)
+|   Ability2 = Storm Drain: Normal (0.0)
+|   Ability2 = Sturdy: Normal (0.0)
+|   Ability2 = Super Luck: Normal (0.0)
+|   Ability2 = Swarm: Normal (0.0)
+|   Ability2 = Swift Swim: Normal (0.0)
+|   Ability2 = Synchronize: Normal (0.0)
+|   Ability2 = Tangled Feet: Normal (0.0)
+|   Ability2 = Technician: Fighting (1.48/0.47)
+|   Ability2 = Thick Fat: Normal (0.0)
+|   Ability2 = Tinted Lens: Normal (0.0)
+|   Ability2 = Trace: Normal (0.0)
+|   Ability2 = Unaware: Normal (0.0)
+|   Ability2 = Unburden: Normal (0.0)
+|   Ability2 = Unnerve: Normal (0.0)
+|   Ability2 = Water Absorb: Normal (0.0)
+|   Ability2 = Water Veil: Normal (0.0)
+|   Ability2 = Weak Armor: Normal (0.0)
+Ability1 = Iron Barbs: Grass (2.21/0.2)
+Ability1 = Iron Fist: Ground (2.21/0.21)
+Ability1 = Justified
+|   Height <= 1.9: Water (2.38/1.35)
+|   Height > 1.9: Grass (2.05/1.05)
+Ability1 = Keen Eye
+|   Body = head: Fairy (1.81/1.57)
+|   Body = serpertine: Normal (0.0)
+|   Body = fins: Normal (0.0)
+|   Body = headArms: Normal (0.0)
+|   Body = headBase: Normal (0.0)
+|   Body = bipedalTailed: Normal (0.0)
+|   Body = headLegs: Normal (0.0)
+|   Body = quadruped: Normal (0.0)
+|   Body = singleWings: Normal (15.0/5.0)
+|   Body = multiped: Normal (0.0)
+|   Body = multiBody: Normal (0.0)
+|   Body = bipedalTailless: Fighting (2.0/1.0)
+|   Body = TwoMoreWings: Normal (0.0)
+|   Body = insectoid: Normal (0.0)
+Ability1 = Leaf Guard: Grass (2.21/1.2)
+Ability1 = Levitate
+|   Body = head
+|   |   PerfSpeed <= 3
+|   |   |   PerfSpeed <= 1: Ice (4.4/3.3)
+|   |   |   PerfSpeed > 1
+|   |   |   |   Height <= 0.8: Poison (2.0/1.0)
+|   |   |   |   Height > 0.8: Rock (2.0)
+|   |   PerfSpeed > 3
+|   |   |   PerfPower <= 2: Ghost (3.0)
+|   |   |   PerfPower > 2: Electric (2.0/1.0)
+|   Body = serpertine: Psychic (0.0)
+|   Body = fins: Electric (3.0)
+|   Body = headArms
+|   |   PerfJump <= 4
+|   |   |   Weight <= 18: Ghost (2.0)
+|   |   |   Weight > 18: Ground (2.0)
+|   |   PerfJump > 4: Psychic (2.0/1.0)
+|   Body = headBase: Psychic (0.0)
+|   Body = bipedalTailed
+|   |   Height <= 0.9: Psychic (3.0)
+|   |   Height > 0.9: Ghost (2.0/1.0)
+|   Body = headLegs: Psychic (0.0)
+|   Body = quadruped: Psychic (0.0)
+|   Body = singleWings: Dragon (3.0/1.0)
+|   Body = multiped: Grass (1.0)
+|   Body = multiBody: Poison (1.0)
+|   Body = bipedalTailless: Psychic (1.0)
+|   Body = TwoMoreWings: Ground (1.0)
+|   Body = insectoid: Psychic (1.0)
+Ability1 = Lightningrod
+|   PerfPower <= 2: Electric (2.53/0.51)
+|   PerfPower > 2: Ground (3.0)
+Ability1 = Limber
+|   PerfJump <= 2: Dark (2.64/0.61)
+|   PerfJump > 2: Normal (4.0/1.0)
+Ability1 = Liquid Ooze: Poison (2.21/0.21)
+Ability1 = Magma Armor: Fire (3.32/0.29)
+Ability1 = Magnet Pull: Electric (3.32/0.31)
+Ability1 = Marvel Scale: Water (1.11/0.1)
+Ability1 = Minus: Electric (1.11/0.1)
+Ability1 = Mold Breaker: Rock (2.21/0.19)
+Ability1 = Motor Drive: Electric (1.11/0.1)
+Ability1 = Multitype: Normal (1.11/0.1)
+Ability1 = Mummy: Ghost (2.21/0.2)
+Ability1 = Natural Cure
+|   PerfStamina <= 3: Grass (6.06/1.99)
+|   PerfStamina > 3: Normal (5.0/1.0)
+Ability1 = Oblivious
+|   Habitat = cave: Ice (2.41/0.23)
+|   Habitat = forest: Bug (1.21/0.2)
+|   Habitat = grass: Water (0.0)
+|   Habitat = mountain: Fire (1.21/0.2)
+|   Habitat = rare: Water (0.0)
+|   Habitat = rough: Water (0.0)
+|   Habitat = sea: Water (0.0)
+|   Habitat = urban: Ice (2.41/0.23)
+|   Habitat = water: Water (6.03/0.99)
+Ability1 = Overcoat: Psychic (3.32/0.31)
+Ability1 = Overgrow: Grass (16.59/1.48)
+Ability1 = Own Tempo: Normal (4.43/0.4)
+Ability1 = Pickup: Normal (6.64/1.6)
+Ability1 = Plus: Steel (4.43/1.4)
+Ability1 = Poison Point
+|   PerfSkill <= 1: Bug (4.17/1.12)
+|   PerfSkill > 1
+|   |   Habitat = cave: Poison (0.0)
+|   |   Habitat = forest: Poison (0.0)
+|   |   Habitat = grass: Poison (6.0)
+|   |   Habitat = mountain: Poison (0.0)
+|   |   Habitat = rare: Poison (0.0)
+|   |   Habitat = rough: Poison (0.0)
+|   |   Habitat = sea: Water (2.0)
+|   |   Habitat = urban: Poison (0.0)
+|   |   Habitat = water: Poison (0.0)
+Ability1 = Prankster
+|   CatchRate <= 35: Electric (2.43/1.41)
+|   CatchRate > 35: Grass (2.0)
+Ability1 = Pressure
+|   Color = black: Ghost (4.19/1.17)
+|   Color = blue: Water (2.33/1.18)
+|   Color = brown: Fire (1.47/0.4)
+|   Color = gray: Dragon (1.06/0.05)
+|   Color = green: Grass (0.13/0.03)
+|   Color = pink: Fairy (0.09/0.0)
+|   Color = purple: Ghost (3.07/2.06)
+|   Color = red: Fire (2.27/1.12)
+|   Color = silver: Psychic (3.36/2.33)
+|   Color = yellow
+|   |   PerfStamina <= 4: Electric (2.16/0.09)
+|   |   PerfStamina > 4: Fire (2.0/1.0)
+Ability1 = Pure Power: Fighting (2.21/0.2)
+Ability1 = Reckless: Water (2.21/1.2)
+Ability1 = Rivalry
+|   PerfPower <= 2: Dragon (3.64/0.6)
+|   PerfPower > 2: Electric (3.0)
+Ability1 = Rock Head
+|   PerfSkill <= 2: Rock (8.06/2.96)
+|   PerfSkill > 2: Ground (3.0/1.0)
+Ability1 = Rough Skin: Water (3.32/1.3)
+Ability1 = Run Away
+|   Color = black: Bug (0.07/0.0)
+|   Color = blue: Water (0.2/0.09)
+|   Color = brown: Normal (8.5/0.46)
+|   Color = gray: Dark (1.05/0.04)
+|   Color = green: Grass (0.09/0.02)
+|   Color = pink: Fairy (0.07/0.0)
+|   Color = purple: Normal (2.05/0.05)
+|   Color = red: Fire (0.15/0.05)
+|   Color = silver: Electric (1.22/0.22)
+|   Color = yellow: Fire (2.09/0.09)
+Ability1 = Sand Force: Ground (1.11/0.11)
+Ability1 = Sand Rush: Ground (2.21/0.21)
+Ability1 = Sand Stream: Ground (3.32/1.32)
+Ability1 = Sand Veil
+|   Color = black: Bug (0.04/0.0)
+|   Color = blue: Dragon (3.2/0.18)
+|   Color = brown: Ground (2.25/0.25)
+|   Color = gray: Psychic (0.01/0.0)
+|   Color = green: Grass (2.11/0.06)
+|   Color = pink: Fairy (0.04/0.0)
+|   Color = purple: Ground (0.0)
+|   Color = red: Fire (0.1/0.03)
+|   Color = silver: Fairy (0.13/0.06)
+|   Color = yellow: Ground (2.08/0.08)
+Ability1 = Serene Grace: Normal (3.32/1.3)
+Ability1 = Shadow Tag: Psychic (2.21/0.21)
+Ability1 = Shed Skin
+|   CatchRate <= 65
+|   |   PerfSkill <= 2: Rock (2.28/1.15)
+|   |   PerfSkill > 2: Dragon (2.0)
+|   CatchRate > 65
+|   |   PerfPower <= 1: Dark (2.0)
+|   |   PerfPower > 1: Bug (7.0/1.0)
+Ability1 = Sheer Force: Fire (1.11/0.1)
+Ability1 = Shell Armor: Water (3.32/0.3)
+Ability1 = Shield Dust: Bug (5.53/0.51)
+Ability1 = Simple: Normal (2.21/0.2)
+Ability1 = Slow Start: Normal (1.11/0.1)
+Ability1 = Snow Cloak: Ice (4.43/0.41)
+Ability1 = Snow Warning: Grass (2.21/0.2)
+Ability1 = Solid Rock: Water (2.21/0.2)
+Ability1 = Soundproof
+|   PerfJump <= 3
+|   |   PerfSkill <= 4: Normal (3.74/0.7)
+|   |   PerfSkill > 4: Psychic (2.0)
+|   PerfJump > 3: Electric (2.0)
+Ability1 = Speed Boost: Bug (3.32/0.31)
+Ability1 = Static: Electric (13.28/2.22)
+Ability1 = Steadfast: Fighting (3.32/1.31)
+Ability1 = Stench: Poison (6.64/0.62)
+Ability1 = Sticky Hold: Water (2.21/0.2)
+Ability1 = Sturdy
+|   Body = head: Bug (4.02/1.93)
+|   Body = serpertine: Rock (0.0)
+|   Body = fins: Rock (0.0)
+|   Body = headArms: Rock (0.0)
+|   Body = headBase: Rock (0.0)
+|   Body = bipedalTailed: Steel (1.0)
+|   Body = headLegs: Rock (2.0)
+|   Body = quadruped
+|   |   PerfStamina <= 4: Steel (3.0/1.0)
+|   |   PerfStamina > 4: Rock (2.0)
+|   Body = singleWings: Rock (0.0)
+|   Body = multiped: Rock (2.0)
+|   Body = multiBody: Rock (1.0)
+|   Body = bipedalTailless: Rock (3.0/1.0)
+|   Body = TwoMoreWings: Rock (0.0)
+|   Body = insectoid: Bug (3.0)
+Ability1 = Suction Cups: Rock (3.32/1.29)
+Ability1 = Swarm: Bug (17.7/1.63)
+Ability1 = Swift Swim: Water (29.87/7.66)
+Ability1 = Synchronize: Psychic (12.17/2.14)
+Ability1 = Technician: Normal (1.11/0.1)
+Ability1 = Telepathy: Psychic (2.21/0.21)
+Ability1 = Teravolt: Dragon (1.11/0.1)
+Ability1 = Thick Fat
+|   Ability2 = Adaptability: Water (0.0)
+|   Ability2 = Aftermath: Water (0.0)
+|   Ability2 = Anger Point: Water (0.0)
+|   Ability2 = Anticipation: Water (0.0)
+|   Ability2 = Arena Trap: Water (0.0)
+|   Ability2 = Battle Armor: Water (0.0)
+|   Ability2 = Big Pecks: Water (0.0)
+|   Ability2 = Chlorophyll: Water (0.0)
+|   Ability2 = Cloud Nine: Water (0.0)
+|   Ability2 = Compound Eyes: Water (0.0)
+|   Ability2 = Cursed Body: Water (0.0)
+|   Ability2 = Damp: Water (0.0)
+|   Ability2 = Download: Water (0.0)
+|   Ability2 = Dry Skin: Water (0.0)
+|   Ability2 = Early Bird: Water (0.0)
+|   Ability2 = Filter: Water (0.0)
+|   Ability2 = Flame Body: Water (0.0)
+|   Ability2 = Flash Fire: Water (0.0)
+|   Ability2 = Forewarn: Water (0.0)
+|   Ability2 = Frisk: Water (0.0)
+|   Ability2 = Gluttony: Water (0.0)
+|   Ability2 = Guts: Fighting (2.21/0.2)
+|   Ability2 = Heatproof: Water (0.0)
+|   Ability2 = Huge Power: Water (3.32/1.3)
+|   Ability2 = Hustle: Water (0.0)
+|   Ability2 = Hydration: Water (2.21/0.2)
+|   Ability2 = Ice Body: Ice (3.32/0.31)
+|   Ability2 = Illuminate: Water (0.0)
+|   Ability2 = Infiltrator: Water (0.0)
+|   Ability2 = Inner Focus: Water (0.0)
+|   Ability2 = Insomnia: Water (0.0)
+|   Ability2 = Intimidate: Water (0.0)
+|   Ability2 = Iron Fist: Water (0.0)
+|   Ability2 = Keen Eye: Water (0.0)
+|   Ability2 = Klutz: Water (0.0)
+|   Ability2 = Leaf Guard: Water (0.0)
+|   Ability2 = Lightningrod: Water (0.0)
+|   Ability2 = Limber: Water (0.0)
+|   Ability2 = Liquid Ooze: Water (0.0)
+|   Ability2 = Magic Guard: Water (0.0)
+|   Ability2 = Magnet Pull: Water (0.0)
+|   Ability2 = Minus: Water (0.0)
+|   Ability2 = Mold Breaker: Water (0.0)
+|   Ability2 = Motor Drive: Water (0.0)
+|   Ability2 = Moxie: Water (0.0)
+|   Ability2 = Natural Cure: Water (0.0)
+|   Ability2 = No Guard: Water (0.0)
+|   Ability2 = Normalize: Water (0.0)
+|   Ability2 = Oblivious: Water (0.0)
+|   Ability2 = Overcoat: Water (0.0)
+|   Ability2 = Own Tempo: Psychic (3.32/1.31)
+|   Ability2 = Pickup: Water (0.0)
+|   Ability2 = Poison Heal: Water (0.0)
+|   Ability2 = Poison Point: Water (0.0)
+|   Ability2 = Poison Touch: Water (0.0)
+|   Ability2 = Pressure: Water (0.0)
+|   Ability2 = Quick Feet: Water (0.0)
+|   Ability2 = Rain Dish: Water (0.0)
+|   Ability2 = Reckless: Water (0.0)
+|   Ability2 = Regenerator: Water (0.0)
+|   Ability2 = Rivalry: Water (0.0)
+|   Ability2 = Rock Head: Water (0.0)
+|   Ability2 = Run Away: Water (0.0)
+|   Ability2 = Sand Force: Water (0.0)
+|   Ability2 = Sand Rush: Water (0.0)
+|   Ability2 = Sand Veil: Water (0.0)
+|   Ability2 = Sap Sipper: Water (0.0)
+|   Ability2 = Scrappy: Normal (1.11/0.1)
+|   Ability2 = Serene Grace: Water (0.0)
+|   Ability2 = Shed Skin: Water (0.0)
+|   Ability2 = Sheer Force: Water (0.0)
+|   Ability2 = Shell Armor: Water (0.0)
+|   Ability2 = Simple: Water (0.0)
+|   Ability2 = Skill Link: Water (0.0)
+|   Ability2 = Sniper: Water (0.0)
+|   Ability2 = Snow Cloak: Water (0.0)
+|   Ability2 = Solar Power: Water (0.0)
+|   Ability2 = Solid Rock: Water (0.0)
+|   Ability2 = Stall: Water (0.0)
+|   Ability2 = Static: Water (0.0)
+|   Ability2 = Steadfast: Water (0.0)
+|   Ability2 = Sticky Hold: Water (0.0)
+|   Ability2 = Storm Drain: Water (0.0)
+|   Ability2 = Sturdy: Water (0.0)
+|   Ability2 = Super Luck: Water (0.0)
+|   Ability2 = Swarm: Water (0.0)
+|   Ability2 = Swift Swim: Water (0.0)
+|   Ability2 = Synchronize: Water (0.0)
+|   Ability2 = Tangled Feet: Water (0.0)
+|   Ability2 = Technician: Water (0.0)
+|   Ability2 = Thick Fat: Water (0.0)
+|   Ability2 = Tinted Lens: Water (0.0)
+|   Ability2 = Trace: Water (0.0)
+|   Ability2 = Unaware: Water (0.0)
+|   Ability2 = Unburden: Water (0.0)
+|   Ability2 = Unnerve: Water (0.0)
+|   Ability2 = Water Absorb: Water (0.0)
+|   Ability2 = Water Veil: Water (0.0)
+|   Ability2 = Weak Armor: Water (0.0)
+Ability1 = Torrent: Water (16.59/1.48)
+Ability1 = Trace: Normal (2.21/0.2)
+Ability1 = Truant: Normal (2.21/0.2)
+Ability1 = Turboblaze: Dragon (1.11/0.1)
+Ability1 = Unaware: Psychic (2.21/0.21)
+Ability1 = Victory Star: Psychic (1.11/0.1)
+Ability1 = Vital Spirit
+|   CatchRate <= 90: Fighting (2.53/1.51)
+|   CatchRate > 90: Normal (3.0/1.0)
+Ability1 = Volt Absorb: Water (3.32/1.3)
+Ability1 = Water Absorb: Water (9.96/1.89)
+Ability1 = Water Veil: Water (2.21/0.2)
+Ability1 = White Smoke: Fire (1.11/0.1)
+Ability1 = Wonder Guard: Bug (1.11/0.1)
+Ability1 = Wonder Skin: Psychic (1.11/0.1)
+
+Number of Leaves  : 	524
+
+Size of the tree : 	576
+
+
+Time taken to build model: 0.03 seconds
+
+=== Predictions on test data ===
+
+inst#,    actual, predicted, error, probability distribution
+     1    9:Fairy   5:Normal      +   0.006  0.009  0.005  0.003 *0.711  0.003  0.005  0      0.214  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+     2    9:Fairy    3:Water      +   0.066  0.069 *0.128  0.1    0.109  0.037  0.052  0.024  0.04   0.023  0.077  0.038  0.052  0.043  0.044  0.046  0.04   0.012
+     3 7:Electric 7:Electric          0.006  0.009  0.005  0.003  0.006  0.003 *0.828  0.082  0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+     4 7:Electric    9:Fairy      +   0      0      0      0      0.108  0      0.002  0     *0.542  0.217  0.002  0.006  0.108  0.003  0.006  0.002  0.002  0.003
+     5 7:Electric 7:Electric          0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0    
+     6 7:Electric   5:Normal      +   0.009  0.013  0.007  0.004 *0.657  0.004  0.223  0      0.018  0.004  0.013  0.009  0.004  0.004  0.009  0.007  0.009  0.004
+     7   8:Ground  15:Dragon      +   0      0      0      0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0    
+     8   8:Ground    9:Fairy      +   0      0      0      0      0      0      0      0     *0.5    0.5    0      0      0      0      0      0      0      0    
+     9   8:Ground  15:Dragon      +   0.4    0      0      0      0      0      0      0      0      0      0      0      0      0     *0.6    0      0      0    
+    10   5:Normal    3:Water      +   0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    11   5:Normal   5:Normal          0.006  0.009  0.005  0.003 *0.912  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    12   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    13   5:Normal   5:Normal          0      0      0      0     *0.972  0      0.002  0      0      0      0.002  0.006  0.003  0.003  0.006  0.002  0.002  0.003
+    14   5:Normal 10:Fightin      +   0      0      0      0      0      0      0.031  0      0     *0.946  0.002  0.006  0      0.003  0.006  0.002  0.002  0.003
+    15   5:Normal   5:Normal          0.003  0.006  0      0     *0.945  0.006  0.002  0      0      0      0.01   0.006  0      0.003  0.006  0.002  0.01   0.003
+    16   5:Normal   5:Normal          0.006  0.009  0.005  0.003 *0.711  0.003  0.005  0      0.214  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    17   5:Normal    1:Grass      +  *0.955  0      0      0      0.045  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    18   5:Normal    3:Water      +   0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    19    11:Rock    11:Rock          0.028  0.042  0.021  0.014  0.028  0.156  0.021  0      0.056  0.014 *0.185  0.028  0.014  0.156  0.028  0.021  0.171  0.014
+    20    11:Rock    11:Rock          0.014  0.021  0.011  0.007  0.014  0.007  0.011  0      0.029  0.007 *0.804  0.014  0.007  0.007  0.014  0.011  0.014  0.007
+    21    11:Rock    11:Rock          0.014  0.021  0.011  0.007  0.014  0.007  0.011  0      0.029  0.007 *0.804  0.014  0.007  0.007  0.014  0.011  0.014  0.007
+    22    11:Rock    3:Water      +   0.063  0.06  *0.165  0.099  0.088  0.029  0.052  0.024  0.04   0.02   0.083  0.034  0.05   0.04   0.043  0.058  0.04   0.012
+    23   17:Steel   17:Steel          0.006  0.009  0.005  0.003  0.006  0.003  0.307  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005 *0.61   0.003
+    24   17:Steel   17:Steel          0.008  0.013  0.006  0.004  0.008  0.004  0.006  0      0.017  0.004  0.187  0.008  0.004  0.179  0.008  0.006 *0.532  0.004
+    25    3:Water    3:Water          0.006  0.009 *0.736  0.038  0.006  0.003  0.005  0      0.012  0.003  0.149  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    26    3:Water  15:Dragon      +   0.006  0.009  0.457  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003 *0.459  0.005  0.006  0.003
+    27    3:Water    3:Water          0.006  0.009 *0.91   0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    28    3:Water    3:Water          0.006  0.009 *0.91   0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    29    3:Water   5:Normal      +   0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    30    3:Water    3:Water          0.006  0.009 *0.91   0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    31    3:Water    3:Water          0.06   0.06  *0.168  0.099  0.088  0.029  0.052  0.024  0.04   0.02   0.086  0.035  0.05   0.04   0.043  0.058  0.036  0.012
+    32    3:Water    3:Water          0      0     *0.947  0      0      0      0.002  0      0      0      0.011  0.006  0      0.003  0.006  0.02   0.002  0.003
+    33    3:Water    3:Water          0.119  0.009 *0.797  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    34    3:Water    3:Water          0.006  0.009 *0.91   0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    35    3:Water    3:Water          0.06   0.06  *0.168  0.099  0.088  0.029  0.052  0.024  0.04   0.02   0.086  0.035  0.05   0.04   0.043  0.058  0.036  0.012
+    36     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    37     2:Fire    3:Water      +   0.06   0.109 *0.129  0.099  0.098  0.029  0.052  0.024  0.04   0.02   0.086  0.035  0.05   0.04   0.043  0.038  0.036  0.012
+    38     2:Fire     2:Fire          0.006 *0.915  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    39     2:Fire     2:Fire          0.006 *0.915  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    40 10:Fightin 10:Fightin          0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0    
+    41 10:Fightin    3:Water      +   0.128  0.06  *0.129  0.099  0.088  0.029  0.052  0.024  0.04   0.02   0.076  0.035  0.05   0.04   0.043  0.038  0.036  0.012
+    42 10:Fightin   5:Normal      +   0.006  0.009  0.005  0.003 *0.459  0.003  0.005  0      0.012  0.229  0.009  0.006  0.003  0.229  0.006  0.005  0.006  0.003
+    43  15:Dragon    3:Water      +   0.093  0.065 *0.146  0.087  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    44  15:Dragon   5:Normal      +   0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    45      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    46      4:Bug   5:Normal      +   0.006  0.116  0.058  0.003 *0.326  0.056  0.005  0.107  0.119  0.056  0.009  0.006  0.003  0.003  0.059  0.058  0.006  0.003
+    47      4:Bug      4:Bug          0.006  0.009  0.005 *0.909  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    48      4:Bug      4:Bug          0.06   0.06   0.129 *0.143  0.088  0.029  0.052  0.024  0.04   0.02   0.076  0.041  0.05   0.04   0.043  0.056  0.036  0.012
+    49      4:Bug      4:Bug          0.006  0.009  0.005 *0.909  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    50      4:Bug      4:Bug          0      0      0     *0.833  0      0.167  0      0      0      0      0      0      0      0      0      0      0      0    
+    51      4:Bug      4:Bug          0.006  0.009  0.005 *0.909  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    52    1:Grass    1:Grass         *0.912  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    53    1:Grass    1:Grass         *0.955  0      0      0      0.045  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    54    1:Grass    1:Grass         *0.55   0.009  0.005  0.365  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    55    1:Grass    3:Water      +   0.061  0.064 *0.129  0.099  0.12   0.032  0.052  0.024  0.04   0.02   0.081  0.035  0.05   0.04   0.055  0.044  0.041  0.012
+    56    1:Grass    1:Grass         *0.955  0      0      0      0.045  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    57    1:Grass    1:Grass         *0.912  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    58    16:Dark   12:Ghost      +   0      0      0      0.007  0      0      0.002  0      0      0      0.002 *0.652  0      0.003  0.006  0.324  0.002  0.003
+    59    16:Dark 13:Psychic      +   0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006 *0.909  0.003  0.006  0.005  0.006  0.003
+    60    16:Dark    16:Dark          0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006 *0.91   0.006  0.003
+    61     14:Ice     14:Ice          0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003 *0.909  0.006  0.005  0.006  0.003
+    62     14:Ice     14:Ice          0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006  0.003 *0.909  0.006  0.005  0.006  0.003
+    63 13:Psychic 13:Psychic          0      0      0      0      0      0      0.021  0      0      0      0.002  0.006 *0.956  0.003  0.006  0.002  0.002  0.003
+    64 13:Psychic 10:Fightin      +   0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012 *0.909  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    65 13:Psychic 13:Psychic          0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006 *0.909  0.003  0.006  0.005  0.006  0.003
+    66 13:Psychic    3:Water      +   0.093  0.065 *0.146  0.087  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    67 13:Psychic 13:Psychic          0.006  0.009  0.005  0.003  0.006  0.003  0.005  0      0.012  0.003  0.009  0.006 *0.909  0.003  0.006  0.005  0.006  0.003
+    68   12:Ghost 13:Psychic      +   0      0      0      0      0      0      0      0      0      0      0      0     *0.75   0      0      0.25   0      0    
+    69   12:Ghost     2:Fire      +   0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    70   6:Poison      4:Bug      +   0.006  0.009  0.005 *0.456  0.006  0.456  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    71   6:Poison   6:Poison          0.006  0.009  0.005  0.003  0.006 *0.909  0.005  0      0.012  0.003  0.009  0.006  0.003  0.003  0.006  0.005  0.006  0.003
+    72   6:Poison    3:Water      +   0      0     *0.5    0      0      0.5    0      0      0      0      0      0      0      0      0      0      0      0    
+     1    9:Fairy    9:Fairy          0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0    
+     2    9:Fairy    3:Water      +   0.065  0.065 *0.135  0.097  0.084  0.02   0.061  0.015  0.085  0.028  0.064  0.03   0.075  0.044  0.029  0.047  0.045  0.011
+     3 7:Electric 7:Electric          0.006  0.011  0.008  0.005  0.006  0.003 *0.818  0.09   0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+     4 7:Electric 7:Electric          0.006  0.011  0.008  0.005  0.006  0.003 *0.818  0.09   0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+     5 7:Electric   12:Ghost      +   0.027  0      0      0      0      0.083  0      0.167  0      0      0     *0.395  0.245  0      0.083  0      0      0    
+     6 7:Electric   8:Ground      +   0.006  0.011  0.008  0.005  0.006  0.003  0.306 *0.603  0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+     7   8:Ground   8:Ground          0.006  0.011  0.008  0.005  0.006  0.003  0.005 *0.904  0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+     8   8:Ground   8:Ground          0.006  0.011  0.008  0.005  0.006  0.003  0.005 *0.904  0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+     9   8:Ground   8:Ground          0.006  0.011  0.008  0.005  0.006  0.003  0.306 *0.603  0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    10   5:Normal 10:Fightin      +   0.006  0.011  0.008  0.005  0.187  0.003  0.005  0      0.012 *0.634  0.1    0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    11   5:Normal   5:Normal          0.006  0.011  0.008  0.005 *0.91   0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    12   5:Normal    3:Water      +   0.091  0.065 *0.146  0.088  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    13   5:Normal   5:Normal          0.006  0.006  0      0     *0.944  0.006  0.002  0      0.002  0      0.008  0.006  0      0.002  0.005  0.002  0.01   0.003
+    14   5:Normal   5:Normal          0.006  0.011  0.008  0.005 *0.91   0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    15   5:Normal   5:Normal          0.006  0.011  0.008  0.005 *0.729  0.003  0.005  0.181  0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    16   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    17   5:Normal   5:Normal          0      0      0.167  0     *0.75   0      0      0      0      0      0      0      0      0      0      0      0.083  0    
+    18   5:Normal   5:Normal          0      0      0      0     *0.75   0      0      0      0      0      0      0      0      0      0.25   0      0      0    
+    19    11:Rock    3:Water      +   0.07   0.094 *0.135  0.097  0.11   0.025  0.041  0.029  0.036  0.028  0.069  0.03   0.052  0.044  0.042  0.045  0.042  0.011
+    20    11:Rock    11:Rock          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002 *0.913  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    21    11:Rock   8:Ground      +   0.006  0.011  0.008  0.005  0.006  0.003  0.005 *0.904  0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    22    11:Rock    3:Water      +   0.006  0.011 *0.46   0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.458  0.003
+    23   17:Steel   5:Normal      +   0.006  0.011  0.008  0.005 *0.91   0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    24   17:Steel   12:Ghost      +   0.027  0      0      0      0      0.083  0      0.167  0      0      0     *0.395  0.245  0      0.083  0      0      0    
+    25    3:Water    3:Water          0.006  0.011 *0.738  0.039  0.006  0.003  0.005  0      0.012  0.002  0.148  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    26    3:Water    3:Water          0.135  0.011 *0.783  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    27    3:Water    3:Water          0.006  0.011 *0.912  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    28    3:Water   5:Normal      +   0      0      0.167  0     *0.75   0      0      0      0      0      0      0      0      0      0      0      0.083  0    
+    29    3:Water   5:Normal      +   0.006  0.011  0.008  0.005 *0.91   0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    30    3:Water    3:Water          0.006  0.011 *0.912  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    31    3:Water    3:Water          0.006  0.011 *0.912  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    32    3:Water    3:Water          0.006  0.011 *0.912  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    33    3:Water   5:Normal      +   0      0      0.167  0     *0.75   0      0      0      0      0      0      0      0      0      0      0      0.083  0    
+    34    3:Water   6:Poison      +   0      0      0.143  0      0     *0.857  0      0      0      0      0      0      0      0      0      0      0      0    
+    35    3:Water    3:Water          0.135  0.011 *0.783  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    36     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    37     2:Fire   5:Normal      +   0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    38     2:Fire     2:Fire          0.006 *0.915  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    39     2:Fire     2:Fire          0     *0.967  0      0      0.005  0      0.002  0      0.002  0      0.006  0.006  0      0.002  0.005  0.002  0.002  0.003
+    40 10:Fightin    3:Water      +   0.065  0.065 *0.135  0.097  0.084  0.02   0.061  0.015  0.085  0.028  0.064  0.03   0.075  0.044  0.029  0.047  0.045  0.011
+    41 10:Fightin 10:Fightin          0.006  0.011  0.008  0.005  0.187  0.003  0.005  0      0.012 *0.634  0.1    0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    42 10:Fightin    3:Water      +   0.065  0.065 *0.135  0.097  0.084  0.02   0.061  0.015  0.085  0.028  0.064  0.03   0.075  0.044  0.029  0.047  0.045  0.011
+    43  15:Dragon    3:Water      +   0.091  0.065 *0.146  0.088  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    44  15:Dragon    3:Water      +   0.072  0.076 *0.142  0.098  0.096  0.028  0.049  0.022  0.037  0.031  0.068  0.042  0.061  0.049  0.037  0.045  0.036  0.011
+    45      4:Bug   6:Poison      +   0.006  0.011  0.008  0.005  0.006 *0.907  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    46      4:Bug      4:Bug          0.006  0.011  0.008 *0.909  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    47      4:Bug      4:Bug          0.042  0.074  0.053 *0.375  0.042  0.021  0.032  0      0.085  0.011  0.064  0.042  0.021  0.011  0.032  0.032  0.042  0.021
+    48      4:Bug    1:Grass      +  *0.91   0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    49      4:Bug      4:Bug          0.006  0.011  0.008 *0.909  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    50      4:Bug      4:Bug          0.006  0.011  0.008 *0.909  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    51    1:Grass    1:Grass         *0.91   0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    52    1:Grass    1:Grass         *0.91   0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    53    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    54    1:Grass    1:Grass         *0.308  0.011  0.008  0.005  0.006  0.003  0.306  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.304
+    55    1:Grass    3:Water      +   0.006  0.011 *0.46   0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.458  0.003
+    56    1:Grass    1:Grass         *0.156  0.065  0.135  0.097  0.072  0.02   0.041  0.015  0.036  0.061  0.064  0.03   0.052  0.044  0.029  0.037  0.034  0.011
+    57    1:Grass    1:Grass         *0.91   0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    58    16:Dark    3:Water      +   0.091  0.065 *0.146  0.088  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    59    16:Dark    16:Dark          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005 *0.909  0.006  0.003
+    60    16:Dark      4:Bug      +   0      0      0     *0.977  0      0      0.002  0      0.002  0      0.002  0.006  0      0.002  0.005  0.002  0.002  0.003
+    61     14:Ice     14:Ice          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006  0.003 *0.906  0.005  0.005  0.006  0.003
+    62     14:Ice    3:Water      +   0.072  0.076 *0.142  0.098  0.096  0.028  0.049  0.022  0.037  0.031  0.068  0.042  0.061  0.049  0.037  0.045  0.036  0.011
+    63 13:Psychic 13:Psychic          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006 *0.907  0.002  0.005  0.005  0.006  0.003
+    64 13:Psychic   5:Normal      +   0.009  0.016  0.011  0.007 *0.656  0.004  0.007  0      0.018  0.002  0.013  0.009  0.22   0.002  0.007  0.007  0.009  0.004
+    65 13:Psychic 13:Psychic          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006 *0.907  0.002  0.005  0.005  0.006  0.003
+    66 13:Psychic 13:Psychic          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006 *0.907  0.002  0.005  0.005  0.006  0.003
+    67 13:Psychic 13:Psychic          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009  0.006 *0.907  0.002  0.005  0.005  0.006  0.003
+    68   12:Ghost   12:Ghost          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.002  0.009 *0.91   0.003  0.002  0.005  0.005  0.006  0.003
+    69   12:Ghost   12:Ghost          0.014  0.024  0.017  0.01   0.014  0.007  0.01   0      0.027  0.003  0.02  *0.804  0.007  0.003  0.01   0.01   0.014  0.007
+    70   6:Poison   6:Poison          0.006  0.011  0.008  0.005  0.006 *0.907  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    71   6:Poison   6:Poison          0.006  0.011  0.008  0.005  0.006 *0.907  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+    72   6:Poison   6:Poison          0.006  0.011  0.008  0.005  0.006 *0.907  0.005  0      0.012  0.002  0.009  0.006  0.003  0.002  0.005  0.005  0.006  0.003
+     1    9:Fairy    3:Water      +   0.068  0.058 *0.14   0.095  0.078  0.026  0.059  0.015  0.094  0.03   0.065  0.029  0.049  0.045  0.048  0.044  0.043  0.012
+     2    9:Fairy   5:Normal      +   0.008  0.009  0.008  0.005 *0.706  0.003  0.005  0      0.212  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+     3 7:Electric   17:Steel      +   0.008  0.009  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005 *0.906  0.003
+     4 7:Electric 7:Electric          0      0      0      0      0      0     *0.5    0      0      0      0      0      0      0.5    0      0      0      0    
+     5 7:Electric    3:Water      +   0.091  0.065 *0.146  0.088  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+     6 7:Electric 7:Electric          0.008  0.009  0.008  0.005  0.006  0.003 *0.822  0.082  0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+     7   8:Ground    11:Rock      +   0.008  0.009  0.008  0.286  0.006  0.003  0.005  0      0.012  0.005 *0.517  0.005  0.002  0.003  0.006  0.005  0.119  0.003
+     8   8:Ground  15:Dragon      +   0      0      0      0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0    
+     9   8:Ground   12:Ghost      +   0      0      0      0      0      0      0      0      0      0      0     *0.667  0.333  0      0      0      0      0    
+    10   5:Normal     2:Fire      +   0     *0.5    0      0      0      0      0      0      0      0      0      0      0      0      0.25   0.25   0      0    
+    11   5:Normal    3:Water      +   0.008  0.009 *0.457  0.454  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    12   5:Normal   5:Normal          0.008  0.009  0.008  0.005 *0.706  0.003  0.005  0      0.212  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    13   5:Normal   5:Normal          0.006  0.003  0      0     *0.94   0.006  0.002  0      0.002  0      0.011  0.005  0      0.003  0.006  0.002  0.011  0.003
+    14   5:Normal   5:Normal          0.008  0.009  0.008  0.005 *0.726  0.003  0.005  0.18   0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    15   5:Normal   5:Normal          0      0      0      0     *0.75   0      0      0      0      0      0      0      0      0      0.25   0      0      0    
+    16   5:Normal    3:Water      +   0.008  0.009 *0.907  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    17   5:Normal    16:Dark      +   0.017  0.02   0.017  0.01   0.013  0.007  0.01   0      0.027  0.01   0.024  0.01   0.003  0.007  0.013 *0.792  0.013  0.007
+    18   5:Normal   5:Normal          0.006  0.003  0      0     *0.94   0.006  0.002  0      0.002  0      0.011  0.005  0      0.003  0.006  0.002  0.011  0.003
+    19    11:Rock    11:Rock          0.008  0.009  0.457  0.005  0.006  0.003  0.005  0      0.012  0.005 *0.461  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    20    11:Rock   6:Poison      +   0.008  0.009  0.008  0.005  0.006 *0.603  0.005  0      0.012  0.005  0.311  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    21    11:Rock    3:Water      +   0.008  0.009 *0.751  0.044  0.006  0.003  0.005  0      0.012  0.005  0.128  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    22    11:Rock    11:Rock          0      0      0      0      0      0      0      0      0      0     *0.8    0      0      0      0.2    0      0      0    
+    23   17:Steel      4:Bug      +   0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    24   17:Steel    11:Rock      +   0.008  0.009  0.008  0.286  0.006  0.003  0.005  0      0.012  0.005 *0.517  0.005  0.002  0.003  0.006  0.005  0.119  0.003
+    25    3:Water    3:Water          0.008  0.009 *0.751  0.044  0.006  0.003  0.005  0      0.012  0.005  0.128  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    26    3:Water    3:Water          0.008  0.009 *0.751  0.044  0.006  0.003  0.005  0      0.012  0.005  0.128  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    27    3:Water 7:Electric      +   0      0      0      0      0      0     *0.5    0      0      0      0      0      0      0.5    0      0      0      0    
+    28    3:Water    3:Water          0.008  0.009 *0.751  0.044  0.006  0.003  0.005  0      0.012  0.005  0.128  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    29    3:Water    3:Water          0.008  0.009 *0.907  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    30    3:Water    3:Water          0.008  0.009 *0.457  0.454  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    31    3:Water   6:Poison      +   0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0    
+    32    3:Water    3:Water          0.008  0.009 *0.907  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    33    3:Water    3:Water          0.008  0.009 *0.907  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    34    3:Water    3:Water          0.008  0.109 *0.407  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.403  0.006  0.005  0.006  0.003
+    35    3:Water    3:Water          0.008  0.009 *0.907  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    36     2:Fire     2:Fire          0     *0.967  0      0      0.004  0      0.002  0      0.002  0      0.006  0.005  0      0.003  0.006  0.002  0.002  0.003
+    37     2:Fire     2:Fire          0.008 *0.909  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    38     2:Fire     2:Fire          0.008 *0.909  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    39     2:Fire    3:Water      +   0.07   0.059 *0.129  0.095  0.11   0.028  0.059  0.029  0.039  0.03   0.068  0.029  0.049  0.056  0.048  0.044  0.046  0.012
+    40 10:Fightin    11:Rock      +   0.008  0.009  0.008  0.286  0.006  0.003  0.005  0      0.012  0.005 *0.517  0.005  0.002  0.003  0.006  0.005  0.119  0.003
+    41 10:Fightin 10:Fightin          0.022  0.026  0.022  0.013  0.017  0.009  0.013  0      0.035 *0.372  0.03   0.013  0.004  0.009  0.017  0.372  0.017  0.009
+    42 10:Fightin 10:Fightin          0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0    
+    43  15:Dragon 7:Electric      +   0.008  0.009  0.008  0.005  0.006  0.003 *0.679  0      0.012  0.005  0.011  0.005  0.002  0.003  0.231  0.005  0.006  0.003
+    44  15:Dragon 7:Electric      +   0.008  0.009  0.008  0.005  0.006  0.003 *0.679  0      0.012  0.005  0.011  0.005  0.002  0.003  0.231  0.005  0.006  0.003
+    45      4:Bug      4:Bug          0.008  0.009  0.008 *0.904  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    46      4:Bug    3:Water      +   0.091  0.065 *0.146  0.088  0.13   0.039  0.05   0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    47      4:Bug    3:Water      +   0.008  0.109 *0.407  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.403  0.006  0.005  0.006  0.003
+    48      4:Bug    3:Water      +   0.008  0.009 *0.607  0.304  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    49      4:Bug      4:Bug          0.008  0.009  0.008 *0.904  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    50      4:Bug    1:Grass      +  *0.727  0.009  0.008  0.185  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    51    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    52    1:Grass    1:Grass         *0.967  0      0      0      0      0      0.002  0      0.002  0.008  0.002  0.005  0      0.003  0.006  0.002  0.002  0.003
+    53    1:Grass    1:Grass         *0.907  0.009  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    54    1:Grass    1:Grass         *0.907  0.009  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    55    1:Grass    1:Grass         *0.627  0.017  0.014  0.008  0.011  0.006  0.008  0      0.023  0.008  0.02   0.008  0.207  0.006  0.011  0.008  0.011  0.006
+    56    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    57    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    58    16:Dark  15:Dragon      +   0.029  0.035  0.029  0.018  0.023  0.012  0.018  0      0.047  0.018  0.041  0.018  0.006  0.012 *0.643  0.018  0.023  0.012
+    59    16:Dark   5:Normal      +   0.008  0.009  0.008  0.005 *0.456  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.454  0.006  0.003
+    60    16:Dark   5:Normal      +   0.008  0.009  0.008  0.005 *0.681  0.003  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.229  0.006  0.003
+    61     14:Ice   5:Normal      +   0      0      0      0     *0.5    0      0      0      0      0      0      0      0      0      0.5    0      0      0    
+    62     14:Ice     2:Fire      +   0     *0.697  0      0      0.139  0      0.002  0      0.002  0      0.141  0.005  0      0.003  0.006  0.002  0.002  0.003
+    63 13:Psychic    3:Water      +   0.073  0.063 *0.138  0.096  0.082  0.026  0.06   0.022  0.039  0.03   0.066  0.032  0.051  0.048  0.052  0.067  0.043  0.012
+    64 13:Psychic 13:Psychic          0.008  0.009  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005 *0.801  0.003  0.006  0.105  0.006  0.003
+    65 13:Psychic   12:Ghost      +   0      0      0      0      0      0      0.25   0      0      0      0     *0.75   0      0      0      0      0      0    
+    66 13:Psychic 13:Psychic          0.008  0.009  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.005 *0.801  0.003  0.006  0.105  0.006  0.003
+    67 13:Psychic 13:Psychic          0      0      0      0      0      0      0.024  0      0.002  0      0.002  0.005 *0.952  0.003  0.006  0.002  0.002  0.003
+    68   12:Ghost   12:Ghost          0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0    
+    69   12:Ghost    3:Water      +   0.073  0.066 *0.139  0.096  0.094  0.026  0.061  0.022  0.039  0.031  0.066  0.035  0.051  0.048  0.052  0.046  0.043  0.012
+    70   6:Poison   6:Poison          0      0      0      0      0     *0.667  0      0      0      0      0      0      0      0.333  0      0      0      0    
+    71   6:Poison   6:Poison          0.008  0.009  0.008  0.005  0.006 *0.902  0.005  0      0.012  0.005  0.011  0.005  0.002  0.003  0.006  0.005  0.006  0.003
+    72   6:Poison   6:Poison          0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0    
+     1    9:Fairy    3:Water      +   0.072  0.055 *0.125  0.091  0.085  0.026  0.06   0.012  0.069  0.056  0.084  0.032  0.059  0.043  0.03   0.038  0.051  0.011
+     2    9:Fairy    9:Fairy          0.072  0.055  0.125  0.091  0.076  0.026  0.042  0.012 *0.126  0.037  0.084  0.032  0.049  0.043  0.03   0.038  0.051  0.011
+     3 7:Electric 7:Electric          0.008  0.008  0.008  0.005  0.006  0.003 *0.906  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+     4 7:Electric    3:Water      +   0.079  0.063 *0.133  0.092  0.098  0.026  0.051  0.019  0.031  0.038  0.086  0.038  0.052  0.046  0.039  0.047  0.051  0.011
+     5 7:Electric 7:Electric          0.008  0.008  0.008  0.005  0.006  0.003 *0.824  0.082  0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+     6   8:Ground    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+     7   8:Ground   8:Ground          0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+     8   8:Ground    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+     9   5:Normal   5:Normal          0      0      0      0     *0.75   0      0      0      0      0      0      0      0      0      0.25   0      0      0    
+    10   5:Normal    1:Grass      +  *0.955  0      0      0      0.045  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    11   5:Normal   5:Normal          0.008  0.008  0.008  0.005 *0.307  0.003  0.003  0      0.011  0.305  0.011  0.006  0.003  0.304  0.005  0.005  0.006  0.003
+    12   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    13   5:Normal   5:Normal          0.006  0.006  0      0     *0.941  0.006  0      0      0.002  0      0.01   0.006  0      0.003  0.005  0.002  0.01   0.003
+    14   5:Normal   5:Normal          0.019  0.019  0.019  0.012 *0.771  0.008  0.008  0      0.027  0.012  0.027  0.016  0.008  0.008  0.012  0.012  0.016  0.008
+    15   5:Normal   5:Normal          0      0      0      0     *0.667  0      0      0      0      0.333  0      0      0      0      0      0      0      0    
+    16   5:Normal    16:Dark      +   0.008  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005 *0.907  0.006  0.003
+    17   5:Normal 10:Fightin      +   0.009  0.009  0.009  0.006  0.008  0.004  0.004  0      0.013 *0.777  0.123  0.008  0.004  0.004  0.006  0.006  0.008  0.004
+    18   5:Normal   5:Normal          0      0      0      0     *0.667  0      0      0      0      0      0      0      0      0      0.333  0      0      0    
+    19    11:Rock    11:Rock          0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0    
+    20    11:Rock   17:Steel      +   0.011  0.011  0.011  0.007  0.009  0.004  0.004  0      0.015  0.007  0.015  0.009  0.004  0.22   0.007  0.007 *0.654  0.004
+    21    11:Rock    3:Water      +   0.008  0.008 *0.793  0.044  0.006  0.003  0.003  0      0.011  0.005  0.089  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    22    11:Rock    3:Water      +   0.008  0.008 *0.793  0.044  0.006  0.003  0.003  0      0.011  0.005  0.089  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    23   17:Steel   17:Steel          0.011  0.011  0.011  0.007  0.009  0.004  0.004  0      0.015  0.007  0.015  0.009  0.004  0.22   0.007  0.007 *0.654  0.004
+    24   17:Steel   12:Ghost      +   0      0      0.2    0.2    0      0      0      0      0      0      0     *0.6    0      0      0      0      0      0    
+    25    3:Water    3:Water          0.008  0.008 *0.91   0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    26    3:Water      4:Bug      +   0.008  0.008  0.309 *0.606  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    27    3:Water    3:Water          0.008  0.008 *0.91   0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    28    3:Water    11:Rock      +   0.309  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005 *0.312  0.006  0.003  0.003  0.005  0.005  0.307  0.003
+    29    3:Water     14:Ice      +   0      0.333  0      0      0      0      0      0      0      0      0      0      0     *0.667  0      0      0      0    
+    30    3:Water    9:Fairy      +   0      0      0.25   0      0      0      0      0     *0.75   0      0      0      0      0      0      0      0      0    
+    31    3:Water    3:Water          0.008  0.008 *0.793  0.044  0.006  0.003  0.003  0      0.011  0.005  0.089  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    32    3:Water   5:Normal      +   0      0      0.214  0     *0.714  0      0      0      0      0      0      0      0      0      0      0.071  0      0    
+    33    3:Water    3:Water          0.008  0.008 *0.793  0.044  0.006  0.003  0.003  0      0.011  0.005  0.089  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    34    3:Water    3:Water          0.008  0.008 *0.91   0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    35     2:Fire    3:Water      +   0.072  0.117 *0.125  0.091  0.093  0.026  0.042  0.012  0.03   0.037  0.102  0.032  0.049  0.043  0.03   0.038  0.051  0.011
+    36     2:Fire    16:Dark      +   0.019  0.019  0.019  0.012  0.016  0.008  0.008  0      0.027  0.012  0.027  0.016  0.008  0.008  0.012 *0.767  0.016  0.008
+    37     2:Fire    3:Water      +   0.072  0.117 *0.125  0.091  0.093  0.026  0.042  0.012  0.03   0.037  0.102  0.032  0.049  0.043  0.03   0.038  0.051  0.011
+    38     2:Fire     2:Fire          0.008 *0.91   0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    39     2:Fire     2:Fire          0     *0.967  0      0      0.005  0      0      0      0.002  0      0.006  0.006  0      0.003  0.005  0.002  0.002  0.003
+    40 10:Fightin   5:Normal      +   0.008  0.008  0.008  0.005 *0.307  0.003  0.003  0      0.011  0.305  0.011  0.006  0.003  0.304  0.005  0.005  0.006  0.003
+    41 10:Fightin   5:Normal      +   0      0      0.214  0     *0.714  0      0      0      0      0      0      0      0      0      0      0.071  0      0    
+    42 10:Fightin 10:Fightin          0.009  0.009  0.009  0.006  0.008  0.004  0.004  0      0.013 *0.777  0.123  0.008  0.004  0.004  0.006  0.006  0.008  0.004
+    43  15:Dragon 10:Fightin      +   0      0      0      0      0      0      0      0      0     *0.667  0      0      0      0      0      0.333  0      0    
+    44  15:Dragon    3:Water      +   0.079  0.063 *0.133  0.092  0.098  0.026  0.051  0.019  0.031  0.038  0.086  0.038  0.052  0.046  0.039  0.047  0.051  0.011
+    45      4:Bug      4:Bug          0.051  0.051  0.051 *0.383  0.041  0.021  0.021  0      0.072  0.031  0.072  0.041  0.021  0.021  0.031  0.031  0.041  0.021
+    46      4:Bug      4:Bug          0.008  0.008  0.008 *0.907  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    47      4:Bug      4:Bug          0.028  0.028  0.028 *0.666  0.022  0.011  0.011  0      0.039  0.017  0.039  0.022  0.011  0.011  0.017  0.017  0.022  0.011
+    48      4:Bug    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.034  0.056  0.033  0.063  0.033  0.034  0.039  0.031  0.005
+    49      4:Bug     2:Fire      +   0.008 *0.685  0.008  0.23   0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    50      4:Bug      4:Bug          0.008  0.008  0.008 *0.907  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    51    1:Grass    1:Grass         *0.775  0.019  0.019  0.012  0.016  0.008  0.008  0      0.027  0.012  0.027  0.016  0.008  0.008  0.012  0.012  0.016  0.008
+    52    1:Grass    1:Grass         *0.955  0      0      0      0.045  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    53    1:Grass    1:Grass         *0.309  0.008  0.008  0.005  0.006  0.003  0.304  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.304
+    54    1:Grass      4:Bug      +   0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    55    1:Grass    1:Grass         *0.775  0.019  0.019  0.012  0.016  0.008  0.008  0      0.027  0.012  0.027  0.016  0.008  0.008  0.012  0.012  0.016  0.008
+    56    1:Grass    1:Grass         *0.955  0      0      0      0.045  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    57    1:Grass    1:Grass         *0.91   0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    58    16:Dark     2:Fire      +   0     *0.667  0      0      0.333  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    59    16:Dark 13:Psychic      +   0      0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0    
+    60    16:Dark    16:Dark          0.008  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006  0.003  0.003  0.005 *0.907  0.006  0.003
+    61     14:Ice      4:Bug      +   0      0      0     *0.5    0      0      0      0      0      0      0      0      0      0.5    0      0      0      0    
+    62     14:Ice     14:Ice          0      0.333  0      0      0      0      0      0      0      0      0      0      0     *0.667  0      0      0      0    
+    63 13:Psychic 13:Psychic          0.008  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006 *0.805  0.003  0.005  0.105  0.006  0.003
+    64 13:Psychic 13:Psychic          0.008  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006 *0.805  0.003  0.005  0.105  0.006  0.003
+    65 13:Psychic 13:Psychic          0.008  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011  0.006 *0.906  0.003  0.005  0.005  0.006  0.003
+    66 13:Psychic    1:Grass      +  *0.775  0.019  0.019  0.012  0.016  0.008  0.008  0      0.027  0.012  0.027  0.016  0.008  0.008  0.012  0.012  0.016  0.008
+    67 13:Psychic 13:Psychic          0      0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0    
+    68   12:Ghost   12:Ghost          0.008  0.008  0.008  0.005  0.006  0.003  0.003  0      0.011  0.005  0.011 *0.909  0.003  0.003  0.005  0.005  0.006  0.003
+    69   12:Ghost   12:Ghost          0      0      0.2    0.2    0      0      0      0      0      0      0     *0.6    0      0      0      0      0      0    
+    70   6:Poison    11:Rock      +   0.036  0.036  0.036  0.021  0.028  0.014  0.014  0      0.05   0.021 *0.326  0.028  0.014  0.152  0.021  0.021  0.167  0.014
+    71   6:Poison    11:Rock      +   0.008  0.008  0.008  0.005  0.006  0.304  0.003  0      0.011  0.005 *0.612  0.006  0.003  0.003  0.005  0.005  0.006  0.003
+    72   6:Poison 10:Fightin      +   0.008  0.008  0.008  0.005  0.119  0.229  0.003  0      0.011 *0.23   0.011  0.006  0.003  0.229  0.005  0.117  0.006  0.003
+     1    9:Fairy    3:Water      +   0.064  0.057 *0.133  0.093  0.11   0.025  0.07   0.027  0.076  0.062  0.054  0.027  0.057  0.026  0.028  0.051  0.03   0.009
+     2    9:Fairy   5:Normal      +   0.008  0.014  0.01   0.006 *0.886  0.004  0.006  0      0.015  0.006  0.014  0.008  0.002  0.002  0.008  0.004  0.006  0.004
+     3 7:Electric   8:Ground      +   0.006  0.011  0.008  0.005  0.006  0.003  0.23  *0.677  0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+     4 7:Electric 7:Electric          0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0    
+     5 7:Electric   8:Ground      +   0.033  0.058  0.041  0.025  0.033  0.016  0.025 *0.481  0.066  0.025  0.058  0.033  0.008  0.008  0.033  0.016  0.025  0.016
+     6   8:Ground    11:Rock      +   0.006  0.011  0.008  0.005  0.006  0.003  0.005  0.451  0.012  0.005 *0.462  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+     7   8:Ground    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.033  0.033  0.039  0.031  0.005
+     8   8:Ground    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.033  0.033  0.039  0.031  0.005
+     9   5:Normal   5:Normal          0      0      0      0     *0.667  0      0      0      0      0.333  0      0      0      0      0      0      0      0    
+    10   5:Normal    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.033  0.033  0.039  0.031  0.005
+    11   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    12   5:Normal    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.033  0.033  0.039  0.031  0.005
+    13   5:Normal   5:Normal          0.006  0.011  0.008  0.005 *0.909  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    14   5:Normal   5:Normal          0.006  0.011  0.008  0.005 *0.909  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    15   5:Normal   5:Normal          0      0      0.286  0     *0.643  0      0      0      0      0      0      0      0      0      0      0      0.071  0    
+    16   5:Normal    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.033  0.033  0.039  0.031  0.005
+    17   5:Normal   5:Normal          0.006  0.011  0.008  0.005 *0.745  0.003  0.087  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.085  0.005  0.003
+    18   5:Normal   5:Normal          0.008  0.014  0.01   0.006 *0.886  0.004  0.006  0      0.015  0.006  0.014  0.008  0.002  0.002  0.008  0.004  0.006  0.004
+    19    11:Rock 10:Fightin      +   0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0    
+    20    11:Rock 10:Fightin      +   0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0    
+    21    11:Rock    11:Rock          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005 *0.913  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    22    11:Rock   5:Normal      +   0      0      0      0     *0.667  0      0      0      0      0.333  0      0      0      0      0      0      0      0    
+    23   17:Steel   17:Steel          0.006  0.011  0.008  0.005  0.006  0.003  0.305  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003 *0.606  0.003
+    24   17:Steel    3:Water      +   0.072  0.088 *0.133  0.093  0.117  0.033  0.034  0.07   0.027  0.038  0.066  0.027  0.048  0.026  0.041  0.049  0.028  0.009
+    25    3:Water    3:Water          0.006  0.011 *0.91   0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    26    3:Water   5:Normal      +   0.006  0.011  0.008  0.005 *0.909  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    27    3:Water    3:Water          0.006  0.011 *0.91   0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    28    3:Water   17:Steel      +   0.006  0.011  0.137  0.005  0.006  0.003  0.005  0      0.012  0.005  0.14   0.006  0.002  0.13   0.006  0.003 *0.52   0.003
+    29    3:Water    3:Water          0.006  0.011 *0.91   0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    30    3:Water    3:Water          0.006  0.011 *0.91   0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    31    3:Water    3:Water          0.006  0.011 *0.73   0.041  0.006  0.003  0.005  0      0.012  0.005  0.155  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    32    3:Water    3:Water          0.006  0.011 *0.73   0.041  0.006  0.003  0.005  0      0.012  0.005  0.155  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    33    3:Water    3:Water          0.006  0.011 *0.91   0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    34    3:Water    3:Water          0.119  0.011 *0.797  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    35     2:Fire     2:Fire          0.006 *0.913  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    36     2:Fire   5:Normal      +   0.006  0.011  0.008  0.005 *0.745  0.003  0.087  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.085  0.005  0.003
+    37     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    38     2:Fire     2:Fire          0.006 *0.913  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    39     2:Fire   5:Normal      +   0.006  0.011  0.008  0.005 *0.745  0.003  0.087  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.085  0.005  0.003
+    40 10:Fightin   5:Normal      +   0.006  0.011  0.008  0.005 *0.683  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.229  0.005  0.003
+    41 10:Fightin   5:Normal      +   0      0      0      0     *0.667  0      0      0      0      0.333  0      0      0      0      0      0      0      0    
+    42  15:Dragon    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.039  0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.033  0.033  0.039  0.031  0.005
+    43  15:Dragon   8:Ground      +   0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+    44  15:Dragon 13:Psychic      +   0      0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0    
+    45      4:Bug      4:Bug          0.006  0.011  0.008 *0.907  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    46      4:Bug      4:Bug          0.006  0.011  0.008 *0.907  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    47      4:Bug    3:Water      +   0.006  0.011 *0.609  0.005  0.307  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    48      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    49      4:Bug      4:Bug          0.006  0.011  0.008 *0.907  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    50      4:Bug      4:Bug          0.006  0.011  0.008 *0.907  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.003  0.005  0.003
+    51    1:Grass    1:Grass         *0.158  0.057  0.133  0.093  0.098  0.025  0.034  0.027  0.027  0.064  0.054  0.027  0.048  0.026  0.028  0.041  0.051  0.009
+    52    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    53    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    54    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    55    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    56    1:Grass    1:Grass         *0.801  0.024  0.017  0.01   0.014  0.007  0.01   0      0.027  0.01   0.024  0.014  0.003  0.003  0.014  0.007  0.01   0.007
+    57    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    58    16:Dark    3:Water      +   0.077  0.066 *0.137  0.093  0.108  0.04   0.043  0.036  0.029  0.042  0.059  0.038  0.062  0.036  0.037  0.056  0.03   0.009
+    59    16:Dark   5:Normal      +   0.006  0.011  0.008  0.005 *0.683  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.002  0.006  0.229  0.005  0.003
+    60    16:Dark   12:Ghost      +   0      0      0      0.012  0      0      0.002  0      0.002  0      0.002 *0.65   0      0.002  0.006  0.322  0.002  0.003
+    61     14:Ice    3:Water      +   0.074  0.067 *0.141  0.093  0.108  0.04   0.052  0.036  0.029  0.042  0.062  0.038  0.062  0.031  0.037  0.051  0.027  0.009
+    62     14:Ice    3:Water      +   0.006  0.101 *0.369  0.095  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006  0.002  0.363  0.006  0.003  0.005  0.003
+    63 13:Psychic   12:Ghost      +   0      0      0.488  0      0      0      0.002  0      0.002  0      0.002 *0.495  0      0.002  0.006  0      0.002  0.003
+    64 13:Psychic 13:Psychic          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006 *0.804  0.002  0.006  0.103  0.005  0.003
+    65 13:Psychic 13:Psychic          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011  0.006 *0.804  0.002  0.006  0.103  0.005  0.003
+    66 13:Psychic    3:Water      +   0.064  0.057 *0.133  0.093  0.11   0.025  0.07   0.027  0.076  0.062  0.054  0.027  0.057  0.026  0.028  0.051  0.03   0.009
+    67   12:Ghost   12:Ghost          0.006  0.011  0.008  0.005  0.006  0.003  0.005  0      0.012  0.005  0.011 *0.909  0.002  0.002  0.006  0.003  0.005  0.003
+    68   12:Ghost   6:Poison      +   0      0      0      0      0     *0.944  0.004  0      0.004  0      0.004  0.015  0      0.004  0.015  0      0.004  0.007
+    69   12:Ghost 13:Psychic      +   0      0      0      0      0      0      0.002  0      0.002  0      0.002  0.006 *0.977  0.002  0.006  0      0.002  0.003
+    70   6:Poison   6:Poison          0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0    
+    71   6:Poison   6:Poison          0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0    
+    72   6:Poison      4:Bug      +   0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+     1    9:Fairy    3:Water      +   0      0     *0.667  0      0      0      0      0      0.333  0      0      0      0      0      0      0      0      0    
+     2    9:Fairy    3:Water      +   0      0     *0.667  0      0      0      0      0      0.333  0      0      0      0      0      0      0      0      0    
+     3 7:Electric    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+     4 7:Electric 7:Electric          0.008  0.009  0.008  0.003  0.005  0.002 *0.821  0.091  0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+     5 7:Electric 7:Electric          0.008  0.009  0.008  0.003  0.005  0.002 *0.821  0.091  0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+     6   8:Ground   8:Ground          0.021  0.021  0      0      0.01   0.01   0.002 *0.865  0.002  0      0.022  0.003  0      0.003  0.006  0.002  0.033  0.002
+     7   8:Ground   8:Ground          0.008  0.009  0.008  0.003  0.005  0.002  0.005 *0.907  0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+     8   8:Ground   12:Ghost      +   0      0      0      0.046  0      0      0.002  0      0.002  0      0.002 *0.469  0.466  0.003  0.006  0.002  0.002  0.002
+     9   5:Normal   5:Normal          0.006  0.006  0      0     *0.948  0.003  0.002  0      0.002  0      0.008  0.003  0      0.003  0.006  0.002  0.011  0.002
+    10   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    11   5:Normal   5:Normal          0.007  0.007  0      0     *0.81   0.003  0.002  0      0.002  0.134  0.008  0.003  0      0.003  0.006  0.002  0.012  0.002
+    12   5:Normal    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+    13   5:Normal   5:Normal          0.008  0.009  0.008  0.003 *0.912  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    14   5:Normal   5:Normal          0.071  0.086  0.127  0.095 *0.127  0.027  0.044  0.06   0.035  0.023  0.069  0.022  0.053  0.028  0.047  0.039  0.041  0.007
+    15   5:Normal   5:Normal          0      0      0      0     *0.975  0      0.002  0      0.002  0      0.002  0.003  0.003  0.003  0.006  0.002  0.002  0.002
+    16   5:Normal   5:Normal          0.012  0.015  0.012  0.005 *0.577  0.002  0.007  0      0.022  0.007  0.015  0.005  0.29   0.005  0.01   0.005  0.01   0.002
+    17   5:Normal     2:Fire      +   0     *0.652  0      0      0.163  0      0.002  0      0.002  0      0.165  0.003  0      0.003  0.006  0.002  0.002  0.002
+    18   5:Normal    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+    19    11:Rock    11:Rock          0.008  0.009  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005 *0.916  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    20    11:Rock   5:Normal      +   0.071  0.086  0.127  0.095 *0.127  0.027  0.044  0.06   0.035  0.023  0.069  0.022  0.053  0.028  0.047  0.039  0.041  0.007
+    21    11:Rock    11:Rock          0.008  0.009  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005 *0.916  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    22    11:Rock   8:Ground      +   0      0      0      0      0      0      0     *0.333  0      0      0.333  0      0      0      0      0      0.333  0    
+    23   17:Steel   8:Ground      +   0      0      0      0      0      0      0     *0.333  0      0      0.333  0      0      0      0      0      0.333  0    
+    24   17:Steel    11:Rock      +   0.31   0.009  0.31   0.003  0.005  0.002  0.005  0      0.014  0.005 *0.312  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    25    3:Water    3:Water          0.008  0.009 *0.915  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    26    3:Water    3:Water          0      0     *0.333  0      0.333  0      0      0      0      0      0      0      0.333  0      0      0      0      0    
+    27    3:Water    3:Water          0.008  0.009 *0.74   0.038  0.005  0.002  0.005  0      0.014  0.005  0.149  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    28    3:Water    3:Water          0.008  0.009 *0.915  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    29    3:Water    3:Water          0      0     *0.951  0      0      0      0.002  0      0.002  0      0.02   0.003  0      0.003  0.006  0.011  0.002  0.002
+    30    3:Water    3:Water          0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+    31    3:Water    3:Water          0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+    32    3:Water    3:Water          0      0     *0.75   0      0      0      0      0.25   0      0      0      0      0      0      0      0      0      0    
+    33    3:Water    3:Water          0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+    34    3:Water    3:Water          0.008  0.009 *0.915  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    35     2:Fire     2:Fire          0.008 *0.916  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    36     2:Fire     2:Fire          0.008 *0.916  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    37     2:Fire     2:Fire          0.008 *0.614  0.008  0.305  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    38     2:Fire     2:Fire          0.008 *0.916  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    39     2:Fire     2:Fire          0.064 *0.161  0.127  0.095  0.087  0.024  0.065  0.019  0.035  0.02   0.1    0.022  0.053  0.028  0.033  0.032  0.031  0.007
+    40 10:Fightin 10:Fightin          0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0    
+    41 10:Fightin 10:Fightin          0.008  0.009  0.008  0.003  0.005  0.002  0.005  0      0.014 *0.458  0.009  0.003  0.457  0.003  0.006  0.003  0.006  0.002
+    42  15:Dragon    11:Rock      +   0      0.084  0      0      0.021  0      0.427  0      0.002  0     *0.449  0.003  0      0.003  0.006  0.002  0.002  0.002
+    43  15:Dragon 13:Psychic      +   0      0      0      0      0      0      0.002  0      0.002  0      0.002  0.003 *0.978  0.003  0.006  0.002  0.002  0.002
+    44  15:Dragon  15:Dragon          0      0      0.028  0      0      0      0.002  0      0.002  0      0.013  0.003  0      0.003 *0.94   0.007  0.002  0.002
+    45      4:Bug     2:Fire      +   0.008 *0.614  0.008  0.305  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    46      4:Bug    3:Water      +   0.091  0.063 *0.147  0.088  0.128  0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.031  0.003
+    47      4:Bug      4:Bug          0.008  0.009  0.008 *0.91   0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    48      4:Bug      4:Bug          0.008  0.009  0.008 *0.91   0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    49      4:Bug      4:Bug          0.064  0.058  0.127 *0.149  0.093  0.024  0.044  0.019  0.035  0.02   0.062  0.077  0.076  0.028  0.033  0.055  0.031  0.007
+    50      4:Bug      4:Bug          0.008  0.009  0.008 *0.91   0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    51    1:Grass    1:Grass         *0.915  0.009  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    52    1:Grass   17:Steel      +   0.065  0      0      0      0      0      0.003  0      0.003  0.022  0.003  0.006  0      0.006  0.012  0.003 *0.876  0.003
+    53    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    54    1:Grass    1:Grass         *0.625  0.019  0.016  0.006  0.009  0.003  0.009  0      0.028  0.009  0.019  0.006  0.209  0.006  0.012  0.006  0.012  0.003
+    55    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    56    1:Grass    3:Water      +   0.008  0.009 *0.915  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    57    1:Grass      4:Bug      +   0.008  0.009  0.008 *0.91   0.005  0.002  0.005  0      0.014  0.005  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    58    16:Dark     2:Fire      +   0.017 *0.418  0.017  0.007  0.01   0.003  0.01   0      0.031  0.01   0.02   0.007  0.007  0.007  0.014  0.405  0.014  0.003
+    59    16:Dark    3:Water      +   0.064  0.058 *0.23   0.095  0.069  0.024  0.044  0.019  0.035  0.02   0.082  0.022  0.053  0.06   0.046  0.043  0.031  0.007
+    60     14:Ice   5:Normal      +   0.008  0.009  0.008  0.003 *0.458  0.002  0.005  0      0.014  0.458  0.009  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    61     14:Ice   5:Normal      +   0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    62     14:Ice    3:Water      +   0      0     *0.913  0      0      0      0.002  0      0.002  0      0.045  0.003  0      0.003  0.006  0.023  0.002  0.002
+    63 13:Psychic 13:Psychic          0.008  0.009  0.008  0.003  0.005  0.002  0.005  0      0.014  0.005  0.009  0.003 *0.91   0.003  0.006  0.003  0.006  0.002
+    64 13:Psychic   5:Normal      +   0.012  0.015  0.012  0.005 *0.577  0.002  0.007  0      0.022  0.007  0.015  0.005  0.29   0.005  0.01   0.005  0.01   0.002
+    65 13:Psychic    16:Dark      +   0      0      0      0      0.012  0      0.002  0      0.061  0.024  0.002  0.003  0.012  0.003  0.006 *0.437  0.437  0.002
+    66 13:Psychic     2:Fire      +   0     *0.932  0      0      0.023  0      0.002  0      0.002  0      0.024  0.003  0      0.003  0.006  0.002  0.002  0.002
+    67   12:Ghost   12:Ghost          0.02   0.023  0.02   0.008  0.012  0.004  0.012  0      0.035  0.012  0.023 *0.773  0.008  0.008  0.016  0.008  0.016  0.004
+    68   12:Ghost    3:Water      +   0.072  0.071 *0.14   0.095  0.104  0.037  0.055  0.025  0.037  0.025  0.067  0.037  0.066  0.039  0.039  0.044  0.04   0.007
+    69   12:Ghost    3:Water      +   0.072  0.071 *0.14   0.095  0.104  0.037  0.055  0.025  0.037  0.025  0.067  0.037  0.066  0.039  0.039  0.044  0.04   0.007
+    70   6:Poison    11:Rock      +   0.008  0.009  0.008  0.003  0.005  0.304  0.005  0      0.014  0.005 *0.614  0.003  0.003  0.003  0.006  0.003  0.006  0.002
+    71   6:Poison   5:Normal      +   0.071  0.086  0.127  0.095 *0.127  0.027  0.044  0.06   0.035  0.023  0.069  0.022  0.053  0.028  0.047  0.039  0.041  0.007
+    72  18:Flying    3:Water      +   0.072  0.071 *0.14   0.095  0.104  0.037  0.055  0.025  0.037  0.025  0.067  0.037  0.066  0.039  0.039  0.044  0.04   0.007
+     1    9:Fairy    3:Water      +   0.065  0.06  *0.148  0.108  0.074  0.027  0.078  0.015  0.044  0.046  0.065  0.025  0.068  0.043  0.033  0.061  0.033  0.007
+     2    9:Fairy    3:Water      +   0.065  0.06  *0.148  0.108  0.074  0.027  0.078  0.015  0.044  0.046  0.065  0.025  0.068  0.043  0.033  0.061  0.033  0.007
+     3 7:Electric  15:Dragon      +   0.006  0.009  0.008  0.005  0.005  0.003  0.231  0      0.011  0.005  0.009  0.006  0.003  0.003 *0.685  0.005  0.005  0.002
+     4 7:Electric 7:Electric          0.006  0.009  0.008  0.005  0.005  0.003 *0.829  0.082  0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+     5 7:Electric  15:Dragon      +   0.006  0.009  0.008  0.005  0.005  0.003  0.231  0      0.011  0.005  0.009  0.006  0.003  0.003 *0.685  0.005  0.005  0.002
+     6   8:Ground    3:Water      +   0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+     7   8:Ground   5:Normal      +   0      0      0      0     *0.8    0      0      0      0      0      0      0      0      0      0      0.2    0      0    
+     8   8:Ground   5:Normal      +   0      0      0      0     *0.8    0      0      0      0      0      0      0      0      0      0      0.2    0      0    
+     9   5:Normal    16:Dark      +   0      0      0      0      0.333  0      0      0      0      0      0      0      0      0      0     *0.667  0      0    
+    10   5:Normal    3:Water      +   0.069  0.085 *0.131  0.108  0.106  0.031  0.059  0.015  0.03   0.04   0.071  0.025  0.054  0.043  0.046  0.052  0.028  0.007
+    11   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    12   5:Normal   5:Normal          0.006  0.006  0      0     *0.944  0.006  0.002  0      0.002  0      0.01   0.006  0      0.003  0.005  0.002  0.008  0.002
+    13   5:Normal   5:Normal          0      0      0      0     *0.667  0      0      0      0      0.333  0      0      0      0      0      0      0      0    
+    14   5:Normal    3:Water      +   0.091  0.063 *0.147  0.088  0.13   0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.029  0.003
+    15   5:Normal   5:Normal          0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    16   5:Normal   5:Normal          0.006  0.009  0.008  0.005 *0.458  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.458  0.002
+    17   5:Normal      4:Bug      +   0      0      0     *0.977  0      0      0.002  0      0.002  0      0.002  0.006  0      0.003  0.005  0.002  0.002  0.002
+    18    11:Rock   6:Poison      +   0.006  0.009  0.008  0.005  0.005 *0.608  0.005  0      0.011  0.005  0.312  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    19    11:Rock    3:Water      +   0.069  0.106 *0.128  0.108  0.093  0.027  0.059  0.015  0.03   0.037  0.062  0.025  0.079  0.043  0.033  0.052  0.027  0.007
+    20    11:Rock    11:Rock          0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0    
+    21    11:Rock    11:Rock          0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0    
+    22   17:Steel   8:Ground      +   0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+    23   17:Steel    3:Water      +   0.069  0.085 *0.131  0.108  0.106  0.031  0.059  0.015  0.03   0.04   0.071  0.025  0.054  0.043  0.046  0.052  0.028  0.007
+    24   17:Steel   17:Steel          0.006  0.009  0.008  0.005  0.005  0.003  0.307  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005 *0.609  0.002
+    25    3:Water    11:Rock      +   0.006  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005 *0.916  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    26    3:Water    3:Water          0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    27    3:Water   12:Ghost      +   0      0      0      0      0      0      0.002  0      0.002  0      0.002 *0.495  0.488  0.003  0.005  0.002  0.002  0.002
+    28    3:Water    3:Water          0.006  0.009 *0.915  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    29    3:Water    3:Water          0.006  0.009 *0.733  0.041  0.005  0.003  0.005  0      0.011  0.005  0.154  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    30    3:Water    3:Water          0      0     *0.333  0      0.333  0      0      0      0      0      0      0      0.333  0      0      0      0      0    
+    31    3:Water    3:Water          0.006  0.009 *0.733  0.041  0.005  0.003  0.005  0      0.011  0.005  0.154  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    32    3:Water    3:Water          0.006  0.009 *0.915  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    33    3:Water   17:Steel      +   0.006  0.009  0.137  0.005  0.005  0.003  0.005  0      0.011  0.005  0.139  0.006  0.003  0.133  0.005  0.005 *0.523  0.002
+    34    3:Water    3:Water          0.006  0.009 *0.915  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    35     2:Fire   5:Normal      +   0      0      0      0     *0.8    0      0      0      0      0      0      0      0      0      0      0.2    0      0    
+    36     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    37     2:Fire    3:Water      +   0.065  0.106 *0.131  0.108  0.093  0.027  0.059  0.015  0.03   0.037  0.065  0.025  0.079  0.043  0.033  0.052  0.024  0.007
+    38     2:Fire 13:Psychic      +   0      0.099  0      0      0.025  0      0.002  0      0.002  0      0.002  0.006 *0.853  0.003  0.005  0.002  0.002  0.002
+    39     2:Fire     2:Fire          0.006 *0.916  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    40 10:Fightin   8:Ground      +   0      0      0      0      0      0      0     *0.5    0.5    0      0      0      0      0      0      0      0      0    
+    41 10:Fightin   5:Normal      +   0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    42  15:Dragon  15:Dragon          0.018  0.026  0.022  0.013  0.013  0.009  0.013  0      0.031  0.013  0.026  0.018  0.009  0.009 *0.749  0.013  0.013  0.004
+    43  15:Dragon    3:Water      +   0.072  0.07  *0.14   0.109  0.09   0.03   0.067  0.015  0.031  0.042  0.063  0.031  0.059  0.048  0.036  0.059  0.03   0.007
+    44  15:Dragon   6:Poison      +   0      0      0      0      0     *0.333  0      0      0      0      0.333  0      0      0      0.333  0      0      0    
+    45      4:Bug    3:Water      +   0.006  0.009 *0.612  0.307  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    46      4:Bug      4:Bug          0.006  0.009  0.008 *0.912  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    47      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    48      4:Bug   17:Steel      +   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0     *1      0    
+    49      4:Bug      4:Bug          0.006  0.009  0.008 *0.912  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    50      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    51    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    52    1:Grass    1:Grass         *0.913  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.005  0.005  0.002
+    53    1:Grass   8:Ground      +   0.2    0      0      0      0      0      0     *0.8    0      0      0      0      0      0      0      0      0      0    
+    54    1:Grass    3:Water      +   0.091  0.063 *0.147  0.088  0.13   0.04   0.051  0.042  0.023  0.036  0.056  0.031  0.065  0.031  0.033  0.04   0.029  0.003
+    55    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    56    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    57    1:Grass    1:Grass         *0.138  0.06   0.131  0.108  0.06   0.027  0.059  0.015  0.03   0.067  0.065  0.025  0.054  0.043  0.033  0.052  0.024  0.007
+    58    16:Dark   5:Normal      +   0.006  0.009  0.008  0.005 *0.685  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003  0.003  0.005  0.231  0.005  0.002
+    59    16:Dark   12:Ghost      +   0      0      0      0.028  0      0      0.002  0      0.002  0      0.002 *0.955  0      0.003  0.005  0.002  0.002  0.002
+    60     14:Ice     14:Ice          0.006  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006  0.003 *0.91   0.005  0.005  0.005  0.002
+    61     14:Ice    3:Water      +   0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    62     14:Ice    3:Water      +   0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    63 13:Psychic 13:Psychic          0.006  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006 *0.82   0.003  0.005  0.095  0.005  0.002
+    64 13:Psychic 13:Psychic          0.006  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006 *0.91   0.003  0.005  0.005  0.005  0.002
+    65 13:Psychic   12:Ghost      +   0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0    
+    66 13:Psychic 13:Psychic          0.006  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009  0.006 *0.91   0.003  0.005  0.005  0.005  0.002
+    67   12:Ghost   12:Ghost          0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0    
+    68   12:Ghost    16:Dark      +   0      0      0      0      0.333  0      0      0      0      0      0      0      0      0      0     *0.667  0      0    
+    69   12:Ghost   12:Ghost          0.006  0.009  0.008  0.005  0.005  0.003  0.005  0      0.011  0.005  0.009 *0.913  0.003  0.003  0.005  0.005  0.005  0.002
+    70   6:Poison   6:Poison          0      0      0      0      0     *0.651  0.002  0      0.002  0.326  0.002  0.006  0      0.003  0.005  0.002  0.002  0.002
+    71   6:Poison 13:Psychic      +   0.039  0.009  0.008  0.005  0.005  0.035  0.134  0.13   0.011  0.005  0.074  0.168 *0.197  0.035  0.069  0.037  0.037  0.002
+    72  18:Flying    3:Water      +   0.069  0.07  *0.143  0.109  0.09   0.03   0.067  0.015  0.031  0.042  0.066  0.031  0.059  0.048  0.036  0.059  0.027  0.007
+     1    9:Fairy    9:Fairy          0.055  0.054  0.129  0.102  0.081  0.016  0.038  0.017 *0.187  0.025  0.052  0.04   0.048  0.043  0.03   0.047  0.026  0.009
+     2 7:Electric    3:Water      +   0.064  0.079 *0.132  0.103  0.079  0.02   0.069  0.03   0.033  0.034  0.07   0.04   0.086  0.043  0.032  0.051  0.027  0.009
+     3 7:Electric 7:Electric          0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0    
+     4 7:Electric    3:Water      +   0.064  0.079 *0.132  0.103  0.079  0.02   0.069  0.03   0.033  0.034  0.07   0.04   0.086  0.043  0.032  0.051  0.027  0.009
+     5 7:Electric 7:Electric          0.006  0.009  0.005  0.005  0.005  0.002 *0.912  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+     6   8:Ground   8:Ground          0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+     7   8:Ground    11:Rock      +   0.006  0.009  0.005  0.005  0.005  0.002  0.002  0.182  0.012  0.005 *0.737  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+     8   8:Ground   8:Ground          0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+     9   5:Normal    3:Water      +   0.055  0.054 *0.129  0.102  0.066  0.016  0.089  0.017  0.088  0.047  0.052  0.04   0.069  0.043  0.03   0.057  0.036  0.009
+    10   5:Normal   5:Normal          0.006  0.009  0.005  0.005 *0.915  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    11   5:Normal   5:Normal          0      0      0      0     *0.973  0      0.002  0      0.002  0      0      0.006  0.003  0.003  0.006  0.002  0      0.003
+    12   5:Normal  15:Dragon      +   0      0      0.041  0      0      0      0.002  0      0.002  0      0.027  0.006  0      0.003 *0.888  0.029  0      0.003
+    13   5:Normal     2:Fire      +   0     *0.667  0      0      0      0      0      0      0      0      0      0      0      0      0      0.333  0      0    
+    14   5:Normal    3:Water      +   0.006  0.009 *0.915  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    15   5:Normal    3:Water      +   0.093  0.063 *0.147  0.088  0.13   0.039  0.05   0.042  0.025  0.036  0.056  0.033  0.065  0.031  0.033  0.039  0.029  0.003
+    16   5:Normal   5:Normal          0      0      0      0     *0.977  0      0.002  0      0.002  0      0      0.006  0      0.003  0.006  0.002  0      0.003
+    17   5:Normal   5:Normal          0.006  0.009  0.005  0.005 *0.915  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    18    11:Rock  15:Dragon      +   0      0.103  0      0      0.021  0      0.418  0      0.002  0      0.021  0.006  0      0.003 *0.423  0.002  0      0.003
+    19    11:Rock  15:Dragon      +   0      0      0      0      0      0.333  0      0      0      0      0      0      0      0     *0.667  0      0      0    
+    20    11:Rock    3:Water      +   0.006  0.009 *0.749  0.046  0.005  0.002  0.002  0      0.012  0.005  0.133  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    21    11:Rock    3:Water      +   0.071  0.066 *0.136  0.103  0.093  0.029  0.054  0.026  0.034  0.035  0.06   0.048  0.061  0.045  0.038  0.057  0.034  0.009
+    22   17:Steel    3:Water      +   0.071  0.066 *0.136  0.103  0.093  0.029  0.054  0.026  0.034  0.035  0.06   0.048  0.061  0.045  0.038  0.057  0.034  0.009
+    23   17:Steel   17:Steel          0.009  0.013  0.007  0.007  0.007  0.002  0.002  0      0.018  0.007  0.231  0.009  0.004  0.004  0.009  0.007 *0.66   0.004
+    24   17:Steel   5:Normal      +   0      0      0.286  0     *0.714  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    25    3:Water    3:Water          0.006  0.009 *0.832  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.086  0.006  0.005  0.005  0.003
+    26    3:Water    9:Fairy      +   0      0      0.25   0      0      0      0      0     *0.75   0      0      0      0      0      0      0      0      0    
+    27    3:Water    3:Water          0.006  0.009 *0.749  0.046  0.005  0.002  0.002  0      0.012  0.005  0.133  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    28    3:Water    3:Water          0.055  0.054 *0.173  0.102  0.082  0.016  0.066  0.017  0.032  0.025  0.065  0.04   0.048  0.058  0.057  0.074  0.026  0.009
+    29    3:Water    3:Water          0.006  0.009 *0.915  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    30    3:Water    3:Water          0.006  0.009 *0.749  0.046  0.005  0.002  0.002  0      0.012  0.005  0.133  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    31    3:Water    3:Water          0.006  0.009 *0.749  0.046  0.005  0.002  0.002  0      0.012  0.005  0.133  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    32    3:Water    3:Water          0.006  0.009 *0.749  0.046  0.005  0.002  0.002  0      0.012  0.005  0.133  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    33    3:Water    3:Water          0.055  0.054 *0.173  0.102  0.082  0.016  0.066  0.017  0.032  0.025  0.065  0.04   0.048  0.058  0.057  0.074  0.026  0.009
+    34    3:Water    3:Water          0      0     *0.75   0      0      0      0      0.25   0      0      0      0      0      0      0      0      0      0    
+    35     2:Fire    3:Water      +   0.093  0.063 *0.147  0.088  0.13   0.039  0.05   0.042  0.025  0.036  0.056  0.033  0.065  0.031  0.033  0.039  0.029  0.003
+    36     2:Fire    3:Water      +   0.093  0.063 *0.147  0.088  0.13   0.039  0.05   0.042  0.025  0.036  0.056  0.033  0.065  0.031  0.033  0.039  0.029  0.003
+    37     2:Fire     2:Fire          0.006 *0.92   0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    38     2:Fire    3:Water      +   0.06   0.083 *0.129  0.102  0.111  0.022  0.038  0.061  0.032  0.025  0.069  0.04   0.048  0.043  0.03   0.054  0.044  0.009
+    39     2:Fire     2:Fire          0.006 *0.92   0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    40 10:Fightin   5:Normal      +   0.014  0.014  0      0     *0.851  0.014  0.002  0      0.002  0      0.042  0.006  0      0.003  0.006  0.002  0.042  0.003
+    41 10:Fightin 10:Fightin          0.006  0.009  0.005  0.005  0.278  0.002  0.002  0      0.012 *0.551  0.1    0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    42  15:Dragon  15:Dragon          0.011  0.017  0.009  0.009  0.009  0.003  0.003  0      0.023  0.009  0.017  0.011  0.006  0.006 *0.847  0.009  0.009  0.006
+    43  15:Dragon  15:Dragon          0      0      0.019  0      0      0      0.002  0      0.002  0      0.013  0.006  0      0.003 *0.939  0.014  0      0.003
+    44  15:Dragon    3:Water      +   0.006  0.009 *0.915  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    45      4:Bug      4:Bug          0.006  0.009  0.005 *0.915  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    46      4:Bug      4:Bug          0.023  0.034  0.017 *0.687  0.017  0.006  0.006  0      0.046  0.017  0.034  0.023  0.011  0.011  0.023  0.017  0.017  0.011
+    47      4:Bug      4:Bug          0.006  0.009  0.005 *0.915  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    48      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    49      4:Bug    1:Grass      +  *0.734  0.009  0.005  0.187  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    50      4:Bug      4:Bug          0.006  0.009  0.005 *0.915  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    51    1:Grass    1:Grass         *0.916  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    52    1:Grass    3:Water      +   0.06   0.083 *0.129  0.102  0.111  0.022  0.038  0.061  0.032  0.025  0.069  0.04   0.048  0.043  0.03   0.054  0.044  0.009
+    53    1:Grass    1:Grass         *0.916  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    54    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    55    1:Grass    1:Grass         *0.916  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    56    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    57    16:Dark    16:Dark          0.006  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006 *0.915  0.005  0.003
+    58    16:Dark 13:Psychic      +   0      0      0      0      0      0      0.002  0      0.002  0      0      0.006 *0.977  0.003  0.006  0.002  0      0.003
+    59    16:Dark    16:Dark          0.006  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006 *0.915  0.005  0.003
+    60     14:Ice   17:Steel      +   0.009  0.013  0.007  0.007  0.007  0.002  0.002  0      0.018  0.007  0.231  0.009  0.004  0.004  0.009  0.007 *0.66   0.004
+    61     14:Ice   6:Poison      +   0.006  0.009  0.005  0.005  0.106 *0.305  0.002  0      0.012  0.207  0.009  0.006  0.003  0.104  0.107  0.106  0.005  0.003
+    62     14:Ice 7:Electric      +   0      0      0.042  0      0      0     *0.575  0      0.003  0      0.028  0.012  0      0.006  0.012  0.317  0      0.006
+    63 13:Psychic    9:Fairy      +   0      0      0      0      0      0      0.002  0     *0.978  0      0      0.006  0      0.003  0.006  0.002  0      0.003
+    64 13:Psychic 13:Psychic          0.006  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006 *0.913  0.003  0.006  0.005  0.005  0.003
+    65 13:Psychic 13:Psychic          0.006  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006 *0.913  0.003  0.006  0.005  0.005  0.003
+    66 13:Psychic 13:Psychic          0.006  0.009  0.005  0.005  0.005  0.002  0.002  0      0.012  0.005  0.009  0.006 *0.822  0.003  0.006  0.096  0.005  0.003
+    67   12:Ghost    3:Water      +   0      0     *0.488  0      0      0      0.002  0      0.002  0      0      0.006  0.488  0.003  0.006  0.002  0      0.003
+    68   12:Ghost   5:Normal      +   0.006  0.009  0.005  0.005 *0.265  0.002  0.002  0      0.012  0.005  0.009  0.136  0.263  0.003  0.006  0.265  0.005  0.003
+    69   6:Poison    3:Water      +   0.06   0.083 *0.129  0.102  0.111  0.022  0.038  0.061  0.032  0.025  0.069  0.04   0.048  0.043  0.03   0.054  0.044  0.009
+    70   6:Poison   6:Poison          0.006  0.009  0.005  0.005  0.005 *0.912  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    71   6:Poison   6:Poison          0.006  0.009  0.005  0.005  0.005 *0.912  0.002  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+    72  18:Flying    1:Grass      +  *0.613  0.009  0.005  0.005  0.005  0.002  0.305  0      0.012  0.005  0.009  0.006  0.003  0.003  0.006  0.005  0.005  0.003
+     1    9:Fairy   5:Normal      +   0.008  0.117  0.059  0.056 *0.271  0.109  0.005  0.159  0.067  0.058  0.009  0.005  0.003  0.003  0.005  0.058  0.006  0.003
+     2 7:Electric    1:Grass      +  *0.608  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.303
+     3 7:Electric 7:Electric          0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0    
+     4 7:Electric 7:Electric          0.008  0.011  0.006  0.003  0.006  0.003 *0.906  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+     5 7:Electric 7:Electric          0.008  0.011  0.006  0.003  0.006  0.003 *0.824  0.082  0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+     6   8:Ground   5:Normal      +   0.008  0.011  0.006  0.003 *0.907  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+     7   8:Ground   8:Ground          0      0      0      0      0      0      0.028 *0.951  0.002  0      0.002  0.005  0      0.003  0.005  0.002  0.002  0.003
+     8   8:Ground    11:Rock      +   0.008  0.011  0.006  0.003  0.006  0.003  0.005  0.18   0.014  0.005 *0.73   0.005  0.003  0.003  0.005  0.005  0.006  0.003
+     9   5:Normal   5:Normal          0      0      0      0     *0.977  0      0.002  0      0.002  0      0.002  0.005  0      0.003  0.005  0.002  0.002  0.003
+    10   5:Normal   5:Normal          0.02   0.02   0      0     *0.865  0.02   0.002  0      0.002  0      0.022  0.005  0      0.003  0.005  0.002  0.032  0.003
+    11   5:Normal   5:Normal          0.008  0.011  0.006  0.003 *0.907  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    12   5:Normal   5:Normal          0      0      0.286  0     *0.643  0      0      0      0      0.071  0      0      0      0      0      0      0      0    
+    13   5:Normal    3:Water      +   0      0     *0.667  0      0      0      0      0      0      0      0      0      0.333  0      0      0      0      0    
+    14   5:Normal   5:Normal          0.008  0.011  0.006  0.003 *0.907  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    15   5:Normal   5:Normal          0.008  0.011  0.006  0.003 *0.907  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    16   5:Normal   5:Normal          0.008  0.011  0.059  0.056 *0.801  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    17   5:Normal   5:Normal          0.008  0.011  0.006  0.003 *0.907  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    18    11:Rock   17:Steel      +   0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0     *1      0    
+    19    11:Rock    3:Water      +   0.075  0.091 *0.127  0.094  0.11   0.03   0.044  0.032  0.039  0.025  0.066  0.027  0.048  0.039  0.043  0.045  0.051  0.01 
+    20    11:Rock    11:Rock          0.008  0.011  0.006  0.303  0.006  0.003  0.005  0.06   0.014  0.065 *0.37   0.005  0.003  0.003  0.005  0.005  0.126  0.003
+    21    11:Rock    11:Rock          0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0    
+    22   17:Steel    11:Rock      +   0.008  0.011  0.006  0.303  0.006  0.003  0.005  0.06   0.014  0.065 *0.37   0.005  0.003  0.003  0.005  0.005  0.126  0.003
+    23   17:Steel    11:Rock      +   0      0      0      0      0      0      0      0      0      0     *0.5    0      0      0.5    0      0      0      0    
+    24    3:Water    3:Water          0      0     *0.75   0      0      0      0      0.25   0      0      0      0      0      0      0      0      0      0    
+    25    3:Water    3:Water          0.008  0.011 *0.751  0.003  0.006  0.003  0.005  0      0.014  0.005  0.166  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    26    3:Water   6:Poison      +   0      0      0.2    0      0     *0.8    0      0      0      0      0      0      0      0      0      0      0      0    
+    27    3:Water    3:Water          0.008  0.011 *0.457  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.455  0.005  0.006  0.003
+    28    3:Water    3:Water          0.008  0.011 *0.751  0.003  0.006  0.003  0.005  0      0.014  0.005  0.166  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    29    3:Water    3:Water          0.07   0.064 *0.185  0.094  0.074  0.025  0.044  0.02   0.039  0.025  0.079  0.027  0.048  0.053  0.044  0.054  0.044  0.01 
+    30    3:Water    3:Water          0.093  0.063 *0.145  0.087  0.13   0.039  0.049  0.042  0.025  0.036  0.056  0.032  0.063  0.032  0.034  0.039  0.031  0.005
+    31    3:Water     14:Ice      +   0      0      0.333  0      0      0      0      0      0      0      0      0      0     *0.667  0      0      0      0    
+    32    3:Water    3:Water          0.008  0.011 *0.751  0.003  0.006  0.003  0.005  0      0.014  0.005  0.166  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    33    3:Water    3:Water          0.008  0.011 *0.907  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    34    3:Water    3:Water          0.008  0.011 *0.907  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    35     2:Fire     2:Fire          0.008 *0.912  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    36     2:Fire    3:Water      +   0.008  0.011 *0.416  0.085  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.413  0.005  0.005  0.006  0.003
+    37     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    38     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    39     2:Fire     2:Fire          0.008 *0.912  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    40 10:Fightin 10:Fightin          0.008  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014 *0.906  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    41 10:Fightin   5:Normal      +   0      0      0      0     *0.948  0      0.031  0      0.002  0      0.002  0.005  0      0.003  0.005  0.002  0.002  0.003
+    42  15:Dragon    3:Water      +   0.075  0.077 *0.134  0.094  0.096  0.033  0.049  0.025  0.041  0.028  0.065  0.039  0.056  0.044  0.039  0.047  0.046  0.01 
+    43  15:Dragon   5:Normal      +   0.008  0.117  0.059  0.056 *0.271  0.109  0.005  0.159  0.067  0.058  0.009  0.005  0.003  0.003  0.005  0.058  0.006  0.003
+    44      4:Bug      4:Bug          0      0      0     *0.833  0      0.167  0      0      0      0      0      0      0      0      0      0      0      0    
+    45      4:Bug      4:Bug          0.008  0.011  0.006 *0.904  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    46      4:Bug      4:Bug          0.008  0.011  0.006 *0.904  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    47      4:Bug      4:Bug          0.07   0.064  0.127 *0.155  0.074  0.025  0.044  0.02   0.039  0.025  0.061  0.061  0.048  0.039  0.031  0.06   0.044  0.01 
+    48      4:Bug 7:Electric      +   0      0.319  0      0      0      0     *0.66   0      0.002  0      0.002  0.005  0      0.003  0.005  0.002  0.002  0.003
+    49      4:Bug      4:Bug          0.008  0.011  0.006 *0.904  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    50      4:Bug    3:Water      +   0.008  0.011 *0.751  0.003  0.006  0.003  0.005  0      0.014  0.005  0.166  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    51    1:Grass    1:Grass         *0.909  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    52    1:Grass    1:Grass         *0.909  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    53    1:Grass    1:Grass         *0.967  0      0      0      0      0      0.002  0      0.002  0.01   0.002  0.005  0      0.003  0.005  0.002  0.002  0.003
+    54    1:Grass    1:Grass         *0.909  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    55    1:Grass    1:Grass         *0.801  0.024  0.013  0.007  0.013  0.007  0.01   0      0.03   0.01   0.02   0.01   0.007  0.007  0.01   0.01   0.013  0.007
+    56    1:Grass    1:Grass         *0.909  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+    57    16:Dark 10:Fightin      +   0.017  0.024  0.013  0.007  0.013  0.007  0.01   0      0.03  *0.402  0.02   0.01   0.007  0.007  0.01   0.402  0.013  0.007
+    58    16:Dark   5:Normal      +   0      0      0.286  0     *0.643  0      0      0      0      0.071  0      0      0      0      0      0      0      0    
+    59    16:Dark 13:Psychic      +   0      0      0      0      0      0      0      0      0      0      0      0.25  *0.75   0      0      0      0      0    
+    60     14:Ice     14:Ice          0.008  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003 *0.904  0.005  0.005  0.006  0.003
+    61     14:Ice     14:Ice          0.008  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005  0.003 *0.904  0.005  0.005  0.006  0.003
+    62 13:Psychic    3:Water      +   0.093  0.063 *0.145  0.087  0.13   0.039  0.049  0.042  0.025  0.036  0.056  0.032  0.063  0.032  0.034  0.039  0.031  0.005
+    63 13:Psychic    3:Water      +   0.008  0.011 *0.252  0.003  0.17   0.003  0.005  0      0.014  0.168  0.009  0.005  0.085  0.249  0.005  0.005  0.006  0.003
+    64 13:Psychic 13:Psychic          0.04   0.011  0.006  0.003  0.006  0.067  0.101  0.129  0.014  0.005  0.074  0.166 *0.196  0.035  0.069  0.005  0.071  0.003
+    65 13:Psychic 13:Psychic          0.008  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005 *0.904  0.003  0.005  0.005  0.006  0.003
+    66 13:Psychic 13:Psychic          0.008  0.011  0.006  0.003  0.006  0.003  0.005  0      0.014  0.005  0.009  0.005 *0.814  0.003  0.005  0.095  0.006  0.003
+    67   12:Ghost    3:Water      +   0.075  0.077 *0.134  0.094  0.096  0.033  0.049  0.025  0.041  0.028  0.065  0.039  0.056  0.044  0.039  0.047  0.046  0.01 
+    68   12:Ghost   8:Ground      +   0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+    69   6:Poison   6:Poison          0      0      0.2    0      0     *0.8    0      0      0      0      0      0      0      0      0      0      0      0    
+    70   6:Poison   6:Poison          0      0      0.2    0      0     *0.8    0      0      0      0      0      0      0      0      0      0      0      0    
+    71   6:Poison   6:Poison          0.008  0.011  0.006  0.003  0.006 *0.904  0.005  0      0.014  0.005  0.009  0.005  0.003  0.003  0.005  0.005  0.006  0.003
+     1    9:Fairy    16:Dark      +   0.008  0.011  0.058  0.055  0.055  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.056 *0.703  0.005  0.003
+     2 7:Electric   5:Normal      +   0.011  0.015  0.011  0.007 *0.649  0.004  0.221  0      0.02   0.007  0.013  0.009  0.004  0.004  0.009  0.004  0.007  0.004
+     3 7:Electric 7:Electric          0      0      0      0.472  0      0     *0.503  0      0.002  0      0.002  0.006  0      0.003  0.006  0.002  0.002  0.003
+     4 7:Electric    3:Water      +   0.093  0.065 *0.145  0.087  0.13   0.039  0.049  0.042  0.025  0.034  0.056  0.032  0.063  0.032  0.034  0.039  0.031  0.005
+     5 7:Electric    16:Dark      +   0      0      0.066  0      0      0      0.289  0      0.003  0      0.016  0.011  0      0.292  0.011 *0.302  0.003  0.006
+     6   8:Ground 7:Electric      +   0.014  0.02   0.014  0.008  0.008  0.006 *0.826  0      0.025  0.008  0.017  0.011  0.006  0.006  0.011  0.006  0.008  0.006
+     7   8:Ground 7:Electric      +   0.008  0.011  0.008  0.005  0.005  0.003 *0.904  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+     8   8:Ground    1:Grass      +  *0.496  0      0      0      0      0      0.003  0.435  0.003  0.02   0.003  0.012  0      0.006  0.012  0.003  0.003  0.006
+     9   5:Normal    9:Fairy      +   0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0    
+    10   5:Normal   5:Normal          0      0      0.286  0     *0.643  0      0      0      0      0      0      0      0      0      0      0      0.071  0    
+    11   5:Normal   5:Normal          0.008  0.111  0.058  0.055 *0.255  0.103  0.005  0.15   0.064  0.055  0.009  0.006  0.003  0.003  0.056  0.053  0.005  0.003
+    12   5:Normal   5:Normal          0.008  0.011  0.008  0.005 *0.904  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    13   5:Normal     2:Fire      +   0.067 *0.151  0.123  0.1    0.067  0.024  0.062  0.019  0.035  0.019  0.081  0.03   0.063  0.027  0.064  0.034  0.025  0.011
+    14   5:Normal    3:Water      +   0.008  0.011 *0.907  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    15   5:Normal     14:Ice      +   0      0      0      0      0      0      0      0      0      0      0      0      0     *1      0      0      0      0    
+    16   5:Normal 10:Fightin      +   0.008  0.011  0.008  0.005  0.23   0.003  0.005  0      0.014 *0.454  0.009  0.006  0.003  0.228  0.006  0.003  0.005  0.003
+    17   5:Normal   5:Normal          0.008  0.011  0.008  0.005 *0.724  0.003  0.005  0.18   0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    18    11:Rock    3:Water      +   0.067  0.063 *0.203  0.1    0.067  0.024  0.062  0.019  0.035  0.019  0.065  0.03   0.049  0.054  0.05   0.058  0.026  0.011
+    19    11:Rock    11:Rock          0.008  0.011  0.457  0.005  0.005  0.003  0.005  0      0.014  0.005 *0.459  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    20    11:Rock    11:Rock          0.011  0.015  0.011  0.007  0.007  0.004  0.007  0      0.02   0.007 *0.656  0.009  0.004  0.004  0.223  0.004  0.007  0.004
+    21    11:Rock    11:Rock          0.011  0.015  0.011  0.007  0.007  0.004  0.007  0      0.02   0.007 *0.656  0.009  0.004  0.004  0.223  0.004  0.007  0.004
+    22   17:Steel   8:Ground      +   0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+    23   17:Steel    3:Water      +   0.074  0.092 *0.123  0.1    0.11   0.032  0.048  0.047  0.035  0.019  0.066  0.03   0.049  0.027  0.063  0.041  0.033  0.011
+    24    3:Water    3:Water          0.158  0.011 *0.757  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    25    3:Water    3:Water          0.008  0.011 *0.72   0.042  0.005  0.003  0.005  0      0.014  0.005  0.159  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    26    3:Water    3:Water          0.008  0.011 *0.72   0.042  0.005  0.003  0.005  0      0.014  0.005  0.159  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    27    3:Water    3:Water          0.008  0.011 *0.72   0.042  0.005  0.003  0.005  0      0.014  0.005  0.159  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    28    3:Water    3:Water          0.008  0.011 *0.907  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    29    3:Water    3:Water          0.158  0.011 *0.757  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    30    3:Water    3:Water          0.008  0.011 *0.308  0.304  0.304  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    31    3:Water    3:Water          0.008  0.011 *0.825  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.085  0.006  0.003  0.005  0.003
+    32    3:Water    3:Water          0.158  0.011 *0.757  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    33    3:Water      4:Bug      +   0.008  0.011  0.308 *0.604  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    34    3:Water    3:Water          0.008  0.011 *0.907  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    35     2:Fire     2:Fire          0.008 *0.91   0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    36     2:Fire     2:Fire          0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    37     2:Fire 7:Electric      +   0      0      0      0.472  0      0     *0.503  0      0.002  0      0.002  0.006  0      0.003  0.006  0.002  0.002  0.003
+    38     2:Fire     2:Fire          0.008 *0.91   0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    39 10:Fightin 10:Fightin          0.008  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014 *0.454  0.009  0.006  0.453  0.003  0.006  0.003  0.005  0.003
+    40 10:Fightin 10:Fightin          0      0      0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0    
+    41 10:Fightin 10:Fightin          0.008  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014 *0.904  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    42  15:Dragon   8:Ground      +   0      0      0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0    
+    43  15:Dragon    11:Rock      +   0.026  0.036  0.026  0.015  0.015  0.01   0.015  0      0.046  0.015 *0.364  0.021  0.01   0.01   0.353  0.01   0.015  0.01 
+    44      4:Bug      4:Bug          0.008  0.011  0.008 *0.904  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    45      4:Bug      4:Bug          0.008  0.011  0.008 *0.904  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    46      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    47      4:Bug      4:Bug          0.024  0.033  0.024 *0.705  0.014  0.01   0.014  0      0.043  0.014  0.029  0.019  0.01   0.01   0.019  0.01   0.014  0.01 
+    48      4:Bug      4:Bug          0.008  0.011  0.008 *0.904  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    49      4:Bug      4:Bug          0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    50      4:Bug      4:Bug          0.008  0.011  0.008 *0.904  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    51    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    52    1:Grass    1:Grass         *0.907  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    53    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    54    1:Grass    1:Grass         *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    55    1:Grass    1:Grass         *0.907  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    56    1:Grass   8:Ground      +   0.2    0      0      0      0      0      0     *0.8    0      0      0      0      0      0      0      0      0      0    
+    57    16:Dark    3:Water      +   0.067  0.063 *0.203  0.1    0.067  0.024  0.062  0.019  0.035  0.019  0.065  0.03   0.049  0.054  0.05   0.058  0.026  0.011
+    58    16:Dark     2:Fire      +   0.022 *0.39   0.022  0.013  0.013  0.009  0.013  0      0.039  0.013  0.026  0.017  0.009  0.009  0.017  0.368  0.013  0.009
+    59    16:Dark      4:Bug      +   0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0      0      0    
+    60     14:Ice     14:Ice          0.008  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003 *0.903  0.006  0.003  0.005  0.003
+    61     14:Ice     14:Ice          0.008  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006  0.003 *0.903  0.006  0.003  0.005  0.003
+    62 13:Psychic    11:Rock      +   0      0      0      0      0      0      0.045  0      0.002  0     *0.467  0.006  0.465  0.003  0.006  0.002  0.002  0.003
+    63 13:Psychic    11:Rock      +   0      0      0      0      0      0      0.045  0      0.002  0     *0.467  0.006  0.465  0.003  0.006  0.002  0.002  0.003
+    64 13:Psychic 13:Psychic          0.008  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006 *0.903  0.003  0.006  0.003  0.005  0.003
+    65 13:Psychic 13:Psychic          0.008  0.011  0.008  0.005  0.005  0.003  0.005  0      0.014  0.005  0.009  0.006 *0.903  0.003  0.006  0.003  0.005  0.003
+    66 13:Psychic    3:Water      +   0      0     *0.667  0      0.333  0      0      0      0      0      0      0      0      0      0      0      0      0    
+    67   12:Ghost   12:Ghost          0.019  0.027  0.019  0.012  0.012  0.008  0.012  0      0.035  0.012  0.023 *0.764  0.008  0.008  0.015  0.008  0.012  0.008
+    68   12:Ghost   8:Ground      +   0      0      0      0.063  0      0      0.002 *0.455  0.002  0      0.002  0.006  0.455  0.003  0.006  0.002  0.002  0.003
+    69   6:Poison   6:Poison          0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0    
+    70   6:Poison   6:Poison          0.008  0.011  0.008  0.005  0.005 *0.903  0.005  0      0.014  0.005  0.009  0.006  0.003  0.003  0.006  0.003  0.005  0.003
+    71   6:Poison   6:Poison          0      0      0      0      0     *1      0      0      0      0      0      0      0      0      0      0      0      0    
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         413               57.5209 %
+Incorrectly Classified Instances       305               42.4791 %
+Kappa statistic                          0.5317
+Mean absolute error                      0.0548
+Root mean squared error                  0.1833
+Relative absolute error                 53.4562 %
+Root relative squared error             81.0394 %
+Total Number of Instances              718     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.848     0.014      0.862     0.848     0.855      0.956    Grass
+                 0.652     0.018      0.714     0.652     0.682      0.904    Fire
+                 0.79      0.179      0.43      0.79      0.557      0.91     Water
+                 0.73      0.017      0.807     0.73      0.767      0.906    Bug
+                 0.634     0.074      0.562     0.634     0.596      0.833    Normal
+                 0.643     0.013      0.667     0.643     0.655      0.946    Poison
+                 0.5       0.012      0.692     0.5       0.581      0.902    Electric
+                 0.3       0.022      0.375     0.3       0.333      0.724    Ground
+                 0.176     0.009      0.333     0.176     0.231      0.953    Fairy
+                 0.48      0.014      0.545     0.48      0.511      0.778    Fighting
+                 0.425     0.027      0.486     0.425     0.453      0.814    Rock
+                 0.435     0.017      0.455     0.435     0.444      0.775    Ghost
+                 0.609     0.015      0.737     0.609     0.667      0.854    Psychic
+                 0.391     0.004      0.75      0.391     0.514      0.748    Ice
+                 0.167     0.014      0.286     0.167     0.211      0.703    Dragon
+                 0.179     0.012      0.385     0.179     0.244      0.727    Dark
+                 0.273     0.011      0.429     0.273     0.333      0.653    Steel
+                 0         0          0         0         0          0.855    Flying
+Weighted Avg.    0.575     0.047      0.585     0.575     0.565      0.853
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r   <-- classified as
+ 56  0  5  2  0  0  0  2  0  0  0  0  0  0  0  0  1  0 |  a = Grass
+  0 30  9  0  4  0  1  0  0  0  0  0  1  0  0  1  0  0 |  b = Fire
+  0  0 83  2  6  3  1  0  2  0  2  1  0  2  1  0  2  0 |  c = Water
+  3  2  8 46  1  1  1  0  0  0  0  0  0  0  0  0  1  0 |  d = Bug
+  2  4 17  1 59  0  0  0  1  4  0  0  0  1  1  3  0  0 |  e = Normal
+  0  0  2  2  1 18  0  0  0  1  3  0  1  0  0  0  0  0 |  f = Poison
+  1  0  6  0  2  0 18  3  1  0  0  1  0  0  2  1  1  0 |  g = Electric
+  1  0  5  0  3  0  2  9  1  0  4  2  0  0  3  0  0  0 |  h = Ground
+  0  0  9  0  4  0  0  0  3  0  0  0  0  0  0  1  0  0 |  i = Fairy
+  0  0  3  0  8  0  0  1  0 12  1  0  0  0  0  0  0  0 |  j = Fighting
+  0  0 11  0  2  2  0  2  0  2 17  0  0  0  2  0  2  0 |  k = Rock
+  0  1  5  0  1  1  0  2  0  0  0 10  2  0  0  1  0  0 |  l = Ghost
+  1  1  6  0  2  0  0  0  1  1  2  3 28  0  0  1  0  0 |  m = Psychic
+  0  1  6  1  3  1  1  0  0  0  0  0  0  9  0  0  1  0 |  n = Ice
+  0  0  8  0  2  1  2  2  0  1  2  0  2  0  4  0  0  0 |  o = Dragon
+  0  3  4  2  5  0  0  0  0  1  0  3  4  0  1  5  0  0 |  p = Dark
+  0  0  4  1  2  0  0  3  0  0  4  2  0  0  0  0  6  0 |  q = Steel
+  1  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  r = Flying
+

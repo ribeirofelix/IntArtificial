@@ -1,0 +1,312 @@
+{{height/header|0|04|0.1}}
+{{height/entry|595|Joltik|Bug|Electric|669|Flabébé|Fairy|Fairy}}
+{{height/footer}}
+
+{{height/header|0|08|0.2}}
+{{height/entry|050|Diglett|Ground|Ground|177|Natu|Psychic|Flying|298|Azurill|Normal|Fairy|406|Budew|Grass|Poison|412{{#switch: {{#expr: {{#time: U}} mod 3}}|0=|1=G|2=S}}|Burmy|Bug|Bug|433|Chingling|Psychic|Psychic}}
+{{height/entry|492|Shaymin|Grass|Grass|590|Foongus|Grass|Poison|602|Tynamo|Electric|Electric|670|Floette|Fairy|Fairy|682|Spritzee|Fairy|Fairy|702|Dedenne|Electric|Fairy}}
+{{height/entry|707|Klefki|Steel|Fairy}}
+{{height/footer}}
+
+{{height/header|1|00|0.3}}
+{{height/entry|010|Caterpie|Bug|Bug|013|Weedle|Bug|Poison|016|Pidgey|Normal|Flying|019|Rattata|Normal|Normal|021|Spearow|Normal|Flying|046|Paras|Bug|Grass}}
+{{height/entry|081|Magnemite|Electric|Steel|090|Shellder|Water|Water|132|Ditto|Normal|Normal|133|Eevee|Normal|Normal|172|Pichu|Electric|Electric|173|Cleffa|Fairy|Fairy}}
+{{height/entry|174|Igglybuff|Normal|Fairy|175|Togepi|Fairy|Fairy|191|Sunkern|Grass|Grass|265|Wurmple|Bug|Bug|276|Taillow|Normal|Flying|315|Roselia|Grass|Poison}}
+{{height/entry|351{{#switch: {{#expr: {{#time: U}} mod 4}}|0=|1=S|2=R|3=H}}|Castform|{{#switch: {{#expr: {{#time: U}} mod 4}}|0=Normal|1=Fire|2=Water|3=Ice}}|{{#switch: {{#expr: {{#time: U}} mod 4}}|0=Normal|1=Fire|2=Water|3=Ice}}|385|Jirachi|Steel|Psychic|396|Starly|Normal|Flying|401|Kricketot|Bug|Bug|415|Combee|Bug|Flying|422{{#switch: {{#expr: {{#time: U}} mod 2}}|0=|1=E}}|Shellos|Water|Water}}
+{{height/entry|479|Rotom|Electric|Ghost|480|Uxie|Psychic|Psychic|481|Mesprit|Psychic|Psychic|482|Azelf|Psychic|Psychic|490|Manaphy|Water|Water|519|Pidove|Normal|Flying}}
+{{height/entry|529|Drilbur|Ground|Ground|540|Sewaddle|Bug|Grass|546|Cottonee|Grass|Fairy|557|Dwebble|Bug|Rock|577|Solosis|Psychic|Psychic|599|Klink|Steel|Steel}}
+{{height/entry|607|Litwick|Ghost|Fire|632|Durant|Bug|Steel|656|Froakie|Water|Water|661|Fletchling|Normal|Flying|664|Scatterbug|Bug|Bug|665|Spewpa|Bug|Bug}}
+{{height/entry|677|Espurr|Psychic|Psychic|703|Carbink|Rock|Fairy|704|Goomy|Dragon|Dragon|710|Pumpkaboo|n4=Small Size Pumpkaboo|Ghost|Grass}}
+{{height/footer}}
+
+{{height/header|1|04|0.4}}
+{{height/entry|025|Pikachu|Electric|Electric|029|Nidoran♀|Poison|Poison|052|Meowth|Normal|Normal|074|Geodude|Rock|Ground|098|Krabby|Water|Water|102|Exeggcute|Grass|Psychic}}
+{{height/entry|104|Cubone|Ground|Ground|116|Horsea|Water|Water|138|Omanyte|Rock|Water|151|Mew|Psychic|Psychic|182|Bellossom|Grass|Grass|183|Marill|Water|Fairy}}
+{{height/entry|187|Hoppip|Grass|Flying|194|Wooper|Water|Ground|220|Swinub|Ice|Ground|238|Smoochum|Ice|Psychic|255|Torchic|Fire|Fire|258|Mudkip|Water|Water}}
+{{height/entry|263|Zigzagoon|Normal|Normal|280|Ralts|Psychic|Fairy|285|Shroomish|Grass|Grass|304|Aron|Steel|Rock|311|Plusle|Electric|Electric|312|Minun|Electric|Electric}}
+{{height/entry|316|Gulpin|Poison|Poison|331|Cacnea|Grass|Grass|333|Swablu|Normal|Flying|339|Barboach|Water|Ground|366|Clamperl|Water|Water|387|Turtwig|Grass|Grass}}
+{{height/entry|393|Piplup|Water|Water|417|Pachirisu|Electric|Electric|420|Cherubi|Grass|Grass|425|Drifloon|Ghost|Flying|427|Buneary|Normal|Normal|434|Stunky|Poison|Dark}}
+{{height/entry|456|Finneon|Water|Water|489|Phione|Water|Water|492S|Shaymin|Grass|Flying|494|Victini|Psychic|Fire|506|Lillipup|Normal|Normal|509|Purrloin|Dark|Dark}}
+{{height/entry|524|Roggenrola|Rock|Rock|527|Woobat|Psychic|Flying|543|Venipede|Bug|Poison|572|Minccino|Normal|Normal|574|Gothita|Psychic|Psychic|582|Vanillite|Ice|Ice}}
+{{height/entry|587|Emolga|Electric|Flying|616|Shelmet|Bug|Bug|650|Chespin|Grass|Grass|653|Fennekin|Fire|Fire|659|Bunnelby|Normal|Normal|684|Swirlix|Fairy|Fairy}}
+{{height/entry|686|Inkay|Dark|Psychic|708|Phantump|Ghost|Grass|710|Pumpkaboo|n3=Average Size Pumpkaboo|Ghost|Grass}}
+{{height/footer}}
+
+{{height/header|1|08|0.5}}
+{{height/entry|007|Squirtle|Water|Water|032|Nidoran♂|Poison|Poison|039|Jigglypuff|Normal|Fairy|043|Oddish|Grass|Poison|056|Mankey|Fighting|Fighting|100|Voltorb|Electric|Electric}}
+{{height/entry|140|Kabuto|Rock|Water|155|Cyndaquil|Fire|Fire|167|Spinarak|Bug|Poison|170|Chinchou|Water|Electric|198|Murkrow|Dark|Flying|201|Unown|Psychic|Psychic}}
+{{height/entry|211|Qwilfish|Water|Poison|231|Phanpy|Ground|Ground|252|Treecko|Grass|Grass|261|Poochyena|Dark|Dark|264|Linoone|Normal|Normal|270|Lotad|Water|Grass}}
+{{height/entry|273|Seedot|Grass|Grass|283|Surskit|Bug|Water|290|Nincada|Bug|Ground|302|Sableye|Dark|Ghost|324|Torkoal|Fire|Fire|343|Baltoy|Ground|Psychic}}
+{{height/entry|390|Chimchar|Fire|Fire|399|Bidoof|Normal|Normal|403|Shinx|Electric|Electric|410|Shieldon|Rock|Steel|413{{#switch: {{#expr: {{#time: U}} mod 3}}|0=|1=G|2=S}}|Wormadam|Bug|{{#switch: {{#expr: {{#time: U}} mod 3}}|0=Grass|1=Ground|2=Steel}}|421{{#switch: {{#expr: {{#time: U}} mod 2}}|0=|1=S}}|Cherrim|Grass|Grass}}
+{{height/entry|431|Glameow|Normal|Normal|436|Bronzor|Steel|Psychic|438|Bonsly|Rock|Rock|441|Chatot|Normal|Flying|498|Tepig|Fire|Fire|501|Oshawott|Water|Water}}
+{{height/entry|504|Patrat|Normal|Normal|535|Tympole|Water|Water|541|Swadloon|Bug|Grass|548|Petilil|Grass|Grass|562|Yamask|Ghost|Ghost|573|Cinccino|Normal|Normal}}
+{{height/entry|580|Ducklett|Water|Flying|588|Karrablast|Bug|Bug|605|Elgyem|Psychic|Psychic|613|Cubchoo|Ice|Ice|624|Pawniard|Dark|Steel|627|Rufflet|Normal|Flying}}
+{{height/entry|629|Vullaby|Dark|Flying|688|Binacle|Rock|Water|694|Helioptile|Electric|Normal|690|Skrelp|Poison|Water|692|Clauncher|Water|Water|710|Pumpkaboo|n6=Large Size Pumpkaboo|Ghost|Grass}}
+{{height/entry|714|Noibat|Flying|Dragon}}
+{{height/footer}}
+
+{{height/header|2|00|0.6}}
+{{height/entry|004|Charmander|Fire|Fire|014|Kakuna|Bug|Poison|027|Sandshrew|Ground|Ground|035|Clefairy|Fairy|Fairy|037|Vulpix|Fire|Fire|060|Poliwag|Water|Water}}
+{{height/entry|109|Koffing|Poison|Poison|118|Goldeen|Water|Water|158|Totodile|Water|Water|176|Togetic|Fairy|Flying|179|Mareep|Electric|Electric|188|Skiploom|Grass|Flying}}
+{{height/entry|204|Pineco|Bug|Bug|209|Snubbull|Fairy|Fairy|213|Shuckle|Bug|Rock|216|Teddiursa|Normal|Normal|222|Corsola|Water|Rock|223|Remoraid|Water|Water}}
+{{height/entry|228|Houndour|Dark|Fire|233|Porygon2|Normal|Normal|239|Elekid|Electric|Electric|246|Larvitar|Rock|Ground|251|Celebi|Psychic|Grass|266|Silcoon|Bug|Bug}}
+{{height/entry|278|Wingull|Water|Flying|293|Whismur|Normal|Normal|300|Skitty|Normal|Normal|303|Mawile|Steel|Fairy|307|Meditite|Fighting|Psychic|309|Electrike|Electric|Electric}}
+{{height/entry|314|Illumise|Bug|Bug|341|Corphish|Water|Water|349|Feebas|Water|Water|353|Shuppet|Ghost|Ghost|358|Chimecho|Psychic|Psychic|360|Wynaut|Psychic|Psychic}}
+{{height/entry|370|Luvdisc|Water|Water|371|Bagon|Dragon|Dragon|374|Beldum|Steel|Psychic|397|Staravia|Normal|Flying|439|Mime Jr.|Psychic|Fairy|440|Happiny|Normal|Normal}}
+{{height/entry|446|Munchlax|Normal|Normal|495|Snivy|Grass|Grass|511|Pansage|Grass|Grass|513|Pansear|Fire|Fire|515|Panpour|Water|Water|517|Munna|Psychic|Psychic}}
+{{height/entry|520|Tranquill|Normal|Flying|532|Timburr|Fighting|Fighting|554|Darumaka|Fire|Fire|559|Scraggy|Dark|Fighting|566|Archen|Rock|Flying|568|Trubbish|Poison|Poison}}
+{{height/entry|578|Duosion|Psychic|Psychic|585{{#switch: {{#time: F}}|January|May|September=|February|June|October=S|March|July|November=A|W}}|Deerling|Normal|Grass|591|Amoonguss|Grass|Poison|597|Ferroseed|Grass|Steel|600|Klang|Steel|Steel|601|Klinklang|Steel|Steel}}
+{{height/entry|608|Lampent|Ghost|Fire|610|Axew|Dragon|Dragon|648{{#switch: {{#expr: {{#time: U}} mod 2}}|0=|1=P}}|Meloetta|Normal|{{#switch: {{#expr: {{#time: U}} mod 2}}|0=Psychic|1=Fighting}}|674|Pancham|Fighting|Fighting|667|Litleo|Fire|Normal|657|Frogadier|Water|Water}}
+{{height/entry|678|Meowstic|Psychic|Psychic}}
+{{height/footer}}
+
+{{height/header|2|04|0.7}}
+{{height/entry|001|Bulbasaur|Grass|Poison|011|Metapod|Bug|Bug|020|Raticate|Normal|Normal|051|Dugtrio|Ground|Ground|058|Growlithe|Fire|Fire|069|Bellsprout|Grass|Poison}}
+{{height/entry|163|Hoothoot|Normal|Flying|200|Misdreavus|Ghost|Ghost|218|Slugma|Fire|Fire|236|Tyrogue|Fighting|Fighting|240|Magby|Fire|Fire|259|Marshtomp|Water|Ground}}
+{{height/entry|268|Cascoon|Bug|Bug|277|Swellow|Normal|Flying|313|Volbeat|Bug|Bug|322|Numel|Fire|Ground|325|Spoink|Psychic|Psychic|328|Trapinch|Ground|Ground}}
+{{height/entry|347|Anorith|Rock|Bug|361|Snorunt|Ice|Ice|418|Buizel|Water|Water|443|Gible|Dragon|Ground|447|Riolu|Fighting|Fighting|453|Croagunk|Poison|Fighting}}
+{{height/entry|530|Excadrill|Ground|Steel|547|Whimsicott|Grass|Fairy|551|Sandile|Ground|Dark|564|Tirtouga|Water|Rock|570|Zorua|Dark|Dark|575|Gothorita|Psychic|Psychic}}
+{{height/entry|618|Stunfisk|Ground|Electric|651|Quilladin|Grass|Grass|662|Fletchinder|Normal|Fire|711|Gourgeist|n4=Small Size Gourgeist|Ghost|Grass}}
+{{height/footer}}
+
+
+{{height/header|2|07|0.8}}
+{{height/entry|026|Raichu|Electric|Electric|030|Nidorina|Poison|Poison|041|Zubat|Poison|Flying|044|Gloom|Grass|Poison|054|Psyduck|Water|Water|066|Machop|Fighting|Fighting}}
+{{height/entry|083|Farfetch'd|Normal|Flying|120|Staryu|Water|Water|135|Jolteon|Electric|Electric|137|Porygon|Normal|Normal|161|Sentret|Normal|Normal|180|Flaaffy|Electric|Electric}}
+{{height/entry|184|Azumarill|Water|Fairy|189|Jumpluff|Grass|Flying|190|Aipom|Normal|Normal|192|Sunflora|Grass|Grass|219|Magcargo|Fire|Rock|281|Kirlia|Psychic|Fairy}}
+{{height/entry|284|Masquerain|Bug|Flying|287|Slakoth|Normal|Normal|291|Ninjask|Bug|Flying|292|Shedinja|Bug|Ghost|318|Carvanha|Water|Dark|355|Duskull|Ghost|Ghost}}
+{{height/entry|363|Spheal|Ice|Water|394|Prinplup|Water|Water|449|Hippopotas|Ground|Ground|451|Skorupi|Poison|Bug|471|Glaceon|Ice|Ice|496|Servine|Grass|Grass}}
+{{height/entry|502|Dewott|Water|Water|522|Blitzle|Electric|Electric|536|Palpitoad|Water|Ground|596|Galvantula|Bug|Electric|617|Accelgor|Bug|Bug|633|Deino|Dark|Dragon}}
+{{height/entry|679|Honedge|Steel|Ghost|680|Doublade|Steel|Ghost|696|Tyrunt|Rock|Dragon|683|Aromatisse|Fairy|Fairy|685|Slurpuff|Fairy|Fairy|701|Hawlucha|Fighting|Flying}}
+{{height/entry|705|Sliggoo|Dragon|Dragon|710|Pumpkaboo|n2=Super Size Pumpkaboo|Ghost|Grass}}
+{{height/footer}}
+
+{{height/header|2|11|0.9}}
+{{height/entry|033|Nidorino|Poison|Poison|063|Abra|Psychic|Psychic|072|Tentacool|Water|Poison|088|Grimer|Poison|Poison|129|Magikarp|Water|Water|136|Flareon|Fire|Fire}}
+{{height/entry|152|Chikorita|Grass|Grass|156|Quilava|Fire|Fire|196|Espeon|Psychic|Psychic|215|Sneasel|Dark|Ice|224|Octillery|Water|Water|225|Delibird|Ice|Flying}}
+{{height/entry|253|Grovyle|Grass|Grass|256|Combusken|Fire|Fighting|305|Lairon|Steel|Rock|326|Grumpig|Psychic|Psychic|340|Whiscash|Water|Ground|391|Monferno|Fire|Fighting}}
+{{height/entry|404|Luxio|Electric|Electric|407|Roserade|Grass|Poison|408|Cranidos|Rock|Rock|414|Mothim|Bug|Flying|423{{#switch: {{#expr: {{#time: U}} mod 2}}|0=|1=E}}|Gastrodon|Water|Ground|429|Mismagius|Ghost|Ghost}}
+{{height/entry|430|Honchkrow|Dark|Flying|474|Porygon-Z|Normal|Normal|507|Herdier|Normal|Normal|525|Boldore|Rock|Rock|528|Swoobat|Psychic|Flying|619|Mienfoo|Fighting|Fighting}}
+{{height/entry|672|Skiddo|Grass|Grass|711|Gourgeist|n2=Average Size Gourgeist|Ghost|Grass}}
+{{height/footer}}
+
+{{height/header|3|03|1.0}}
+{{height/entry|002|Ivysaur|Grass|Poison|008|Wartortle|Water|Water|015|Beedrill|Bug|Poison|028|Sandslash|Ground|Ground|040|Wigglytuff|Normal|Fairy|047|Parasect|Bug|Grass}}
+{{height/entry|048|Venonat|Bug|Poison|053|Persian|Normal|Normal|057|Primeape|Fighting|Fighting|061|Poliwhirl|Water|Water|070|Weepinbell|Grass|Poison|075|Graveler|Rock|Ground}}
+{{height/entry|077|Ponyta|Fire|Fire|082|Magneton|Electric|Steel|096|Drowzee|Psychic|Psychic|105|Marowak|Ground|Ground|111|Rhyhorn|Ground|Rock|114|Tangela|Grass|Grass}}
+{{height/entry|134|Vaporeon|Water|Water|139|Omastar|Rock|Water|165|Ledyba|Bug|Flying|197|Umbreon|Dark|Dark|262|Mightyena|Dark|Dark|267|Beautifly|Bug|Flying}}
+{{height/entry|274|Nuzleaf|Grass|Dark|294|Loudred|Normal|Normal|296|Makuhita|Fighting|Fighting|299|Nosepass|Rock|Rock|303|Mawile|n5=Mega Mawile|Steel|Fairy|337|Lunatone|Rock|Psychic}}
+{{height/entry|345|Lileep|Rock|Grass|352|Kecleon|Normal|Normal|369|Relicanth|Water|Rock|400|Bibarel|Normal|Water|402|Kricketune|Bug|Bug|432|Purugly|Normal|Normal}}
+{{height/entry|435|Skuntank|Poison|Dark|442|Spiritomb|Ghost|Dark|458|Mantyke|Water|Flying|459|Snover|Grass|Ice|470|Leafeon|Grass|Grass|499|Pignite|Fire|Fighting}}
+{{height/entry|514|Simisear|Fire|Fire|516|Simipour|Water|Water|550{{#switch: {{#expr: {{#time: U}} mod 2}}|0=|1=B}}|Basculin|Water|Water|552|Krokorok|Ground|Dark|556|Maractus|Grass|Grass|579|Reuniclus|Psychic|Psychic}}
+{{height/entry|589|Escavalier|Bug|Steel|598|Ferrothorn|Grass|Steel|606|Beheeyem|Psychic|Psychic|609|Chandelure|Ghost|Fire|611|Fraxure|Dragon|Dragon|622|Golett|Ground|Ghost}}
+{{height/entry|654|Braixen|Fire|Fire|660|Diggersby|Normal|Ground|695|Heliolisk|Electric|Normal|700|Sylveon|Fairy|Fairy|712|Bergmite|Ice|Ice}}
+{{height/footer}}
+
+{{height/header|3|07|1.1}}
+{{height/entry|005|Charmeleon|Fire|Fire|012|Butterfree|Bug|Flying|017|Pidgeotto|Normal|Flying|038|Ninetales|Fire|Fire|086|Seel|Water|Water|113|Chansey|Normal|Normal}}
+{{height/entry|121|Starmie|Water|Psychic|125|Electabuzz|Electric|Electric|159|Croconaw|Water|Water|168|Ariados|Bug|Poison|186|Politoed|Water|Water|207|Gligar|Ground|Flying}}
+{{height/entry|221|Piloswine|Ice|Ground|232|Donphan|Ground|Ground|301|Delcatty|Normal|Normal|327|Spinda|Normal|Normal|329|Vibrava|Ground|Dragon|334|Altaria|Dragon|Flying}}
+{{height/entry|342|Crawdaunt|Water|Dark|354|Banette|Ghost|Ghost|364|Sealeo|Ice|Water|372|Shelgon|Dragon|Dragon|388|Grotle|Grass|Grass|419|Floatzel|Water|Water}}
+{{height/entry|461|Weavile|Dark|Ice|505|Watchog|Normal|Normal|510|Liepard|Dark|Dark|512|Simisage|Grass|Grass|518|Musharna|Psychic|Psychic|531|Audino|Normal|Normal}}
+{{height/entry|549|Lilligant|Grass|Grass|560|Scrafty|Dark|Fighting|583|Vanillish|Ice|Ice|615|Cryogonal|Ice|Ice|636|Larvesta|Bug|Fire|671|Florges|Fairy|Fairy}}
+{{height/entry|711|Gourgeist|n1=Large Size Gourgeist|Ghost|Grass}}
+{{height/footer}}
+
+{{height/header|3|11|1.2}}
+{{height/entry|022|Fearow|Normal|Flying|045|Vileplume|Grass|Poison|065|Alakazam|n3=Mega Alakazam|Psychic|Psychic|079|Slowpoke|Water|Psychic|089|Muk|Poison|Poison|101|Electrode|Electric|Electric}}
+{{height/entry|108|Lickitung|Normal|Normal|110|Weezing|Poison|Poison|117|Seadra|Water|Water|153|Bayleef|Grass|Grass|171|Lanturn|Water|Electric|185|Sudowoodo|Rock|Rock}}
+{{height/entry|193|Yanma|Bug|Flying|205|Forretress|Bug|Steel|235|Smeargle|Normal|Normal|241|Miltank|Normal|Normal|247|Pupitar|Rock|Ground|269|Dustox|Bug|Poison}}
+{{height/entry|271|Lombre|Water|Grass|279|Pelipper|Water|Flying|286|Breloom|Grass|Fighting|338|Solrock|Rock|Psychic|354|Banette|n5=Mega Banette|Ghost|Ghost|359|Absol|Dark|Dark}}
+{{height/entry|375|Metang|Steel|Psychic|392|Infernape|Fire|Fighting|398|Staraptor|Normal|Flying|416|Vespiquen|Bug|Flying|424|Ambipom|Normal|Normal|426|Drifblim|Ghost|Flying}}
+{{height/entry|428|Lopunny|Normal|Normal|448|Lucario|Fighting|Steel|457|Lumineon|Water|Water|462|Magnezone|Electric|Steel|508|Stoutland|Normal|Normal|521|Unfezant|Normal|Flying}}
+{{height/entry|533|Gurdurr|Fighting|Fighting|542|Leavanny|Bug|Grass|544|Whirlipede|Bug|Poison|565|Carracosta|Water|Rock|592|Frillish|Water|Ghost|594|Alomomola|Water|Water}}
+{{height/entry|603|Eelektrik|Electric|Electric|630|Mandibuzz|Dark|Flying|663|Talonflame|Fire|Flying|666|Vivillon|Bug|Flying|676|Furfrou|Normal|Normal}}
+{{height/footer}}
+
+{{height/header|4|03|1.3}}
+{{height/entry|031|Nidoqueen|Poison|Ground|036|Clefable|Fairy|Fairy|062|Poliwrath|Water|Fighting|064|Kadabra|Psychic|Psychic|092|Gastly|Ghost|Poison|099|Kingler|Water|Water}}
+{{height/entry|119|Seaking|Water|Water|122|Mr. Mime|Psychic|Fairy|126|Magmar|Fire|Fire|141|Kabutops|Rock|Water|202|Wobbuffet|Psychic|Psychic|275|Shiftry|Grass|Dark}}
+{{height/entry|308|Medicham|Fighting|Psychic|332|Cacturne|Grass|Dark|335|Zangoose|Normal|Normal|411|Bastiodon|Rock|Steel|437|Bronzong|Steel|Psychic|448|Lucario|n6=Mega Lucario|Fighting|Steel}}
+{{height/entry|452|Drapion|Poison|Dark|454|Toxicroak|Poison|Fighting|478|Froslass|Ice|Ghost|538|Throh|Fighting|Fighting|555|Darmanitan|Fire|Fire|581|Swanna|Water|Flying}}
+{{height/entry|584|Vanilluxe|Ice|Ice|645T|Landorus|Ground|Flying|689|Barbaracle|Rock|Water|693|Clawitzer|Water|Water|698|Amaura|Rock|Ice}}
+{{height/footer}}
+
+{{height/header|4|07|1.4}}
+{{height/entry|034|Nidoking|Poison|Ground|076|Golem|Rock|Ground|084|Doduo|Normal|Flying|094|Gengar|n4=Mega Gengar|Ghost|Poison|107|Hitmonchan|Fighting|Fighting|124|Jynx|Ice|Psychic}}
+{{height/entry|128|Tauros|Normal|Normal|166|Ledian|Bug|Flying|181|Ampharos|Electric|Electric|195|Quagsire|Water|Ground|210|Granbull|Fairy|Fairy|229|Houndoom|Dark|Fire}}
+{{height/entry|234|Stantler|Normal|Normal|237|Hitmontop|Fighting|Fighting|288|Vigoroth|Normal|Normal|365|Walrein|Ice|Water|380|Latias|Dragon|Psychic|405|Luxray|Electric|Electric}}
+{{height/entry|444|Gabite|Dragon|Ground|455|Carnivine|Grass|Grass|476|Probopass|Rock|Steel|539|Sawk|Fighting|Fighting|558|Crustle|Bug|Rock|561|Sigilyph|Psychic|Flying}}
+{{height/entry|567|Archeops|Rock|Flying|620|Mienshao|Fighting|Fighting|631|Heatmor|Fire|Fire|634|Zweilous|Dark|Dragon|641T|Tornadus|Flying|Flying|647|Keldeo|Water|Fighting}}
+{{height/footer}}
+
+{{height/header|4|11|1.5}}
+{{height/entry|018|Pidgeot|Normal|Flying|049|Venomoth|Bug|Poison|065|Alakazam|Psychic|Psychic|067|Machoke|Fighting|Fighting|091|Cloyster|Water|Ice|094|Gengar|Ghost|Poison}}
+{{height/entry|106|Hitmonlee|Fighting|Fighting|123|Scyther|Bug|Flying|127|Pinsir|Bug|Bug|150|Mewtwo|n4=Mega Mewtwo Y|Psychic|Psychic|178|Xatu|Psychic|Flying|203|Girafarig|Normal|Psychic}}
+{{height/entry|206|Dunsparce|Normal|Normal|214|Heracross|Bug|Fighting|242|Blissey|Normal|Normal|260|Swampert|Water|Ground|272|Ludicolo|Water|Grass|295|Exploud|Normal|Normal}}
+{{height/entry|310|Manectric|Electric|Electric|344|Claydol|Ground|Psychic|346|Cradily|Rock|Grass|348|Armaldo|Rock|Bug|362|Glalie|Ice|Ice|373|Salamence|Dragon|Flying}}
+{{height/entry|468|Togekiss|Fairy|Flying|488|Cresselia|Psychic|Psychic|491|Darkrai|Dark|Dark|503|Samurott|Water|Water|534|Conkeldurr|Fighting|Fighting|537|Seismitoad|Water|Ground}}
+{{height/entry|553|Krookodile|Ground|Dark|576|Gothitelle|Psychic|Psychic|628|Braviary|Normal|Flying|641|Tornadus|Flying|Flying|642|Thundurus|Electric|Flying|645|Landorus|Ground|Flying}}
+{{height/entry|649|Genesect|Bug|Steel|655|Delphox|Fire|Psychic|658|Greninja|Water|Dark|668|Pyroar|Fire|Normal|687|Malamar|Dark|Psychic|709|Trevenant|Ghost|Grass}}
+{{height/entry|715|Noivern|Flying|Dragon}}
+{{height/footer}}
+
+{{height/header|5|03|1.6}}
+{{height/entry|009|Blastoise|Water|Water|042|Golbat|Poison|Flying|068|Machamp|Fighting|Fighting|073|Tentacruel|Water|Poison|080|Slowbro|Water|Psychic|093|Haunter|Ghost|Poison}}
+{{height/entry|097|Hypno|Psychic|Psychic|145|Zapdos|Electric|Flying|164|Noctowl|Normal|Flying|282|Gardevoir|Psychic|Fairy|356|Dusclops|Ghost|Ghost|376|Metagross|Steel|Psychic}}
+{{height/entry|409|Rampardos|Rock|Rock|467|Magmortar|Fire|Fire|475|Gallade|Psychic|Fighting|500|Emboar|Fire|Fighting|523|Zebstrika|Electric|Electric|571|Zoroark|Dark|Dark}}
+{{height/entry|621|Druddigon|Dragon|Dragon|625|Bisharp|Dark|Steel|626|Bouffalant|Normal|Normal|637|Volcarona|Bug|Fire|652|Chesnaught|Grass|Fighting}}
+{{height/footer}}
+
+{{height/header|5|07|1.7}}
+{{height/entry|006|Charizard|Fire|Flying|055|Golduck|Water|Water|071|Victreebel|Grass|Poison|078|Rapidash|Fire|Fire|087|Dewgong|Water|Ice|127|Pinsir|n6=Mega Pinsir|Bug|Flying}}
+{{height/entry|144|Articuno|Ice|Flying|157|Typhlosion|Fire|Fire|214|Heracross|n3=Mega Heracross|Bug|Fighting|227|Skarmory|Steel|Flying|254|Sceptile|Grass|Grass|317|Swalot|Poison|Poison}}
+{{height/entry|367|Huntail|Water|Water|377|Regirock|Rock|Rock|386{{#switch: {{#expr: {{#time: U}} mod 4}}|0=|1=A|2=D|3=S}}|Deoxys|Psychic|Psychic|395|Empoleon|Water|Steel|463|Lickilicky|Normal|Normal|485|Heatran|Fire|Steel}}
+{{height/entry|526|Gigalith|Rock|Rock|563|Cofagrigus|Ghost|Ghost|673|Gogoat|Grass|Grass|681|Aegislash|Steel|Ghost|711|Gourgeist|n5=Super Size Gourgeist|Ghost|Grass}}
+{{height/footer}}
+
+{{height/header|5|11|1.8}}
+{{height/entry|085|Dodrio|Normal|Flying|142|Aerodactyl|Rock|Flying|147|Dratini|Dragon|Dragon|154|Meganium|Grass|Grass|162|Furret|Normal|Normal|169|Crobat|Poison|Flying}}
+{{height/entry|212|Scizor|Bug|Steel|217|Ursaring|Normal|Normal|230|Kingdra|Water|Dragon|310|Manectric|n4=Mega Manectric|Electric|Electric|319|Sharpedo|Water|Dark|368|Gorebyss|Water|Water}}
+{{height/entry|378|Regice|Ice|Ice|466|Electivire|Electric|Electric|612|Haxorus|Dragon|Dragon|635|Hydreigon|Dark|Dragon|691|Dragalge|Poison|Dragon}}
+{{height/footer}}
+
+{{height/header|6|03|1.9}}
+{{height/entry|059|Arcanine|Fire|Fire|112|Rhydon|Ground|Rock|229|Houndoom|n3=Mega Houndoom|Dark|Fire|243|Raikou|Electric|Electric|257|Blaziken|Fire|Fighting|323|Camerupt|Fire|Ground}}
+{{height/entry|379|Registeel|Steel|Steel|445|Garchomp|Dragon|Ground|469|Yanmega|Bug|Flying|569|Garbodor|Poison|Poison|586{{#switch: {{#time: F}}|January|May|September=|February|June|October=S|March|July|November=A|W}}|Sawsbuck|Normal|Grass|639|Terrakion|Rock|Fighting}}
+{{height/footer}}
+
+{{height/header|6|07|2.0}}
+{{height/entry|003|Venusaur|Grass|Poison|023|Ekans|Poison|Poison|103|Exeggutor|Grass|Psychic|146|Moltres|Fire|Flying|150|Mewtwo|Psychic|Psychic|199|Slowking|Water|Psychic}}
+{{height/entry|245|Suicune|Water|Water|248|Tyranitar|Rock|Dark|289|Slaking|Normal|Normal|320|Wailmer|Water|Water|330|Flygon|Ground|Dragon|357|Tropius|Grass|Flying}}
+{{height/entry|381|Latios|Dragon|Psychic|450|Hippowdon|Ground|Ground|465|Tangrowth|Grass|Grass|472|Gliscor|Ground|Flying|640|Virizion|Grass|Fighting|706|Goodra|Dragon|Dragon}}
+{{height/entry|713|Avalugg|Ice|Ice}}
+{{height/footer}}
+
+{{height/header|6|07|2.0}}
+{{height/entry|212|Scizor|n1=Mega Scizor|bug|steel}}
+{{height/footer}}
+
+{{height/header|6|11|2.1}}
+{{height/entry|142|Aerodactyl|n1=Mega Aerodactyl|Rock|Flying|143|Snorlax|Normal|Normal|226|Mantine|Water|Flying|244|Entei|Fire|Fire|306|Aggron|Steel|Rock|604|Eelektross|Electric|Electric}}
+{{height/entry|638|Cobalion|Steel|Fighting|675|Pangoro|Fighting|Dark}}
+{{height/footer}}
+
+{{height/header|7|03|2.2}}
+{{height/entry|115|Kangaskhan|Normal|Normal|149|Dragonite|Dragon|Flying|306|Aggron|n3=Mega Aggron|Steel|Steel|389|Torterra|Grass|Ground|460|Abomasnow|Grass|Ice|477|Dusknoir|Ghost|Ghost}}
+{{height/entry|593|Jellicent|Water|Ghost}}
+{{height/footer}}
+
+{{height/header|7|07|2.3}}
+{{height/entry|150|Mewtwo|n1=Mega Mewtwo X|Psychic|Fighting|160|Feraligatr|Water|Water|297|Hariyama|Fighting|Fighting}}
+{{height/footer}}
+
+{{height/header|7|10|2.4}}
+{{height/entry|003|Venusaur|n1=Mega Venusaur|Grass|Poison|464|Rhyperior|Ground|Rock}}
+{{height/footer}}
+
+{{height/header|8|02|2.5}}
+{{height/entry|131|Lapras|Water|Ice|248|Tyranitar|n2=Mega Tyranitar|Rock|Dark|473|Mamoswine|Ice|Ground|545|Scolipede|Bug|Poison|697|Tyrantrum|Rock|Dragon}}
+{{height/footer}}
+
+
+{{height/header|8|06|2.6}}
+{{height/entry|614|Beartic|Ice|Ice}}
+{{height/footer}}
+
+{{height/header|8|10|2.7}}
+{{height/entry|336|Seviper|Poison|Poison|460|Abomasnow|n2=Mega Abomasnow|Grass|Ice|699|Aurorus|Rock|Ice}}
+{{height/footer}}
+
+{{height/header|9|02|2.8}}
+{{height/entry|623|Golurk|Ground|Ghost}}
+{{height/footer}}
+
+{{height/header|9|06|2.9}}
+{{height/entry|644|Zekrom|Dragon|Electric}}
+{{height/footer}}
+
+{{height/header|9|10|3.0}}
+{{height/entry|642T|Thundurus|Electric|Flying|646|Kyurem|Dragon|Ice|716|Xerneas|Fairy|Fairy}}
+{{height/footer}}
+
+{{height/header|10|06|3.2}}
+{{height/entry|493|Arceus|Normal|Normal|643|Reshiram|Dragon|Fire}}
+{{height/footer}}
+
+{{height/header|10|10|3.3}}
+{{height/entry|497|Serperior|Grass|Grass|646B|Kyurem|Dragon|Ice}}
+{{height/footer}}
+
+{{height/header|11|06|3.5}}
+{{height/entry|024|Arbok|Poison|Poison|383|Groudon|Ground|Ground}}
+{{height/footer}}
+
+{{height/header|11|10|3.6}}
+{{height/entry|646W|Kyurem|Dragon|Ice}}
+{{height/footer}}
+
+{{height/header|12|02|3.7}}
+{{height/entry|486|Regigigas|Normal|Normal}}
+{{height/footer}}
+
+{{height/header|12|06|3.8}}
+{{height/entry|250|Ho-Oh|Fire|Flying}}
+{{height/footer}}
+
+{{height/header|13|01|4.0}}
+{{height/entry|148|Dragonair|Dragon|Dragon}}
+{{height/footer}}
+
+{{height/header|13|09|4.2}}
+{{height/entry|484|Palkia|Water|Dragon}}
+{{height/footer}}
+
+{{height/header|14|09|4.5}}
+{{height/entry|382|Kyogre|Water|Water|487|Giratina|Ghost|Dragon}}
+{{height/footer}}
+
+{{height/header|16|05|5.0}}
+{{height/entry|718|Zygarde|Dragon|Ground}}
+{{height/footer}}
+
+
+{{height/header|17|01|5.2}}
+{{height/entry|249|Lugia|Psychic|Flying}}
+{{height/footer}}
+
+{{height/header|17|09|5.4}}
+{{height/entry|483|Dialga|Steel|Dragon}}
+{{height/footer}}
+
+{{height/header|19|00|5.8}}
+{{height/entry|717|Yveltal|Dark|Flying}}
+{{height/footer}}
+
+{{height/header|20|04|6.2}}
+{{height/entry|350|Milotic|Water|Water}}
+{{height/footer}}
+
+{{height/header|21|04|6.5}}
+{{height/entry|130|Gyarados|Water|Flying}}
+{{height/footer}}
+
+{{height/header|22|08|6.9}}
+{{height/entry|487O|Giratina|Ghost|Dragon}}
+{{height/footer}}
+
+{{height/header|23|00|7.0}}
+{{height/entry|384|Rayquaza|Dragon|Flying}}
+{{height/footer}}
+
+{{height/header|28|10|8.8}}
+{{height/entry|095|Onix|Rock|Ground}}
+{{height/footer}}
+
+{{height/header|30|02|9.2}}
+{{height/entry|208|Steelix|Steel|Ground}}
+{{height/footer}}
+
+{{height/header|47|07|14.5}}
+{{height/entry|321|Wailord|Water|Water}}
+{{height/footer}}
